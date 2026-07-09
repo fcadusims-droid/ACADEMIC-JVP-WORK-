@@ -4,8 +4,8 @@ Legend: ⬜ pre-registered · 🟨 implemented · 🟩 run · ✅ verdict issued
 
 | # | Experiment | Paper | State | Verdict so far |
 |---|---|---|---|---|
-| **Shared** | `shared_lib` + self-tests | 1 & 3 | 🟩 | All self-tests pass; reproduces K=1/4, Girsanov identifiability, jump guardrail, exact Hodge split |
-| **D** | drift_jump_confusion_sweep | 3 | ⬜ | — |
+| **Shared** | `shared_lib` + self-tests | 1 & 3 | 🟩 | Self-tests reproduce K=1/4, Girsanov identifiability (HAC), the geometric jump guardrail, exact Hodge split. Adds `manifold_trajectory.py` (SPD trajectory sim + Cartan anti-development). Two real bugs found & fixed en route: HAC drift-test calibration, and a future-leakage bug in the predictability covariate. |
+| **D** | drift_jump_confusion_sweep | 3 | ✅ | **CALIBRATIONAL for strong jumps, STRUCTURAL in one corner.** Strong jumps (collapse ≤ 0.3) stay separable from drift (AUC ≥ 0.85) — a threshold fix. Weak-but-detectable jumps (0.7) vs strong drift overlap (AUC → 0.67) — no threshold separates; a hybrid metric is indicated there. Longer windows worsen it (AUC 0.99→0.76 as T 200→800, holonomy accumulation). Stable (0.41 ± 0.03 across seed banks). Metric tails reproduced (sqrt kurtosis 0.4 vs AIRM 11). See `_results/README.md`. |
 | **A** | localization_multiscale | 3 | ⬜ | — |
 | **B** | localization_priors | 3 | ⬜ | — |
 | **C** | cross_dataset | 3 | ⬜ | — |

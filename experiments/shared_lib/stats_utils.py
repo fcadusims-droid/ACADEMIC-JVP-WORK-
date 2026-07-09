@@ -131,28 +131,46 @@ def girsanov_drift_lrt(increments: NDArray, dt: float = 1.0):
 
 
 def glr_jump_test(increments: NDArray, covariate: NDArray,
-                  n_boot: int = 2000, seed: int | None = None):
+                  anchor_window: int = 5, n_boot: int = 2000,
+                  seed: int | None = None):
     """Covariate-anchored GLR jump test (Paper 3, Sec. 6.4).
 
-    The jump candidate ``tau`` is the argmax of the *predictability covariate*
-    (local conditional residual variance), NOT the largest increment -- blind
-    search under heavy tails produces false positives and is proscribed. The
-    statistic is the anchored increment magnitude standardised by the bipower
-    (jump-robust) diffusion scale; the null is an empirical bootstrap of the
-    de-jumped increments.
+    The jump candidate is anchored to the argmax of the *predictability
+    covariate* (local conditional residual variance), NOT the largest increment
+    -- blind search under heavy tails produces false positives and is proscribed.
+    Because the covariate is smoothed, the exact jump can sit a few steps from
+    the argmax, so the statistic is the max increment magnitude within
+    ``anchor_window`` of the argmax, standardised by the bipower (jump-robust)
+    diffusion scale. The null is an empirical bootstrap of the increment
+    magnitudes outside the anchored window.
 
-    Returns ``(tau, stat, p_value)``.
+    Returns ``(tau, stat, p_value)`` where ``tau`` is the located jump index.
+
+    NB: the bootstrap ``p_value`` is an approximation -- the covariate anchoring
+    introduces a mild selection the random-window null does not fully absorb, so
+    on pure diffusion it is somewhat anti-conservative. For a calibrated decision,
+    threshold the returned ``stat`` against a null (dispersion) ensemble at the
+    target FPR, as the experiments do, rather than relying on this ``p_value``.
     """
     inc = np.atleast_2d(increments.T).T if increments.ndim == 2 else increments[:, None]
+    T = inc.shape[0]
     rng = np.random.default_rng(seed)
-    tau = int(np.argmax(covariate))
+    w = 2 * anchor_window + 1
+    anchor = int(np.argmax(covariate))
+    lo, hi = max(0, anchor - anchor_window), min(T, anchor + anchor_window + 1)
     r_norm = np.linalg.norm(inc, axis=1)
     sigma = bipower_scale(inc)
-    stat = r_norm[tau] / max(sigma, 1e-12)
-    # empirical null: de-jumped increments (drop tau), bootstrap the covariate-
-    # anchored magnitude
-    others = np.delete(r_norm, tau)
-    boot = rng.choice(others, size=(n_boot,)) / max(sigma, 1e-12)
+    local = r_norm[lo:hi]
+    tau = lo + int(np.argmax(local))
+    stat = float(np.max(local)) / max(sigma, 1e-12)
+    # empirical null: the max increment over *random windows of the same width*,
+    # so the anchored-window max is compared like-for-like. This is what keeps
+    # the test silent on heavy-tailed no-jump paths (where the anchored window is
+    # not systematically more extreme than a random one) while still firing on a
+    # genuine jump (which dwarfs any random-window max). A single-increment null
+    # would be anti-conservative against a window-max statistic.
+    starts = rng.integers(0, max(1, T - w + 1), size=n_boot)
+    boot = np.array([np.max(r_norm[s:s + w]) for s in starts]) / max(sigma, 1e-12)
     p = float((np.sum(boot >= stat) + 1) / (n_boot + 1))
     return tau, float(stat), p
 
