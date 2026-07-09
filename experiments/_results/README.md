@@ -224,5 +224,39 @@ Files: `rl_agents_trichotomy/result.json`, `rl_agents_trichotomy/trichotomy.png`
 
 ---
 
+## Experiment H — Dissociation-test power (Paper 2, Sec 14.1)
+**Verdict: MARGINAL feasibility — and matching is a VALIDITY issue, not just a power one.**
+
+Power/validity of the `M_diss` interaction test, sweeping sample size × effect
+size (SNR) × matching quality between the S^{I+} and S^{I−} conditions.
+
+Minimum n per condition for 80% power:
+
+| matching sd | SNR 0.3 | 0.5 | 0.8 | 1.2 |
+|---|---|---|---|---|
+| 0.0 (perfect) | — | 80 | 40 | 20 |
+| 0.3 | — | — | 40 | 20 |
+| 0.6 | — | — | 80 | 20 |
+
+False-positive rate under H0 (no true dissociation), n=20:
+
+| matching sd | 0.0 | 0.3 | 0.6 |
+|---|---|---|---|
+| FPR@H0 | 0.045 | **0.159** | **0.353** |
+
+- **The headline is validity, not power:** imperfect matching between S^{I+} and
+  S^{I−} inflates the false-positive rate 3–7× (0.05 → 0.16 → 0.35), *independent
+  of sample size* — a confounded interaction contrast manufactures dissociations
+  that aren't there. The test is only valid with tight matching (sd ≲ 0.3·σ).
+- **Power:** even with tight matching, a moderate effect (SNR 0.8) needs n≈40 per
+  condition; small effects (SNR ≤ 0.5) are out of reach at realistic sizes.
+- **Consequence:** the design is executable but demands (i) tight, independently
+  verified matching and (ii) large samples — a *practical* limitation the paper
+  should state alongside the ethical one.
+
+Files: `dissociation_power_analysis/result.json`, `dissociation_power_analysis/power_grids.png`.
+
+---
+
 ## Pending
-H, I, J (Paper 2) — pre-registered, not yet run. See `../STATUS.md`.
+I, J (Paper 2) — pre-registered, not yet run. See `../STATUS.md`.

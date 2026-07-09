@@ -12,7 +12,7 @@ Legend: ⬜ pre-registered · 🟨 implemented · 🟩 run · ✅ verdict issued
 | **G** | poincare_recurrence_check | 1 | ✅ | **CONFIRMED** — recurrence fraction ≥ 0.95 for ε ≥ 0.05·span (0.978→0.995); drops to 0.51 at ε=0.01·span. Text's "≈1" holds but should state the ε regime. |
 | **F** | tracking_cost_curve | 1 | ✅ | **CLAIM CONFIRMED.** Double-well explorer under tracking gain: D_ag falls 0.85→0.012 and λ∥ drops −0.09→−11.5, both monotone and graded (the k=1 bifurcation is washed out by exploratory noise). Sec 7.3's graded-monotone finite-gain agency cost is numerically vindicated. |
 | **E** | rl_agents_trichotomy | 1 | ✅ | **TRICHOTOMY HOLDS — defence survives.** No candidate is the forbidden positive-entropy-plus-no-recurrence object: gradient→Case 1, hamiltonian→Case 3 (λ≈0, 100% rotational), curiosity→Case 1, novelty search→bounded-recurrent (R=1.0), Lorenz chaos→positive entropy (λ=+0.88) but recurrent (0.995). Sustained novelty without return needs a non-compact space (the escape horn), as the theorem predicts. Sec 7.5/7.6 vindicated. |
-| **H** | dissociation_power_analysis | 2 | ⬜ | — |
+| **H** | dissociation_power_analysis | 2 | ✅ | **MARGINAL feasibility; matching is a validity issue.** Imperfect S^{I+}/S^{I−} matching inflates the false-positive rate 3–7× (0.05→0.16→0.35) independent of sample size — the interaction contrast is confounded unless matching is tight (sd≲0.3σ). Even then a moderate effect (SNR 0.8) needs n≈40/condition. Executable but demands tight matching + large samples — a practical limitation, not just ethical. |
 | **I** | criticality_sweep | 2 | ⬜ | — |
 | **J** | metabolic_null_resolution | 2 | ⬜ | — |
 
