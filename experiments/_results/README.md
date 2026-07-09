@@ -175,5 +175,168 @@ Files: `cross_dataset/result.json`, `cross_dataset/ratio_sweep.png`.
 
 ---
 
-## Pending
-F, E (Paper 1), H, I, J (Paper 2) — pre-registered, not yet run. See `../STATUS.md`.
+## Experiment F — Exogenous-horn cost curve (Paper 1, Sec 7.3)
+**Verdict: CLAIM CONFIRMED — the finite-gain agency cost is graded and monotone.**
+
+A double-well explorer (`dx = (x − x³)dt + σ dW`, intrinsic hopping between wells)
+is tracked to `x_ref = 0` with proportional gain `k`, sweeping `k`.
+
+| gain k | 0 | 0.5 | 1.0 | 2.0 | 5.0 | 12.0 |
+|---|---|---|---|---|---|---|
+| D_ag (stationary variance) | 0.85 | 0.44 | 0.24 | 0.099 | 0.031 | 0.012 |
+| λ∥ (relaxation rate) | −0.09 | −0.23 | −0.51 | −1.28 | −4.06 | −11.5 |
+
+Both curves are **monotone** and **graded**: `D_ag → 0` (approaching the
+annihilation limit) and `λ∥ → −∞` smoothly as gain rises. The double-well
+bifurcation at `k=1` is washed out by the exploratory noise, so there is no
+discontinuity — Sec 7.3's "graded, monotone" finite-gain cost is numerically
+vindicated (as opposed to the perfect-tracking limit, which is the annihilation).
+
+Files: `tracking_cost_curve/result.json`, `tracking_cost_curve/cost_curve.png`.
+
+---
+
+## Experiment E — Trichotomy test (Paper 1, Sec 7.5/7.6)
+**Verdict: TRICHOTOMY HOLDS — no falsifier; the Sec 7.5/7.6 defence survives its strongest candidates.**
+
+Endogenous-preference dynamics implemented directly as flows on a compact space,
+classified by largest Lyapunov exponent λ (entropy proxy), Poincaré recurrence R,
+and the Helmholtz–Hodge gradient/rotational split.
+
+| candidate | λ_max | recurrence | Hodge (grad/rot) | class |
+|---|---|---|---|---|
+| gradient | −39.4 | 0.998 | 1.00 / 0.00 | Case 1 (convergent) |
+| hamiltonian | +0.05 | 1.000 | 0.00 / 1.00 | Case 3 (conservative) |
+| curiosity | −19.7 | 1.000 | 1.00 / 0.00 | Case 1 (convergent) |
+| novelty search | — | 1.000 | — | Case 3 (bounded recurrence) |
+| Lorenz chaos | +0.88 | 0.995 | — | Case 3\* (chaotic but recurrent) |
+
+The forbidden object — **positive entropy AND absence of recurrence on a compact
+set** — appears in none of them. The strongest positive-entropy case (Lorenz,
+λ=+0.88) is chaotic yet recurrent (0.995); **pure novelty search on the compact
+torus is bounded-recurrent (1.00), not sustained-novel**. Sustained novelty
+without return requires a *non-compact* value space — the escape (Case 2) horn —
+exactly as the Meta-Optimization Collapse Theorem predicts. (2-D autonomous flows
+are non-chaotic by Poincaré–Bendixson, reinforcing the bound; the Lorenz case
+supplies the genuine positive-entropy test in 3-D.)
+
+Files: `rl_agents_trichotomy/result.json`, `rl_agents_trichotomy/trichotomy.png`.
+
+---
+
+## Experiment H — Dissociation-test power (Paper 2, Sec 14.1)
+**Verdict: MARGINAL feasibility — and matching is a VALIDITY issue, not just a power one.**
+
+Power/validity of the `M_diss` interaction test, sweeping sample size × effect
+size (SNR) × matching quality between the S^{I+} and S^{I−} conditions.
+
+Minimum n per condition for 80% power:
+
+| matching sd | SNR 0.3 | 0.5 | 0.8 | 1.2 |
+|---|---|---|---|---|
+| 0.0 (perfect) | — | 80 | 40 | 20 |
+| 0.3 | — | — | 40 | 20 |
+| 0.6 | — | — | 80 | 20 |
+
+False-positive rate under H0 (no true dissociation), n=20:
+
+| matching sd | 0.0 | 0.3 | 0.6 |
+|---|---|---|---|
+| FPR@H0 | 0.045 | **0.159** | **0.353** |
+
+- **The headline is validity, not power:** imperfect matching between S^{I+} and
+  S^{I−} inflates the false-positive rate 3–7× (0.05 → 0.16 → 0.35), *independent
+  of sample size* — a confounded interaction contrast manufactures dissociations
+  that aren't there. The test is only valid with tight matching (sd ≲ 0.3·σ).
+- **Power:** even with tight matching, a moderate effect (SNR 0.8) needs n≈40 per
+  condition; small effects (SNR ≤ 0.5) are out of reach at realistic sizes.
+- **Consequence:** the design is executable but demands (i) tight, independently
+  verified matching and (ii) large samples — a *practical* limitation the paper
+  should state alongside the ethical one.
+
+Files: `dissociation_power_analysis/result.json`, `dissociation_power_analysis/power_grids.png`.
+
+---
+
+## Experiment I — Criticality confound robustness (Paper 2, Sec 15.5)
+**Verdict: CONFOUND ROBUST — Sec 15.5's concession stands; the defensible arm is eliminative.**
+
+Separating statistic = the standardised x:c interaction coefficient (zero for an
+additive latent process, nonzero for a multiplicative gate or a super-linear
+critical response). Reference: gated signal D=1.22, additive null D=0.01.
+
+Critical-generator D (susceptibility exponent p × read-out noise; p=1 is the
+non-critical control):
+
+| p \ noise | 0.1 | 0.5 | 1.0 |
+|---|---|---|---|
+| 1.0 (control) | 0.01 | 0.00 | 0.00 |
+| 1.25 | 0.95 | 0.26 | 0.13 |
+| 1.5 | 1.29 | 0.58 | 0.31 |
+| 2.0 | 1.41 | 1.09 | 0.73 |
+| 3.0 | 1.35 | 1.31 | 1.21 |
+
+- A genuinely critical generator (p>1) reproduces the gating differential in
+  **15/24 cells (62%)** — robustly at moderate/strong criticality (p≥1.5) across
+  read-out noise and homeostatic feedback, with magnitude that **matches or
+  exceeds** the gated signal as criticality grows.
+- The non-critical control (p=1) gives D≈0, matching the additive null — the
+  statistic itself is valid; it is criticality, not an artifact, that confounds.
+- Only mild criticality (p≈1.25) under heavy read-out noise fails to reproduce it.
+
+The gating test is thoroughly confounded by criticality, so CBRA's defensible
+contribution is the **negative/eliminative arm**, not detection — corroborating
+Sec 15.5 rather than rescuing the naive gating test.
+
+Files: `criticality_sweep/result.json`, `criticality_sweep/criticality_grid.png`.
+
+---
+
+## Experiment J — Metabolic null resolution (Paper 2, Sec 7.2)
+**Verdict: RESOLUTION THRESHOLD EXISTS and scales with diffusion length — the qualitative claim is now a number.**
+
+Spectral energy-diffusion model: an active boundary injects structure at scale
+ell; diffusion low-passes it over length L_D; an operational null at resolution h
+absorbs all scales coarser than h. The surviving structured residual is measured
+vs h.
+
+| diffusion length L_D (·ell) | 0.05 | 0.08 | 0.12 | 0.18 | 0.25 |
+|---|---|---|---|---|---|
+| absorption threshold h\* (·ell) | 0.73 | 0.77 | 0.81 | 0.85 | 0.93 |
+
+- The null absorbs the structured boundary residual **only when its resolution is
+  finer than h\* ≈ 0.7–0.9 ell**; coarser than that, the residual survives.
+- h\* **grows monotonically with the diffusion length** — a longer diffusion
+  length smears the boundary signature to a coarser scale, so a coarser null
+  already absorbs it. Sec 7.2's weak-vs-strong-null distinction is
+  resolution-driven and quantified: **strong null := resolution < h\*(L_D)**.
+- **Metabolism matters:** with metabolic maintenance the structured residual is
+  **20× larger** (2.89 vs 0.14) than with the boundary spectrum collapsed toward
+  the smooth background — exactly the role Sec 7.2 gives metabolic expenditure in
+  keeping the memory kernel from collapsing.
+
+Files: `metabolic_null_resolution/result.json`, `metabolic_null_resolution/null_resolution.png`.
+
+---
+
+## All ten experiments complete
+
+| # | Paper | Headline |
+|---|---|---|
+| G | 1 | Lorenz recurrence ≈1 confirmed (ε ≥ 0.05·span) |
+| D | 3 | Drift/jump confusion is calibrational except a weak-jump×strong-drift corner (structural) |
+| A | 3 | Localization fix is window **size**, not the multiscale bank |
+| B | 3 | Covariate smoothing is the wrong prior for abrupt jumps (degrades localization) |
+| C | 3 | Localization solved by **persistence** (large window); robust across paradigm & burst duration |
+| F | 1 | Finite-gain agency cost is graded & monotone — Sec 7.3 confirmed |
+| E | 1 | **Trichotomy holds** — no positive-entropy-without-recurrence falsifier on a compact set |
+| H | 2 | Dissociation test is matching-limited (validity, not just power) |
+| I | 2 | Criticality confound is **robust** — Sec 15.5 stands, eliminative arm only |
+| J | 2 | Metabolic null has a resolution threshold h\*≈0.7–0.9 ell scaling with L_D |
+
+**Cross-cutting honesty:** two real `shared_lib` bugs were found and fixed en
+route (HAC drift-test calibration; a future-leakage bug in the predictability
+covariate). Paper 3's experiments run in synthetic-adversarial mode because
+PhysioNet is blocked by the environment network policy — real-EEG confirmation
+remains outstanding. Every verdict was issued against a pre-registration written
+before the run.

@@ -1,0 +1,88 @@
+{
+  "experiment": "I_criticality_sweep",
+  "params": {
+    "n_trials": 8000,
+    "gamma": 1.0,
+    "kappa": 0.6,
+    "crit_exponents": [
+      1.0,
+      1.25,
+      1.5,
+      2.0,
+      3.0
+    ],
+    "readout_noises": [
+      0.1,
+      0.5,
+      1.0
+    ],
+    "feedbacks": [
+      0.0,
+      0.3
+    ]
+  },
+  "D_gated_signal": 1.2162095156614,
+  "D_additive_null": 0.00971453739611715,
+  "critical_D_grids": {
+    "0.0": [
+      [
+        0.01214962227193152,
+        -0.0010123327161950376,
+        -0.0026635583802592506
+      ],
+      [
+        0.7917461095239581,
+        0.19157090534522714,
+        0.09447925240514267
+      ],
+      [
+        1.1868790429651541,
+        0.42719899399650857,
+        0.21985853782556034
+      ],
+      [
+        1.3866536044709399,
+        0.891867603410196,
+        0.5302508021201536
+      ],
+      [
+        1.3935189046275671,
+        1.2908687322690826,
+        1.0788649338102128
+      ]
+    ],
+    "0.3": [
+      [
+        0.01214962227193152,
+        -0.0010123327161950376,
+        -0.0026635583802592506
+      ],
+      [
+        0.9525531521261125,
+        0.25900440547525644,
+        0.12932379340552258
+      ],
+      [
+        1.2896736505826285,
+        0.5758548716265842,
+        0.3065026331331145
+      ],
+      [
+        1.4090913602567063,
+        1.0887402449720829,
+        0.7262868261346854
+      ],
+      [
+        1.3492917721264426,
+        1.3101495156520977,
+        1.2107247314405358
+      ]
+    ]
+  },
+  "reproduces_fraction": 0.625,
+  "preregistered_question": "is the Sec 15.5 criticality confound robust or fragile?",
+  "verdict": "CONFOUND ROBUST: among genuinely critical generators (p>1) the stratified differential is reproduced (D >= half the gated signal 1.22) in 15/24 cells (62%), across feedback and read-out noise, strengthening with criticality. Non-critical control (p=1) gives D<=0.012 ~ the additive null 0.010, validating the statistic. Sec 15.5's concession is ROBUST -- the gating test is thoroughly confounded by criticality, so the defensible contribution of CBRA is the negative/eliminative arm, not detection. This corrects rather than confirms the naive gating test, exactly as the paper states.",
+  "figures": [
+    "criticality_grid.png"
+  ]
+}

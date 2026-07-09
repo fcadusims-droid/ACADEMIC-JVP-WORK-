@@ -1,0 +1,66 @@
+{
+  "experiment": "F_tracking_cost_curve",
+  "agent": "double-well explorer dx=(x-x^3)dt+sigma dW, tracked to x_ref=0",
+  "params": {
+    "gains": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      0.9,
+      1.0,
+      1.1,
+      1.25,
+      1.5,
+      2.0,
+      3.0,
+      5.0,
+      8.0,
+      12.0
+    ],
+    "sigma": 0.5,
+    "dt": 0.01,
+    "T_steps": 200000,
+    "n_seeds": 6
+  },
+  "D_ag_by_gain": [
+    0.8513627054924183,
+    0.6236034322924683,
+    0.44322193259898635,
+    0.32277996592881336,
+    0.26888458007748417,
+    0.23938255772270634,
+    0.21423654876027096,
+    0.1832363189857179,
+    0.1449955473590093,
+    0.09889975671429335,
+    0.058017430009715924,
+    0.031008518926475475,
+    0.01826261267063557,
+    0.011921065501773109
+  ],
+  "lambda_parallel_by_gain": [
+    -0.0873946632185662,
+    -0.1365820415983497,
+    -0.22954266794016545,
+    -0.35323039329120515,
+    -0.43638140162575545,
+    -0.5075099141252236,
+    -0.5883039808138422,
+    -0.6886646383857674,
+    -0.86800149617779,
+    -1.2761347695200638,
+    -2.1532601380966265,
+    -4.060355698038545,
+    -7.174694490021007,
+    -11.518499359641353
+  ],
+  "D_ag_monotone": true,
+  "lambda_monotone": true,
+  "graded_no_bifurcation_step": true,
+  "preregistered_criterion": "both curves monotone and graded (D_ag->0, lambda->-inf)",
+  "verdict": "CLAIM CONFIRMED: both curves are monotone and graded. D_ag falls smoothly 0.85 -> 0.0119 (approaching the annihilation limit D_ag -> 0) and lambda_parallel drops -0.09 -> -11.5 toward -infinity as gain rises. The double-well bifurcation at k=1 is washed out by the exploratory noise, so the agency cost is genuinely graded -- no discontinuity, no non-monotonicity. Sec 7.3's 'graded, monotone' finite-gain cost is numerically vindicated.",
+  "figures": [
+    "cost_curve.png"
+  ]
+}
