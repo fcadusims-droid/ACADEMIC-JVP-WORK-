@@ -109,6 +109,33 @@ Files: `localization_multiscale/result.json`, `localization_multiscale/localizat
 
 ---
 
+## Experiment B — Covariate smoothing prior (Paper 3)
+**Verdict: NO BENEFIT (mechanistic) — smoothing γ_t is the wrong prior for abrupt transitions.**
+
+Sweep the causal smoothing bandwidth `h` of the predictability covariate before
+the jump argmax, on heavy-tailed diffusion with sharp spontaneous excursions
+(~ jump size) that fool the raw argmax.
+
+| bandwidth h | 0 | 1 | 2 | 4 | 8 | 12 | 20 | 30 |
+|---|---|---|---|---|---|---|---|---|
+| localization accuracy | **0.36** | 0.29 | 0.24 | 0.18 | 0.19 | 0.10 | 0.09 | 0.07 |
+
+Smoothing **monotonically degrades** localization. Mechanism: an abrupt jump and a
+sharp spontaneous excursion have the *same single-sample* covariate signature, so
+smoothing cannot separate them — it blurs the jump's peak (~1/h) faster than it
+suppresses transient spikes (~1/√h), lowering SNR. The discriminator that *does*
+work is **persistence** (a jump changes the regime; an excursion does not), which
+a window-mean statistic exploits (Exp A) and a covariate argmax cannot.
+
+Together A + B say: for abrupt transitions among comparable spontaneous events,
+pointwise/covariate localization is not rescuable by smoothing; only a
+persistence-sensitive (window-mean) statistic localizes reliably — and the
+operative knob there is window size.
+
+Files: `localization_priors/result.json`, `localization_priors/smoothing_sweep.png`.
+
+---
+
 ## Pending
-B, C (Paper 3), F, E (Paper 1), H, I, J (Paper 2) — pre-registered, not yet run.
+C (Paper 3), F, E (Paper 1), H, I, J (Paper 2) — pre-registered, not yet run.
 See `../STATUS.md`.
