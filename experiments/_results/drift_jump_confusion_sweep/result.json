@@ -1,0 +1,144 @@
+{
+  "experiment": "D_drift_jump_confusion_sweep",
+  "pipeline": "geometric (SPD anti-development)",
+  "grid": {
+    "drift_strengths": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.3,
+      0.4
+    ],
+    "collapse_factors": [
+      0.9,
+      0.7,
+      0.5,
+      0.3,
+      0.1
+    ],
+    "windows": [
+      200,
+      400,
+      800
+    ],
+    "n_seeds": 60,
+    "n_dim": 3,
+    "diffusion": 0.02,
+    "fpr_target": 0.05
+  },
+  "square_root_metric": {
+    "threshold": 1.6844571861649549,
+    "auc_collapse_vs_drift": [
+      [
+        0.52,
+        0.9133333333333333,
+        0.9894444444444445,
+        1.0,
+        1.0
+      ],
+      [
+        0.18472222222222223,
+        0.8477777777777777,
+        0.975,
+        0.9983333333333333,
+        1.0
+      ],
+      [
+        0.25527777777777777,
+        0.6883333333333334,
+        0.9208333333333333,
+        0.9847222222222223,
+        1.0
+      ],
+      [
+        0.5488888888888889,
+        0.695,
+        0.7969444444444445,
+        0.9408333333333333,
+        0.9961111111111111
+      ],
+      [
+        0.6408333333333334,
+        0.745,
+        0.8311111111111111,
+        0.9205555555555556,
+        0.9844444444444445
+      ],
+      [
+        0.5513888888888889,
+        0.6716666666666666,
+        0.735,
+        0.85,
+        0.9597222222222223
+      ]
+    ],
+    "driftjump_rate_by_drift": [
+      0.08333333333333333,
+      0.6,
+      0.5833333333333334,
+      0.4,
+      0.31666666666666665,
+      0.4166666666666667
+    ],
+    "jump_power_by_collapse": [
+      0.06666666666666667,
+      0.8666666666666667,
+      0.9666666666666667,
+      1.0,
+      1.0
+    ]
+  },
+  "airm_metric": {
+    "threshold": 2.1796102957485393,
+    "jump_power_by_collapse": [
+      0.016666666666666666,
+      0.7333333333333333,
+      0.9833333333333333,
+      1.0,
+      1.0
+    ],
+    "max_jump_power": 1.0,
+    "note": "AIRM anti-developed increments are heavy-tailed (higher dispersion threshold); jump-power-only reference. Weak/moderate collapses are swamped, reproducing appendix jump-blindness; only the most severe collapse survives the raised threshold."
+  },
+  "window_dependence": {
+    "200": {
+      "threshold": 1.6679915675027595,
+      "driftjump_rate": 0.35,
+      "jump_power": 1.0,
+      "auc": 0.9872222222222222
+    },
+    "400": {
+      "threshold": 1.8550400244909542,
+      "driftjump_rate": 0.38333333333333336,
+      "jump_power": 0.9833333333333333,
+      "auc": 0.8983333333333333
+    },
+    "800": {
+      "threshold": 1.8823271689821925,
+      "driftjump_rate": 0.3333333333333333,
+      "jump_power": 0.95,
+      "auc": 0.7644444444444445
+    }
+  },
+  "seed_stability": {
+    "rates": [
+      0.43333333333333335,
+      0.4166666666666667,
+      0.36666666666666664
+    ],
+    "mean": 0.4055555555555556,
+    "std": 0.0283278861866266
+  },
+  "diagnostic": {
+    "worst_detectable_auc": 0.6716666666666666,
+    "structural_region_found": true,
+    "calibrational_everywhere_detectable": false,
+    "seed_unstable": false,
+    "verdict": "STRUCTURAL in a corner: there is a realistic region (strong drift, weak-but-detectable jump) where AUC falls to 0.67 -- no threshold separates a strong geodesic drift from a weak collapse there. A hybrid metric (method change) is indicated for that corner."
+  },
+  "figures": [
+    "confusion_surfaces.png",
+    "window_dependence.png"
+  ]
+}
