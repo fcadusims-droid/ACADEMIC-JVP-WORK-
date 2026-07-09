@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Large data (EEG etc.) — never commit; see experiments/paper3_geodesic_kinematics/DATA.md
+experiments/**/data/
+data/
+
+# Keep _results/ committed (small JSON + figures are the experimental record).
