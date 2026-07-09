@@ -27,3 +27,15 @@ When EEG is unavailable, each Paper 3 experiment can run in `--synthetic` mode o
 `shared_lib.jump_diffusion` trajectories with an injected structural transition,
 to validate the *detector logic* (not the real-data claim). The real-data verdict
 requires the PhysioNet records above.
+
+## Network status in this environment (2026-07)
+**PhysioNet is blocked by the environment's network policy** — the agent proxy
+returns 403 to `CONNECT physionet.org:443` (only package registries such as PyPI
+are on the allowlist). Real EEG therefore cannot be downloaded here. The Paper 3
+experiments run in the synthetic-adversarial mode described above: a known
+structural transition is embedded in spontaneous structural fluctuations large
+enough to reproduce the appendix's failure mode (the true transition is not the
+most abrupt geometric event), so the *method improvement* (multi-scale windows,
+covariate smoothing) can be tested against ground truth. This validates the tool,
+not the real-data 5/15 → 10/15 claim, which still requires the PhysioNet records
+on a network-enabled environment.
