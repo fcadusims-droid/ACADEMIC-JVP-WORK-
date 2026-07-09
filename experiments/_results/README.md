@@ -80,6 +80,35 @@ Files: `drift_jump_confusion_sweep/result.json`,
 
 ---
 
+## Experiment A — Multi-scale localization (Paper 3)
+**Verdict: criterion met (2/15 → 15/15), but the operative fix is WINDOW SIZE, not the multiscale bank.**
+
+PhysioNet is blocked by the environment network policy, so this ran in the
+pre-registered synthetic-adversarial mode: a persistent structural seam embedded
+in spontaneous fluctuations with sharp transient excursions larger than the seam.
+
+| detector | hits (\|err\| ≤ 15) | median err |
+|---|---|---|
+| fragile short window (w=3) | 2/15 | 131 |
+| single large window (w=120) | 15/15 | 0 |
+| multiscale bank | 15/15 | 0 |
+
+- The short-window baseline reproduces the appendix's failure mode (transient
+  excursions beat the true seam → 2/15).
+- Both a single large window and the multiscale bank fully recover (15/15) → in
+  this synthetic setup the 5/15 failure is a **window-size artifact**, fixable by
+  enlarging the analysis window; the multiscale aggregation adds no measured value
+  over a single large window.
+- Drift guardrail holds (peak prominence on true seams 16.3 vs 5.4 on no-seam
+  drift records — the detector does not manufacture a seam where there is none).
+- **Caveats:** symmetric windows = *offline* localization, not strictly
+  causal/online; and real EEG may impose a precision cost on a large window that a
+  multiscale bank could escape — untested without PhysioNet.
+
+Files: `localization_multiscale/result.json`, `localization_multiscale/localization.png`.
+
+---
+
 ## Pending
-A, B, C (Paper 3 localization), F, E (Paper 1), H, I, J (Paper 2) — pre-registered,
-not yet run. See `../STATUS.md`.
+B, C (Paper 3), F, E (Paper 1), H, I, J (Paper 2) — pre-registered, not yet run.
+See `../STATUS.md`.
