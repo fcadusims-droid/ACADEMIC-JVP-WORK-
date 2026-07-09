@@ -1,0 +1,52 @@
+{
+  "experiment": "E_rl_agents_trichotomy",
+  "candidates": {
+    "gradient": {
+      "lambda_max": -39.44072584319212,
+      "recurrence_fraction": 0.9976001199940003,
+      "hodge": {
+        "gradient": 0.9999999999999997,
+        "rotational": 7.512560428692373e-32,
+        "harmonic": 9.794517343841628e-35
+      },
+      "class": "Case 1 (convergent / gradient)"
+    },
+    "hamiltonian": {
+      "lambda_max": 0.04907159582974494,
+      "recurrence_fraction": 1.0,
+      "hodge": {
+        "gradient": 0.0,
+        "rotational": 1.0,
+        "harmonic": 9.794517343841628e-35
+      },
+      "class": "Case 3 (bounded recurrence / conservative)"
+    },
+    "curiosity": {
+      "lambda_max": -19.736882530689282,
+      "recurrence_fraction": 0.999550022498875,
+      "hodge": {
+        "gradient": 0.9999999999999993,
+        "rotational": 9.203643699307924e-32,
+        "harmonic": 3.4932021887336786e-34
+      },
+      "class": "Case 1 (convergent / gradient)"
+    },
+    "novelty_search": {
+      "lambda_max": null,
+      "recurrence_fraction": 1.0,
+      "hodge": null,
+      "class": "Case 3 (bounded recurrence)"
+    },
+    "lorenz_chaos": {
+      "lambda_max": 0.8778066529772552,
+      "recurrence_fraction": 0.9954211731270229,
+      "hodge": null,
+      "class": "Case 3* (positive entropy, RECURRENT -- chaotic but returns)"
+    }
+  },
+  "preregistered_falsifier": "compact-set dynamics with positive entropy AND no recurrence",
+  "verdict": "TRICHOTOMY HOLDS: every compact-set candidate lands in the trichotomy and NONE is the forbidden positive-entropy-plus-no-recurrence object. The strongest positive-entropy cases (['lorenz_chaos']) are chaotic yet RECURRENT (Lorenz lambda=+0.88 but recurrence 1.00); novelty search on the compact torus is bounded-recurrent (1.00), not sustained-novel. Sustained novelty without return requires a non-compact value space -- the escape (Case 2) horn -- exactly as the Meta-Optimization Collapse Theorem predicts. Sec 7.5/7.6 survives its strongest adversarial candidates.",
+  "figures": [
+    "trichotomy.png"
+  ]
+}

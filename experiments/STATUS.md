@@ -11,7 +11,7 @@ Legend: ⬜ pre-registered · 🟨 implemented · 🟩 run · ✅ verdict issued
 | **C** | cross_dataset | 3 | ✅ | **METHOD ROBUST via persistence.** A large persistence-sensitive window localizes robustly across paradigm strength (15/15 at every ratio) and fluctuation persistence (mild 15→13 as bursts approach window length). A+B+C synthesis: the 5/15 is a fragile-pointwise artifact fixed by a large window (not multiscale, not covariate smoothing); residual open problem = spontaneous bursts longer than the window. All synthetic (PhysioNet blocked); real-EEG confirmation outstanding. |
 | **G** | poincare_recurrence_check | 1 | ✅ | **CONFIRMED** — recurrence fraction ≥ 0.95 for ε ≥ 0.05·span (0.978→0.995); drops to 0.51 at ε=0.01·span. Text's "≈1" holds but should state the ε regime. |
 | **F** | tracking_cost_curve | 1 | ✅ | **CLAIM CONFIRMED.** Double-well explorer under tracking gain: D_ag falls 0.85→0.012 and λ∥ drops −0.09→−11.5, both monotone and graded (the k=1 bifurcation is washed out by exploratory noise). Sec 7.3's graded-monotone finite-gain agency cost is numerically vindicated. |
-| **E** | rl_agents_trichotomy | 1 | ⬜ | — |
+| **E** | rl_agents_trichotomy | 1 | ✅ | **TRICHOTOMY HOLDS — defence survives.** No candidate is the forbidden positive-entropy-plus-no-recurrence object: gradient→Case 1, hamiltonian→Case 3 (λ≈0, 100% rotational), curiosity→Case 1, novelty search→bounded-recurrent (R=1.0), Lorenz chaos→positive entropy (λ=+0.88) but recurrent (0.995). Sustained novelty without return needs a non-compact space (the escape horn), as the theorem predicts. Sec 7.5/7.6 vindicated. |
 | **H** | dissociation_power_analysis | 2 | ⬜ | — |
 | **I** | criticality_sweep | 2 | ⬜ | — |
 | **J** | metabolic_null_resolution | 2 | ⬜ | — |

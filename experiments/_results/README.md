@@ -196,5 +196,33 @@ Files: `tracking_cost_curve/result.json`, `tracking_cost_curve/cost_curve.png`.
 
 ---
 
+## Experiment E — Trichotomy test (Paper 1, Sec 7.5/7.6)
+**Verdict: TRICHOTOMY HOLDS — no falsifier; the Sec 7.5/7.6 defence survives its strongest candidates.**
+
+Endogenous-preference dynamics implemented directly as flows on a compact space,
+classified by largest Lyapunov exponent λ (entropy proxy), Poincaré recurrence R,
+and the Helmholtz–Hodge gradient/rotational split.
+
+| candidate | λ_max | recurrence | Hodge (grad/rot) | class |
+|---|---|---|---|---|
+| gradient | −39.4 | 0.998 | 1.00 / 0.00 | Case 1 (convergent) |
+| hamiltonian | +0.05 | 1.000 | 0.00 / 1.00 | Case 3 (conservative) |
+| curiosity | −19.7 | 1.000 | 1.00 / 0.00 | Case 1 (convergent) |
+| novelty search | — | 1.000 | — | Case 3 (bounded recurrence) |
+| Lorenz chaos | +0.88 | 0.995 | — | Case 3\* (chaotic but recurrent) |
+
+The forbidden object — **positive entropy AND absence of recurrence on a compact
+set** — appears in none of them. The strongest positive-entropy case (Lorenz,
+λ=+0.88) is chaotic yet recurrent (0.995); **pure novelty search on the compact
+torus is bounded-recurrent (1.00), not sustained-novel**. Sustained novelty
+without return requires a *non-compact* value space — the escape (Case 2) horn —
+exactly as the Meta-Optimization Collapse Theorem predicts. (2-D autonomous flows
+are non-chaotic by Poincaré–Bendixson, reinforcing the bound; the Lorenz case
+supplies the genuine positive-entropy test in 3-D.)
+
+Files: `rl_agents_trichotomy/result.json`, `rl_agents_trichotomy/trichotomy.png`.
+
+---
+
 ## Pending
-E (Paper 1), H, I, J (Paper 2) — pre-registered, not yet run. See `../STATUS.md`.
+H, I, J (Paper 2) — pre-registered, not yet run. See `../STATUS.md`.
