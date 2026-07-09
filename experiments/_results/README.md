@@ -292,5 +292,51 @@ Files: `criticality_sweep/result.json`, `criticality_sweep/criticality_grid.png`
 
 ---
 
-## Pending
-J (Paper 2) — pre-registered, not yet run. See `../STATUS.md`.
+## Experiment J — Metabolic null resolution (Paper 2, Sec 7.2)
+**Verdict: RESOLUTION THRESHOLD EXISTS and scales with diffusion length — the qualitative claim is now a number.**
+
+Spectral energy-diffusion model: an active boundary injects structure at scale
+ell; diffusion low-passes it over length L_D; an operational null at resolution h
+absorbs all scales coarser than h. The surviving structured residual is measured
+vs h.
+
+| diffusion length L_D (·ell) | 0.05 | 0.08 | 0.12 | 0.18 | 0.25 |
+|---|---|---|---|---|---|
+| absorption threshold h\* (·ell) | 0.73 | 0.77 | 0.81 | 0.85 | 0.93 |
+
+- The null absorbs the structured boundary residual **only when its resolution is
+  finer than h\* ≈ 0.7–0.9 ell**; coarser than that, the residual survives.
+- h\* **grows monotonically with the diffusion length** — a longer diffusion
+  length smears the boundary signature to a coarser scale, so a coarser null
+  already absorbs it. Sec 7.2's weak-vs-strong-null distinction is
+  resolution-driven and quantified: **strong null := resolution < h\*(L_D)**.
+- **Metabolism matters:** with metabolic maintenance the structured residual is
+  **20× larger** (2.89 vs 0.14) than with the boundary spectrum collapsed toward
+  the smooth background — exactly the role Sec 7.2 gives metabolic expenditure in
+  keeping the memory kernel from collapsing.
+
+Files: `metabolic_null_resolution/result.json`, `metabolic_null_resolution/null_resolution.png`.
+
+---
+
+## All ten experiments complete
+
+| # | Paper | Headline |
+|---|---|---|
+| G | 1 | Lorenz recurrence ≈1 confirmed (ε ≥ 0.05·span) |
+| D | 3 | Drift/jump confusion is calibrational except a weak-jump×strong-drift corner (structural) |
+| A | 3 | Localization fix is window **size**, not the multiscale bank |
+| B | 3 | Covariate smoothing is the wrong prior for abrupt jumps (degrades localization) |
+| C | 3 | Localization solved by **persistence** (large window); robust across paradigm & burst duration |
+| F | 1 | Finite-gain agency cost is graded & monotone — Sec 7.3 confirmed |
+| E | 1 | **Trichotomy holds** — no positive-entropy-without-recurrence falsifier on a compact set |
+| H | 2 | Dissociation test is matching-limited (validity, not just power) |
+| I | 2 | Criticality confound is **robust** — Sec 15.5 stands, eliminative arm only |
+| J | 2 | Metabolic null has a resolution threshold h\*≈0.7–0.9 ell scaling with L_D |
+
+**Cross-cutting honesty:** two real `shared_lib` bugs were found and fixed en
+route (HAC drift-test calibration; a future-leakage bug in the predictability
+covariate). Paper 3's experiments run in synthetic-adversarial mode because
+PhysioNet is blocked by the environment network policy — real-EEG confirmation
+remains outstanding. Every verdict was issued against a pre-registration written
+before the run.

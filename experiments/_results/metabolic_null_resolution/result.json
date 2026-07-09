@@ -1,0 +1,29 @@
+{
+  "experiment": "J_metabolic_null_resolution",
+  "params": {
+    "ell": 1.0,
+    "L_Ds": [
+      0.05,
+      0.08,
+      0.12,
+      0.18,
+      0.25
+    ],
+    "noise_floor": 0.001
+  },
+  "absorption_threshold_h_star_by_L_D": {
+    "0.05": 0.7291457286432161,
+    "0.08": 0.7690954773869347,
+    "0.12": 0.8090452261306533,
+    "0.18": 0.8489949748743719,
+    "0.25": 0.9288944723618091
+  },
+  "metabolic_on_peak_residual": 2.8853211082450385,
+  "metabolic_off_peak_residual": 0.1435921992115304,
+  "metabolic_on_off_ratio": 20.093856937134703,
+  "preregistered_criterion": "a concrete resolution threshold vs diffusion length",
+  "verdict": "RESOLUTION THRESHOLD EXISTS and SCALES with diffusion length: the null absorbs the structured boundary residual only when its resolution is finer than h* ~ 0.7-0.9 ell, and h* GROWS with the diffusion length L_D (a longer diffusion length smears the boundary signature to a coarser scale, so a coarser null already absorbs it). Sec 7.2's weak-vs-strong-null claim is resolution-driven and now quantified: strong null := resolution < h*(L_D). With metabolism the residual is structured and the threshold is meaningful; WITHOUT metabolism the structured residual is 20x smaller (boundary spectrum collapses toward the smooth background), so no resolution recovers structure -- exactly the role Sec 7.2 gives metabolic expenditure in keeping the memory kernel from collapsing.",
+  "figures": [
+    "null_resolution.png"
+  ]
+}
