@@ -258,5 +258,39 @@ Files: `dissociation_power_analysis/result.json`, `dissociation_power_analysis/p
 
 ---
 
+## Experiment I — Criticality confound robustness (Paper 2, Sec 15.5)
+**Verdict: CONFOUND ROBUST — Sec 15.5's concession stands; the defensible arm is eliminative.**
+
+Separating statistic = the standardised x:c interaction coefficient (zero for an
+additive latent process, nonzero for a multiplicative gate or a super-linear
+critical response). Reference: gated signal D=1.22, additive null D=0.01.
+
+Critical-generator D (susceptibility exponent p × read-out noise; p=1 is the
+non-critical control):
+
+| p \ noise | 0.1 | 0.5 | 1.0 |
+|---|---|---|---|
+| 1.0 (control) | 0.01 | 0.00 | 0.00 |
+| 1.25 | 0.95 | 0.26 | 0.13 |
+| 1.5 | 1.29 | 0.58 | 0.31 |
+| 2.0 | 1.41 | 1.09 | 0.73 |
+| 3.0 | 1.35 | 1.31 | 1.21 |
+
+- A genuinely critical generator (p>1) reproduces the gating differential in
+  **15/24 cells (62%)** — robustly at moderate/strong criticality (p≥1.5) across
+  read-out noise and homeostatic feedback, with magnitude that **matches or
+  exceeds** the gated signal as criticality grows.
+- The non-critical control (p=1) gives D≈0, matching the additive null — the
+  statistic itself is valid; it is criticality, not an artifact, that confounds.
+- Only mild criticality (p≈1.25) under heavy read-out noise fails to reproduce it.
+
+The gating test is thoroughly confounded by criticality, so CBRA's defensible
+contribution is the **negative/eliminative arm**, not detection — corroborating
+Sec 15.5 rather than rescuing the naive gating test.
+
+Files: `criticality_sweep/result.json`, `criticality_sweep/criticality_grid.png`.
+
+---
+
 ## Pending
-I, J (Paper 2) — pre-registered, not yet run. See `../STATUS.md`.
+J (Paper 2) — pre-registered, not yet run. See `../STATUS.md`.
