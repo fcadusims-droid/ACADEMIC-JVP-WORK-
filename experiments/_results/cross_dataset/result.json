@@ -1,0 +1,49 @@
+{
+  "experiment": "C_cross_dataset",
+  "mode": "synthetic (Sleep-EDF blocked by network policy) -- ratio sweep proxy",
+  "params": {
+    "n_subjects": 15,
+    "n_ch": 4,
+    "T": 600,
+    "excursion_size": 0.5,
+    "ratios": [
+      0.5,
+      0.75,
+      1.0,
+      1.5,
+      2.0,
+      3.0
+    ],
+    "fragile_w": 3,
+    "large_w": 120,
+    "tol": 15
+  },
+  "fragile_hits_by_ratio": {
+    "0.5": 1,
+    "0.75": 1,
+    "1.0": 11,
+    "1.5": 15,
+    "2.0": 15,
+    "3.0": 15
+  },
+  "large_window_hits_by_ratio": {
+    "0.5": 15,
+    "0.75": 15,
+    "1.0": 15,
+    "1.5": 15,
+    "2.0": 15,
+    "3.0": 15
+  },
+  "large_window_hits_by_burst_duration_at_ratio1": {
+    "1": 15,
+    "10": 15,
+    "30": 15,
+    "60": 14,
+    "100": 13
+  },
+  "preregistered_question": "method failure vs adversarial paradigm",
+  "verdict": "METHOD ROBUST via PERSISTENCE: the persistence-sensitive large window localizes the transition robustly across paradigm strength (>= 15/15 at every ratio, including the adversarial ratio 1 where the fragile pointwise detector gets 11/15) AND across fluctuation persistence -- degrading only mildly to 13/15 when spontaneous bursts approach the window length (100 vs window 120). A+B+C stopping rule: the localization failure (5/15) is resolved by a large, persistence-sensitive window -- NOT by a multiscale bank (Exp A: no gain over a single large window) and NOT by covariate smoothing (Exp B: degrades it). The residual risk is a spontaneous structural burst LONGER than the analysis window, which would look permanent within it; that is the one regime still needing a permanence-to-record-end test. Ready for a confirmatory pre-registration; real-EEG confirmation still needs PhysioNet.",
+  "figures": [
+    "ratio_sweep.png"
+  ]
+}

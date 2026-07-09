@@ -136,6 +136,44 @@ Files: `localization_priors/result.json`, `localization_priors/smoothing_sweep.p
 
 ---
 
+## Experiment C — Method vs paradigm (Paper 3)
+**Verdict: METHOD ROBUST via PERSISTENCE (with one residual open problem).**
+
+Sleep-EDF is also blocked by network policy, so this sweeps two axes synthetically:
+transition/spontaneous-fluctuation *ratio* (paradigm strength) and fluctuation
+*persistence* (transient → sustained bursts).
+
+Localization hit rate (|err| ≤ 15), 15 subjects:
+
+| ratio (transient) | 0.5 | 0.75 | 1.0 | 1.5 | 2.0 | 3.0 |
+|---|---|---|---|---|---|---|
+| fragile (w=3) | 1 | 1 | 11 | 15 | 15 | 15 |
+| large window (w=120) | 15 | 15 | 15 | 15 | 15 | 15 |
+
+| burst duration @ ratio 1 | 1 | 10 | 30 | 60 | 100 |
+|---|---|---|---|---|---|
+| large window | 15 | 15 | 15 | 14 | 13 |
+
+- The persistence-sensitive large window localizes robustly across **paradigm
+  strength** (15/15 at every ratio, where the fragile detector fails at low ratio)
+  **and** across **fluctuation persistence** (mild 15→13 only as bursts approach
+  the window length, 100 vs 120).
+- **Residual open problem:** a spontaneous structural burst *longer than the
+  analysis window* looks permanent within it — the one regime a window mean can't
+  resolve; it needs a permanence-to-record-end test.
+
+### A + B + C synthesis (Paper 3 localization)
+The appendix 5/15 failure is a **fragile-pointwise-detector artifact** in an
+adversarial ratio regime. It is resolved by a **large, persistence-sensitive
+window** — because a transition is a *persistent* regime change while spontaneous
+excursions are *transient*. The multiscale bank (A) adds nothing over a single
+large window; covariate smoothing (B) actively hurts. The honest fix for Paper 3
+is: use a large window and state a scope bound for spontaneous bursts longer than
+that window. **All synthetic (PhysioNet blocked); real-EEG confirmation outstanding.**
+
+Files: `cross_dataset/result.json`, `cross_dataset/ratio_sweep.png`.
+
+---
+
 ## Pending
-C (Paper 3), F, E (Paper 1), H, I, J (Paper 2) — pre-registered, not yet run.
-See `../STATUS.md`.
+F, E (Paper 1), H, I, J (Paper 2) — pre-registered, not yet run. See `../STATUS.md`.
