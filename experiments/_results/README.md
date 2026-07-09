@@ -175,5 +175,26 @@ Files: `cross_dataset/result.json`, `cross_dataset/ratio_sweep.png`.
 
 ---
 
+## Experiment F — Exogenous-horn cost curve (Paper 1, Sec 7.3)
+**Verdict: CLAIM CONFIRMED — the finite-gain agency cost is graded and monotone.**
+
+A double-well explorer (`dx = (x − x³)dt + σ dW`, intrinsic hopping between wells)
+is tracked to `x_ref = 0` with proportional gain `k`, sweeping `k`.
+
+| gain k | 0 | 0.5 | 1.0 | 2.0 | 5.0 | 12.0 |
+|---|---|---|---|---|---|---|
+| D_ag (stationary variance) | 0.85 | 0.44 | 0.24 | 0.099 | 0.031 | 0.012 |
+| λ∥ (relaxation rate) | −0.09 | −0.23 | −0.51 | −1.28 | −4.06 | −11.5 |
+
+Both curves are **monotone** and **graded**: `D_ag → 0` (approaching the
+annihilation limit) and `λ∥ → −∞` smoothly as gain rises. The double-well
+bifurcation at `k=1` is washed out by the exploratory noise, so there is no
+discontinuity — Sec 7.3's "graded, monotone" finite-gain cost is numerically
+vindicated (as opposed to the perfect-tracking limit, which is the annihilation).
+
+Files: `tracking_cost_curve/result.json`, `tracking_cost_curve/cost_curve.png`.
+
+---
+
 ## Pending
-F, E (Paper 1), H, I, J (Paper 2) — pre-registered, not yet run. See `../STATUS.md`.
+E (Paper 1), H, I, J (Paper 2) — pre-registered, not yet run. See `../STATUS.md`.
