@@ -103,22 +103,27 @@ def simulate_regime(regime: str, cfg: SimConfig):
 
 
 def conditional_residual_variance(X: NDArray, ar_rho: float = 0.5,
-                                  half_window: int = 10) -> NDArray:
+                                  half_window: int = 4) -> NDArray:
     """Local conditional residual variance -- the predictability covariate.
 
-    One-step AR prediction residual, squared and locally averaged in a causal
-    window. Its peak marks maximal predictive breakdown; the jump search is
-    anchored to it (Paper 3, Sec. 4.2 / 6.4). Blind search on the raw increment
-    is proscribed because heavy tails create false peaks.
+    Strictly causal one-step-ahead AR(1) prediction of the *increment* from the
+    previous increment: ``e_t = dX_t - rho * dX_{t-1}``, using only the past. The
+    squared innovation is smoothed in a causal trailing window. At an abrupt
+    jump the increment is large and unpredicted, so ``e_t`` -- and the covariate
+    -- peaks there; that is the point the jump search is anchored to (Paper 3,
+    Sec. 4.2 / 6.4). Blind search on the raw increment is proscribed because
+    heavy tails create false peaks; anchoring to this covariate is the guardrail.
+
+    NB: an earlier version used ``X[t]`` inside the predictor of ``X[t]`` (future
+    leakage), which flattened the covariate at the jump and broke the anchor.
     """
-    X = np.atleast_2d(X.T).T if X.ndim == 2 else X[:, None]
-    T = X.shape[0]
-    resid = np.zeros(T)
-    pred = np.zeros_like(X)
-    pred[1:] = X[:-1] + ar_rho * np.diff(X, axis=0)
-    err = X - pred
+    X2 = np.atleast_2d(X.T).T if X.ndim == 2 else X[:, None]
+    T = X2.shape[0]
+    dX = np.diff(X2, axis=0, prepend=X2[:1])   # increments; dX[0] = 0
+    pred = np.zeros_like(dX)
+    pred[1:] = ar_rho * dX[:-1]                 # causal: uses only dX_{t-1}
+    err = dX - pred
     resid = np.sum(err ** 2, axis=1)
-    # causal moving average
     out = np.zeros(T)
     for t in range(T):
         lo = max(0, t - half_window)
