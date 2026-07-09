@@ -1,0 +1,42 @@
+{
+  "experiment": "G_poincare_recurrence",
+  "attractor": "Lorenz (sigma=10, rho=28, beta=8/3)",
+  "n_points": 18000,
+  "attractor_rms_span": 14.766808824240494,
+  "theiler_window_steps": 100,
+  "sweep": [
+    {
+      "eps_frac_of_span": 0.01,
+      "eps": 0.14766808824240493,
+      "recurrence_fraction": 0.5104444444444445
+    },
+    {
+      "eps_frac_of_span": 0.02,
+      "eps": 0.29533617648480986,
+      "recurrence_fraction": 0.845
+    },
+    {
+      "eps_frac_of_span": 0.05,
+      "eps": 0.7383404412120247,
+      "recurrence_fraction": 0.9780555555555556
+    },
+    {
+      "eps_frac_of_span": 0.1,
+      "eps": 1.4766808824240494,
+      "recurrence_fraction": 0.9933888888888889
+    },
+    {
+      "eps_frac_of_span": 0.15,
+      "eps": 2.215021323636074,
+      "recurrence_fraction": 0.994
+    },
+    {
+      "eps_frac_of_span": 0.2,
+      "eps": 2.9533617648480988,
+      "recurrence_fraction": 0.9946666666666667
+    }
+  ],
+  "preregistered_criterion": "recurrence fraction >= 0.95 over eps >= 0.05*span",
+  "verdict": "CONFIRMED: text's 'recurrence fraction ~ 1' holds",
+  "smallest_eps_frac_meeting_0.95": 0.05
+}

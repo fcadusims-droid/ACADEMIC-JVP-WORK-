@@ -1,0 +1,11 @@
+# Core scientific stack for the JVP experiment suite.
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+pandas>=2.1
+
+# Phase 2 (Paper 1 RL trichotomy, Exp E) pulls these in on demand; they are not
+# needed for the shared_lib, Paper 3, or Paper 2 experiments and are listed
+# separately so the base install stays light.
+# gymnasium>=0.29
+# torch>=2.2
