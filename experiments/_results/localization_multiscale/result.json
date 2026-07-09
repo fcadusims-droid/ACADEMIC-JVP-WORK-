@@ -1,0 +1,41 @@
+{
+  "experiment": "A_multiscale_localization",
+  "mode": "synthetic-adversarial (PhysioNet blocked by network policy)",
+  "params": {
+    "n_subjects": 15,
+    "n_ch": 4,
+    "T": 600,
+    "d_seam": 0.45,
+    "excursion_size": 0.7,
+    "single_fragile": 3,
+    "single_large": 120,
+    "multi_scales": [
+      3,
+      12,
+      40,
+      120
+    ],
+    "tol": 15
+  },
+  "hits": {
+    "fragile_single": 2,
+    "large_single": 15,
+    "multiscale": 15,
+    "n": 15
+  },
+  "median_err": {
+    "fragile": 131.0,
+    "large": 0.0,
+    "multi": 0.0
+  },
+  "drift_guardrail": {
+    "seam_prominence_median": 16.28799410605565,
+    "drift_prominence_median": 5.439820220369501,
+    "holds": true
+  },
+  "preregistered_criterion": "5/15 -> >= 10/15 without reintroducing drift/jump",
+  "verdict": "CRITERION MET, but the fix is WINDOW SIZE, not multiscale: fragile short window 2/15 -> multiscale 15/15; however a single LARGE window already reaches 15/15 (median err 0), matching multiscale. In this synthetic setup the 5/15 failure is a window-size artifact (short windows are fooled by transient excursions); enlarging the analysis window fixes it, and the multiscale bank adds no measured value over a single large window. Drift guardrail holds (prominence seam 16.3 > drift 5.4). Caveats: symmetric windows (offline localization, not strictly causal/online); real EEG may impose a precision cost on a large window that a multiscale bank could escape -- untested without PhysioNet.",
+  "figures": [
+    "localization.png"
+  ]
+}

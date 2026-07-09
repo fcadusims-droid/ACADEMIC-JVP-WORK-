@@ -1,0 +1,48 @@
+{
+  "experiment": "B_localization_priors",
+  "params": {
+    "n_trials": 200,
+    "dim": 3,
+    "T": 400,
+    "jump_time": 200,
+    "jump_size": 12.0,
+    "heavy_df": 6,
+    "bandwidths": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      12,
+      20,
+      30
+    ],
+    "tol": 8
+  },
+  "localization_accuracy": {
+    "0": 0.36,
+    "1": 0.295,
+    "2": 0.245,
+    "4": 0.18,
+    "8": 0.19,
+    "12": 0.105,
+    "20": 0.09,
+    "30": 0.07
+  },
+  "jump_power": {
+    "0": 0.045,
+    "1": 0.04,
+    "2": 0.035,
+    "4": 0.03,
+    "8": 0.1,
+    "12": 0.035,
+    "20": 0.07,
+    "30": 0.03
+  },
+  "best_bandwidth": 0,
+  "preregistered_criterion": "a bandwidth improving localization while jump power stays >= baseline",
+  "verdict": "NO BENEFIT (mechanistic): causal smoothing does not help and monotonically degrades localization (0.36 at h=0 -> 0.07 at h=30). An abrupt jump and a sharp spontaneous excursion have the SAME single-sample covariate signature, so smoothing cannot separate them -- it blurs the jump's peak (~1/h) faster than it suppresses transient spikes (~1/sqrt(h)), lowering SNR. The discriminator that does work is PERSISTENCE (a jump changes the regime, an excursion does not), which a window-MEAN statistic exploits (Exp A) and a covariate argmax cannot. Smoothing gamma_t is the wrong prior for abrupt transitions.",
+  "figures": [
+    "smoothing_sweep.png"
+  ]
+}

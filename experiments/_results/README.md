@@ -80,6 +80,100 @@ Files: `drift_jump_confusion_sweep/result.json`,
 
 ---
 
+## Experiment A — Multi-scale localization (Paper 3)
+**Verdict: criterion met (2/15 → 15/15), but the operative fix is WINDOW SIZE, not the multiscale bank.**
+
+PhysioNet is blocked by the environment network policy, so this ran in the
+pre-registered synthetic-adversarial mode: a persistent structural seam embedded
+in spontaneous fluctuations with sharp transient excursions larger than the seam.
+
+| detector | hits (\|err\| ≤ 15) | median err |
+|---|---|---|
+| fragile short window (w=3) | 2/15 | 131 |
+| single large window (w=120) | 15/15 | 0 |
+| multiscale bank | 15/15 | 0 |
+
+- The short-window baseline reproduces the appendix's failure mode (transient
+  excursions beat the true seam → 2/15).
+- Both a single large window and the multiscale bank fully recover (15/15) → in
+  this synthetic setup the 5/15 failure is a **window-size artifact**, fixable by
+  enlarging the analysis window; the multiscale aggregation adds no measured value
+  over a single large window.
+- Drift guardrail holds (peak prominence on true seams 16.3 vs 5.4 on no-seam
+  drift records — the detector does not manufacture a seam where there is none).
+- **Caveats:** symmetric windows = *offline* localization, not strictly
+  causal/online; and real EEG may impose a precision cost on a large window that a
+  multiscale bank could escape — untested without PhysioNet.
+
+Files: `localization_multiscale/result.json`, `localization_multiscale/localization.png`.
+
+---
+
+## Experiment B — Covariate smoothing prior (Paper 3)
+**Verdict: NO BENEFIT (mechanistic) — smoothing γ_t is the wrong prior for abrupt transitions.**
+
+Sweep the causal smoothing bandwidth `h` of the predictability covariate before
+the jump argmax, on heavy-tailed diffusion with sharp spontaneous excursions
+(~ jump size) that fool the raw argmax.
+
+| bandwidth h | 0 | 1 | 2 | 4 | 8 | 12 | 20 | 30 |
+|---|---|---|---|---|---|---|---|---|
+| localization accuracy | **0.36** | 0.29 | 0.24 | 0.18 | 0.19 | 0.10 | 0.09 | 0.07 |
+
+Smoothing **monotonically degrades** localization. Mechanism: an abrupt jump and a
+sharp spontaneous excursion have the *same single-sample* covariate signature, so
+smoothing cannot separate them — it blurs the jump's peak (~1/h) faster than it
+suppresses transient spikes (~1/√h), lowering SNR. The discriminator that *does*
+work is **persistence** (a jump changes the regime; an excursion does not), which
+a window-mean statistic exploits (Exp A) and a covariate argmax cannot.
+
+Together A + B say: for abrupt transitions among comparable spontaneous events,
+pointwise/covariate localization is not rescuable by smoothing; only a
+persistence-sensitive (window-mean) statistic localizes reliably — and the
+operative knob there is window size.
+
+Files: `localization_priors/result.json`, `localization_priors/smoothing_sweep.png`.
+
+---
+
+## Experiment C — Method vs paradigm (Paper 3)
+**Verdict: METHOD ROBUST via PERSISTENCE (with one residual open problem).**
+
+Sleep-EDF is also blocked by network policy, so this sweeps two axes synthetically:
+transition/spontaneous-fluctuation *ratio* (paradigm strength) and fluctuation
+*persistence* (transient → sustained bursts).
+
+Localization hit rate (|err| ≤ 15), 15 subjects:
+
+| ratio (transient) | 0.5 | 0.75 | 1.0 | 1.5 | 2.0 | 3.0 |
+|---|---|---|---|---|---|---|
+| fragile (w=3) | 1 | 1 | 11 | 15 | 15 | 15 |
+| large window (w=120) | 15 | 15 | 15 | 15 | 15 | 15 |
+
+| burst duration @ ratio 1 | 1 | 10 | 30 | 60 | 100 |
+|---|---|---|---|---|---|
+| large window | 15 | 15 | 15 | 14 | 13 |
+
+- The persistence-sensitive large window localizes robustly across **paradigm
+  strength** (15/15 at every ratio, where the fragile detector fails at low ratio)
+  **and** across **fluctuation persistence** (mild 15→13 only as bursts approach
+  the window length, 100 vs 120).
+- **Residual open problem:** a spontaneous structural burst *longer than the
+  analysis window* looks permanent within it — the one regime a window mean can't
+  resolve; it needs a permanence-to-record-end test.
+
+### A + B + C synthesis (Paper 3 localization)
+The appendix 5/15 failure is a **fragile-pointwise-detector artifact** in an
+adversarial ratio regime. It is resolved by a **large, persistence-sensitive
+window** — because a transition is a *persistent* regime change while spontaneous
+excursions are *transient*. The multiscale bank (A) adds nothing over a single
+large window; covariate smoothing (B) actively hurts. The honest fix for Paper 3
+is: use a large window and state a scope bound for spontaneous bursts longer than
+that window. **All synthetic (PhysioNet blocked); real-EEG confirmation outstanding.**
+
+Files: `cross_dataset/result.json`, `cross_dataset/ratio_sweep.png`.
+
+---
+
 ## Pending
-A, B, C (Paper 3 localization), F, E (Paper 1), H, I, J (Paper 2) — pre-registered,
-not yet run. See `../STATUS.md`.
+F, E (Paper 1), H, I, J (Paper 2) — pre-registered, not yet run. See `../STATUS.md`.
