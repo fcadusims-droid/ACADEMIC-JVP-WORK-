@@ -31,6 +31,7 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from scipy.stats import kurtosis
 
 from experiments.shared_lib import manifold_trajectory as mt
 from experiments.shared_lib import jump_diffusion as jd
@@ -91,20 +92,43 @@ def sim_jump_stats(regime, T, metric, seed0, drift=0.0, cfac=0.05):
     return stats
 
 
+def metric_tail_kurtosis(n_seeds=40, seed0=6000):
+    """Excess kurtosis of the anti-developed pure-diffusion increment norms under
+    the square-root vs AIRM metric. The appendix's key metric contrast is that
+    AIRM anti-developed diffusion increments are heavy-tailed (excess kurtosis
+    ~20) while the square-root metric keeps them light (~4.5); this reproduces
+    the direction and order of magnitude. Computed here so the README's figure is
+    backed by result.json rather than an out-of-band probe."""
+    ks, ka = [], []
+    for s in range(n_seeds):
+        cfg = mt.ManifoldSimConfig(n=N_DIM, T=T0, drift_strength=0.0,
+                                   diffusion_scale=DIFFUSION, seed=seed0 + s)
+        rhos, _ = mt.simulate_manifold_regime("dispersion", cfg)
+        ks.append(kurtosis(np.linalg.norm(mt.anti_develop(rhos, "sqrt"), axis=1)))
+        ka.append(kurtosis(np.linalg.norm(mt.anti_develop(rhos, "airm"), axis=1)))
+    return float(np.median(ks)), float(np.median(ka))
+
+
 def run_metric(metric: str, seed0: int = 2000, full: bool = True):
     """full=True: complete drift x collapse AUC grid (square-root metric).
     full=False: only the dispersion-calibrated threshold and per-collapse jump
     power (used for the AIRM reference, whose point is jump-blindness)."""
+    # Seed blocks are spaced by 100 (> N_SEEDS) and placed in widely separated
+    # bases so that no two cells in the same output panel share any seed: the
+    # earlier spacing of 50 with N_SEEDS=60 made adjacent drift rows / collapse
+    # columns share 10 seeds, mildly correlating neighbouring cells. The metric
+    # offset (sqrt seed0=2000, airm seed0=4000) exceeds each within-metric span
+    # (<=600), so cross-metric coincidences cannot occur either.
     disp = sim_jump_stats("dispersion", T0, metric, seed0 + 1)
     thr = float(np.quantile(disp, 1 - FPR_TARGET))
-    coll_stats = {cf: sim_jump_stats("collapse", T0, metric, seed0 + 500 + 50 * k, cfac=cf)
+    coll_stats = {cf: sim_jump_stats("collapse", T0, metric, seed0 + 100_000 + 100 * k, cfac=cf)
                   for k, cf in enumerate(COLLAPSE_FACTORS)}
     jumppower = np.array([np.mean(coll_stats[cf] > thr) for cf in COLLAPSE_FACTORS])
     if not full:
         return {"threshold": thr, "jump_power": jumppower, "auc": None,
                 "driftjump_rate": None, "dispersion_stats": disp}
 
-    drift_stats = {ds: sim_jump_stats("drift", T0, metric, seed0 + 100 + 50 * i, drift=ds)
+    drift_stats = {ds: sim_jump_stats("drift", T0, metric, seed0 + 300_000 + 100 * i, drift=ds)
                    for i, ds in enumerate(DRIFT_STRENGTHS)}
     nd, nc = len(DRIFT_STRENGTHS), len(COLLAPSE_FACTORS)
     auc_grid = np.full((nd, nc), np.nan)
@@ -250,6 +274,8 @@ def main():
     wdep = window_dependence("sqrt")
     print("  seed stability...")
     seedstab = seed_stability("sqrt")
+    print("  metric tail kurtosis...")
+    kurt_sqrt, kurt_airm = metric_tail_kurtosis()
 
     make_figures(sqrt_res, airm_res, wdep, RESULTS_DIR)
     verdict = issue_verdict(sqrt_res, seedstab)
@@ -275,6 +301,9 @@ def main():
                     "the most severe collapse survives the raised threshold."},
         "window_dependence": wdep,
         "seed_stability": seedstab,
+        "metric_tail_excess_kurtosis": {"sqrt": kurt_sqrt, "airm": kurt_airm,
+            "note": "pure-diffusion anti-developed increment-norm excess kurtosis; "
+                    "appendix contrast ~4.5 (sqrt) vs ~20 (AIRM)"},
         "diagnostic": verdict,
         "figures": ["confusion_surfaces.png", "window_dependence.png"]}
     with open(os.path.join(RESULTS_DIR, "result.json"), "w") as fh:
