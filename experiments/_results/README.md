@@ -319,7 +319,116 @@ Files: `metabolic_null_resolution/result.json`, `metabolic_null_resolution/null_
 
 ---
 
-## All ten experiments complete
+## Experiment I2 — Does criticality confound the dissociation test? (Paper 2, Sec 14.1)
+**Extends Experiment I**, closing a gap an independent review of this repo identified: I
+tested whether criticality confounds the *gating* differential; it never tested
+the *dissociation* test (`M_diss`) that Experiment H's power analysis assumed
+was valid. This experiment builds a generator with **zero identity mechanism**
+— a bare critical branching process where CONTINUE means the same lineage
+carries across the transition and RESET means a fresh independent lineage
+replaces it — and asks whether continuity alone (no identity information
+anywhere) reproduces the preservation contrast `M_diss` treats as diagnostic of
+identity-linkage.
+
+**Verdict: GROWING CONFOUND NEAR TRUE CRITICALITY — nuanced, not a clean survival.**
+
+| criticality σ (noise=0.1) | 0.70 | 0.81 | 0.87 | 0.93 | 0.97 |
+|---|---|---|---|---|---|
+| D_bare_critical | 0.10 | 0.30 | 0.41 | 0.53 | **0.66** |
+
+Reference: `D_identity_linked = 0.90` (explicit identity mechanism),
+`D_null = -0.02` (honest negative control), sub-critical control D ≤ 0.10.
+
+- Only 3/12 critical cells cross the pre-registered 50%-of-reference threshold
+  (25%), so this is **not** a clean "confounded like gating" result.
+- But `D_bare_critical` rises **monotonically** with criticality and falling
+  read-out noise, reaching **73% of the identity-linked reference** at the
+  strongest, cleanest cell (σ=0.97, noise=0.1) — a system with *zero* identity
+  mechanism gets within shouting distance of what an explicit identity channel
+  produces, purely from continuity vs reset.
+- This mirrors Experiment I's own pattern for the gating differential exactly:
+  safe away from criticality, confounded near it.
+- **Consequence for the paper:** `M_diss` is not diagnostic of identity per se
+  near true criticality without an independent control showing the boundary
+  process is measurably sub-critical — a requirement Sec 14.1 does not
+  currently state. This is the same class of correction Sec 15.5 already gave
+  the gating test, now shown to extend to the dissociation test as well.
+
+Files: `dissociation_confound/result.json`, `dissociation_confound/dissociation_confound_grid.png`.
+
+---
+
+## Experiment AD — Window Tension & Causal-vs-Offline Localization (Paper 3)
+**Reconciles Experiments A and D**, closing a second gap the review identified:
+A's fix used a large **symmetric** (offline, future-using) window; D found
+longer windows *worsen* drift/jump discrimination. Neither was tested on a
+shared apparatus, and A's caveat ("offline, not the causal/online claim the
+abstract makes") was never followed to its consequence.
+
+**Verdict: CAUSAL CLAIM RECOVERABLE, AT AN EXPLICIT REPORTING-LAG COST.**
+
+- A **naive** causal design (recent window vs. *all* unweighted past history)
+  fails badly (best 8/15) — it never forgets the pre-seam regime, so the
+  reference stays permanently contaminated after a transition. This is a
+  detector-design pitfall, not proof causal detection is impossible.
+- The **standard** causal design (two adjacent backward-looking windows) is
+  mathematically *identical* to the symmetric statistic, shifted in time by
+  exactly `w` samples (`S_causal[t] = S_symmetric[t−w]`, an exact identity). Once
+  its estimate is corrected for that definitional reporting lag, it **matches
+  the offline result exactly (15/15 at every guarded window)**.
+- **The honest cost:** even the best causal design cannot report a transition
+  until `w` samples after it happened. The smallest reliably-guarded window
+  still pays a **10-sample (2% of the 600-sample record) reporting lag** — a
+  real, quantified, previously unstated price of the "causal/online" claim.
+- **The A/D tension did not reproduce here:** drift-only false-fire prominence
+  *fell* with window size in this apparatus (6.3→2.0), the opposite of D's
+  finding. This means A and D's window preferences are not in conflict on a
+  shared statistic — they are two **different sub-problems** (break-curve
+  localization vs. Girsanov-geometry drift/jump demarcation) with independent
+  window dependencies, and Paper 3 can use different windows for each without
+  contradiction, provided this is stated explicitly rather than left as an
+  unresolved tension.
+
+Files: `causal_vs_offline_localization/result.json`, `causal_vs_offline_localization/causal_vs_offline.png`.
+
+---
+
+## Experiment E2 — High-Dimensional, Value-Base-Mutating Trichotomy Test (Paper 1)
+**Extends Experiment E** to close the third gap the review identified: E's
+candidates were all low-dimensional (2-D torus / 3-D Lorenz); the text's own
+hardest named objection is *open-ended, novelty-driven, value-base-mutating
+optimization* in a genuinely higher-dimensional, population setting. This builds
+that candidate directly: `M=8` agents on a `d=6` compact torus, climbing a
+reward landscape whose bumps **recede from wherever the population concentrates**
+— the objective mutates in response to the population's own trajectory.
+
+**Verdict: TRICHOTOMY SURVIVES ITS HARDEST NAMED CASE, among numerically resolved cells — with an important methodological catch caught mid-run.**
+
+An initial sweep found an apparent falsifier at strong recession (λ=+113,
+recurrence=0.14–0.49) — but a **dt-convergence sanity check** (comparing the
+Lyapunov estimate at `dt` vs `dt/2`) exposed that the exponent **kept growing
+without bound as the step shrank** (113→221→384→730→1718→3158), and one cell
+even **flipped sign** between the two resolutions. This is the signature of an
+unresolved numerical artifact (a stiff agent-chasing-fleeing-bump feedback loop),
+not genuine chaos — force-magnitude clipping was tried and did not fix it. These
+**7/12 cells were excluded as numerically unresolved**, not reported as either a
+confirmation or a falsification, mirroring the precedent Paper 3's own appendix
+set when its naive jump-search produced a controlled failure.
+
+Among the **5/12 cells that passed convergence** (weak-to-moderate landscape
+recession), no cell showed the forbidden positive-entropy-with-no-recurrence
+combination — the trichotomy holds where it could be trustworthily tested.
+
+**Honest limitation:** the most adversarial regime (strong, fast landscape
+mutation) is exactly where the integrator broke down, so it remains genuinely
+*untested*, not confirmed — a proper treatment would need a stiffer/implicit
+integrator, left as future work rather than force-fit here.
+
+Files: `high_dim_trichotomy/result.json`, `high_dim_trichotomy/high_dim_trichotomy.png`.
+
+---
+
+## All thirteen experiments complete
 
 | # | Paper | Headline |
 |---|---|---|
@@ -333,10 +442,19 @@ Files: `metabolic_null_resolution/result.json`, `metabolic_null_resolution/null_
 | H | 2 | Dissociation test is matching-limited (validity, not just power) |
 | I | 2 | Criticality confound is **robust** — Sec 15.5 stands, eliminative arm only |
 | J | 2 | Metabolic null has a resolution threshold h\*≈0.7–0.9 ell scaling with L_D |
+| **I2** | 2 | Extends I to `M_diss`: **growing confound near true criticality** (73% of identity-linked signal at the cleanest cell) |
+| **AD** | 3 | Reconciles A/D: causal localization **recoverable at a quantified reporting-lag cost**; A/D's "tension" doesn't reproduce on a shared apparatus |
+| **E2** | 1 | Extends E to a d=6 population, value-base-mutating agent: trichotomy **survives on numerically resolved cells**; an apparent falsifier was caught and excluded by a dt-convergence check |
 
-**Cross-cutting honesty:** two real `shared_lib` bugs were found and fixed en
-route (HAC drift-test calibration; a future-leakage bug in the predictability
-covariate). Paper 3's experiments run in synthetic-adversarial mode because
-PhysioNet is blocked by the environment network policy — real-EEG confirmation
-remains outstanding. Every verdict was issued against a pre-registration written
-before the run.
+**Cross-cutting honesty:** four real bugs were found and fixed en route — two in
+`shared_lib` (HAC drift-test calibration; a future-leakage bug in the
+predictability covariate) and two in the extension experiments (a degenerate
+CONTINUE/RESET design in I2, fixed via cross-trial level correlation; a
+mathematically-exact reporting-lag identity in AD, and a numerically-divergent
+Lyapunov estimate in E2, caught by an explicit dt-convergence gate rather than
+reported as a falsifier). Paper 3's experiments run in synthetic-adversarial mode
+because PhysioNet is blocked by the environment network policy (confirmed via
+direct diagnosis: the block is currently a PhysioNet-side outage — /files/ paths
+return HTTP 500 and /content/ paths return HTTP 404 site-wide across unrelated
+databases, not a proxy denial) — real-EEG confirmation remains outstanding. Every
+verdict was issued against a pre-registration written before the run.

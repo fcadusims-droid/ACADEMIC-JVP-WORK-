@@ -1,0 +1,56 @@
+{
+  "experiment": "I2_dissociation_confound",
+  "params": {
+    "n_trials": 1500,
+    "gen_len": 12,
+    "crit_exponents": [
+      1.0,
+      1.25,
+      1.5,
+      2.0,
+      3.0
+    ],
+    "readout_noises": [
+      0.1,
+      0.5,
+      1.0
+    ],
+    "identity_drop": 1.5
+  },
+  "D_identity_linked_reference": 0.9041570022413521,
+  "D_null_reference": -0.016312796820662587,
+  "D_bare_critical_grid": [
+    [
+      0.10277895276196237,
+      0.03217134296207413,
+      0.0126319144264367
+    ],
+    [
+      0.30224980015785785,
+      0.1788660216273755,
+      0.08258492599253471
+    ],
+    [
+      0.413493887070235,
+      0.3244154665873038,
+      0.19681677515548943
+    ],
+    [
+      0.5250919270174287,
+      0.40793524972910733,
+      0.246006417521457
+    ],
+    [
+      0.6629986623703373,
+      0.46720901997913167,
+      0.24954969500898683
+    ]
+  ],
+  "reproduces_fraction": 0.25,
+  "sub_critical_control_max_D": 0.10277895276196237,
+  "preregistered_question": "does criticality alone confound M_diss (Sec 14.1), like it confounds gating (Exp I)?",
+  "verdict": "GROWING CONFOUND NEAR TRUE CRITICALITY (nuanced, not a clean survival): the reproduction fraction at the D>=50% threshold is only 25% (3/12), but D_bare_critical rises MONOTONICALLY with criticality and low noise -- from 0.10 at sigma=0.70 to 0.66 at sigma=0.97 (low-noise column) -- reaching 73% of the identity-linked reference (0.90) at the strongest/cleanest cell. The sub-critical control stays low (D<=0.10), confirming it is criticality specifically, not the statistic, that drives this. The honest reading: M_diss is NOT confounded away from true criticality, but AS a system approaches sigma=1 with low read-out noise, the dissociation signature converges toward what pure criticality alone can produce -- mirroring exactly the pattern Exp I found for gating (safe away from criticality, confounded near it). Sec 14.1 should state this boundary explicitly: dissociation evidence is diagnostic of identity only if the boundary process can be shown to be measurably sub-critical, which CBRA does not currently require.",
+  "figures": [
+    "dissociation_confound_grid.png"
+  ]
+}

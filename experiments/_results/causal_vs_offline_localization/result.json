@@ -1,0 +1,172 @@
+{
+  "experiment": "AD_causal_vs_offline_localization",
+  "params": {
+    "n_subjects": 15,
+    "windows": [
+      10,
+      20,
+      40,
+      80,
+      120,
+      160,
+      200,
+      280
+    ],
+    "tol": 15,
+    "min_history": 20,
+    "T": 600
+  },
+  "symmetric": {
+    "10": {
+      "hits": 15,
+      "seam_prom": 17.656832366477413,
+      "drift_prom": 6.3429322249577496
+    },
+    "20": {
+      "hits": 15,
+      "seam_prom": 23.068259835464012,
+      "drift_prom": 4.384987075966995
+    },
+    "40": {
+      "hits": 15,
+      "seam_prom": 30.64263795419141,
+      "drift_prom": 3.706248723755399
+    },
+    "80": {
+      "hits": 15,
+      "seam_prom": 29.408978820346988,
+      "drift_prom": 3.119867114864517
+    },
+    "120": {
+      "hits": 15,
+      "seam_prom": 3.723395455603422,
+      "drift_prom": 2.552841715055423
+    },
+    "160": {
+      "hits": 15,
+      "seam_prom": 1.7423962721393378,
+      "drift_prom": 2.4803004230347274
+    },
+    "200": {
+      "hits": 15,
+      "seam_prom": 1.5669094499117204,
+      "drift_prom": 2.3545765481076577
+    },
+    "280": {
+      "hits": 5,
+      "seam_prom": 1.9816754604063787,
+      "drift_prom": 2.0219309751856325
+    }
+  },
+  "causal_naive_history": {
+    "10": {
+      "hits": 8,
+      "seam_prom": 2.6874526120237596,
+      "drift_prom": 3.2574569740381167
+    },
+    "20": {
+      "hits": 0,
+      "seam_prom": 2.1098700647801043,
+      "drift_prom": 2.820649681611342
+    },
+    "40": {
+      "hits": 0,
+      "seam_prom": 1.9219032245387713,
+      "drift_prom": 2.323053191197162
+    },
+    "80": {
+      "hits": 0,
+      "seam_prom": 2.045824078796966,
+      "drift_prom": 2.243629501570167
+    },
+    "120": {
+      "hits": 0,
+      "seam_prom": 2.0154315916554904,
+      "drift_prom": 2.0978454579629657
+    },
+    "160": {
+      "hits": 0,
+      "seam_prom": 2.0789615030906936,
+      "drift_prom": 2.136304574592767
+    },
+    "200": {
+      "hits": 0,
+      "seam_prom": 1.9452653082740199,
+      "drift_prom": 2.0609526472191693
+    },
+    "280": {
+      "hits": 0,
+      "seam_prom": 1.7763031539900023,
+      "drift_prom": 1.928068638756968
+    }
+  },
+  "causal_adjacent": {
+    "10": {
+      "hits": 15,
+      "seam_prom": 17.656832366477413,
+      "drift_prom": 6.3429322249577496
+    },
+    "20": {
+      "hits": 15,
+      "seam_prom": 23.068259835464012,
+      "drift_prom": 4.384987075966995
+    },
+    "40": {
+      "hits": 15,
+      "seam_prom": 30.64263795419141,
+      "drift_prom": 3.706248723755399
+    },
+    "80": {
+      "hits": 15,
+      "seam_prom": 29.408978820346988,
+      "drift_prom": 3.119867114864517
+    },
+    "120": {
+      "hits": 15,
+      "seam_prom": 3.723395455603422,
+      "drift_prom": 2.552841715055423
+    },
+    "160": {
+      "hits": 15,
+      "seam_prom": 1.7423962721393378,
+      "drift_prom": 2.4803004230347274
+    },
+    "200": {
+      "hits": 15,
+      "seam_prom": 1.5669094499117204,
+      "drift_prom": 2.3545765481076577
+    },
+    "280": {
+      "hits": 5,
+      "seam_prom": 1.9816754604063787,
+      "drift_prom": 2.0219309751856325
+    }
+  },
+  "window_tension_reproduced": false,
+  "symmetric_guarded_windows": [
+    10,
+    20,
+    40,
+    80,
+    120
+  ],
+  "causal_naive_guarded_windows": [],
+  "causal_adjacent_guarded_windows": [
+    10,
+    20,
+    40,
+    80,
+    120
+  ],
+  "causal_adjacent_reporting_lag_samples": "= window w (definitional; see evaluate() docstring)",
+  "smallest_guarded_reporting_lag": 10,
+  "symmetric_best_hits": 15,
+  "causal_naive_best_hits": 8,
+  "causal_adjacent_best_hits": 15,
+  "preregistered_criterion": "a causal window recovers localization within ~2/15 of symmetric while guarding against drift-only false fires",
+  "verdict": "CAUSAL CLAIM RECOVERABLE, AT AN EXPLICIT REPORTING-LAG COST: the naive unweighted-history causal statistic fails badly (best 8/15 -- it never forgets the pre-seam regime, permanently contaminating the reference). The standard adjacent-windows causal statistic (two consecutive backward windows) matches the symmetric/offline result exactly (15 vs 15/15) once its estimate is corrected for its definitional reporting lag: a peak at time t reflects a break that occurred w samples earlier (the boundary between the two compared backward windows), so the detector cannot confidently report a break until w samples after it happened. This is not a free recovery of the causal claim -- guarded windows range w in [10, 20, 40, 80, 120], so the SMALLEST reliable causal detector still pays a reporting lag of 10 samples (2% of the 600-sample record) before it can flag a transition with guarded confidence. Paper 3's causal/online claim is recoverable with a correctly-designed statistic (the naive recent-vs-all-history design is a real pitfall, not a fundamental barrier), but the abstract should state the detection lag explicitly as the price of causality, not claim instantaneous online localization.",
+  "tension_note": "Window-length tension reproduced inside this apparatus: NO -- drift-only prominence stays flat/falls with window under the symmetric detector (6.3 -> 2.0) and stays flat/falls under the adjacent-windows causal detector (6.3 -> 2.0).",
+  "figures": [
+    "causal_vs_offline.png"
+  ]
+}
