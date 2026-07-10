@@ -16,6 +16,10 @@ Legend: ⬜ pre-registered · 🟨 implemented · 🟩 run · ✅ verdict issued
 | **I** | criticality_sweep | 2 | ✅ | **CONFOUND ROBUST.** A genuinely critical generator (susceptibility exponent p>1) reproduces the gating differential in 15/24 cells (62%), robustly at p≥1.5 across noise/feedback, matching/exceeding the gated signal as criticality grows. Non-critical control (p=1) gives D≈0 (statistic valid). Sec 15.5's concession stands — CBRA's defensible arm is eliminative, not detection. |
 | **J** | metabolic_null_resolution | 2 | ✅ | **RESOLUTION THRESHOLD QUANTIFIED.** The null absorbs the structured boundary residual only when its resolution is finer than h*≈0.7–0.9 ell, and h* grows monotonically with the diffusion length (0.73→0.93 as L_D 0.05→0.25·ell). Strong null := resolution < h*(L_D). Metabolism keeps the residual 20× more structured. Sec 7.2's qualitative claim is now a number. |
 
+| **I2** | dissociation_confound | 2 | ✅ | **GROWING CONFOUND NEAR TRUE CRITICALITY.** Extends I to the dissociation test (M_diss, Sec 14.1). A bare critical generator with zero identity mechanism reaches 73% of the identity-linked reference D at the strongest cell (σ=0.97, low noise), rising monotonically with criticality — mirrors I's pattern (safe away from criticality, confounded near it). Sec 14.1 needs a sub-criticality control, like Sec 15.5 already implies for gating. |
+
+| **AD** | causal_vs_offline_localization | 3 | ✅ | **CAUSAL RECOVERABLE, AT A REPORTING-LAG COST.** Reconciles A (symmetric large window) and D (longer windows worsen drift/jump). Naive causal design fails (8/15); the standard adjacent-windows causal design is mathematically identical to symmetric shifted by w samples, and matches offline exactly (15/15) once lag-corrected — but pays a real ≥10-sample reporting lag. A/D's tension did NOT reproduce here: they are independent sub-problems, not a shared-window conflict. |
+
 ## Recommended execution order
 **D → A → B → C**  (Phase 1, Paper 3)
 **G → F → E**  (Phase 2, Paper 1)
