@@ -1,0 +1,70 @@
+{
+  "experiment": "real_eeg_localization",
+  "data": "PhysioNet eegbci (real EEG), eyes-open (run 1) vs eyes-closed (run 2)",
+  "params": {
+    "n_subjects_attempted": 15,
+    "n_subjects_ok": 15,
+    "channels": [
+      "O1",
+      "Oz",
+      "O2",
+      "PO3",
+      "POz",
+      "PO4",
+      "Pz"
+    ],
+    "alpha_band": [
+      8.0,
+      13.0
+    ],
+    "seg_sec": 26.0,
+    "win_sec": 1.0,
+    "step_sec": 0.25,
+    "fragile_w": 2,
+    "large_w": 40,
+    "multi_scales": [
+      2,
+      8,
+      20,
+      40
+    ],
+    "tol_sec": 2.0
+  },
+  "localization_hits": {
+    "fragile": 2,
+    "large": 4,
+    "multiscale": 4,
+    "n": 15
+  },
+  "localization_median_err_sec": {
+    "fragile": 14.75,
+    "large": 9.0,
+    "multi": 5.5
+  },
+  "structural_discrimination": {
+    "n_above_1": 12,
+    "n": 15,
+    "median_ratio": 1.7130195706020555,
+    "ratios": [
+      2.2,
+      1.27,
+      1.35,
+      2.51,
+      0.77,
+      0.49,
+      1.71,
+      2.18,
+      2.41,
+      1.97,
+      1.6,
+      0.75,
+      2.12,
+      2.76,
+      1.08
+    ]
+  },
+  "verdict": "SPLIT, as the appendix found. Between-record discrimination replicates (12/15, median ratio 1.7), but within-trajectory localization stays hard on real EEG even for the large window (4/15 vs fragile 2/15) -- the synthetic persistence fix does not fully transfer, so real spontaneous alpha bursts behave like the sustained-burst regime Exp C flagged as the residual limitation. Honest real-data status: structural discrimination validated, on-line localization still open.",
+  "figures": [
+    "real_eeg_localization.png"
+  ]
+}

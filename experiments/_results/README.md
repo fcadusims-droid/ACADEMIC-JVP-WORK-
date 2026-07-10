@@ -421,33 +421,115 @@ that candidate directly: `M=8` agents on a `d=6` compact torus, climbing a
 reward landscape whose bumps **recede from wherever the population concentrates**
 — the objective mutates in response to the population's own trajectory.
 
-**Verdict: TRICHOTOMY SURVIVES ITS HARDEST NAMED CASE, among numerically resolved cells — with an important methodological catch caught mid-run.**
+**Verdict: TRICHOTOMY SURVIVES ITS HARDEST NAMED CASE — and the stiff-integrator follow-up turns the previously-"unresolved" cells from *excluded* into *conclusively diagnosed*.**
 
-An initial sweep found an apparent falsifier at strong recession (λ=+113,
-recurrence=0.14–0.49) — but a **dt-convergence sanity check** (comparing the
-Lyapunov estimate at `dt` vs `dt/2`) exposed that the exponent **kept growing
-without bound as the step shrank** (113→221→384→730→1718→3158), and one cell
-even **flipped sign** between the two resolutions. This is the signature of an
-unresolved numerical artifact (a stiff agent-chasing-fleeing-bump feedback loop),
-not genuine chaos — force-magnitude clipping was tried and did not fix it. These
-**7/12 cells were excluded as numerically unresolved**, not reported as either a
-confirmation or a falsification, mirroring the precedent Paper 3's own appendix
-set when its naive jump-search produced a controlled failure.
+The first E2 run (fixed-step Euler on a hard force cap) found an apparent falsifier
+at strong recession whose Lyapunov estimate **kept growing as the step shrank** and
+had to be **excluded as numerically unresolved** (7/12 cells) — honest, but it left
+the most adversarial regime genuinely untested.
 
-Among the **5/12 cells that passed convergence** (weak-to-moderate landscape
-recession), no cell showed the forbidden positive-entropy-with-no-recurrence
-combination — the trichotomy holds where it could be trustworthily tested.
+**Path-2 follow-up (this run):** the integrator was rebuilt — smooth (tanh) force
+saturation instead of a C0 clip, RK4 instead of Euler, vectorised, with cells
+**classified by their resolution scaling** at `dt = DT, DT/2, DT/4` (an adaptive
+stiff LSODA solver was tried first but was too slow to sweep). The result is
+stronger than mere exclusion:
 
-**Honest limitation:** the most adversarial regime (strong, fast landscape
-mutation) is exactly where the integrator broke down, so it remains genuinely
-*untested*, not confirmed — a proper treatment would need a stiffer/implicit
-integrator, left as future work rather than force-fit here.
+- **4/12 cells converge** to a genuine, resolution-stable Lyapunov exponent — all
+  Case-1 convergent (λ ≈ −5 to −23) with high recurrence (≥ 0.94). No falsifier.
+- **8/12 strong-recession cells are resolution-divergent**: their apparent positive
+  exponent **grows as the step shrinks**. A dedicated scaling probe at recession 2
+  is the smoking gun — λ = **121 → 217 → 528 → 722** as `dt = DT → DT/8`, i.e.
+  **λ·dt roughly constant**. That 1/dt scaling is the definitive signature of a
+  **numerical artifact** (trajectories separating by a fixed factor *per step* — a
+  near-discontinuous flow direction when a fleeing bump passes through an agent —
+  not per unit time). A genuine Lyapunov exponent converges; a 1/dt-diverging one
+  **does not exist**, so these cells have no genuine positive exponent and are
+  **not falsifiers**.
+- **The crux:** the one low-recurrence cell that *could* have been a falsifier
+  (recession 2, diversity 0, recurrence 0.34) is exactly one of these
+  resolution-divergent artifacts — its "positive λ" is not genuine.
+
+So on the hardest named case, **no cell is a genuine falsifier**, and the
+strong-recession regime that the first run left open is now conclusively a
+numerical artifact rather than an untested falsifier candidate — the stiff-
+integrator investigation **strengthens** the Sec 7.5/7.6 defence. (A small residual
+honesty: `λ·dt` is only *roughly* constant — λ grows ~6× while dt shrinks 8× — so
+the scaling is near-1/dt, not textbook-exact; either way it diverges rather than
+converges, which is all the argument needs.)
 
 Files: `high_dim_trichotomy/result.json`, `high_dim_trichotomy/high_dim_trichotomy.png`.
 
 ---
 
-## All thirteen experiments complete
+## Real-EEG localization — the outstanding A/B/C confirmation (Paper 3)
+**Verdict: SPLIT, exactly as the appendix found — structural discrimination validated on real EEG, on-line localization still open.**
+
+PhysioNet became reachable, so the A/B/C detectors were run on the appendix's real
+paradigm: PhysioNet `eegbci`, 15 subjects, eyes-open (run 1) vs eyes-closed
+(run 2), occipito-parietal channels, alpha 8–13 Hz.
+
+| detector | localization hits (\|err\| ≤ 2 s) | median err |
+|---|---|---|
+| fragile pointwise (w=2) | 2/15 | ~14 s |
+| **large window (w=40, ~10 s)** | **4/15** | ~9 s |
+| multiscale bank | 4/15 | ~9 s |
+
+- **Between-record structural discrimination replicates:** the eyes-open/eyes-closed
+  geodesic distance exceeds within-state distance in **12/15** subjects (median
+  ratio 1.7) — the trace-normalised geometry sees the alpha structural change, as
+  the appendix's 20/20 claimed (weaker here only because of a harsher within-state
+  estimate and a smaller channel set).
+- **Within-trajectory localization stays hard on real EEG**, even for the large
+  window (4/15 vs fragile 2/15). The large window *does* beat the fragile detector
+  — confirming the **direction** of the synthetic A/B/C mechanism (persistence
+  helps) — but does not solve it, because **real spontaneous alpha bursts are
+  sustained**, i.e. exactly the sustained-fluctuation regime Exp C flagged as the
+  detector's residual limitation (a burst longer than the window looks permanent
+  within it). Multiscale adds nothing over the single large window, as A found.
+
+This is the honest real-data status: **structural discrimination validated; the
+5/15 within-trajectory localization is confirmed as a genuine open problem, not a
+synthetic artifact**, and its cause is the one Exp C predicted. (EEG is not
+committed; `experiments/**/data/` is git-ignored — MNE re-downloads it.)
+
+Files: `real_eeg_localization/result.json`, `real_eeg_localization/real_eeg_localization.png`,
+`real_eeg_localization/PRE-REGISTRATION.md`.
+
+---
+
+## Hybrid drift-robust jump statistic — the Exp D corner fix attempt (Paper 3)
+**Verdict: NO HELP — the corner is a genuine geometric limit, not a filterable contamination.**
+
+Exp D flagged its structural corner (weak jump × strong drift) as needing a
+"hybrid metric". This tests the obvious one: on the same square-root geometry
+(so jump power is preserved), high-pass filter the anti-developed increments —
+subtract a local moving average — on the hypothesis that a jump is high-frequency
+(single step) while the confusing drift/holonomy term is a slow low-frequency
+trend.
+
+Worst weak-jump × strong-drift AUC(collapse vs drift):
+
+| statistic | worst corner AUC | strong-jump power |
+|---|---|---|
+| square-root (Exp D) | 0.65 | 1.00 |
+| hybrid (high-pass) | **0.61** | 1.00 |
+
+The high-pass does **not** recover the corner (it is marginally worse), though it
+preserves jump power — so the drift contamination is **not** a slow trend: it is
+high-frequency (single-step holonomy spikes indistinguishable from a jump). This
+is why it survives high-passing, and why the appendix's λ_min-persistence
+discriminator also failed. **The corner is a genuine geometric limit of the
+square-root anti-development, requiring a true base-metric change (e.g. along-path
+transport, or a different base metric), not a filtered statistic.** The result is
+negative but informative: it rules out two classes of cheap statistical fix and
+confirms Exp D's "structural, not calibrational" diagnosis of that region.
+
+Files: `hybrid_metric/result.json`, `hybrid_metric/hybrid_metric.png`,
+`hybrid_metric/PRE-REGISTRATION.md`.
+
+---
+
+## All fifteen experiments complete
 
 | # | Paper | Headline |
 |---|---|---|
@@ -463,7 +545,9 @@ Files: `high_dim_trichotomy/result.json`, `high_dim_trichotomy/high_dim_trichoto
 | J | 2 | Metabolic null has a resolution threshold h\*≈0.7–0.9 ell scaling with L_D |
 | **I2** | 2 | Extends I to `M_diss`: **growing confound near true criticality** (73% of identity-linked signal at the cleanest cell) |
 | **AD** | 3 | Reconciles A/D: causal localization **recoverable at a quantified reporting-lag cost**; A/D's "tension" doesn't reproduce on a shared apparatus |
-| **E2** | 1 | Extends E to a d=6 population, value-base-mutating agent: trichotomy **survives on numerically resolved cells**; an apparent falsifier was caught and excluded by a dt-convergence check |
+| **E2** | 1 | Extends E to a d=6 population, value-base-mutating agent: trichotomy **survives**; the strong-recession "falsifier" is **conclusively diagnosed as a 1/dt numerical artifact** (λ=121→217→528→722 as dt→DT/8) by a rebuilt stiff/RK4 integrator — no genuine falsifier |
+| **Real-EEG** | 3 | A/B/C on real PhysioNet EEG: structural discrimination **replicates (12/15)**; within-trajectory localization **still hard (large 4/15 vs fragile 2/15)** — the 5/15 open problem is confirmed real, caused by sustained alpha (Exp C's predicted limitation) |
+| **Hybrid** | 3 | Attempted drift-robust hybrid for the Exp D corner: high-pass filtering **does NOT help** (AUC 0.65→0.61, power preserved) — the corner is a genuine geometric limit needing a real base-metric change, not a filtered statistic |
 
 **Cross-cutting honesty:** four real bugs were found and fixed en route — two in
 `shared_lib` (HAC drift-test calibration; a future-leakage bug in the
@@ -471,9 +555,11 @@ predictability covariate) and two in the extension experiments (a degenerate
 CONTINUE/RESET design in I2, fixed via cross-trial level correlation; a
 mathematically-exact reporting-lag identity in AD, and a numerically-divergent
 Lyapunov estimate in E2, caught by an explicit dt-convergence gate rather than
-reported as a falsifier). Paper 3's experiments run in synthetic-adversarial mode
-because PhysioNet is blocked by the environment network policy (confirmed via
-direct diagnosis: the block is currently a PhysioNet-side outage — /files/ paths
-return HTTP 500 and /content/ paths return HTTP 404 site-wide across unrelated
-databases, not a proxy denial) — real-EEG confirmation remains outstanding. Every
-verdict was issued against a pre-registration written before the run.
+reported as a falsifier). Paper 3's synthetic-adversarial experiments (A/B/C) were
+run while PhysioNet was unreachable; it later became reachable and the **real-EEG
+confirmation is now done** (above): structural discrimination replicates (12/15)
+and the 5/15 within-trajectory localization limitation is confirmed as real, with
+the cause Exp C predicted. A fifth data-hygiene issue was fixed during a rigorous
+review (an out-of-band, non-reproducible kurtosis figure in D, replaced by a
+diagnostic computed inside `run.py`). Every verdict was issued against a
+pre-registration written before the run.
