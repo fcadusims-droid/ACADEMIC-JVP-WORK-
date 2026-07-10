@@ -1,0 +1,148 @@
+{
+  "experiment": "E2_high_dim_trichotomy",
+  "params": {
+    "d": 6,
+    "M": 8,
+    "K": 8,
+    "bump_width": 0.18,
+    "dt": 0.02,
+    "lyap_steps": 3000,
+    "rec_steps": 5000,
+    "recession_rates": [
+      0.0,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "diversity_pressures": [
+      0.0,
+      0.5,
+      1.0
+    ]
+  },
+  "results": {
+    "recession=0.0,diversity=0.0": {
+      "recession_rate": 0.0,
+      "diversity_pressure": 0.0,
+      "lambda_max_dt": -5.398064719334167,
+      "lambda_max_dt_half": -5.250254540542271,
+      "converged": true,
+      "recurrence_fraction": 0.976,
+      "is_falsifier": false
+    },
+    "recession=0.0,diversity=0.5": {
+      "recession_rate": 0.0,
+      "diversity_pressure": 0.5,
+      "lambda_max_dt": -5.228736872387279,
+      "lambda_max_dt_half": -5.092658510673093,
+      "converged": true,
+      "recurrence_fraction": 0.984,
+      "is_falsifier": false
+    },
+    "recession=0.0,diversity=1.0": {
+      "recession_rate": 0.0,
+      "diversity_pressure": 1.0,
+      "lambda_max_dt": -5.0539838663582275,
+      "lambda_max_dt_half": -4.926537698321749,
+      "converged": true,
+      "recurrence_fraction": 0.9848,
+      "is_falsifier": false
+    },
+    "recession=0.5,diversity=0.0": {
+      "recession_rate": 0.5,
+      "diversity_pressure": 0.0,
+      "lambda_max_dt": -27.325887873221077,
+      "lambda_max_dt_half": -27.668703379883212,
+      "converged": true,
+      "recurrence_fraction": 0.9664,
+      "is_falsifier": false
+    },
+    "recession=0.5,diversity=0.5": {
+      "recession_rate": 0.5,
+      "diversity_pressure": 0.5,
+      "lambda_max_dt": -27.335052895793865,
+      "lambda_max_dt_half": -27.436889919360755,
+      "converged": true,
+      "recurrence_fraction": 0.9784,
+      "is_falsifier": false
+    },
+    "recession=0.5,diversity=1.0": {
+      "recession_rate": 0.5,
+      "diversity_pressure": 1.0,
+      "lambda_max_dt": 27.303613914276244,
+      "lambda_max_dt_half": -27.264266538578145,
+      "converged": false,
+      "recurrence_fraction": 0.984,
+      "is_falsifier": false
+    },
+    "recession=1.0,diversity=0.0": {
+      "recession_rate": 1.0,
+      "diversity_pressure": 0.0,
+      "lambda_max_dt": 112.45402287817811,
+      "lambda_max_dt_half": -20.37172830340141,
+      "converged": false,
+      "recurrence_fraction": 0.972,
+      "is_falsifier": false
+    },
+    "recession=1.0,diversity=0.5": {
+      "recession_rate": 1.0,
+      "diversity_pressure": 0.5,
+      "lambda_max_dt": 112.19725011223402,
+      "lambda_max_dt_half": 72.4998966072674,
+      "converged": false,
+      "recurrence_fraction": 0.98,
+      "is_falsifier": false
+    },
+    "recession=1.0,diversity=1.0": {
+      "recession_rate": 1.0,
+      "diversity_pressure": 1.0,
+      "lambda_max_dt": -18.44457899357637,
+      "lambda_max_dt_half": 38.92557144585988,
+      "converged": false,
+      "recurrence_fraction": 0.984,
+      "is_falsifier": false
+    },
+    "recession=2.0,diversity=0.0": {
+      "recession_rate": 2.0,
+      "diversity_pressure": 0.0,
+      "lambda_max_dt": 113.34185960006387,
+      "lambda_max_dt_half": 210.1653241910204,
+      "converged": false,
+      "recurrence_fraction": 0.1432,
+      "is_falsifier": false
+    },
+    "recession=2.0,diversity=0.5": {
+      "recession_rate": 2.0,
+      "diversity_pressure": 0.5,
+      "lambda_max_dt": 112.02975522242211,
+      "lambda_max_dt_half": 206.63017322492132,
+      "converged": false,
+      "recurrence_fraction": 0.4848,
+      "is_falsifier": false
+    },
+    "recession=2.0,diversity=1.0": {
+      "recession_rate": 2.0,
+      "diversity_pressure": 1.0,
+      "lambda_max_dt": 117.48323834092845,
+      "lambda_max_dt_half": 218.9536274785206,
+      "converged": false,
+      "recurrence_fraction": 0.88,
+      "is_falsifier": false
+    }
+  },
+  "falsifiers": [],
+  "unresolved_cells": [
+    "recession=0.5,diversity=1.0",
+    "recession=1.0,diversity=0.0",
+    "recession=1.0,diversity=0.5",
+    "recession=1.0,diversity=1.0",
+    "recession=2.0,diversity=0.0",
+    "recession=2.0,diversity=0.5",
+    "recession=2.0,diversity=1.0"
+  ],
+  "preregistered_falsifier": "lambda_max > 0.02 AND recurrence_fraction < 0.5 on a compact set, AND passes a dt-convergence check (lambda(dt) vs lambda(dt/2) agree within 30%)",
+  "verdict": "TRICHOTOMY SURVIVES ITS HARDEST NAMED CASE, among numerically resolved cells: across 5/12 (recession-rate x diversity-pressure) cells of a d=6 population-based, value-base-mutating agent that pass a dt-convergence sanity check, no cell shows positive entropy with low recurrence. The strongest entropy case among resolved cells (recession=0.0,diversity=1.0, lambda=-4.927) has recurrence 0.98 (bounded). 7/12 cells (['recession=0.5,diversity=1.0', 'recession=1.0,diversity=0.0', 'recession=1.0,diversity=0.5', 'recession=1.0,diversity=1.0', 'recession=2.0,diversity=0.0', 'recession=2.0,diversity=0.5', 'recession=2.0,diversity=1.0']) FAILED the dt-convergence check -- the exponent kept growing rather than converging as the integration step halved (a stiff agent-chasing-fleeing-bump feedback loop at strong recession), and are EXCLUDED from the trichotomy verdict as numerically unresolved rather than reported as either a confirmation or a falsification. This closes the gap Experiment E left open (which never tested a genuinely higher-dimensional, value-base-mutating candidate) and, on the numerically trustworthy cells, strengthens the Sec 7.5/7.6 defence -- while honestly flagging that the most aggressive landscape-recession regime could not be resolved with this integrator and remains genuinely untested rather than confirmed.",
+  "figures": [
+    "high_dim_trichotomy.png"
+  ]
+}

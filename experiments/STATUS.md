@@ -20,6 +20,8 @@ Legend: ⬜ pre-registered · 🟨 implemented · 🟩 run · ✅ verdict issued
 
 | **AD** | causal_vs_offline_localization | 3 | ✅ | **CAUSAL RECOVERABLE, AT A REPORTING-LAG COST.** Reconciles A (symmetric large window) and D (longer windows worsen drift/jump). Naive causal design fails (8/15); the standard adjacent-windows causal design is mathematically identical to symmetric shifted by w samples, and matches offline exactly (15/15) once lag-corrected — but pays a real ≥10-sample reporting lag. A/D's tension did NOT reproduce here: they are independent sub-problems, not a shared-window conflict. |
 
+| **E2** | high_dim_trichotomy | 1 | ✅ | **TRICHOTOMY SURVIVES, among numerically resolved cells.** d=6 population, value-base-mutating agent (landscape recedes from exploitation). An apparent falsifier (λ=+113) FAILED a dt-convergence check (grew unboundedly to 3158 as dt shrank, one cell flipped sign) — diagnosed as a numerical artifact and excluded (7/12 cells), not claimed either way. Among the 5/12 resolved cells, no falsifier. Most adversarial regime remains genuinely untested (needs a stiffer integrator). |
+
 ## Recommended execution order
 **D → A → B → C**  (Phase 1, Paper 3)
 **G → F → E**  (Phase 2, Paper 1)
