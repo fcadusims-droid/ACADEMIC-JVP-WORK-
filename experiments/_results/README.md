@@ -26,7 +26,7 @@ Files: `poincare_recurrence_check/result.json`.
 ---
 
 ## Experiment D — Drift-vs-Jump confusion sweep (Paper 3)
-**Verdict: CALIBRATIONAL for strong jumps, STRUCTURAL in one corner.**
+**Verdict: CALIBRATIONAL for the strongest jump, STRUCTURAL over a weak-jump × strong-drift region.**
 
 Run on the faithful geometric pipeline (SPD(3) trajectories → exact square-root
 Cartan anti-development → covariate-anchored jump test + Girsanov drift test).
@@ -38,41 +38,60 @@ per metric to a 5 % FPR on pure diffusion.
 
 | drift ↓ / collapse → | 0.9 | 0.7 | 0.5 | 0.3 | 0.1 |
 |---|---|---|---|---|---|
-| 0.00 | 0.52 | 0.91 | 0.99 | 1.00 | 1.00 |
-| 0.05 | —    | 0.85 | 0.98 | 1.00 | 1.00 |
-| 0.10 | —    | 0.69 | 0.92 | 0.98 | 1.00 |
-| 0.20 | —    | 0.70 | 0.80 | 0.94 | 1.00 |
-| 0.30 | —    | 0.74 | 0.83 | 0.92 | 0.98 |
-| 0.40 | —    | **0.67** | 0.74 | 0.85 | 0.96 |
+| 0.00 | 0.49 | 0.90 | 1.00 | 1.00 | 1.00 |
+| 0.05 | —    | 0.82 | 1.00 | 0.99 | 1.00 |
+| 0.10 | —    | 0.72 | 0.94 | 0.98 | 1.00 |
+| 0.20 | —    | **0.61** | 0.78 | 0.92 | 0.99 |
+| 0.30 | —    | 0.65 | 0.74 | 0.86 | 0.98 |
+| 0.40 | —    | 0.64 | 0.72 | 0.78 | 0.93 |
 
 (The collapse = 0.9 column is not a detectable jump — sqrt jump power there is only
-0.07 — so its AUC is meaningless and greyed out.)
+0.13 — so its AUC is meaningless and greyed out.)
 
 **Findings**
-1. **Strong jumps (collapse ≤ 0.3) stay separable from drift (AUC ≥ 0.85) at every
-   drift strength** → the confusion there is a *threshold placement*: raising the
-   dispersion-calibrated threshold removes it without losing jump power.
-2. **Weak-but-detectable jumps (collapse = 0.7) collapse into strong drift**
-   (AUC → 0.67 at drift 0.4) → *structural*: no threshold separates a strong
-   geodesic drift from a weak collapse there. A hybrid metric (a method change,
-   not a tuning fix) is indicated for that corner.
+1. **Only the strongest jump (collapse = 0.1) stays cleanly separable from drift
+   at every drift strength (AUC ≥ 0.93).** For the strong-but-not-extreme jump
+   (collapse 0.3) separability is high at weak drift (≥ 0.98) but slips to 0.78 at
+   the strongest drift (0.4) — so "raise the threshold" fixes the confusion only
+   for the extreme-jump column, not uniformly.
+2. **As the jump weakens, it collapses into drift — a structural *region*, not a
+   single corner.** AUC falls monotonically as collapse → 0.7 and drift grows:
+   0.78 (collapse 0.3, drift 0.4) → 0.72 (collapse 0.5, drift 0.4) → **0.61**
+   (collapse 0.7, drift 0.2, the worst detectable cell). Across that
+   weak-jump × moderate/strong-drift triangle no threshold separates a geodesic
+   drift from a weak collapse. A hybrid metric (a method change, not a tuning fix)
+   is indicated for that region.
 3. **Longer windows make it worse:** AUC at (drift 0.3, collapse 0.3) falls
    0.99 → 0.90 → 0.76 as T goes 200 → 400 → 800, because a longer path accumulates
    more holonomy drift and more chance of a jump-like anti-developed excursion.
-4. **Metric tails reproduced:** pure-diffusion excess kurtosis is ≈ 0.4 under the
-   square-root metric vs ≈ 11 under AIRM (appendix: ≈ 4.5 vs ≈ 20) — same
-   direction and order of magnitude.
-5. **Honest non-reproduction:** AIRM was *not* jump-blind here (jump power
-   0.73–1.0), because a rank-*collapse* jump produces a diverging increment
-   detectable under both metrics; the appendix's AIRM jump-blindness concerns
-   jumps comparable to diffusion, not rank collapse. Reported, not hidden.
+4. **Metric tails, honestly measured — the strong appendix contrast is NOT
+   reproduced at these parameters:** the reproducible pure-diffusion excess
+   kurtosis of the anti-developed increment norms is ≈ 0.0 (square-root) vs ≈ 0.4
+   (AIRM) at the experiment's diffusion scale — both close to Gaussian, *not* the
+   appendix's ≈ 4.5 vs ≈ 20 heavy-tail split. (An earlier draft of this note cited
+   "≈ 0.4 vs ≈ 11" from an out-of-band probe run at a larger diffusion scale; that
+   is not what this experiment's own parameters produce, and the number is now
+   computed inside `run.py` and stored in `result.json`.) This is the *reason*
+   for finding 5.
+5. **Consistent honest non-reproduction:** AIRM was *not* jump-blind here (jump
+   power 0.85–1.0 for detectable collapses) — precisely because, at this
+   diffusion scale, its diffusion increments are only mildly heavy-tailed
+   (finding 4), so a rank-collapse jump still stands out under AIRM. The
+   appendix's AIRM jump-blindness assumes the strongly heavy-tailed regime, which
+   this parameter setting does not enter. Reported, not hidden.
 6. **Stable:** the headline drift→jump rate is 0.41 ± 0.03 across disjoint seed
    banks — a real effect, not seed noise.
 
+*(Seed hygiene: the per-cell seed blocks were re-spaced during review — the
+original 50-seed spacing with 60 seeds/cell made adjacent cells share 10 seeds;
+after re-spacing to non-overlapping blocks the conclusion is unchanged, worst
+detectable AUC 0.61 vs 0.67 before.)*
+
 **Consequence for the method (the pre-registration's decision):** the square-root
-pipeline is sound for strong transitions; its residual drift/jump confusion is a
-localized weak-jump corner, and the honest fix is a hybrid metric there rather
-than abandoning the square-root commitment. Not a wholesale method change.
+pipeline is sound for strong transitions (the extreme-jump column separates
+cleanly at all drift); its residual drift/jump confusion is a weak-jump ×
+strong-drift *region*, and the honest fix is a hybrid metric there rather than
+abandoning the square-root commitment. Not a wholesale method change.
 
 Files: `drift_jump_confusion_sweep/result.json`,
 `drift_jump_confusion_sweep/confusion_surfaces.png`,
