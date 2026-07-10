@@ -447,7 +447,43 @@ Files: `high_dim_trichotomy/result.json`, `high_dim_trichotomy/high_dim_trichoto
 
 ---
 
-## All thirteen experiments complete
+## Real-EEG localization — the outstanding A/B/C confirmation (Paper 3)
+**Verdict: SPLIT, exactly as the appendix found — structural discrimination validated on real EEG, on-line localization still open.**
+
+PhysioNet became reachable, so the A/B/C detectors were run on the appendix's real
+paradigm: PhysioNet `eegbci`, 15 subjects, eyes-open (run 1) vs eyes-closed
+(run 2), occipito-parietal channels, alpha 8–13 Hz.
+
+| detector | localization hits (\|err\| ≤ 2 s) | median err |
+|---|---|---|
+| fragile pointwise (w=2) | 2/15 | ~14 s |
+| **large window (w=40, ~10 s)** | **4/15** | ~9 s |
+| multiscale bank | 4/15 | ~9 s |
+
+- **Between-record structural discrimination replicates:** the eyes-open/eyes-closed
+  geodesic distance exceeds within-state distance in **12/15** subjects (median
+  ratio 1.7) — the trace-normalised geometry sees the alpha structural change, as
+  the appendix's 20/20 claimed (weaker here only because of a harsher within-state
+  estimate and a smaller channel set).
+- **Within-trajectory localization stays hard on real EEG**, even for the large
+  window (4/15 vs fragile 2/15). The large window *does* beat the fragile detector
+  — confirming the **direction** of the synthetic A/B/C mechanism (persistence
+  helps) — but does not solve it, because **real spontaneous alpha bursts are
+  sustained**, i.e. exactly the sustained-fluctuation regime Exp C flagged as the
+  detector's residual limitation (a burst longer than the window looks permanent
+  within it). Multiscale adds nothing over the single large window, as A found.
+
+This is the honest real-data status: **structural discrimination validated; the
+5/15 within-trajectory localization is confirmed as a genuine open problem, not a
+synthetic artifact**, and its cause is the one Exp C predicted. (EEG is not
+committed; `experiments/**/data/` is git-ignored — MNE re-downloads it.)
+
+Files: `real_eeg_localization/result.json`, `real_eeg_localization/real_eeg_localization.png`,
+`real_eeg_localization/PRE-REGISTRATION.md`.
+
+---
+
+## All fourteen experiments complete
 
 | # | Paper | Headline |
 |---|---|---|
@@ -464,6 +500,7 @@ Files: `high_dim_trichotomy/result.json`, `high_dim_trichotomy/high_dim_trichoto
 | **I2** | 2 | Extends I to `M_diss`: **growing confound near true criticality** (73% of identity-linked signal at the cleanest cell) |
 | **AD** | 3 | Reconciles A/D: causal localization **recoverable at a quantified reporting-lag cost**; A/D's "tension" doesn't reproduce on a shared apparatus |
 | **E2** | 1 | Extends E to a d=6 population, value-base-mutating agent: trichotomy **survives on numerically resolved cells**; an apparent falsifier was caught and excluded by a dt-convergence check |
+| **Real-EEG** | 3 | A/B/C on real PhysioNet EEG: structural discrimination **replicates (12/15)**; within-trajectory localization **still hard (large 4/15 vs fragile 2/15)** — the 5/15 open problem is confirmed real, caused by sustained alpha (Exp C's predicted limitation) |
 
 **Cross-cutting honesty:** four real bugs were found and fixed en route — two in
 `shared_lib` (HAC drift-test calibration; a future-leakage bug in the
@@ -471,9 +508,11 @@ predictability covariate) and two in the extension experiments (a degenerate
 CONTINUE/RESET design in I2, fixed via cross-trial level correlation; a
 mathematically-exact reporting-lag identity in AD, and a numerically-divergent
 Lyapunov estimate in E2, caught by an explicit dt-convergence gate rather than
-reported as a falsifier). Paper 3's experiments run in synthetic-adversarial mode
-because PhysioNet is blocked by the environment network policy (confirmed via
-direct diagnosis: the block is currently a PhysioNet-side outage — /files/ paths
-return HTTP 500 and /content/ paths return HTTP 404 site-wide across unrelated
-databases, not a proxy denial) — real-EEG confirmation remains outstanding. Every
-verdict was issued against a pre-registration written before the run.
+reported as a falsifier). Paper 3's synthetic-adversarial experiments (A/B/C) were
+run while PhysioNet was unreachable; it later became reachable and the **real-EEG
+confirmation is now done** (above): structural discrimination replicates (12/15)
+and the 5/15 within-trajectory localization limitation is confirmed as real, with
+the cause Exp C predicted. A fifth data-hygiene issue was fixed during a rigorous
+review (an out-of-band, non-reproducible kurtosis figure in D, replaced by a
+diagnostic computed inside `run.py`). Every verdict was issued against a
+pre-registration written before the run.

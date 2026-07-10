@@ -22,6 +22,8 @@ Legend: ⬜ pre-registered · 🟨 implemented · 🟩 run · ✅ verdict issued
 
 | **E2** | high_dim_trichotomy | 1 | ✅ | **TRICHOTOMY SURVIVES, among numerically resolved cells.** d=6 population, value-base-mutating agent (landscape recedes from exploitation). An apparent falsifier (λ=+113) FAILED a dt-convergence check (grew unboundedly to 3158 as dt shrank, one cell flipped sign) — diagnosed as a numerical artifact and excluded (7/12 cells), not claimed either way. Among the 5/12 resolved cells, no falsifier. Most adversarial regime remains genuinely untested (needs a stiffer integrator). |
 
+| **Real-EEG** | real_eeg_localization | 3 | ✅ | **SPLIT, as the appendix found — real-data confirmation of A/B/C.** PhysioNet became reachable; ran the detectors on real eyes-open/eyes-closed EEG (15 subjects, occipital alpha). Between-record structural discrimination replicates (12/15, median ratio 1.7). Within-trajectory localization stays hard even for the large window (4/15 vs fragile 2/15) — the large window beats the fragile one (confirming the synthetic direction) but real sustained alpha bursts defeat it, exactly the residual limitation Exp C predicted. The 5/15 open problem is confirmed real, not a synthetic artifact. |
+
 ## Recommended execution order
 **D → A → B → C**  (Phase 1, Paper 3)
 **G → F → E**  (Phase 2, Paper 1)
