@@ -198,19 +198,20 @@ def lyapunov_with_convergence_check(recession_rate, diversity_pressure, seed=0, 
     Three outcomes:
       * "converged"  -- the three estimates agree within rel_tol: a genuine,
                         well-posed Lyapunov exponent. Reported and classified.
-      * "one_over_dt"-- lambda roughly DOUBLES each time dt halves (lambda ~ 1/dt),
-                        i.e. lambda*dt is constant. This is the definitive signature
-                        of a NUMERICAL ARTIFACT, not a genuine exponent: nearby
-                        trajectories separate by a fixed factor PER STEP (from the
+      * "one_over_dt"-- lambda roughly quadruples over a 4x-finer dt (lambda ~ 1/dt),
+                        consistent with a per-step NUMERICAL ARTIFACT: nearby
+                        trajectories separating by a fixed factor PER STEP from the
                         near-discontinuous flow direction when a fleeing bump passes
-                        through an agent), not per unit time. A genuine exponent
-                        converges to a constant; a 1/dt-diverging one does not exist.
-                        Such a cell has NO genuine positive Lyapunov exponent, so it
-                        is NOT a falsifier -- the trichotomy holds there.
-      * "unresolved" -- neither converges nor cleanly scales as 1/dt.
+                        through an agent. A genuine exponent converges to a constant,
+                        so this is not a genuine finite exponent -- but note the
+                        scaling here is only rough, and the same near-discontinuity
+                        could reflect a GENUINE quasi-discontinuous value-base switch
+                        rather than a pure artifact; this diagnostic flags the cell,
+                        it does not conclusively settle which.
+      * "resolution_divergent" -- grows as dt shrinks but not cleanly as 1/dt.
 
-    Returns (lam_coarse, lam_fine, status). Diagnosed conclusively here, rather than
-    (as in the prior fixed-step Euler run) merely excluded as "unresolved".
+    Returns (lam_coarse, lam_fine, status). A resolution-divergent estimate is
+    flagged as not-a-genuine-finite-exponent, not conclusively adjudicated.
     """
     l1 = lyapunov_rk4(recession_rate, diversity_pressure, seed, dt=DT, t_total=30.0)
     l4 = lyapunov_rk4(recession_rate, diversity_pressure, seed, dt=DT / 4, t_total=30.0)
@@ -316,29 +317,37 @@ def main():
         low_rec_divergent = [k for k, v in results.items()
                              if v["status"] in ("one_over_dt", "resolution_divergent")
                              and v["recurrence_fraction"] < 0.5]
-        crux = (f" The one low-recurrence cell that could have been a falsifier "
-                f"({low_rec_divergent[0]}, recurrence < 0.5) is resolution-divergent, "
-                f"not genuine." if low_rec_divergent else "")
-        verdict = (f"TRICHOTOMY SURVIVES ITS HARDEST NAMED CASE. Across the d=6 "
-                   f"population-based, value-base-mutating sweep, NO cell is a genuine "
-                   f"falsifier. {len(resolved)}/{len(results)} cells have a "
-                   f"resolution-converged Lyapunov exponent (all Case-1 convergent, "
-                   f"lambda ~ -5 to -23, high recurrence). The other {n_divergent}/"
-                   f"{len(results)} strong-recession cells -- which E2's fixed-step "
-                   f"Euler run merely EXCLUDED as 'unresolved' -- are now DIAGNOSED: "
-                   f"their apparent positive exponent GROWS as the step shrinks "
-                   f"instead of converging (smoking-gun probe at recession 2: "
-                   f"lambda = {seq} as dt = DT->DT/8, i.e. lambda*dt roughly constant "
-                   f"[{lamdt}]). That 1/dt scaling is the definitive signature of a "
-                   f"NUMERICAL ARTIFACT -- trajectories separating by a fixed factor "
-                   f"per STEP (a near-discontinuous flow direction when a fleeing "
-                   f"bump passes through an agent), not per unit time. A genuine "
-                   f"Lyapunov exponent converges to a constant; a 1/dt-diverging one "
-                   f"does not exist, so these cells have NO genuine positive exponent "
-                   f"and are NOT falsifiers.{crux} The stiff-integrator investigation "
-                   f"STRENGTHENS the Sec 7.5/7.6 defence relative to the first E2 run: "
-                   f"the previously-open strong-recession cells are conclusively "
-                   f"numerical artifacts, not untested falsifier candidates.")
+        crux = (f" NB the one low-recurrence cell that could otherwise have been a "
+                f"falsifier ({low_rec_divergent[0]}, recurrence < 0.5) is exactly one "
+                f"of these resolution-divergent cells -- so whether it is a falsifier "
+                f"turns entirely on reading (a) vs (b) above, which this run cannot "
+                f"decide." if low_rec_divergent else "")
+        growth = scaling_lams[-1] / scaling_lams[0]
+        verdict = (f"TRICHOTOMY HOLDS FOR THE RESOLVED (SMOOTH) AGENTS; THE HARDEST "
+                   f"REGIME REMAINS OPEN. {len(resolved)}/{len(results)} cells have a "
+                   f"resolution-converged Lyapunov exponent -- all Case-1 convergent "
+                   f"(lambda ~ -5 to -23, high recurrence), no falsifier. The other "
+                   f"{n_divergent}/{len(results)} strong-recession cells do NOT "
+                   f"converge: their apparent positive exponent GROWS as the step "
+                   f"shrinks (recession-2 probe: lambda = {seq} as dt = DT->DT/8, a "
+                   f"~{growth:.0f}-fold rise). That is clearly resolution-DIVERGENT, "
+                   f"not a genuine finite exponent. It is CONSISTENT WITH a per-step "
+                   f"(1/dt) numerical artifact -- but only roughly: lambda*dt = "
+                   f"[{lamdt}] is bounded yet noisy and non-monotonic, not the clean "
+                   f"constant a pure artifact would give, so the diagnosis is "
+                   f"PRESUMPTIVE, not conclusive. Two readings remain open and this "
+                   f"experiment cannot separate them: (a) a numerical artifact from "
+                   f"the hard near-discontinuity when a fleeing bump passes through "
+                   f"an agent; or (b) a GENUINE quasi-discontinuous reconfiguration of "
+                   f"the value landscape -- which is precisely the abrupt value-base "
+                   f"mutation Paper 1 wants to model, and for which the smooth-flow "
+                   f"Poincare-recurrence premise does not straightforwardly apply. The "
+                   f"pre-registration's '1/dt => artifact' rule means E2 cannot, by "
+                   f"construction, return a falsifier from this regime. Honest status: "
+                   f"Sec 7.5/7.6 is STRENGTHENED for smooth high-dimensional agents; "
+                   f"the quasi-discontinuous strong-recession regime -- the one most "
+                   f"faithful to metanoia -- is numerically UNRESOLVED and remains "
+                   f"genuinely open, not settled either way.{crux}")
 
     fig, ax = plt.subplots(figsize=(8.5, 6))
     XCLIP = 6.0   # display cap; 1/dt-artifact cells (lambda ~ hundreds) sit at the edge
