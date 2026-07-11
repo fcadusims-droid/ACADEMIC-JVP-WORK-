@@ -396,9 +396,20 @@ abstract makes") was never followed to its consequence.
   its estimate is corrected for that definitional reporting lag, it **matches
   the offline result exactly (15/15 at every guarded window)**.
 - **The honest cost:** even the best causal design cannot report a transition
-  until `w` samples after it happened. The smallest reliably-guarded window
-  still pays a **10-sample (2% of the 600-sample record) reporting lag** — a
-  real, quantified, previously unstated price of the "causal/online" claim.
+  until `w` samples after it happened. The smallest reliably-guarded window pays a
+  **10-sample (2% of the 600-sample record) reporting lag** — a real, quantified,
+  previously unstated price of the "causal/online" claim.
+- **Read the "15/15" carefully — it mixes raw hits with guarded performance.** The
+  headline `best_hits = 15` is the max over *all* windows, and it includes
+  windows (w = 160, 200) where the seam is *not* the guarded winner — there the
+  seam's peak prominence (1.74, 1.57) is actually *below* the drift-only prominence
+  (2.48, 2.35), so a pure-drift record would fire higher. Those are correctly
+  **excluded** from the guarded set `[10, 20, 40, 80, 120]`, so the conclusion
+  stands, but "15/15" alone overstates it. The guarded margin is also not uniform:
+  it is clean at w = 40 (seam 30.6 vs drift 3.7, ~8×) and marginal at w = 120
+  (3.72 vs 2.55, ~1.5×). So the guarded lag is *as small as* 10 samples but the
+  *cleanest* separation sits around w = 40 — the abstract should quote the lag as a
+  range, not a single flattering number.
 - **The A/D tension did not reproduce here:** drift-only false-fire prominence
   *fell* with window size in this apparatus (6.3→2.0), the opposite of D's
   finding. This means A and D's window preferences are not in conflict on a
@@ -421,48 +432,53 @@ that candidate directly: `M=8` agents on a `d=6` compact torus, climbing a
 reward landscape whose bumps **recede from wherever the population concentrates**
 — the objective mutates in response to the population's own trajectory.
 
-**Verdict: TRICHOTOMY SURVIVES ITS HARDEST NAMED CASE — and the stiff-integrator follow-up turns the previously-"unresolved" cells from *excluded* into *conclusively diagnosed*.**
+**Verdict: TRICHOTOMY HOLDS FOR THE RESOLVED (SMOOTH) AGENTS; THE HARDEST REGIME IS NUMERICALLY UNRESOLVED AND REMAINS GENUINELY OPEN.**
 
 The first E2 run (fixed-step Euler on a hard force cap) found an apparent falsifier
 at strong recession whose Lyapunov estimate **kept growing as the step shrank** and
-had to be **excluded as numerically unresolved** (7/12 cells) — honest, but it left
-the most adversarial regime genuinely untested.
+was **excluded as numerically unresolved** (7/12 cells) — honest, but it left the
+most adversarial regime untested.
 
 **Path-2 follow-up (this run):** the integrator was rebuilt — smooth (tanh) force
-saturation instead of a C0 clip, RK4 instead of Euler, vectorised, with cells
-**classified by their resolution scaling** at `dt = DT, DT/2, DT/4` (an adaptive
-stiff LSODA solver was tried first but was too slow to sweep). The result is
-stronger than mere exclusion:
+saturation instead of a C0 clip, RK4 instead of Euler, vectorised, cells
+**classified by resolution scaling** at `dt = DT, DT/2, DT/4` (an adaptive stiff
+LSODA solver was tried first but was too slow to sweep). What it establishes, and
+what it does not:
 
 - **4/12 cells converge** to a genuine, resolution-stable Lyapunov exponent — all
-  Case-1 convergent (λ ≈ −5 to −23) with high recurrence (≥ 0.94). No falsifier.
-- **8/12 strong-recession cells are resolution-divergent**: their apparent positive
-  exponent **grows as the step shrinks**. A dedicated scaling probe at recession 2
-  is the smoking gun — λ = **121 → 217 → 528 → 722** as `dt = DT → DT/8`, i.e.
-  **λ·dt roughly constant**. That 1/dt scaling is the definitive signature of a
-  **numerical artifact** (trajectories separating by a fixed factor *per step* — a
-  near-discontinuous flow direction when a fleeing bump passes through an agent —
-  not per unit time). A genuine Lyapunov exponent converges; a 1/dt-diverging one
-  **does not exist**, so these cells have no genuine positive exponent and are
-  **not falsifiers**.
-- **The crux:** the one low-recurrence cell that *could* have been a falsifier
+  Case-1 convergent (λ ≈ −5 to −23), high recurrence (≥ 0.94). No falsifier.
+- **8/12 strong-recession cells are resolution-DIVERGENT**: the apparent positive
+  exponent **grows ~6-fold as dt shrinks 8-fold** (recession-2 probe: λ =
+  121 → 217 → 528 → 722). A genuine finite exponent would *converge*, so this is
+  clearly not one. It is **consistent with** a per-step (1/dt) numerical artifact —
+  **but the scaling is only rough:** `λ·dt = [2.43, 2.17, 2.64, 1.81]` is bounded
+  yet **noisy and non-monotonic** (CV ≈ 14 %), not the clean constant a pure
+  artifact gives. So "numerical artifact" is **presumptive, not conclusive.**
+- **The honest ambiguity this run cannot resolve:** the same near-discontinuity
+  (fleeing bump passing *through* an agent) could be a genuine **quasi-discontinuous
+  reconfiguration of the value landscape** — which is *precisely the abrupt
+  value-base mutation Paper 1 is trying to model* (metanoia) — for which the
+  smooth-flow Poincaré-recurrence premise does not straightforwardly apply. The
+  pre-registration's "λ ∼ 1/dt ⇒ artifact" rule means E2 **cannot, by construction,
+  return a falsifier from this regime.**
+- **The crux:** the one low-recurrence cell that could otherwise be a falsifier
   (recession 2, diversity 0, recurrence 0.34) is exactly one of these
-  resolution-divergent artifacts — its "positive λ" is not genuine.
+  resolution-divergent cells — so whether it *is* a falsifier turns entirely on the
+  artifact-vs-genuine-switch reading, which this run does not decide.
 
-So on the hardest named case, **no cell is a genuine falsifier**, and the
-strong-recession regime that the first run left open is now conclusively a
-numerical artifact rather than an untested falsifier candidate — the stiff-
-integrator investigation **strengthens** the Sec 7.5/7.6 defence. (A small residual
-honesty: `λ·dt` is only *roughly* constant — λ grows ~6× while dt shrinks 8× — so
-the scaling is near-1/dt, not textbook-exact; either way it diverges rather than
-converges, which is all the argument needs.)
+**Honest net:** Sec 7.5/7.6 is **strengthened for smooth high-dimensional agents**;
+the quasi-discontinuous strong-recession regime — the one most faithful to the
+phenomenon the paper cares about — is **numerically unresolved and remains open**,
+presumptively (not conclusively) artefactual. A proper adjudication needs an
+event-detecting/implicit solver that treats the discontinuity as physics, not
+stiffness — left as the decisive future test rather than force-fit here.
 
 Files: `high_dim_trichotomy/result.json`, `high_dim_trichotomy/high_dim_trichotomy.png`.
 
 ---
 
 ## Real-EEG localization — the outstanding A/B/C confirmation (Paper 3)
-**Verdict: SPLIT, exactly as the appendix found — structural discrimination validated on real EEG, on-line localization still open.**
+**Verdict: SPLIT — on-line localization confirmed still open on real EEG; structural discrimination replicates in direction but MUCH weaker than the appendix's 20/20, needing reconciliation.**
 
 PhysioNet became reachable, so the A/B/C detectors were run on the appendix's real
 paradigm: PhysioNet `eegbci`, 15 subjects, eyes-open (run 1) vs eyes-closed
@@ -474,11 +490,18 @@ paradigm: PhysioNet `eegbci`, 15 subjects, eyes-open (run 1) vs eyes-closed
 | **large window (w=40, ~10 s)** | **4/15** | ~9 s |
 | multiscale bank | 4/15 | ~9 s |
 
-- **Between-record structural discrimination replicates:** the eyes-open/eyes-closed
-  geodesic distance exceeds within-state distance in **12/15** subjects (median
-  ratio 1.7) — the trace-normalised geometry sees the alpha structural change, as
-  the appendix's 20/20 claimed (weaker here only because of a harsher within-state
-  estimate and a smaller channel set).
+- **Between-record structural discrimination replicates in DIRECTION but is much
+  WEAKER than the appendix claims — and the two rounds need reconciling.** The
+  eyes-open/eyes-closed geodesic distance exceeds within-state distance in **12/15**
+  subjects, but the **median ratio is only 1.7** and **three subjects fail outright
+  (0.77, 0.49, 0.75 < 1)**. The paper's appendix reports **20/20, median ≈ 12** on
+  the same paradigm — an order of magnitude larger, with no failures. That gap is
+  too big to wave away as noise: it likely comes from this run's harsher
+  within-state estimate (half-vs-half), smaller channel set (7 occipito-parietal),
+  and 26 s segments. **Before the "20/20, median 12" number goes into the paper it
+  should be reconciled with this run**, which suggests the appendix figure is
+  optimistic and the honest effect is "usually present, often modest, occasionally
+  absent."
 - **Within-trajectory localization stays hard on real EEG**, even for the large
   window (4/15 vs fragile 2/15). The large window *does* beat the fragile detector
   — confirming the **direction** of the synthetic A/B/C mechanism (persistence
@@ -545,8 +568,8 @@ Files: `hybrid_metric/result.json`, `hybrid_metric/hybrid_metric.png`,
 | J | 2 | Metabolic null has a resolution threshold h\*≈0.7–0.9 ell scaling with L_D |
 | **I2** | 2 | Extends I to `M_diss`: **growing confound near true criticality** (73% of identity-linked signal at the cleanest cell) |
 | **AD** | 3 | Reconciles A/D: causal localization **recoverable at a quantified reporting-lag cost**; A/D's "tension" doesn't reproduce on a shared apparatus |
-| **E2** | 1 | Extends E to a d=6 population, value-base-mutating agent: trichotomy **survives**; the strong-recession "falsifier" is **conclusively diagnosed as a 1/dt numerical artifact** (λ=121→217→528→722 as dt→DT/8) by a rebuilt stiff/RK4 integrator — no genuine falsifier |
-| **Real-EEG** | 3 | A/B/C on real PhysioNet EEG: structural discrimination **replicates (12/15)**; within-trajectory localization **still hard (large 4/15 vs fragile 2/15)** — the 5/15 open problem is confirmed real, caused by sustained alpha (Exp C's predicted limitation) |
+| **E2** | 1 | Extends E to a d=6 population, value-base-mutating agent: trichotomy **holds for the 4/12 smooth resolved cells**; the 8/12 strong-recession cells are resolution-divergent (λ=121→217→528→722 as dt→DT/8) — **presumptively** a 1/dt artifact but the scaling is noisy, and the near-discontinuity could be genuine value-base mutation, so that regime stays **numerically unresolved / open** |
+| **Real-EEG** | 3 | A/B/C on real PhysioNet EEG: structural discrimination replicates **in direction (12/15) but much weaker than the appendix's 20/20** (median 1.7, 3 failures); within-trajectory localization **still hard (large 4/15 vs fragile 2/15)** — the 5/15 open problem is confirmed real (sustained alpha, Exp C's predicted limitation) |
 | **Hybrid** | 3 | Attempted drift-robust hybrid for the Exp D corner: high-pass filtering **does NOT help** (AUC 0.65→0.61, power preserved) — the corner is a genuine geometric limit needing a real base-metric change, not a filtered statistic |
 
 **Cross-cutting honesty:** four real bugs were found and fixed en route — two in
@@ -563,3 +586,17 @@ the cause Exp C predicted. A fifth data-hygiene issue was fixed during a rigorou
 review (an out-of-band, non-reproducible kurtosis figure in D, replaced by a
 diagnostic computed inside `run.py`). Every verdict was issued against a
 pre-registration written before the run.
+
+**A note on verdict calibration (added after an external raw-JSON audit).** The
+raw `result.json` numbers have been reliable throughout, but several verdicts, in
+their *wording*, leaned toward the paper-saving reading in genuinely ambiguous
+cases. Three were recalibrated to the certainty the data actually support: (1) E2's
+strong-recession cells are *presumptively*, not *conclusively*, numerical artifacts
+— `λ·dt` is noisy and non-monotonic, and the near-discontinuity may be a genuine
+value-base switch, so that regime is **open**, not settled; (2) the real-EEG
+structural discrimination replicates only in direction and is **much weaker** than
+the appendix's 20/20 (median 1.7, three failures), which needs reconciling before
+the appendix figure is trusted; (3) AD's "15/15" mixes raw hits with guarded
+performance — two of those windows are not guarded, and the clean-separation lag is
+a range, not a single number. The rule going forward: **the raw JSON is the source
+of truth, and verdict prose is held to the degree of certainty it supports.**
