@@ -495,13 +495,14 @@ paradigm: PhysioNet `eegbci`, 15 subjects, eyes-open (run 1) vs eyes-closed
   eyes-open/eyes-closed geodesic distance exceeds within-state distance in **12/15**
   subjects, but the **median ratio is only 1.7** and **three subjects fail outright
   (0.77, 0.49, 0.75 < 1)**. The paper's appendix reports **20/20, median ≈ 12** on
-  the same paradigm — an order of magnitude larger, with no failures. That gap is
-  too big to wave away as noise: it likely comes from this run's harsher
-  within-state estimate (half-vs-half), smaller channel set (7 occipito-parietal),
-  and 26 s segments. **Before the "20/20, median 12" number goes into the paper it
-  should be reconciled with this run**, which suggests the appendix figure is
-  optimistic and the honest effect is "usually present, often modest, occasionally
-  absent."
+  the same paradigm — an order of magnitude larger, with no failures. That gap has
+  now been **reconciled** (see the EEG-reconciliation section below): the cause is
+  the within-state estimator (this run's harsh temporal-half split vs the appendix's
+  named permutation null). Switching to the appendix's own null reproduces the
+  **direction and significance** (14/15 > 1, p ≈ 0.002) but only lifts the median to
+  **≈ 3.3**, and no reasonable segment/window choice reaches ≈ 12 — so the appendix's
+  magnitude figure is **optimistic**; the honest effect is "usually present, often
+  modest, occasionally absent," with a defensible ratio of **~3–5**, not 12.
 - **Within-trajectory localization stays hard on real EEG**, even for the large
   window (4/15 vs fragile 2/15). The large window *does* beat the fragile detector
   — confirming the **direction** of the synthetic A/B/C mechanism (persistence
@@ -517,6 +518,58 @@ committed; `experiments/**/data/` is git-ignored — MNE re-downloads it.)
 
 Files: `real_eeg_localization/result.json`, `real_eeg_localization/real_eeg_localization.png`,
 `real_eeg_localization/PRE-REGISTRATION.md`.
+
+---
+
+## EEG structural-ratio reconciliation — where does 1.7 vs 12 come from? (Paper 3)
+**Verdict: SIGNIFICANCE REPRODUCED, MAGNITUDE NOT — the appendix's ≈12 is optimistic; the honest figure is ~3–5.**
+
+The real-EEG run's median ratio (1.7) sat an order of magnitude below the paper
+appendix's median (≈12) on the *same paradigm*. This run finds exactly why, on the
+*same 15 cached subjects, same channels, same band, same 26 s segments* — changing
+**only** the within-state denominator of the ratio.
+
+The two analyses differ in what "within-state distance" means:
+- `real_eeg_localization` used a **temporal-half split**: distance between the mean
+  of a state's first half and its second half. Occipital alpha waxes and wanes on a
+  ~10 s scale, so over 26 s the two contiguous halves differ by that slow drift → a
+  **large** denominator → **small** ratio.
+- The appendix names a **within-state permutation null**: random *interleaved*
+  50/50 splits. Each group mixes early and late windows, so slow drift cancels → the
+  denominator measures estimation noise only → **small** denominator → **large** ratio.
+
+Switching only that estimator:
+
+| within-state estimator | median ratio | subjects > 1 | significance |
+|---|---|---|---|
+| temporal-half (the code used) | **1.28** | 12/15 | — |
+| **permutation null (appendix names)** | **3.33** | **14/15** | median p ≈ 0.0025; Wilcoxon vs 1 p ≈ 6×10⁻⁵ |
+| appendix's printed figure | **≈ 12** | 20/20 | single-subject p ≈ 5×10⁻⁴ |
+
+So the appendix's **direction and significance replicate**: with its own null,
+14/15 subjects exceed unity and the per-subject permutation p (≈0.0025) sits close
+to the appendix's single-subject 5×10⁻⁴. The within-state estimator **is** most of
+why the earlier 1.7 looked so weak — a real, correct diagnosis of the gap.
+
+But the **magnitude** does not reach ≈12. The permutation null gives median 3.33,
+and a secondary sweep (`sweep.py`) over segment (20–58 s) × covariance-window
+(0.5–2 s) — the two levers that shrink the within-state denominator by averaging
+more windows — **never exceeds median 5.4** (best cell: 58 s / 2 s window). The
+appendix's median-≈12 / range-2–36 figure is therefore **not reproducible on this
+data under any reasonable choice**; it is optimistic. The defensible reported ratio
+is **~3–5** (permutation null) or **~1.3** (temporal-half). The qualitative claim
+— a *real, significant, cross-subject-replicated* structural discrimination that is
+silent on power transitions — stands; only the specific magnitude figure should be
+corrected downward before it goes into the paper.
+
+Both within-state estimators are legitimate measurements of *different* quantities:
+the permutation null answers "is eyes-open vs eyes-closed bigger than a random
+relabeling of one state?" (yes, significantly); the temporal-half split additionally
+penalizes slow within-state non-stationarity and is the stricter test. Neither is
+wrong; the paper should state which it commits to and report the matching number.
+
+Files: `eeg_reconciliation/result.json`, `eeg_reconciliation/sweep.json`,
+`eeg_reconciliation/eeg_reconciliation.png`, `eeg_reconciliation/PRE-REGISTRATION.md`.
 
 ---
 
@@ -552,7 +605,7 @@ Files: `hybrid_metric/result.json`, `hybrid_metric/hybrid_metric.png`,
 
 ---
 
-## All fifteen experiments complete
+## All sixteen experiments complete
 
 | # | Paper | Headline |
 |---|---|---|
@@ -571,6 +624,7 @@ Files: `hybrid_metric/result.json`, `hybrid_metric/hybrid_metric.png`,
 | **E2** | 1 | Extends E to a d=6 population, value-base-mutating agent: trichotomy **holds for the 4/12 smooth resolved cells**; the 8/12 strong-recession cells are resolution-divergent (λ=121→217→528→722 as dt→DT/8) — **presumptively** a 1/dt artifact but the scaling is noisy, and the near-discontinuity could be genuine value-base mutation, so that regime stays **numerically unresolved / open** |
 | **Real-EEG** | 3 | A/B/C on real PhysioNet EEG: structural discrimination replicates **in direction (12/15) but much weaker than the appendix's 20/20** (median 1.7, 3 failures); within-trajectory localization **still hard (large 4/15 vs fragile 2/15)** — the 5/15 open problem is confirmed real (sustained alpha, Exp C's predicted limitation) |
 | **Hybrid** | 3 | Attempted drift-robust hybrid for the Exp D corner: high-pass filtering **does NOT help** (AUC 0.65→0.61, power preserved) — the corner is a genuine geometric limit needing a real base-metric change, not a filtered statistic |
+| **EEG-Recon** | 3 | Reconciles real-EEG 1.7 vs appendix 12: the within-state permutation null reproduces the appendix's **direction & significance** (14/15 > 1, p≈0.002) but only lifts the median to **3.3**; no seg/window choice reaches ≈12 (max 5.4) — the appendix's **magnitude is optimistic**, honest ratio ~3–5 |
 
 **Cross-cutting honesty:** four real bugs were found and fixed en route — two in
 `shared_lib` (HAC drift-test calibration; a future-leakage bug in the
@@ -595,8 +649,11 @@ strong-recession cells are *presumptively*, not *conclusively*, numerical artifa
 — `λ·dt` is noisy and non-monotonic, and the near-discontinuity may be a genuine
 value-base switch, so that regime is **open**, not settled; (2) the real-EEG
 structural discrimination replicates only in direction and is **much weaker** than
-the appendix's 20/20 (median 1.7, three failures), which needs reconciling before
-the appendix figure is trusted; (3) AD's "15/15" mixes raw hits with guarded
+the appendix's 20/20 (median 1.7, three failures) — now **reconciled**: the gap is
+the within-state estimator, and the appendix's own permutation null reproduces the
+*significance* (14/15 > 1, p ≈ 0.002) but only reaches median ≈ 3.3, so the
+appendix's *magnitude* ≈ 12 is optimistic and the honest ratio is ~3–5; (3) AD's
+"15/15" mixes raw hits with guarded
 performance — two of those windows are not guarded, and the clean-separation lag is
 a range, not a single number. The rule going forward: **the raw JSON is the source
 of truth, and verdict prose is held to the degree of certainty it supports.**
