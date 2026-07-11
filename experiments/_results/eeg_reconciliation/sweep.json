@@ -1,0 +1,155 @@
+{
+  "experiment": "eeg_reconciliation_sweep",
+  "question": "Does any reasonable seg x win reach the appendix median ratio ~=12 under the permutation null?",
+  "params": {
+    "seg_secs": [
+      20.0,
+      30.0,
+      45.0,
+      58.0
+    ],
+    "win_secs": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "step_sec": 0.25,
+    "n_perm": 120,
+    "seed": 20240711,
+    "n_subjects": 15
+  },
+  "grid": [
+    {
+      "n_subjects": 15,
+      "n_windows": 79,
+      "median_ratio_perm": 2.3157204956847552,
+      "median_ratio_temporal": 1.2719513687022466,
+      "n_above_1_perm": 14,
+      "max_ratio_perm": 4.065617918343527,
+      "seg_sec": 20.0,
+      "win_sec": 0.5
+    },
+    {
+      "n_subjects": 15,
+      "n_windows": 77,
+      "median_ratio_perm": 3.063722576332841,
+      "median_ratio_temporal": 1.4568963474056347,
+      "n_above_1_perm": 14,
+      "max_ratio_perm": 5.785118128705059,
+      "seg_sec": 20.0,
+      "win_sec": 1.0
+    },
+    {
+      "n_subjects": 15,
+      "n_windows": 73,
+      "median_ratio_perm": 4.174668003788764,
+      "median_ratio_temporal": 1.330875371048539,
+      "n_above_1_perm": 15,
+      "max_ratio_perm": 8.277026145710524,
+      "seg_sec": 20.0,
+      "win_sec": 2.0
+    },
+    {
+      "n_subjects": 15,
+      "n_windows": 119,
+      "median_ratio_perm": 2.6133290060225502,
+      "median_ratio_temporal": 1.2894769552598666,
+      "n_above_1_perm": 14,
+      "max_ratio_perm": 4.57508006373925,
+      "seg_sec": 30.0,
+      "win_sec": 0.5
+    },
+    {
+      "n_subjects": 15,
+      "n_windows": 117,
+      "median_ratio_perm": 3.3561438459254958,
+      "median_ratio_temporal": 1.2541787421510444,
+      "n_above_1_perm": 14,
+      "max_ratio_perm": 6.349197069702766,
+      "seg_sec": 30.0,
+      "win_sec": 1.0
+    },
+    {
+      "n_subjects": 15,
+      "n_windows": 113,
+      "median_ratio_perm": 4.270698350619637,
+      "median_ratio_temporal": 1.2978172585904388,
+      "n_above_1_perm": 15,
+      "max_ratio_perm": 9.405548217323707,
+      "seg_sec": 30.0,
+      "win_sec": 2.0
+    },
+    {
+      "n_subjects": 15,
+      "n_windows": 179,
+      "median_ratio_perm": 2.719700236832015,
+      "median_ratio_temporal": 1.470601302405427,
+      "n_above_1_perm": 14,
+      "max_ratio_perm": 5.455872837536652,
+      "seg_sec": 45.0,
+      "win_sec": 0.5
+    },
+    {
+      "n_subjects": 15,
+      "n_windows": 177,
+      "median_ratio_perm": 3.8230335147850547,
+      "median_ratio_temporal": 1.4527055020760027,
+      "n_above_1_perm": 15,
+      "max_ratio_perm": 7.4148935408194205,
+      "seg_sec": 45.0,
+      "win_sec": 1.0
+    },
+    {
+      "n_subjects": 15,
+      "n_windows": 173,
+      "median_ratio_perm": 4.965441937999677,
+      "median_ratio_temporal": 1.3504166111187883,
+      "n_above_1_perm": 15,
+      "max_ratio_perm": 11.157161327559717,
+      "seg_sec": 45.0,
+      "win_sec": 2.0
+    },
+    {
+      "n_subjects": 15,
+      "n_windows": 231,
+      "median_ratio_perm": 3.0321153395346747,
+      "median_ratio_temporal": 1.7005491164552051,
+      "n_above_1_perm": 14,
+      "max_ratio_perm": 6.102850395122566,
+      "seg_sec": 58.0,
+      "win_sec": 0.5
+    },
+    {
+      "n_subjects": 15,
+      "n_windows": 229,
+      "median_ratio_perm": 4.085286366448359,
+      "median_ratio_temporal": 1.7547213140561173,
+      "n_above_1_perm": 14,
+      "max_ratio_perm": 8.846660273231649,
+      "seg_sec": 58.0,
+      "win_sec": 1.0
+    },
+    {
+      "n_subjects": 15,
+      "n_windows": 225,
+      "median_ratio_perm": 5.353095931748707,
+      "median_ratio_temporal": 1.8333320715578678,
+      "n_above_1_perm": 15,
+      "max_ratio_perm": 11.757585214745795,
+      "seg_sec": 58.0,
+      "win_sec": 2.0
+    }
+  ],
+  "best_cell": {
+    "n_subjects": 15,
+    "n_windows": 225,
+    "median_ratio_perm": 5.353095931748707,
+    "median_ratio_temporal": 1.8333320715578678,
+    "n_above_1_perm": 15,
+    "max_ratio_perm": 11.757585214745795,
+    "seg_sec": 58.0,
+    "win_sec": 2.0
+  },
+  "appendix_median_ratio": 12,
+  "verdict": "NOT REACHABLE on this data. Across the full seg x win grid the maximum median permutation ratio is 5.4 (seg=58s win=2.0s) -- it never approaches the appendix's ~=12. Combined with run.py, the honest reconciled status is: the permutation null reproduces the appendix's SIGNIFICANCE and direction (14/15 > 1, p~=0.002) but NOT its MAGNITUDE; median ~=12 is optimistic and is not reproduced under any reasonable segment/window/within-state choice on the 15 cached subjects. The defensible reported ratio is ~3-4 (permutation) or ~1.3 (temporal-half), not 12."
+}

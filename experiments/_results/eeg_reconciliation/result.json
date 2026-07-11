@@ -1,0 +1,245 @@
+{
+  "experiment": "eeg_reconciliation",
+  "data": "PhysioNet eegbci, eyes-open (run 1) vs eyes-closed (run 2), same cache as real_eeg_localization",
+  "question": "Does the appendix within-state permutation null reproduce median ratio ~=12, vs the temporal-half split's ~=1.7?",
+  "params": {
+    "n_subjects": 15,
+    "channels": [
+      "O1",
+      "Oz",
+      "O2",
+      "PO3",
+      "POz",
+      "PO4",
+      "Pz"
+    ],
+    "alpha_band": [
+      8.0,
+      13.0
+    ],
+    "seg_sec": 26.0,
+    "n_perm": 200,
+    "seed": 20240711
+  },
+  "temporal_half": {
+    "median_ratio": 1.2807127473123476,
+    "n_above_1": 12,
+    "n": 15,
+    "wilcoxon_p_vs_1": 0.007537841796875,
+    "ratios": [
+      1.602,
+      1.242,
+      1.786,
+      2.217,
+      0.958,
+      0.488,
+      1.101,
+      3.156,
+      0.711,
+      1.352,
+      1.443,
+      1.171,
+      1.281,
+      3.912,
+      1.245
+    ]
+  },
+  "permutation": {
+    "median_ratio": 3.330468174971872,
+    "n_above_1": 14,
+    "n": 15,
+    "range": [
+      0.9859725173159721,
+      6.0352761311301215
+    ],
+    "wilcoxon_p_vs_1": 6.103515625e-05,
+    "n_p_below_0.05": 14,
+    "median_p": 0.0024937655860349127,
+    "ratios": [
+      4.932,
+      3.986,
+      4.389,
+      4.484,
+      2.081,
+      0.986,
+      3.703,
+      5.964,
+      2.611,
+      2.94,
+      3.009,
+      2.126,
+      2.513,
+      6.035,
+      3.33
+    ],
+    "p_values": [
+      0.00249,
+      0.00249,
+      0.00249,
+      0.00249,
+      0.00249,
+      0.52618,
+      0.00249,
+      0.00249,
+      0.00249,
+      0.00249,
+      0.00249,
+      0.00748,
+      0.00249,
+      0.00249,
+      0.00249
+    ]
+  },
+  "permutation_over_temporal_lift": 2.600480226312308,
+  "appendix_claim": {
+    "median_ratio": 12,
+    "n_above_1": "20/20",
+    "range": [
+      2,
+      36
+    ],
+    "single_subject_factor": 19,
+    "wilcoxon_p": "<1e-5"
+  },
+  "verdict": "SIGNIFICANCE REPRODUCED, MAGNITUDE NOT. The appendix's own within-state permutation null lifts the median ratio from 1.28 (temporal-half, 12/15 > 1) to 3.33 (14/15 > 1, 2.6x) and makes the discrimination significant in 14/15 subjects (median p=0.0025, near the appendix's single-subject 5e-4; Wilcoxon vs unity p=6.1e-05) -- so the appendix's DIRECTION and SIGNIFICANCE do replicate. But the null did NOT reach the appendix's [8,20] MAGNITUDE band (median ~=12): even with the correct within-state estimator the median is only 3.3. The magnitude figure ~=12 is therefore optimistic on this data; the defensible reported ratio is ~= 3.3 (permutation) or ~= 1.3 (temporal-half), not 12. See sweep.json: no segment/window choice reaches ~=12 either.",
+  "per_subject": [
+    {
+      "subject": 1,
+      "d_between": 0.3888277019236685,
+      "within_temporal_half": 0.2427147303025794,
+      "within_permutation_median": 0.07883298671792802,
+      "ratio_temporal_half": 1.6019946603114608,
+      "ratio_permutation": 4.932296975058566,
+      "p_permutation_null": 0.0024937655860349127
+    },
+    {
+      "subject": 2,
+      "d_between": 0.3731543528621409,
+      "within_temporal_half": 0.30042730599539436,
+      "within_permutation_median": 0.09362458605158,
+      "ratio_temporal_half": 1.2420786839790836,
+      "ratio_permutation": 3.9856448887962115,
+      "p_permutation_null": 0.0024937655860349127
+    },
+    {
+      "subject": 3,
+      "d_between": 0.2838007415513916,
+      "within_temporal_half": 0.15889676034941985,
+      "within_permutation_median": 0.06465648099646001,
+      "ratio_temporal_half": 1.7860700301711834,
+      "ratio_permutation": 4.3893626312098535,
+      "p_permutation_null": 0.0024937655860349127
+    },
+    {
+      "subject": 4,
+      "d_between": 0.24030298350028878,
+      "within_temporal_half": 0.10837810329307596,
+      "within_permutation_median": 0.053596125912268075,
+      "ratio_temporal_half": 2.2172650766037276,
+      "ratio_permutation": 4.483588681272274,
+      "p_permutation_null": 0.0024937655860349127
+    },
+    {
+      "subject": 5,
+      "d_between": 0.16819240828014165,
+      "within_temporal_half": 0.1756037594011358,
+      "within_permutation_median": 0.08082248848348696,
+      "ratio_temporal_half": 0.9577950315741007,
+      "ratio_permutation": 2.08101001882051,
+      "p_permutation_null": 0.0024937655860349127
+    },
+    {
+      "subject": 6,
+      "d_between": 0.06416277699750446,
+      "within_temporal_half": 0.13159617624622733,
+      "within_permutation_median": 0.0650756241889675,
+      "ratio_temporal_half": 0.4875732625957961,
+      "ratio_permutation": 0.9859725173159721,
+      "p_permutation_null": 0.5261845386533666
+    },
+    {
+      "subject": 7,
+      "d_between": 0.24509718165227593,
+      "within_temporal_half": 0.2227020904482395,
+      "within_permutation_median": 0.06619435212878202,
+      "ratio_temporal_half": 1.100560758809947,
+      "ratio_permutation": 3.7026902412374394,
+      "p_permutation_null": 0.0024937655860349127
+    },
+    {
+      "subject": 8,
+      "d_between": 0.5160258137778616,
+      "within_temporal_half": 0.16352303392911346,
+      "within_permutation_median": 0.08652160375590595,
+      "ratio_temporal_half": 3.1556766125165985,
+      "ratio_permutation": 5.964126777326845,
+      "p_permutation_null": 0.0024937655860349127
+    },
+    {
+      "subject": 9,
+      "d_between": 0.1841063723774407,
+      "within_temporal_half": 0.25896129031086984,
+      "within_permutation_median": 0.07051265863465248,
+      "ratio_temporal_half": 0.7109416706891999,
+      "ratio_permutation": 2.6109690932425593,
+      "p_permutation_null": 0.0024937655860349127
+    },
+    {
+      "subject": 10,
+      "d_between": 0.22687171788422855,
+      "within_temporal_half": 0.16774956322254822,
+      "within_permutation_median": 0.07715681551502843,
+      "ratio_temporal_half": 1.3524429722850888,
+      "ratio_permutation": 2.9403976352554233,
+      "p_permutation_null": 0.0024937655860349127
+    },
+    {
+      "subject": 11,
+      "d_between": 0.28819697911927833,
+      "within_temporal_half": 0.19976195379373052,
+      "within_permutation_median": 0.09579056867580532,
+      "ratio_temporal_half": 1.4427020443385516,
+      "ratio_permutation": 3.008615389837129,
+      "p_permutation_null": 0.0024937655860349127
+    },
+    {
+      "subject": 12,
+      "d_between": 0.11951412412165324,
+      "within_temporal_half": 0.10203060156323915,
+      "within_permutation_median": 0.056206034860147636,
+      "ratio_temporal_half": 1.1713556745774718,
+      "ratio_permutation": 2.126357506254077,
+      "p_permutation_null": 0.007481296758104738
+    },
+    {
+      "subject": 13,
+      "d_between": 0.16652805613853208,
+      "within_temporal_half": 0.1300276400683925,
+      "within_permutation_median": 0.06626083625429066,
+      "ratio_temporal_half": 1.2807127473123476,
+      "ratio_permutation": 2.5132199584599824,
+      "p_permutation_null": 0.0024937655860349127
+    },
+    {
+      "subject": 14,
+      "d_between": 0.4924013034142364,
+      "within_temporal_half": 0.12587007623830784,
+      "within_permutation_median": 0.08158720375268612,
+      "ratio_temporal_half": 3.9119806560058064,
+      "ratio_permutation": 6.0352761311301215,
+      "p_permutation_null": 0.0024937655860349127
+    },
+    {
+      "subject": 15,
+      "d_between": 0.217355411320307,
+      "within_temporal_half": 0.1746248784643423,
+      "within_permutation_median": 0.0652627198042938,
+      "ratio_temporal_half": 1.2446989984001053,
+      "ratio_permutation": 3.330468174971872,
+      "p_permutation_null": 0.0024937655860349127
+    }
+  ],
+  "figures": [
+    "eeg_reconciliation.png"
+  ]
+}
