@@ -510,6 +510,10 @@ paradigm: PhysioNet `eegbci`, 15 subjects, eyes-open (run 1) vs eyes-closed
   sustained**, i.e. exactly the sustained-fluctuation regime Exp C flagged as the
   detector's residual limitation (a burst longer than the window looks permanent
   within it). Multiscale adds nothing over the single large window, as A found.
+  **Update (→ Online-CP):** the *local* window-mean was the wrong tool for
+  sustained bursts; a *global* permanence-aware CUSUM change-point detector,
+  tested on the same 15 subjects, doubles this to **8/15** — a real improvement,
+  though still not a full solution (~half fail). See the Online-CP section.
 
 This is the honest real-data status: **structural discrimination validated; the
 5/15 within-trajectory localization is confirmed as a genuine open problem, not a
@@ -573,6 +577,58 @@ Files: `eeg_reconciliation/result.json`, `eeg_reconciliation/sweep.json`,
 
 ---
 
+## Global permanence-aware on-line localization — Paper 3's headline claim on real EEG
+**Verdict: MATERIALLY BETTER, NOT SOLVED — a global CUSUM doubles on-line localization (4/15 → 8/15), but ~half still fail.**
+
+This attacks the single most consequential open problem in the trilogy: Paper 3's
+*headline operational claim* — localizing a transition **within one continuous
+trajectory** — which the window-mean persistence detector solved synthetically
+(2/15 → 15/15) but stalled on real EEG (4/15). The diagnosed cause: real
+spontaneous alpha bursts are *sustained*, so a **local** window-mean cannot tell
+"sustained-and-recurrent" (a burst that passes, the pre-state returns) from
+"sustained-and-permanent" (the true transition). The fix must be a **global**
+statistic that sees the whole trajectory and rewards *permanence*. Two were tested,
+**directly on the same 15 real subjects, with no synthetic tuning**:
+
+| detector | localization hits (\|err\| ≤ 2 s) | median err |
+|---|---|---|
+| window-mean (local, baseline) | 4/15 | ~10 s |
+| F-ratio (global change-point LR, size-weighted) | 6/15 | ~9 s |
+| **CUSUM (global change-point)** | **8/15** | **2.0 s** |
+
+- **The permanence principle works — as a global view.** The geodesic CUSUM
+  (project each window's tangent deviation from the global Fréchet mean onto the
+  first→last change direction; take `argmax_t |S_t|`) reaches **8/15**, *doubling*
+  the local window-mean. Its hits are a strict **superset** of the window-mean's,
+  adding four subjects. A permanent step gives a CUSUM tent whose height scales
+  with the *remaining record length*; a transient burst gives a smaller bump
+  scaling with its short duration — the permanence advantage, from standard
+  change-point theory, realized on real data.
+- **The duration-penalized LR (F-ratio) helps less.** Its first cut suffered the
+  classic boundary spike (a tiny end segment has spuriously low scatter → false
+  change-point at `min_seg`); the textbook `n_pre·n_post/N` size weighting fixed it
+  (3/15 → 6/15), but its hits are a subset of CUSUM's, so it adds nothing beyond it.
+  **8/15 is the honest ceiling of this attempt** — no ensemble exceeds it.
+- **But it is not solved.** ~half the subjects still fail, often badly (5–13 s
+  errors), because on this signal a spontaneous alpha burst is *both* sustained
+  *and* geometrically comparable to the eyes-open/eyes-closed transition, so even a
+  permanence-aware global detector cannot always tell them apart.
+
+**Honest, publishable bound for Paper 3.** The trace-normalised geometry
+*discriminates* a structural regime (validated, `eeg_reconciliation`), and a global
+CUSUM *roughly doubles* on-line localization over the local detector — a real,
+principled improvement worth reporting. But **on-line single-trajectory
+localization on real EEG is improved, not solved**; it remains a partial limitation
+of the method for this signal type. Per the pre-registered 1–2-attempt budget, no
+further detector is proposed: the synthetic 15/15 was partly solving the *model* of
+the problem, and the real ceiling here (8/15) bounds the operational claim honestly.
+
+Files: `online_localization_cusum/result.json`,
+`online_localization_cusum/online_localization_cusum.png`,
+`online_localization_cusum/PRE-REGISTRATION.md`.
+
+---
+
 ## Hybrid drift-robust jump statistic — the Exp D corner fix attempt (Paper 3)
 **Verdict: NO HELP — the corner is a genuine geometric limit, not a filterable contamination.**
 
@@ -605,7 +661,7 @@ Files: `hybrid_metric/result.json`, `hybrid_metric/hybrid_metric.png`,
 
 ---
 
-## All sixteen experiments complete
+## All seventeen experiments complete
 
 | # | Paper | Headline |
 |---|---|---|
@@ -625,6 +681,7 @@ Files: `hybrid_metric/result.json`, `hybrid_metric/hybrid_metric.png`,
 | **Real-EEG** | 3 | A/B/C on real PhysioNet EEG: structural discrimination replicates **in direction (12/15) but much weaker than the appendix's 20/20** (median 1.7, 3 failures); within-trajectory localization **still hard (large 4/15 vs fragile 2/15)** — the 5/15 open problem is confirmed real (sustained alpha, Exp C's predicted limitation) |
 | **Hybrid** | 3 | Attempted drift-robust hybrid for the Exp D corner: high-pass filtering **does NOT help** (AUC 0.65→0.61, power preserved) — the corner is a genuine geometric limit needing a real base-metric change, not a filtered statistic |
 | **EEG-Recon** | 3 | Reconciles real-EEG 1.7 vs appendix 12: the within-state permutation null reproduces the appendix's **direction & significance** (14/15 > 1, p≈0.002) but only lifts the median to **3.3**; no seg/window choice reaches ≈12 (max 5.4) — the appendix's **magnitude is optimistic**, honest ratio ~3–5 |
+| **Online-CP** | 3 | Attacks Paper 3's headline on-line-localization claim with **global** permanence-aware change-point detectors on real EEG: a geodesic **CUSUM doubles** the local window-mean (4/15 → **8/15**, median err 2.0 s; F-ratio 6/15) — a real, principled improvement, but **not solved** (≥10/15), ~half still fail; on-line single-trajectory localization is **improved, not solved** on this signal |
 
 **Cross-cutting honesty:** four real bugs were found and fixed en route — two in
 `shared_lib` (HAC drift-test calibration; a future-leakage bug in the
