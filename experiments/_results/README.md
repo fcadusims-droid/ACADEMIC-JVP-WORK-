@@ -377,6 +377,65 @@ Files: `dissociation_confound/result.json`, `dissociation_confound/dissociation_
 
 ---
 
+## Sub-criticality control — does the §14.1 fix actually recover M_diss's power? (Paper 2)
+**Verdict: CONTROL WORKS — BUT ONLY WITH A SUBSAMPLING-ROBUST ESTIMATOR; §14.1 must name one.**
+
+I2 recommended, and the paper adopted, a §14.1 control: trust a dissociation result
+as identity-diagnostic only if the boundary process is shown to be *measurably*
+sub-critical. That control was written into the text but never tested. This tests
+whether it recovers M_diss's power against I2's pure critical generator — and,
+critically, whether "measurably sub-critical" is *executable* when the branching
+ratio σ must be estimated from a short, noisy recording rather than assumed.
+
+Residual confound = mean `D_bare_critical/D_ref` among systems the control certifies
+as sub-critical (read-out noise 0.1, where the I2 confound is largest). No-control
+baseline reaches 70% at the worst cell.
+
+| arm | residual confound / ref | accept(safe σ≤0.80) | reject(confounded σ≥0.92) |
+|---|---|---|---|
+| no control (I2 baseline) | 38% mean / **70% worst** | — | — |
+| oracle (true σ known) | 27% | — | — |
+| clean separable avalanches (N=40) | **24%** | 100% | 100% |
+| continuous subsampled + **naive** slope | **35%** ✗ | 100% | only 21% |
+| continuous subsampled + **MR** estimator | **29%** ✓ | 90% | 83% |
+
+- **The control concept is sound.** With σ known (oracle) the confound drops from
+  70% (worst cell) to 27% of the identity reference; with cleanly separated
+  avalanches a standard ratio-of-totals estimator (near-unbiased, σ̂ tracks true σ
+  with SE ≈ 0.03) reaches 24% with *perfect* discrimination — it accepts every
+  genuinely sub-critical system and rejects every confounded one.
+- **But the naive estimator fails on the physiological observable — in the
+  dangerous direction.** On a single short continuous *subsampled* stream (the
+  realistic observable, not cleanly segmented avalanches), the naive lag-1 slope is
+  **attenuated toward zero** (true σ=0.94 → σ̂=0.79) — the classic subsampling bias
+  (Wilting & Priesemann 2018, from binomial noise in the regressor). It therefore
+  **false-certifies 79%** of confounded near-critical systems as safe, the residual
+  confound only falls to 35%, and discrimination collapses (certification power
+  0.21). Had this test stopped at cleanly separated avalanches, it would have read a
+  clean, *generous* "works".
+- **The subsampling-robust remedy restores it — marginally.** The multistep-
+  regression (MR) estimator on the *same* short trace cancels the attenuation
+  (σ=0.94 → σ_MR=0.92) and brings the residual confound to 29% (just under the 30%
+  bar), accepting 90% of sub-critical systems and rejecting 83% of confounded ones
+  (certification power 0.75) — a real but thin margin, not the perfect discrimination
+  of the clean-avalanche case.
+
+**Honest close for §14.1.** The sub-criticality control is executable and *does*
+recover M_diss's diagnostic power — **provided distance-to-criticality is measured
+with a subsampling-robust estimator (MR-type) or from cleanly segmented avalanches,
+not a naive slope, which fails in the dangerous direction.** That estimator
+requirement is a real added condition §14.1 must state explicitly; it is not implied
+by "show the process is sub-critical" alone. With it named, the loop closes; without
+it, the control silently false-certifies near-critical confounds. This is neither the
+clean "control works" nor the fatal "not executable" of the two pre-registered
+extremes, but the calibrated middle the data support: **works, with a named
+estimator precondition.**
+
+Files: `subcriticality_control/result.json`, `subcriticality_control/subcriticality_control.png`,
+`subcriticality_control/PRE-REGISTRATION.md`.
+
+---
+
 ## Experiment AD — Window Tension & Causal-vs-Offline Localization (Paper 3)
 **Reconciles Experiments A and D**, closing a second gap the review identified:
 A's fix used a large **symmetric** (offline, future-using) window; D found
@@ -661,7 +720,7 @@ Files: `hybrid_metric/result.json`, `hybrid_metric/hybrid_metric.png`,
 
 ---
 
-## All seventeen experiments complete
+## All eighteen experiments complete
 
 | # | Paper | Headline |
 |---|---|---|
@@ -682,6 +741,7 @@ Files: `hybrid_metric/result.json`, `hybrid_metric/hybrid_metric.png`,
 | **Hybrid** | 3 | Attempted drift-robust hybrid for the Exp D corner: high-pass filtering **does NOT help** (AUC 0.65→0.61, power preserved) — the corner is a genuine geometric limit needing a real base-metric change, not a filtered statistic |
 | **EEG-Recon** | 3 | Reconciles real-EEG 1.7 vs appendix 12: the within-state permutation null reproduces the appendix's **direction & significance** (14/15 > 1, p≈0.002) but only lifts the median to **3.3**; no seg/window choice reaches ≈12 (max 5.4) — the appendix's **magnitude is optimistic**, honest ratio ~3–5 |
 | **Online-CP** | 3 | Attacks Paper 3's headline on-line-localization claim with **global** permanence-aware change-point detectors on real EEG: a geodesic **CUSUM doubles** the local window-mean (4/15 → **8/15**, median err 2.0 s; F-ratio 6/15) — a real, principled improvement, but **not solved** (≥10/15), ~half still fail; on-line single-trajectory localization is **improved, not solved** on this signal |
+| **SubCrit** | 2 | Tests whether I2's §14.1 sub-criticality control recovers M_diss's power: it does (residual confound 70%→24–29% of reference) **but only with a subsampling-robust estimator** — the naive branching-ratio slope is attenuated low on short continuous subsampled data and false-certifies 79% of confounded near-critical systems; the MR estimator restores it (29%). §14.1 must name the estimator requirement |
 
 **Cross-cutting honesty:** four real bugs were found and fixed en route — two in
 `shared_lib` (HAC drift-test calibration; a future-leakage bug in the

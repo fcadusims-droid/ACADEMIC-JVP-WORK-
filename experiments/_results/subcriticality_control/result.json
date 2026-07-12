@@ -1,0 +1,207 @@
+{
+  "experiment": "subcriticality_control",
+  "question": "Does the Sec 14.1 measured-sub-criticality control recover M_diss's power vs the I2 pure critical generator?",
+  "params": {
+    "sigma_grid": [
+      0.7,
+      0.73,
+      0.76,
+      0.79,
+      0.82,
+      0.85,
+      0.88,
+      0.91,
+      0.94,
+      0.97
+    ],
+    "sigma_cut": 0.9,
+    "boot_b": 200,
+    "boot_upper_pct": 95,
+    "n_studies": 300,
+    "headline_n_aval": 40,
+    "obs_gen": 6,
+    "seed_pop_lambda": 10.0,
+    "subsample_f": 0.5,
+    "adversarial_noise": 0.1,
+    "safe_sigma": 0.8,
+    "confounded_sigma": 0.925
+  },
+  "D_ref": 0.9041570022413521,
+  "confound_frac_over_sigma_noise0.1": [
+    0.0848895874661464,
+    0.13068569445057926,
+    0.1972610224221217,
+    0.2690618192631059,
+    0.3259224431311715,
+    0.40307894598330224,
+    0.4919156906857102,
+    0.5614505681128618,
+    0.645425888288311,
+    0.7008975132177938
+  ],
+  "sigma_hat_mean": [
+    0.6986555513768166,
+    0.7286834181148565,
+    0.7583417188398394,
+    0.7899244777379191,
+    0.820799401491784,
+    0.8487584225254975,
+    0.8770267253266195,
+    0.9074197408781803,
+    0.9396903767981364,
+    0.9697406994499267
+  ],
+  "sigma_hat_se": [
+    0.028844932505041516,
+    0.030907356728036753,
+    0.028485196284099602,
+    0.026808098591127313,
+    0.02506534906770561,
+    0.026188209471656204,
+    0.028640227809254883,
+    0.0244207486736639,
+    0.025560435331387327,
+    0.024958423006703704
+  ],
+  "accept_headline": [
+    1.0,
+    1.0,
+    0.9966666666666667,
+    1.0,
+    0.9533333333333334,
+    0.64,
+    0.2833333333333333,
+    0.04666666666666667,
+    0.0,
+    0.0
+  ],
+  "residual_confound": {
+    "no_control_mean": 0.38105891730211033,
+    "no_control_worst": 0.7008975132177938,
+    "oracle": 0.2718307433431625,
+    "realistic": 0.2391048953177581,
+    "continuous_trace": 0.35100649984588356
+  },
+  "acceptance": {
+    "safe_sigma": 0.79,
+    "accept_safe": 1.0,
+    "confounded_sigma": 0.94,
+    "accept_confounded": 0.0,
+    "certification_power": 1.0
+  },
+  "continuous_observation_naive": {
+    "t_obs": 250,
+    "sigma_hat_mean": [
+      0.44296718613619374,
+      0.47567587647677545,
+      0.5139516300612269,
+      0.5540865026626279,
+      0.5942978583945154,
+      0.6413865371241021,
+      0.6858019635575646,
+      0.7362340404327382,
+      0.7931405111912171,
+      0.8598463148743872
+    ],
+    "sigma_hat_se": [
+      0.06916369849306159,
+      0.0673636475728941,
+      0.07329612827306209,
+      0.07235427259472209,
+      0.0675045938347838,
+      0.06461195350988451,
+      0.06873998283836705,
+      0.06571672149667786,
+      0.06457229744992982,
+      0.05453180487459473
+    ],
+    "accept": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.9566666666666667,
+      0.7866666666666666,
+      0.3466666666666667
+    ],
+    "accept_safe": 1.0,
+    "accept_confounded": 0.7866666666666666,
+    "certification_power": 0.21333333333333337,
+    "residual_confound": 0.35100649984588356
+  },
+  "continuous_observation_mr": {
+    "mr_lags": 4,
+    "sigma_hat_mean": [
+      0.6769627478666674,
+      0.7043925364486399,
+      0.7183708459402433,
+      0.7626612208262719,
+      0.7927838095664007,
+      0.8244120234052671,
+      0.8550395354148399,
+      0.8843450093520709,
+      0.9177539931600656,
+      0.9415481864446148
+    ],
+    "accept": [
+      0.88,
+      0.8766666666666667,
+      0.9066666666666666,
+      0.9033333333333333,
+      0.8933333333333333,
+      0.7733333333333333,
+      0.64,
+      0.45,
+      0.16666666666666666,
+      0.04666666666666667
+    ],
+    "accept_safe": 0.9033333333333333,
+    "accept_confounded": 0.16666666666666666,
+    "certification_power": 0.7527777777777778,
+    "residual_confound": 0.2940035537910868
+  },
+  "budget_sweep": [
+    {
+      "n_aval": 20,
+      "residual_confound_frac": 0.2285836973020465,
+      "accept_safe": 0.9166666666666666,
+      "accept_confounded": 0.0033333333333333335,
+      "cert_power": 0.9136111111111112
+    },
+    {
+      "n_aval": 40,
+      "residual_confound_frac": 0.2358262253439252,
+      "accept_safe": 0.99,
+      "accept_confounded": 0.0,
+      "cert_power": 0.99
+    },
+    {
+      "n_aval": 80,
+      "residual_confound_frac": 0.2474233054901951,
+      "accept_safe": 1.0,
+      "accept_confounded": 0.0,
+      "cert_power": 1.0
+    },
+    {
+      "n_aval": 160,
+      "residual_confound_frac": 0.25469861509501107,
+      "accept_safe": 1.0,
+      "accept_confounded": 0.0,
+      "cert_power": 1.0
+    },
+    {
+      "n_aval": 400,
+      "residual_confound_frac": 0.26627660155391186,
+      "accept_safe": 1.0,
+      "accept_confounded": 0.0,
+      "cert_power": 1.0
+    }
+  ],
+  "verdict": "CONTROL WORKS -- BUT ONLY WITH A SUBSAMPLING-ROBUST ESTIMATOR; Sec 14.1 must specify one. The control CONCEPT is sound: with the true sigma known (oracle) the residual confound is 27% of the identity reference, down from the no-control 38% mean / 70% worst cell; and with cleanly separated avalanches (N_aval=40) a standard ratio estimator attains 24% with perfect discrimination (certification power 1.00). But on the physiological observable -- a single short continuous SUBSAMPLED stream (T_obs=250, f=0.5) -- the NAIVE lag-1 slope is attenuated toward zero (true sigma=0.94 -> sigma_hat=0.79), the DANGEROUS direction: it false-certifies 79% of confounded near-critical systems as safe, so the residual confound only reaches 35% and discrimination collapses (certification power 0.21). This is the known subsampling bias (Wilting & Priesemann 2018). The subsampling-robust multistep-regression (MR) estimator on the SAME short trace removes the attenuation (true sigma=0.94 -> sigma_MR=0.92) and RESTORES the control: residual confound 29% of reference, accepting 90% of genuinely sub-critical systems and rejecting 83% of confounded ones (certification power 0.75). Honest close: the \u00a714.1 control is executable and recovers M_diss's power, PROVIDED the distance-to-criticality is measured with a subsampling-robust estimator (MR-type) or from cleanly segmented avalanches -- NOT the naive slope, which fails in the dangerous direction. The paper must name this estimator requirement; with it, the loop closes.",
+  "figures": [
+    "subcriticality_control.png"
+  ]
+}
