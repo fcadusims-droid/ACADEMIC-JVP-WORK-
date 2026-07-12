@@ -1,0 +1,395 @@
+{
+  "experiment": "online_localization_cusum",
+  "data": "PhysioNet eegbci, eyes-open (run 1) + eyes-closed (run 2) concatenated, same cache",
+  "question": "Does a GLOBAL permanence-aware change-point detector localize the real transition where the local window-mean failed (4/15)?",
+  "params": {
+    "n_subjects": 15,
+    "channels": [
+      "O1",
+      "Oz",
+      "O2",
+      "PO3",
+      "POz",
+      "PO4",
+      "Pz"
+    ],
+    "alpha_band": [
+      8.0,
+      13.0
+    ],
+    "seg_sec": 26.0,
+    "step_sec": 0.25,
+    "large_w": 40,
+    "tol_sec": 2.0,
+    "min_seg_sec": 5.0
+  },
+  "hits": {
+    "window_mean": 4,
+    "fratio": 6,
+    "cusum": 8,
+    "n": 15
+  },
+  "median_err_sec": {
+    "window_mean": 9.0,
+    "fratio": 3.0,
+    "cusum": 2.0
+  },
+  "median_prominence": {
+    "window_mean": 1.652454935587631,
+    "fratio": 1.877272650708415,
+    "cusum": 1.3737181147858355
+  },
+  "best_detector": "cusum",
+  "best_hits": 8,
+  "verdict": "MATERIALLY BETTER, not solved. The global cusum reaches 8/15 (median err 2.0s) vs the window-mean's 4/15 -- a real, substantial improvement from a permanence-aware global view, but short of a full solution. Honest status: on-line localization on real EEG is IMPROVED but still imperfect. (F-ratio 6/15, CUSUM 8/15.)",
+  "per_subject": [
+    {
+      "subject": 1,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 93,
+        "err": 11,
+        "hit": false,
+        "prom": 1.3711737186393695
+      },
+      "fratio": {
+        "cp": 100,
+        "err": 4,
+        "hit": true,
+        "prom": 1.6702871819445948
+      },
+      "cusum": {
+        "cp": 103,
+        "err": 1,
+        "hit": true,
+        "prom": 1.368422073844748
+      }
+    },
+    {
+      "subject": 2,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 144,
+        "err": 40,
+        "hit": false,
+        "prom": 1.8968514109836279
+      },
+      "fratio": {
+        "cp": 164,
+        "err": 60,
+        "hit": false,
+        "prom": 1.6125459068677943
+      },
+      "cusum": {
+        "cp": 125,
+        "err": 21,
+        "hit": false,
+        "prom": 1.303480178835255
+      }
+    },
+    {
+      "subject": 3,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 101,
+        "err": 3,
+        "hit": true,
+        "prom": 1.9534047397838703
+      },
+      "fratio": {
+        "cp": 101,
+        "err": 3,
+        "hit": true,
+        "prom": 3.0547640744082996
+      },
+      "cusum": {
+        "cp": 100,
+        "err": 4,
+        "hit": true,
+        "prom": 2.0158500348237673
+      }
+    },
+    {
+      "subject": 4,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 97,
+        "err": 7,
+        "hit": true,
+        "prom": 1.9658057512640532
+      },
+      "fratio": {
+        "cp": 101,
+        "err": 3,
+        "hit": true,
+        "prom": 2.171380785016218
+      },
+      "cusum": {
+        "cp": 100,
+        "err": 4,
+        "hit": true,
+        "prom": 1.6403919946826018
+      }
+    },
+    {
+      "subject": 5,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 89,
+        "err": 15,
+        "hit": false,
+        "prom": 1.2830618204680575
+      },
+      "fratio": {
+        "cp": 90,
+        "err": 14,
+        "hit": false,
+        "prom": 1.4220297863992206
+      },
+      "cusum": {
+        "cp": 145,
+        "err": 41,
+        "hit": false,
+        "prom": 1.2629579222398888
+      }
+    },
+    {
+      "subject": 6,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 40,
+        "err": 64,
+        "hit": false,
+        "prom": 1.481731286273552
+      },
+      "fratio": {
+        "cp": 53,
+        "err": 51,
+        "hit": false,
+        "prom": 2.0407627091474656
+      },
+      "cusum": {
+        "cp": 52,
+        "err": 52,
+        "hit": false,
+        "prom": 2.124777267881146
+      }
+    },
+    {
+      "subject": 7,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 55,
+        "err": 49,
+        "hit": false,
+        "prom": 2.7509397517358973
+      },
+      "fratio": {
+        "cp": 54,
+        "err": 50,
+        "hit": false,
+        "prom": 2.5882706409730067
+      },
+      "cusum": {
+        "cp": 55,
+        "err": 49,
+        "hit": false,
+        "prom": 1.4709704678277549
+      }
+    },
+    {
+      "subject": 8,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 107,
+        "err": 3,
+        "hit": true,
+        "prom": 2.3497275515233143
+      },
+      "fratio": {
+        "cp": 114,
+        "err": 10,
+        "hit": false,
+        "prom": 2.895714734513026
+      },
+      "cusum": {
+        "cp": 110,
+        "err": 6,
+        "hit": true,
+        "prom": 1.8289820622134065
+      }
+    },
+    {
+      "subject": 9,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 164,
+        "err": 60,
+        "hit": false,
+        "prom": 2.305853524959327
+      },
+      "fratio": {
+        "cp": 175,
+        "err": 71,
+        "hit": false,
+        "prom": 4.452410980856101
+      },
+      "cusum": {
+        "cp": 149,
+        "err": 45,
+        "hit": false,
+        "prom": 1.2635045009058081
+      }
+    },
+    {
+      "subject": 10,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 164,
+        "err": 60,
+        "hit": false,
+        "prom": 1.652454935587631
+      },
+      "fratio": {
+        "cp": 175,
+        "err": 71,
+        "hit": false,
+        "prom": 1.877272650708415
+      },
+      "cusum": {
+        "cp": 103,
+        "err": 1,
+        "hit": true,
+        "prom": 1.2150505784701666
+      }
+    },
+    {
+      "subject": 11,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 141,
+        "err": 37,
+        "hit": false,
+        "prom": 1.3435490586520429
+      },
+      "fratio": {
+        "cp": 103,
+        "err": 1,
+        "hit": true,
+        "prom": 1.637970787832646
+      },
+      "cusum": {
+        "cp": 112,
+        "err": 8,
+        "hit": true,
+        "prom": 1.4453725203375825
+      }
+    },
+    {
+      "subject": 12,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 92,
+        "err": 12,
+        "hit": false,
+        "prom": 1.5297949140906901
+      },
+      "fratio": {
+        "cp": 92,
+        "err": 12,
+        "hit": false,
+        "prom": 1.6356989228875478
+      },
+      "cusum": {
+        "cp": 91,
+        "err": 13,
+        "hit": false,
+        "prom": 1.3366041311775192
+      }
+    },
+    {
+      "subject": 13,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 140,
+        "err": 36,
+        "hit": false,
+        "prom": 1.3664832823878252
+      },
+      "fratio": {
+        "cp": 180,
+        "err": 76,
+        "hit": false,
+        "prom": 1.8670000593028637
+      },
+      "cusum": {
+        "cp": 113,
+        "err": 9,
+        "hit": false,
+        "prom": 1.3737181147858355
+      }
+    },
+    {
+      "subject": 14,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 101,
+        "err": 3,
+        "hit": true,
+        "prom": 2.3129046587633146
+      },
+      "fratio": {
+        "cp": 102,
+        "err": 2,
+        "hit": true,
+        "prom": 2.303193594223298
+      },
+      "cusum": {
+        "cp": 101,
+        "err": 3,
+        "hit": true,
+        "prom": 1.5845911838331215
+      }
+    },
+    {
+      "subject": 15,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 155,
+        "err": 51,
+        "hit": false,
+        "prom": 1.3108170230784408
+      },
+      "fratio": {
+        "cp": 102,
+        "err": 2,
+        "hit": true,
+        "prom": 1.4320273863888058
+      },
+      "cusum": {
+        "cp": 100,
+        "err": 4,
+        "hit": true,
+        "prom": 1.2286491714734555
+      }
+    }
+  ],
+  "figures": [
+    "online_localization_cusum.png"
+  ]
+}
