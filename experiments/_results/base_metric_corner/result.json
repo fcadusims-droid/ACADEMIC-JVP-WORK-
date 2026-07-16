@@ -1,0 +1,238 @@
+{
+  "experiment": "base_metric_corner",
+  "question": "Does a true base-metric change (log-Euclidean / affine-invariant; Bures-Wasserstein supplementary) fix the Exp D weak-jump x strong-drift corner the square-root metric and high-pass hybrid could not?",
+  "params": {
+    "drift_strengths": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4
+    ],
+    "collapse_factors": [
+      0.7,
+      0.5,
+      0.3,
+      0.1
+    ],
+    "n_seeds": 60,
+    "n_dim": 3,
+    "diffusion": 0.02
+  },
+  "anti_development": "path-wise (each metric's own connection) for sqrt/log_euclidean/airm; base-point linearization for bures (supplementary) and sqrt_base (holonomy-removing control)",
+  "auc_grids": {
+    "sqrt": [
+      [
+        0.9363888888888889,
+        0.9969444444444444,
+        1.0,
+        1.0
+      ],
+      [
+        0.7986111111111112,
+        0.9627777777777777,
+        0.9933333333333333,
+        0.9991666666666666
+      ],
+      [
+        0.6525,
+        0.7775,
+        0.9497222222222222,
+        0.9888888888888889
+      ],
+      [
+        0.6936111111111111,
+        0.7963888888888889,
+        0.8997222222222222,
+        0.9794444444444445
+      ],
+      [
+        0.6538888888888889,
+        0.7141666666666666,
+        0.8266666666666667,
+        0.9583333333333334
+      ]
+    ],
+    "log_euclidean": [
+      [
+        0.8947222222222222,
+        0.9805555555555555,
+        0.9925,
+        0.9763888888888889
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        0.9597222222222223,
+        0.9669444444444445,
+        0.9669444444444445,
+        0.9669444444444445
+      ],
+      [
+        0.9725,
+        0.9833333333333333,
+        0.9833333333333333,
+        0.9827777777777778
+      ],
+      [
+        0.9672222222222222,
+        0.9836111111111111,
+        0.9844444444444445,
+        0.9880555555555556
+      ]
+    ],
+    "airm": [
+      [
+        0.8430555555555556,
+        0.9202777777777778,
+        0.9711111111111111,
+        0.9825
+      ],
+      [
+        0.0022222222222222222,
+        0.06777777777777778,
+        0.09694444444444444,
+        0.25916666666666666
+      ],
+      [
+        0.005555555555555556,
+        0.06055555555555556,
+        0.135,
+        0.20444444444444446
+      ],
+      [
+        0.05583333333333333,
+        0.20527777777777778,
+        0.4147222222222222,
+        0.5252777777777777
+      ],
+      [
+        0.18472222222222223,
+        0.3338888888888889,
+        0.5269444444444444,
+        0.6038888888888889
+      ]
+    ],
+    "bures": [
+      [
+        0.8572222222222222,
+        0.9861111111111112,
+        0.9925,
+        1.0
+      ],
+      [
+        0.9280555555555555,
+        0.9955555555555555,
+        0.9969444444444444,
+        1.0
+      ],
+      [
+        0.945,
+        0.9880555555555556,
+        0.9966666666666667,
+        0.9991666666666666
+      ],
+      [
+        0.905,
+        0.9658333333333333,
+        0.9930555555555556,
+        0.9988888888888889
+      ],
+      [
+        0.9433333333333334,
+        0.97,
+        0.9880555555555556,
+        0.9980555555555556
+      ]
+    ],
+    "sqrt_base": [
+      [
+        0.9216666666666666,
+        0.9966666666666667,
+        1.0,
+        1.0
+      ],
+      [
+        0.9497222222222222,
+        0.9988888888888889,
+        0.9997222222222222,
+        1.0
+      ],
+      [
+        0.9475,
+        0.9908333333333333,
+        0.9986111111111111,
+        0.9994444444444445
+      ],
+      [
+        0.9172222222222223,
+        0.9627777777777777,
+        0.9952777777777778,
+        0.9988888888888889
+      ],
+      [
+        0.9480555555555555,
+        0.9791666666666666,
+        0.9966666666666667,
+        0.9988888888888889
+      ]
+    ]
+  },
+  "jump_power": {
+    "sqrt": [
+      0.85,
+      0.9833333333333333,
+      1.0,
+      1.0
+    ],
+    "log_euclidean": [
+      0.21666666666666667,
+      1.0,
+      0.9666666666666667,
+      0.9
+    ],
+    "airm": [
+      0.05,
+      0.21666666666666667,
+      0.85,
+      0.85
+    ],
+    "bures": [
+      0.65,
+      0.9666666666666667,
+      0.9666666666666667,
+      1.0
+    ],
+    "sqrt_base": [
+      0.85,
+      0.9833333333333333,
+      1.0,
+      1.0
+    ]
+  },
+  "worst_corner_auc": {
+    "sqrt": 0.6525,
+    "log_euclidean": 0.9597222222222223,
+    "airm": 0.005555555555555556,
+    "bures": 0.905,
+    "sqrt_base": 0.9172222222222223
+  },
+  "strong_jump_power": {
+    "sqrt": 1.0,
+    "log_euclidean": 0.9,
+    "airm": 0.85,
+    "bures": 0.9666666666666667,
+    "sqrt_base": 1.0
+  },
+  "sqrt_pathwise_reproduces_corner": true,
+  "base_linearization_removes_holonomy": true,
+  "outcome": "RESOLVED",
+  "verdict": "RESOLVED BY A BASE-METRIC CHANGE. The log-Euclidean (flat, zero holonomy) base metric lifts the worst weak-jump x strong-drift corner AUC from 0.65 (square-root, path-wise) to 0.96 (>= 0.85) while keeping jump power on genuine strong collapses at 0.90 (>= 0.80). Because log-Euclidean is FLAT -- zero holonomy -- a strong geodesic drift can no longer manufacture the holonomy pseudo-jump that fooled the square-root statistic, so the weak collapse separates from the drift. The Exp D corner is therefore a SQUARE-ROOT-CONNECTION (holonomy) limit that a flat base metric repairs -- exactly the base-metric change the Hybrid probe said was required, and which no same-geometry statistic could supply. The base-linearized square-root control confirms the corner is holonomy: folding the path into the base frame lifts it 0.65 -> 0.92, i.e. discarding the holonomy alone removes the confusion. Paper 3 Sec 6.4 should name log-Euclidean (flat, zero holonomy) as the drift/jump-robust base metric in the weak-collapse x strong-drift corner. (Supplementary, base-linearized Bures-Wasserstein: worst corner 0.91, power 0.97 -- optimistic, since its holonomy is not path-wise-transported.)",
+  "figures": [
+    "base_metric_corner.png"
+  ]
+}

@@ -34,7 +34,7 @@ from numpy.typing import NDArray
 from . import spd_manifold as spd
 
 __all__ = ["ManifoldSimConfig", "random_density", "simulate_manifold_regime",
-           "anti_develop", "flatten_sym", "smallest_eig"]
+           "anti_develop", "anti_develop_base", "flatten_sym", "smallest_eig"]
 
 
 @dataclass
@@ -169,6 +169,43 @@ def anti_develop(rhos, metric: str = "sqrt") -> NDArray:
             v = spd.airm_log(rhos[t - 1], rhos[t])                 # tangent at t-1
             v0 = inv_sqrt_base @ v @ inv_sqrt_base
             incs.append(flatten_sym(0.5 * (v0 + v0.T)))
+    elif metric == "log_euclidean":
+        # FLAT metric: the connection is trivial, so the anti-developed increment
+        # is simply the step increment in log-coordinates and parallel transport is
+        # the identity (no holonomy for a curved-path drift to accumulate).
+        for t in range(1, len(rhos)):
+            incs.append(flatten_sym(spd.logeuclid_log(rhos[t - 1], rhos[t])))
     else:
         raise ValueError(f"unknown metric {metric!r}")
     return np.array(incs)
+
+
+def anti_develop_base(rhos, metric: str = "sqrt") -> NDArray:
+    """Base-point linearization: map every state into the single tangent space at
+    the base via the metric's log map, then take Euclidean first differences.
+
+    This is a *common convention* usable for ANY metric's log map (square-root,
+    log-Euclidean, affine-invariant, Bures-Wasserstein), so alternative base
+    metrics can be compared apples-to-apples on the same footing -- the only thing
+    that changes between columns is the metric's log map. It differs from the
+    path-wise ``anti_develop`` (step log + parallel transport) by folding the
+    path's holonomy into the base frame; for the flat log-Euclidean metric the two
+    coincide. Increment *norms* enter the jump statistic through a rank-based AUC,
+    which is invariant to each metric's overall tangent-norm normalization.
+
+    Returns an ``(T-1, D)`` array of Euclidean increments.
+    """
+    base = rhos[0]
+    if metric == "sqrt":
+        logf = lambda r: spd.sqrt_log(base, r)
+    elif metric == "log_euclidean":
+        logf = lambda r: spd.logeuclid_log(base, r)
+    elif metric == "airm":
+        logf = lambda r: spd.airm_log(base, r)
+    elif metric == "bures":
+        logf = lambda r: spd.bures_log(base, r)
+    else:
+        raise ValueError(f"unknown metric {metric!r}")
+    y = [flatten_sym(0.5 * (m + m.T)) for m in (logf(r) for r in rhos)]
+    y = np.asarray(y)
+    return np.diff(y, axis=0)

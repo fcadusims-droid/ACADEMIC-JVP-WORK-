@@ -44,6 +44,12 @@ __all__ = [
     "airm_distance",
     "airm_log",
     "airm_exp",
+    # log-Euclidean metric
+    "logeuclid_distance",
+    "logeuclid_log",
+    # Bures-Wasserstein metric
+    "bures_wasserstein_distance",
+    "bures_log",
     # verification
     "sectional_curvature_sqrt",
 ]
@@ -223,6 +229,68 @@ def airm_exp(A: NDArray, V: NDArray) -> NDArray:
     sqrtA = _sym((VA * np.sqrt(wA)) @ VA.T)
     inv_sqrt = _sym((VA / np.sqrt(wA)) @ VA.T)
     return _sym(sqrtA @ expm_sym(_sym(inv_sqrt @ V @ inv_sqrt)) @ sqrtA)
+
+
+# --------------------------------------------------------------------------
+# Log-Euclidean metric: the FLAT metric log(A) |-> symmetric-matrix space.
+# Geodesics are straight lines in the log domain, so the connection is flat and
+# holonomy is identically zero -- the natural contrast to the curved square-root
+# sphere for the Exp D drift/holonomy corner (a geodesic drift accumulates NO
+# holonomy here). Distance is ||log A - log B||_F (Arsigny et al. 2006).
+# --------------------------------------------------------------------------
+def logeuclid_distance(A: NDArray, B: NDArray) -> float:
+    """Log-Euclidean distance ``||log(A) - log(B)||_F``."""
+    return float(np.sqrt(np.sum((logm_psd(A) - logm_psd(B)) ** 2)))
+
+
+def logeuclid_log(A: NDArray, B: NDArray) -> NDArray:
+    """Log-Euclidean log map at ``A`` toward ``B``.
+
+    Because the metric is flat under ``A |-> log(A)``, the tangent increment is
+    simply ``log(B) - log(A)`` and parallel transport is the identity -- there is
+    no holonomy for a curved-path drift to accumulate.
+    """
+    return _sym(logm_psd(B) - logm_psd(A))
+
+
+# --------------------------------------------------------------------------
+# Bures-Wasserstein metric: the Wasserstein-2 geometry of centred Gaussians.
+# Distinct from the square-root sphere (which realises the Bures *angle*): the BW
+# distance is the *chordal* fidelity distance and its geodesics/connection differ.
+# --------------------------------------------------------------------------
+def _sqrtm_product(A: NDArray, B: NDArray) -> NDArray:
+    """Matrix square root of the (non-symmetric) product ``A B`` for SPD A, B.
+
+    Computed as ``A^{1/2} (A^{1/2} B A^{1/2})^{1/2} A^{-1/2}`` so it is real and
+    squares back to ``A B`` exactly (avoids a complex scipy.sqrtm on a
+    non-symmetric matrix).
+    """
+    wA, VA = _eigh_psd(A)
+    sqrtA = _sym((VA * np.sqrt(wA)) @ VA.T)
+    inv_sqrtA = _sym((VA / np.sqrt(wA)) @ VA.T)
+    inner = sqrtm_psd(_sym(sqrtA @ B @ sqrtA))
+    return sqrtA @ inner @ inv_sqrtA
+
+
+def bures_wasserstein_distance(A: NDArray, B: NDArray) -> float:
+    """Bures-Wasserstein distance ``sqrt(tr A + tr B - 2 tr (A^{1/2} B A^{1/2})^{1/2})``."""
+    wA, VA = _eigh_psd(A)
+    sqrtA = _sym((VA * np.sqrt(wA)) @ VA.T)
+    inner = sqrtm_psd(_sym(sqrtA @ B @ sqrtA))
+    val = np.trace(A) + np.trace(B) - 2.0 * np.trace(inner)
+    return float(np.sqrt(max(val, 0.0)))
+
+
+def bures_log(A: NDArray, B: NDArray) -> NDArray:
+    """Bures-Wasserstein log map at ``A`` toward ``B`` (tangent = symmetric matrix).
+
+    The BW geodesic from ``A`` to ``B`` is
+    ``gamma(t) = (1-t)^2 A + t^2 B + t(1-t)[(AB)^{1/2} + (BA)^{1/2}]``,
+    so ``Log_A(B) = gamma'(0) = (AB)^{1/2} + (BA)^{1/2} - 2A = 2 sym((AB)^{1/2}) - 2A``
+    (Bhatia, Jain & Lim 2019). Zero iff ``B = A``.
+    """
+    sp = _sqrtm_product(A, B)
+    return _sym(2.0 * _sym(sp) - 2.0 * A)
 
 
 # --------------------------------------------------------------------------
