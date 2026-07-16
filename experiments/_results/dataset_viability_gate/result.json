@@ -1,0 +1,70 @@
+{
+  "experiment": "dataset_viability_gate",
+  "phase": "Phase 0 (Paper 2, Trilha B gate)",
+  "search_date": "2026-07-16",
+  "method": "Documentation-level verification via web search/fetch of primary dataset pages; PASS requires all three properties affirmatively documented in the same records. Criterion fixed in PRE-REGISTRATION.md before search.",
+  "properties_required": {
+    "P1_concurrent_cardiac_neural": "ECG/HRV/PPG recorded simultaneously with EEG/MEG in the same records",
+    "P2_Iplus_Iminus_contrast": "transitions of different I-status (I+ preserving, I- breaching) with pairable surface dynamics (sd<=0.3 sigma, Exp H)",
+    "P3_MR_length": "records long/multichannel enough for a subsampling-robust (MR / Wilting-Priesemann) distance-to-criticality estimate"
+  },
+  "candidates": [
+    {
+      "name": "I-CARE (International Cardiac Arrest REsearch consortium EEG Database)",
+      "source": "PhysioNet i-care/2.1 (also AWS Open Data bdsp-icare); CC-BY-NC-SA 4.0, open",
+      "P1_concurrent_cardiac_neural": {"met": true, "evidence": "explicit EEG and ECG channel groups per patient; ECG present 'when possible', coverage variable by hospital and may be disconnected/noisy -> usable-subset size UNCONFIRMED until download (B1 empirical gate)"},
+      "P2_Iplus_Iminus_contrast": {"met": true, "evidence": "CPC outcome: good (CPC 1-2, recovery = resumes identity-bearing trajectory = I+) vs poor (CPC 3-5, non-recovery/death = I-). This is exactly the 'matched non-recovering control' Sec 14.1 sanctions. Between-subject OUTCOME contrast, NOT a within-subject transition pair; the within-record 'transition' must be operationally defined and surface-dynamics matching audited (B3). Covariates for matching: age, sex, arrest rhythm, time-to-ROSC, TTM 33/36C, in/out-of-hospital."},
+      "P3_MR_length": {"met": true, "evidence": "continuous EEG hours-to-days per patient (56,676 h / 1020 patients ~ 55 h avg), 22 EEG channels -> MR-viable in principle"},
+      "open_access": true,
+      "pass": true,
+      "caveats": [
+        "ECG usable-subset size not documented -> confirm empirically at B1 before committing to Trilha B",
+        "I+/I- is a between-subject outcome contrast; the transition event and the sd<=0.3sigma matching must be pre-registered and audited at B3",
+        "post-arrest patients vary widely (sedation, TTM, arrest duration) -> matching is demanding though auditable on the listed covariates"
+      ]
+    },
+    {
+      "name": "VitalDB",
+      "source": "vitaldb.net; open; 6388 non-cardiac surgical patients, SNUH 2016-2017",
+      "P1_concurrent_cardiac_neural": {"met": true, "evidence": "time-synchronized BIS-monitor EEG waveform (180 Hz) + ECG + full vitals per case"},
+      "P2_Iplus_Iminus_contrast": {"met": false, "evidence": "all records are reversible general anesthesia = I+ only; NO I- (non-recovering) arm"},
+      "P3_MR_length": {"met": "partial", "evidence": "intra-op hours; BIS-EEG is a low-channel processed montage, so MR feasibility on a genuine cortical criticality estimate is weaker than full-montage EEG"},
+      "open_access": true,
+      "pass": false,
+      "role": "ideal PURE-I+ substrate (reversible anesthesia, depth pairable) if a paired I- source is ever obtained; cannot alone supply the dissociation contrast"
+    },
+    {
+      "name": "Sleep banks with ECG (Sleep-EDF, SHHS, MESA, ISRUC, MASS, CAP)",
+      "source": "PhysioNet / NSRR; open or credentialed",
+      "P1_concurrent_cardiac_neural": {"met": "partial", "evidence": "several include concurrent ECG (polysomnography), varies by corpus"},
+      "P2_Iplus_Iminus_contrast": {"met": false, "evidence": "all sleep-wake / sleep-stage transitions are I-preserving (I+) by the nature of the paradigm; no I- arm exists"},
+      "P3_MR_length": {"met": true, "evidence": "full-night PSG, long"},
+      "open_access": true,
+      "pass": false,
+      "role": "Trilha A datasets (structural discrimination + localization), NOT a Trilha B contrast (no I-)"
+    },
+    {
+      "name": "ICU waveform banks (MIMIC-III/IV Waveform, eICU)",
+      "source": "PhysioNet; credentialed",
+      "P1_concurrent_cardiac_neural": {"met": false, "evidence": "ECG abundant but CONCURRENT continuous EEG is rare/absent in these bedside-monitor banks -> the neural substrate for a cortical/interoceptive boundary is generally missing"},
+      "P2_Iplus_Iminus_contrast": {"met": "unknown", "evidence": "mortality labels exist but without concurrent EEG the I-status contrast cannot be read on the neural boundary"},
+      "P3_MR_length": {"met": true},
+      "open_access": "credentialed",
+      "pass": false,
+      "note": "assessed at documentation level; fails P1 (no concurrent EEG) which is the load-bearing miss"
+    },
+    {
+      "name": "Seizure/epilepsy EEG (CHB-MIT, Temple TUH EEG)",
+      "source": "PhysioNet / TUH; open or credentialed",
+      "P1_concurrent_cardiac_neural": {"met": "rare", "evidence": "concurrent ECG is uncommon; scalp EEG focus"},
+      "P2_Iplus_Iminus_contrast": {"met": false, "evidence": "seizure onset/offset is not an I-status transition contrast; no I+/I- pairing"},
+      "P3_MR_length": {"met": true},
+      "open_access": true,
+      "pass": false
+    }
+  ],
+  "verdict": "PASS -- the CBRA dissociation test IS executable on existing public data, on ONE named dataset: I-CARE (PhysioNet i-care/2.1). It is the only candidate satisfying all three properties: concurrent EEG+ECG channel groups (P1), a genuine I+/I- contrast realized as CPC recovery vs non-recovery -- exactly the 'matched non-recovering control' Sec 14.1 sanctions (P2), and hours-to-days 22-channel records for an MR criticality estimate (P3), under an open license. No other candidate qualifies: VitalDB is a pure-I+ (reversible-anesthesia) substrate with no I- arm; sleep banks (Sleep-EDF/SHHS/MESA) are all I+; ICU banks (MIMIC) lack concurrent EEG; seizure banks lack both a cardiac channel and an I-status contrast. The PASS is therefore narrow and carries two empirical gates that Trilha B must clear before it can claim to test CBRA rather than generic geometry: (B1) confirm the ECG usable-subset is large enough on download -- I-CARE documents ECG only 'when possible', coverage unquantified; and (B3) the I+/I- contrast is a BETWEEN-SUBJECT outcome contrast, so the within-record transition event must be operationally defined and the surface-dynamics matching pre-registered and audited to sd<=0.3 sigma (Exp H), or the dissociation is confounded exactly as H showed. With those gates named, Trilha B is licensed to proceed on I-CARE; if either gate fails on contact with the data, the honest fallback is the added Sec 14.1 condition below.",
+  "added_section_14_1_condition_if_gates_fail": "Executability of the dissociation on public data is bounded by data availability in two ways verified here: (i) a concurrent interoceptive (cardiac) channel with a genuine I-breaching (non-recovering) arm exists publicly only in post-cardiac-arrest coma cohorts (I-CARE), not in the reversible-anesthesia or sleep substrates the receptivity-proxy hypothesis was framed around; and (ii) even there the contrast is between-subject outcome rather than a matched within-subject transition pair, so a positive result requires audited surface-dynamics matching (sd<=0.3 sigma) that the cohort's clinical heterogeneity may not permit. Absent an adequate ECG subset or auditable matching, the dissociation is declared not-yet-executable on public data and the CBRA positive arm remains conditional -- a data-availability limit, added to the ethical and matching conditions already stated.",
+  "trilha_B_licensed": true,
+  "figures": []
+}
