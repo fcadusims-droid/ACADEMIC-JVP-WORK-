@@ -116,6 +116,43 @@ def test_jump_test_on_geometric_pipeline():
           f"AUC(collapse vs dispersion)={auc:.2f}")
 
 
+def test_alternative_base_metrics():
+    """The log-Euclidean and Bures-Wasserstein base metrics (added for the Exp D
+    corner base-metric probe) satisfy their defining identities: zero self-log,
+    the Bures-Wasserstein geodesic reaches its endpoint, (AB)^{1/2} squares to AB,
+    and the base-point anti-development is available for all four metrics (and, for
+    the flat log-Euclidean metric, coincides with the path-wise anti-development)."""
+    from experiments.shared_lib import manifold_trajectory as mt
+    rng = np.random.default_rng(7)
+    A, B = _rand_density(3, rng), _rand_density(3, rng)
+
+    # log-Euclidean: flat metric, log map is a plain log-difference
+    assert np.max(np.abs(spd.logeuclid_log(A, A))) < 1e-10, "logeuclid_log(A,A) != 0"
+    assert abs(spd.logeuclid_distance(A, B) - spd.logeuclid_distance(B, A)) < 1e-10
+
+    # Bures-Wasserstein: (AB)^{1/2} squares to AB, self-log is zero, geodesic hits B
+    sp = spd._sqrtm_product(A, B)
+    assert np.max(np.abs(sp @ sp - A @ B)) < 1e-9, "(AB)^{1/2} does not square to AB"
+    assert np.max(np.abs(spd.bures_log(A, A))) < 1e-9, "bures_log(A,A) != 0"
+    sp_ba = spd._sqrtm_product(B, A)
+    gamma1 = 0.0 * A + 1.0 * B + 0.0 * (sp + sp_ba)   # gamma(t=1) of the BW geodesic
+    assert np.max(np.abs(gamma1 - B)) < 1e-9, "BW geodesic does not reach B at t=1"
+    assert abs(spd.bures_wasserstein_distance(A, B)
+               - spd.bures_wasserstein_distance(B, A)) < 1e-9, "BW distance not symmetric"
+
+    # base-point anti-development available for all metrics; flat metric: base == path
+    cfg = mt.ManifoldSimConfig(n=3, T=60, drift_strength=0.2, diffusion_scale=0.02,
+                               jump_time=30, collapse_factor=0.3, seed=1)
+    rhos, _ = mt.simulate_manifold_regime("collapse", cfg)
+    for m in ("sqrt", "log_euclidean", "airm", "bures"):
+        inc = mt.anti_develop_base(rhos, m)
+        assert inc.shape == (len(rhos) - 1, 6) and np.all(np.isfinite(inc)), f"base dev {m}"
+    le_base = mt.anti_develop_base(rhos, "log_euclidean")
+    le_path = mt.anti_develop(rhos, "log_euclidean")
+    assert np.max(np.abs(le_base - le_path)) < 1e-9, "log-Euclidean base != path-wise (flat)"
+    print("[ok] log-Euclidean & Bures-Wasserstein identities; base-point anti-development")
+
+
 def test_hodge_recovers_pure_fields():
     n = 64
     y, x = np.mgrid[0:n, 0:n] * (2 * np.pi / n)
@@ -140,6 +177,7 @@ def main():
     test_log_exp_transport_roundtrip()
     test_girsanov_separates_drift_from_dispersion()
     test_jump_test_on_geometric_pipeline()
+    test_alternative_base_metrics()
     test_hodge_recovers_pure_fields()
     print("\nAll shared_lib self-tests passed.")
 

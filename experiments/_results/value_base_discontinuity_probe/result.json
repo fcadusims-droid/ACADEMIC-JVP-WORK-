@@ -1,0 +1,228 @@
+{
+  "experiment": "value_base_discontinuity_probe",
+  "question": "Is E2's strong-recession Lyapunov divergence a coordinate/numerical artifact (minimal-image cut locus + fixed step) or a genuine quasi-discontinuous value-base mutation?",
+  "params": {
+    "d": 6,
+    "M": 8,
+    "K": 8,
+    "bump_width": 0.18,
+    "dt": 0.02,
+    "tau_renorm": 0.02,
+    "recession_rates": [
+      0.0,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "diversity_pressures": [
+      0.0,
+      0.5,
+      1.0
+    ]
+  },
+  "cells": {
+    "recession=0.0,diversity=0.0": {
+      "recession_rate": 0.0,
+      "diversity_pressure": 0.0,
+      "was_e2_divergent": false,
+      "lambda_minimal_dt8": -0.004617956161519311,
+      "lambda_smooth_dt4": -0.007087807285122501,
+      "lambda_smooth_dt8": -0.007087774163433825,
+      "lambda_smooth_dt16": -0.007087799558021318,
+      "smooth_rel_spread": 4.6730515296500775e-06,
+      "smooth_converged": true,
+      "recurrence_smooth": 0.9832
+    },
+    "recession=0.0,diversity=0.5": {
+      "recession_rate": 0.0,
+      "diversity_pressure": 0.5,
+      "was_e2_divergent": false,
+      "lambda_minimal_dt8": -0.0045392866862305325,
+      "lambda_smooth_dt4": -0.002725110835571108,
+      "lambda_smooth_dt8": -0.0027251127565333095,
+      "lambda_smooth_dt16": -0.0027251348797379966,
+      "smooth_rel_spread": 8.823110763133457e-06,
+      "smooth_converged": true,
+      "recurrence_smooth": 0.9752
+    },
+    "recession=0.0,diversity=1.0": {
+      "recession_rate": 0.0,
+      "diversity_pressure": 1.0,
+      "was_e2_divergent": false,
+      "lambda_minimal_dt8": -0.004457932306671533,
+      "lambda_smooth_dt4": -0.002715238769458836,
+      "lambda_smooth_dt8": -0.0027152438020333607,
+      "lambda_smooth_dt16": -0.0027152303730882217,
+      "smooth_rel_spread": 4.945760350874079e-06,
+      "smooth_converged": true,
+      "recurrence_smooth": 0.9792
+    },
+    "recession=0.5,diversity=0.0": {
+      "recession_rate": 0.5,
+      "diversity_pressure": 0.0,
+      "was_e2_divergent": false,
+      "lambda_minimal_dt8": 0.01957687177742522,
+      "lambda_smooth_dt4": 0.02456277180047016,
+      "lambda_smooth_dt8": 0.024562770488020493,
+      "lambda_smooth_dt16": 0.024562771125670006,
+      "smooth_rel_spread": 5.3432474028944106e-08,
+      "smooth_converged": true,
+      "recurrence_smooth": 0.9264
+    },
+    "recession=0.5,diversity=0.5": {
+      "recession_rate": 0.5,
+      "diversity_pressure": 0.5,
+      "was_e2_divergent": true,
+      "lambda_minimal_dt8": 0.8792742614651768,
+      "lambda_smooth_dt4": 0.024287878367269075,
+      "lambda_smooth_dt8": 0.024287879004571754,
+      "lambda_smooth_dt16": 0.024287879451344217,
+      "smooth_rel_spread": 4.4634408875691585e-08,
+      "smooth_converged": true,
+      "recurrence_smooth": 0.9288
+    },
+    "recession=0.5,diversity=1.0": {
+      "recession_rate": 0.5,
+      "diversity_pressure": 1.0,
+      "was_e2_divergent": true,
+      "lambda_minimal_dt8": 0.4052844075560259,
+      "lambda_smooth_dt4": 0.023818091448453125,
+      "lambda_smooth_dt8": 0.023818084722842563,
+      "lambda_smooth_dt16": 0.023818092192273845,
+      "smooth_rel_spread": 3.1360325678177965e-07,
+      "smooth_converged": true,
+      "recurrence_smooth": 0.9296
+    },
+    "recession=1.0,diversity=0.0": {
+      "recession_rate": 1.0,
+      "diversity_pressure": 0.0,
+      "was_e2_divergent": true,
+      "lambda_minimal_dt8": 0.036922180227823266,
+      "lambda_smooth_dt4": 0.07683689292547156,
+      "lambda_smooth_dt8": 0.07683690038484645,
+      "lambda_smooth_dt16": 0.07683689343422927,
+      "smooth_rel_spread": 9.708063240848557e-08,
+      "smooth_converged": true,
+      "recurrence_smooth": 0.9336
+    },
+    "recession=1.0,diversity=0.5": {
+      "recession_rate": 1.0,
+      "diversity_pressure": 0.5,
+      "was_e2_divergent": true,
+      "lambda_minimal_dt8": 2.7164851968200425,
+      "lambda_smooth_dt4": 0.0744117835524665,
+      "lambda_smooth_dt8": 0.07441178792896522,
+      "lambda_smooth_dt16": 0.07441179028161568,
+      "smooth_rel_spread": 9.043122275178991e-08,
+      "smooth_converged": true,
+      "recurrence_smooth": 0.9296
+    },
+    "recession=1.0,diversity=1.0": {
+      "recession_rate": 1.0,
+      "diversity_pressure": 1.0,
+      "was_e2_divergent": true,
+      "lambda_minimal_dt8": 0.029946201400633678,
+      "lambda_smooth_dt4": 0.07152093636252246,
+      "lambda_smooth_dt8": 0.0715209364593836,
+      "lambda_smooth_dt16": 0.07152093907291565,
+      "smooth_rel_spread": 3.789649888269397e-08,
+      "smooth_converged": true,
+      "recurrence_smooth": 0.9432
+    },
+    "recession=2.0,diversity=0.0": {
+      "recession_rate": 2.0,
+      "diversity_pressure": 0.0,
+      "was_e2_divergent": true,
+      "lambda_minimal_dt8": 0.4375332336897192,
+      "lambda_smooth_dt4": 0.06139944004790667,
+      "lambda_smooth_dt8": 0.06139944802218468,
+      "lambda_smooth_dt16": 0.06139946164779787,
+      "smooth_rel_spread": 3.517928434933527e-07,
+      "smooth_converged": true,
+      "recurrence_smooth": 0.9448
+    },
+    "recession=2.0,diversity=0.5": {
+      "recession_rate": 2.0,
+      "diversity_pressure": 0.5,
+      "was_e2_divergent": true,
+      "lambda_minimal_dt8": 8.989340166284382,
+      "lambda_smooth_dt4": 0.06147988220619831,
+      "lambda_smooth_dt8": 0.06147986465771377,
+      "lambda_smooth_dt16": 0.06147984457786745,
+      "smooth_rel_spread": 6.120429888707947e-07,
+      "smooth_converged": true,
+      "recurrence_smooth": 0.94
+    },
+    "recession=2.0,diversity=1.0": {
+      "recession_rate": 2.0,
+      "diversity_pressure": 1.0,
+      "was_e2_divergent": true,
+      "lambda_minimal_dt8": 0.9736696210466315,
+      "lambda_smooth_dt4": 0.05847671390046323,
+      "lambda_smooth_dt8": 0.05847669452912817,
+      "lambda_smooth_dt16": 0.058476748033513215,
+      "smooth_rel_spread": 9.149685447079301e-07,
+      "smooth_converged": true,
+      "recurrence_smooth": 0.932
+    }
+  },
+  "decisive_cell": "recession=2.0,diversity=0.0",
+  "dt_ladder": {
+    "dts": [
+      0.01,
+      0.005,
+      0.0025,
+      0.00125
+    ],
+    "e2_scheme_minimal": [
+      216.65484579114667,
+      527.8729853637545,
+      722.4307502731048,
+      1359.9724236024765
+    ],
+    "full_state_minimal": [
+      0.3546820806143799,
+      2.1975281465578083,
+      0.4375332336897192,
+      1.770573329021285
+    ],
+    "full_state_smooth": [
+      0.06139965491103331,
+      0.06139944004790667,
+      0.06139944802218468,
+      0.06139946164779787
+    ]
+  },
+  "adaptive_sweep": {
+    "rtols": [
+      1e-06,
+      1e-09,
+      1e-12
+    ],
+    "minimal": [
+      5.724285361799559,
+      1.7267390747563331,
+      0.6534301589317865
+    ],
+    "smooth": [
+      0.08559673277875912,
+      0.08559674476946767,
+      0.08559673601528762
+    ],
+    "smooth_rel_spread": 1.4008370939848125e-07,
+    "adaptive_confirms_smooth": true
+  },
+  "local_lipschitz": {
+    "minimal_median": 31.600238565452038,
+    "minimal_max": 708.3093258797413,
+    "smooth_median": 31.2523075603593,
+    "smooth_max": 31.86519899966908
+  },
+  "all_divergent_cells_converge_on_smooth_field": true,
+  "falsifiers": [],
+  "outcome": "A_ARTIFACT",
+  "verdict": "OUTCOME A -- ARTIFACT / TRICHOTOMY HOLDS. E2's strong-recession regime is decomposed and closed in favour of the theorem. Two artifacts, not a genuine discontinuity, produced E2's open regime, and a controlled decomposition on the decisive cell (recession=2.0,diversity=0.0) separates them: (1) under E2's OWN Benettin scheme (renormalize theta only, leave the bump-perturbation uncontrolled) the divergence REPRODUCES here -- lambda = 217 -> 1360 as dt = DT/2 -> DT/16 -- so the dramatic 1/dt-like blow-up was dominated by the PARTIAL (theta-only) renormalization, whose uncontrolled bump-perturbation leaves the linear regime; (2) a PROPER FULL-STATE Benettin on the same minimal-image field removes the blow-up but is still non-convergent and noisy (lambda = 0.4, 2.2, 0.4, 1.8 across the dt ladder), the residue of the minimal-image cut-locus C0-discontinuity (local-Lipschitz constant max=708). Replacing that seam with a C-infinity periodic kernel modelling the SAME PBT value dynamics -- and using the full-state Benettin -- makes the exponent CONVERGE in ALL 8 previously-divergent cells to a genuine finite value (local-Lipschitz max drops to 31.9); the adaptive DOP853 sweep confirms the limit (rtol 1e-6->1e-12: +0.086 -> +0.086). The decisive cell converges to smooth lambda* = +0.061 with recurrence 0.945 -- NOT the 0.344 the minimal-image field reported, so BOTH the Lyapunov divergence AND the low recurrence were coordinate/scheme artifacts. Every previously-open cell is genuine finite near-zero lambda WITH high recurrence -- Case 3 (bounded-recurrent), the allowed 'positive-entropy-but-recurrent' band that Exp E already found for Lorenz (lambda=+0.88, rec=0.995); no cell is the forbidden positive-entropy-plus-no-recurrence object. Reading (a) [artifact], decisively, not reading (b) [genuine quasi-discontinuous value-base mutation]. Sec 7.5/7.6 holds for the high-dimensional value-base-mutating agent across the FULL sweep, not only the smooth-resolved cells. Smooth lambda* by cell: {'recession=0.5,diversity=0.5': 0.024, 'recession=0.5,diversity=1.0': 0.024, 'recession=1.0,diversity=0.0': 0.077, 'recession=1.0,diversity=0.5': 0.074, 'recession=1.0,diversity=1.0': 0.072, 'recession=2.0,diversity=0.0': 0.061, 'recession=2.0,diversity=0.5': 0.061, 'recession=2.0,diversity=1.0': 0.058}; recurrence: {'recession=0.5,diversity=0.5': 0.929, 'recession=0.5,diversity=1.0': 0.93, 'recession=1.0,diversity=0.0': 0.934, 'recession=1.0,diversity=0.5': 0.93, 'recession=1.0,diversity=1.0': 0.943, 'recession=2.0,diversity=0.0': 0.945, 'recession=2.0,diversity=0.5': 0.94, 'recession=2.0,diversity=1.0': 0.932}.",
+  "figures": [
+    "value_base_discontinuity_probe.png"
+  ]
+}
