@@ -43,6 +43,10 @@ Legend: ⬜ pre-registered · 🟨 implemented · 🟩 run · ✅ verdict issued
 | **B1** | cbra_boundary_residual | 2 | ✅ | **FAILS → Trilha B STOPS (pre-registered).** Gating step on I-CARE. Part A: 45/60 patients have ECG+EEG (75%). Part B: RR-tachogram interoceptive boundary → time-reversal asymmetry vs 200 IAAFT surrogates — only **6/21 (29%)** show structure beyond a linear-Gaussian null, below the 60% bar. So the boundary residual is NOT estimable where the I+/I− contrast exists → B2/B3 NOT run. Honest: the fixed-threshold R-peak detector was inadequate and replaced with adaptive Pan-Tompkins *before* reading (made the negative stronger, 29% vs 42% — defect fix); 3/6 "structured" have arrhythmia-scale \|T_rev\|>0.5 (over-count); post-arrest ECG confounded by sedation/TTM/pressors. → Paper 2 §14.2 gets the data-availability estimability condition. |
 
 ## Recommended execution order
+This is the *original core* order; the follow-up rows above (E2, E2-Res, Hybrid,
+BaseMetric, Real-EEG, Online-CP, EEG-Recon, Fase 0, A1, A2, A3, B1) were added later
+as each core result raised a sharper question, and each names its own antecedent.
+
 **D → A → B → C**  (Phase 1, Paper 3)
 **G → F → E**  (Phase 2, Paper 1)
 **H → I → J**  (Phase 3, Paper 2)

@@ -13,29 +13,36 @@ repo; each experiment downloads or expects a local path.
   (bandpass → sliding-window covariance → rank-floor → trace-normalise) sits in
   each experiment's `run.py`.
 
-## PhysioNet Sleep-EDF (Exp C — stronger structural transition)
+## PhysioNet Sleep-EDF (Trilha A — sleep second paradigm)
 - Sleep-stage transitions; slower but more consistent than spontaneous alpha.
-- Openly downloadable from PhysioNet (`sleep-edfx`).
+- Openly downloadable from PhysioNet (`sleep-edfx`, sleep-cassette).
 - Loader expectation: EDF + hypnogram annotations under `data/sleep-edfx/`.
+- Used by `sleep_stage_localization` (A1), `sleep_structure_power_dissociation`
+  (A2), and `log_euclidean_real_eeg` (A3), via `pyedflib`. Channels EEG Fpz-Cz /
+  Pz-Oz / EOG horizontal.
 
-## Anesthesia (Exp C secondary — optional)
-- Only if a suitable public induction/emergence record is found. Not required for
-  the A+B+C verdict.
+## PhysioNet I-CARE (Trilha B — the CBRA I+/I− substrate, Paper 2)
+- Post-cardiac-arrest coma cohort with concurrent EEG (22-ch) and ECG (1-ch,
+  500 Hz), CPC recovery-vs-non-recovery outcome.
+- Openly downloadable from PhysioNet (`i-care`, CC-BY-NC-SA). ECG segments ~3 MB,
+  EEG segments ~57 MB; ECG and EEG stored as separate `*_ECG.mat` / `*_EEG.mat`.
+- Used by `cbra_boundary_residual` (B1) under `data/icare/`, via `scipy.io.loadmat`.
 
-## Offline / no-network fallback
-When EEG is unavailable, each Paper 3 experiment can run in `--synthetic` mode on
-`shared_lib.jump_diffusion` trajectories with an injected structural transition,
-to validate the *detector logic* (not the real-data claim). The real-data verdict
-requires the PhysioNet records above.
+## Anesthesia (optional, unused)
+- Only if a suitable public induction/emergence record is found. Not required.
 
-## Network status in this environment (2026-07)
-**PhysioNet is blocked by the environment's network policy** — the agent proxy
-returns 403 to `CONNECT physionet.org:443` (only package registries such as PyPI
-are on the allowlist). Real EEG therefore cannot be downloaded here. The Paper 3
-experiments run in the synthetic-adversarial mode described above: a known
-structural transition is embedded in spontaneous structural fluctuations large
-enough to reproduce the appendix's failure mode (the true transition is not the
-most abrupt geometric event), so the *method improvement* (multi-scale windows,
-covariate smoothing) can be tested against ground truth. This validates the tool,
-not the real-data 5/15 → 10/15 claim, which still requires the PhysioNet records
-on a network-enabled environment.
+## Network status in this environment
+**PhysioNet is reachable in this environment** (general outbound HTTPS goes through
+the agent proxy; an earlier note here that it was blocked was stale). Real EEG/ECG
+is therefore downloaded and used directly. Raw records are **not committed** — the
+`data/` tree is gitignored; only pre-registrations, code, `result.json`, and
+figures are committed. To reproduce, run each experiment's `run.py`; the loaders
+download or expect the records above under `experiments/data/`.
+
+The real-data verdicts (e.g. localization 5/15 on eyes-open/closed, generalizing to
+sleep-onset 10/15 on Sleep-EDF; the CBRA boundary residual failing to be estimable
+on I-CARE) are computed on the downloaded PhysioNet records, not on synthetic
+proxies. Synthetic-adversarial runs (`shared_lib.jump_diffusion` /
+`manifold_trajectory` with an injected transition) remain available for
+detector-logic validation with ground truth, and are used where noted, but the
+real-data claims rest on the PhysioNet records.

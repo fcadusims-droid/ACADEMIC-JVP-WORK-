@@ -4,6 +4,15 @@ scipy>=1.11
 matplotlib>=3.8
 pandas>=2.1
 
+# Real-data experiments need EDF / MATLAB-WFDB readers (imported lazily inside the
+# loaders, so the synthetic experiments and shared_lib do not require them):
+#   pyedflib -- Sleep-EDF (sleep_stage_localization, sleep_structure_power_dissociation,
+#               log_euclidean_real_eeg);  mne -- PhysioNet eegbci eyes-open/closed
+#               (real_eeg_localization, online_localization_cusum, eeg_reconciliation).
+#   I-CARE ECG (cbra_boundary_residual) is read with scipy.io.loadmat (scipy above).
+pyedflib>=0.1.30
+mne>=1.6
+
 # Phase 2 (Paper 1 RL trichotomy, Exp E) pulls these in on demand; they are not
 # needed for the shared_lib, Paper 3, or Paper 2 experiments and are listed
 # separately so the base install stays light.
