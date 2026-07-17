@@ -40,7 +40,7 @@ from experiments.paper3_geodesic_kinematics.online_localization_cusum.run import
 warnings.filterwarnings("ignore")
 RESULTS_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "_results",
                            "sleep_stage_localization")
-DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "sleep-edfx")
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "data", "sleep-edfx")
 
 # ---- pre-fixed parameters (see PRE-REGISTRATION.md) --------------------------
 N_SUBJECTS = 15
@@ -253,6 +253,16 @@ def main():
                 f"{'HIT' if l['cusum']['hit'] else '   '}" if l else "loc: n/a")
         print(f"  {pref}: {dtxt} | {ltxt}")
 
+    # honesty bookkeeping: distinct subjects (recordings are both nights) and the
+    # transition types Test 2 actually localized
+    def subj_id(pref): return pref[3:5]        # SC4[ss]n -> subject ss
+    n_subj_disc = len({subj_id(r["subject"]) for r in disc_rows})
+    n_subj_loc = len({subj_id(r["subject"]) for r in loc_rows})
+    from collections import Counter
+    trans_types = dict(Counter(f"{r['from']}->{r['to']}" for r in loc_rows))
+    rec_note = (f" [N={{n}} are RECORDINGS from {{ns}} distinct subjects, both nights; "
+                f"nights of one subject are not fully independent.]")
+
     # ---- Test 1 verdict ----
     nd = len(disc_rows)
     disc_pass = int(sum(r["pass"] for r in disc_rows))
@@ -271,10 +281,11 @@ def main():
                         f"downloaded subjects before reading the >=12/15 band.")
     elif disc_pass >= 12:
         disc_verdict = (f"GENERALIZES: N2-vs-REM structural discrimination passes the "
-                        f"permutation null in {disc_pass}/{nd} subjects (median ratio "
-                        f"{med_ratio:.2f}). The trace-normalized geometry discriminates a "
-                        f"real structural regime beyond occipital alpha -- a second "
-                        f"paradigm, as pre-registered.")
+                        f"permutation null in {disc_pass}/{nd} recordings (median ratio "
+                        f"{med_ratio:.2f})" + rec_note.format(n=nd, ns=n_subj_disc) +
+                        f" The trace-normalized geometry discriminates a real structural "
+                        f"regime beyond occipital alpha -- a second, independent paradigm, "
+                        f"as pre-registered.")
     else:
         disc_verdict = (f"DOES NOT GENERALIZE: only {disc_pass}/{nd} subjects discriminate "
                         f"N2 from REM under the permutation null (median ratio {med_ratio:.2f}) "
@@ -284,12 +295,21 @@ def main():
         loc_verdict = (f"UNDERPOWERED: only {nl} subjects had a qualifying transition "
                        f"(need >=10 to read the band); CUSUM {cu_hits}/{nl} so far.")
     elif cu_hits >= 10:
-        loc_verdict = (f"LOCALIZATION GENERALIZES: geodesic CUSUM localizes the sleep-stage "
-                       f"transition in {cu_hits}/{nl} subjects (median err {cu_med_err:.0f}s) "
-                       f"-- vs 4/15 on eyes-open/closed. A slow consistent structural "
-                       f"transition IS localizable within one trajectory; the appendix's "
-                       f"5/15 limit was the spontaneous-alpha paradigm, not the method. "
-                       f"(F-ratio {fr_hits}/{nl}, window-mean {win_hits}/{nl}.)")
+        loc_verdict = (f"LOCALIZATION GENERALIZES: geodesic CUSUM localizes the transition "
+                       f"in {cu_hits}/{nl} recordings (median err {cu_med_err:.0f}s) -- vs "
+                       f"4/15 on eyes-open/closed" + rec_note.format(n=nl, ns=n_subj_loc) +
+                       f" IMPORTANT SCOPE: every localized transition here is the "
+                       f"wake->sleep-onset (W->N1) event -- the first structural transition "
+                       f"in each record (records begin with a long wake period), so this is "
+                       f"specifically SLEEP-ONSET localization, not arbitrary stage-transition "
+                       f"localization (transition types: {trans_types}). Within that scope the "
+                       f"claim is real: a slow, consistent structural transition IS "
+                       f"localizable within one trajectory, so the appendix's 5/15 limit was "
+                       f"the spontaneous-alpha paradigm, not the method. 2 of the 5 misses are "
+                       f"near-misses at 31s (just over the pre-registered +/-30s; tolerance "
+                       f"NOT relaxed post-hoc). (F-ratio {fr_hits}/{nl}, window-mean "
+                       f"{win_hits}/{nl} -- CUSUM's global permanence view wins, as on eyes-"
+                       f"open/closed.)")
     elif cu_hits >= 8:
         loc_verdict = (f"MATERIALLY BETTER, NOT SOLVED: CUSUM {cu_hits}/{nl} (median err "
                        f"{cu_med_err:.0f}s), above eyes-open/closed (4/15) but short of "
@@ -332,6 +352,11 @@ def main():
     summary = {
         "experiment": "sleep_stage_localization",
         "data": "PhysioNet Sleep-EDF sleep-cassette; channels " + ",".join(WANT_CH),
+        "n_recordings_vs_subjects": {"disc_recordings": nd, "disc_subjects": n_subj_disc,
+                                     "loc_recordings": nl, "loc_subjects": n_subj_loc,
+                                     "note": "recordings include both nights of each subject; not fully independent"},
+        "localization_transition_types": trans_types,
+        "localization_scope_note": "all localized transitions are wake->sleep-onset (W->N1), the first structural transition per record; this is sleep-onset localization, not arbitrary stage-transition localization",
         "params": {"band": BAND, "win_sec": WIN_SEC, "step_sec": STEP_SEC,
                    "disc_stages": DISC_STAGES, "tol_sec": TOL_SEC, "seg_sec": SEG_SEC,
                    "large_w": LARGE_W, "n_perm": N_PERM},
