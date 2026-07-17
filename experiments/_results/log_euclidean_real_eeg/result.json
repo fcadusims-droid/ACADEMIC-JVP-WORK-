@@ -1,0 +1,247 @@
+{
+  "experiment": "log_euclidean_real_eeg",
+  "data": "PhysioNet Sleep-EDF (Part 1) + synthetic SPD generator (Part 2, same as base_metric_corner)",
+  "part1_real_eeg": {
+    "n_disc": 15,
+    "n_loc": 15,
+    "n_subjects": 8,
+    "discrimination": {
+      "sqrt": 14,
+      "log_euclidean": 15
+    },
+    "localization_sleep_onset": {
+      "sqrt": 10,
+      "log_euclidean": 10
+    },
+    "log_euclidean_viable": true,
+    "per_subject_disc": [
+      {
+        "subject": "SC4001",
+        "sqrt_ratio": 1.9112466172370863,
+        "sqrt_pass": true,
+        "le_ratio": 2.1991123938379187,
+        "le_pass": true
+      },
+      {
+        "subject": "SC4002",
+        "sqrt_ratio": 2.1982406112198323,
+        "sqrt_pass": true,
+        "le_ratio": 2.9425729130241276,
+        "le_pass": true
+      },
+      {
+        "subject": "SC4011",
+        "sqrt_ratio": 4.575047514720262,
+        "sqrt_pass": true,
+        "le_ratio": 6.261330830569532,
+        "le_pass": true
+      },
+      {
+        "subject": "SC4012",
+        "sqrt_ratio": 2.703685237664812,
+        "sqrt_pass": true,
+        "le_ratio": 3.9154150471810443,
+        "le_pass": true
+      },
+      {
+        "subject": "SC4021",
+        "sqrt_ratio": 3.226813851232966,
+        "sqrt_pass": true,
+        "le_ratio": 4.227148946907308,
+        "le_pass": true
+      },
+      {
+        "subject": "SC4022",
+        "sqrt_ratio": 2.445623588941092,
+        "sqrt_pass": true,
+        "le_ratio": 2.5892773205935042,
+        "le_pass": true
+      },
+      {
+        "subject": "SC4031",
+        "sqrt_ratio": 4.50682264799632,
+        "sqrt_pass": true,
+        "le_ratio": 6.784243550641567,
+        "le_pass": true
+      },
+      {
+        "subject": "SC4032",
+        "sqrt_ratio": 2.8337639998686024,
+        "sqrt_pass": true,
+        "le_ratio": 5.6588936498052815,
+        "le_pass": true
+      },
+      {
+        "subject": "SC4041",
+        "sqrt_ratio": 3.1994528742707105,
+        "sqrt_pass": true,
+        "le_ratio": 3.758952131946718,
+        "le_pass": true
+      },
+      {
+        "subject": "SC4042",
+        "sqrt_ratio": 3.7027424142167815,
+        "sqrt_pass": true,
+        "le_ratio": 4.630526373342129,
+        "le_pass": true
+      },
+      {
+        "subject": "SC4051",
+        "sqrt_ratio": 2.564933182949525,
+        "sqrt_pass": true,
+        "le_ratio": 2.936545610127965,
+        "le_pass": true
+      },
+      {
+        "subject": "SC4052",
+        "sqrt_ratio": 2.785029331830397,
+        "sqrt_pass": true,
+        "le_ratio": 3.4890028154321353,
+        "le_pass": true
+      },
+      {
+        "subject": "SC4061",
+        "sqrt_ratio": 1.9684239634395098,
+        "sqrt_pass": true,
+        "le_ratio": 2.436813209605495,
+        "le_pass": true
+      },
+      {
+        "subject": "SC4062",
+        "sqrt_ratio": 1.4091227558901955,
+        "sqrt_pass": false,
+        "le_ratio": 2.028893729002772,
+        "le_pass": true
+      },
+      {
+        "subject": "SC4071",
+        "sqrt_ratio": 4.488659066199637,
+        "sqrt_pass": true,
+        "le_ratio": 6.232299064892226,
+        "le_pass": true
+      }
+    ],
+    "per_subject_loc": [
+      {
+        "subject": "SC4001",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": true,
+        "le_hit": true
+      },
+      {
+        "subject": "SC4002",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": true,
+        "le_hit": true
+      },
+      {
+        "subject": "SC4011",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": true,
+        "le_hit": true
+      },
+      {
+        "subject": "SC4012",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": false,
+        "le_hit": false
+      },
+      {
+        "subject": "SC4021",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": true,
+        "le_hit": true
+      },
+      {
+        "subject": "SC4022",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": true,
+        "le_hit": true
+      },
+      {
+        "subject": "SC4031",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": false,
+        "le_hit": false
+      },
+      {
+        "subject": "SC4032",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": true,
+        "le_hit": true
+      },
+      {
+        "subject": "SC4041",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": true,
+        "le_hit": true
+      },
+      {
+        "subject": "SC4042",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": true,
+        "le_hit": true
+      },
+      {
+        "subject": "SC4051",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": true,
+        "le_hit": true
+      },
+      {
+        "subject": "SC4052",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": true,
+        "le_hit": true
+      },
+      {
+        "subject": "SC4061",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": false,
+        "le_hit": false
+      },
+      {
+        "subject": "SC4062",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": false,
+        "le_hit": false
+      },
+      {
+        "subject": "SC4071",
+        "from": "W",
+        "to": "N1",
+        "sqrt_hit": false,
+        "le_hit": false
+      }
+    ]
+  },
+  "part2_tradeoff": {
+    "weak_collapse_0.7_jump_power": {
+      "sqrt": 0.85,
+      "log_euclidean": 0.21666666666666667
+    },
+    "worst_corner_auc": {
+      "sqrt": 0.6525,
+      "log_euclidean": 0.9597222222222223
+    },
+    "note": "log-Euclidean resolves the corner (AUC up) but loses weak-collapse jump power (down); recovers on stronger collapses"
+  },
+  "verdict": "TRADE-OFF, TESTED ON REAL DATA. Part 1 (real Sleep-EDF): the flat log-Euclidean geometry is VIABLE on real structural detection -- N2-vs-REM discrimination sqrt 14/15 vs log-Euclidean 15/15, sleep-onset localization sqrt 10/15 vs log-Euclidean 10/15 [N=15 recordings from 8 subjects, both nights; not fully independent.] So switching to the flat metric does not break real structural discrimination/localization. Part 2 (the cost the paper never stated, same generator as BaseMetric): log-Euclidean WINS the drift/jump corner (worst-corner AUC 0.65 -> 0.96) but LOSES weak-collapse sensitivity (jump power on a factor-0.7 collapse 0.85 -> 0.22); it recovers on stronger collapses. HONEST RECOMMENDATION following the numbers: log-Euclidean is a CORNER-SPECIFIC base metric -- adopt it (or cross-check with it) in the weak-collapse x strong-drift corner where the square-root sphere's holonomy confounds drift and jump, but keep the square-root sphere PRIMARY, because its weak-collapse jump power (0.85) is far higher and the flat metric would cost detections on exactly the weak abrupt transitions the protocol is built to catch. Real-EEG viability confirms the switch is safe for structural detection; the weak-collapse power number is the price, now on record.",
+  "figures": [
+    "log_euclidean_real_eeg.png"
+  ]
+}
