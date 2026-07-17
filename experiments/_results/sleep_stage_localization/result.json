@@ -1,0 +1,472 @@
+{
+  "experiment": "sleep_stage_localization",
+  "data": "PhysioNet Sleep-EDF sleep-cassette; channels EEG Fpz-Cz,EEG Pz-Oz,EOG horizontal",
+  "n_recordings_vs_subjects": {
+    "disc_recordings": 15,
+    "disc_subjects": 8,
+    "loc_recordings": 15,
+    "loc_subjects": 8,
+    "note": "recordings include both nights of each subject; not fully independent"
+  },
+  "localization_transition_types": {
+    "W->N1": 15
+  },
+  "localization_scope_note": "all localized transitions are wake->sleep-onset (W->N1), the first structural transition per record; this is sleep-onset localization, not arbitrary stage-transition localization",
+  "params": {
+    "band": [
+      0.5,
+      30.0
+    ],
+    "win_sec": 2.0,
+    "step_sec": 1.0,
+    "disc_stages": [
+      "N2",
+      "REM"
+    ],
+    "tol_sec": 30.0,
+    "seg_sec": 90.0,
+    "large_w": 40,
+    "n_perm": 500
+  },
+  "test1_discrimination": {
+    "n": 15,
+    "pass": 14,
+    "median_ratio": 2.785029331830397,
+    "per_subject": [
+      {
+        "subject": "SC4001",
+        "ratio": 1.9112466172370863,
+        "p": 0.017964071856287425,
+        "n_A": 7518,
+        "n_B": 3747,
+        "pass": true,
+        "null_median": 0.6875640696838332
+      },
+      {
+        "subject": "SC4002",
+        "ratio": 2.1982406112198323,
+        "p": 0.011976047904191617,
+        "n_A": 11200,
+        "n_B": 6444,
+        "pass": true,
+        "null_median": 0.66789376888083
+      },
+      {
+        "subject": "SC4011",
+        "ratio": 4.575047514720262,
+        "p": 0.001996007984031936,
+        "n_A": 16862,
+        "n_B": 5093,
+        "pass": true,
+        "null_median": 0.7174821435439421
+      },
+      {
+        "subject": "SC4012",
+        "ratio": 2.703685237664812,
+        "p": 0.003992015968063872,
+        "n_A": 19811,
+        "n_B": 5265,
+        "pass": true,
+        "null_median": 0.7253380415628543
+      },
+      {
+        "subject": "SC4021",
+        "ratio": 3.226813851232966,
+        "p": 0.003992015968063872,
+        "n_A": 16380,
+        "n_B": 4877,
+        "pass": true,
+        "null_median": 0.7030747224618776
+      },
+      {
+        "subject": "SC4022",
+        "ratio": 2.445623588941092,
+        "p": 0.005988023952095809,
+        "n_A": 12047,
+        "n_B": 5361,
+        "pass": true,
+        "null_median": 0.6866920695791427
+      },
+      {
+        "subject": "SC4031",
+        "ratio": 4.50682264799632,
+        "p": 0.001996007984031936,
+        "n_A": 14559,
+        "n_B": 6264,
+        "pass": true,
+        "null_median": 0.70376071602376
+      },
+      {
+        "subject": "SC4032",
+        "ratio": 2.8337639998686024,
+        "p": 0.001996007984031936,
+        "n_A": 12013,
+        "n_B": 5963,
+        "pass": true,
+        "null_median": 0.714629510732203
+      },
+      {
+        "subject": "SC4041",
+        "ratio": 3.1994528742707105,
+        "p": 0.005988023952095809,
+        "n_A": 18598,
+        "n_B": 5883,
+        "pass": true,
+        "null_median": 0.7532192261090103
+      },
+      {
+        "subject": "SC4042",
+        "ratio": 3.7027424142167815,
+        "p": 0.001996007984031936,
+        "n_A": 15432,
+        "n_B": 8076,
+        "pass": true,
+        "null_median": 0.6765569484215348
+      },
+      {
+        "subject": "SC4051",
+        "ratio": 2.564933182949525,
+        "p": 0.003992015968063872,
+        "n_A": 6535,
+        "n_B": 2037,
+        "pass": true,
+        "null_median": 0.7474168406541553
+      },
+      {
+        "subject": "SC4052",
+        "ratio": 2.785029331830397,
+        "p": 0.005988023952095809,
+        "n_A": 18477,
+        "n_B": 5396,
+        "pass": true,
+        "null_median": 0.7202568891294489
+      },
+      {
+        "subject": "SC4061",
+        "ratio": 1.9684239634395098,
+        "p": 0.02594810379241517,
+        "n_A": 12215,
+        "n_B": 3058,
+        "pass": true,
+        "null_median": 0.7263633536733807
+      },
+      {
+        "subject": "SC4062",
+        "ratio": 1.4091227558901955,
+        "p": 0.06786427145708583,
+        "n_A": 12511,
+        "n_B": 5605,
+        "pass": false,
+        "null_median": 0.6819896821766058
+      },
+      {
+        "subject": "SC4071",
+        "ratio": 4.488659066199637,
+        "p": 0.001996007984031936,
+        "n_A": 12094,
+        "n_B": 5929,
+        "pass": true,
+        "null_median": 0.7389881395051692
+      }
+    ],
+    "verdict": "GENERALIZES: N2-vs-REM structural discrimination passes the permutation null in 14/15 recordings (median ratio 2.79) [N=15 are RECORDINGS from 8 distinct subjects, both nights; nights of one subject are not fully independent.] The trace-normalized geometry discriminates a real structural regime beyond occipital alpha -- a second, independent paradigm, as pre-registered."
+  },
+  "test2_localization": {
+    "n": 15,
+    "cusum_hits": 10,
+    "fratio_hits": 6,
+    "window_mean_hits": 6,
+    "cusum_median_err_s": 17.0,
+    "per_subject": [
+      {
+        "subject": "SC4001",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 12.0,
+          "hit": true
+        },
+        "fratio": {
+          "err_s": 16.0,
+          "hit": true
+        },
+        "cusum": {
+          "err_s": 14.0,
+          "hit": true
+        }
+      },
+      {
+        "subject": "SC4002",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 12.0,
+          "hit": true
+        },
+        "fratio": {
+          "err_s": 13.0,
+          "hit": true
+        },
+        "cusum": {
+          "err_s": 13.0,
+          "hit": true
+        }
+      },
+      {
+        "subject": "SC4011",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 30.0,
+          "hit": true
+        },
+        "fratio": {
+          "err_s": 33.0,
+          "hit": false
+        },
+        "cusum": {
+          "err_s": 16.0,
+          "hit": true
+        }
+      },
+      {
+        "subject": "SC4012",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 36.0,
+          "hit": false
+        },
+        "fratio": {
+          "err_s": 36.0,
+          "hit": false
+        },
+        "cusum": {
+          "err_s": 37.0,
+          "hit": false
+        }
+      },
+      {
+        "subject": "SC4021",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 31.0,
+          "hit": false
+        },
+        "fratio": {
+          "err_s": 6.0,
+          "hit": true
+        },
+        "cusum": {
+          "err_s": 5.0,
+          "hit": true
+        }
+      },
+      {
+        "subject": "SC4022",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 16.0,
+          "hit": true
+        },
+        "fratio": {
+          "err_s": 16.0,
+          "hit": true
+        },
+        "cusum": {
+          "err_s": 17.0,
+          "hit": true
+        }
+      },
+      {
+        "subject": "SC4031",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 39.0,
+          "hit": false
+        },
+        "fratio": {
+          "err_s": 30.0,
+          "hit": true
+        },
+        "cusum": {
+          "err_s": 31.0,
+          "hit": false
+        }
+      },
+      {
+        "subject": "SC4032",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 37.0,
+          "hit": false
+        },
+        "fratio": {
+          "err_s": 34.0,
+          "hit": false
+        },
+        "cusum": {
+          "err_s": 3.0,
+          "hit": true
+        }
+      },
+      {
+        "subject": "SC4041",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 29.0,
+          "hit": true
+        },
+        "fratio": {
+          "err_s": 32.0,
+          "hit": false
+        },
+        "cusum": {
+          "err_s": 20.0,
+          "hit": true
+        }
+      },
+      {
+        "subject": "SC4042",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 22.0,
+          "hit": true
+        },
+        "fratio": {
+          "err_s": 22.0,
+          "hit": true
+        },
+        "cusum": {
+          "err_s": 23.0,
+          "hit": true
+        }
+      },
+      {
+        "subject": "SC4051",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 49.0,
+          "hit": false
+        },
+        "fratio": {
+          "err_s": 57.0,
+          "hit": false
+        },
+        "cusum": {
+          "err_s": 11.0,
+          "hit": true
+        }
+      },
+      {
+        "subject": "SC4052",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 36.0,
+          "hit": false
+        },
+        "fratio": {
+          "err_s": 36.0,
+          "hit": false
+        },
+        "cusum": {
+          "err_s": 7.0,
+          "hit": true
+        }
+      },
+      {
+        "subject": "SC4061",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 36.0,
+          "hit": false
+        },
+        "fratio": {
+          "err_s": 51.0,
+          "hit": false
+        },
+        "cusum": {
+          "err_s": 37.0,
+          "hit": false
+        }
+      },
+      {
+        "subject": "SC4062",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 41.0,
+          "hit": false
+        },
+        "fratio": {
+          "err_s": 41.0,
+          "hit": false
+        },
+        "cusum": {
+          "err_s": 42.0,
+          "hit": false
+        }
+      },
+      {
+        "subject": "SC4071",
+        "from": "W",
+        "to": "N1",
+        "seam": 89,
+        "n_windows": 179,
+        "window_mean": {
+          "err_s": 49.0,
+          "hit": false
+        },
+        "fratio": {
+          "err_s": 54.0,
+          "hit": false
+        },
+        "cusum": {
+          "err_s": 31.0,
+          "hit": false
+        }
+      }
+    ],
+    "verdict": "LOCALIZATION GENERALIZES: geodesic CUSUM localizes the transition in 10/15 recordings (median err 17s) -- vs 4/15 on eyes-open/closed [N=15 are RECORDINGS from 8 distinct subjects, both nights; nights of one subject are not fully independent.] IMPORTANT SCOPE: every localized transition here is the wake->sleep-onset (W->N1) event -- the first structural transition in each record (records begin with a long wake period), so this is specifically SLEEP-ONSET localization, not arbitrary stage-transition localization (transition types: {'W->N1': 15}). Within that scope the claim is real: a slow, consistent structural transition IS localizable within one trajectory, so the appendix's 5/15 limit was the spontaneous-alpha paradigm, not the method. 2 of the 5 misses are near-misses at 31s (just over the pre-registered +/-30s; tolerance NOT relaxed post-hoc). (F-ratio 6/15, window-mean 6/15 -- CUSUM's global permanence view wins, as on eyes-open/closed.)"
+  },
+  "figures": [
+    "sleep_stage_localization.png"
+  ]
+}
