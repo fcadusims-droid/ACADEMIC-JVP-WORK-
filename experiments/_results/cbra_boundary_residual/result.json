@@ -1,0 +1,221 @@
+{
+  "experiment": "cbra_boundary_residual",
+  "phase": "Trilha B1 (gating)",
+  "data": "PhysioNet I-CARE, ECG (1-ch, 500 Hz); interoceptive RR-tachogram boundary",
+  "part_a_ecg_coverage": {
+    "sampled": 60,
+    "with_ecg_and_eeg": 45,
+    "fraction": 0.75
+  },
+  "params": {
+    "fs": 500.0,
+    "n_surrogates": 200,
+    "min_rpeaks": 200,
+    "pass_fraction": 0.6,
+    "statistic": "time_reversal_asymmetry"
+  },
+  "n_patients": 21,
+  "n_structured": 6,
+  "fraction_structured": 0.2857142857142857,
+  "n_skipped_short": 3,
+  "n_structured_with_large_trev_maybe_arrhythmia": 3,
+  "detector_note": "initial fixed-threshold R-peak detector was inadequate on I-CARE ECG; replaced with adaptive Pan-Tompkins before reading the result; the fix made the negative stronger (29% vs 42%), a defect fix not outcome tuning",
+  "b1_passed": false,
+  "b2_b3_run": false,
+  "b2_b3_note": "NOT run -- pre-registration requires Trilha B to stop when B1 fails",
+  "per_patient": [
+    {
+      "patient": "0284",
+      "t_rev": -0.664156732509349,
+      "surr_mean": 0.0019590601360649643,
+      "surr_std": 0.058696564901578145,
+      "p": 0.004975124378109453,
+      "significant": true,
+      "n_rr": 4387
+    },
+    {
+      "patient": "0286",
+      "t_rev": 0.127844508901066,
+      "surr_mean": -0.0022208500876093706,
+      "surr_std": 0.03232165581979008,
+      "p": 0.004975124378109453,
+      "significant": true,
+      "n_rr": 2505
+    },
+    {
+      "patient": "0296",
+      "t_rev": -0.47604297357811953,
+      "surr_mean": -0.0001681074253568479,
+      "surr_std": 0.036605614724144295,
+      "p": 0.004975124378109453,
+      "significant": true,
+      "n_rr": 4814
+    },
+    {
+      "patient": "0303",
+      "t_rev": 0.018727129685014113,
+      "surr_mean": -0.0018000600352310041,
+      "surr_std": 0.02507090602581624,
+      "p": 0.48258706467661694,
+      "significant": false,
+      "n_rr": 5289
+    },
+    {
+      "patient": "0306",
+      "t_rev": 0.002377860784738712,
+      "surr_mean": 0.0006283667364152545,
+      "surr_std": 0.0316676946744679,
+      "p": 0.9502487562189055,
+      "significant": false,
+      "n_rr": 4706
+    },
+    {
+      "patient": "0312",
+      "t_rev": 0.0022937681985646424,
+      "surr_mean": 0.0017732804899881398,
+      "surr_std": 0.04050787126291423,
+      "p": 0.9502487562189055,
+      "significant": false,
+      "n_rr": 1668
+    },
+    {
+      "patient": "0313",
+      "t_rev": -0.024398028666980213,
+      "surr_mean": -0.006372723406673825,
+      "surr_std": 0.038882454294769726,
+      "p": 0.5522388059701493,
+      "significant": false,
+      "n_rr": 2567
+    },
+    {
+      "patient": "0316",
+      "t_rev": 0.025187133959234238,
+      "surr_mean": 0.003592352661490057,
+      "surr_std": 0.036004726246366754,
+      "p": 0.527363184079602,
+      "significant": false,
+      "n_rr": 4611
+    },
+    {
+      "patient": "0328",
+      "t_rev": 0.5647021249444102,
+      "surr_mean": -0.006767478342431608,
+      "surr_std": 0.0675892916931629,
+      "p": 0.004975124378109453,
+      "significant": true,
+      "n_rr": 1057
+    },
+    {
+      "patient": "0337",
+      "t_rev": 0.056528934939452616,
+      "surr_mean": 0.0026638877536153886,
+      "surr_std": 0.03988783211356377,
+      "p": 0.18407960199004975,
+      "significant": false,
+      "n_rr": 3139
+    },
+    {
+      "patient": "0340",
+      "t_rev": 0.10081569090181379,
+      "surr_mean": 0.00344986656706138,
+      "surr_std": 0.058572815430930646,
+      "p": 0.09950248756218906,
+      "significant": false,
+      "n_rr": 2762
+    },
+    {
+      "patient": "0342",
+      "t_rev": 0.0801509533772688,
+      "surr_mean": 0.0069586656134486,
+      "surr_std": 0.06749856301129682,
+      "p": 0.21393034825870647,
+      "significant": false,
+      "n_rr": 1219
+    },
+    {
+      "patient": "0344",
+      "t_rev": -0.07467258824167959,
+      "surr_mean": -0.0031316081652836437,
+      "surr_std": 0.1299837624747556,
+      "p": 0.5920398009950248,
+      "significant": false,
+      "n_rr": 305
+    },
+    {
+      "patient": "0346",
+      "t_rev": -0.06234971813091755,
+      "surr_mean": -0.0016863825499410373,
+      "surr_std": 0.04101326859748281,
+      "p": 0.12437810945273632,
+      "significant": false,
+      "n_rr": 2950
+    },
+    {
+      "patient": "0347",
+      "t_rev": -0.01456932523826117,
+      "surr_mean": 0.0033047442351052847,
+      "surr_std": 0.028443634929505728,
+      "p": 0.5920398009950248,
+      "significant": false,
+      "n_rr": 4102
+    },
+    {
+      "patient": "0348",
+      "t_rev": -0.03867782920116198,
+      "surr_mean": -0.002392680795957265,
+      "surr_std": 0.04457375316639707,
+      "p": 0.3582089552238806,
+      "significant": false,
+      "n_rr": 4126
+    },
+    {
+      "patient": "0349",
+      "t_rev": -0.061414866269163496,
+      "surr_mean": -0.003544524910347098,
+      "surr_std": 0.04277477314018887,
+      "p": 0.12935323383084577,
+      "significant": false,
+      "n_rr": 3663
+    },
+    {
+      "patient": "0350",
+      "t_rev": -0.13676049125592019,
+      "surr_mean": 0.001958152214936165,
+      "surr_std": 0.040967357857728356,
+      "p": 0.004975124378109453,
+      "significant": true,
+      "n_rr": 4539
+    },
+    {
+      "patient": "0351",
+      "t_rev": 0.7544829126374154,
+      "surr_mean": 0.0022160418747465276,
+      "surr_std": 0.10954981515339268,
+      "p": 0.004975124378109453,
+      "significant": true,
+      "n_rr": 599
+    },
+    {
+      "patient": "0352",
+      "t_rev": 0.01631586540820875,
+      "surr_mean": 0.004248077443306167,
+      "surr_std": 0.04942752544766355,
+      "p": 0.7213930348258707,
+      "significant": false,
+      "n_rr": 1191
+    },
+    {
+      "patient": "0353",
+      "t_rev": 0.026469407227550396,
+      "surr_mean": 0.0030866542479364724,
+      "surr_std": 0.021991233111277087,
+      "p": 0.23383084577114427,
+      "significant": false,
+      "n_rr": 5172
+    }
+  ],
+  "verdict": "B1 FAILS -- Trilha B STOPS here, per the pre-registered decision rule. Only 6/21 (29%) of the evaluable pilot patients show significant interoceptive-boundary nonlinearity vs IAAFT (3 of 24 downloaded segments were too short to yield >= 200 R-peaks), below the pre-registered 60% bar. On I-CARE ECG the interoceptive boundary does not carry structure beyond a linear-Gaussian null in a majority of patients, so the CBRA boundary residual is not reliably estimable and the dissociation is not executable on this substrate. Three honesty notes: (i) the initial fixed-threshold R-peak detector was inadequate on I-CARE's heterogeneous ECG and was replaced with an adaptive Pan-Tompkins detector BEFORE reading this result -- and the fix made the negative STRONGER (29% vs a spuriously-higher 42% on the broken detector), so it is a defect fix, not outcome tuning; (ii) of the 6 'structured' patients 3 have |T_rev| > 0.5, large enough to reflect ectopic beats/arrhythmia (endemic post-arrest) rather than genuine interoceptive nonlinearity, so even 29% is likely an OVER-count; (iii) post-arrest ECG is heavily confounded by sedation, targeted temperature management, and pressors, any of which flattens interoceptive nonlinearity. This is a pre-registered, publishable negative: combined with Fase 0 (I-CARE is the ONLY public dataset carrying the I+/I- contrast), it means the CBRA dissociation is effectively not executable on available public data -- the boundary residual is not estimable where the contrast exists -- which is an added estimability condition on \u00a714.1, not a contortion. B2 (MR sub-criticality) and B3 (matched dissociation) are NOT run, exactly as the pre-registration requires when B1 fails.",
+  "figures": [
+    "cbra_boundary_residual.png"
+  ]
+}
