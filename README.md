@@ -49,6 +49,25 @@ such, not softened.
 state and verdict for all runs, including the follow-ups that extend the original
 core set.
 
+## Methodology and reproducibility
+
+**`METHODOLOGY.md`** states the protocol every result followed (pre-registration
+before execution, verdicts against fixed criteria, raw `result.json` committed,
+declared attempt budgets, audit before paper edits) and — the part that matters —
+lists the occasions on which that protocol **cost** something: a halt obeyed when
+continuing was tempting (B1), a bug fix that made the project's own negative result
+stronger (Pan-Tompkins), a pre-registered arm that failed with its rescue labelled
+post-hoc (A2), and a correction favouring this project's own method that is
+quarantined with full provenance (the Paper 3 benchmark).
+
+The library core is installable and tested in CI:
+
+```bash
+pip install -e .                    # core (numpy/scipy/matplotlib)
+pip install -e ".[data,benchmark]"  # + EDF/WFDB loaders and baseline methods
+python -m experiments.shared_lib.test_shared_lib
+```
+
 ## Setup
 
 ```bash
