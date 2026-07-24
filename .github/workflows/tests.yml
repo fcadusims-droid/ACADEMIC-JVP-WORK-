@@ -1,0 +1,51 @@
+name: tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  shared-lib:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install (library core only -- no data downloads)
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+      - name: shared_lib self-tests
+        # Reproduces the papers' own numerical claims: square-root curvature K=1/4 at
+        # N=2,3,4; log/exp round-trip and norm-preserving transport; Girsanov drift
+        # identifiability; the covariate-anchored jump guardrail; log-Euclidean and
+        # Bures-Wasserstein identities; exact Helmholtz-Hodge split.
+        run: python -m experiments.shared_lib.test_shared_lib
+      - name: Import check on every experiment module
+        run: |
+          python - <<'PY'
+          import importlib, pathlib, sys
+          bad = []
+          for p in sorted(pathlib.Path("experiments").glob("paper*/*/run.py")):
+              mod = str(p.with_suffix("")).replace("/", ".")
+              try:
+                  importlib.import_module(mod)
+              except Exception as e:
+                  # optional heavy deps (loaders, baselines) are not installed in CI
+                  if isinstance(e, ImportError):
+                      print(f"skip {mod}: optional dependency ({e})")
+                  else:
+                      bad.append((mod, repr(e)))
+          if bad:
+              for m, e in bad:
+                  print(f"FAIL {m}: {e}", file=sys.stderr)
+              sys.exit(1)
+          print("all experiment modules import cleanly")
+          PY

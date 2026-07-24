@@ -1,0 +1,54 @@
+# Methodology: How Results in This Repository Were Produced
+
+Every experimental claim in the three papers is backed by a run in `experiments/`
+that followed the same protocol. This document states the protocol, and then — more
+usefully — lists the occasions on which it **cost something**, because a
+pre-registration that never changes an outcome is decoration.
+
+## The protocol
+
+1. **Pre-registration before execution.** Each experiment has a
+   `PRE-REGISTRATION.md` written *before* the run, fixing the question, the method,
+   the success/failure thresholds, and a stopping rule. Where a threshold was later
+   found to be mathematically inadequate, it was corrected *before* the run and the
+   reason recorded in the same file.
+2. **Verdicts issued against the pre-registered criterion**, never renegotiated after
+   seeing results. Bands (e.g. "solved ≥ 10/15", "materially better ≥ 8/15") are
+   fixed in advance so a middling result cannot be narrated upward.
+3. **Raw `result.json` committed** for every run, alongside the figure. The prose
+   verdict is written to claim no more than that JSON supports, and the JSON is the
+   authority when the two are compared.
+4. **Declared attempt budget.** Each experiment states in advance how many attempts
+   it gets. When the budget is spent, the limit becomes the result rather than an
+   invitation to keep tuning.
+5. **Independent audit of the raw output before any paper edit.** Numbers are read
+   out of `result.json` and checked against the text; papers are edited only after
+   that check.
+
+`experiments/STATUS.md` is the live per-experiment record. Data (`experiments/data/`)
+is gitignored; results, code, and pre-registrations are committed.
+
+## Where the protocol cost something
+
+These are the cases that make the protocol more than decoration. Each is a place
+where following the rule produced a worse-looking result, a discarded piece of work,
+or a correction against interest.
+
+| Case | What the discipline cost |
+|---|---|
+| **B1 — the stop was obeyed** (`cbra_boundary_residual`) | The pre-registration said Trilha B halts if the boundary residual fails to beat a linear-Gaussian null in ≥ 60% of a pilot. It reached 29%. **B2 and B3 were not run**, and Paper 2's positive arm was declared not currently executable on public data — at the point where continuing would have been most tempting and least defensible. |
+| **Pan-Tompkins — a fix that strengthened a negative** (`cbra_boundary_residual`) | A fixed-threshold R-peak detector was found inadequate on I-CARE's heterogeneous ECG (55 peaks on a 118-minute record). Replacing it with an adaptive detector moved the result from a spuriously *higher* 42% to a clearer 29% — i.e. the correction made the paper's own negative *stronger*, and was applied anyway because the detector was broken. |
+| **A2 — a pre-registered arm failed, and the rescue was labelled post-hoc** (`sleep_structure_power_dissociation`) | The pre-registered power arm (within-stage high-vs-low natural power) was **not** silent, so by the registered criterion the clean dissociation did not replicate. A pure-amplitude control that *is* silent was added — and marked **post-hoc** in both the pre-registration addendum and the verdict, rather than swapped in as though it had been the plan. |
+| **Benchmark — a correction that favoured this project, quarantined** (`baseline_benchmark`) | A first run said the geodesic detector **lost** to baselines. A centre-bias leak was then found (fallbacks returning the record midpoint, which was the true answer) and fixed, reversing the result to a win. Because the correction favoured the project's own method, the verdict records the provenance in full and justifies the fix by an *outcome-independent* impossibility — power-based baselines were scoring 1.00 on a scenario where total power is constant and they cannot beat chance. |
+| **Class G — instrument defects found by self-test** (`class_g_coherence`) | Two defects in the periodicity detector (an integer-lag search blind to periods falling between samples; a refinement floor above the pre-registered threshold, misreading a pure sine as aperiodic) were caught by a self-test on signals of known character. The pre-registered threshold was **not** loosened; the numerics were tightened. |
+| **E2 → E2-Res — an open regime left open, then closed against expectation** (`high_dim_trichotomy`, `value_base_discontinuity_probe`) | E2's strong-recession cells were reported as *numerically unresolved* rather than claimed either way, and the paper said so. The follow-up then showed the apparent falsifier was a coordinate artifact — a result that helped the thesis, and which was only credible because the earlier run had declined to guess. |
+| **EEG-Recon — a headline figure corrected downward** (`eeg_reconciliation`) | The appendix's ≈12× structural effect was traced to an estimator choice and corrected to ≈3.3× under the null the paper commits to. The direction and significance replicated; the magnitude did not, and the paper now reports the smaller number. |
+
+## What this does not establish
+
+The protocol constrains how results were produced; it does not make them true. Every
+verdict is bounded by the scope stated in its own `result.json` — synthetic results
+are about instruments rather than biology, single-corpus results are about that
+corpus, and the logical results (e.g. Class G's satisfiability) say nothing about
+instantiation. The discipline is a guard against one specific failure mode — running
+until something works and reporting only that — and against nothing else.
