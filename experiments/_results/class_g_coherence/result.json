@@ -1,0 +1,576 @@
+{
+  "experiment": "class_g_coherence",
+  "question": "Are Paper 1 \u00a78.3's ten Class G conditions jointly satisfiable (non-vacuous), and do they discriminate against the paper's own named near-misses?",
+  "thresholds": {
+    "barrier_frac": 0.9,
+    "var_agency": 0.1,
+    "D_id_frac": 0.5,
+    "lambda_perp": -0.05,
+    "lambda_par_abs": 0.05,
+    "P_f": 0.05,
+    "periodic_sup_err": 1e-06,
+    "rational_q": 20,
+    "rank1_residual": 1e-06,
+    "gate_trivial_frac": 0.1,
+    "endogenous_residual": 0.1
+  },
+  "periodicity_detector_selftest": {
+    "cases": [
+      {
+        "case": "pure_sine (periodic)",
+        "expected_periodic": true,
+        "declared_periodic": true,
+        "sup_err_at_T": 1.6535744038747288e-08,
+        "correct": true
+      },
+      {
+        "case": "commensurable_3_2 (periodic)",
+        "expected_periodic": true,
+        "declared_periodic": true,
+        "sup_err_at_T": 2.790606253281588e-08,
+        "correct": true
+      },
+      {
+        "case": "golden_ratio (quasi-periodic)",
+        "expected_periodic": false,
+        "declared_periodic": false,
+        "sup_err_at_T": 0.04133199615342183,
+        "correct": true
+      },
+      {
+        "case": "constant (periodic)",
+        "expected_periodic": true,
+        "declared_periodic": true,
+        "sup_err_at_T": 0.0,
+        "correct": true
+      }
+    ],
+    "valid": true,
+    "note": "instrument validated on known-character signals before use; an integer-lag search and a coarse fractional grid were both found to misclassify genuinely periodic signals and were fixed"
+  },
+  "measured_D_c": 0.1,
+  "D_c_preservation_curve": [
+    [
+      0.005,
+      1.0
+    ],
+    [
+      0.01,
+      1.0
+    ],
+    [
+      0.02,
+      1.0
+    ],
+    [
+      0.05,
+      1.0
+    ],
+    [
+      0.1,
+      0.1
+    ],
+    [
+      0.2,
+      0.0
+    ],
+    [
+      0.5,
+      0.0
+    ],
+    [
+      1.0,
+      0.0
+    ]
+  ],
+  "batteries": {
+    "G_witness": {
+      "conditions": {
+        "1_barrier_lowered": {
+          "pass": true,
+          "barrier_no_intervention": 0.25,
+          "barrier_under_G": 0.10708118359138173,
+          "mfpt_G": 187.2975,
+          "mfpt_none": 385.85416666666663,
+          "cross_frac_G": 0.9,
+          "cross_frac_none": 0.36666666666666664
+        },
+        "2_agency_positive": {
+          "pass": true,
+          "var_agency": 0.49725072241879
+        },
+        "3_identity_subcritical": {
+          "pass": true,
+          "D_id": 0.02,
+          "D_c": 0.1,
+          "ratio": 0.19999999999999998
+        },
+        "4_transverse_contract": {
+          "pass": true,
+          "lambda_perp": -1.0050335853043293
+        },
+        "5_tangential_protected": {
+          "pass": true,
+          "lambda_par": 9.161340109976168e-11
+        },
+        "6_long_correlation": {
+          "pass": true,
+          "P_f": 0.21559986594083116
+        },
+        "7_aperiodic": {
+          "pass": true,
+          "sup_err_at_T": 0.04133237151638982,
+          "T_star": 132.02955055044916,
+          "sup_err_at_2T": 0.08259419246231563,
+          "sup_err_at_3T": 0.12371477310092778,
+          "declared_periodic": false,
+          "max_acf_secondary": 0.9908609936903492
+        },
+        "8_incommensurable": {
+          "pass": true,
+          "ratio": 1.618033988749895,
+          "best_rational": "21/13",
+          "best_err": 0.0026493733652794837
+        },
+        "9_gate_factorization": {
+          "pass": true,
+          "rank1_residual": 1.7473456177867653e-16,
+          "gate_min": 0.0009029070209406375,
+          "gate_max": 1.4526947683201306,
+          "gate_nontrivial": true,
+          "chi_min": 0.0006215393905388278,
+          "chi_max": 1.0
+        },
+        "10_not_endogenous": {
+          "pass": true,
+          "residual": 0.5982168857734534
+        }
+      },
+      "n_pass": 10,
+      "failed": [],
+      "G_admissible": true
+    },
+    "classical_damping": {
+      "conditions": {
+        "1_barrier_lowered": {
+          "pass": true,
+          "barrier_no_intervention": 0.25,
+          "barrier_under_G": 0.10708118359138173,
+          "mfpt_G": 187.2975,
+          "mfpt_none": 385.85416666666663,
+          "cross_frac_G": 0.9,
+          "cross_frac_none": 0.36666666666666664
+        },
+        "2_agency_positive": {
+          "pass": false,
+          "var_agency": 0.0
+        },
+        "3_identity_subcritical": {
+          "pass": true,
+          "D_id": 0.02,
+          "D_c": 0.1,
+          "ratio": 0.19999999999999998
+        },
+        "4_transverse_contract": {
+          "pass": true,
+          "lambda_perp": -1.0050335853043293
+        },
+        "5_tangential_protected": {
+          "pass": false,
+          "lambda_par": -1.0050335853501422
+        },
+        "6_long_correlation": {
+          "pass": false,
+          "P_f": 0.0
+        },
+        "7_aperiodic": {
+          "pass": false,
+          "sup_err_at_T": 0.0,
+          "T_star": 1.019999980375262,
+          "sup_err_at_2T": 0.0,
+          "sup_err_at_3T": 0.0,
+          "declared_periodic": true,
+          "max_acf_secondary": 0.0
+        },
+        "8_incommensurable": {
+          "pass": true,
+          "ratio": 1.618033988749895,
+          "best_rational": "21/13",
+          "best_err": 0.0026493733652794837
+        },
+        "9_gate_factorization": {
+          "pass": true,
+          "rank1_residual": 1.7473456177867653e-16,
+          "gate_min": 0.0009029070209406375,
+          "gate_max": 1.4526947683201306,
+          "gate_nontrivial": true,
+          "chi_min": 0.0006215393905388278,
+          "chi_max": 1.0
+        },
+        "10_not_endogenous": {
+          "pass": true,
+          "residual": 0.5982168857734534
+        }
+      },
+      "n_pass": 6,
+      "failed": [
+        "2_agency_positive",
+        "5_tangential_protected",
+        "6_long_correlation",
+        "7_aperiodic"
+      ],
+      "G_admissible": false
+    },
+    "ungated_forcing": {
+      "conditions": {
+        "1_barrier_lowered": {
+          "pass": true,
+          "barrier_no_intervention": 0.25,
+          "barrier_under_G": -9.062458554975894e-07,
+          "mfpt_G": 27.705500000000008,
+          "mfpt_none": 385.85416666666663,
+          "cross_frac_G": 1.0,
+          "cross_frac_none": 0.36666666666666664
+        },
+        "2_agency_positive": {
+          "pass": true,
+          "var_agency": 0.49725072241879
+        },
+        "3_identity_subcritical": {
+          "pass": false,
+          "D_id": 0.3,
+          "D_c": 0.1,
+          "ratio": 2.9999999999999996
+        },
+        "4_transverse_contract": {
+          "pass": true,
+          "lambda_perp": -1.0050335853043293
+        },
+        "5_tangential_protected": {
+          "pass": true,
+          "lambda_par": 9.161340109976168e-11
+        },
+        "6_long_correlation": {
+          "pass": true,
+          "P_f": 0.21559986594083116
+        },
+        "7_aperiodic": {
+          "pass": true,
+          "sup_err_at_T": 0.04133237151638982,
+          "T_star": 132.02955055044916,
+          "sup_err_at_2T": 0.08259419246231563,
+          "sup_err_at_3T": 0.12371477310092778,
+          "declared_periodic": false,
+          "max_acf_secondary": 0.9908609936903492
+        },
+        "8_incommensurable": {
+          "pass": true,
+          "ratio": 1.618033988749895,
+          "best_rational": "21/13",
+          "best_err": 0.0026493733652794837
+        },
+        "9_gate_factorization": {
+          "pass": false,
+          "rank1_residual": 1.416727432537152e-17,
+          "gate_min": 4.358084304960391,
+          "gate_max": 4.358084304960391,
+          "gate_nontrivial": false,
+          "chi_min": 1.0,
+          "chi_max": 1.0
+        },
+        "10_not_endogenous": {
+          "pass": true,
+          "residual": 0.5982168857734537
+        }
+      },
+      "n_pass": 8,
+      "failed": [
+        "3_identity_subcritical",
+        "9_gate_factorization"
+      ],
+      "G_admissible": false
+    },
+    "endogenous_feedback": {
+      "conditions": {
+        "1_barrier_lowered": {
+          "pass": false,
+          "barrier_no_intervention": 0.25,
+          "barrier_under_G": 0.2874999625,
+          "mfpt_G": 421.6773333333334,
+          "mfpt_none": 385.85416666666663,
+          "cross_frac_G": 0.31666666666666665,
+          "cross_frac_none": 0.36666666666666664
+        },
+        "2_agency_positive": {
+          "pass": true,
+          "var_agency": 0.49725072241879
+        },
+        "3_identity_subcritical": {
+          "pass": true,
+          "D_id": 0.02,
+          "D_c": 0.1,
+          "ratio": 0.19999999999999998
+        },
+        "4_transverse_contract": {
+          "pass": true,
+          "lambda_perp": -1.0050335853043293
+        },
+        "5_tangential_protected": {
+          "pass": true,
+          "lambda_par": 9.161340109976168e-11
+        },
+        "6_long_correlation": {
+          "pass": true,
+          "P_f": 0.21559986594083116
+        },
+        "7_aperiodic": {
+          "pass": true,
+          "sup_err_at_T": 0.04133237151638982,
+          "T_star": 132.02955055044916,
+          "sup_err_at_2T": 0.08259419246231563,
+          "sup_err_at_3T": 0.12371477310092778,
+          "declared_periodic": false,
+          "max_acf_secondary": 0.9908609936903492
+        },
+        "8_incommensurable": {
+          "pass": true,
+          "ratio": 1.618033988749895,
+          "best_rational": "21/13",
+          "best_err": 0.0026493733652794837
+        },
+        "9_gate_factorization": {
+          "pass": true,
+          "rank1_residual": 1.8137001903679053e-16,
+          "gate_min": 0.0006481659695891922,
+          "gate_max": 1.0428397289949414,
+          "gate_nontrivial": true,
+          "chi_min": 0.0006215393905388278,
+          "chi_max": 1.0
+        },
+        "10_not_endogenous": {
+          "pass": false,
+          "residual": 7.125536883712847e-16
+        }
+      },
+      "n_pass": 8,
+      "failed": [
+        "1_barrier_lowered",
+        "10_not_endogenous"
+      ],
+      "G_admissible": false
+    },
+    "coercion": {
+      "conditions": {
+        "1_barrier_lowered": {
+          "pass": true,
+          "barrier_no_intervention": 0.25,
+          "barrier_under_G": -0.001000500000250426,
+          "mfpt_G": 1.338,
+          "mfpt_none": 385.85416666666663,
+          "cross_frac_G": 1.0,
+          "cross_frac_none": 0.36666666666666664
+        },
+        "2_agency_positive": {
+          "pass": false,
+          "var_agency": 0.0
+        },
+        "3_identity_subcritical": {
+          "pass": true,
+          "D_id": 0.02,
+          "D_c": 0.1,
+          "ratio": 0.19999999999999998
+        },
+        "4_transverse_contract": {
+          "pass": true,
+          "lambda_perp": -1.0050335853043293
+        },
+        "5_tangential_protected": {
+          "pass": true,
+          "lambda_par": 9.161340109976168e-11
+        },
+        "6_long_correlation": {
+          "pass": true,
+          "P_f": 0.21559986594083116
+        },
+        "7_aperiodic": {
+          "pass": true,
+          "sup_err_at_T": 0.04133237151638982,
+          "T_star": 132.02955055044916,
+          "sup_err_at_2T": 0.08259419246231563,
+          "sup_err_at_3T": 0.12371477310092778,
+          "declared_periodic": false,
+          "max_acf_secondary": 0.9908609936903492
+        },
+        "8_incommensurable": {
+          "pass": true,
+          "ratio": 1.618033988749895,
+          "best_rational": "21/13",
+          "best_err": 0.0026493733652794837
+        },
+        "9_gate_factorization": {
+          "pass": false,
+          "rank1_residual": 1.7136405973493467e-16,
+          "gate_min": 22.760651222987626,
+          "gate_max": 22.760651222987626,
+          "gate_nontrivial": false,
+          "chi_min": 1.0,
+          "chi_max": 1.0
+        },
+        "10_not_endogenous": {
+          "pass": true,
+          "residual": 0.5982168857734534
+        }
+      },
+      "n_pass": 8,
+      "failed": [
+        "2_agency_positive",
+        "9_gate_factorization"
+      ],
+      "G_admissible": false
+    },
+    "commensurable_drive": {
+      "conditions": {
+        "1_barrier_lowered": {
+          "pass": true,
+          "barrier_no_intervention": 0.25,
+          "barrier_under_G": 0.10708118359138173,
+          "mfpt_G": 187.2975,
+          "mfpt_none": 385.85416666666663,
+          "cross_frac_G": 0.9,
+          "cross_frac_none": 0.36666666666666664
+        },
+        "2_agency_positive": {
+          "pass": true,
+          "var_agency": 0.49725072241879
+        },
+        "3_identity_subcritical": {
+          "pass": true,
+          "D_id": 0.02,
+          "D_c": 0.1,
+          "ratio": 0.19999999999999998
+        },
+        "4_transverse_contract": {
+          "pass": true,
+          "lambda_perp": -1.0050335853043293
+        },
+        "5_tangential_protected": {
+          "pass": true,
+          "lambda_par": 9.161340109976168e-11
+        },
+        "6_long_correlation": {
+          "pass": true,
+          "P_f": 0.21380099296287514
+        },
+        "7_aperiodic": {
+          "pass": false,
+          "sup_err_at_T": 2.790641748601835e-08,
+          "T_star": 25.132741205415368,
+          "sup_err_at_2T": 5.5813072638841673e-08,
+          "sup_err_at_3T": 8.370817772604099e-08,
+          "declared_periodic": true,
+          "max_acf_secondary": 0.9927597783906574
+        },
+        "8_incommensurable": {
+          "pass": false,
+          "ratio": 1.5,
+          "best_rational": "3/2",
+          "best_err": 0.0
+        },
+        "9_gate_factorization": {
+          "pass": true,
+          "rank1_residual": 1.7473456177867653e-16,
+          "gate_min": 0.0009029070209406375,
+          "gate_max": 1.4526947683201306,
+          "gate_nontrivial": true,
+          "chi_min": 0.0006215393905388278,
+          "chi_max": 1.0
+        },
+        "10_not_endogenous": {
+          "pass": true,
+          "residual": 0.5982168857734534
+        }
+      },
+      "n_pass": 8,
+      "failed": [
+        "7_aperiodic",
+        "8_incommensurable"
+      ],
+      "G_admissible": false
+    }
+  },
+  "discrimination": [
+    {
+      "control": "classical_damping",
+      "predicted_failures": [
+        2,
+        5
+      ],
+      "actual_failures": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "fails_something": true,
+      "includes_predicted": true
+    },
+    {
+      "control": "ungated_forcing",
+      "predicted_failures": [
+        9
+      ],
+      "actual_failures": [
+        3,
+        9
+      ],
+      "fails_something": true,
+      "includes_predicted": true
+    },
+    {
+      "control": "endogenous_feedback",
+      "predicted_failures": [
+        10
+      ],
+      "actual_failures": [
+        1,
+        10
+      ],
+      "fails_something": true,
+      "includes_predicted": true
+    },
+    {
+      "control": "coercion",
+      "predicted_failures": [
+        2,
+        9
+      ],
+      "actual_failures": [
+        2,
+        9
+      ],
+      "fails_something": true,
+      "includes_predicted": true
+    },
+    {
+      "control": "commensurable_drive",
+      "predicted_failures": [
+        7,
+        8
+      ],
+      "actual_failures": [
+        7,
+        8
+      ],
+      "fails_something": true,
+      "includes_predicted": true
+    }
+  ],
+  "witness_G_admissible": true,
+  "all_controls_excluded": true,
+  "all_controls_fail_a_predicted_condition": true,
+  "outcome": "COHERENT_AND_DISCRIMINATING",
+  "verdict": "CLASS G IS NON-VACUOUS AND DISCRIMINATING. An explicit stochastic system satisfies ALL TEN \u00a78.3 conditions simultaneously (barrier lowered 0.250 -> 0.107 with mean first-passage 386 -> 187; agency variance 0.50; identity diffusion 0.020 against a measured critical 0.100; lambda_perp -1.01, lambda_par +0.000; correlation power 0.22; aperiodic (sup-norm exact-period error 0.041 >> 1e-06); incommensurable drive; gate factorization exact (rank-1 residual 1.7e-16) with a gate that genuinely closes; and the external field is NOT in the endogenous span (projection residual 0.60 against a deliberately generous basis). So the ten conditions are MUTUALLY CONSISTENT: Class G is not empty by over-specification, and \u00a7\u00a78-10 stand as written, now with a satisfiability witness. The criterion also DISCRIMINATES: every near-miss in \u00a78.3's own filter table fails, and each fails a condition the table predicts -- damping fails ['2_agency_positive', '5_tangential_protected', '6_long_correlation', '7_aperiodic'], ungated forcing fails ['3_identity_subcritical', '9_gate_factorization'], endogenous feedback fails ['1_barrier_lowered', '10_not_endogenous'], coercion fails ['2_agency_positive', '9_gate_factorization'], a commensurable drive fails ['7_aperiodic', '8_incommensurable']. The conjunction therefore has real exclusionary content rather than being satisfied by everything. SCOPE: this establishes logical consistency and discrimination ONLY. It says nothing about whether any biological, psychological or theological process instantiates Class G -- precisely the question \u00a78.3 declines to answer -- and domain-emptiness in any particular substrate remains possible and untested here.",
+  "figures": [
+    "class_g_coherence.png"
+  ]
+}
