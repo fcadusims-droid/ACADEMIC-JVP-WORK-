@@ -127,4 +127,11 @@ is the verdict; no re-tuning of kernel width, recession grid, or thresholds afte
 seeing results.
 
 ## Status
-Pre-registered. Not yet run.
+Run. Verdict: **Outcome A — artifact; the trichotomy holds.** E2's strong-recession
+regime is closed in favour of the theorem. The divergence reproduces under E2's *own*
+Benettin scheme (renormalizing θ only, leaving the bump perturbation uncontrolled):
+λ climbs 217 → 1360 as dt falls, a 1/dt-like blow-up that is the signature of a
+coordinate artifact rather than of a genuine value-base discontinuity. Under a
+controlled full-state renormalization every previously divergent cell converges on a
+smooth field. E2 was right to report the regime as *numerically unresolved* rather
+than claim it either way. See `_results/value_base_discontinuity_probe/result.json`.

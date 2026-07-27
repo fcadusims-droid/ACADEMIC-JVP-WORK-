@@ -1,8 +1,8 @@
 ## Getting the code
 
 ```bash
-git clone https://github.com/fcadusims-droid/academic-jvp-work-.git
-cd academic-jvp-work-
+git clone https://github.com/fcadusims-droid/ACADEMIC-JVP-WORK-.git
+cd ACADEMIC-JVP-WORK-
 pip install -e .
 ```
 

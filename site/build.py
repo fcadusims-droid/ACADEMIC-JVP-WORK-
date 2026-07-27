@@ -40,7 +40,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT, "site")
 OUT = os.path.join(ROOT, "_site")
 RESULTS = os.path.join(ROOT, "experiments", "_results")
-REPO_URL = "https://github.com/fcadusims-droid/academic-jvp-work-"
+REPO_URL = "https://github.com/fcadusims-droid/ACADEMIC-JVP-WORK-"
 
 PAPERS = [
     {

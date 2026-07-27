@@ -122,10 +122,34 @@ def lorenz_traj(dt=0.01, n=40000, seed=0):
 
 
 # ---- diagnostics -------------------------------------------------------------
-def recurrence_fraction(traj, eps_frac=0.05, theiler=100):
-    span = np.sqrt(np.mean(np.sum((traj - traj.mean(0)) ** 2, axis=1)))
+def recurrence_fraction(traj, eps_frac=0.05, theiler=100, periodic=False):
+    """Fraction of sampled points that return to within eps of themselves.
+
+    `periodic` selects the metric, and it is not cosmetic. The four candidate
+    dynamics are integrated on the torus [0,1)^2 and explicitly wrapped, so two
+    points at 0.01 and 0.99 are 0.02 apart, not 0.98. Measuring them with a plain
+    Euclidean tree -- which an earlier version of this file did -- misses every
+    recurrence that crosses the wrap boundary and reports an undercount. The
+    Lorenz trajectory is not periodic and must keep the Euclidean metric, which is
+    why this is a parameter rather than a global change.
+
+    The reference scale is computed in the matching geometry too: on the torus the
+    centre is the *circular* mean and deviations are wrapped, since the arithmetic
+    mean of wrapped coordinates is not a point on the trajectory's spread.
+    """
+    if periodic:
+        traj = np.mod(traj, 1.0)            # cKDTree(boxsize) needs [0, 1)
+        ang = 2 * np.pi * traj
+        centre = np.mod(np.arctan2(np.sin(ang).mean(0),
+                                   np.cos(ang).mean(0)) / (2 * np.pi), 1.0)
+        dev = traj - centre
+        dev -= np.round(dev)                # wrap deviations to [-0.5, 0.5)
+        tree = cKDTree(traj, boxsize=1.0)   # native toroidal distance
+    else:
+        dev = traj - traj.mean(0)
+        tree = cKDTree(traj)
+    span = np.sqrt(np.mean(np.sum(dev ** 2, axis=1)))
     eps = eps_frac * span
-    tree = cKDTree(traj)
     n = len(traj)
     rec = 0
     for i in range(0, n, 3):   # subsample for speed
@@ -214,7 +238,7 @@ def main():
     ]
     for name, traj_fn, field in specs:
         traj = traj_fn()
-        rec = recurrence_fraction(traj)
+        rec = recurrence_fraction(traj, periodic=True)   # candidates live on the torus
         if name == "novelty_search":
             lam = np.nan  # memory-dependent (non-Markov); recurrence is the test
         else:
@@ -232,7 +256,7 @@ def main():
 
     # Lorenz: the strongest positive-entropy candidate (3D, compact attractor)
     ltraj = lorenz_traj()
-    lrec = recurrence_fraction(ltraj)
+    lrec = recurrence_fraction(ltraj)               # Lorenz is not periodic: Euclidean
     llam = lyapunov_lorenz()
     lklass = classify(llam, lrec)
     results["lorenz_chaos"] = {"lambda_max": float(llam), "recurrence_fraction": float(lrec),
@@ -252,9 +276,9 @@ def main():
                    f"trichotomy and NONE is the forbidden positive-entropy-plus-no-"
                    f"recurrence object. The strongest positive-entropy cases "
                    f"({pos_entropy or 'lorenz_chaos'}) are chaotic yet RECURRENT "
-                   f"(Lorenz lambda={llam:+.2f} but recurrence {lrec:.2f}); novelty "
+                   f"(Lorenz lambda={llam:+.2f} but recurrence {lrec:.3f}); novelty "
                    f"search on the compact torus is bounded-recurrent "
-                   f"({results['novelty_search']['recurrence_fraction']:.2f}), not "
+                   f"({results['novelty_search']['recurrence_fraction']:.3f}), not "
                    "sustained-novel. Sustained novelty without return requires a "
                    "non-compact value space -- the escape (Case 2) horn -- exactly as "
                    "the Meta-Optimization Collapse Theorem predicts. Sec 7.5/7.6 "

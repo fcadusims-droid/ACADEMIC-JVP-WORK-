@@ -70,4 +70,14 @@ eyes-open/closed one (sleep transitions are the easy case), and is reported as t
 method bound it is.
 
 ## Status
-Pre-registered. Not yet run.
+Run. Verdict: **generalises on a second real paradigm.** Structural N2-vs-REM
+discrimination passes **14/15** under the permutation null (median ratio 2.79), and
+within-trajectory **sleep-onset localization reaches 10/15** with the CUSUM detector
+(F-ratio 6/15, window-mean 6/15) against 4/15 on eyes-open/closed — so the appendix's
+earlier 5/15 limit was the *spontaneous-alpha paradigm*, not the method.
+
+Scope, stated rather than left implicit: 15 recordings from **8 subjects** (both
+nights each, so not fully independent), and every localized transition is a
+wake→N1 sleep onset — this is sleep-onset localization, not arbitrary
+stage-transition localization. Two misses are near-misses at 31 s against a ±30 s
+tolerance that was **not** relaxed. See `_results/sleep_stage_localization/result.json`.

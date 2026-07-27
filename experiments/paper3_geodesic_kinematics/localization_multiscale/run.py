@@ -232,7 +232,7 @@ def main():
 
     summary = {
         "experiment": "A_multiscale_localization",
-        "mode": "synthetic-adversarial (PhysioNet blocked by network policy)",
+        "mode": "synthetic-adversarial (PhysioNet unreachable from the execution environment at the time of this run; access was later established and the window-size finding confirmed on real Sleep-EDF in sleep_stage_localization)",
         "params": {"n_subjects": N_SUBJECTS, "n_ch": N_CH, "T": T, "d_seam": D_SEAM,
                    "excursion_size": EXCURSION_SIZE, "single_fragile": SINGLE_FRAGILE,
                    "single_large": SINGLE_LARGE, "multi_scales": MULTI_SCALES,

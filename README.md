@@ -5,7 +5,7 @@ validation suite that tests their formal and statistical claims. The suite is
 deliberately scoped by what simulation and available data *can* and *cannot*
 establish for each paper.
 
-**📄 Read it online: <https://fcadusims-droid.github.io/academic-jvp-work-/>** — the
+**📄 Read it online: <https://fcadusims-droid.github.io/ACADEMIC-JVP-WORK-/>** — the
 three papers as navigable web pages *and* as downloadable PDFs, every experiment with
 its pre-registration, verdict, figures and raw results. The site is generated from
 this repository and rebuilt on every push, so it never lags the work; see
