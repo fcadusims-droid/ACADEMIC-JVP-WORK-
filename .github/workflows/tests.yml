@@ -7,6 +7,21 @@ on:
   workflow_dispatch:
 
 jobs:
+  latex:
+    # The site re-typesets the papers from Markdown on every push to main, so a
+    # malformed formula would be published rather than merely broken locally. This
+    # runs on pull requests as well, to catch it before it reaches main.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pandoc
+        run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends pandoc
+      - name: Every formula opens, closes and is balanced
+        run: python site/check_math.py
+
   shared-lib:
     runs-on: ubuntu-latest
     strategy:

@@ -1,0 +1,94 @@
+name: site
+
+# The published site is a function of the repository, not a snapshot of it. Every
+# push to main rebuilds it: the papers are re-rendered to HTML *and* re-typeset to
+# PDF from their Markdown sources, and the experiment pages are regenerated from the
+# committed pre-registrations and result.json files. Editing a paper or adding an
+# experiment is therefore all that is needed to update the site.
+#
+# Because the PDFs are regenerated rather than stored, every push is a fresh chance
+# for LaTeX to break. The build is gated accordingly: the LaTeX check runs first, the
+# PDFs are verified after typesetting, and internal links are checked before publish.
+# Deployment happens only if all of that passes -- so a broken build leaves the
+# previously published site live rather than replacing it with a damaged one.
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never publish two builds at once; let a newer push supersede an in-flight one.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the document toolchain
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            pandoc \
+            texlive-xetex \
+            texlive-latex-recommended \
+            texlive-fonts-recommended \
+            lmodern \
+            poppler-utils
+          pandoc --version | head -1
+          xelatex --version | head -1
+
+      - name: Check the LaTeX in every paper
+        # Runs before anything is built. A malformed delimiter does not raise -- it
+        # renders the source verbatim to the reader -- so it is caught here rather
+        # than published. The checker also verifies itself against pandoc's actual
+        # output, so it cannot drift away from the renderer and keep passing.
+        run: python site/check_math.py
+
+      - name: Build the site
+        # Typesets the three PDFs, verifies each one (page count, no literal '$'
+        # reaching the page, no truncation), renders the papers and every experiment
+        # page, and checks that all internal links resolve. Non-zero exit here means
+        # nothing is deployed.
+        run: python site/build.py
+
+      - name: Report what was built
+        run: |
+          echo "### Site build" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| File | Size |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
+          for f in _site/papers/*.pdf; do
+            echo "| \`$(basename "$f")\` | $(du -h "$f" | cut -f1) |" >> "$GITHUB_STEP_SUMMARY"
+          done
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          pages=$(find _site -name '*.html' | wc -l)
+          figs=$(find _site -name '*.png' | wc -l)
+          echo "${pages} pages, ${figs} figures." >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
