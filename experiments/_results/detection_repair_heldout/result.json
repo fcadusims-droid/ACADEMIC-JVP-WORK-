@@ -1,0 +1,33 @@
+{
+  "experiment": "detection_repair_heldout",
+  "question": "Does the scale-normalised repair, chosen on Sleep-EDF, generalise to a paradigm not used to select it?",
+  "data": "PhysioNet eegmmidb R01 (eyes open) vs R02 (eyes closed), occipito-parietal alpha",
+  "n_subjects": 16,
+  "subjects": [
+    "S001",
+    "S002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012",
+    "S013",
+    "S014",
+    "S015",
+    "S016"
+  ],
+  "bar": 0.7,
+  "auc_repaired": 0.82421875,
+  "auc_old_statistic": 0.43359375,
+  "localisation_hits": 9,
+  "outcome": "GENERALISES",
+  "verdict": "THE REPAIR GENERALISES OFF THE DATA IT WAS CHOSEN ON. Applied unchanged to eyes-open/closed EEG (16 subjects) -- a paradigm not used to select it -- the scale-normalised statistic reaches AUC 0.824, clearing the pre-registered 0.7 bar. The old peak-to-median statistic scores 0.434 on the same segments, again at or below chance, so the FAILURE mechanism generalises too: a driftless random walk inflates a ratio whose denominator is the median, whatever the paradigm. The repair is therefore a fix to the STATISTIC rather than a tuning to the sleep paradigm, which is what the mechanistic diagnosis predicted and what selection on a single dataset could not establish. Localisation is 9/16 here, but THAT NUMBER SHOULD NOT BE QUOTED: this design splices two runs so the seam always falls at the segment centre, which flatters any localiser with a central prior, and it is not the appendix's eyes-open/closed protocol. Only DETECTION is under test here, and the appendix's negative localisation result stands unrevised.",
+  "figures": [
+    "detection_repair_heldout.png"
+  ]
+}
