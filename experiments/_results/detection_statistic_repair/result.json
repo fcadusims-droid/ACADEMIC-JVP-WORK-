@@ -1,0 +1,61 @@
+{
+  "experiment": "detection_statistic_repair",
+  "question": "Is the geodesic CUSUM's sub-chance detection AUC an artefact of the confidence statistic, and can it be repaired without losing localisation?",
+  "bars": {
+    "detection_auc": 0.7,
+    "localisation_hits": 9,
+    "n": 15
+  },
+  "h1_diagnosis": {
+    "real_more_tent_like": true,
+    "null_scores_higher_on_peak_over_median": true,
+    "diagnosis_holds": true,
+    "median_tent_r2_real": 0.8258667875712055,
+    "median_tent_r2_null": 0.7043717349781133,
+    "median_peak_over_median_real": 1.5286981960404085,
+    "median_peak_over_median_null": 1.7969223393822795
+  },
+  "variants": {
+    "peak_over_median (benchmark)": {
+      "detection_auc": 0.22666666666666666,
+      "localisation_hits": 10,
+      "n": 15,
+      "passes": false
+    },
+    "a_scale_normalised": {
+      "detection_auc": 0.8133333333333334,
+      "localisation_hits": 10,
+      "n": 15,
+      "passes": true
+    },
+    "b_surrogate_calibrated": {
+      "detection_auc": 0.39111111111111113,
+      "localisation_hits": 10,
+      "n": 15,
+      "passes": false
+    },
+    "c_tent_shape_r2": {
+      "detection_auc": 0.6533333333333333,
+      "localisation_hits": 10,
+      "n": 15,
+      "passes": false
+    },
+    "d_window_mean_gate": {
+      "detection_auc": 0.5777777777777777,
+      "localisation_hits": 10,
+      "n": 15,
+      "passes": false
+    }
+  },
+  "passing_repairs": [
+    "a_scale_normalised"
+  ],
+  "best_repair": "a_scale_normalised",
+  "baseline_auc": 0.22666666666666666,
+  "localisation_hits": 10,
+  "outcome": "REPAIRED",
+  "verdict": "THE DETECTION WEAKNESS IS AN ARTEFACT OF STATISTIC DESIGN, AND IT IS FIXED. The benchmark's peak-to-median statistic scored AUC 0.227 -- anti-correlated, i.e. systematically larger on segments containing NO transition. The stated diagnosis is confirmed directly: the CUSUM curve is more tent-like on real transitions (median R^2 0.826 vs 0.704) while the peak-to-median ratio is HIGHER on nulls (1.80 vs 1.53) -- exactly the mechanism predicted, since a driftless random walk sits near zero much of the time and so inflates a ratio whose denominator is the median. Repair 'a_scale_normalised' lifts detection to AUC 0.813 (bar 0.7) while localisation stays at 10/15 (bar 9/15) -- the curve is unchanged, only how it is scored. Passing repairs: ['a_scale_normalised']. The geodesic detector therefore does NOT trade detection for localisation as the benchmark suggested; it was scored with a statistic that rewarded the null. Paper 3 keeps its on-line demarcation ambition, with the detection statistic specified rather than left implicit -- and the earlier AUC is retained in the record as the reason the specification matters.",
+  "figures": [
+    "detection_statistic_repair.png"
+  ]
+}

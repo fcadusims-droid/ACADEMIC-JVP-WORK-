@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: "JVP Trilogy: geodesic kinematics, CBRA, and the cybernetic impossibility of conversion"
+message: "If you use this software or its results, please cite it as below."
+type: software
+authors:
+  - family-names: Perazzolo
+    given-names: "João Vitor"
+abstract: >-
+  Three interlinked papers and a pre-registered in-silico validation suite.
+  The software component provides SPD/density-matrix manifold geometry
+  (square-root, affine-invariant, log-Euclidean and Bures-Wasserstein metrics),
+  jump-diffusion simulation with Cartan anti-development, Helmholtz-Hodge
+  decomposition, and geodesic change-point detectors for non-stationary
+  multichannel signals on curved state spaces. Every experimental claim is
+  backed by a pre-registration written before execution and a committed raw
+  result.json; see METHODOLOGY.md.
+keywords:
+  - Riemannian geometry
+  - SPD manifolds
+  - change-point detection
+  - jump-diffusion
+  - EEG
+  - non-stationary time series
+  - pre-registration
+license: MIT
+repository-code: "https://github.com/fcadusims-droid/ACADEMIC-JVP-WORK-"
+version: 0.1.0
+date-released: "2026-07-24"

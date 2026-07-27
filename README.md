@@ -60,6 +60,9 @@ stronger (Pan-Tompkins), a pre-registered arm that failed with its rescue labell
 post-hoc (A2), and a correction favouring this project's own method that is
 quarantined with full provenance (the Paper 3 benchmark).
 
+The work is citable (`CITATION.cff`), and `RELEASING.md` documents how to mint a
+Zenodo DOI so the software can be cited independently of the papers.
+
 The library core is installable and tested in CI:
 
 ```bash
