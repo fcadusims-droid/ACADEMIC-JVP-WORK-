@@ -85,6 +85,8 @@ class Spec:
     coerce_A: float = 0.0       # state-imposing tracking gain (coercion control)
     endogenous_feedback: bool = False   # W_ext replaced by a multiple of F0's q-field
     ungated: bool = False       # chi == 1 (no receptivity gate)
+    bump_centre: float = 0.0    # where the landscape-modifying bump sits (0 = barrier top)
+    phase_noise: float = 0.0    # phase diffusion: decorrelates f without collapsing phases
 
     @property
     def omega2(self) -> float:
@@ -103,13 +105,13 @@ def dV0(q):
     return q ** 3 - q
 
 
-def h_bump(q):
-    """Bump peaked at the barrier top q=0."""
-    return np.exp(-q ** 2 / (2.0 * SIGMA_H ** 2))
+def h_bump(q, centre=0.0):
+    """Bump peaked at `centre` (0 = the barrier top, which is what lowers the barrier)."""
+    return np.exp(-(q - centre) ** 2 / (2.0 * SIGMA_H ** 2))
 
 
-def dh_bump(q):
-    return -(q / SIGMA_H ** 2) * h_bump(q)
+def dh_bump(q, centre=0.0):
+    return -((q - centre) / SIGMA_H ** 2) * h_bump(q, centre)
 
 
 def chi_gate(theta, spec: Spec):
@@ -124,7 +126,7 @@ def W_ext(q, spec: Spec):
     multiple of the system's OWN q-drift, i.e. inside <F_0>."""
     if spec.endogenous_feedback:
         return spec.B * (-dV0(q))
-    return spec.B * dh_bump(q)
+    return spec.B * dh_bump(q, spec.bump_centre)
 
 
 def applied_force_q(q, theta, spec: Spec):
@@ -159,8 +161,9 @@ def simulate(spec: Spec, seed=0, t_total=T_SIM, q0=-1.0, gate_open=False):
         dth = 0.0 if gate_open else spec.omega_theta
         q = q + dq * DT + sq * rng.standard_normal()
         r = r + dr * DT + sr * rng.standard_normal()
-        p1 = p1 + dp1 * DT
-        p2 = p2 + dp2 * DT
+        sp = np.sqrt(2 * spec.phase_noise * DT)
+        p1 = p1 + dp1 * DT + (sp * rng.standard_normal() if sp > 0 else 0.0)
+        p2 = p2 + dp2 * DT + (sp * rng.standard_normal() if sp > 0 else 0.0)
         a = a + da * DT + sa * rng.standard_normal()
         theta = theta + dth * DT
         Q[i], R[i], A[i], TH[i] = q, r, a, theta

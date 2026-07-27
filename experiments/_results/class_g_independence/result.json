@@ -1,0 +1,284 @@
+{
+  "experiment": "class_g_independence",
+  "question": "Are \u00a78.3's ten Class G conditions independent, or does the filter have lower effective dimensionality?",
+  "motivation": "3 of 5 near-misses in class_g_coherence failed MORE conditions than the filter table predicts, implying coupling.",
+  "co_failure_matrix": [
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "condition_names": [
+    "1_barrier_lowered",
+    "2_agency_positive",
+    "3_identity_subcritical",
+    "4_transverse_contract",
+    "5_tangential_protected",
+    "6_long_correlation",
+    "7_aperiodic",
+    "8_incommensurable",
+    "9_gate_factorization",
+    "10_not_endogenous"
+  ],
+  "per_target": {
+    "1": {
+      "target": 1,
+      "broken": [
+        1
+      ],
+      "hit_target": true,
+      "collateral": [],
+      "n_pass": 9
+    },
+    "2": {
+      "target": 2,
+      "broken": [
+        2
+      ],
+      "hit_target": true,
+      "collateral": [],
+      "n_pass": 9
+    },
+    "3": {
+      "target": 3,
+      "broken": [
+        3
+      ],
+      "hit_target": true,
+      "collateral": [],
+      "n_pass": 9
+    },
+    "4": {
+      "target": 4,
+      "broken": [
+        4
+      ],
+      "hit_target": true,
+      "collateral": [],
+      "n_pass": 9
+    },
+    "5": {
+      "target": 5,
+      "broken": [
+        5,
+        6,
+        7
+      ],
+      "hit_target": true,
+      "collateral": [
+        6,
+        7
+      ],
+      "n_pass": 7
+    },
+    "6": {
+      "target": 6,
+      "broken": [
+        6
+      ],
+      "hit_target": true,
+      "collateral": [],
+      "n_pass": 9
+    },
+    "7": {
+      "target": 7,
+      "broken": [
+        7,
+        8
+      ],
+      "hit_target": true,
+      "collateral": [
+        8
+      ],
+      "n_pass": 8
+    },
+    "8": {
+      "target": 8,
+      "broken": [
+        7,
+        8
+      ],
+      "hit_target": true,
+      "collateral": [
+        7
+      ],
+      "n_pass": 8
+    },
+    "9": {
+      "target": 9,
+      "broken": [
+        9
+      ],
+      "hit_target": true,
+      "collateral": [],
+      "n_pass": 9
+    },
+    "10": {
+      "target": 10,
+      "broken": [
+        1,
+        10
+      ],
+      "hit_target": true,
+      "collateral": [
+        1
+      ],
+      "n_pass": 8
+    }
+  },
+  "breakable_in_isolation": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    9
+  ],
+  "never_isolated": [
+    5,
+    7,
+    8,
+    10
+  ],
+  "implications_i_entails_j": [
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      10,
+      1
+    ]
+  ],
+  "co_failure_clusters": [],
+  "distinct_failure_columns": 10,
+  "effective_dimensionality": 6,
+  "verdict": "THE TEN CONDITIONS ARE NOT INDEPENDENT, AND THE EFFECTIVE DIMENSIONALITY IS 6, NOT TEN. Perturbing the witness to break each condition in turn, 6 of the ten ([1, 2, 3, 4, 6, 9]) can be broken in ISOLATION -- a surgical perturbation that violates that condition and no other. The remaining 4 ([5, 7, 8, 10]) cannot: every perturbation reaching them takes at least one other condition with it. The measured implications are [(5, 6), (5, 7), (8, 7), (10, 1)], and the conditions sharing an identical failure signature are none. Two of the dependencies are LOGICAL rather than artefacts of this construction and would hold for any witness: an incommensurable drive is aperiodic by definition, so condition 8 entails condition 7 and no perturbation can separate them; and collapsing the tangential spectrum (condition 5) necessarily destroys the long-time correlation power (6) and renders the identity observable trivially periodic (7), because a collapsed phase is a constant. The others are properties of this particular system and might separate in another. CONSEQUENCE FOR THE PAPER, stated rather than left for a reviewer: \u00a78.3's conjunction should not be read as ten independent hurdles. It is a filter of effective dimensionality about 6, in which several conditions are entailed by others, and its discriminating power is correspondingly smaller than the count of ten suggests. This does not touch the coherence result -- the conjunction remains satisfiable, and every near-miss remains excluded -- but the rhetorical force of 'ten conditions' overstates the independent content, and the paper now says so.",
+  "figures": [
+    "class_g_independence.png"
+  ]
+}

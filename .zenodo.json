@@ -1,0 +1,12 @@
+{
+  "title": "JVP Trilogy: geodesic kinematics, CBRA, and the cybernetic impossibility of conversion",
+  "description": "Three interlinked papers and a pre-registered in-silico validation suite. Software: SPD/density-matrix manifold geometry (square-root, affine-invariant, log-Euclidean, Bures-Wasserstein), jump-diffusion simulation with Cartan anti-development, Helmholtz-Hodge decomposition, and geodesic change-point detectors for non-stationary multichannel signals on curved state spaces. Every experimental claim is backed by a pre-registration written before execution and a committed raw result.json (see METHODOLOGY.md).",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [{ "name": "Perazzolo, João Vitor" }],
+  "keywords": [
+    "Riemannian geometry", "SPD manifolds", "change-point detection",
+    "jump-diffusion", "EEG", "non-stationary time series", "pre-registration"
+  ],
+  "access_right": "open"
+}
