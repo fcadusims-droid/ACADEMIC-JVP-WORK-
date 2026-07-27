@@ -108,4 +108,15 @@ results. A negative (metric-independent-limit) result is as informative as a
 positive one and narrows the solution space for Paper 3's Sec 6.4 confounds.
 
 ## Status
-Pre-registered. Not yet run.
+Run. Verdict: **RESOLVED by a base-metric change.** The log-Euclidean (flat, zero
+holonomy) base metric lifts the worst weak-jump × strong-drift corner from AUC 0.65
+(square-root, path-wise) to **0.96**, clearing the 0.85 bar, while keeping jump power
+on genuine strong collapses at 0.90 (bar 0.80). Because the flat metric has zero
+holonomy, a strong geodesic drift can no longer manufacture the pseudo-jump that
+fooled the square-root statistic. Exp D's corner is therefore a **square-root
+connection limit**, not a limit of the method as such.
+
+One pre-registered validity guard tripped and was obeyed: base-point linearization
+removes holonomy for *every* metric, which would have made the comparison vacuous, so
+the path-wise anti-development was used instead. See
+`_results/base_metric_corner/result.json`.

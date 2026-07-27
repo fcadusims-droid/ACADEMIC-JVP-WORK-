@@ -102,8 +102,8 @@ Files: `drift_jump_confusion_sweep/result.json`,
 ## Experiment A — Multi-scale localization (Paper 3)
 **Verdict: criterion met (2/15 → 15/15), but the operative fix is WINDOW SIZE, not the multiscale bank.**
 
-PhysioNet is blocked by the environment network policy, so this ran in the
-pre-registered synthetic-adversarial mode: a persistent structural seam embedded
+PhysioNet was unreachable from the execution environment *at the time of this run*,
+so it ran in the pre-registered synthetic-adversarial mode: a persistent structural seam embedded
 in spontaneous fluctuations with sharp transient excursions larger than the seam.
 
 | detector | hits (\|err\| ≤ 15) | median err |
@@ -158,7 +158,8 @@ Files: `localization_priors/result.json`, `localization_priors/smoothing_sweep.p
 ## Experiment C — Method vs paradigm (Paper 3)
 **Verdict: METHOD ROBUST via PERSISTENCE (with one residual open problem).**
 
-Sleep-EDF is also blocked by network policy, so this sweeps two axes synthetically:
+Sleep-EDF was likewise unreachable at the time of this run, so it sweeps two axes
+synthetically:
 transition/spontaneous-fluctuation *ratio* (paradigm strength) and fluctuation
 *persistence* (transient → sustained bursts).
 
@@ -188,7 +189,12 @@ window** — because a transition is a *persistent* regime change while spontane
 excursions are *transient*. The multiscale bank (A) adds nothing over a single
 large window; covariate smoothing (B) actively hurts. The honest fix for Paper 3
 is: use a large window and state a scope bound for spontaneous bursts longer than
-that window. **All synthetic (PhysioNet blocked); real-EEG confirmation outstanding.**
+that window. **All synthetic.** The real-EEG confirmation this called for is no longer outstanding:
+PhysioNet access was later established, and `sleep_stage_localization` localizes
+wake→sleep-onset in **10/15** Sleep-EDF recordings with the same large-window CUSUM,
+with `log_euclidean_real_eeg` and `baseline_benchmark` on the same corpus. The
+synthetic finding above — that the fix is window size — is what those runs then
+confirmed on real data.
 
 Files: `cross_dataset/result.json`, `cross_dataset/ratio_sweep.png`.
 

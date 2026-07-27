@@ -7,7 +7,8 @@ adversarial *for* the method. On a paradigm where the transition is structurally
 STRONGER than the background (sleep-stage transitions; anesthesia
 induction/emergence), the method should localize well.
 
-PhysioNet Sleep-EDF is also blocked by the environment network policy (see
+PhysioNet Sleep-EDF was unreachable from the execution environment when this was
+run (see
 DATA.md), so this reproduces the question synthetically: sweep the
 **transition-to-spontaneous-fluctuation ratio** and measure localization for both
 the fragile pointwise detector and the persistence-sensitive window-mean detector.
@@ -194,7 +195,7 @@ def main():
 
     summary = {
         "experiment": "C_cross_dataset",
-        "mode": "synthetic (Sleep-EDF blocked by network policy) -- ratio sweep proxy",
+        "mode": "synthetic (Sleep-EDF unreachable at the time of this run; access was later established -- see sleep_stage_localization for the real-data confirmation) -- ratio sweep proxy",
         "params": {"n_subjects": N_SUBJECTS, "n_ch": N_CH, "T": T,
                    "excursion_size": EXCURSION_SIZE, "ratios": RATIOS,
                    "fragile_w": FRAGILE_W, "large_w": LARGE_W, "tol": TOL},

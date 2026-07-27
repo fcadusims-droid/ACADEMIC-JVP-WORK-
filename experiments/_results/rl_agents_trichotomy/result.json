@@ -3,7 +3,7 @@
   "candidates": {
     "gradient": {
       "lambda_max": -39.44072584319212,
-      "recurrence_fraction": 0.9976001199940003,
+      "recurrence_fraction": 0.9994000299985001,
       "hodge": {
         "gradient": 0.9999999999999997,
         "rotational": 7.512560428692373e-32,
@@ -45,7 +45,7 @@
     }
   },
   "preregistered_falsifier": "compact-set dynamics with positive entropy AND no recurrence",
-  "verdict": "TRICHOTOMY HOLDS: every compact-set candidate lands in the trichotomy and NONE is the forbidden positive-entropy-plus-no-recurrence object. The strongest positive-entropy cases (['lorenz_chaos']) are chaotic yet RECURRENT (Lorenz lambda=+0.88 but recurrence 1.00); novelty search on the compact torus is bounded-recurrent (1.00), not sustained-novel. Sustained novelty without return requires a non-compact value space -- the escape (Case 2) horn -- exactly as the Meta-Optimization Collapse Theorem predicts. Sec 7.5/7.6 survives its strongest adversarial candidates.",
+  "verdict": "TRICHOTOMY HOLDS: every compact-set candidate lands in the trichotomy and NONE is the forbidden positive-entropy-plus-no-recurrence object. The strongest positive-entropy cases (['lorenz_chaos']) are chaotic yet RECURRENT (Lorenz lambda=+0.88 but recurrence 0.995); novelty search on the compact torus is bounded-recurrent (1.000), not sustained-novel. Sustained novelty without return requires a non-compact value space -- the escape (Case 2) horn -- exactly as the Meta-Optimization Collapse Theorem predicts. Sec 7.5/7.6 survives its strongest adversarial candidates.",
   "figures": [
     "trichotomy.png"
   ]

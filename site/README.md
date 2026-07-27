@@ -1,6 +1,6 @@
 # The published site
 
-The site at **https://fcadusims-droid.github.io/academic-jvp-work-/** is generated
+The site at **https://fcadusims-droid.github.io/ACADEMIC-JVP-WORK-/** is generated
 from this repository. Nothing in it is hand-maintained HTML, and no build output is
 committed — editing a paper or adding an experiment is all that is required to change
 what the site shows.
