@@ -108,18 +108,29 @@ def main():
             breakers = [k for k in sorted(specs) if M[k - 1, i - 1] == 1]
             if breakers and all(M[k - 1, j - 1] == 1 for k in breakers):
                 implications.append((i, j))
-    # co-failure clusters: conditions with identical failure columns
+    # Two different things can be called a "cluster", and conflating them is an error
+    # an earlier version of this file made -- it reported only the column version while
+    # the natural reading of "conditions with an identical failure signature" is the row
+    # version. Both are computed and reported separately.
+    #  * COLUMN clusters: conditions broken by an identical SET OF TARGETS.
+    #  * ROW clusters: targets producing an identical SET OF BROKEN CONDITIONS -- i.e.
+    #    conditions that no perturbation in this battery can separate.
     cols = {}
     for j in range(1, 11):
-        key = tuple(M[:, j - 1])
-        cols.setdefault(key, []).append(j)
-    clusters = [v for v in cols.values() if len(v) > 1]
+        cols.setdefault(tuple(M[:, j - 1]), []).append(j)
+    col_clusters = [v for v in cols.values() if len(v) > 1]
+    rws = {}
+    for i in range(1, 11):
+        rws.setdefault(tuple(M[i - 1, :]), []).append(i)
+    row_clusters = [v for v in rws.values() if len(v) > 1]
     n_distinct = len(cols)
+    n_distinct_rows = len(rws)
 
-    print(f"\n  breakable in isolation : {isolated}")
-    print(f"  never isolated         : {never_isolated}")
-    print(f"  co-failure clusters    : {clusters}")
-    print(f"  distinct failure columns: {n_distinct} of 10")
+    print(f"\n  breakable in isolation      : {isolated}")
+    print(f"  never isolated              : {never_isolated}")
+    print(f"  column clusters (same breakers) : {col_clusters}")
+    print(f"  row clusters (inseparable)      : {row_clusters}")
+    print(f"  distinct failure patterns   : {n_distinct_rows} rows / {n_distinct} columns")
 
     verdict = (
         f"THE TEN CONDITIONS ARE NOT INDEPENDENT, AND THE EFFECTIVE DIMENSIONALITY IS "
@@ -129,7 +140,16 @@ def main():
         f"{len(never_isolated)} ({never_isolated}) cannot: every perturbation reaching them "
         f"takes at least one other condition with it. The measured implications are "
         f"{implications if implications else 'none'}, and the conditions sharing an "
-        f"identical failure signature are {clusters if clusters else 'none'}. "
+        f"identical failure signature are {row_clusters if row_clusters else 'none'} -- "
+        f"conditions 7 and 8 cannot be separated by any perturbation in this battery, "
+        f"since the only way to break 7 is to make the drive commensurable, which breaks "
+        f"8 as well. WHICH METRIC IS BEING QUOTED MATTERS and is stated rather than left "
+        f"implicit: 'effective dimensionality {len(isolated)}' counts conditions breakable "
+        f"IN ISOLATION, which is the conservative reading and the one least flattering to "
+        f"the paper. Counting DISTINCT FAILURE PATTERNS instead gives {n_distinct_rows} "
+        f"(only 7 and 8 coincide), and counting distinct breaker-sets per condition gives "
+        f"{n_distinct}. A reader computing this differently will land between "
+        f"{len(isolated)} and {n_distinct}; the claim defended here is the lower bound. "
         f"Two of the dependencies are LOGICAL rather than artefacts of this construction "
         f"and would hold for any witness: an incommensurable drive is aperiodic by "
         f"definition, so condition 8 entails condition 7 and no perturbation can separate "
@@ -174,9 +194,12 @@ def main():
         "breakable_in_isolation": isolated,
         "never_isolated": never_isolated,
         "implications_i_entails_j": implications,
-        "co_failure_clusters": clusters,
+        "co_failure_clusters_by_column": col_clusters,
+        "co_failure_clusters_by_row_inseparable": row_clusters,
+        "distinct_failure_patterns_rows": n_distinct_rows,
         "distinct_failure_columns": n_distinct,
         "effective_dimensionality": len(isolated),
+        "effective_dimensionality_metric": "count of conditions breakable IN ISOLATION (conservative); distinct failure patterns gives a larger number, reported alongside",
         "verdict": verdict,
         "figures": ["class_g_independence.png"],
     }

@@ -10,3 +10,7 @@ experiments/**/data/
 data/
 
 # Keep _results/ committed (small JSON + figures are the experimental record).
+
+# Generated site — rebuilt from the repository by .github/workflows/pages.yml on
+# every push, so the build output is never committed.
+_site/
