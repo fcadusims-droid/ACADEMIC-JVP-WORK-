@@ -34,9 +34,15 @@ quietly fixed:
       blow-up therefore scored as "open";
   (d) a finite-time blow-up left too few samples for the recurrence estimator, which
       returned NaN and was scored as "fails non-recurrence" -- but a trajectory that
-      leaves in finite time and never returns is non-recurrent BY CONSTRUCTION.
-(c) and (d) both biased toward the paper's own conclusion. All four are fixed below,
-and a self-test on signals of known character now gates the run.
+      leaves in finite time and never returns is non-recurrent BY CONSTRUCTION;
+  (e) the fix for (d) was then applied too widely: crossing the log-radius measurement
+      bound was also treated as a finite-time blow-up, so candidates whose MEASURED
+      recurrence was 0.98 were overridden to "non-recurrent". That produced the claim
+      that escaping candidates achieve escape, openness and non-recurrence at once --
+      which was false, and had already reached Paper 1 before it was caught. Only a
+      genuine divergence to non-finite values now earns the override.
+(c) and (d) biased toward the paper's conclusion; (e) biased against it. All are fixed
+below, and a self-test on signals of known character gates the run.
 
 Usage:
     python -m experiments.paper1_control_trilemma.escape_endogeneity.run
@@ -228,8 +234,14 @@ def integrate(spec, n=N_STEPS, dt=DT):
         if spec["logr"] is not None:
             lr += s[spec["logr"]]
         if lr > LOG_ESCAPE_BOUND:
+            # Crossing the measurement bound is an ASYMPTOTIC escape, not a
+            # finite-time singularity. An earlier version set finite_time here, which
+            # then triggered the "non-recurrent by construction" override and marked
+            # trajectories whose measured recurrence was 0.98 as non-recurrent. Only a
+            # genuine blow-up to non-finite values earns that override; a bound
+            # crossing leaves a perfectly good trajectory on which recurrence is
+            # measured normally.
             escaped = True
-            finite_time = i < n - 1
             steps = i + 1
             traj = traj[:steps]
             break
@@ -495,15 +507,21 @@ def main():
             rec = recurrence_fraction(obs)
             # Defect (d): a finite-time escape never returns. That is non-recurrence by
             # construction, not an estimator NaN to be scored as a failure.
-            if finite_time:
-                non_rec = True
-                rec_note = "finite-time escape: non-recurrent by construction"
-            elif np.isfinite(rec):
+            # No overrides. Recurrence is MEASURED on the observable, and where it
+            # cannot be measured it is reported as unmeasured rather than scored.
+            # Both earlier attempts to be clever here produced false labels: scoring
+            # an unmeasurable case as "recurrent" flattered the paper, and treating a
+            # bound crossing as a finite-time blow-up flattered the opposite side by
+            # overriding a measured 0.98 to "non-recurrent".
+            if np.isfinite(rec):
                 non_rec, rec_note = bool(rec < THR_RECURRENT), ""
             else:
-                non_rec, rec_note = False, "estimator returned NaN (too few samples)"
+                non_rec = None
+                rec_note = ("UNMEASURED: too few samples before divergence; scored "
+                            "neither pass nor fail")
             per = persistence(obs, rng)
-            all4 = bool(escaped and open_ok and not collapsed and non_rec and per["pass"])
+            all4 = bool(escaped and open_ok and not collapsed
+                        and non_rec is True and per["pass"])
             entry["contracts"][cname] = {
                 "late_variance": var, "collapsed": bool(collapsed),
                 "recurrence_fraction": None if not np.isfinite(rec) else float(rec),
@@ -594,13 +612,23 @@ def main():
                     "keeps its correlation structure keeps returning. ")
         if outcome == "SUPPORTS_E2_BUT_UNATTRIBUTABLE":
             verdict += (
-                "WHAT THIS DESIGN CANNOT SETTLE, stated plainly rather than left for a "
-                "reviewer. The escaping candidates DO achieve escape, openness AND "
-                "non-recurrence simultaneously -- Poincare recurrence is not what stops "
-                "them, and that much is a real finding: in the escaping regime §7.5's "
-                "disposal of the horn rests entirely on the PERSISTENCE condition, not "
-                "on the trichotomy. But the persistence failure cannot be charged to "
-                "escape, because the bounded control fails it too. The reason is "
+                "A CLAIM THIS EXPERIMENT ORIGINALLY MADE AND NOW WITHDRAWS. An earlier "
+                "version reported that the escaping candidates achieve escape, openness "
+                "AND non-recurrence simultaneously, and concluded that Poincare "
+                "recurrence is not what stops them in the escaping regime. That was an "
+                "artefact: crossing the log-radius MEASUREMENT bound was being treated "
+                "as a finite-time blow-up, which triggered a 'non-recurrent by "
+                "construction' override on trajectories whose MEASURED recurrence was "
+                "0.98. With the override removed, the escaping candidates are "
+                "RECURRENT in the identity observable (escaping_chaos 0.98, "
+                "freezing_escape 0.96) -- because the contract sees the DIRECTION, and "
+                "the direction stays bounded however far the radius runs. The "
+                "withdrawn claim had already reached Paper 1 and has been reversed "
+                "there. The correct statement is the opposite and is better for the "
+                "paper: escape does not purchase non-return in the contract-designated "
+                "observable. WHAT THIS DESIGN STILL CANNOT SETTLE. The persistence "
+                "failure cannot be charged to escape, because the bounded control "
+                "fails it too. The reason is "
                 "structural: the only openness available to these candidates is CHAOS, "
                 "and chaos destroys correlation power whether or not the trajectory "
                 "escapes. Worse, the operationalisation itself is contestable -- "
@@ -684,7 +712,12 @@ def main():
             "openness read from a full-state Lyapunov exponent, positive under pure "
             "uniform expansion (biased toward the paper)",
             "finite-time blow-up scored as failing non-recurrence via an estimator NaN "
-            "(biased toward the paper)"],
+            "(biased toward the paper)",
+            "the fix for the above applied too widely: crossing the log-radius "
+            "measurement bound was treated as a finite-time blow-up, overriding "
+            "measured recurrence of 0.98 to 'non-recurrent' and producing a false "
+            "claim that escaping candidates are open AND non-recurrent (biased "
+            "against the paper; had already reached Paper 1 before being caught)"],
         "candidates": results,
         "attribution": {
             "control_bounded_lorenz_persists": bool(

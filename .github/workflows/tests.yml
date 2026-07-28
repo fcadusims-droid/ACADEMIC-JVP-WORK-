@@ -22,6 +22,40 @@ jobs:
       - name: Every formula opens, closes and is balanced
         run: python site/check_math.py
 
+  lean:
+    # The formal files claim to compile with no `sorry`. That claim is worth exactly
+    # as much as the machine that checks it, so it is checked here rather than
+    # asserted in a README — the authoring environment has no Lean toolchain and
+    # cannot reach the toolchain host, so CI is the only place the claim can be
+    # verified at all.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lean 4 via elan
+        run: |
+          curl -sSf -o elan-init.sh https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh
+          sh elan-init.sh -y --default-toolchain leanprover/lean4:v4.9.0
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Compile the formal development
+        run: |
+          lean --version
+          fail=0
+          for f in formal/*.lean; do
+            echo "::group::$f"
+            if lean "$f"; then echo "OK $f"; else echo "FAIL $f"; fail=1; fi
+            echo "::endgroup::"
+          done
+          exit $fail
+      - name: No `sorry` anywhere in the formal development
+        # A file that compiles while containing `sorry` proves nothing; grep is a
+        # cheap guard against the failure mode a green build would otherwise hide.
+        run: |
+          if grep -rn '\bsorry\b' formal/*.lean; then
+            echo "found 'sorry' in the formal development" >&2
+            exit 1
+          fi
+          echo "no sorry found"
+
   shared-lib:
     runs-on: ubuntu-latest
     strategy:

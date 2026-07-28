@@ -181,6 +181,15 @@ power. The paper uses both senses and they come apart. The case most likely to e
 *and* persist — aperiodic and correlation-retaining without being chaotic — is exactly
 what this battery lacks.
 
+**A claim this experiment made and has since withdrawn.** An earlier version reported
+that the escaping candidates achieve escape, openness *and* non-recurrence at once, and
+concluded that recurrence is not what stops them. That was an artefact: crossing the
+log-radius *measurement* bound was treated as a finite-time blow-up, triggering a
+"non-recurrent by construction" override on trajectories whose measured recurrence was
+$0.98$. With the override removed the escaping candidates are **recurrent**, and the
+follow-up experiment `escape_persistence_decider` shows why in general. The withdrawn
+claim had already reached Paper 1 and has been reversed there.
+
 Adding that candidate now would be fitting a construction to a result, which the
 stopping rule above forbids. It is registered as the required follow-up instead. See
 `_results/escape_endogeneity/result.json`.
