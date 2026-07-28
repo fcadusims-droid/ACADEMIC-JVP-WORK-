@@ -1,0 +1,253 @@
+{
+  "experiment": "abc_real_eeg",
+  "question": "Do experiments A (window size vs multiscale) and an analogue of B (smoothing) replicate on real Sleep-EDF?",
+  "data": "Sleep-EDF Expanded, the same recordings and sleep-onset transitions as sleep_stage_localization (A1)",
+  "params": {
+    "short_windows": [
+      5,
+      10
+    ],
+    "large_window": 40,
+    "bank": [
+      5,
+      10,
+      20,
+      40
+    ],
+    "smooth_k": 5,
+    "tol_sec": 30.0,
+    "margin_window_size": 3,
+    "margin_multiscale": 2
+  },
+  "n_recordings": 16,
+  "per_arm": {
+    "short_w5": {
+      "hits": 2,
+      "n": 16,
+      "median_err_s": 63.5
+    },
+    "short_w10": {
+      "hits": 4,
+      "n": 16,
+      "median_err_s": 50.5
+    },
+    "large_w40": {
+      "hits": 7,
+      "n": 16,
+      "median_err_s": 33.5
+    },
+    "multiscale": {
+      "hits": 6,
+      "n": 16,
+      "median_err_s": 36.0
+    },
+    "smoothed_w40": {
+      "hits": 7,
+      "n": 16,
+      "median_err_s": 31.0
+    }
+  },
+  "per_record": [
+    {
+      "record": "SC4001E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 2,
+        "short_w10": 2,
+        "large_w40": 12,
+        "multiscale": 2,
+        "smoothed_w40": 13
+      }
+    },
+    {
+      "record": "SC4002E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 50,
+        "short_w10": 32,
+        "large_w40": 12,
+        "multiscale": 12,
+        "smoothed_w40": 12
+      }
+    },
+    {
+      "record": "SC4011E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 32,
+        "short_w10": 32,
+        "large_w40": 30,
+        "multiscale": 30,
+        "smoothed_w40": 31
+      }
+    },
+    {
+      "record": "SC4012E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 67,
+        "short_w10": 76,
+        "large_w40": 36,
+        "multiscale": 36,
+        "smoothed_w40": 35
+      }
+    },
+    {
+      "record": "SC4021E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 79,
+        "short_w10": 72,
+        "large_w40": 31,
+        "multiscale": 31,
+        "smoothed_w40": 31
+      }
+    },
+    {
+      "record": "SC4022E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 36,
+        "short_w10": 16,
+        "large_w40": 16,
+        "multiscale": 36,
+        "smoothed_w40": 18
+      }
+    },
+    {
+      "record": "SC4031E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 39,
+        "short_w10": 39,
+        "large_w40": 39,
+        "multiscale": 39,
+        "smoothed_w40": 38
+      }
+    },
+    {
+      "record": "SC4032E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 69,
+        "short_w10": 60,
+        "large_w40": 37,
+        "multiscale": 37,
+        "smoothed_w40": 37
+      }
+    },
+    {
+      "record": "SC4041E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 67,
+        "short_w10": 68,
+        "large_w40": 29,
+        "multiscale": 29,
+        "smoothed_w40": 29
+      }
+    },
+    {
+      "record": "SC4042E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 61,
+        "short_w10": 22,
+        "large_w40": 22,
+        "multiscale": 22,
+        "smoothed_w40": 21
+      }
+    },
+    {
+      "record": "SC4051E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 82,
+        "short_w10": 70,
+        "large_w40": 49,
+        "multiscale": 49,
+        "smoothed_w40": 47
+      }
+    },
+    {
+      "record": "SC4052E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 83,
+        "short_w10": 66,
+        "large_w40": 36,
+        "multiscale": 36,
+        "smoothed_w40": 38
+      }
+    },
+    {
+      "record": "SC4061E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 51,
+        "short_w10": 78,
+        "large_w40": 36,
+        "multiscale": 36,
+        "smoothed_w40": 37
+      }
+    },
+    {
+      "record": "SC4062E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 78,
+        "short_w10": 41,
+        "large_w40": 41,
+        "multiscale": 41,
+        "smoothed_w40": 42
+      }
+    },
+    {
+      "record": "SC4071E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 66,
+        "short_w10": 67,
+        "large_w40": 49,
+        "multiscale": 49,
+        "smoothed_w40": 30
+      }
+    },
+    {
+      "record": "SC4072E0-PSG.edf",
+      "from": "W",
+      "to": "N1",
+      "errors_windows": {
+        "short_w5": 25,
+        "short_w10": 1,
+        "large_w40": 1,
+        "multiscale": 1,
+        "smoothed_w40": 2
+      }
+    }
+  ],
+  "window_size_matters": true,
+  "multiscale_adds": false,
+  "smoothing_helps": false,
+  "scope_note": "Analogue of B, not a replication of B: B smooths the predictability covariate inside the jump-anchoring pipeline. Experiment C is not addressed.",
+  "outcome": "A_REPLICATES",
+  "verdict": "A REPLICATES ON REAL EEG. The large window beats the best short window 7/16 vs 4/16, clearing the pre-registered 3-hit margin, and the multiscale bank returns 6/16 -- within a hit of the single large window rather than beating it. A's claim was that window size is the operative fix and the multiscale machinery adds nothing; on real data both halves hold. THE MAGNITUDE DOES NOT TRANSFER, AND THAT IS THE MORE USEFUL HALF OF THIS RESULT. Synthetically, A moved localization from 2/15 to a perfect 15/15; on real recordings the same change moves it from 4/16 to 7/16 -- under half. The DIRECTION of A's finding replicates and its RECOMMENDATION stands, but the synthetic 15/15 gave an impression of a solved problem that real EEG does not support, exactly as the appendix's 12x structural effect had to be corrected to 3.3x. The appendix should quote the real number. WHY THIS WAS RUN. A, B and C were synthetic because PhysioNet was unreachable when they were executed. A1 later reached 10/15 on real Sleep-EDF but used one fixed large window and never compared scales, so A's actual claim -- window size rather than multiscale -- had never been tested on real data, and the STATUS note declaring real-EEG confirmation no longer outstanding overstated what A1 had done. That note is corrected. B'S ANALOGUE: smoothing the break curve gives 7/16 against the unsmoothed 7/16, so smoothing does not help, consistent with B's synthetic finding that the useful discriminator is persistence rather than smoothing. SCOPE, stated rather than left implicit: this is an ANALOGUE of B, not a replication of it. B concerns smoothing the predictability covariate inside the jump-anchoring pipeline; smoothing a break curve is a different operation on a different object, so B itself remains synthetic-only. Experiment C is not addressed here at all -- its content is robustness across paradigm strength and fluctuation persistence, which needs corpora varying along those axes rather than a second analysis of one corpus.",
+  "figures": [
+    "abc_real_eeg.png"
+  ]
+}
