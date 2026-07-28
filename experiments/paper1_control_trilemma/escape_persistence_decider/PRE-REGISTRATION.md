@@ -110,7 +110,7 @@ such measurement:
 - **aperiodicity** — the exact-period test from `class_g_coherence` (Brent-refined
   fractional-lag search), at the same $10^{-6}$ bar;
 - **incommensurability** — the frequency ratio's distance to the nearest rational
-  with denominator $\le 50$, at the same bar `class_g_coherence` uses.
+  with denominator $\le 20$, which is the bar `class_g_coherence` uses (`THR_RATIONAL_Q`, imported rather than restated).
 
 Both contracts from §5.4 are evaluated: $I_{\text{dir}}$ (scale-free, ordinal) and
 $I_{\text{raw}}$ (true scale, cardinal).
