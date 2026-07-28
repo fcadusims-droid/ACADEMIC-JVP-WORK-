@@ -51,6 +51,9 @@ such, not softened.
   (`data/`, e.g. PhysioNet EEG/ECG) is **not** committed; see
   `paper3_geodesic_kinematics/DATA.md`.
 
+**[`RESULTS.md`](RESULTS.md) summarises what all 33 experiments found**, organised by
+paper, with the open questions at the end.
+
 **`experiments/STATUS.md` is the authoritative live status** — the per-experiment
 state and verdict for all runs, including the follow-ups that extend the original
 core set.
@@ -63,8 +66,11 @@ declared attempt budgets, audit before paper edits) and — the part that matter
 lists the occasions on which that protocol **cost** something: a halt obeyed when
 continuing was tempting (B1), a bug fix that made the project's own negative result
 stronger (Pan-Tompkins), a pre-registered arm that failed with its rescue labelled
-post-hoc (A2), and a correction favouring this project's own method that is
-quarantined with full provenance (the Paper 3 benchmark).
+post-hoc (A2), a correction favouring this project's own method quarantined with
+full provenance (the Paper 3 benchmark), a claim **withdrawn from Paper 1 after it
+had already been merged**, and — the entry to read first — the case where the
+discarded result was the *exciting* one: a run refuting a load-bearing clause was
+rejected because it rested on an instrument defect.
 
 The work is citable (`CITATION.cff`), and `RELEASING.md` documents how to mint a
 Zenodo DOI so the software can be cited independently of the papers.

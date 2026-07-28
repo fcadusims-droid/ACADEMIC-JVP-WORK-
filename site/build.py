@@ -83,6 +83,7 @@ NAV = [
     ("index.html", "Overview"),
     ("papers/index.html", "Papers"),
     ("experiments/index.html", "Experiments"),
+    ("results.html", "Results"),
     ("data.html", "Data"),
     ("methodology.html", "Methodology"),
     ("formal.html", "Formal"),
@@ -93,6 +94,22 @@ NAV = [
 # --------------------------------------------------------------------------
 # markdown / pdf
 # --------------------------------------------------------------------------
+
+def paper_date(src_path: str) -> str:
+    """Read the paper's own date line rather than hardcoding it here.
+
+    The date lives in exactly one place -- the Markdown source -- so updating a paper
+    updates the PDF title block, the web page and the gallery together. A copy in this
+    file is a copy that goes stale, which is the failure the whole generator exists to
+    avoid.
+    """
+    with open(src_path, encoding="utf-8") as fh:
+        head = [next(fh, "").strip() for _ in range(8)]
+    for line in head:
+        if re.match(r"^[A-Z][a-z]+ \d{1,2}, \d{4}$", line):
+            return line
+    return "2026"
+
 
 def _pandoc(args, stdin=None):
     return subprocess.run(["pandoc"] + args, input=stdin, capture_output=True,
@@ -183,7 +200,7 @@ def verify_pdf(path: str, min_pages: int = 5) -> list:
     return problems
 
 
-def build_pdf(src: str, dest: str, title: str, subtitle: str) -> bool:
+def build_pdf(src: str, dest: str, title: str, subtitle: str, date: str) -> bool:
     """Render a paper to PDF via XeLaTeX. Returns False if the toolchain fails."""
     hdr = os.path.join(OUT, "_header.tex")
     with open(hdr, "w", encoding="utf-8") as fh:
@@ -195,7 +212,7 @@ def build_pdf(src: str, dest: str, title: str, subtitle: str) -> bool:
     body = re.sub(r"\A#\s+.*?\n", "", body, count=1)
     body = re.sub(r"\A\s*Jo[a-zA-ZÀ-ſ]* Vitor Perazzolo\s*\n", "", body)
     meta = (f"---\ntitle: |\n  {title}\nsubtitle: |\n  {subtitle}\n"
-            f"author: João Vitor Perazzolo\ndate: July 2026\n---\n\n")
+            f"author: João Vitor Perazzolo\ndate: {date}\n---\n\n")
     try:
         subprocess.run(
             ["pandoc", "-f", "markdown+tex_math_dollars+pipe_tables+raw_tex-raw_html",
@@ -424,6 +441,7 @@ def build_papers(with_pdf: bool):
         with open(src, encoding="utf-8") as fh:
             raw = fh.read()
         title = f"Paper {p['n']} — {p['short']}"
+        pdate = paper_date(src)
 
         pdf_name = f"{p['slug']}.pdf"
         pdf_path = os.path.join(OUT, "papers", pdf_name)
@@ -431,7 +449,7 @@ def build_papers(with_pdf: bool):
         if with_pdf:
             print(f"  PDF: {p['src']} → papers/{pdf_name}")
             os.makedirs(os.path.join(OUT, "papers"), exist_ok=True)
-            pdf_ok = build_pdf(src, pdf_path, p["short"], p["sub"])
+            pdf_ok = build_pdf(src, pdf_path, p["short"], p["sub"], pdate)
             if pdf_ok:
                 bad = verify_pdf(pdf_path)
                 for b in bad:
@@ -468,7 +486,7 @@ def build_papers(with_pdf: bool):
 <p class="kicker">Paper {p['n']}</p>
 <h1>{html.escape(p['short'])}</h1>
 <p class="lede">{html.escape(p['sub'])}</p>
-<p class="meta">João Vitor Perazzolo &middot; July 2026</p>
+<p class="meta">João Vitor Perazzolo &middot; {pdate}</p>
 {actions}
 <div class="prose">
 {summary}
@@ -497,7 +515,7 @@ index. It is the same text as the PDF.</p>
         reader = f"""
 <p class="kicker">Paper {p['n']} &middot; PDF</p>
 <h1>{html.escape(p['short'])}</h1>
-<p class="meta">João Vitor Perazzolo &middot; July 2026 &middot;
+<p class="meta">João Vitor Perazzolo &middot; {pdate} &middot;
    <a href="{p['slug']}.html">back to the annotated version</a></p>
 <div class="btn-row">
   <a class="btn primary" href="{pdf_name}" download>Download PDF</a>
@@ -707,6 +725,13 @@ def _fmt(v):
 
 
 def build_static_pages():
+    # results summary
+    res = wrap_tables(md_file_to_html(os.path.join(ROOT, "RESULTS.md")))
+    write("results.html",
+          page("Results", f'<div class="prose-wide">{res}</div>', depth=0,
+               current="results.html", wide=True,
+               desc="What the 33 experiments found, summarised by paper."))
+
     # methodology
     meth = wrap_tables(md_file_to_html(os.path.join(ROOT, "METHODOLOGY.md")))
     write("methodology.html",

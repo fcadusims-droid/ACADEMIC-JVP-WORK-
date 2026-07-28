@@ -8,6 +8,26 @@ it validates the papers' *methods and numeric claims*.
 
 Regenerate any result with `python -m experiments.<paper>.<experiment>.run`.
 
+## What this file does and does not cover
+
+There are **33 experiments** with committed results. The narrative sections below discuss **20** of them — the original core set, written when the suite was small. The later experiments have their full record in their own `PRE-REGISTRATION.md` and `result.json`, and a one-paragraph verdict in **`experiments/STATUS.md`, which is the authoritative and complete per-experiment record**. This file is a narrative supplement, not an index; where the two differ, `STATUS.md` and the raw `result.json` win.
+
+Not narrated below, so that their absence here is not read as their not existing:
+
+- `base_metric_corner`
+- `baseline_benchmark`
+- `cbra_boundary_residual`
+- `class_g_coherence`
+- `class_g_independence`
+- `dataset_viability_gate`
+- `detection_repair_heldout`
+- `detection_statistic_repair`
+- `escape_endogeneity`
+- `escape_persistence_decider`
+- `log_euclidean_real_eeg`
+- `sleep_structure_power_dissociation`
+- `value_base_discontinuity_probe`
+
 ---
 
 ## Experiment G — Poincaré recurrence of the Lorenz attractor (Paper 1)
@@ -189,12 +209,15 @@ window** — because a transition is a *persistent* regime change while spontane
 excursions are *transient*. The multiscale bank (A) adds nothing over a single
 large window; covariate smoothing (B) actively hurts. The honest fix for Paper 3
 is: use a large window and state a scope bound for spontaneous bursts longer than
-that window. **All synthetic.** The real-EEG confirmation this called for is no longer outstanding:
-PhysioNet access was later established, and `sleep_stage_localization` localizes
-wake→sleep-onset in **10/15** Sleep-EDF recordings with the same large-window CUSUM,
-with `log_euclidean_real_eeg` and `baseline_benchmark` on the same corpus. The
-synthetic finding above — that the fix is window size — is what those runs then
-confirmed on real data.
+that window. **All synthetic**, and the real-EEG confirmation has since been run directly:
+`abc_real_eeg` repeats this scale comparison on 16 Sleep-EDF sleep-onset transitions.
+Both halves of the finding replicate in **direction** — the large window reaches
+**7/16** against the best short window's **4/16**, and the multiscale bank **6/16**,
+so window size is the operative variable and the bank adds nothing. The **magnitude
+does not**: the synthetic 2/15 → 15/15 becomes 4/16 → 7/16 on real recordings, under
+half. An earlier version of this paragraph claimed `sleep_stage_localization` had
+settled the matter; it had not — that run used a single fixed large window and never
+compared scales.
 
 Files: `cross_dataset/result.json`, `cross_dataset/ratio_sweep.png`.
 
