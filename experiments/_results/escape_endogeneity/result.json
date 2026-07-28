@@ -56,7 +56,8 @@
     "escape detected on raw state norm, missing log-coded radii",
     "scale-free observable normalised the log-radius into the direction",
     "openness read from a full-state Lyapunov exponent, positive under pure uniform expansion (biased toward the paper)",
-    "finite-time blow-up scored as failing non-recurrence via an estimator NaN (biased toward the paper)"
+    "finite-time blow-up scored as failing non-recurrence via an estimator NaN (biased toward the paper)",
+    "the fix for the above applied too widely: crossing the log-radius measurement bound was treated as a finite-time blow-up, overriding measured recurrence of 0.98 to 'non-recurrent' and producing a false claim that escaping candidates are open AND non-recurrent (biased against the paper; had already reached Paper 1 before being caught)"
   ],
   "candidates": {
     "bounded_lorenz": {
@@ -103,7 +104,7 @@
     "radial_blowup": {
       "role": "escape",
       "escaped": true,
-      "finite_time_blowup": true,
+      "finite_time_blowup": false,
       "steps_integrated": 4963,
       "final_log_radius": 24.99578177808756,
       "angular_lambda": -1.077917102494662e-06,
@@ -113,8 +114,8 @@
           "late_variance": 7.476022403301969e-32,
           "collapsed": true,
           "recurrence_fraction": 1.0,
-          "recurrence_note": "finite-time escape: non-recurrent by construction",
-          "non_recurrent": true,
+          "recurrence_note": "",
+          "non_recurrent": false,
           "open": false,
           "persistence": {
             "P_f": 0.12419265466490502,
@@ -128,7 +129,7 @@
           "late_variance": 1.2043134377508635e+20,
           "collapsed": false,
           "recurrence_fraction": 0.0,
-          "recurrence_note": "finite-time escape: non-recurrent by construction",
+          "recurrence_note": "",
           "non_recurrent": true,
           "open": false,
           "persistence": {
@@ -144,7 +145,7 @@
     "finite_time_blowup": {
       "role": "escape",
       "escaped": true,
-      "finite_time_blowup": true,
+      "finite_time_blowup": false,
       "steps_integrated": 167,
       "final_log_radius": 7.010979062088441,
       "angular_lambda": -4.6565149738334643e-07,
@@ -154,8 +155,8 @@
           "late_variance": 6.603188380756237e-33,
           "collapsed": true,
           "recurrence_fraction": null,
-          "recurrence_note": "finite-time escape: non-recurrent by construction",
-          "non_recurrent": true,
+          "recurrence_note": "UNMEASURED: too few samples before divergence; scored neither pass nor fail",
+          "non_recurrent": null,
           "open": false,
           "persistence": {
             "P_f": 0.0,
@@ -169,8 +170,8 @@
           "late_variance": 10139.137780710093,
           "collapsed": false,
           "recurrence_fraction": null,
-          "recurrence_note": "finite-time escape: non-recurrent by construction",
-          "non_recurrent": true,
+          "recurrence_note": "UNMEASURED: too few samples before divergence; scored neither pass nor fail",
+          "non_recurrent": null,
           "open": false,
           "persistence": {
             "P_f": 0.0,
@@ -185,7 +186,7 @@
     "escaping_chaos": {
       "role": "escape",
       "escaped": true,
-      "finite_time_blowup": true,
+      "finite_time_blowup": false,
       "steps_integrated": 12220,
       "final_log_radius": 24.96938825260185,
       "angular_lambda": 0.33006155091347944,
@@ -195,8 +196,8 @@
           "late_variance": 0.06387735131038597,
           "collapsed": false,
           "recurrence_fraction": 0.9810344827586207,
-          "recurrence_note": "finite-time escape: non-recurrent by construction",
-          "non_recurrent": true,
+          "recurrence_note": "",
+          "non_recurrent": false,
           "open": true,
           "persistence": {
             "P_f": 0.007498273427837821,
@@ -210,8 +211,8 @@
           "late_variance": 9.152371819331537e+18,
           "collapsed": false,
           "recurrence_fraction": 0.8714285714285714,
-          "recurrence_note": "finite-time escape: non-recurrent by construction",
-          "non_recurrent": true,
+          "recurrence_note": "",
+          "non_recurrent": false,
           "open": true,
           "persistence": {
             "P_f": 0.00015857802796198105,
@@ -226,7 +227,7 @@
     "freezing_escape": {
       "role": "escape",
       "escaped": true,
-      "finite_time_blowup": true,
+      "finite_time_blowup": false,
       "steps_integrated": 12469,
       "final_log_radius": 24.995531178900805,
       "angular_lambda": 0.2017471284241682,
@@ -236,8 +237,8 @@
           "late_variance": 0.04905876265453609,
           "collapsed": false,
           "recurrence_fraction": 0.9567945932898866,
-          "recurrence_note": "finite-time escape: non-recurrent by construction",
-          "non_recurrent": true,
+          "recurrence_note": "",
+          "non_recurrent": false,
           "open": true,
           "persistence": {
             "P_f": 0.01024603446895966,
@@ -251,8 +252,8 @@
           "late_variance": 1.558143341972633e+19,
           "collapsed": false,
           "recurrence_fraction": 0.9020033791938209,
-          "recurrence_note": "finite-time escape: non-recurrent by construction",
-          "non_recurrent": true,
+          "recurrence_note": "",
+          "non_recurrent": false,
           "open": true,
           "persistence": {
             "P_f": 0.000476569903235044,
@@ -314,7 +315,7 @@
   "falsifiers": [],
   "scope_gaps": [],
   "outcome": "SUPPORTS_E2_BUT_UNATTRIBUTABLE",
-  "verdict": "BY THE LETTER OF THE PRE-REGISTERED RULE E2 SURVIVES -- every escaping candidate fails a property under both contracts -- BUT THE RESULT CANNOT BE ATTRIBUTED TO ESCAPE, AND IS THEREFORE REPORTED AS INCONCLUSIVE. The bounded control, which never leaves any compact set, fails persistence for the same reason the escaping candidates do. WHAT WAS AND WAS NOT AT ISSUE. The theorem is not in question on its own domain, where Poincare recurrence settles it; this tests the two weaker claims that carry the escape horn in the prose. E1 -- that escape requires an external occasion -- is FALSE, and was known to be false before the run: theta_dot = theta*||theta|| is autonomous, contains no external term, and leaves every compact set in FINITE time, which `finite_time_blowup` confirms numerically. Any sentence in \u00a77.5-7.7 implying that leaving compactness is something done TO a system must be rewritten; endogenous escape is trivially available. E2 -- that escape forfeits persistence -- is the substantive claim. Every escaping candidate fails at least one property under both contracts: radial_blowup/I_dir fails openness; radial_blowup/I_raw fails openness+persistence; finite_time_blowup/I_dir fails openness+persistence; finite_time_blowup/I_raw fails openness+persistence; escaping_chaos/I_dir fails persistence; escaping_chaos/I_raw fails persistence; freezing_escape/I_dir fails persistence; freezing_escape/I_raw fails persistence. The PATTERN is the reportable content. Escape is easy and openness is easy, but they are bought from different accounts: an escape fast enough to be permanent drives the identity observable either to a frozen direction (no openness) or onto a scale where the contract's correlation structure cannot be estimated, while a system that keeps its correlation structure keeps returning. WHAT THIS DESIGN CANNOT SETTLE, stated plainly rather than left for a reviewer. The escaping candidates DO achieve escape, openness AND non-recurrence simultaneously -- Poincare recurrence is not what stops them, and that much is a real finding: in the escaping regime \u00a77.5's disposal of the horn rests entirely on the PERSISTENCE condition, not on the trichotomy. But the persistence failure cannot be charged to escape, because the bounded control fails it too. The reason is structural: the only openness available to these candidates is CHAOS, and chaos destroys correlation power whether or not the trajectory escapes. Worse, the operationalisation itself is contestable -- 'openness' is read here as a positive Lyapunov exponent, which is \u00a77.5's 'positive entropy' sense, whereas Class G in \u00a78.3 requires the opposite signature (protected tangential spectrum, |lambda_par| ~ 0, with incommensurable frequencies and retained correlation power). Those two senses of openness come apart, and the paper uses both. A system that is aperiodic and correlation-retaining WITHOUT being chaotic -- quasi-periodic with incommensurable frequencies, which is what Class G actually demands -- is exactly the case this battery does not contain, and it is the case most likely to escape while persisting. Adding it now would be fitting a candidate to a result, which the pre-registration forbids; it is named here as the required follow-up experiment instead. INSTRUMENT PROVENANCE, recorded because it cuts against this verdict's own direction: a first version of this experiment reported SUPPORTS_E2 partly for artefactual reasons -- openness was read from a full-state Lyapunov exponent that is positive under pure uniform expansion, and a finite-time blow-up was scored as recurrent because the estimator returned NaN on too few samples. Both errors flattered the paper. They are fixed here (angular exponent; explicit non-recurrence for finite-time escape), and the estimators are now gated by a self-test on signals of known character.",
+  "verdict": "BY THE LETTER OF THE PRE-REGISTERED RULE E2 SURVIVES -- every escaping candidate fails a property under both contracts -- BUT THE RESULT CANNOT BE ATTRIBUTED TO ESCAPE, AND IS THEREFORE REPORTED AS INCONCLUSIVE. The bounded control, which never leaves any compact set, fails persistence for the same reason the escaping candidates do. WHAT WAS AND WAS NOT AT ISSUE. The theorem is not in question on its own domain, where Poincare recurrence settles it; this tests the two weaker claims that carry the escape horn in the prose. E1 -- that escape requires an external occasion -- is FALSE, and was known to be false before the run: theta_dot = theta*||theta|| is autonomous, contains no external term, and leaves every compact set in FINITE time, which `finite_time_blowup` confirms numerically. Any sentence in \u00a77.5-7.7 implying that leaving compactness is something done TO a system must be rewritten; endogenous escape is trivially available. E2 -- that escape forfeits persistence -- is the substantive claim. Every escaping candidate fails at least one property under both contracts: radial_blowup/I_dir fails openness+non-recurrence; radial_blowup/I_raw fails openness+persistence; finite_time_blowup/I_dir fails openness+non-recurrence+persistence; finite_time_blowup/I_raw fails openness+non-recurrence+persistence; escaping_chaos/I_dir fails non-recurrence+persistence; escaping_chaos/I_raw fails non-recurrence+persistence; freezing_escape/I_dir fails non-recurrence+persistence; freezing_escape/I_raw fails non-recurrence+persistence. The PATTERN is the reportable content. Escape is easy and openness is easy, but they are bought from different accounts: an escape fast enough to be permanent drives the identity observable either to a frozen direction (no openness) or onto a scale where the contract's correlation structure cannot be estimated, while a system that keeps its correlation structure keeps returning. A CLAIM THIS EXPERIMENT ORIGINALLY MADE AND NOW WITHDRAWS. An earlier version reported that the escaping candidates achieve escape, openness AND non-recurrence simultaneously, and concluded that Poincare recurrence is not what stops them in the escaping regime. That was an artefact: crossing the log-radius MEASUREMENT bound was being treated as a finite-time blow-up, which triggered a 'non-recurrent by construction' override on trajectories whose MEASURED recurrence was 0.98. With the override removed, the escaping candidates are RECURRENT in the identity observable (escaping_chaos 0.98, freezing_escape 0.96) -- because the contract sees the DIRECTION, and the direction stays bounded however far the radius runs. The withdrawn claim had already reached Paper 1 and has been reversed there. The correct statement is the opposite and is better for the paper: escape does not purchase non-return in the contract-designated observable. WHAT THIS DESIGN STILL CANNOT SETTLE. The persistence failure cannot be charged to escape, because the bounded control fails it too. The reason is structural: the only openness available to these candidates is CHAOS, and chaos destroys correlation power whether or not the trajectory escapes. Worse, the operationalisation itself is contestable -- 'openness' is read here as a positive Lyapunov exponent, which is \u00a77.5's 'positive entropy' sense, whereas Class G in \u00a78.3 requires the opposite signature (protected tangential spectrum, |lambda_par| ~ 0, with incommensurable frequencies and retained correlation power). Those two senses of openness come apart, and the paper uses both. A system that is aperiodic and correlation-retaining WITHOUT being chaotic -- quasi-periodic with incommensurable frequencies, which is what Class G actually demands -- is exactly the case this battery does not contain, and it is the case most likely to escape while persisting. Adding it now would be fitting a candidate to a result, which the pre-registration forbids; it is named here as the required follow-up experiment instead. INSTRUMENT PROVENANCE, recorded because it cuts against this verdict's own direction: a first version of this experiment reported SUPPORTS_E2 partly for artefactual reasons -- openness was read from a full-state Lyapunov exponent that is positive under pure uniform expansion, and a finite-time blow-up was scored as recurrent because the estimator returned NaN on too few samples. Both errors flattered the paper. They are fixed here (angular exponent; explicit non-recurrence for finite-time escape), and the estimators are now gated by a self-test on signals of known character.",
   "figures": [
     "escape_endogeneity.png"
   ]

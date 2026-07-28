@@ -1,0 +1,329 @@
+{
+  "experiment": "escape_persistence_decider",
+  "question": "Can an autonomous system escape compactness while open in CLASS G's sense (aperiodic, incommensurable, non-chaotic) and correlation-retaining?",
+  "motivation": "escape_endogeneity was inconclusive because its only openness was chaos, which destroys P_f regardless of escape. Paper 1 uses two incompatible senses of openness; Class G needs the other one.",
+  "two_senses_of_openness": {
+    "section_7_5_case_3": "positive entropy, lambda > 0, correlation destroyed",
+    "section_8_3_class_G": "|lambda_par| ~ 0, incommensurable frequencies, correlation power retained"
+  },
+  "thresholds": {
+    "P_f": 0.05,
+    "surrogate_p": 0.05,
+    "lambda_flat": 0.01,
+    "recurrent_above": 0.5,
+    "rational_denominator_max": 20,
+    "rational_tol": 0.001
+  },
+  "instrument_selftest": [
+    {
+      "check": "P_f detects a periodic signal",
+      "pass": true,
+      "value": "0.330"
+    },
+    {
+      "check": "P_f rejects white noise",
+      "pass": true,
+      "value": "0.0002"
+    },
+    {
+      "check": "angular lambda ~ 0 under pure radial expansion",
+      "pass": true,
+      "value": "-0.00000"
+    },
+    {
+      "check": "angular lambda > 0 for Lorenz",
+      "pass": true,
+      "value": "+0.4018"
+    },
+    {
+      "check": "escaping candidate CAN be angularly open",
+      "pass": true,
+      "value": "+0.4018"
+    },
+    {
+      "check": "recurrence ~ 1 for a periodic orbit",
+      "pass": true,
+      "value": "1.000"
+    },
+    {
+      "check": "recurrence ~ 0 for a monotone ramp",
+      "pass": true,
+      "value": "0.000"
+    }
+  ],
+  "sanity_adjustments": [
+    "GEOMETRY: value vector kept as the full 4-vector (constant norm). Using only the two cosine channels lets ||value|| pass near zero, where the direction is ill-conditioned, putting a spurious lambda = -0.019 on a linear rotation whose exponent is analytically ZERO -- the candidate then failed Class-G flatness for a numerical rather than a dynamical reason.",
+    "CONTRACT OBSERVABLE: declared as a MIXTURE of the value channels. Coordinate 0 of the unit direction is cos(w1 t)/sqrt(2), a pure sine in which the second frequency never appears, so the candidate was not quasi-periodic where it was measured and the periodicity detector was right to reject it. \u00a75.4 makes the observable a declared choice.",
+    "quasiperiodic_escape_slow given a longer window (200k steps): at growth 0.08 it reached log r = 24.35 against the escape bound of 25 and so never counted as escaping."
+  ],
+  "attribution": {
+    "control_jointly_satisfies_openness_and_persistence": true,
+    "note": "Pre-registered THIS time, having been added post hoc in escape_endogeneity."
+  },
+  "candidates": {
+    "quasiperiodic_bounded": {
+      "role": "control",
+      "escaped": false,
+      "finite_time_blowup": false,
+      "final_log_radius": 0.34657359025067513,
+      "angular_lambda": 3.950830904010309e-08,
+      "lambda_flat_classG": true,
+      "incommensurable": {
+        "pass": true,
+        "ratio": 1.4142135623730951,
+        "best_rational": "24/17",
+        "best_err": 0.002448856490742113
+      },
+      "contracts": {
+        "I_dir": {
+          "late_variance": 0.2480662488451345,
+          "collapsed": false,
+          "aperiodic": true,
+          "sup_err_at_T": 0.027147226714315617,
+          "declared_periodic": false,
+          "recurrence_fraction": 1.0,
+          "recurrence_note": "",
+          "non_recurrent": false,
+          "classG_open": true,
+          "persistence": {
+            "P_f": 0.1573431934761442,
+            "surrogate_p": 0.004975124378109453,
+            "surrogate_median_P_f": 0.08667862534067108,
+            "pass": true
+          },
+          "all_four": false
+        },
+        "I_raw": {
+          "late_variance": 0.49613249766863143,
+          "collapsed": false,
+          "aperiodic": true,
+          "sup_err_at_T": 0.027147226714315617,
+          "declared_periodic": false,
+          "recurrence_fraction": 1.0,
+          "recurrence_note": "",
+          "non_recurrent": false,
+          "classG_open": true,
+          "persistence": {
+            "P_f": 0.15734319347615286,
+            "surrogate_p": 0.004975124378109453,
+            "surrogate_median_P_f": 0.0909246875177454,
+            "pass": true
+          },
+          "all_four": false
+        }
+      }
+    },
+    "quasiperiodic_escape": {
+      "role": "escape",
+      "escaped": true,
+      "finite_time_blowup": false,
+      "final_log_radius": 24.998823590277564,
+      "angular_lambda": 3.950830904010309e-08,
+      "lambda_flat_classG": true,
+      "incommensurable": {
+        "pass": true,
+        "ratio": 1.4142135623730951,
+        "best_rational": "24/17",
+        "best_err": 0.002448856490742113
+      },
+      "contracts": {
+        "I_dir": {
+          "late_variance": 0.21860685814322017,
+          "collapsed": false,
+          "aperiodic": true,
+          "sup_err_at_T": 0.15855158036157507,
+          "declared_periodic": false,
+          "recurrence_fraction": 0.9814221652786675,
+          "recurrence_note": "",
+          "non_recurrent": false,
+          "classG_open": true,
+          "persistence": {
+            "P_f": 0.20792209361952027,
+            "surrogate_p": 0.13432835820895522,
+            "surrogate_median_P_f": 0.1847863221549742,
+            "pass": false
+          },
+          "all_four": false
+        },
+        "I_raw": {
+          "late_variance": 7.733675298686286e+18,
+          "collapsed": false,
+          "aperiodic": true,
+          "sup_err_at_T": 0.15855158036157507,
+          "declared_periodic": false,
+          "recurrence_fraction": 0.8105915011744608,
+          "recurrence_note": "",
+          "non_recurrent": false,
+          "classG_open": true,
+          "persistence": {
+            "P_f": 0.000634971971398428,
+            "surrogate_p": 0.9850746268656716,
+            "surrogate_median_P_f": 0.0017495039551585117,
+            "pass": false
+          },
+          "all_four": false
+        }
+      }
+    },
+    "quasiperiodic_escape_slow": {
+      "role": "escape",
+      "escaped": true,
+      "finite_time_blowup": false,
+      "final_log_radius": 24.999773590245777,
+      "angular_lambda": 3.950830904010309e-08,
+      "lambda_flat_classG": true,
+      "incommensurable": {
+        "pass": true,
+        "ratio": 1.4142135623730951,
+        "best_rational": "24/17",
+        "best_err": 0.002448856490742113
+      },
+      "contracts": {
+        "I_dir": {
+          "late_variance": 0.25097892236548974,
+          "collapsed": false,
+          "aperiodic": true,
+          "sup_err_at_T": 0.026943211684969177,
+          "declared_periodic": false,
+          "recurrence_fraction": 1.0,
+          "recurrence_note": "",
+          "non_recurrent": false,
+          "classG_open": true,
+          "persistence": {
+            "P_f": 0.17141598363523322,
+            "surrogate_p": 0.004975124378109453,
+            "surrogate_median_P_f": 0.1252855233635446,
+            "pass": true
+          },
+          "all_four": false
+        },
+        "I_raw": {
+          "late_variance": 6.75582152859037e+19,
+          "collapsed": false,
+          "aperiodic": true,
+          "sup_err_at_T": 0.026943211684969177,
+          "declared_periodic": false,
+          "recurrence_fraction": 0.9361484511981297,
+          "recurrence_note": "",
+          "non_recurrent": false,
+          "classG_open": true,
+          "persistence": {
+            "P_f": 7.199012253836824e-05,
+            "surrogate_p": 1.0,
+            "surrogate_median_P_f": 0.0018039978778792679,
+            "pass": false
+          },
+          "all_four": false
+        }
+      }
+    },
+    "commensurable_escape": {
+      "role": "escape",
+      "escaped": true,
+      "finite_time_blowup": false,
+      "final_log_radius": 24.998823590274974,
+      "angular_lambda": 3.262551814085206e-08,
+      "lambda_flat_classG": true,
+      "incommensurable": {
+        "pass": false,
+        "ratio": 1.5,
+        "best_rational": "3/2",
+        "best_err": 0.0
+      },
+      "contracts": {
+        "I_dir": {
+          "late_variance": 0.2578568050219663,
+          "collapsed": false,
+          "aperiodic": false,
+          "sup_err_at_T": 1.1364843173084637e-08,
+          "declared_periodic": true,
+          "recurrence_fraction": 1.0,
+          "recurrence_note": "",
+          "non_recurrent": false,
+          "classG_open": false,
+          "persistence": {
+            "P_f": 0.22685295644085424,
+            "surrogate_p": 0.004975124378109453,
+            "surrogate_median_P_f": 0.16971397126889692,
+            "pass": true
+          },
+          "all_four": false
+        },
+        "I_raw": {
+          "late_variance": 8.495834775124829e+18,
+          "collapsed": false,
+          "aperiodic": false,
+          "sup_err_at_T": 1.1364843173084637e-08,
+          "declared_periodic": true,
+          "recurrence_fraction": 0.8287422592355328,
+          "recurrence_note": "",
+          "non_recurrent": false,
+          "classG_open": false,
+          "persistence": {
+            "P_f": 0.0001173947224291897,
+            "surrogate_p": 1.0,
+            "surrogate_median_P_f": 0.002193714449036859,
+            "pass": false
+          },
+          "all_four": false
+        }
+      }
+    },
+    "chaotic_escape": {
+      "role": "escape",
+      "escaped": true,
+      "finite_time_blowup": false,
+      "final_log_radius": 24.96938825260185,
+      "angular_lambda": 0.33006155091347944,
+      "lambda_flat_classG": false,
+      "incommensurable": {
+        "pass": null,
+        "note": "not a two-frequency construction"
+      },
+      "contracts": {
+        "I_dir": {
+          "late_variance": 0.11326581342650295,
+          "collapsed": false,
+          "aperiodic": true,
+          "sup_err_at_T": 1.4257847952158396,
+          "declared_periodic": false,
+          "recurrence_fraction": 0.9568965517241379,
+          "recurrence_note": "",
+          "non_recurrent": false,
+          "classG_open": false,
+          "persistence": {
+            "P_f": 0.005603128432468657,
+            "surrogate_p": 0.6318407960199005,
+            "surrogate_median_P_f": 0.006349756079735688,
+            "pass": false
+          },
+          "all_four": false
+        },
+        "I_raw": {
+          "late_variance": 3.2157406820643643e+19,
+          "collapsed": false,
+          "aperiodic": true,
+          "sup_err_at_T": 1.4257847952158396,
+          "declared_periodic": false,
+          "recurrence_fraction": 0.833743842364532,
+          "recurrence_note": "",
+          "non_recurrent": false,
+          "classG_open": false,
+          "persistence": {
+            "P_f": 0.00024186201612701847,
+            "surrogate_p": 1.0,
+            "surrogate_median_P_f": 0.0039974654008991806,
+            "pass": false
+          },
+          "all_four": false
+        }
+      }
+    }
+  },
+  "refuters": [],
+  "outcome": "SUPPORTS_E2",
+  "verdict": "E2 SURVIVES, AND THIS TIME ATTRIBUTABLY. The bounded control passes Class-G openness and persistence together, so the criteria are jointly achievable; every ESCAPING candidate nonetheless fails at least one property under both contracts. WHY THIS TEST AND NOT THE PREVIOUS ONE. `escape_endogeneity` measured openness as POSITIVE ENTROPY, which is \u00a77.5's sense, and every candidate that had it was chaotic -- so all of them failed correlation power, including the bounded control, and nothing could be attributed to escape. Class G in \u00a78.3 requires the opposite signature: |lambda| ~ 0, aperiodicity from INCOMMENSURABLE frequencies rather than from chaos, and correlation power explicitly RETAINED. Since Class G is the paper's entire positive residue, that is the sense in which the escape horn has to hold. Failures: quasiperiodic_escape/I_dir fails non-recurrence+persistence; quasiperiodic_escape/I_raw fails non-recurrence+persistence; quasiperiodic_escape_slow/I_dir fails non-recurrence; quasiperiodic_escape_slow/I_raw fails non-recurrence+persistence; commensurable_escape/I_dir fails Class-G openness+non-recurrence; commensurable_escape/I_raw fails Class-G openness+non-recurrence+persistence; chaotic_escape/I_dir fails Class-G openness+non-recurrence+persistence; chaotic_escape/I_raw fails Class-G openness+non-recurrence+persistence. Because the control passes, this is the attributable version of the claim that `escape_endogeneity` could not deliver. THE MECHANISM, WHICH IS NOT THE ONE \u00a77.5 GIVES. The property that fails for EVERY escaping candidate, under BOTH contracts, is NON-RECURRENCE -- not persistence. The quasi-periodic escapers retain correlation power handsomely under the ordinal contract (P_f = 0.17-0.21 against a 0.05 bar) while escaping to log r = 25; what they cannot do is stop returning. The reason is structural and general rather than particular to these constructions: the escape happens in the RADIUS, while the contract-designated observable sees the DIRECTION, and the direction lives on a sphere -- a compact quotient -- where Poincare recurrence applies exactly as it does in the bounded case. Escape in a coordinate the contract does not read buys nothing. CONSEQUENCE FOR PAPER 1: \u00a77.5 closes the escape horn with the wrong argument. It says unbounded drift 'is itself a failure of persistence ... a more extreme Class M', and that is NOT what happens -- persistence survives escape. The horn closes by RECURRENCE ON THE QUOTIENT, which is a stronger and more general argument than the one the paper gives, and it should be stated that way: a scale-free identity contract cannot see radial escape, so the recurrence theorem the trichotomy already relies on extends to the escaping cell instead of being surrendered there.",
+  "figures": [
+    "escape_persistence_decider.png"
+  ]
+}
