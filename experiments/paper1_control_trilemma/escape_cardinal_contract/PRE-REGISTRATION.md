@@ -105,4 +105,15 @@ after seeing results; a contract may be dropped only if its bounded control fail
 (making it unusable), and that is recorded rather than hidden.
 
 ## Status
-Pre-registered. Not yet run.
+Run. Outcome: **HORN_CLOSES_FOR_CARDINAL**. The escape horn closes under cardinal
+contracts too, by the *same* recurrence argument as the scale-free case, not by the
+persistence-failure §7.5 asserts. All three cardinal contracts whose bounded control
+passes (`saturating`, `log_scaled`, `raw_coord`) leave the escaping candidate
+**recurrent** (0.81–0.93), so it fails non-recurrence under every one. Persistence
+collapses **only** under the exponential `raw_coord` (P_f = 0.0006) while the bounded
+and linear readings of the identical system retain it (P_f = 0.21, 0.15) — so that
+collapse is the numerical artefact of an $e^{25}$ observable, the concern this
+pre-registration named, not §7.5's mechanism. The two-mechanism split the design
+anticipated did not materialise; the answer is one mechanism (recurrence) everywhere.
+Paper 1 §7.5 updated accordingly; the scale-free-dependency caveat is withdrawn. See
+`_results/escape_cardinal_contract/result.json`.

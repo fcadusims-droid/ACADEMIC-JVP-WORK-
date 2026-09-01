@@ -1,4 +1,4 @@
-# Results — What the 33 Experiments Found
+# Results — What the 35 Experiments Found
 
 A reader-facing synthesis of the validation suite. Every number here is read from a
 committed `result.json`; `experiments/STATUS.md` is the authoritative per-experiment

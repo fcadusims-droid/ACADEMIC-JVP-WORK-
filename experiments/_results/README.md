@@ -10,7 +10,7 @@ Regenerate any result with `python -m experiments.<paper>.<experiment>.run`.
 
 ## What this file does and does not cover
 
-There are **33 experiments** with committed results. The narrative sections below discuss **20** of them — the original core set, written when the suite was small. The later experiments have their full record in their own `PRE-REGISTRATION.md` and `result.json`, and a one-paragraph verdict in **`experiments/STATUS.md`, which is the authoritative and complete per-experiment record**. This file is a narrative supplement, not an index; where the two differ, `STATUS.md` and the raw `result.json` win.
+There are **35 experiments** with committed results. The narrative sections below discuss **20** of them — the original core set, written when the suite was small. The later experiments have their full record in their own `PRE-REGISTRATION.md` and `result.json`, and a one-paragraph verdict in **`experiments/STATUS.md`, which is the authoritative and complete per-experiment record**. This file is a narrative supplement, not an index; where the two differ, `STATUS.md` and the raw `result.json` win.
 
 Not narrated below, so that their absence here is not read as their not existing:
 
@@ -22,9 +22,11 @@ Not narrated below, so that their absence here is not read as their not existing
 - `dataset_viability_gate`
 - `detection_repair_heldout`
 - `detection_statistic_repair`
+- `escape_cardinal_contract`
 - `escape_endogeneity`
 - `escape_persistence_decider`
 - `log_euclidean_real_eeg`
+- `online_localization_permanence`
 - `sleep_structure_power_dissociation`
 - `value_base_discontinuity_probe`
 

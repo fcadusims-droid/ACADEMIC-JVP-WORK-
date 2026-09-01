@@ -1,41 +1,120 @@
 [
-  {"id": "detection repair AUC", "result": "detection_statistic_repair",
-   "path": "variants.a_scale_normalised.detection_auc", "tol": 0.01,
-   "papers": {"Paper3.md": "lifts detection to AUC \\$\\\\mathbf\\{([0-9.]+)\\}\\$"}},
-
-  {"id": "detection original sub-chance AUC", "result": "detection_statistic_repair",
-   "path": "baseline_auc", "tol": 0.01,
-   "papers": {"Paper3.md": "detection AUC was \\$([0-9.]+)\\$"}},
-
-  {"id": "held-out repaired AUC", "result": "detection_repair_heldout",
-   "path": "auc_repaired", "tol": 0.01,
-   "papers": {"Paper3.md": "reaches \\*\\*AUC \\$([0-9.]+)\\$\\*\\*"}},
-
-  {"id": "held-out old statistic AUC", "result": "detection_repair_heldout",
-   "path": "auc_old_statistic", "tol": 0.01,
-   "papers": {"Paper3.md": "old peak-to-median statistic scores \\$([0-9.]+)\\$"}},
-
-  {"id": "best baseline AUC", "result": "baseline_benchmark",
-   "path": "real_task.BinSeg[power].detection_auc", "tol": 0.01,
-   "papers": {"Paper3.md": "best baseline \\(\\$([0-9.]+)\\$\\)"}},
-
-  {"id": "EEG reconciliation median ratio", "result": "eeg_reconciliation",
-   "path": "permutation.median_ratio", "tol": 0.05,
-   "papers": {"Paper3.md": "median \\$\\\\approx ([0-9.]+)\\$"}},
-
-  {"id": "base-metric corner, square-root", "result": "base_metric_corner",
-   "path": "worst_corner_auc.sqrt", "tol": 0.01,
-   "papers": {"Paper3.md": "strong-drift AUC from \\$([0-9.]+)\\$ to \\$0\\.96\\$"}},
-
-  {"id": "base-metric corner, log-Euclidean", "result": "base_metric_corner",
-   "path": "worst_corner_auc.log_euclidean", "tol": 0.01,
-   "papers": {"Paper3.md": "strong-drift AUC from \\$0\\.65\\$ to \\$([0-9.]+)\\$"}},
-
-  {"id": "Lorenz recurrence fraction", "result": "rl_agents_trichotomy",
-   "path": "candidates.lorenz_chaos.recurrence_fraction", "tol": 0.005,
-   "papers": {"Paper1.md": "remains recurrent \\(\\$([0-9.]+)\\$\\)"}},
-
-  {"id": "CBRA structured-residual fraction", "result": "cbra_boundary_residual",
-   "path": "fraction_structured", "scale": 100, "tol": 1.0,
-   "papers": {"Paper2.md": "residual confound to \\$\\\\approx ([0-9.]+)\\\\%\\$"}}
+  {
+    "id": "detection repair AUC",
+    "result": "detection_statistic_repair",
+    "path": "variants.a_scale_normalised.detection_auc",
+    "tol": 0.01,
+    "papers": {
+      "Paper3.md": "lifts detection to AUC \\$\\\\mathbf\\{([0-9.]+)\\}\\$"
+    }
+  },
+  {
+    "id": "detection original sub-chance AUC",
+    "result": "detection_statistic_repair",
+    "path": "baseline_auc",
+    "tol": 0.01,
+    "papers": {
+      "Paper3.md": "detection AUC was \\$([0-9.]+)\\$"
+    }
+  },
+  {
+    "id": "held-out repaired AUC",
+    "result": "detection_repair_heldout",
+    "path": "auc_repaired",
+    "tol": 0.01,
+    "papers": {
+      "Paper3.md": "reaches \\*\\*AUC \\$([0-9.]+)\\$\\*\\*"
+    }
+  },
+  {
+    "id": "held-out old statistic AUC",
+    "result": "detection_repair_heldout",
+    "path": "auc_old_statistic",
+    "tol": 0.01,
+    "papers": {
+      "Paper3.md": "old peak-to-median statistic scores \\$([0-9.]+)\\$"
+    }
+  },
+  {
+    "id": "best baseline AUC",
+    "result": "baseline_benchmark",
+    "path": "real_task.BinSeg[power].detection_auc",
+    "tol": 0.01,
+    "papers": {
+      "Paper3.md": "best baseline \\(\\$([0-9.]+)\\$\\)"
+    }
+  },
+  {
+    "id": "EEG reconciliation median ratio",
+    "result": "eeg_reconciliation",
+    "path": "permutation.median_ratio",
+    "tol": 0.05,
+    "papers": {
+      "Paper3.md": "median \\$\\\\approx ([0-9.]+)\\$"
+    }
+  },
+  {
+    "id": "base-metric corner, square-root",
+    "result": "base_metric_corner",
+    "path": "worst_corner_auc.sqrt",
+    "tol": 0.01,
+    "papers": {
+      "Paper3.md": "strong-drift AUC from \\$([0-9.]+)\\$ to \\$0\\.96\\$"
+    }
+  },
+  {
+    "id": "base-metric corner, log-Euclidean",
+    "result": "base_metric_corner",
+    "path": "worst_corner_auc.log_euclidean",
+    "tol": 0.01,
+    "papers": {
+      "Paper3.md": "strong-drift AUC from \\$0\\.65\\$ to \\$([0-9.]+)\\$"
+    }
+  },
+  {
+    "id": "Lorenz recurrence fraction",
+    "result": "rl_agents_trichotomy",
+    "path": "candidates.lorenz_chaos.recurrence_fraction",
+    "tol": 0.005,
+    "papers": {
+      "Paper1.md": "remains recurrent \\(\\$([0-9.]+)\\$\\)"
+    }
+  },
+  {
+    "id": "CBRA structured-residual fraction",
+    "result": "cbra_boundary_residual",
+    "path": "fraction_structured",
+    "scale": 100,
+    "tol": 1.0,
+    "papers": {
+      "Paper2.md": "residual confound to \\$\\\\approx ([0-9.]+)\\\\%\\$"
+    }
+  },
+  {
+    "id": "sleep-onset localization hits",
+    "result": "sleep_stage_localization",
+    "path": "test2_localization.cusum_hits",
+    "tol": 0.5,
+    "papers": {
+      "Paper3.md": "sleep onset in \\$([0-9]+)/15"
+    }
+  },
+  {
+    "id": "N2-vs-REM discrimination hits",
+    "result": "sleep_stage_localization",
+    "path": "test1_discrimination.pass",
+    "tol": 0.5,
+    "papers": {
+      "Paper3.md": "([0-9]+)/15\\$ subjects, with median ratio"
+    }
+  },
+  {
+    "id": "Class G measured D_c",
+    "result": "class_g_coherence",
+    "path": "measured_D_c",
+    "tol": 0.005,
+    "papers": {
+      "Paper1.md": "critical value \\$D_c=([0-9.]+)\\$"
+    }
+  }
 ]
