@@ -1,0 +1,225 @@
+{
+  "experiment": "escape_cardinal_contract",
+  "question": "Does \u00a77.5's escape horn close under a cardinal (magnitude-reading) identity contract, and by what mechanism?",
+  "thresholds": {
+    "P_f": 0.05,
+    "lambda_flat": 0.01,
+    "recurrent_above": 0.5
+  },
+  "contract_family": {
+    "I_dir_scalefree": "direction only (scale-free reference)",
+    "saturating": "direction x (1 + tanh(excess_logr/5)) -- cardinal, bounded envelope",
+    "log_scaled": "direction x (1 + excess_logr) -- cardinal, linear envelope",
+    "raw_coord": "direction x exp(excess_logr) -- cardinal, exponential (decider I_raw)"
+  },
+  "instrument_selftest": [
+    {
+      "check": "P_f detects a periodic signal",
+      "pass": true,
+      "value": "0.330"
+    },
+    {
+      "check": "P_f rejects white noise",
+      "pass": true,
+      "value": "0.0002"
+    },
+    {
+      "check": "angular lambda ~ 0 under pure radial expansion",
+      "pass": true,
+      "value": "-0.00000"
+    },
+    {
+      "check": "angular lambda > 0 for Lorenz",
+      "pass": true,
+      "value": "+0.4018"
+    },
+    {
+      "check": "escaping candidate CAN be angularly open",
+      "pass": true,
+      "value": "+0.4018"
+    },
+    {
+      "check": "recurrence ~ 1 for a periodic orbit",
+      "pass": true,
+      "value": "1.000"
+    },
+    {
+      "check": "recurrence ~ 0 for a monotone ramp",
+      "pass": true,
+      "value": "0.000"
+    }
+  ],
+  "usable_cardinal_contracts": [
+    "saturating",
+    "log_scaled",
+    "raw_coord"
+  ],
+  "attribution": {
+    "note": "A cardinal contract carries a verdict about escape only if its bounded control passes openness+persistence; each contract reduces to the scale-free observable for a bounded system by construction."
+  },
+  "candidates": {
+    "quasiperiodic_bounded": {
+      "role": "control",
+      "escaped": false,
+      "angular_lambda": 3.950830904010309e-08,
+      "lambda_flat": true,
+      "contracts": {
+        "I_dir_scalefree": {
+          "late_variance": 0.2480662488451345,
+          "collapsed": false,
+          "aperiodic": true,
+          "recurrence_fraction": 1.0,
+          "non_recurrent": false,
+          "persistence": {
+            "P_f": 0.1573431934761442,
+            "surrogate_p": 0.004975124378109453,
+            "surrogate_median_P_f": 0.08667862534067108,
+            "pass": true
+          },
+          "open": true,
+          "cardinal": false,
+          "all_four": false
+        },
+        "saturating": {
+          "late_variance": 0.2480662488451345,
+          "collapsed": false,
+          "aperiodic": true,
+          "recurrence_fraction": 1.0,
+          "non_recurrent": false,
+          "persistence": {
+            "P_f": 0.1573431934761442,
+            "surrogate_p": 0.004975124378109453,
+            "surrogate_median_P_f": 0.09092468751775926,
+            "pass": true
+          },
+          "open": true,
+          "cardinal": true,
+          "all_four": false
+        },
+        "log_scaled": {
+          "late_variance": 0.2480662488451345,
+          "collapsed": false,
+          "aperiodic": true,
+          "recurrence_fraction": 1.0,
+          "non_recurrent": false,
+          "persistence": {
+            "P_f": 0.1573431934761442,
+            "surrogate_p": 0.004975124378109453,
+            "surrogate_median_P_f": 0.08596851068260944,
+            "pass": true
+          },
+          "open": true,
+          "cardinal": true,
+          "all_four": false
+        },
+        "raw_coord": {
+          "late_variance": 0.2480662488451345,
+          "collapsed": false,
+          "aperiodic": true,
+          "recurrence_fraction": 1.0,
+          "non_recurrent": false,
+          "persistence": {
+            "P_f": 0.1573431934761442,
+            "surrogate_p": 0.004975124378109453,
+            "surrogate_median_P_f": 0.0876151843697371,
+            "pass": true
+          },
+          "open": true,
+          "cardinal": true,
+          "all_four": false
+        }
+      }
+    },
+    "quasiperiodic_escape": {
+      "role": "escape",
+      "escaped": true,
+      "angular_lambda": 3.950830904010309e-08,
+      "lambda_flat": true,
+      "contracts": {
+        "I_dir_scalefree": {
+          "late_variance": 0.21860685814322017,
+          "collapsed": false,
+          "aperiodic": true,
+          "recurrence_fraction": 0.9814221652786675,
+          "non_recurrent": false,
+          "persistence": {
+            "P_f": 0.20792209361952027,
+            "surrogate_p": 0.12437810945273632,
+            "surrogate_median_P_f": 0.18596836577403686,
+            "pass": false
+          },
+          "open": true,
+          "cardinal": false,
+          "all_four": false
+        },
+        "saturating": {
+          "late_variance": 0.8725562074741597,
+          "collapsed": false,
+          "aperiodic": true,
+          "recurrence_fraction": 0.9325218876788384,
+          "non_recurrent": false,
+          "persistence": {
+            "P_f": 0.21389274961786606,
+            "surrogate_p": 0.01990049751243781,
+            "surrogate_median_P_f": 0.16842856886602323,
+            "pass": true
+          },
+          "open": true,
+          "cardinal": true,
+          "all_four": false
+        },
+        "log_scaled": {
+          "late_variance": 85.45859391036674,
+          "collapsed": false,
+          "aperiodic": true,
+          "recurrence_fraction": 0.8550074738415545,
+          "non_recurrent": false,
+          "persistence": {
+            "P_f": 0.15272429028368942,
+            "surrogate_p": 0.029850746268656716,
+            "surrogate_median_P_f": 0.10821351215859526,
+            "pass": true
+          },
+          "open": true,
+          "cardinal": true,
+          "all_four": false
+        },
+        "raw_coord": {
+          "late_variance": 3.866837649343136e+18,
+          "collapsed": false,
+          "aperiodic": false,
+          "recurrence_fraction": 0.8105915011744608,
+          "non_recurrent": false,
+          "persistence": {
+            "P_f": 0.0006349719713984285,
+            "surrogate_p": 0.9701492537313433,
+            "surrogate_median_P_f": 0.0015486669834091507,
+            "pass": false
+          },
+          "open": false,
+          "cardinal": true,
+          "all_four": false
+        }
+      }
+    }
+  },
+  "cardinal_refuters": [],
+  "failure_mechanism_per_cardinal_contract": {
+    "saturating": [
+      "non-recurrence"
+    ],
+    "log_scaled": [
+      "non-recurrence"
+    ],
+    "raw_coord": [
+      "openness",
+      "non-recurrence",
+      "persistence"
+    ]
+  },
+  "outcome": "HORN_CLOSES_FOR_CARDINAL",
+  "verdict": "THE ESCAPE HORN CLOSES FOR CARDINAL CONTRACTS TOO. Under every usable cardinal contract (['saturating', 'log_scaled', 'raw_coord']) the escaping candidate fails at least one property, while the bounded control passes -- so the failure is attributable to escape. WHAT THIS SETTLES. `escape_persistence_decider` closed the horn for a scale-free contract by recurrence on the direction quotient. This tests the cardinal case \u00a77.5's wording actually describes. The contract family runs from a BOUNDED magnitude reading (saturating) through a LINEAR one (log_scaled) to the EXPONENTIAL one the decider used (raw_coord); each reduces to the scale-free observable for a bounded system, which is why the control can pass and the verdict can be attributed. Mechanism of failure per usable cardinal contract: saturating fails non-recurrence; log_scaled fails non-recurrence; raw_coord fails openness+non-recurrence+persistence. The mechanism is UNIFORM: every usable cardinal contract fails NON-RECURRENCE (measured recurrence 0.81-0.93), the same mechanism that closed the scale-free case. No magnitude weighting removes the return, because the return comes from the oscillating direction on the compact quotient and every contract reads that direction. Persistence collapses under raw_coord ALONE (P_f = 0.0006) while the bounded (saturating, P_f = 0.21) and linear (log_scaled, P_f = 0.15) readings of the IDENTICAL system retain it. That is decisive against reading the collapse as \u00a77.5's 'more extreme Class M': it is the numerical degeneracy of an e^25 observable, exactly the artefact this experiment was built to rule in or out, not a genuine loss of the identity pattern. \u00a77.5's PERSISTENCE argument is therefore NOT vindicated even for a cardinal contract. CONSEQUENCE FOR PAPER 1: the escape horn closes under cardinal contracts by the SAME argument as the scale-free case -- recurrence on the direction quotient -- not by the persistence-failure \u00a77.5 asserts. The horn closes everywhere, but \u00a77.5's stated reason is the wrong one across the board; the section should give the single recurrence mechanism and drop 'a more extreme Class M', which is vindicated by nothing measured here.",
+  "figures": [
+    "escape_cardinal_contract.png"
+  ]
+}

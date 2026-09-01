@@ -60,8 +60,15 @@ $\log r = 25$. What fails universally is **non-recurrence** ($0.81$–$1.00$). T
 happens in the *radius*; an identity contract reads the *direction*; the direction
 lives on a compact quotient where the recurrence theorem applies unchanged. So the
 escaping cell closes by the *same* argument as the bounded cell — stronger and more
-general — at the stated price that the exclusion now depends on the contract being
-scale-free. *(`escape_endogeneity`, `escape_persistence_decider`)*
+general. A follow-up then removed the one caveat this had carried: the closure was
+thought to depend on a scale-free contract, but a family of **cardinal**
+(magnitude-reading) contracts — bounded, linear and exponential — all leave the
+observable recurrent too ($0.81$–$0.93$), so the horn closes under every contract
+tested and §7.5's persistence argument is vindicated by none of them. The one
+apparent persistence collapse (under an $e^{25}$ observable) is a numerical
+artefact, since bounded and linear readings of the identical system retain
+$P_f = 0.15$–$0.21$. *(`escape_endogeneity`, `escape_persistence_decider`,
+`escape_cardinal_contract`)*
 
 ---
 
@@ -191,11 +198,11 @@ The protocol is only worth something where it changed an outcome.
 
 ## What remains open
 
-- **Paper 1** — the escape-horn exclusion now depends on the identity contract being
-  **scale-free**. A genuinely cardinal contract, treating absolute value magnitude as
-  constitutive, is not covered by it. The Poincaré and Conley axioms in the Lean
-  development remain axioms; discharging them from Mathlib is blocked by the
-  environment's egress policy, not by the mathematics.
+- **Paper 1** — the escape-horn closure is now confirmed for cardinal as well as
+  scale-free contracts (`escape_cardinal_contract`), so that gap is closed. What
+  remains: the Poincaré and Conley axioms in the Lean development are still axioms;
+  discharging them from Mathlib is blocked by the environment's egress policy, not by
+  the mathematics.
 - **Paper 2** — the positive arm is not currently executable on public data. Reviving it
   needs a new mechanism idea or a corpus that does not yet exist, not another run.
 - **Paper 3** — on-line localization of transitions that are not the dominant geometric
