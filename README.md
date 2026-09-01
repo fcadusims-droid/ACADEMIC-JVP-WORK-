@@ -51,7 +51,7 @@ such, not softened.
   (`data/`, e.g. PhysioNet EEG/ECG) is **not** committed; see
   `paper3_geodesic_kinematics/DATA.md`.
 
-**[`RESULTS.md`](RESULTS.md) summarises what all 35 experiments found**, organised by
+**[`RESULTS.md`](RESULTS.md) summarises what all 37 experiments found**, organised by
 paper, with the open questions at the end.
 
 **`experiments/STATUS.md` is the authoritative live status** — the per-experiment

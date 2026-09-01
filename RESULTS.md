@@ -1,4 +1,4 @@
-# Results — What the 35 Experiments Found
+# Results — What the 37 Experiments Found
 
 A reader-facing synthesis of the validation suite. Every number here is read from a
 committed `result.json`; `experiments/STATUS.md` is the authoritative per-experiment
@@ -153,6 +153,17 @@ window reaches **7/16** against the best short window's 4/16, and the multiscale
 synthetic $2/15 \to 15/15$ becomes $4/16 \to 7/16$ on real recordings — under half.
 *(`localization_multiscale`, `abc_real_eeg`)*
 
+**Exp C's ratio mechanism, tested on real data, is right-signed but weak — and the
+"strong paradigm" assumption is refuted.** The synthetic Exp C claimed localization is
+*governed by the transition-to-fluctuation ratio* and robust across paradigm strength.
+Measured on 22 real recordings, the ratio $R = \Delta/\varphi$ is right-signed on
+localization error (Spearman $\rho = -0.36$) but does not reach the pre-registered bar and
+is not significant; more tellingly, sleep-onset (W→N1) — assumed to be the high-ratio
+paradigm — measures as *low-ratio* as eyes-open/closed alpha ($R \approx 0.68$ vs $0.69$)
+and localizes no better. So the synthetic "robust at every ratio" does not transfer, the
+same synthetic-overstates-real pattern as Exp A; a genuinely high-ratio real transition
+(N2↔REM) is the registered follow-up. *(`cross_dataset_real`)*
+
 **Declared failure modes.** A structural region where a weak jump is not separable from
 drift at any threshold, worsening with longer windows as holonomy accumulates
 *(`drift_jump_confusion_sweep`)*. A flat log-Euclidean base metric resolves that corner
@@ -162,7 +173,12 @@ recommendation is square-root primary with a log-Euclidean cross-check
 ($0.65 \to 0.61$) *(`hybrid_metric`)*. Causal localization is recoverable but pays a
 real reporting lag *(`causal_vs_offline_localization`)*. On-line localization is
 **materially better, not solved** — a global CUSUM doubles it (4/15 → 8/15), short of
-the pre-registered ≥10/15 band *(`online_localization_cusum`)*.
+the pre-registered ≥10/15 band *(`online_localization_cusum`)*. Smoothing the
+predictability covariate — the other proposed fix — gives **no benefit on real EEG**
+either: covariate-argmax localization stays at 1/15 across every bandwidth while the
+covariate's peak prominence collapses, and the persistence detectors beat it, so the
+synthetic Exp B mechanism (an abrupt transition and a spontaneous burst share the
+covariate's single-sample signature) replicates on real data *(`localization_priors_real`)*.
 
 **One replication came back qualified, and the qualification is the finding.** The
 pre-registered natural-power arm was *not* silent, so by the registered criterion the
@@ -199,16 +215,29 @@ The protocol is only worth something where it changed an outcome.
 ## What remains open
 
 - **Paper 1** — the escape-horn closure is now confirmed for cardinal as well as
-  scale-free contracts (`escape_cardinal_contract`), so that gap is closed. What
-  remains: the Poincaré and Conley axioms in the Lean development are still axioms;
-  discharging them from Mathlib is blocked by the environment's egress policy, not by
-  the mathematics.
+  scale-free contracts (`escape_cardinal_contract`) and has been **formalized in Lean**
+  (`formal/Escape.lean`): the recurrence-on-the-quotient argument is machine-checked, and
+  the axiom audit shows it consumes exactly `poincare_recurrence` — the same analytic
+  axiom the bounded cell uses, which is the precise sense in which the horn closes "by the
+  same argument, stronger and more general". What remains: the Poincaré and Conley axioms
+  are still axioms. Discharging them from Mathlib is closer than before — Mathlib is now
+  clonable from the environment — but still out of reach in-session: its prebuilt `olean`
+  cache host is blocked and a cold source build is impractical (`formal/README.md`). This
+  is an environment limit, not a mathematical one.
 - **Paper 2** — the positive arm is not currently executable on public data. Reviving it
   needs a new mechanism idea or a corpus that does not yet exist, not another run.
 - **Paper 3** — on-line localization of transitions that are not the dominant geometric
   event in their record remains open: a permanence-explicit detector, scoring each
   split by whether its post-segment matches the state the record ends in, was tried
   (`online_localization_permanence`) and reached only 3/15, below CUSUM's 8/15 and the
-  10/15 band. Experiment **B** remains synthetic-only (its real-data arm here is an
-  *analogue*, not a replication), and experiment **C** is untested on real data
-  entirely.
+  10/15 band. Experiment **C** has now been tested on real data (`cross_dataset_real`):
+  the measured transition/fluctuation ratio is right-signed on localization but weak
+  (Spearman ρ = −0.36, n.s.), and the assumption that sleep-onset supplies a high-ratio
+  paradigm is refuted (W→N1 measures as low-ratio as alpha), so C's synthetic "robust
+  across paradigm strength" does not transfer — a genuinely high-ratio real transition
+  (N2↔REM) as the high end is the registered follow-up. Experiment **B** has now been
+  replicated on real EEG (`localization_priors_real`): smoothing the predictability
+  covariate gives **no benefit** on real data (covariate-argmax 1/15 at every bandwidth,
+  prominence collapsing as it blurs the anchor), and the persistence detectors beat it
+  (CUSUM 8/15) — the synthetic mechanism, on the object the earlier analogue did not
+  touch.
