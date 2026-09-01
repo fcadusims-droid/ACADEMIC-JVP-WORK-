@@ -206,6 +206,9 @@ The protocol is only worth something where it changed an outcome.
 - **Paper 2** — the positive arm is not currently executable on public data. Reviving it
   needs a new mechanism idea or a corpus that does not yet exist, not another run.
 - **Paper 3** — on-line localization of transitions that are not the dominant geometric
-  event in their record. Experiment **B** remains synthetic-only (its real-data arm here
-  is an *analogue*, not a replication), and experiment **C** is untested on real data
+  event in their record remains open: a permanence-explicit detector, scoring each
+  split by whether its post-segment matches the state the record ends in, was tried
+  (`online_localization_permanence`) and reached only 3/15, below CUSUM's 8/15 and the
+  10/15 band. Experiment **B** remains synthetic-only (its real-data arm here is an
+  *analogue*, not a replication), and experiment **C** is untested on real data
   entirely.
