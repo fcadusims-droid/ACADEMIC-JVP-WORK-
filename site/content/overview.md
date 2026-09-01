@@ -26,7 +26,7 @@ consistency contract *I* — and no result flows back.
 
 ## What the experiment suite is for
 
-Thirty-one pre-registered computational experiments. Each has a
+Thirty-five pre-registered computational experiments. Each has a
 `PRE-REGISTRATION.md` fixing the question, the method, the thresholds and a stopping
 rule *before* the run; a machine-readable `result.json` committed after; and a
 verdict issued strictly against the pre-registered criterion. Bands are fixed in

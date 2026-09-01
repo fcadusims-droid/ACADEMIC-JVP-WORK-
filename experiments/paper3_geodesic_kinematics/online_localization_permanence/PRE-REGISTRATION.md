@@ -65,7 +65,12 @@ check: if the baselines do not reproduce, the run is void.
 One attempt. If the detector fails, that is the result; it is not re-parameterised.
 
 ## Status
-Pre-registered. Not yet run.
+Run (see the Addendum below for the one specification fix applied). Outcome:
+**BOUND_HOLDS**. The permanence-aware detector localizes **3/15**, below CUSUM's 8/15
+and the pre-registered ≥10/15 SOLVED band; baselines reproduced (window-mean 4, F-ratio
+6, CUSUM 8). One idea, one specification fix, one attempt — no tuning loop. Paper 3's
+'materially better, not solved' on-line localization claim stands unchanged. See
+`_results/online_localization_permanence/result.json`.
 
 ## Addendum (specification defect, corrected before the recorded verdict)
 
