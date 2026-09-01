@@ -51,7 +51,7 @@ to produce something wrong. The failure is quiet: a malformed delimiter does not
 raise an error, it prints the source verbatim, so `$x = $` reaches the reader as
 literal dollar signs in a published paper.
 
-Three gates run before anything is deployed, and a failure at any of them leaves the
+Four gates run before anything is deployed, and a failure at any of them leaves the
 previously published site live rather than replacing it with a damaged one.
 
 **1. `site/check_math.py`, before the build.** Tokenizes each paper the way pandoc's
@@ -74,12 +74,25 @@ literal `$` reaching the page, and for unresolved reference markers.
 attribute in the generated HTML must resolve to a file that exists — which is what
 catches a PDF that failed to build leaving a download button pointing at nothing.
 
+**4. `site/check_claims.py` — the headline numbers.** The repository's most frequent
+defect is not a broken formula or proof — the first two gates cover those — but a
+sentence that misdescribes a number, or a claim left in a paper after the run that
+produced it changed. This gate reads `experiments/claims.json`, a manifest pairing
+each headline claim with a `result.json` path and a regex that extracts the number
+from the paper, and fails the build if the number the paper *states* has drifted
+from the number the result *holds*. The manifest cannot itself go stale: it only
+says where each number lives, and the value is always read live. Its honest limit is
+coverage — a number nobody tagged is not checked — so the gate prints how many
+result files carry a tagged claim. This runs in `tests.yml` on every pull request,
+not only at deploy, because it is the failure mode past reviews caught by hand.
+
 ## Building locally
 
 ```bash
 sudo apt-get install -y pandoc texlive-xetex texlive-latex-recommended \
                         texlive-fonts-recommended lmodern poppler-utils
 python site/check_math.py
+python site/check_claims.py
 python site/build.py            # writes _site/
 python -m http.server -d _site  # then open http://localhost:8000
 ```
@@ -90,5 +103,6 @@ links are then not checked, because the files were not built.
 ## Deployment
 
 `.github/workflows/pages.yml` runs on every push to `main` and on manual dispatch.
-`site/check_math.py` additionally runs on pull requests via `tests.yml`, so a broken
-formula is caught before it can reach `main` at all.
+`site/check_math.py` and `site/check_claims.py` additionally run on pull requests
+via `tests.yml`, so a broken formula or a drifted number is caught before it can reach
+`main` at all.
