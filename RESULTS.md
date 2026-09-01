@@ -215,10 +215,15 @@ The protocol is only worth something where it changed an outcome.
 ## What remains open
 
 - **Paper 1** — the escape-horn closure is now confirmed for cardinal as well as
-  scale-free contracts (`escape_cardinal_contract`), so that gap is closed. What
-  remains: the Poincaré and Conley axioms in the Lean development are still axioms;
-  discharging them from Mathlib is blocked by the environment's egress policy, not by
-  the mathematics.
+  scale-free contracts (`escape_cardinal_contract`) and has been **formalized in Lean**
+  (`formal/Escape.lean`): the recurrence-on-the-quotient argument is machine-checked, and
+  the axiom audit shows it consumes exactly `poincare_recurrence` — the same analytic
+  axiom the bounded cell uses, which is the precise sense in which the horn closes "by the
+  same argument, stronger and more general". What remains: the Poincaré and Conley axioms
+  are still axioms. Discharging them from Mathlib is closer than before — Mathlib is now
+  clonable from the environment — but still out of reach in-session: its prebuilt `olean`
+  cache host is blocked and a cold source build is impractical (`formal/README.md`). This
+  is an environment limit, not a mathematical one.
 - **Paper 2** — the positive arm is not currently executable on public data. Reviving it
   needs a new mechanism idea or a corpus that does not yet exist, not another run.
 - **Paper 3** — on-line localization of transitions that are not the dominant geometric

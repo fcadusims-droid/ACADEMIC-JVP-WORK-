@@ -7,8 +7,9 @@
   that are declared as axioms. The analytic inputs themselves (Poincaré recurrence,
   the Conley decomposition, Helmholtz–Hodge) are NOT proved here; they are standard,
   and in a Mathlib-enabled environment they would be discharged from
-  `MeasureTheory` / `Dynamics`. In this environment Mathlib is unreachable (the
-  proxy returns 403 for github.com), so they stand as explicit axioms.
+  `MeasureTheory` / `Dynamics`. Mathlib itself is now clonable from this environment,
+  but its prebuilt `olean` cache host is blocked and a cold source build is impractical
+  in-session (see `formal/README.md`), so they stand as explicit axioms.
 
   That isolation is the point of the exercise: it makes precise exactly which
   analytic facts the philosophical argument consumes, and shows the step from those
