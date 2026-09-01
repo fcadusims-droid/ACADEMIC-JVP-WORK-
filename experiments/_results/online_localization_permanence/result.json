@@ -1,0 +1,457 @@
+{
+  "experiment": "online_localization_permanence",
+  "question": "Does a permanence-aware detector reach the >=10/15 on-line localization band that F-ratio/CUSUM (8/15) did not?",
+  "data": "eegmmidb eyes-open (R01) vs eyes-closed (R02), occipito-parietal alpha",
+  "n_subjects": 15,
+  "terminal_fraction": 0.25,
+  "hits": {
+    "window_mean": 4,
+    "fratio": 6,
+    "cusum": 8,
+    "permanence": 3
+  },
+  "solved_band": 10,
+  "baselines_reproduced": true,
+  "per_subject": [
+    {
+      "subject": 1,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 93,
+        "err": 11,
+        "hit": false,
+        "prom": 1.3711737186393695
+      },
+      "fratio": {
+        "cp": 100,
+        "err": 4,
+        "hit": true,
+        "prom": 1.6702871819445948
+      },
+      "cusum": {
+        "cp": 103,
+        "err": 1,
+        "hit": true,
+        "prom": 1.368422073844748
+      },
+      "permanence": {
+        "cp": 154,
+        "err": 50,
+        "hit": false,
+        "prom": 1.7010748170823697
+      }
+    },
+    {
+      "subject": 2,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 144,
+        "err": 40,
+        "hit": false,
+        "prom": 1.8968514109836279
+      },
+      "fratio": {
+        "cp": 164,
+        "err": 60,
+        "hit": false,
+        "prom": 1.6125459068677943
+      },
+      "cusum": {
+        "cp": 125,
+        "err": 21,
+        "hit": false,
+        "prom": 1.303480178835255
+      },
+      "permanence": {
+        "cp": 154,
+        "err": 50,
+        "hit": false,
+        "prom": 1.9819742366131996
+      }
+    },
+    {
+      "subject": 3,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 101,
+        "err": 3,
+        "hit": true,
+        "prom": 1.9534047397838703
+      },
+      "fratio": {
+        "cp": 101,
+        "err": 3,
+        "hit": true,
+        "prom": 3.0547640744082996
+      },
+      "cusum": {
+        "cp": 100,
+        "err": 4,
+        "hit": true,
+        "prom": 2.0158500348237673
+      },
+      "permanence": {
+        "cp": 76,
+        "err": 28,
+        "hit": false,
+        "prom": 1.5752621296295783
+      }
+    },
+    {
+      "subject": 4,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 97,
+        "err": 7,
+        "hit": true,
+        "prom": 1.9658057512640532
+      },
+      "fratio": {
+        "cp": 101,
+        "err": 3,
+        "hit": true,
+        "prom": 2.171380785016218
+      },
+      "cusum": {
+        "cp": 100,
+        "err": 4,
+        "hit": true,
+        "prom": 1.6403919946826018
+      },
+      "permanence": {
+        "cp": 101,
+        "err": 3,
+        "hit": true,
+        "prom": 1.5119670780611631
+      }
+    },
+    {
+      "subject": 5,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 89,
+        "err": 15,
+        "hit": false,
+        "prom": 1.2830618204680575
+      },
+      "fratio": {
+        "cp": 90,
+        "err": 14,
+        "hit": false,
+        "prom": 1.4220297863992206
+      },
+      "cusum": {
+        "cp": 145,
+        "err": 41,
+        "hit": false,
+        "prom": 1.2629579222398888
+      },
+      "permanence": {
+        "cp": 154,
+        "err": 50,
+        "hit": false,
+        "prom": 2.0202666005287777
+      }
+    },
+    {
+      "subject": 6,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 40,
+        "err": 64,
+        "hit": false,
+        "prom": 1.481731286273552
+      },
+      "fratio": {
+        "cp": 53,
+        "err": 51,
+        "hit": false,
+        "prom": 2.0407627091474656
+      },
+      "cusum": {
+        "cp": 52,
+        "err": 52,
+        "hit": false,
+        "prom": 2.124777267881146
+      },
+      "permanence": {
+        "cp": 154,
+        "err": 50,
+        "hit": false,
+        "prom": 2.3613385500207182
+      }
+    },
+    {
+      "subject": 7,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 55,
+        "err": 49,
+        "hit": false,
+        "prom": 2.7509397517358973
+      },
+      "fratio": {
+        "cp": 54,
+        "err": 50,
+        "hit": false,
+        "prom": 2.5882706409730067
+      },
+      "cusum": {
+        "cp": 55,
+        "err": 49,
+        "hit": false,
+        "prom": 1.4709704678277549
+      },
+      "permanence": {
+        "cp": 56,
+        "err": 48,
+        "hit": false,
+        "prom": 1.6409250367661294
+      }
+    },
+    {
+      "subject": 8,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 107,
+        "err": 3,
+        "hit": true,
+        "prom": 2.3497275515233143
+      },
+      "fratio": {
+        "cp": 114,
+        "err": 10,
+        "hit": false,
+        "prom": 2.895714734513026
+      },
+      "cusum": {
+        "cp": 110,
+        "err": 6,
+        "hit": true,
+        "prom": 1.8289820622134065
+      },
+      "permanence": {
+        "cp": 111,
+        "err": 7,
+        "hit": true,
+        "prom": 1.844348583506553
+      }
+    },
+    {
+      "subject": 9,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 164,
+        "err": 60,
+        "hit": false,
+        "prom": 2.305853524959327
+      },
+      "fratio": {
+        "cp": 175,
+        "err": 71,
+        "hit": false,
+        "prom": 4.452410980856101
+      },
+      "cusum": {
+        "cp": 149,
+        "err": 45,
+        "hit": false,
+        "prom": 1.2635045009058081
+      },
+      "permanence": {
+        "cp": 154,
+        "err": 50,
+        "hit": false,
+        "prom": 5.926115219910459
+      }
+    },
+    {
+      "subject": 10,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 164,
+        "err": 60,
+        "hit": false,
+        "prom": 1.652454935587631
+      },
+      "fratio": {
+        "cp": 175,
+        "err": 71,
+        "hit": false,
+        "prom": 1.877272650708415
+      },
+      "cusum": {
+        "cp": 103,
+        "err": 1,
+        "hit": true,
+        "prom": 1.2150505784701666
+      },
+      "permanence": {
+        "cp": 154,
+        "err": 50,
+        "hit": false,
+        "prom": 1.8115561935799118
+      }
+    },
+    {
+      "subject": 11,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 141,
+        "err": 37,
+        "hit": false,
+        "prom": 1.3435490586520429
+      },
+      "fratio": {
+        "cp": 103,
+        "err": 1,
+        "hit": true,
+        "prom": 1.637970787832646
+      },
+      "cusum": {
+        "cp": 112,
+        "err": 8,
+        "hit": true,
+        "prom": 1.4453725203375825
+      },
+      "permanence": {
+        "cp": 154,
+        "err": 50,
+        "hit": false,
+        "prom": 1.6950215651768512
+      }
+    },
+    {
+      "subject": 12,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 92,
+        "err": 12,
+        "hit": false,
+        "prom": 1.5297949140906901
+      },
+      "fratio": {
+        "cp": 92,
+        "err": 12,
+        "hit": false,
+        "prom": 1.6356989228875478
+      },
+      "cusum": {
+        "cp": 91,
+        "err": 13,
+        "hit": false,
+        "prom": 1.3366041311775192
+      },
+      "permanence": {
+        "cp": 92,
+        "err": 12,
+        "hit": false,
+        "prom": 1.5068422361962224
+      }
+    },
+    {
+      "subject": 13,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 140,
+        "err": 36,
+        "hit": false,
+        "prom": 1.3664832823878252
+      },
+      "fratio": {
+        "cp": 180,
+        "err": 76,
+        "hit": false,
+        "prom": 1.8670000593028637
+      },
+      "cusum": {
+        "cp": 113,
+        "err": 9,
+        "hit": false,
+        "prom": 1.3737181147858355
+      },
+      "permanence": {
+        "cp": 154,
+        "err": 50,
+        "hit": false,
+        "prom": 1.7714883276169746
+      }
+    },
+    {
+      "subject": 14,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 101,
+        "err": 3,
+        "hit": true,
+        "prom": 2.3129046587633146
+      },
+      "fratio": {
+        "cp": 102,
+        "err": 2,
+        "hit": true,
+        "prom": 2.303193594223298
+      },
+      "cusum": {
+        "cp": 101,
+        "err": 3,
+        "hit": true,
+        "prom": 1.5845911838331215
+      },
+      "permanence": {
+        "cp": 102,
+        "err": 2,
+        "hit": true,
+        "prom": 1.6743080995374455
+      }
+    },
+    {
+      "subject": 15,
+      "seam": 104,
+      "n_windows": 205,
+      "window_mean": {
+        "cp": 155,
+        "err": 51,
+        "hit": false,
+        "prom": 1.3108170230784408
+      },
+      "fratio": {
+        "cp": 102,
+        "err": 2,
+        "hit": true,
+        "prom": 1.4320273863888058
+      },
+      "cusum": {
+        "cp": 100,
+        "err": 4,
+        "hit": true,
+        "prom": 1.2286491714734555
+      },
+      "permanence": {
+        "cp": 154,
+        "err": 50,
+        "hit": false,
+        "prom": 1.6519322790520337
+      }
+    }
+  ],
+  "outcome": "BOUND_HOLDS",
+  "verdict": "THE BOUND HOLDS: the permanence-aware detector localizes only 3/15, short of the >=10/15 SOLVED band (baselines 8/15, reproduced). Making permanence explicit was a reasonable idea and it is reported as tried-and-insufficient rather than re-parameterised: the on-line localization of a transition that is not the dominant geometric event in its record remains open, and Paper 3's 'materially better, not solved' stands. One attempt, terminal window fixed in advance at the final quarter.",
+  "figures": [
+    "online_localization_permanence.png"
+  ]
+}
