@@ -1,0 +1,21 @@
+{
+  "guards": [
+    {"result": "baseline_benchmark",
+     "must_include": "inside binomial noise|not a demonstrated performance advantage|WORST method|0\\.227",
+     "why": "the opening clause 'THE GEODESIC DETECTOR WINS ON THE REAL TASK' is the flattering half; the margin is two recordings on fifteen (inside binomial noise) and detection was the worst method compared before repair. The rendered headline must not stop before that."},
+    {"result": "localization_multiscale",
+     "must_include": "WINDOW SIZE, not multiscale",
+     "why": "'CRITERION MET' alone reads as a validated multiscale bank; the operative finding is that a single large window already matches it."},
+    {"result": "detection_statistic_repair",
+     "must_include": "0\\.227|competitive|not superior|4th|fourth",
+     "why": "the repair lifted detection to 0.81, which is competitive but not superior to the best baseline's 0.88; the headline must not imply a win."}
+  ],
+  "supersessions": [
+    {"result": "cross_dataset", "superseded_by": "cross_dataset_real",
+     "note": "the synthetic ratio sweep reported robustness at every ratio; on real data the paradigm-ordering assumption it rests on is REFUTED and the ratio mechanism is right-signed but weak (rho = -0.36, n.s.)."},
+    {"result": "localization_priors", "superseded_by": "localization_priors_real",
+     "note": "the synthetic no-benefit finding is now replicated on real EEG (covariate-argmax 1/15 at every bandwidth)."},
+    {"result": "real_eeg_localization", "superseded_by": "online_localization_cusum",
+     "note": "the 4/15 local window-mean result is superseded as the best available detector by the global geodesic CUSUM at 8/15, which is still short of the pre-registered band."}
+  ]
+}

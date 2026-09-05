@@ -47,6 +47,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RESULTS = os.path.join(ROOT, "experiments", "_results")
 MANIFEST = os.path.join(ROOT, "experiments", "claims.json")
 QUALIFICATIONS = os.path.join(ROOT, "experiments", "qualifications.json")
+VERDICT_GUARDS = os.path.join(ROOT, "experiments", "verdict_guards.json")
 
 
 def dotted(obj, path):
@@ -104,6 +105,62 @@ def check_qualifications(quiet=False):
     return checked, errors
 
 
+
+def check_verdict_guards(quiet=False):
+    """The qualifications idea applied to the most citable artifact: verdict strings.
+
+    A result.json verdict is what the site's index renders and what a reader copies. The
+    index compresses it, and compression is where a qualification gets lost: the
+    repository's most contested experiment led with "THE GEODESIC DETECTOR WINS ON THE
+    REAL TASK" while the caveats sat two sentences further down, outside the compression
+    window. That is a headline claim travelling without its qualification -- inside the
+    tool built to prevent it.
+
+    This replicates the site's compression and requires the declared qualification to
+    survive it. Supersessions are checked too: a superseded result must name a target
+    that actually exists.
+    """
+    if not os.path.exists(VERDICT_GUARDS):
+        return 0, []
+    with open(VERDICT_GUARDS, encoding="utf-8") as fh:
+        cfg = json.load(fh)
+    errors, checked = [], 0
+
+    for g in cfg.get("guards", []):
+        rj = os.path.join(RESULTS, g["result"], "result.json")
+        if not os.path.exists(rj):
+            errors.append(f"[verdict guard {g['result']}] no such committed result")
+            continue
+        with open(rj, encoding="utf-8") as fh:
+            data = json.load(fh)
+        verdict = data.get("verdict") or data.get("outcome") or ""
+        sents = re.split(r"(?<=[.!?])\s+", str(verdict).strip())
+        out, pat = sents[0], re.compile(g["must_include"], re.I)
+        if not pat.search(out):
+            for nxt in sents[1:]:
+                out = out + " " + nxt
+                if pat.search(out) or len(out) > 700:
+                    break
+        checked += 1
+        if not pat.search(out):
+            errors.append(
+                f"[verdict guard {g['result']}] the rendered headline does not reach its "
+                f"qualification (/{g['must_include']}/) within the compression window. "
+                f"{g['why']}")
+
+    for sp in cfg.get("supersessions", []):
+        for key in ("result", "superseded_by"):
+            slug = sp[key]
+            if not os.path.exists(os.path.join(RESULTS, slug, "result.json")):
+                errors.append(f"[supersession {sp['result']}] '{slug}' is not a committed result")
+        checked += 1
+
+    if not quiet or errors:
+        print(f"verdict-guard gate: {len(cfg.get('guards', []))} guarded verdicts, "
+              f"{len(cfg.get('supersessions', []))} supersessions, {checked} checks")
+    return checked, errors
+
+
 def check(quiet=False):
     with open(MANIFEST, encoding="utf-8") as fh:
         claims = json.load(fh)
@@ -156,6 +213,8 @@ def check(quiet=False):
         print(f"claims gate: {len(claims)} claims, {checked} paper-number checks, "
               f"{len(tagged_results)}/{n_results} result files have a tagged claim")
     _, qerrors = check_qualifications(quiet)
+    _, verrors = check_verdict_guards(quiet)
+    qerrors = qerrors + verrors
     for e in errors:
         print(f"  ERROR  {e}")
     for e in qerrors:
