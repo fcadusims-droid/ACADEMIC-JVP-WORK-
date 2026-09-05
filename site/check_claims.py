@@ -46,6 +46,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RESULTS = os.path.join(ROOT, "experiments", "_results")
 MANIFEST = os.path.join(ROOT, "experiments", "claims.json")
+QUALIFICATIONS = os.path.join(ROOT, "experiments", "qualifications.json")
 
 
 def dotted(obj, path):
@@ -62,6 +63,45 @@ def dotted(obj, path):
 def load_result(name):
     with open(os.path.join(RESULTS, name, "result.json"), encoding="utf-8") as fh:
         return json.load(fh)
+
+
+
+def check_qualifications(quiet=False):
+    """The numbers gate applied to CLAIMS.
+
+    A number can match its result.json and still mislead, if the sentence quoting it has
+    been separated from the qualification that makes it honest -- a pre-registered arm
+    that did not replicate, a margin inside binomial noise, a threshold missed. That is
+    the divergence risk between a repository that reports fully and a manuscript written
+    to pass review, and it is the one failure mode the numeric gate cannot see.
+
+    Each entry names a `claim` regex and a `requires` regex that must appear in the SAME
+    PARAGRAPH of the same paper. If the claim is present without its qualification, the
+    build fails.
+    """
+    if not os.path.exists(QUALIFICATIONS):
+        return 0, []
+    with open(QUALIFICATIONS, encoding="utf-8") as fh:
+        quals = json.load(fh)
+    errors, checked = [], 0
+    for q in quals:
+        path = os.path.join(ROOT, q["paper"])
+        with open(path, encoding="utf-8") as fh:
+            paragraphs = fh.read().split("\n\n")
+        hits = [p for p in paragraphs if re.search(q["claim"], p)]
+        if not hits:
+            errors.append(f"[{q['id']}] claim pattern not found in {q['paper']} -- "
+                          f"the sentence it guards was edited away or reworded")
+            continue
+        for para in hits:
+            checked += 1
+            if not re.search(q["requires"], para):
+                errors.append(
+                    f"[{q['id']}] {q['paper']}: the claim appears WITHOUT its required "
+                    f"qualification (/{q['requires']}/). {q['why']}")
+    if not quiet or errors:
+        print(f"qualifications gate: {len(quals)} guarded claims, {checked} paragraph checks")
+    return checked, errors
 
 
 def check(quiet=False):
@@ -115,13 +155,21 @@ def check(quiet=False):
     if not quiet or errors:
         print(f"claims gate: {len(claims)} claims, {checked} paper-number checks, "
               f"{len(tagged_results)}/{n_results} result files have a tagged claim")
+    _, qerrors = check_qualifications(quiet)
     for e in errors:
         print(f"  ERROR  {e}")
-    if errors:
-        print(f"\nFAILED: {len(errors)} numeric claim(s) do not match the committed "
-              f"results.", file=sys.stderr)
+    for e in qerrors:
+        print(f"  ERROR  {e}")
+    if errors or qerrors:
+        if errors:
+            print(f"\nFAILED: {len(errors)} numeric claim(s) do not match the committed "
+                  f"results.", file=sys.stderr)
+        if qerrors:
+            print(f"FAILED: {len(qerrors)} claim(s) appear without the qualification that "
+                  f"makes them honest.", file=sys.stderr)
         return 1
-    print("claims gate passed: every tagged paper number matches its result.json.")
+    print("claims gate passed: every tagged paper number matches its result.json, and "
+          "every guarded claim carries its qualification.")
     return 0
 
 

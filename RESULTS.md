@@ -1,4 +1,4 @@
-# Results — What the 37 Experiments Found
+# Results — What the 38 Experiments Found
 
 A reader-facing synthesis of the validation suite. Every number here is read from a
 committed `result.json`; `experiments/STATUS.md` is the authoritative per-experiment
@@ -118,6 +118,28 @@ diffusion length. *(`metabolic_null_resolution`)*
 ---
 
 ## Paper 3 — The Kinematics of Geodesic Flow
+
+**The bundle apparatus does not earn its place on the worked paradigm — and it had
+never been exercised.** An external review asked which experiment isolates the fibre's
+contribution. A code audit found something stronger: the fibre was **unexercised**.
+`stats_utils.t_eff_product` — the only cross-scale-coupling helper — is never called by
+any experiment, no experiment builds a bundle point, and every validated result to date
+is a property of the trace-normalized SPD base alone. The ablation the paper never ran
+has now been run, on Paper 3's own spec (§3.2 PAC matrix normalized by the geometric mean
+of the two block traces; §3.3 Sasaki metric). On 15 real eyes-open/closed subjects, with
+identical windows, detectors and tolerance: base **10/15** localization and **7/15**
+discrimination (median ratio 1.26); the best fibre-augmented arm **11/15** and **9/15**
+(ratio 1.16); fibre-only 2/15 and 3/15. The deltas are **+1** and **+2** against a
+pre-registered **+3** — *no material gain* — and adding the fibre *lowers* the median
+discrimination ratio, diluting rather than sharpening. The null is readable because the
+**self-test passed**: on an injected PAC change with base shape held fixed, the fibre arm
+localized to **1.25 s** while the base missed by **14.25 s**. So the coupling estimator
+genuinely sees what the base cannot, and the negative is about **redundancy on this
+signal**, not a broken instrument. Honest consequence: on what is measured, Paper 3's
+validated content is the trace-normalized SPD base with long causal windows; the fibre,
+the Sasaki metric and the Ehresmann connection remain a construction whose value is
+demonstrated only for *coupling-carried* transitions, which eyes-open/closed is not.
+*(`fibre_ablation`)*
 
 **Structural discrimination replicates on real data, across two paradigms.** N2-versus-REM
 discrimination passes **14/15** under a permutation null (median ratio 2.79), and

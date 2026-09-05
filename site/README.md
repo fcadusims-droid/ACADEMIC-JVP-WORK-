@@ -86,6 +86,15 @@ coverage — a number nobody tagged is not checked — so the gate prints how ma
 result files carry a tagged claim. This runs in `tests.yml` on every pull request,
 not only at deploy, because it is the failure mode past reviews caught by hand.
 
+**5. The qualifications gate — the same idea applied to claims.** A number can match its
+`result.json` exactly and still mislead, if the sentence quoting it has been separated from
+the qualification that makes it honest: a pre-registered arm that did not replicate, a margin
+inside binomial noise, a threshold missed. That is version divergence between a repository
+that reports fully and a manuscript written to pass review, and the numeric gate cannot see it
+because every number is correct. `experiments/qualifications.json` pairs each guarded claim
+with a qualification that must appear in the **same paragraph**, and the build fails if the
+claim appears alone. It caught a real case on its first run.
+
 ## Building locally
 
 ```bash
