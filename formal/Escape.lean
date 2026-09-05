@@ -28,6 +28,23 @@
   in which "the horn closes by the same argument, stronger and more general" is true rather
   than rhetorical: both cells reduce to one recurrence theorem, the escaping one via the
   quotient.
+
+  WHAT THIS FILE DOES **NOT** ESTABLISH — read this before citing it. The contested step in
+  the surrounding argument is not the inference formalised here; it is the premise
+  `Bounded ψ (proj x)`: that the identity observable of an *admissible* contract really does
+  live on a compact quotient. That premise is a **hypothesis of every theorem below**, not a
+  conclusion of any of them. The lemma named `closure_hypothesis_is_bounded_reading` says so
+  in its name, and is stated separately for exactly that reason.
+
+  This matters because formalisation can lend a modelling assumption the appearance of a
+  theorem. "Machine-checked" describes the *inference* correctly and the *premise*
+  incorrectly. What is verified here is that, given a bounded measure-preserving reading, the
+  identity observable is recurrent and escape in the unread coordinate changes nothing — a
+  parity-of-proof-structure result, which is what defeats the charge that the escape branch
+  closes by an ad hoc appeal, and is all it defeats. Whether every admissible identity
+  contract factors through such a reading is unproved, is not decidable inside this file, and
+  is recorded in Paper 1 §7.5 as the first open problem the argument leaves. A reader who
+  rejects that premise loses the closure of the escaping cell and keeps everything else here.
 -/
 
 namespace JVP.Escape

@@ -60,14 +60,21 @@ $\log r = 25$. What fails universally is **non-recurrence** ($0.81$–$1.00$). T
 happens in the *radius*; an identity contract reads the *direction*; the direction
 lives on a compact quotient where the recurrence theorem applies unchanged. So the
 escaping cell closes by the *same* argument as the bounded cell — stronger and more
-general. A follow-up then removed the one caveat this had carried: the closure was
-thought to depend on a scale-free contract, but a family of **cardinal**
-(magnitude-reading) contracts — bounded, linear and exponential — all leave the
-observable recurrent too ($0.81$–$0.93$), so the horn closes under every contract
-tested and §7.5's persistence argument is vindicated by none of them. The one
-apparent persistence collapse (under an $e^{25}$ observable) is a numerical
-artefact, since bounded and linear readings of the identical system retain
-$P_f = 0.15$–$0.21$. *(`escape_endogeneity`, `escape_persistence_decider`,
+general. A follow-up widened the closure past the scale-free case: **cardinal**
+(magnitude-reading) contracts with a *bounded* or *linear* magnitude term leave the
+observable recurrent too ($0.81$–$0.93$), so §7.5's persistence argument is
+vindicated by none of them. **The closure is conditional, not general, and the
+condition is where compactness now lives.** It requires the contract to factor
+through a *bounded* reading — compactness moved from the state space to the
+observable, which the Lean file makes literal (the hypothesis is named
+`closure_hypothesis_is_bounded_reading`). The exponential ($e^{25}$) reading is
+**not testable by this instrument** rather than a confirmed artefact: fast-growing
+contracts are simultaneously the only ones that could break recurrence and the only
+ones that overflow the estimator, so the exclusion is systematic and correlated with
+the property under test — the same defect Paper 2 §8.1 identifies in someone else's
+confound. The deciding cell (an *unbounded* identity reading whose direction is
+nonetheless *open*) is empty and unreachable here, and characterising the class of
+admissible identity contracts is the argument's **first open problem**. *(`escape_endogeneity`, `escape_persistence_decider`,
 `escape_cardinal_contract`)*
 
 ---
@@ -214,7 +221,12 @@ The protocol is only worth something where it changed an outcome.
 
 ## What remains open
 
-- **Paper 1** — the escape-horn closure is now confirmed for cardinal as well as
+- **Paper 1** — the **first open problem** is now characterising the class of
+  admissible identity contracts: the escape-horn closure holds for contracts that
+  factor through a *bounded* reading (scale-free, and bounded/linear cardinal), but
+  exhaustivity over admissible contracts is a conjecture, not a result, and the cell
+  that would decide it — an unbounded identity reading with an open direction — is
+  unreachable by the present instrument. The closure extends to cardinal as well as
   scale-free contracts (`escape_cardinal_contract`) and has been **formalized in Lean**
   (`formal/Escape.lean`): the recurrence-on-the-quotient argument is machine-checked, and
   the axiom audit shows it consumes exactly `poincare_recurrence` — the same analytic
