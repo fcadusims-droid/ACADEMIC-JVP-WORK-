@@ -1,61 +1,212 @@
 [
-  {"construct": "Trace-normalized SPD base manifold", "paper": "Paper3", "where": "§3.1",
-   "exercised_by": ["real_eeg_localization", "sleep_stage_localization", "base_metric_corner"]},
-  {"construct": "Square-root metric + Cartan anti-development", "paper": "Paper3", "where": "§3.1, §6",
-   "exercised_by": ["drift_jump_confusion_sweep", "base_metric_corner", "hybrid_metric", "shared_lib_self_test"]},
-  {"construct": "Log-Euclidean and Bures-Wasserstein base metrics", "paper": "Paper3", "where": "§6",
-   "exercised_by": ["base_metric_corner", "log_euclidean_real_eeg"]},
-  {"construct": "Affine-invariant (AIRM) metric", "paper": "Paper3", "where": "§6",
-   "exercised_by": ["base_metric_corner"],
-   "note": "reached only transitively, via anti_develop('airm')"},
-  {"construct": "Girsanov path-wise drift LRT (single trajectory)", "paper": "Paper3", "where": "§6.2",
-   "exercised_by": ["shared_lib_self_test"],
-   "note": "exercised by the self-test only, never by a pre-registered experiment with a verdict"},
-  {"construct": "Poisson-Levy jump term / jump-diffusion simulation", "paper": "Paper3", "where": "§4",
-   "exercised_by": ["drift_jump_confusion_sweep", "localization_priors", "shared_lib_self_test"]},
-  {"construct": "Covariate-anchored predictability covariate (gamma_t)", "paper": "Paper3", "where": "§4.2, §6.4",
-   "exercised_by": ["localization_priors", "localization_priors_real"]},
-  {"construct": "Bipower (jump-robust) diffusion scale", "paper": "Paper3", "where": "§6.3",
-   "exercised_by": ["localization_priors", "shared_lib_self_test"]},
-  {"construct": "Fibre: normalized cross-scale (PAC) coupling", "paper": "Paper3", "where": "§3.2",
-   "exercised_by": ["fibre_ablation"],
-   "note": "UNEXERCISED until fibre_ablation; the ablation found no material gain over the base"},
-  {"construct": "Sasaki-type metric on the total space", "paper": "Paper3", "where": "§3.3",
-   "exercised_by": ["fibre_ablation"],
-   "note": "same: first exercised by the ablation, which returned no material gain"},
-  {"construct": "Ehresmann connection (canonical, parallel transport)", "paper": "Paper3", "where": "§3.3",
-   "exercised_by": "UNEXERCISED",
-   "note": "fibre_ablation uses the declared small-step approximation to transport-without-rotation, not the connection itself; the covariant derivative is never computed"},
-  {"construct": "T_eff Bartlett correction (single-band form)", "paper": "Paper3", "where": "§5.1",
-   "exercised_by": "UNEXERCISED",
-   "note": "shared_lib.t_eff_bartlett is defined and never called by any experiment"},
-  {"construct": "T_eff product form (cross-scale coupling)", "paper": "Paper3", "where": "§5.1",
-   "exercised_by": "UNEXERCISED",
-   "note": "shared_lib.t_eff_product is defined and never called; fibre_ablation estimates coupling without the d.o.f. correction"},
-  {"construct": "Statistical-complexity / Lyapunov regime demarcation", "paper": "Paper3", "where": "§7",
-   "exercised_by": "UNEXERCISED",
-   "note": "the three-regime demarcation criterion itself is never run end-to-end on a record; experiments test its components"},
-  {"construct": "Time-reversal (relaxation) asymmetry statistic", "paper": "Paper2", "where": "§12 Test One",
-   "exercised_by": ["cbra_boundary_residual"],
-   "note": "cbra_boundary_residual computes T_rev locally rather than calling shared_lib.relaxation_asymmetry, so the library implementation is itself untested"},
-  {"construct": "Idempotent covariance-rotation statistic", "paper": "Paper2", "where": "§12 Test Two",
-   "exercised_by": "UNEXERCISED",
-   "note": "shared_lib.idempotent_rotation_stat is defined and never called by any experiment"},
-  {"construct": "IAAFT multivariate surrogates", "paper": "Paper2", "where": "§12 Test Three",
-   "exercised_by": ["cbra_boundary_residual"],
-   "note": "univariate IAAFT is implemented locally inside the experiment; the MULTIVARIATE form the section specifies is not exercised, and shared_lib.iaaft_surrogate is never called"},
-  {"construct": "Criticality-complete null / branching-ratio estimator", "paper": "Paper2", "where": "§15.5",
-   "exercised_by": ["criticality_sweep", "dissociation_confound", "subcriticality_control"]},
-  {"construct": "Metabolic null resolution threshold", "paper": "Paper2", "where": "§7.2",
-   "exercised_by": ["metabolic_null_resolution"]},
-  {"construct": "Helmholtz-Hodge split of the value field", "paper": "Paper1", "where": "§7.5",
-   "exercised_by": ["rl_agents_trichotomy", "shared_lib_self_test"]},
-  {"construct": "Poincare recurrence / trichotomy classification", "paper": "Paper1", "where": "§7.5",
-   "exercised_by": ["poincare_recurrence_check", "rl_agents_trichotomy", "high_dim_trichotomy"]},
-  {"construct": "Finite-gain agency cost curve (exogenous costing)", "paper": "Paper1", "where": "§7.3",
-   "exercised_by": ["tracking_cost_curve"]},
-  {"construct": "Class G ten-condition admissibility profile", "paper": "Paper1", "where": "§8.3",
-   "exercised_by": ["class_g_coherence", "class_g_independence"]},
-  {"construct": "Escape horn closure by recurrence on the quotient", "paper": "Paper1", "where": "§7.5, §7.7",
-   "exercised_by": ["escape_endogeneity", "escape_persistence_decider", "escape_cardinal_contract"]}
+  {
+    "construct": "Trace-normalized SPD base manifold",
+    "paper": "Paper3",
+    "where": "§3.1",
+    "exercised_by": [
+      "real_eeg_localization",
+      "sleep_stage_localization",
+      "base_metric_corner"
+    ]
+  },
+  {
+    "construct": "Square-root metric + Cartan anti-development",
+    "paper": "Paper3",
+    "where": "§3.1, §6",
+    "exercised_by": [
+      "drift_jump_confusion_sweep",
+      "base_metric_corner",
+      "hybrid_metric"
+    ],
+    "unit_tested_only": true
+  },
+  {
+    "construct": "Log-Euclidean and Bures-Wasserstein base metrics",
+    "paper": "Paper3",
+    "where": "§6",
+    "exercised_by": [
+      "base_metric_corner",
+      "log_euclidean_real_eeg"
+    ]
+  },
+  {
+    "construct": "Affine-invariant (AIRM) metric",
+    "paper": "Paper3",
+    "where": "§6",
+    "exercised_by": [
+      "base_metric_corner"
+    ],
+    "note": "reached only transitively, via anti_develop('airm')"
+  },
+  {
+    "construct": "Girsanov path-wise drift LRT (single trajectory)",
+    "paper": "Paper3",
+    "where": "§6.2",
+    "exercised_by": "UNEXERCISED",
+    "note": "exercised by the self-test only, never by a pre-registered experiment with a verdict CORRECTED: previously counted as exercised because shared_lib's self-test calls it. A green unit test proves the function runs; it is not a pre-registered experiment issuing a verdict against a fixed criterion, which is the standard every other claim in this repository is held to.",
+    "unit_tested_only": true
+  },
+  {
+    "construct": "Poisson-Levy jump term / jump-diffusion simulation",
+    "paper": "Paper3",
+    "where": "§4",
+    "exercised_by": [
+      "drift_jump_confusion_sweep",
+      "localization_priors"
+    ],
+    "unit_tested_only": true
+  },
+  {
+    "construct": "Covariate-anchored predictability covariate (gamma_t)",
+    "paper": "Paper3",
+    "where": "§4.2, §6.4",
+    "exercised_by": [
+      "localization_priors",
+      "localization_priors_real"
+    ]
+  },
+  {
+    "construct": "Bipower (jump-robust) diffusion scale",
+    "paper": "Paper3",
+    "where": "§6.3",
+    "exercised_by": [
+      "localization_priors"
+    ],
+    "unit_tested_only": true
+  },
+  {
+    "construct": "Fibre: normalized cross-scale (PAC) coupling",
+    "paper": "Paper3",
+    "where": "§3.2",
+    "exercised_by": [
+      "fibre_ablation"
+    ],
+    "note": "UNEXERCISED until fibre_ablation; the ablation found no material gain over the base"
+  },
+  {
+    "construct": "Sasaki-type metric on the total space",
+    "paper": "Paper3",
+    "where": "§3.3",
+    "exercised_by": [
+      "fibre_ablation"
+    ],
+    "note": "same: first exercised by the ablation, which returned no material gain"
+  },
+  {
+    "construct": "Ehresmann connection (canonical, parallel transport)",
+    "paper": "Paper3",
+    "where": "§3.3",
+    "exercised_by": "UNEXERCISED",
+    "note": "fibre_ablation uses the declared small-step approximation to transport-without-rotation, not the connection itself; the covariant derivative is never computed"
+  },
+  {
+    "construct": "T_eff Bartlett correction (single-band form)",
+    "paper": "Paper3",
+    "where": "§5.1",
+    "exercised_by": "UNEXERCISED",
+    "note": "shared_lib.t_eff_bartlett is defined and never called by any experiment"
+  },
+  {
+    "construct": "T_eff product form (cross-scale coupling)",
+    "paper": "Paper3",
+    "where": "§5.1",
+    "exercised_by": "UNEXERCISED",
+    "note": "shared_lib.t_eff_product is defined and never called; fibre_ablation estimates coupling without the d.o.f. correction"
+  },
+  {
+    "construct": "Statistical-complexity / Lyapunov regime demarcation",
+    "paper": "Paper3",
+    "where": "§7",
+    "exercised_by": "UNEXERCISED",
+    "note": "the three-regime demarcation criterion itself is never run end-to-end on a record; experiments test its components"
+  },
+  {
+    "construct": "Time-reversal (relaxation) asymmetry statistic",
+    "paper": "Paper2",
+    "where": "§12 Test One",
+    "exercised_by": [
+      "cbra_boundary_residual"
+    ],
+    "note": "cbra_boundary_residual computes T_rev locally rather than calling shared_lib.relaxation_asymmetry, so the library implementation is itself untested"
+  },
+  {
+    "construct": "Idempotent covariance-rotation statistic",
+    "paper": "Paper2",
+    "where": "§12 Test Two",
+    "exercised_by": "UNEXERCISED",
+    "note": "shared_lib.idempotent_rotation_stat is defined and never called by any experiment"
+  },
+  {
+    "construct": "IAAFT multivariate surrogates",
+    "paper": "Paper2",
+    "where": "§12 Test Three",
+    "exercised_by": [
+      "cbra_boundary_residual"
+    ],
+    "note": "univariate IAAFT is implemented locally inside the experiment; the MULTIVARIATE form the section specifies is not exercised, and shared_lib.iaaft_surrogate is never called"
+  },
+  {
+    "construct": "Criticality-complete null / branching-ratio estimator",
+    "paper": "Paper2",
+    "where": "§15.5",
+    "exercised_by": [
+      "criticality_sweep",
+      "dissociation_confound",
+      "subcriticality_control"
+    ]
+  },
+  {
+    "construct": "Metabolic null resolution threshold",
+    "paper": "Paper2",
+    "where": "§7.2",
+    "exercised_by": [
+      "metabolic_null_resolution"
+    ]
+  },
+  {
+    "construct": "Helmholtz-Hodge split of the value field",
+    "paper": "Paper1",
+    "where": "§7.5",
+    "exercised_by": [
+      "rl_agents_trichotomy"
+    ],
+    "unit_tested_only": true
+  },
+  {
+    "construct": "Poincare recurrence / trichotomy classification",
+    "paper": "Paper1",
+    "where": "§7.5",
+    "exercised_by": [
+      "poincare_recurrence_check",
+      "rl_agents_trichotomy",
+      "high_dim_trichotomy"
+    ]
+  },
+  {
+    "construct": "Finite-gain agency cost curve (exogenous costing)",
+    "paper": "Paper1",
+    "where": "§7.3",
+    "exercised_by": [
+      "tracking_cost_curve"
+    ]
+  },
+  {
+    "construct": "Class G ten-condition admissibility profile",
+    "paper": "Paper1",
+    "where": "§8.3",
+    "exercised_by": [
+      "class_g_coherence",
+      "class_g_independence"
+    ]
+  },
+  {
+    "construct": "Escape horn closure by recurrence on the quotient",
+    "paper": "Paper1",
+    "where": "§7.5, §7.7",
+    "exercised_by": [
+      "escape_endogeneity",
+      "escape_persistence_decider",
+      "escape_cardinal_contract"
+    ]
+  }
 ]

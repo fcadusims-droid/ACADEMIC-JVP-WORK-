@@ -86,6 +86,7 @@ NAV = [
     ("results.html", "Results"),
     ("data.html", "Data"),
     ("methodology.html", "Methodology"),
+    ("coverage.html", "Coverage"),
     ("formal.html", "Formal"),
     ("reproduce.html", "Reproduce"),
 ]
@@ -772,7 +773,7 @@ def build_static_pages():
     write("results.html",
           page("Results", f'<div class="prose-wide">{res}</div>', depth=0,
                current="results.html", wide=True,
-               desc="What the 33 experiments found, summarised by paper."))
+               desc="What the experiments found, summarised by paper."))
 
     # methodology
     meth = wrap_tables(md_file_to_html(os.path.join(ROOT, "METHODOLOGY.md")))
@@ -781,6 +782,71 @@ def build_static_pages():
                current="methodology.html", wide=True,
                desc="The pre-registration protocol, and the occasions on which it cost "
                     "something."))
+
+    # coverage -- what the suite does NOT exercise, published rather than kept internal
+    try:
+        import importlib.util as _ilu
+        _spec = _ilu.spec_from_file_location("_cov", os.path.join(SITE, "check_coverage.py"))
+        _cov = _ilu.module_from_spec(_spec); _spec.loader.exec_module(_cov)
+        _public, _reached, _dead = _cov.reachability()
+        with open(os.path.join(ROOT, "experiments", "coverage.json"), encoding="utf-8") as fh:
+            _cons = json.load(fh)
+    except Exception:
+        _public, _reached, _dead, _cons = {}, set(), [], []
+
+    def _cov_rows(items):
+        out = []
+        for c in items:
+            ex = c.get("exercised_by")
+            un = ex in (None, "", "UNEXERCISED")
+            who = ("<em>none</em>" if un else
+                   ", ".join(f'<a href="experiments/{h}.html">{h}</a>'
+                             for h in ([ex] if isinstance(ex, str) else ex)))
+            tag = ' <span class="tag">unit-tested only</span>' if c.get("unit_tested_only") else ""
+            cls = ' class="miss"' if un else ""
+            out.append(
+                f"<tr{cls}><td>{html.escape(c['construct'])}{tag}</td>"
+                f"<td>{html.escape(c.get('paper',''))} {html.escape(c.get('where',''))}</td>"
+                f"<td>{who}</td>"
+                f"<td>{html.escape(c.get('note','') or '')}</td></tr>")
+        return "\n".join(out)
+
+    _un = [c for c in _cons if c.get("exercised_by") in (None, "", "UNEXERCISED")]
+    _ok = [c for c in _cons if c not in _un]
+    cov_body = f"""<h1>Coverage</h1>
+<p class="lede prose">Which constructs named in the three papers are actually exercised by a
+pre-registered experiment &mdash; and which are not.</p>
+<div class="note prose"><p>Every other gate on this site checks something the suite
+<em>does</em>. None could see what it <em>omits</em>, and that blind spot was real: half of
+Paper&nbsp;3's construction &mdash; the fibre, the Sasaki metric, the Ehresmann connection &mdash;
+had never been exercised by anything, through thirty-seven pre-registered experiments and four
+CI gates. An external reviewer found it; no check could.</p>
+<p><strong>What counts as exercised.</strong> A pre-registered experiment that issues a verdict
+against a criterion fixed in advance. A green shared-library unit test does <em>not</em> count:
+it proves a function runs, not that a claim was tested. An earlier version of this audit counted
+unit tests, which under-reported the hole it exists to measure; constructs reached only that way
+are listed as unexercised and tagged.</p></div>
+<h2>Unexercised &mdash; {len(_un)} of {len(_cons)}</h2>
+<div class="table-wrap"><table><thead><tr><th>Construct</th><th>Where</th>
+<th>Exercised by</th><th>Note</th></tr></thead><tbody>
+{_cov_rows(_un)}
+</tbody></table></div>
+<h2>Exercised</h2>
+<div class="table-wrap"><table><thead><tr><th>Construct</th><th>Where</th>
+<th>Exercised by</th><th>Note</th></tr></thead><tbody>
+{_cov_rows(_ok)}
+</tbody></table></div>
+<h2>Shared library reachability</h2>
+<p class="prose">{len(_reached)} of {len(_public)} public <code>shared_lib</code> symbols are
+reachable from an experiment or a self-test, following calls transitively (so
+<code>airm_log</code>, reached only through <code>anti_develop("airm")</code>, is not
+miscounted as dead). Unreachable:</p>
+<div class="prose"><ul>{"".join(f"<li><code>{html.escape(_public[d])}::{html.escape(d)}</code></li>" for d in _dead) or "<li><em>none</em></li>"}</ul></div>
+"""
+    write("coverage.html",
+          page("Coverage", cov_body, depth=0, current="coverage.html", wide=True,
+               desc="Which constructs the papers name are exercised by a pre-registered "
+                    "experiment, and which are not."))
 
     # data
     body = ('<h1>Data</h1>'

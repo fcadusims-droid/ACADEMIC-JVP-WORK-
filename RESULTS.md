@@ -11,6 +11,38 @@ satisfiability, the trichotomy — say nothing about whether anything instantiat
 profile. Nothing here is evidence about any real physical, biological or theological
 system.
 
+## The sum, stated in one place
+
+Each finding below is reported honestly inside its own frame. What did not exist anywhere,
+until an external reviewer performed the operation, is the sentence that adds them up — the
+operation a hostile reader does first and a calibrated author avoids, because it stings. It
+belongs here:
+
+> **In their current state the three papers are methodological and conceptual contributions
+> whose central empirical claims either do not replicate, do not beat cheaper alternatives, or
+> have not been tested.**
+
+Concretely, from the records below:
+
+- **Paper 1** — the trilemma's exhaustivity is now weakened to *bounded-reading contracts*; the
+  synthetic residue is **one** load-bearing site (the exogenous costing); the first open problem
+  may be ill-posed under the paper's own pragmatic reading of the contract; and the central
+  theorem compiles in Lean over **two undischarged axioms**.
+- **Paper 2** — the positive arm halted at **29%** against a pre-registered 60% bar and is not
+  executable on public data; what survives is the eliminative arm, which needs $n \approx 40$ per
+  condition and a subsampling-robust estimator; **§12 Test Two has never been run**.
+- **Paper 3** — the titular three-regime demarcation has **never been run end-to-end on a
+  record**; the bundle apparatus is net negative where tested; detection does not beat standard
+  baselines; and three real-data replications failed or came back qualified.
+
+This is not a retraction, and none of it is new information — every line is drawn from the
+sections below. It is the missing summary. What it forces is a question about **genre** rather
+than about any single result: read as *method papers and honest pre-registered negatives*, the
+list above is the contribution and the calibration is the currency. Read as *discovery papers*,
+they are not ready, because the discovery at the centre of each is unconfirmed or untested. The
+suite has been executed as the former. Anyone quoting these papers should know which reading
+they are buying.
+
 ---
 
 ## Paper 1 — The Cybernetic Impossibility of Conversion
