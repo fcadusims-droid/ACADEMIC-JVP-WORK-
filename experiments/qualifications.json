@@ -1,0 +1,44 @@
+[
+  {
+    "id": "P3 discrimination 14/15 carries its non-replication qualification",
+    "paper": "Paper3.md",
+    "claim": "holds in \\$14\\$ of \\$15\\$ subjects",
+    "requires": "post-hoc",
+    "why": "the PRE-REGISTERED natural-power arm did not replicate; the clean pure-amplitude control that is silent was added post-hoc and is paradigm-specific. Quoting 14/15 without that is the site-vs-abstract divergence this gate exists to prevent."
+  },
+  {
+    "id": "P3 localization 10/15 is not sold as an advantage",
+    "paper": "Paper3.md",
+    "claim": "\\$10/15\\$ versus \\$8/15\\$",
+    "requires": "binomial noise",
+    "why": "a two-recording margin on fifteen is inside binomial noise; stating the win without that reads as a demonstrated performance advantage the benchmark does not support."
+  },
+  {
+    "id": "P3 structural-scenario win carries the pre-registered shortfall",
+    "paper": "Paper3.md",
+    "claim": "best power-feature baseline's \\$0.75\\$",
+    "requires": "\\$\\+0\\.30\\$|not established at the pre-registered level",
+    "why": "the +0.25 margin falls short of the +0.30 threshold fixed in advance, so the advantage is real but not established at the pre-registered level."
+  },
+  {
+    "id": "P1 escape closure is stated conditionally, never as general",
+    "paper": "Paper1.md",
+    "claim": "closed by the \\*same\\* argument as the bounded cell",
+    "requires": "bounded\\W{0,3}reading|conditional",
+    "why": "compactness moved from the state space to the observable; the closure holds for contracts factoring through a bounded reading and exhaustivity over admissible contracts is an open problem."
+  },
+  {
+    "id": "P1 first open problem records the pragmatic-I dilemma",
+    "paper": "Paper1.md",
+    "claim": "first open problem this argument leaves",
+    "requires": "pragmatic-indexing metamodel",
+    "why": "under 2.2's pragmatic reading of I there may be no fact of the matter about admissible contracts, so exhaustivity may be declarable rather than provable. The dilemma must travel with the open problem."
+  },
+  {
+    "id": "P3 bundle apparatus carries its ablation result",
+    "paper": "Paper3.md",
+    "claim": "Sasaki-type metric of Section 3.3",
+    "requires": "no material gain",
+    "why": "the pre-registered fibre ablation found no material gain over the trace-normalized SPD base on the worked paradigm; the construction may not be presented as validated."
+  }
+]

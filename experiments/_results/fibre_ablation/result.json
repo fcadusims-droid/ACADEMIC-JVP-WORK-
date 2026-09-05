@@ -1,0 +1,67 @@
+{
+  "experiment": "fibre_ablation",
+  "question": "does the fibre (cross-scale coupling in the Sasaki-type metric) materially improve demarcation over the trace-normalized SPD base?",
+  "audit_finding": "the fibre was UNEXERCISED before this run: stats_utils.t_eff_product is never called by any experiment and no experiment builds a bundle point; every prior validated result is a property of the base alone",
+  "data": "PhysioNet eegbci eyes-open (R01) / eyes-closed (R02), real EEG",
+  "params": {
+    "low_band": [
+      8.0,
+      13.0
+    ],
+    "high_band": [
+      20.0,
+      45.0
+    ],
+    "win_sec": 2.0,
+    "step_sec": 0.25,
+    "seg_sec": 26.0,
+    "tol_sec": 2.0,
+    "n_perm": 300
+  },
+  "self_test": {
+    "fibre_err_s": 1.25,
+    "base_err_s": 14.25,
+    "passed": true
+  },
+  "arms": {
+    "A_base": {
+      "localization_hits": 10,
+      "n": 15,
+      "discrimination_pass": 7,
+      "median_ratio": 1.2583377604211194
+    },
+    "B_sasaki_literal": {
+      "localization_hits": 10,
+      "n": 15,
+      "discrimination_pass": 8,
+      "median_ratio": 1.077996236499871
+    },
+    "B_sasaki_equal": {
+      "localization_hits": 11,
+      "n": 15,
+      "discrimination_pass": 9,
+      "median_ratio": 1.1615045902184502
+    },
+    "C_fibre": {
+      "localization_hits": 2,
+      "n": 15,
+      "discrimination_pass": 3,
+      "median_ratio": 0.8741733056942893
+    }
+  },
+  "deltas_best_B_minus_A": {
+    "localization": 1,
+    "discrimination": 2
+  },
+  "preregistered_criterion": "fibre earns its place iff +3 localization hits or +3 discrimination passes with higher median ratio",
+  "fibre_carries_signal": true,
+  "scaling": {
+    "median_base_step": 0.11772522228088238,
+    "median_fibre_step": 0.12486027767338329,
+    "equalizing_factor": 0.9428556821636646
+  },
+  "verdict": "NO MATERIAL GAIN (deltas +1 localization, +2 discrimination, against a pre-registered +3), though the fibre-only control does carry signal (3/15 discrimination). The coupling is measurable but redundant with the base for these tasks: it adds no demarcation power the base does not already supply. Paper 3's bundle apparatus is not earning its place on this signal, though it is not inert either.",
+  "figures": [
+    "fibre_ablation.png"
+  ]
+}
