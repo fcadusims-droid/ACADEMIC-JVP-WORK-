@@ -20,6 +20,16 @@ So this gate measures it. Two layers:
    exercises it -- or `UNEXERCISED`. A construct may be legitimately unexercised; what
    is not legitimate is nobody knowing.
 
+   WHAT COUNTS AS EXERCISED, and why the first version of this tool was wrong. A green
+   shared-library unit test proves a function runs without raising. It is NOT a
+   pre-registered experiment issuing a verdict against a criterion fixed in advance --
+   which is the standard every other claim in this repository is held to. The first
+   version of this audit counted `shared_lib_self_test` as an exerciser, which
+   reintroduced, inside the tool built to measure slack, exactly the slack it exists to
+   measure: it would under-report the hole. Corrected, a construct reached only by a
+   unit test is `UNEXERCISED` and carries `unit_tested_only: true`, so the weaker
+   evidence is visible rather than silently promoted.
+
 The gate FAILS only on a manifest entry that is stale (claims an experiment that does
 not exist, or claims exercised for a symbol the call graph says is unreachable). An
 `UNEXERCISED` entry is reported loudly but does not fail the build: the point is that
@@ -126,6 +136,10 @@ def check(quiet=False):
             continue
         for name in ([who] if isinstance(who, str) else who):
             if name == "shared_lib_self_test":
+                errors.append(
+                    f"[{c['construct']}] lists 'shared_lib_self_test' as an exerciser. A "
+                    f"unit test is not a pre-registered experiment; mark the construct "
+                    f"UNEXERCISED with unit_tested_only: true instead.")
                 continue
             if not (results_dir / name / "result.json").exists():
                 errors.append(f"[{c['construct']}] claims exercised_by '{name}', "
@@ -141,9 +155,12 @@ def check(quiet=False):
             for s in dead:
                 print(f"    - {public[s]}::{s}")
         if unexercised:
-            print("  UNEXERCISED paper constructs:")
+            n_unit = sum(1 for c in unexercised if c.get("unit_tested_only"))
+            print(f"  UNEXERCISED paper constructs ({n_unit} of them reached by a "
+                  f"shared_lib unit test only, which does not count):")
             for c in unexercised:
-                print(f"    - {c['construct']}  ({c.get('where','?')})"
+                tag = " [unit-tested only]" if c.get("unit_tested_only") else ""
+                print(f"    - {c['construct']}  ({c.get('where','?')}){tag}"
                       f"{' -- ' + c['note'] if c.get('note') else ''}")
     for e in errors:
         print(f"  ERROR  {e}")
