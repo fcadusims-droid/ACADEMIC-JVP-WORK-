@@ -22,6 +22,12 @@ jobs:
         run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends pandoc
       - name: Every formula opens, closes and is balanced
         run: python site/check_math.py
+      - name: Coverage audit -- which named constructs does the suite exercise?
+        # The suite was rigorous about what it tests and blind about what it FAILED to
+        # test: half of Paper 3's construction was never exercised by anything, and it
+        # was an external reviewer who noticed, not any check. This measures coverage
+        # so that "we found one" becomes "we know how many".
+        run: python site/check_coverage.py
       - name: Every tagged paper number matches its result.json
         # The prose-misdescribes-a-number failure mode the latex and lean gates do not
         # cover. Manifest in experiments/claims.json; values read live from the

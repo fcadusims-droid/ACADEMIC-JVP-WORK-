@@ -115,3 +115,26 @@ links are then not checked, because the files were not built.
 `site/check_math.py` and `site/check_claims.py` additionally run on pull requests
 via `tests.yml`, so a broken formula or a drifted number is caught before it can reach
 `main` at all.
+
+**6. `site/check_coverage.py` — the gate that measures what is NOT tested.** Every gate above
+checks something the suite *does*. None could see what it *omits*, and that blind spot was real:
+thirty-seven pre-registered experiments, a numeric gate, a qualifications gate and a Lean axiom
+audit all ran green while half of Paper 3's construction — the fibre, the Sasaki metric, the
+Ehresmann connection — had never been exercised by anything at all. An external reviewer found it;
+no check could. This gate builds the call graph over `shared_lib`, seeds it with every symbol an
+experiment or self-test references, closes it transitively (so `airm_log`, reached only through
+`anti_develop("airm")`, is not miscounted as dead), and cross-checks
+`experiments/coverage.json` — a manifest of every construct the papers name, with the experiment
+that exercises it or `UNEXERCISED`. It fails on a stale claim; an `UNEXERCISED` entry is reported
+loudly but does not fail the build, because the point is that the count is known and published.
+It found **five** further unexercised constructs on its first run.
+
+**7. Verdict guards and supersessions (`experiments/verdict_guards.json`).** A result's verdict
+string is the most compressible and most citable artifact in the repository — it is what the index
+renders and what a reader copies. The index compressed each verdict to its first sentence, which
+for the most contested experiment was `THE GEODESIC DETECTOR WINS ON THE REAL TASK`, with the
+caveats two sentences further down and outside the window: a headline claim travelling without its
+qualification, inside the tool built to prevent exactly that. Guessing at caveats with a keyword
+regex matched incidental words ("TIE if within 1"), so each is declared per result and the
+compressor is required to reach it. Supersessions are declared the same way, so a synthetic result
+later overturned on real data renders as `[SUPERSEDED by …]` rather than with equal weight.

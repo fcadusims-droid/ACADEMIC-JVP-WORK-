@@ -409,14 +409,56 @@ def load_results() -> list:
     return recs
 
 
+# A verdict's first sentence is often the flattering half ("THE DETECTOR WINS"), with the
+# caveat that qualifies it further down. Compressing to sentence one is exactly the failure
+# mode the qualifications gate exists to close -- a headline claim travelling without the
+# qualification that makes it honest -- and it was doing so on this site's own index for the
+# repository's most contested experiment. Guessing at caveats with a keyword regex matched
+# incidental words ("TIE if within 1"), so the qualification is declared per result in
+# experiments/verdict_guards.json and the compressor is required to reach it.
+def _load_guards():
+    path = os.path.join(ROOT, "experiments", "verdict_guards.json")
+    if not os.path.exists(path):
+        return {}, {}
+    with open(path, encoding="utf-8") as fh:
+        d = json.load(fh)
+    return ({g["result"]: g for g in d.get("guards", [])},
+            {s_["result"]: s_ for s_ in d.get("supersessions", [])})
+
+
+GUARDS, SUPERSESSIONS = _load_guards()
+
+
 def headline(rec) -> str:
-    """The shortest honest one-liner available for an experiment."""
+    """The shortest honest one-liner available for an experiment.
+
+    Honest here means: never stop before the declared qualification, and never present a
+    superseded verdict as current. A one-liner that drops the caveat is not shorter, it is
+    different."""
     d = rec["data"]
+    slug = rec["slug"]
+    sup = SUPERSEDES_NOTE = SUPERSESSIONS.get(slug)
+    guard = GUARDS.get(slug)
     for k in ("verdict", "outcome"):
         v = d.get(k)
         if isinstance(v, str) and v.strip():
-            first = re.split(r"(?<=[.!?])\s+", v.strip())[0]
-            return first if len(first) < 400 else first[:397] + "…"
+            sents = re.split(r"(?<=[.!?])\s+", v.strip())
+            out = sents[0]
+            if guard:
+                pat = re.compile(guard["must_include"], re.I)
+                if not pat.search(out):
+                    for nxt in sents[1:]:
+                        out = out + " " + nxt
+                        if pat.search(out):
+                            break
+                        if len(out) > 700:
+                            break
+            if len(out) > 760:
+                out = out[:757] + "…"
+            if sup:
+                out = (f"[SUPERSEDED by {sup['superseded_by']}] " + out
+                       + f" — {sup['note']}")
+            return out
     st = rec.get("status")
     if st:
         txt = re.sub(r"\*\*|`", "", st["summary"])
