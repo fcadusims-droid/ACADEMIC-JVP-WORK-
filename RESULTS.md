@@ -1,4 +1,4 @@
-# Results — What the 38 Experiments Found
+# Results — What the 39 Experiments Found
 
 A reader-facing synthesis of the validation suite. Every number here is read from a
 committed `result.json`; `experiments/STATUS.md` is the authoritative per-experiment
@@ -32,8 +32,11 @@ Concretely, from the records below:
   executable on public data; what survives is the eliminative arm, which needs $n \approx 40$ per
   condition and a subsampling-robust estimator; **§12 Test Two has never been run**.
 - **Paper 3** — the titular three-regime demarcation has **never been run end-to-end on a
-  record**; the bundle apparatus is net negative where tested; detection does not beat standard
-  baselines; and three real-data replications failed or came back qualified.
+  record**, and a pre-registered Phase-0 gate found it is not merely untested but, as currently
+  defined, **not externally falsifiable**: the regimes are operationally defined by the
+  protocol's own criteria, so no independent referent exists to score against. The bundle
+  apparatus is net negative where tested; detection does not beat standard baselines; and three
+  real-data replications failed or came back qualified.
 
 This is not a retraction, and none of it is new information — every line is drawn from the
 sections below. It is the missing summary. What it forces is a question about **genre** rather
@@ -150,6 +153,20 @@ diffusion length. *(`metabolic_null_resolution`)*
 ---
 
 ## Paper 3 — The Kinematics of Geodesic Flow
+
+**The titular claim is not externally falsifiable as currently defined — the sharpest
+finding in the suite.** A Phase-0 gate, pre-registered before any corpus was inspected and
+mirroring Paper 2's `dataset_viability_gate`, asked whether *any* accessible non-synthetic corpus
+supplies external three-way drift/dispersion/collapse ground truth. **All four candidate hosts
+answered 2xx/3xx — access is not the obstacle.** PhysioNet supplies *state* labels, not kinematic
+regimes. JHU Turbulence, the strongest candidate, has a genuinely external control parameter but a
+**binary** transition, and structural rank collapse has no counterpart in it. Financial regime
+labels are *model-derived*, fitted by the competitor family. Synthetic passes by construction and
+is excluded by the pre-registered anti-rescue guard. The diagnosis comes from Paper 3 §2 itself:
+the regimes are declared *operationally defined … not domain categories*, so if they are defined
+**by** the protocol's criteria, the label *is* its output and "does it classify correctly?" has no
+independent truth-maker. What remains is calibration of the estimator, not validation of the
+taxonomy. *(`regime_groundtruth_gate`)*
 
 **The bundle apparatus does not earn its place on the worked paradigm — and it had
 never been exercised.** An external review asked which experiment isolates the fibre's

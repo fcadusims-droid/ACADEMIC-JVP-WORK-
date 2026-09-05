@@ -118,7 +118,7 @@
     "paper": "Paper3",
     "where": "§7",
     "exercised_by": "UNEXERCISED",
-    "note": "the three-regime demarcation criterion itself is never run end-to-end on a record; experiments test its components"
+    "note": "the three-regime demarcation is never run end-to-end on a record; a pre-registered Phase-0 gate (regime_groundtruth_gate) then found it is not merely untested but, as currently defined, NOT EXTERNALLY FALSIFIABLE: the regimes are operationally defined by the protocol's own criteria (§2), so no external referent exists to score against"
   },
   {
     "construct": "Time-reversal (relaxation) asymmetry statistic",
