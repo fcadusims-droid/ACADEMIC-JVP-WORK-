@@ -1,4 +1,4 @@
-# Results — What the 39 Experiments Found
+# Results — What the 43 Experiments Found
 
 A reader-facing synthesis of the validation suite. Every number here is read from a
 committed `result.json`; `experiments/STATUS.md` is the authoritative per-experiment
@@ -30,7 +30,7 @@ Concretely, from the records below:
   theorem compiles in Lean over **two undischarged axioms**.
 - **Paper 2** — the positive arm halted at **29%** against a pre-registered 60% bar and is not
   executable on public data; what survives is the eliminative arm, which needs $n \approx 40$ per
-  condition and a subsampling-robust estimator; **§12 Test Two has never been run**.
+  condition and a subsampling-robust estimator. (§12 Test Two and the multivariate IAAFT, long unexercised, are now shown executable and specific in `residual_tests_exercise`; and a dataset inventory `cbra_dataset_inventory` confirms the positive arm has no viable public venue.)
 - **Paper 3** — the titular three-regime demarcation has **never been run end-to-end on a
   record**, and a pre-registered Phase-0 gate found it is not merely untested but, as currently
   defined, **not externally falsifiable**: the regimes are operationally defined by the

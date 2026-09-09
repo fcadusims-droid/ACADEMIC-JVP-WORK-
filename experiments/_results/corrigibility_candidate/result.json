@@ -1,0 +1,31 @@
+{
+  "experiment": "corrigibility_candidate",
+  "question": "does a lexicographic-utility-heads corrigibility agent (arXiv:2507.20964) escape the trilemma as an autonomous value dynamics, or fall into a horn?",
+  "candidates": [
+    {
+      "candidate": "lexicographic_satisfiable",
+      "lambda_max": -1.885841710618979,
+      "recurrence": 0.9938503074846258,
+      "hodge_gradient": 0.9648621970698366,
+      "hodge_rotational": 0.03513780293016272,
+      "D_ag_asymptotic": 0.0,
+      "classification": "Case 1 (convergent / gradient)"
+    },
+    {
+      "candidate": "lexicographic_incommensurable",
+      "lambda_max": 5.0160050737599497e-08,
+      "recurrence": 1.0,
+      "hodge_gradient": 0.0,
+      "hodge_rotational": 8.919142398392595e-33,
+      "D_ag_asymptotic": 5.451734367919546,
+      "classification": "Case 3 (bounded recurrence / conservative)"
+    }
+  ],
+  "falsifier_found": false,
+  "preregistered_criterion": "FALSIFIER iff lambda>0 and recurrence<0.5 and D_ag>0.05 and genuine value-base reordering; else exhaustivity holds",
+  "halting_kinship_note": "arXiv:2507.20964's impossibility (deciding whether an adversarially modified agent violates corrigibility is undecidable by reduction to the halting problem) concerns the DECIDABILITY OF A PREDICATE OVER AGENT-PROGRAMS. Paper 1's Meta-Optimization Collapse Theorem is a DYNAMICAL statement about autonomous flows on a compact value space. These are different objects: the halting result quantifies over programs and their behaviour under arbitrary modification; the theorem quantifies over trajectories of a fixed flow. So \u00a72.1's 'analogy of form, not formal kinship' survives: there is a genuine halting-reduction impossibility NEARBY, but it is about the decision problem, not about the dynamical object the theorem addresses. The honest refinement for \u00a72.1 is to note the neighbouring halting result explicitly rather than to claim kinship with it.",
+  "verdict": "EXHAUSTIVITY HOLDS AGAINST THE 2025 CANDIDATE -- it falls into the horns, not outside them. The **satisfiable** lexicographic agent is Case 1 (convergent / gradient) (lambda=-1.89, gradient-dominated 0.96) with asymptotic exploration D_ag=0.000 -> it installs a FIXED higher-order objective (the lexicographic order) and collapses onto it, which is horn 1 (endogenous reabsorption, \u00a77.6) with agency vanishing at the attractor. The **incommensurable/inexhaustible** variant is Case 3 (bounded recurrence / conservative) (lambda=+0.00, R=1.00, rotational 0.00) -> bounded recurrence on the compact quotient, Case 3, not the forbidden object, exactly as Poincar\u00e9 requires. Neither realises positive-entropy-plus-non-recurrence, so neither is a fourth strategy. This is the \u00a77.6 reabsorption argument confirmed against a construction \u00a77.8 does not yet cite: lexicographic ordering is a fixed evaluative point one level up. NB the construction's actual claim is about corrigibility under an EXTERNAL principal; Paper 1 already classifies externally-occasioned change as horn 2 (if deviation-penalising tracking) or the admissible Class G cell (if a non-tracking trigger) -- neither a fourth horn. Class G filter: the satisfiable agent fails condition 2 (D_ag>0) at its attractor; the incommensurable agent has no receptivity gate (conditions 9,10) and is endogenous, so neither is a Class G occupant either.",
+  "figures": [
+    "corrigibility_candidate.png"
+  ]
+}

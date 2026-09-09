@@ -1,0 +1,200 @@
+{
+  "experiment": "scalar_vs_manifold_localization",
+  "question": "does the SPD manifold beat a scalar band-power CUSUM on within-trajectory sleep-onset localisation, with the detector held fixed?",
+  "data": "PhysioNet Sleep-EDF sleep-onset (W->N1), same records/tolerance as baseline_benchmark",
+  "n": 22,
+  "hits": {
+    "manifold_cusum": 14,
+    "scalar_cusum": 9,
+    "scalar_pelt": 6,
+    "scalar_bocpd": 3
+  },
+  "mcnemar": {
+    "manifold_only": 8,
+    "scalar_only": 3,
+    "p_value": 0.2265625
+  },
+  "preregistered_criterion": "manifold beats scalar by McNemar p<0.05 => manifold earns place; tied => H1 confirmed",
+  "per_subject": [
+    {
+      "subject": "SC4001",
+      "from": "W",
+      "to": "N1",
+      "seam": 89,
+      "manifold_cusum_hit": true,
+      "manifold_err_s": 14.0,
+      "scalar_cusum_hit": true,
+      "scalar_cp": 75,
+      "scalar_pelt_hit": true,
+      "scalar_bocpd_hit": true
+    },
+    {
+      "subject": "SC4002",
+      "from": "W",
+      "to": "N1",
+      "seam": 89,
+      "manifold_cusum_hit": true,
+      "manifold_err_s": 13.0,
+      "scalar_cusum_hit": true,
+      "scalar_cp": 69,
+      "scalar_pelt_hit": true,
+      "scalar_bocpd_hit": true
+    },
+    {
+      "subject": "SC4011",
+      "from": "W",
+      "to": "N1",
+      "seam": 89,
+      "manifold_cusum_hit": true,
+      "manifold_err_s": 16.0,
+      "scalar_cusum_hit": false,
+      "scalar_cp": 120,
+      "scalar_pelt_hit": true,
+      "scalar_bocpd_hit": true
+    },
+    {
+      "subject": "SC4021",
+      "from": "W",
+      "to": "N1",
+      "seam": 89,
+      "manifold_cusum_hit": true,
+      "manifold_err_s": 5.0,
+      "scalar_cusum_hit": true,
+      "scalar_cp": 94,
+      "scalar_pelt_hit": true,
+      "scalar_bocpd_hit": false
+    },
+    {
+      "subject": "SC4022",
+      "from": "W",
+      "to": "N1",
+      "seam": 89,
+      "manifold_cusum_hit": true,
+      "manifold_err_s": 17.0,
+      "scalar_cusum_hit": true,
+      "scalar_cp": 73,
+      "scalar_pelt_hit": true,
+      "scalar_bocpd_hit": false
+    },
+    {
+      "subject": "SC4031",
+      "from": "W",
+      "to": "N1",
+      "seam": 89,
+      "manifold_cusum_hit": false,
+      "manifold_err_s": 31.0,
+      "scalar_cusum_hit": false,
+      "scalar_cp": 58,
+      "scalar_pelt_hit": true,
+      "scalar_bocpd_hit": false
+    },
+    {
+      "subject": "SC4032",
+      "from": "W",
+      "to": "N1",
+      "seam": 89,
+      "manifold_cusum_hit": true,
+      "manifold_err_s": 3.0,
+      "scalar_cusum_hit": false,
+      "scalar_cp": 54,
+      "scalar_pelt_hit": false,
+      "scalar_bocpd_hit": false
+    },
+    {
+      "subject": "S001",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": true,
+      "scalar_cusum_hit": true
+    },
+    {
+      "subject": "S002",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": false,
+      "scalar_cusum_hit": false
+    },
+    {
+      "subject": "S003",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": true,
+      "scalar_cusum_hit": false
+    },
+    {
+      "subject": "S004",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": true,
+      "scalar_cusum_hit": false
+    },
+    {
+      "subject": "S005",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": false,
+      "scalar_cusum_hit": false
+    },
+    {
+      "subject": "S006",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": false,
+      "scalar_cusum_hit": true
+    },
+    {
+      "subject": "S007",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": false,
+      "scalar_cusum_hit": false
+    },
+    {
+      "subject": "S008",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": true,
+      "scalar_cusum_hit": false
+    },
+    {
+      "subject": "S009",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": false,
+      "scalar_cusum_hit": false
+    },
+    {
+      "subject": "S010",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": true,
+      "scalar_cusum_hit": true
+    },
+    {
+      "subject": "S011",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": true,
+      "scalar_cusum_hit": false
+    },
+    {
+      "subject": "S012",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": false,
+      "scalar_cusum_hit": true
+    },
+    {
+      "subject": "S013",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": false,
+      "scalar_cusum_hit": true
+    },
+    {
+      "subject": "S014",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": true,
+      "scalar_cusum_hit": false
+    },
+    {
+      "subject": "S015",
+      "paradigm": "eyes_open_closed",
+      "manifold_cusum_hit": true,
+      "scalar_cusum_hit": false
+    }
+  ],
+  "n_sleep": 7,
+  "n_alpha": 15,
+  "verdict": "INCONCLUSIVE / SCALAR NOT WORSE. Manifold 14/22 vs scalar 9/22 (McNemar manifold-only 8, scalar-only 3, p = 0.227); the discordant pairs are too few to resolve at p<0.05, so the manifold is not shown to beat the scalar. Reported as such. (PELT 6/22, BOCPD 3/22.)",
+  "figures": [
+    "scalar_vs_manifold.png"
+  ]
+}

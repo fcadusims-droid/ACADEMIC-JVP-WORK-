@@ -86,6 +86,7 @@ NAV = [
     ("results.html", "Results"),
     ("data.html", "Data"),
     ("methodology.html", "Methodology"),
+    ("program.html", "Program"),
     ("coverage.html", "Coverage"),
     ("formal.html", "Formal"),
     ("reproduce.html", "Reproduce"),
@@ -782,6 +783,13 @@ def build_static_pages():
                current="methodology.html", wide=True,
                desc="The pre-registration protocol, and the occasions on which it cost "
                     "something."))
+
+    # program -- the conditional program linking the three papers (kept out of the papers)
+    prog = wrap_tables(md_file_to_html(os.path.join(ROOT, "PROGRAM.md")))
+    write("program.html",
+          page("Program", f'<div class="prose-wide">{prog}</div>', depth=0,
+               current="program.html", wide=True,
+               desc="How the three papers relate, and why they are kept independent."))
 
     # coverage -- what the suite does NOT exercise, published rather than kept internal
     try:
