@@ -1,4 +1,4 @@
-# Results — What the 43 Experiments Found
+# Results — What the 44 Experiments Found
 
 A reader-facing synthesis of the validation suite. Every number here is read from a
 committed `result.json`; `experiments/STATUS.md` is the authoritative per-experiment
@@ -34,9 +34,14 @@ Concretely, from the records below:
 - **Paper 3** — the titular three-regime demarcation has **never been run end-to-end on a
   record**, and a pre-registered Phase-0 gate found it is not merely untested but, as currently
   defined, **not externally falsifiable**: the regimes are operationally defined by the
-  protocol's own criteria, so no independent referent exists to score against. The bundle
-  apparatus is net negative where tested; detection does not beat standard baselines; and three
-  real-data replications failed or came back qualified.
+  protocol's own criteria, so no independent referent exists to score against. A pre-registered
+  repair then **partially lifted that verdict for the sleep paradigm**: the drift/dispersion
+  regime binds to a human-scored external referent (AASM sleep stages) above chance (Cramér's
+  V = 0.452, p = 0.0005, mapped direction) — so a referent *does* exist for 2 of 3 regimes,
+  with collapse having no AASM counterpart by design. The bundle apparatus is net negative
+  where tested; a matched-detector head-to-head could **not** show the manifold beating a scalar
+  band-power CUSUM on within-trajectory localization (14/22 vs 9/22, p = 0.227); detection does
+  not beat standard baselines; and three real-data replications failed or came back qualified.
 
 This is not a retraction, and none of it is new information — every line is drawn from the
 sections below. It is the missing summary. What it forces is a question about **genre** rather
@@ -167,6 +172,29 @@ the regimes are declared *operationally defined … not domain categories*, so i
 **by** the protocol's criteria, the label *is* its output and "does it classify correctly?" has no
 independent truth-maker. What remains is calibration of the estimator, not validation of the
 taxonomy. *(`regime_groundtruth_gate`)*
+
+**A pre-registered repair partially lifts that verdict — for the sleep paradigm, and for
+2 of 3 regimes.** The reviewer's proposed fix was to bind the demarcation to an *external*
+human-scored referent instead of the protocol's own criteria. Pre-registered before the run:
+a fixed mapping from the dynamical regime to AASM sleep stages (drift ↔ N2/N3, dispersion ↔
+W/REM; collapse ↔ **no AASM counterpart**, declared in advance), scored on 563,242 labelled
+windows from 7 Sleep-EDF records against a within-record label-shuffle permutation null. The
+drift/dispersion regime associates with AASM structure well beyond chance — **Cramér's V =
+0.452 vs a null 95th percentile of 0.003, p = 0.0005** — and in the mapped direction (drift
+regime enriched for N2/N3: 0.41 vs 0.22 overall). So the demarcation carves something a human
+scorer independently recognises, and the "not externally falsifiable" verdict is **superseded
+for the sleep paradigm**. The ceiling is pre-registered and honest: collapse has no AASM
+counterpart, so **at most 2 of 3 regimes bind**, and the full three-regime statistical-complexity
+pipeline is still not run end-to-end as a single demarcation. One run, no tuning loop.
+*(`regime_external_referent`)*
+
+**On within-trajectory localization, the geometry is not shown to beat a scalar.** A
+matched-detector head-to-head ran the *identical* geodesic CUSUM on the trace-normalized SPD
+trajectory and on a one-line CUSUM over `log Tr(cov)` — the scalar power the manifold discards —
+pooled across both real paradigms (Sleep-EDF sleep-onset ±30 s and eyes-open/closed ±2 s,
+n = 22). Manifold **14/22** vs scalar **9/22**, McNemar discordant pairs 8 vs 3, **p = 0.227**:
+the manifold trends ahead but the paired test cannot certify superiority at p < 0.05, consistent
+with `baseline_benchmark`'s "inside binomial noise". *(`scalar_vs_manifold_localization`)*
 
 **The bundle apparatus does not earn its place on the worked paradigm — and it had
 never been exercised.** An external review asked which experiment isolates the fibre's
