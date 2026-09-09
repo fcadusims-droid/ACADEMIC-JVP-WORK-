@@ -1,4 +1,4 @@
-# Results — What the 44 Experiments Found
+# Results — What the 45 Experiments Found
 
 A reader-facing synthesis of the validation suite. Every number here is read from a
 committed `result.json`; `experiments/STATUS.md` is the authoritative per-experiment
@@ -195,6 +195,20 @@ pooled across both real paradigms (Sleep-EDF sleep-onset ±30 s and eyes-open/cl
 n = 22). Manifold **14/22** vs scalar **9/22**, McNemar discordant pairs 8 vs 3, **p = 0.227**:
 the manifold trends ahead but the paired test cannot certify superiority at p < 0.05, consistent
 with `baseline_benchmark`'s "inside binomial noise". *(`scalar_vs_manifold_localization`)*
+
+**The absolute localization numbers across the suite were inflated by a centre-bias — and
+the manifold-vs-scalar tie is not.** Every within-trajectory localization run builds the
+analysis window symmetric about the true transition, so the change point sits at the window
+centre by construction; with a tolerance band around that centre, a detector with a central
+prior scores hits for free. Measured directly: a trivial "always predict the middle" detector
+scores **22/22 (1.00)** under the centred window and **0/22 (0.00)** once the transition is
+moved off-centre — so the absolute hit rates reported here and in A1/`baseline_benchmark` are
+inflated by the construction and should be read as such. But re-running the matched-detector
+comparison off-centre leaves the *relative* result intact: manifold **10/22** vs scalar
+**10/22** (McNemar p = 1.000), so H1's inconclusive verdict is robust to the confound rather
+than an artefact of it. This is a validity control, not a power increase — n is unchanged,
+because the power-up to ~74 records is blocked this session by an external PhysioNet outage.
+*(`localization_centerbias_control`)*
 
 **The bundle apparatus does not earn its place on the worked paradigm — and it had
 never been exercised.** An external review asked which experiment isolates the fibre's

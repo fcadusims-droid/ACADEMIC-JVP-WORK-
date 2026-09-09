@@ -1,0 +1,257 @@
+{
+  "experiment": "localization_centerbias_control",
+  "question": "does the symmetric-about-the-transition analysis window inflate localization hit rates (centre-prior confound), and does H1's manifold-vs-scalar verdict survive placing the transition off-centre?",
+  "n": 22,
+  "n_sleep": 7,
+  "n_alpha": 15,
+  "centre_prior_hit_rate": {
+    "centred": 1.0,
+    "offcentre": 0.0,
+    "inflation_drop": 1.0
+  },
+  "offcentre_hits": {
+    "manifold": 10,
+    "scalar": 10
+  },
+  "offcentre_mcnemar": {
+    "manifold_only": 5,
+    "scalar_only": 5,
+    "p_value": 1.0
+  },
+  "preregistered_criterion": "inflation real iff centre-prior drop >= 0.30; H1 relative verdict robust iff off-centre McNemar is not significant either way",
+  "inflation_real": true,
+  "relative_verdict_robust": true,
+  "per_record": [
+    {
+      "subject": "SC4001",
+      "from": "W",
+      "to": "N1",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 44,
+      "n_windows": 179,
+      "offcentre_manifold_hit": true,
+      "offcentre_scalar_hit": true,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "SC4002",
+      "from": "W",
+      "to": "N1",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 44,
+      "n_windows": 179,
+      "offcentre_manifold_hit": true,
+      "offcentre_scalar_hit": false,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "SC4011",
+      "from": "W",
+      "to": "N1",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 44,
+      "n_windows": 179,
+      "offcentre_manifold_hit": false,
+      "offcentre_scalar_hit": false,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "SC4021",
+      "from": "W",
+      "to": "N1",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 44,
+      "n_windows": 179,
+      "offcentre_manifold_hit": false,
+      "offcentre_scalar_hit": true,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "SC4022",
+      "from": "W",
+      "to": "N1",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 44,
+      "n_windows": 179,
+      "offcentre_manifold_hit": true,
+      "offcentre_scalar_hit": true,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "SC4031",
+      "from": "W",
+      "to": "N1",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 44,
+      "n_windows": 179,
+      "offcentre_manifold_hit": true,
+      "offcentre_scalar_hit": false,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "SC4032",
+      "from": "W",
+      "to": "N1",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 44,
+      "n_windows": 179,
+      "offcentre_manifold_hit": false,
+      "offcentre_scalar_hit": true,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S001",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": false,
+      "offcentre_scalar_hit": false,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S002",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": false,
+      "offcentre_scalar_hit": false,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S003",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": true,
+      "offcentre_scalar_hit": false,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S004",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": true,
+      "offcentre_scalar_hit": false,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S005",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": false,
+      "offcentre_scalar_hit": false,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S006",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": false,
+      "offcentre_scalar_hit": true,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S007",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": true,
+      "offcentre_scalar_hit": true,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S008",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": false,
+      "offcentre_scalar_hit": true,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S009",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": false,
+      "offcentre_scalar_hit": false,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S010",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": false,
+      "offcentre_scalar_hit": true,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S011",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": true,
+      "offcentre_scalar_hit": true,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S012",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": true,
+      "offcentre_scalar_hit": true,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S013",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": false,
+      "offcentre_scalar_hit": false,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S014",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": true,
+      "offcentre_scalar_hit": false,
+      "offcentre_centre_prior_hit": false
+    },
+    {
+      "subject": "S015",
+      "paradigm": "eyes_open_closed",
+      "centred_centre_prior_hit": true,
+      "seam_offcentre": 52,
+      "n_windows": 153,
+      "offcentre_manifold_hit": false,
+      "offcentre_scalar_hit": false,
+      "offcentre_centre_prior_hit": false
+    }
+  ],
+  "verdict": "CENTRE-BIAS CONFIRMED AND QUANTIFIED; H1's RELATIVE VERDICT HOLDS OFF-CENTRE. The trivial centre-prior baseline scores 22/22 (1.00) under the centred window used by every localization run to date, and 0/22 (0.00) once the transition is moved off-centre -- a drop of 1.00 (>= 0.30, so the inflation \u00a72b warns about is real). So the ABSOLUTE localization hit rates reported across the suite were inflated by the symmetric-window construction and should be read as such. With the transition off-centre, the manifold-vs-scalar comparison is manifold 10/22 vs scalar 10/22 (McNemar manifold-only 5, scalar-only 5, p = 1.000): the manifold is still not certified superior (nor inferior), so H1's INCONCLUSIVE verdict is robust to the confound -- the paired comparison was not an artefact of the centre prior. Not a power increase: n is unchanged from H1 (PhysioNet unreachable this session).",
+  "figures": [
+    "centerbias_control.png"
+  ]
+}
