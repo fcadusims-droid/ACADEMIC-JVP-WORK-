@@ -117,8 +117,8 @@
     "construct": "Statistical-complexity / Lyapunov regime demarcation",
     "paper": "Paper3",
     "where": "§7",
-    "exercised_by": "UNEXERCISED",
-    "note": "the three-regime demarcation is never run end-to-end on a record; a pre-registered Phase-0 gate (regime_groundtruth_gate) then found it is not merely untested but, as currently defined, NOT EXTERNALLY FALSIFIABLE: the regimes are operationally defined by the protocol's own criteria (§2), so no external referent exists to score against"
+    "exercised_by": "regime_external_referent",
+    "note": "PARTIALLY exercised. A pre-registered Phase-0 gate (regime_groundtruth_gate) first found the three-regime demarcation NOT EXTERNALLY FALSIFIABLE as defined -- the regimes are operationally fixed by the protocol's own criteria (§2), so no external referent existed to score against. regime_external_referent then tested the reviewer's repair: a pre-registered mapping from the dynamical regime (drift/dispersion) to AASM sleep stages, scored on 7 Sleep-EDF records against a permutation null. It binds above chance (Cramer's V = 0.452 vs null 95th pct 0.003, p = 0.0005, mapped direction), so an external referent DOES exist for the drift/dispersion contrast, superseding the Phase-0 verdict for the sleep paradigm. Ceiling declared in advance: collapse has no AASM counterpart, so at most 2 of 3 regimes bind; the full three-regime statistical-complexity pipeline is still not run end-to-end as a single demarcation"
   },
   {
     "construct": "Time-reversal (relaxation) asymmetry statistic",

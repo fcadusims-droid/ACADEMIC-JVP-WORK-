@@ -1,0 +1,18 @@
+{
+  "experiment": "regime_external_referent",
+  "question": "does a pre-registered mapping from the protocol's dynamical regimes to AASM sleep stages bind above chance, repairing the falsifiability gate?",
+  "n_labelled_windows": 563242,
+  "n_records": 7,
+  "cramers_v_observed": 0.4524269437743693,
+  "null_p95": 0.0026142460799346385,
+  "p_value": 0.0004997501249375312,
+  "direction_ok": true,
+  "frac_N2N3_in_drift_regime": 0.4061837075226102,
+  "frac_N2N3_overall": 0.2151029220122079,
+  "preregistered_criterion": "V > null 95th pct AND mapped direction => partial repair (2/3 regimes); collapse has no AASM counterpart by design",
+  "repaired": true,
+  "verdict": "PARTIAL REPAIR -- the demarcation binds to AASM for 2 of 3 regimes. The protocol's drift-vs-dispersion regime is associated with AASM stage structure beyond chance (Cram\u00e9r's V = 0.452 vs null 95th pct 0.003, p = 0.0005), in the mapped direction (drift regime enriched for N2/N3: 0.41 vs 0.22 overall). So an external, human-scored referent exists for at least the drift/dispersion contrast, and the Phase-0 'not externally falsifiable' verdict is superseded for the sleep paradigm -- with the pre-registered ceiling that collapse has no AASM counterpart, so at most 2 of 3 regimes bind.",
+  "figures": [
+    "regime_external_referent.png"
+  ]
+}
