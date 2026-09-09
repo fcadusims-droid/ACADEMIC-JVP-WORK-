@@ -225,29 +225,44 @@ def main():
     cp_rate_off = cp_off / n
     inflation = cp_rate_centred - cp_rate_off
     inflation_real = inflation >= 0.30
-    # H1's verdict was INCONCLUSIVE / scalar-not-worse: manifold not certified superior AND
-    # not certified inferior. Robust iff the off-centre paired test lands the same way.
+    # Pull H1's CENTRED manifold/scalar hits from its committed result, so the centred->off-centre
+    # collapse is stated from data rather than hard-coded.
+    h1_man = h1_sca = None
+    try:
+        h1 = json.load(open(os.path.join(os.path.dirname(RESULTS_DIR),
+                                         "scalar_vs_manifold_localization", "result.json")))
+        h1_man = h1["hits"]["manifold_cusum"]; h1_sca = h1["hits"]["scalar_cusum"]
+    except Exception:
+        pass
+    # The pre-registered boolean: did the paired verdict flip? (not significant either way = no flip)
     manifold_superior = (p_mcnemar < 0.05 and b > c)
     manifold_inferior = (p_mcnemar < 0.05 and c > b)
-    relative_robust = not (manifold_superior or manifold_inferior)
+    verdict_flipped = manifold_superior or manifold_inferior
+    relative_robust = not verdict_flipped
 
+    centred_lead = (f"Centred, H1 had the manifold ahead {h1_man}/{n} vs {h1_sca}/{n}; "
+                    if h1_man is not None else "")
     verdict = (
-        f"CENTRE-BIAS CONFIRMED AND QUANTIFIED; H1's RELATIVE VERDICT {'HOLDS' if relative_robust else 'DOES NOT HOLD'} OFF-CENTRE. "
+        f"CENTRE-BIAS CONFIRMED AND QUANTIFIED, AND IT WAS PROPPING UP THE MANIFOLD'S ONLY LEAD. "
         f"The trivial centre-prior baseline scores {cp_centred}/{n} ({cp_rate_centred:.2f}) under the "
         f"centred window used by every localization run to date, and {cp_off}/{n} ({cp_rate_off:.2f}) "
         f"once the transition is moved off-centre -- a drop of {inflation:.2f} "
         f"({'>= 0.30, so the inflation §2b warns about is real' if inflation_real else '< 0.30'}). "
         f"So the ABSOLUTE localization hit rates reported across the suite were inflated by the "
-        f"symmetric-window construction and should be read as such. "
-        f"With the transition off-centre, the manifold-vs-scalar comparison is "
+        f"symmetric-window construction and must be read as such. "
+        f"{centred_lead}with the transition off-centre the comparison is a DEAD TIE: "
         f"manifold {man}/{n} vs scalar {sca}/{n} (McNemar manifold-only {b}, scalar-only {c}, "
-        f"p = {p_mcnemar:.3f}): "
-        + ("the manifold is still not certified superior (nor inferior), so H1's INCONCLUSIVE "
-           "verdict is robust to the confound -- the paired comparison was not an artefact of the "
-           "centre prior." if relative_robust else
-           "the paired verdict FLIPS off-centre, so H1's comparison was confounded by the centre "
+        f"p = {p_mcnemar:.3f}). "
+        + ("The pre-registered paired verdict did not flip (not significant either way), but the "
+           "honest reading is not that H1 'survives': the manifold's small centred lead was in "
+           "good part a centring artefact, and on the cleanest test available the geometry adds "
+           "NOTHING over a one-line scalar band-power CUSUM. The update runs against the manifold "
+           "-- it lowers, rather than leaves neutral, the prior for a properly powered rematch."
+           if relative_robust else
+           "The paired verdict FLIPS off-centre, so H1's comparison was confounded by the centre "
            "prior and must be re-read.")
-        + " Not a power increase: n is unchanged from H1 (PhysioNet unreachable this session)."
+        + " Not a power increase: n is unchanged from H1 (downloads blocked in this session by an "
+          "environment-side egress-TLS failure for the data hosts, not a PhysioNet outage)."
     )
 
     # figure
@@ -273,12 +288,17 @@ def main():
         "n": n, "n_sleep": len(sleep), "n_alpha": len(alpha),
         "centre_prior_hit_rate": {"centred": cp_rate_centred, "offcentre": cp_rate_off,
                                    "inflation_drop": inflation},
+        "h1_centred_hits": {"manifold": h1_man, "scalar": h1_sca},
         "offcentre_hits": {"manifold": man, "scalar": sca},
         "offcentre_mcnemar": {"manifold_only": b, "scalar_only": c, "p_value": p_mcnemar},
-        "preregistered_criterion": ("inflation real iff centre-prior drop >= 0.30; H1 relative "
-                                    "verdict robust iff off-centre McNemar is not significant either way"),
+        "preregistered_criterion": ("inflation real iff centre-prior drop >= 0.30; paired verdict "
+                                    "flips iff off-centre McNemar is significant either way"),
         "inflation_real": bool(inflation_real),
-        "relative_verdict_robust": bool(relative_robust),
+        "paired_verdict_flipped_offcentre": bool(verdict_flipped),
+        "honest_reading": ("the manifold's centred lead was largely a centring artefact; off-centre "
+                           "it ties the scalar exactly, so the geometry is not shown to add anything "
+                           "on within-trajectory localisation, and the prior for a powered rematch "
+                           "moves against it, not to neutral"),
         "per_record": rows,
         "verdict": verdict,
         "figures": ["centerbias_control.png"],

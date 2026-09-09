@@ -40,7 +40,9 @@ Concretely, from the records below:
   V = 0.452, p = 0.0005, mapped direction) — so a referent *does* exist for 2 of 3 regimes,
   with collapse having no AASM counterpart by design. The bundle apparatus is net negative
   where tested; a matched-detector head-to-head could **not** show the manifold beating a scalar
-  band-power CUSUM on within-trajectory localization (14/22 vs 9/22, p = 0.227); detection does
+  band-power CUSUM on within-trajectory localization (14/22 vs 9/22, p = 0.227 — and once the
+  centre-bias confound is removed the two tie exactly, 10/22 vs 10/22, so the manifold's small
+  lead was largely a centring artefact); detection does
   not beat standard baselines; and three real-data replications failed or came back qualified.
 
 This is not a retraction, and none of it is new information — every line is drawn from the
@@ -197,18 +199,22 @@ the manifold trends ahead but the paired test cannot certify superiority at p < 
 with `baseline_benchmark`'s "inside binomial noise". *(`scalar_vs_manifold_localization`)*
 
 **The absolute localization numbers across the suite were inflated by a centre-bias — and
-the manifold-vs-scalar tie is not.** Every within-trajectory localization run builds the
-analysis window symmetric about the true transition, so the change point sits at the window
+removing it erased the manifold's only lead.** Every within-trajectory localization run builds
+the analysis window symmetric about the true transition, so the change point sits at the window
 centre by construction; with a tolerance band around that centre, a detector with a central
 prior scores hits for free. Measured directly: a trivial "always predict the middle" detector
 scores **22/22 (1.00)** under the centred window and **0/22 (0.00)** once the transition is
 moved off-centre — so the absolute hit rates reported here and in A1/`baseline_benchmark` are
-inflated by the construction and should be read as such. But re-running the matched-detector
-comparison off-centre leaves the *relative* result intact: manifold **10/22** vs scalar
-**10/22** (McNemar p = 1.000), so H1's inconclusive verdict is robust to the confound rather
-than an artefact of it. This is a validity control, not a power increase — n is unchanged,
-because the power-up to ~74 records is blocked this session by an external PhysioNet outage.
-*(`localization_centerbias_control`)*
+inflated by the construction and should be read as such. The sharper consequence is for the H1
+comparison: centred, the manifold led the scalar **14/22 vs 9/22**; with the centre bias removed
+that collapses to a **dead tie, 10/22 vs 10/22 (McNemar p = 1.000)**. So the manifold's small
+numerical lead was in good part a centring artefact, and on the cleanest test available the
+geometry does **not** beat a one-line band-power CUSUM — the honest update runs *against* the
+manifold, and it lowers rather than leaves neutral the prior for a properly powered rematch. This
+is a validity control, not a power increase: n is unchanged because the power-up to ~74 records
+is blocked in *this session* by an environment-side egress-TLS failure for the data hosts (not a
+PhysioNet outage — the site is reachable elsewhere); the rematch is pre-registered and awaits an
+environment that can reach the records. *(`localization_centerbias_control`)*
 
 **The bundle apparatus does not earn its place on the worked paradigm — and it had
 never been exercised.** An external review asked which experiment isolates the fibre's

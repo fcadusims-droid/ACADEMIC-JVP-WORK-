@@ -9,6 +9,10 @@
     "offcentre": 0.0,
     "inflation_drop": 1.0
   },
+  "h1_centred_hits": {
+    "manifold": 14,
+    "scalar": 9
+  },
   "offcentre_hits": {
     "manifold": 10,
     "scalar": 10
@@ -18,9 +22,10 @@
     "scalar_only": 5,
     "p_value": 1.0
   },
-  "preregistered_criterion": "inflation real iff centre-prior drop >= 0.30; H1 relative verdict robust iff off-centre McNemar is not significant either way",
+  "preregistered_criterion": "inflation real iff centre-prior drop >= 0.30; paired verdict flips iff off-centre McNemar is significant either way",
   "inflation_real": true,
-  "relative_verdict_robust": true,
+  "paired_verdict_flipped_offcentre": false,
+  "honest_reading": "the manifold's centred lead was largely a centring artefact; off-centre it ties the scalar exactly, so the geometry is not shown to add anything on within-trajectory localisation, and the prior for a powered rematch moves against it, not to neutral",
   "per_record": [
     {
       "subject": "SC4001",
@@ -250,7 +255,7 @@
       "offcentre_centre_prior_hit": false
     }
   ],
-  "verdict": "CENTRE-BIAS CONFIRMED AND QUANTIFIED; H1's RELATIVE VERDICT HOLDS OFF-CENTRE. The trivial centre-prior baseline scores 22/22 (1.00) under the centred window used by every localization run to date, and 0/22 (0.00) once the transition is moved off-centre -- a drop of 1.00 (>= 0.30, so the inflation \u00a72b warns about is real). So the ABSOLUTE localization hit rates reported across the suite were inflated by the symmetric-window construction and should be read as such. With the transition off-centre, the manifold-vs-scalar comparison is manifold 10/22 vs scalar 10/22 (McNemar manifold-only 5, scalar-only 5, p = 1.000): the manifold is still not certified superior (nor inferior), so H1's INCONCLUSIVE verdict is robust to the confound -- the paired comparison was not an artefact of the centre prior. Not a power increase: n is unchanged from H1 (PhysioNet unreachable this session).",
+  "verdict": "CENTRE-BIAS CONFIRMED AND QUANTIFIED, AND IT WAS PROPPING UP THE MANIFOLD'S ONLY LEAD. The trivial centre-prior baseline scores 22/22 (1.00) under the centred window used by every localization run to date, and 0/22 (0.00) once the transition is moved off-centre -- a drop of 1.00 (>= 0.30, so the inflation \u00a72b warns about is real). So the ABSOLUTE localization hit rates reported across the suite were inflated by the symmetric-window construction and must be read as such. Centred, H1 had the manifold ahead 14/22 vs 9/22; with the transition off-centre the comparison is a DEAD TIE: manifold 10/22 vs scalar 10/22 (McNemar manifold-only 5, scalar-only 5, p = 1.000). The pre-registered paired verdict did not flip (not significant either way), but the honest reading is not that H1 'survives': the manifold's small centred lead was in good part a centring artefact, and on the cleanest test available the geometry adds NOTHING over a one-line scalar band-power CUSUM. The update runs against the manifold -- it lowers, rather than leaves neutral, the prior for a properly powered rematch. Not a power increase: n is unchanged from H1 (downloads blocked in this session by an environment-side egress-TLS failure for the data hosts, not a PhysioNet outage).",
   "figures": [
     "centerbias_control.png"
   ]
