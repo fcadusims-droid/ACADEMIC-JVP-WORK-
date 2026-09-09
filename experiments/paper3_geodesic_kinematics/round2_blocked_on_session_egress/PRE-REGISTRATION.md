@@ -17,9 +17,12 @@ PhysioNet outage — consistent with the repo having previously downloaded its 9
 records from the same site. It is still not something to route around from inside this session
 (disabling TLS verification is prohibited, and the egress proxy's upstream view is not under this
 session's control), so the downloads remain unavailable **here**. The correct remedy is **not**
-to wait for PhysioNet: it is to run these items from an environment that reaches these hosts —
-the maintainer's own machine, or a fresh session whose egress path validates them. Each item
-below is a straightforward run there; only the local sandbox blocks it.
+to wait for PhysioNet: it is to run these items from an environment that reaches these hosts.
+An empirical probe settled *which* environment: a fresh session in the **other** anthropic_cloud
+environment fails identically (`SSLCertVerificationError` on physionet, arXiv fine), so a fresh
+cloud session does **not** help — both cloud egress paths share the fault. The path that works is
+one outside that egress: the maintainer's own machine (confirmed reachable), or any non-cloud
+runner. Each item below is a straightforward run there; only the cloud sandbox's egress blocks it.
 
 ## Item 1 — H1 power-up (Paper 3, extends `scalar_vs_manifold_localization`)
 `scalar_vs_manifold_localization` returned INCONCLUSIVE at n=22 (manifold 14/22 vs scalar 9/22,
