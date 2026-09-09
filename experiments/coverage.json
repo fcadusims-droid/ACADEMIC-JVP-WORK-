@@ -133,17 +133,20 @@
     "construct": "Idempotent covariance-rotation statistic",
     "paper": "Paper2",
     "where": "§12 Test Two",
-    "exercised_by": "UNEXERCISED",
-    "note": "shared_lib.idempotent_rotation_stat is defined and never called by any experiment"
+    "exercised_by": [
+      "residual_tests_exercise"
+    ],
+    "note": "Paper 2 §12 Test Two; exercised by residual_tests_exercise, which verifies the specificity §15.4 asserts (fires on eigenframe rotation, silent on surge and rescale). Limitation recorded there: the statistic keys on the leading eigenvector."
   },
   {
     "construct": "IAAFT multivariate surrogates",
     "paper": "Paper2",
     "where": "§12 Test Three",
     "exercised_by": [
-      "cbra_boundary_residual"
+      "cbra_boundary_residual",
+      "residual_tests_exercise"
     ],
-    "note": "univariate IAAFT is implemented locally inside the experiment; the MULTIVARIATE form the section specifies is not exercised, and shared_lib.iaaft_surrogate is never called"
+    "note": "the genuine MULTIVARIATE form (cross-spectrum-preserving) is exercised by residual_tests_exercise -- calibrated on linear VAR, powered on coupled Henon, and reproduces §12.3 honest limit (Lorenz also rejects). cbra_boundary_residual uses a local univariate form."
   },
   {
     "construct": "Criticality-complete null / branching-ratio estimator",

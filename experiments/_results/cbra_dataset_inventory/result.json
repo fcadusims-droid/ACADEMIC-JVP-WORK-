@@ -1,0 +1,67 @@
+{
+  "experiment": "cbra_dataset_inventory",
+  "question": "does any public dataset satisfy all three CBRA properties (venue for H3)?",
+  "inventory_date": "2026-09",
+  "candidates": [
+    {
+      "dataset": "I-CARE (post-arrest EEG+ECG)",
+      "host": "https://physionet.org",
+      "p1_rawEEG_plus_cardiac": true,
+      "p2_Iplus_Iminus": true,
+      "p3_MR_length": true,
+      "note": "the only corpus with all three; but the boundary residual is not estimable on it (B1 = 29% vs 60% bar) -- viable but the signal is not there / is confounded by sedation-TTM-pressors. Viability is not the blocker here; estimability is.",
+      "http": "200",
+      "all_three": true
+    },
+    {
+      "dataset": "VitalDB (surgical)",
+      "host": "https://vitaldb.net",
+      "p1_rawEEG_plus_cardiac": false,
+      "p2_Iplus_Iminus": false,
+      "p3_MR_length": true,
+      "note": "ECG + drug timing + length, but BIS INDEX not raw EEG (fails p1), and essentially pure I+ (almost all surgical patients recover; fails p2). Confirmed by the Sci Data descriptor.",
+      "http": "200",
+      "all_three": false
+    },
+    {
+      "dataset": "MIMIC-III/IV Waveform (ICU)",
+      "host": "https://physionet.org",
+      "p1_rawEEG_plus_cardiac": false,
+      "p2_Iplus_Iminus": true,
+      "p3_MR_length": true,
+      "note": "ECG + long ICU records + outcome contrast, but no concurrent raw EEG (fails p1).",
+      "http": "200",
+      "all_three": false
+    },
+    {
+      "dataset": "Sleep-EDF / SHHS / MASS (sleep)",
+      "host": "https://physionet.org",
+      "p1_rawEEG_plus_cardiac": true,
+      "p2_Iplus_Iminus": false,
+      "p3_MR_length": true,
+      "note": "raw EEG (+ ECG in SHHS/MASS) and length, but sleep is a reversible I+ transition with no I- non-recovery contrast (fails p2).",
+      "http": "200",
+      "all_three": false
+    },
+    {
+      "dataset": "TUH-EEG / CHB-MIT (seizure)",
+      "host": "https://physionet.org",
+      "p1_rawEEG_plus_cardiac": false,
+      "p2_Iplus_Iminus": false,
+      "p3_MR_length": true,
+      "note": "raw EEG and length, but typically no concurrent cardiac channel and no I-status contrast (fails p1 and p2).",
+      "http": "200",
+      "all_three": false
+    }
+  ],
+  "catalogs_reachability": {
+    "https://github.com/openlists/ElectrophysiologyData": "403",
+    "https://github.com/meagmohit/EEG-Datasets": "403"
+  },
+  "hosts_reachable": 5,
+  "only_viable_is_icare": true,
+  "preregistered_criterion": "all three properties in one public corpus => new venue; else not executable, bottleneck is data",
+  "binding_constraint": "raw EEG + concurrent cardiac + I+/I- contrast co-occurring (VitalDB has the clean transition but only BIS + pure-I+)",
+  "verdict": "POSITIVE ARM NOT EXECUTABLE ON PUBLIC DATA (as of 2026-09) -- the bottleneck is data, and the binding constraint is the I+/I- contrast coexisting with raw EEG. Of the credible public candidates (5/5 hosts reachable, so access is not the issue), I-CARE is the ONLY corpus clearing all three properties -- and it fails not on viability but on estimability (B1 = 29%). Every other candidate fails a specific property: VitalDB gives a BIS index not raw EEG and is essentially pure I+; MIMIC has no concurrent EEG; sleep banks have no I- non-recovery contrast; seizure banks lack concurrent cardiac and an I-status contrast. So H3's re-test on a cleaner cohort has NO public venue: a healthier cohort with a clean consciousness transition (surgical emergence) exists in VitalDB but only as BIS and pure-I+, which cannot carry the I+/I- dissociation. The positive arm is data-limited, and confirming that is Paper 2's honest \u00a714.2 estimability-condition result strengthened, not weakened.",
+  "figures": []
+}

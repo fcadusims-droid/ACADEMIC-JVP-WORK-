@@ -1,0 +1,48 @@
+{
+  "experiment": "residual_tests_exercise",
+  "register": "syntactic-consistency (Paper 2 \u00a715.1) -- no biological claim",
+  "self_test": {
+    "max_cross_corr_deviation": 0.001675474535966781,
+    "passed": true
+  },
+  "test_two": {
+    "angle_genuine_rotation": 0.6000000000000001,
+    "angle_heavy_tailed_surge": 0.0,
+    "angle_pure_rescale": 0.0,
+    "angle_eigenvalue_reorder_descriptive": 1.5707963267948966,
+    "fire_bar": 0.3,
+    "silent_bar": 0.1,
+    "limitation_note": "the statistic keys on the LEADING eigenvector, so an eigenvalue reordering that promotes a minor axis trips it (angle ~pi/2) though the eigenvector set is unchanged",
+    "passed": true
+  },
+  "test_three": {
+    "linear_VAR": {
+      "reject_rate": 0.05,
+      "median_emp_p": 0.375,
+      "n_rep": 20
+    },
+    "coupled_henon": {
+      "reject_rate": 1.0,
+      "median_emp_p": 0.01,
+      "n_rep": 20
+    },
+    "lorenz_chaos": {
+      "reject_rate": 1.0,
+      "median_emp_p": 0.01,
+      "n_rep": 20
+    },
+    "linear_calibrated": true,
+    "nonlinear_powered": true,
+    "lorenz_rejects_as_declared_limit": true
+  },
+  "preregistered_criteria": {
+    "test_two_fire": 0.3,
+    "test_two_silent": 0.1,
+    "test_three_rate_bar": 0.95,
+    "alpha": 0.05
+  },
+  "verdict": "BOTH TESTS EXECUTABLE AND SPECIFIC, and the declared limit reproduced. Test Two fires on a genuine eigenframe rotation (0.60 rad) and is silent on a heavy-tailed surge (0.00) and a pure rescaling (0.00) -- the specificity \u00a715.4 asserts, now checked. Multivariate IAAFT is calibrated (rejects the linear-noise null in only 5% of linear-VAR repeats) and powered (rejects in 100% of nonlinear repeats). Crucially it reproduces \u00a712.3's honest limit: the Lorenz chaotic generator ALSO rejects the null (100%), confirming the filter kills only the linear-stochastic null -- a nonlinear-but-non-boundary system passes. The \u00a712 abstract claims are therefore backed by an executable, specific instrument, with the eliminative scope the paper already concedes. Syntactic-consistency only; no biological claim.",
+  "figures": [
+    "residual_tests.png"
+  ]
+}
