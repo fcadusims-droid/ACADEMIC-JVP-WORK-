@@ -1,18 +1,25 @@
-# Pre-registration — Round-2 data items blocked on the PhysioNet outage
+# Pre-registration — Round-2 data items blocked on this session's egress TLS path
 
-**Status:** pre-registered, NOT run. Blocked by an external outage. No `result.json`, so none
+**Status:** pre-registered, NOT run. Blocked by this session's egress TLS path (see corrected diagnosis below), not by a global PhysioNet outage. No `result.json`, so none
 of these is counted as a completed experiment. The designs are fixed here *before* data access
 precisely so that, when the data becomes reachable, they cannot be retro-fitted to a result.
 
-## The blocker (recorded, outcome-independent)
-On 2026-09-09 `physionet.org` presents an **expired TLS certificate**: every download fails
-with `certificate verify failed: certificate has expired`, through the session's egress proxy,
-which correctly refuses it. This is host-specific — arXiv, Google and the general web resolve
-`200` through the same proxy, and the proxy reports no relay failures — and it is not something
-to route around (disabling TLS verification is prohibited and would be wrong). So no *new*
-PhysioNet record (Sleep-EDF beyond the 9 cached, I-CARE EEG, SHHS) can be fetched this session.
-Only the locally cached data is available. The items below wait for PhysioNet's certificate to
-be renewed; each is a straightforward run once it is.
+## The blocker (recorded, outcome-independent) — corrected diagnosis
+Every download from `physionet.org` in **this session** fails with `certificate verify failed:
+certificate has expired`, deterministically, through the session's egress proxy. The first
+write-up of this attributed it to PhysioNet serving an expired certificate to the world and
+said to wait for a renewal. **That was wrong, and is corrected here.** The repository maintainer
+independently confirmed that `physionet.org` serves normally from other networks (all 197
+Sleep-EDF Expanded records, 8.1 GB, reachable), and `sleepdata.org` (NSRR) fails the same way
+here while arXiv and Google resolve `200` through the same proxy. So the fault is **environment-
+/session-local** — this egress path's TLS view of a class of research-data hosts, not a global
+PhysioNet outage — consistent with the repo having previously downloaded its 9 cached Sleep-EDF
+records from the same site. It is still not something to route around from inside this session
+(disabling TLS verification is prohibited, and the egress proxy's upstream view is not under this
+session's control), so the downloads remain unavailable **here**. The correct remedy is **not**
+to wait for PhysioNet: it is to run these items from an environment that reaches these hosts —
+the maintainer's own machine, or a fresh session whose egress path validates them. Each item
+below is a straightforward run there; only the local sandbox blocks it.
 
 ## Item 1 — H1 power-up (Paper 3, extends `scalar_vs_manifold_localization`)
 `scalar_vs_manifold_localization` returned INCONCLUSIVE at n=22 (manifold 14/22 vs scalar 9/22,
