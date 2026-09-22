@@ -1,0 +1,56 @@
+{
+  "posthoc": true,
+  "pooled_V": {
+    "geo_vol": 0.4524269437743693,
+    "delta_level": 0.193988719428382,
+    "delta_vol": 0.011542567740250543
+  },
+  "best_delta": "delta_level",
+  "wilcoxon_p_geo_minus_delta": 0.0078125,
+  "attribution_holds": true,
+  "per_record": [
+    {
+      "record": "SC4001",
+      "V_geo_vol": 0.3972700860508633,
+      "V_delta_level": 0.24111472148813345,
+      "V_delta_vol": 0.17790606832333203
+    },
+    {
+      "record": "SC4002",
+      "V_geo_vol": 0.44563822130920944,
+      "V_delta_level": 0.25317174605299125,
+      "V_delta_vol": 0.18571412331629972
+    },
+    {
+      "record": "SC4011",
+      "V_geo_vol": 0.5566569016586935,
+      "V_delta_level": 0.13360835287718864,
+      "V_delta_vol": 0.2007208683270273
+    },
+    {
+      "record": "SC4021",
+      "V_geo_vol": 0.4220729180463922,
+      "V_delta_level": 0.32612171079828856,
+      "V_delta_vol": 0.008801710287547752
+    },
+    {
+      "record": "SC4022",
+      "V_geo_vol": 0.5161902796729009,
+      "V_delta_level": 0.06642133493811371,
+      "V_delta_vol": 0.035299139611670055
+    },
+    {
+      "record": "SC4031",
+      "V_geo_vol": 0.4056505768255813,
+      "V_delta_level": 0.19666346041788213,
+      "V_delta_vol": 0.07262153190012134
+    },
+    {
+      "record": "SC4032",
+      "V_geo_vol": 0.42620636305273324,
+      "V_delta_level": 0.1323533776483793,
+      "V_delta_vol": 0.11967453500182602
+    }
+  ],
+  "verdict": "POST-HOC: pooled V geo_vol 0.452, relative-delta level 0.194, relative-delta volatility 0.012; per-record geo minus best delta (delta_level) one-sided Wilcoxon p = 0.0078. The geometric volatility still binds more strongly than the delta-power baselines: the attribution clause of verdict (A) stands against the strongest scalar competitor tried."
+}

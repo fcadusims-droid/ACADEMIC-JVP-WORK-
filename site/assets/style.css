@@ -478,3 +478,31 @@ ul.plain li { margin: 0.5rem 0; }
   padding: 0.7rem 0.9rem;
   margin: 1.2rem 0;
 }
+
+
+/* --------------------------------------------------------------------------
+   AI-assistance disclosure banner: shown on every page, deliberately loud.
+   -------------------------------------------------------------------------- */
+aside.ai-banner {
+  background: var(--panel);
+  border-top: 4px solid var(--warn);
+  border-bottom: 4px solid var(--warn);
+  color: var(--ink);
+  font-family: var(--sans);
+}
+aside.ai-banner .ai-banner-inner {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1.1rem 1.5rem;
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+aside.ai-banner p { margin: 0.35rem 0; }
+aside.ai-banner .ai-banner-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--warn);
+  letter-spacing: 0.01em;
+}
+aside.ai-banner .ai-banner-links a { font-weight: 600; }
+.ai-disclosure h1 { color: var(--warn); }

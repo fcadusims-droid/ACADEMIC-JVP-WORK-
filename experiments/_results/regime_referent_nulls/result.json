@@ -1,0 +1,106 @@
+{
+  "experiment": "regime_referent_nulls",
+  "question": "does H2's regime-vs-AASM association survive dependence-preserving nulls, and is it attributable to the geometry rather than scalar non-stationarity?",
+  "n_records": 7,
+  "records_skipped": [
+    "SC4012: OSError"
+  ],
+  "records_explanation": "9 Sleep-EDF PSGs cached locally (downloads blocked by the cloud egress); SC4041 has no hypnogram, SC4012 is truncated -> 7 usable",
+  "observed_V": {
+    "geo_vol": 0.4524269437743693,
+    "scalar_vol": 0.12144801982286506,
+    "scalar_level": 0.12695698903021518
+  },
+  "circular_shift_null_p95": {
+    "geo_vol": 0.1710292353524834,
+    "scalar_vol": 0.08186321315796206,
+    "scalar_level": 0.12166462424617085
+  },
+  "circular_shift_p": {
+    "geo_vol": 0.0004997501249375312,
+    "scalar_vol": 0.0004997501249375312,
+    "scalar_level": 0.03698150924537731
+  },
+  "h2_iid_null_p95": 0.0026142460799346385,
+  "record_level": {
+    "n_enriched": 7,
+    "wilcoxon_p_one_sided": 0.0078125,
+    "per_record": [
+      {
+        "record": "SC4001",
+        "V_geo_vol": 0.3972700860508633,
+        "d_geo_vol": 0.1562901423104685,
+        "V_scalar_vol": 0.10610249639397476,
+        "d_scalar_vol": 0.04143783133342169,
+        "V_scalar_level": 0.02942357467656699,
+        "d_scalar_level": -0.011541919536722012
+      },
+      {
+        "record": "SC4002",
+        "V_geo_vol": 0.44563822130920944,
+        "d_geo_vol": 0.19471342934128846,
+        "V_scalar_vol": 0.1516910196128825,
+        "d_scalar_vol": 0.06575236469276138,
+        "V_scalar_level": 0.02082686408777551,
+        "d_scalar_level": -0.009084148415347187
+      },
+      {
+        "record": "SC4011",
+        "V_geo_vol": 0.5566569016586935,
+        "d_geo_vol": 0.24796684728791263,
+        "V_scalar_vol": 0.1735140247966245,
+        "d_scalar_vol": 0.07657994163864751,
+        "V_scalar_level": 0.3116325801498451,
+        "d_scalar_level": 0.13947104136536959
+      },
+      {
+        "record": "SC4021",
+        "V_geo_vol": 0.4220729180463922,
+        "d_geo_vol": 0.1833637076982274,
+        "V_scalar_vol": 0.011278394483030422,
+        "d_scalar_vol": -0.004903120449461451,
+        "V_scalar_level": 0.16579457734798922,
+        "d_scalar_level": 0.07260589495590614
+      },
+      {
+        "record": "SC4022",
+        "V_geo_vol": 0.5161902796729009,
+        "d_geo_vol": 0.22129085425399705,
+        "V_scalar_vol": 0.16230270431886265,
+        "d_scalar_vol": 0.06766717524556506,
+        "V_scalar_level": 0.14054226542610868,
+        "d_scalar_level": 0.059165700901767565
+      },
+      {
+        "record": "SC4031",
+        "V_geo_vol": 0.4056505768255813,
+        "d_geo_vol": 0.1644551755854061,
+        "V_scalar_vol": 0.1272434134250182,
+        "d_scalar_vol": 0.051222938182467315,
+        "V_scalar_level": 0.19101264453781763,
+        "d_scalar_level": 0.07742176098774614
+      },
+      {
+        "record": "SC4032",
+        "V_geo_vol": 0.42620636305273324,
+        "d_geo_vol": 0.17211095424551792,
+        "V_scalar_vol": 0.14592835931840376,
+        "d_scalar_vol": 0.05880323518083047,
+        "V_scalar_level": 0.11947373981453695,
+        "d_scalar_level": 0.048339473217016204
+      }
+    ]
+  },
+  "attribution": {
+    "best_scalar": "scalar_level",
+    "wilcoxon_p_geo_minus_scalar": 0.0078125
+  },
+  "preregistered_criterion": "survives iff geo V > circular-shift 95th pct AND record-level Wilcoxon p<0.05; attributable iff also geo V > both scalar V AND per-record Wilcoxon (geo - best scalar) p<0.05",
+  "category": "A",
+  "survives": true,
+  "attributable": true,
+  "verdict": "SURVIVES AND IS ATTRIBUTABLE TO THE GEOMETRIC PROXY. Geodesic-volatility V = 0.452; circular-shift null 95th pct 0.171 (p = 0.0005) -- versus H2's i.i.d. null 95th pct 0.003. Record level (n = 7): N2/N3 enriched in the low-volatility half in 7/7 records, one-sided Wilcoxon p = 0.0078. Scalar baselines through the identical median split: scalar power-volatility V = 0.121 (shift p = 0.0005), scalar log-power level V = 0.127 (shift p = 0.0370); per-record geo minus best scalar (scalar_level) one-sided Wilcoxon p = 0.0078. The association is real under dependence-preserving nulls and the geometric volatility beats both scalar baselines. It is still a volatility proxy, not the paper's three-regime demarcation, so it does not exercise that construct.",
+  "figures": [
+    "regime_referent_nulls.png"
+  ]
+}
