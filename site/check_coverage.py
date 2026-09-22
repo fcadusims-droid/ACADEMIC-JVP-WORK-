@@ -134,6 +134,11 @@ def check(quiet=False):
         if who in (None, "", "UNEXERCISED"):
             unexercised.append(c)
             continue
+        if c.get("unit_tested_only"):
+            errors.append(
+                f"[{c['construct']}] is marked unit_tested_only but lists experiments in "
+                f"exercised_by. The flag means 'reached only by a unit test'; it contradicts "
+                f"an exerciser list and would under-state the evidence.")
         for name in ([who] if isinstance(who, str) else who):
             if name == "shared_lib_self_test":
                 errors.append(

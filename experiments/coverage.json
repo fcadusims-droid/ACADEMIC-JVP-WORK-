@@ -17,8 +17,7 @@
       "drift_jump_confusion_sweep",
       "base_metric_corner",
       "hybrid_metric"
-    ],
-    "unit_tested_only": true
+    ]
   },
   {
     "construct": "Log-Euclidean and Bures-Wasserstein base metrics",
@@ -53,8 +52,7 @@
     "exercised_by": [
       "drift_jump_confusion_sweep",
       "localization_priors"
-    ],
-    "unit_tested_only": true
+    ]
   },
   {
     "construct": "Covariate-anchored predictability covariate (gamma_t)",
@@ -71,8 +69,7 @@
     "where": "§6.3",
     "exercised_by": [
       "localization_priors"
-    ],
-    "unit_tested_only": true
+    ]
   },
   {
     "construct": "Fibre: normalized cross-scale (PAC) coupling",
@@ -117,8 +114,8 @@
     "construct": "Statistical-complexity / Lyapunov regime demarcation",
     "paper": "Paper3",
     "where": "§7",
-    "exercised_by": "regime_external_referent",
-    "note": "PARTIALLY exercised. A pre-registered Phase-0 gate (regime_groundtruth_gate) first found the three-regime demarcation NOT EXTERNALLY FALSIFIABLE as defined -- the regimes are operationally fixed by the protocol's own criteria (§2), so no external referent existed to score against. regime_external_referent then tested the reviewer's repair: a pre-registered mapping from the dynamical regime (drift/dispersion) to AASM sleep stages, scored on 7 Sleep-EDF records against a permutation null. It binds above chance (Cramer's V = 0.452 vs null 95th pct 0.003, p = 0.0005, mapped direction), so an external referent DOES exist for the drift/dispersion contrast, superseding the Phase-0 verdict for the sleep paradigm. Ceiling declared in advance: collapse has no AASM counterpart, so at most 2 of 3 regimes bind; the full three-regime statistical-complexity pipeline is still not run end-to-end as a single demarcation"
+    "exercised_by": "UNEXERCISED",
+    "note": "UNEXERCISED. The three-regime demarcation (drift/diffusion/jump from the SDE, Lyapunov / statistical-complexity criteria) has never been run end-to-end on a record. A Phase-0 gate (regime_groundtruth_gate) found it not externally falsifiable as defined. regime_external_referent was earlier credited here as a partial exercise; an external review showed what it tests is a median split of rolling geodesic step size -- a volatility proxy, not the demarcation -- so the credit is withdrawn. The proxy's association with AASM staging is real under dependence-preserving nulls and beats total-power and relative-delta scalar baselines (regime_referent_nulls), which is evidence that geodesic volatility tracks sleep stage, not that the demarcation is exercised."
   },
   {
     "construct": "Time-reversal (relaxation) asymmetry statistic",
@@ -172,8 +169,7 @@
     "where": "§7.5",
     "exercised_by": [
       "rl_agents_trichotomy"
-    ],
-    "unit_tested_only": true
+    ]
   },
   {
     "construct": "Poincare recurrence / trichotomy classification",

@@ -59,7 +59,9 @@ track the repository rather than a snapshot of it.
 `formal/` carries a Lean 4 formalization of the trichotomy. It compiles with no
 `sorry`, and its axioms are audited and listed in `formal/README.md` — the audit
 matters more than the compilation, since a formalization is only as strong as what it
-assumes.
+assumes. That is not hypothetical: the first version assumed pointwise forms of Poincaré
+and Conley that are false, which compiling could never reveal. `formal/Counterexamples.lean`
+now refutes them in concrete models, and the corrected files assume only the true forms.
 
 ## Citing
 

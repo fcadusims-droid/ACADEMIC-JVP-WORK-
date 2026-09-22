@@ -23,8 +23,10 @@
   lives in a coordinate the contract cannot see.
 
   WHY THIS IS NOT VACUOUS. The point is the axiom audit at the bottom: the closure of the
-  *escape* horn consumes exactly one analytic fact — `poincare_recurrence` — and it is the
-  *same* axiom `Trichotomy.lean`'s bounded-cell result consumes. That is the precise sense
+  *escape* horn consumes exactly one analytic fact — `poincare_recurrence_ae` — and it is the
+  *same* axiom `Trichotomy.lean`'s bounded-cell result consumes. (CORRECTED: that axiom was first
+  stated pointwise, which is false — see `Counterexamples.lean`. In its true, almost-everywhere
+  form the closure holds for almost every initial reading, not for every one.) That is the precise sense
   in which "the horn closes by the same argument, stronger and more general" is true rather
   than rhetorical: both cells reduce to one recurrence theorem, the escaping one via the
   quotient.
@@ -57,7 +59,7 @@ def Flow (T : Type) := Nat → T → T
 /-! ### Abstract dynamical predicates, declared rather than proved.
 
 Identical in spirit to `Trichotomy.lean`. `Bounded`, `MeasurePreserving` and `Recurrent`
-are opaque; the single analytic input the argument consumes is `poincare_recurrence`. -/
+are opaque; the single analytic input the argument consumes is `poincare_recurrence_ae`. -/
 
 /-- The orbit of a point stays inside a compact set. -/
 axiom Bounded {T : Type} : Flow T → T → Prop
@@ -68,10 +70,16 @@ axiom MeasurePreserving {T : Type} : Flow T → Prop
 /-- The point returns arbitrarily close to itself infinitely often. -/
 axiom Recurrent {T : Type} : Flow T → T → Prop
 
-/-- **Poincaré recurrence** — the one analytic input, and the same one the bounded cell of
-    the trichotomy uses. A measure-preserving flow whose orbit is bounded is recurrent. -/
-axiom poincare_recurrence {T : Type}
-    (ψ : Flow T) (q : T) : MeasurePreserving ψ → Bounded ψ q → Recurrent ψ q
+/-- A set of states has measure zero for the flow's invariant finite measure. -/
+axiom NullSet {T : Type} : Flow T → (T → Prop) → Prop
+
+/-- **Poincaré recurrence (almost everywhere)** — the one analytic input, and the same one
+    `Trichotomy.lean` uses. For a flow preserving a finite measure, the non-recurrent points form
+    a null set. CORRECTED: the first version of this file stated it pointwise ("every bounded
+    point recurs"), which is false (`Counterexamples.lean`, `pointwise_poincare_false`). The
+    consequence is that everything below holds for almost every reading, not every one. -/
+axiom poincare_recurrence_ae {T : Type} (ψ : Flow T) :
+    MeasurePreserving ψ → NullSet ψ (fun q => ¬ Recurrent ψ q)
 
 /-! ### The escape structure
 
@@ -109,15 +117,13 @@ theorem observable_tracks_reading
 
 /-! ### Recurrence on the quotient, and the closure of the escape horn -/
 
-/-- **The reading recurs**, by Poincaré on the quotient — the direction lives on a compact
-    space and its flow is measure-preserving, so it returns, whatever the radius does. The
-    hypotheses are about `ψ` on `Q`, and say *nothing* about whether the full state is
-    bounded. -/
-theorem reading_recurrent
-    (proj : X → Q) (ψ : Flow Q) (x : X)
-    (hmp : MeasurePreserving ψ) (hbq : Bounded ψ (proj x)) :
-    Recurrent ψ (proj x) :=
-  poincare_recurrence ψ (proj x) hmp hbq
+/-- **Almost every reading recurs**, by Poincaré on the quotient — the direction lives on a
+    compact space carrying a finite invariant measure, so the non-recurrent readings are null,
+    whatever the radius does. The hypothesis is about `ψ` on `Q` and says *nothing* about
+    whether the full state is bounded. -/
+theorem reading_recurrent_ae (ψ : Flow Q) (hmp : MeasurePreserving ψ) :
+    NullSet ψ (fun q => ¬ Recurrent ψ q) :=
+  poincare_recurrence_ae ψ hmp
 
 /-- **Escape does not defeat identity recurrence.** The load-bearing statement. The full
     state may leave every compact set (`¬ Bounded φ x` — the escape horn is taken), yet an
@@ -126,20 +132,21 @@ theorem reading_recurrent
     the recurrence of the identity observable *coexist* — so escaping buys no non-recurrence
     in the observable the contract evaluates. The horn closes by recurrence-on-the-quotient.
 
-    This is `escape_persistence_decider`'s conclusion, and it consumes only
-    `poincare_recurrence` — the same axiom the bounded cell uses. -/
+    CORRECTED: the recurrence of the reading is now a *hypothesis* (the reading lies outside
+    the Poincaré-exceptional null set, which `reading_recurrent_ae` shows is null), not a
+    consequence of boundedness. So the closure holds for almost every initial reading; a
+    single trajectory whose reading happens to lie in the null set is not covered. This
+    theorem itself consumes no analytic axiom. -/
 theorem escape_does_not_defeat_recurrence
     (proj : X → Q) (φ : Flow X) (ψ : Flow Q) (x : X) (obs : X → V)
     (hesc : ¬ Bounded φ x)
     (hid : ReadsDirection obs proj)
     (heq : Equivariant proj φ ψ)
-    (hmp : MeasurePreserving ψ)
-    (hbq : Bounded ψ (proj x)) :
+    (hrec : Recurrent ψ (proj x)) :
     ¬ Bounded φ x ∧ Recurrent ψ (proj x)
       ∧ ∃ g : Q → V, ∀ t, obs (φ t x) = g (ψ t (proj x)) := by
   obtain ⟨g, hg⟩ := hid
-  exact ⟨hesc, poincare_recurrence ψ (proj x) hmp hbq, g,
-        observable_tracks_reading proj φ ψ x obs g heq hg⟩
+  exact ⟨hesc, hrec, g, observable_tracks_reading proj φ ψ x obs g heq hg⟩
 
 /-! ### The cardinal contracts
 
@@ -154,8 +161,8 @@ cardinal contract whose reading lands in a *bounded* quotient:
   direction paired with a bounded magnitude reading — still a compact quotient, so the
   *same* theorem applies and recurrence persists (numerically `P_f = 0.21, 0.15`).
 * **unbounded cardinal** contract (`raw_coord`, the `e^{25}` observable): the reading is
-  *not* bounded, so `Bounded ψ (proj x)` — the hypothesis `poincare_recurrence` needs —
-  fails. The theorem therefore says nothing about it, which is exactly right: its apparent
+  *not* bounded, so no finite invariant measure lives on it — the hypothesis
+  `poincare_recurrence_ae` needs — and the theorem does not apply. The theorem therefore says nothing about it, which is exactly right: its apparent
   persistence collapse (`P_f = 0.0006`) is the artefact of reading through an unbounded
   observable, not a genuine loss of recurrence.
 
@@ -165,41 +172,38 @@ next two results state the two horns of it without introducing any new axiom. -/
 /-- **Bounded cardinal contract: recurrence persists, by the same theorem.** Nothing here is
     specific to the direction — `readC` may be any reading (e.g. direction × saturated
     magnitude). Provided its quotient is bounded, the identity of the argument with the
-    scale-free case is literal: it is the same call to `poincare_recurrence`. -/
-theorem cardinal_bounded_reading_recurrent
-    {D : Type} (readC : X → D) (χ : Flow D) (x : X)
-    (hmp : MeasurePreserving χ) (hbd : Bounded χ (readC x)) :
-    Recurrent χ (readC x) :=
-  poincare_recurrence χ (readC x) hmp hbd
+    scale-free case is literal: it is the same call to `poincare_recurrence_ae`. -/
+theorem cardinal_bounded_reading_recurrent_ae
+    {D : Type} (χ : Flow D) (hmp : MeasurePreserving χ) :
+    NullSet χ (fun d => ¬ Recurrent χ d) :=
+  poincare_recurrence_ae χ hmp
 
 /-- **The recurrence guarantee is exactly coextensive with a bounded reading.** For every
     cardinal contract the *only* hypothesis the closure needs beyond measure preservation is
     that its reading stays on a compact quotient. So the unbounded (`e^{25}`) contract is
     precisely the one outside the theorem — the boundary is the boundedness of the reading,
-    nothing else. Stated as: given measure preservation, boundedness of the reading suffices
-    for recurrence. (Its failure for the exponential reading is why that case is an artefact,
+    nothing else. Stated as: a finite invariant measure on the reading's space (which a bounded,
+    compact reading supplies and the exponential reading does not) makes non-recurrence null. (Its failure for the exponential reading is why that case is an artefact,
     not a counterexample.) -/
 theorem closure_hypothesis_is_bounded_reading
-    {D : Type} (readC : X → D) (χ : Flow D) (x : X)
-    (hmp : MeasurePreserving χ) :
-    Bounded χ (readC x) → Recurrent χ (readC x) :=
-  fun hbd => poincare_recurrence χ (readC x) hmp hbd
+    {D : Type} (χ : Flow D) :
+    MeasurePreserving χ → NullSet χ (fun d => ¬ Recurrent χ d) :=
+  poincare_recurrence_ae χ
 
 end JVP.Escape
 
 /-! ### Axiom audit
 
-`#print axioms` lists every unproved assumption each result rests on. The claim this file
-makes precise — "the escape horn closes by the *same* argument as the bounded cell" — is
-verified by the audit: `escape_does_not_defeat_recurrence` consumes exactly
-`poincare_recurrence` (plus the classical logic Lean uses for the existential), the same
-analytic axiom `Trichotomy.no_positive_entropy_without_recurrence` consumes, and nothing
-about entropy, dispersion, or a "more extreme Class M". The transport lemma
-`observable_tracks_reading` consumes no analytic axiom at all — it is pure equational
-reasoning, which is the point: escape is invisible to a contract that reads the quotient. -/
+`#print axioms` lists every unproved assumption. After the correction, the analytic input is
+`poincare_recurrence_ae` — a true statement of Poincaré's theorem — consumed by the almost-
+everywhere results (`reading_recurrent_ae` and the two cardinal results), exactly as in
+`Trichotomy.forbidden_object_null`. `escape_does_not_defeat_recurrence` now consumes no analytic
+axiom: given a recurrent reading, escape in the radius is invisible to the contract by pure
+equational transport. The honest summary: the escape horn closes by the same *almost-everywhere*
+recurrence argument as the bounded cell. -/
 
 #print axioms JVP.Escape.observable_tracks_reading
-#print axioms JVP.Escape.reading_recurrent
+#print axioms JVP.Escape.reading_recurrent_ae
 #print axioms JVP.Escape.escape_does_not_defeat_recurrence
-#print axioms JVP.Escape.cardinal_bounded_reading_recurrent
+#print axioms JVP.Escape.cardinal_bounded_reading_recurrent_ae
 #print axioms JVP.Escape.closure_hypothesis_is_bounded_reading

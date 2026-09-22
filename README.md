@@ -1,5 +1,15 @@
 # ACADEMIC-JVP-WORK-
 
+> [!WARNING]
+> **Work in progress, developed with generative AI.** All of the research here — papers, code,
+> experiments, analyses, formal proofs and website — by João Vitor Perazzolo is being developed
+> with the assistance of **Claude**, a generative AI model (Anthropic). AI assistance can
+> introduce errors that look correct; several have already been found and corrected in this
+> repository. **Please do not rely on what is stated here: re-run the experiments on your own
+> computer and check whether the results match.** Confidence in this work should never be 100%,
+> and none of it is ready for submission. Full statement: [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md) ·
+> open problems: [`OPEN_ISSUES.md`](OPEN_ISSUES.md).
+
 Three interlinked papers by **João Vitor Perazzolo** (July 2026) and an in-silico
 validation suite that tests their formal and statistical claims. The suite is
 deliberately scoped by what simulation and available data *can* and *cannot*
@@ -51,7 +61,7 @@ such, not softened.
   (`data/`, e.g. PhysioNet EEG/ECG) is **not** committed; see
   `paper3_geodesic_kinematics/DATA.md`.
 
-**[`RESULTS.md`](RESULTS.md) summarises what all 45 experiments found**, organised by
+**[`RESULTS.md`](RESULTS.md) summarises what all 47 experiments found**, organised by
 paper, with the open questions at the end.
 
 **`experiments/STATUS.md` is the authoritative live status** — the per-experiment

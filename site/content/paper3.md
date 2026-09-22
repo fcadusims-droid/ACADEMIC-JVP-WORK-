@@ -36,9 +36,12 @@ a single path, with curvature entering only at second order as holonomy.
 
 **On real data, across two paradigms.** Structural discrimination replicates on
 Sleep-EDF (N2 versus REM, 14/15 under a permutation null) and within-trajectory
-sleep-onset localization reaches 10/15 — against 4/15 on eyes-open/closed. The
-earlier eyes-open/closed limit was the *paradigm*, not the method
-(`sleep_stage_localization`).
+sleep-onset localization appeared to reach 10/15 against 4/15 on eyes-open/closed, which
+was read as showing the limit was the *paradigm*, not the method. A later control withdrew
+that reading: every localization window was centred on the true transition, so a detector
+that always predicts the centre scores every recording; off-centre, sleep-onset
+localization falls to 4/7 and ties a scalar band-power CUSUM
+(`sleep_stage_localization`, `localization_centerbias_control`). On-line localization is open.
 
 **Against standard baselines, with the defeat criterion fixed in advance.** The
 protocol had never been compared to anything. It now has been — against BOCPD,

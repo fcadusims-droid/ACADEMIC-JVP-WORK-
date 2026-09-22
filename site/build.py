@@ -59,7 +59,7 @@ PAPERS = [
         "short": "The Conditional Biological Requirements Architecture",
         "sub": "Data Requirements for Testing Hidden Boundary Organization in "
                "Biological State Transitions, and a Pre-Registered Negative on Their "
-               "Present Availability",
+               "Present Availability in Public Data",
         "blurb": "A strict eliminative protocol, conditional throughout, built so that "
                  "a clean negative is expected unless a structured boundary residual "
                  "survives an adversarial sequence of controls. Its positive arm halted "
@@ -71,16 +71,18 @@ PAPERS = [
         "short": "The Kinematics of Geodesic Flow on Riemannian Vector Bundles",
         "sub": "A Non-Equilibrium Jump-Diffusion Protocol for the Asymptotic "
                "Demarcation of Systemic State Transitions",
-        "blurb": "A single-trajectory method for deciding whether dynamics after an "
-                 "abrupt transition is directed drift, undirected diffusion, or "
-                 "structural collapse -- from one record, with no ensemble. "
-                 "Independent of its two companions.",
+        "blurb": "A proposed single-trajectory method for deciding whether dynamics "
+                 "after an abrupt transition is directed drift, undirected diffusion, or "
+                 "structural collapse. The three-regime demarcation it is named for has "
+                 "not yet been run end-to-end; what has been tested is its trace-normalised "
+                 "SPD base. Independent of its two companions.",
         "content": "paper3.md", "dir": "paper3_geodesic_kinematics",
     },
 ]
 
 NAV = [
     ("index.html", "Overview"),
+    ("ai-disclosure.html", "AI disclosure"),
     ("papers/index.html", "Papers"),
     ("experiments/index.html", "Experiments"),
     ("results.html", "Results"),
@@ -276,6 +278,19 @@ def page(title: str, body: str, depth: int = 0, current: str = "",
     </nav>
   </div>
 </header>
+<aside class="ai-banner" role="note" aria-label="AI assistance disclosure">
+  <div class="ai-banner-inner">
+    <p class="ai-banner-title">&#9888; Work in progress &middot; developed with generative AI</p>
+    <p>All research on this site by João Vitor Perazzolo is being developed with the
+       assistance of <strong>Claude</strong>, a generative AI model (Anthropic). AI assistance
+       can introduce errors that look correct, and several already have been found and
+       corrected here. <strong>Do not rely on anything stated on this site:</strong> re-run the
+       experiments on your own computer and check whether the results match. Confidence in this
+       work should never be 100%. None of it is ready for submission.</p>
+    <p class="ai-banner-links"><a href="{up}ai-disclosure.html">Read the full disclosure</a>
+       &middot; <a href="{up}reproduce.html">How to reproduce every result</a></p>
+  </div>
+</aside>
 <main{' class="wide"' if wide else ''}>
 {body}
 </main>
@@ -283,7 +298,9 @@ def page(title: str, body: str, depth: int = 0, current: str = "",
   <div class="inner">
     <p>Generated from the repository at commit <code>{COMMIT}</code> on {BUILD_DATE}.
        Every figure, number and verdict on this site is read from a committed
-       <code>result.json</code>; the papers are rendered from their Markdown sources.</p>
+       <code>result.json</code>; the papers are rendered from their Markdown sources.
+       Developed with generative-AI assistance (Claude) &mdash; verify by reproducing, do not
+       rely on it: <a href="{up}ai-disclosure.html">AI disclosure</a>.</p>
     <p><a href="{REPO_URL}">Source repository</a> &middot;
        <a href="{REPO_URL}/blob/main/CITATION.cff">Citation metadata</a> &middot;
        <a href="{REPO_URL}/blob/main/METHODOLOGY.md">Methodology</a></p>
@@ -785,6 +802,12 @@ def build_static_pages():
                     "something."))
 
     # program -- the conditional program linking the three papers (kept out of the papers)
+    aid = wrap_tables(md_file_to_html(os.path.join(ROOT, "AI_DISCLOSURE.md")))
+    write("ai-disclosure.html",
+          page("AI assistance disclosure", f'<div class="prose ai-disclosure">{aid}</div>',
+               depth=0, current="ai-disclosure.html",
+               desc="This research is developed with generative-AI assistance (Claude); "
+                    "readers should reproduce the results rather than rely on them."))
     prog = wrap_tables(md_file_to_html(os.path.join(ROOT, "PROGRAM.md")))
     write("program.html",
           page("Program", f'<div class="prose-wide">{prog}</div>', depth=0,
@@ -884,7 +907,9 @@ miscounted as dead). Unreachable:</p>
             '<p class="lede prose">A Lean&nbsp;4 formalization of the trichotomy. It '
             'compiles with no <code>sorry</code> — but a formalization is only as '
             'strong as what it assumes, so the axioms are audited and listed rather '
-            'than left implicit.</p>'
+            'than left implicit. The audit once failed silently: the first version\'s '
+            'two analytic axioms were false as stated, and are now refuted by '
+            'machine-checked counterexamples and replaced by their true forms.</p>'
             f'<div class="prose">{wrap_tables(inner)}</div>'
             f'<div class="btn-row"><a class="btn" href="{REPO_URL}/tree/main/formal">'
             f'Browse <code>formal/</code></a></div>')

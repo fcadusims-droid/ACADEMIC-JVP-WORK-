@@ -1,4 +1,4 @@
-# Results — What the 45 Experiments Found
+# Results — What the 47 Experiments Found
 
 A reader-facing synthesis of the validation suite. Every number here is read from a
 committed `result.json`; `experiments/STATUS.md` is the authoritative per-experiment
@@ -26,19 +26,22 @@ Concretely, from the records below:
 
 - **Paper 1** — the trilemma's exhaustivity is now weakened to *bounded-reading contracts*; the
   synthetic residue is **one** load-bearing site (the exogenous costing); the first open problem
-  may be ill-posed under the paper's own pragmatic reading of the contract; and the central
-  theorem compiles in Lean over **two undischarged axioms**.
+  may be ill-posed under the paper's own pragmatic reading of the contract; and the Lean
+  formalization of the central theorem originally rested on **two axioms that were false as
+  stated** (pointwise versions of Poincaré and Conley — now refuted by machine-checked
+  counterexamples and replaced by the true forms), so the forbidden object is excluded for
+  *almost every* initial condition, not every, and its entropy clause does no work.
 - **Paper 2** — the positive arm halted at **29%** against a pre-registered 60% bar and is not
   executable on public data; what survives is the eliminative arm, which needs $n \approx 40$ per
   condition and a subsampling-robust estimator. (§12 Test Two and the multivariate IAAFT, long unexercised, are now shown executable and specific in `residual_tests_exercise`; and a dataset inventory `cbra_dataset_inventory` confirms the positive arm has no viable public venue.)
 - **Paper 3** — the titular three-regime demarcation has **never been run end-to-end on a
   record**, and a pre-registered Phase-0 gate found it is not merely untested but, as currently
   defined, **not externally falsifiable**: the regimes are operationally defined by the
-  protocol's own criteria, so no independent referent exists to score against. A pre-registered
-  repair then **partially lifted that verdict for the sleep paradigm**: the drift/dispersion
-  regime binds to a human-scored external referent (AASM sleep stages) above chance (Cramér's
-  V = 0.452, p = 0.0005, mapped direction) — so a referent *does* exist for 2 of 3 regimes,
-  with collapse having no AASM counterpart by design. The bundle apparatus is net negative
+  protocol's own criteria, so no independent referent exists to score against. A later test
+  that was first credited as a partial repair measured something narrower: a geodesic-volatility
+  proxy, not the demarcation. After an external review corrected its null, that proxy does track
+  human AASM staging (7/7 records, beating total-power and delta-power scalars), but the
+  demarcation itself remains untested and the falsifiability verdict stands. The bundle apparatus is net negative
   where tested; a matched-detector head-to-head could **not** show the manifold beating a scalar
   band-power CUSUM on within-trajectory localization (14/22 vs 9/22, p = 0.227 — and once the
   centre-bias confound is removed the two tie exactly, 10/22 vs 10/22, so the manifold's small
@@ -175,20 +178,30 @@ the regimes are declared *operationally defined … not domain categories*, so i
 independent truth-maker. What remains is calibration of the estimator, not validation of the
 taxonomy. *(`regime_groundtruth_gate`)*
 
-**A pre-registered repair partially lifts that verdict — for the sleep paradigm, and for
-2 of 3 regimes.** The reviewer's proposed fix was to bind the demarcation to an *external*
-human-scored referent instead of the protocol's own criteria. Pre-registered before the run:
-a fixed mapping from the dynamical regime to AASM sleep stages (drift ↔ N2/N3, dispersion ↔
-W/REM; collapse ↔ **no AASM counterpart**, declared in advance), scored on 563,242 labelled
-windows from 7 Sleep-EDF records against a within-record label-shuffle permutation null. The
-drift/dispersion regime associates with AASM structure well beyond chance — **Cramér's V =
-0.452 vs a null 95th percentile of 0.003, p = 0.0005** — and in the mapped direction (drift
-regime enriched for N2/N3: 0.41 vs 0.22 overall). So the demarcation carves something a human
-scorer independently recognises, and the "not externally falsifiable" verdict is **superseded
-for the sleep paradigm**. The ceiling is pre-registered and honest: collapse has no AASM
-counterpart, so **at most 2 of 3 regimes bind**, and the full three-regime statistical-complexity
-pipeline is still not run end-to-end as a single demarcation. One run, no tuning loop.
-*(`regime_external_referent`)*
+**What was first credited as a repair of that verdict tests a proxy, and its first null was wrong.**
+`regime_external_referent` median-split the rolling geodesic step size of each record, mapped the low/high
+halves to AASM N2/N3 vs W/REM, and reported Cramér's V = 0.452 with p = 0.0005 against an i.i.d. label
+shuffle within each record. An external review found (and the code confirms) that the shuffle ignored the
+autocorrelation of overlapping 2-s windows and blocked hypnograms, that the "regime" is a volatility
+measure rather than the SDE/Lyapunov/complexity demarcation the paper defines, and that no scalar baseline
+was run. The pre-registered re-test answers each. Under a circular-shift null the null's 95th percentile
+widens **57-fold (0.003 → 0.171)**; V = 0.452 still clears it, with N2/N3 enriched in the low-volatility
+half in **7/7** records (one-sided Wilcoxon p = 0.0078). Scalar measures run through the identical split
+lose in every record: total-power volatility 0.121, log-power 0.127, and — post-hoc, because band power is
+the obvious competitor — relative delta power 0.194 (p = 0.0078 for geometry over the best scalar). So
+geodesic volatility tracks sleep staging beyond scalar power, which is a real if modest positive. But the
+claim that the demarcation's falsifiability was repaired is **withdrawn**: the three-regime demarcation is
+still untested and still not externally falsifiable as defined. n = 7 records.
+*(`regime_external_referent`, `regime_referent_nulls`)*
+
+**The window-permutation nulls elsewhere in the suite were checked for the same defect, and A1's holds.**
+Five experiments permute overlapping windows between state groups, the construction that failed in H2.
+Re-running A1's N2-vs-REM discrimination statistic under a dependence-preserving circular-shift null on the
+7 cached recordings: 7/7 pass under both nulls, and the circular-shift null is in fact narrower (95th
+percentile 1.28 vs 1.55) — the statistic's denominator is built from within-state temporal halves, which
+already absorbs slow drift. The suspected problem does not hold for A1; A2, A3, the fibre-ablation
+discrimination arm and `eeg_reconciliation` use related but not identical constructions and were not
+re-tested individually. *(`discrimination_null_dependence_audit`)*
 
 **On within-trajectory localization, the geometry is not shown to beat a scalar.** A
 matched-detector head-to-head ran the *identical* geodesic CUSUM on the trace-normalized SPD
@@ -224,7 +237,7 @@ any experiment, no experiment builds a bundle point, and every validated result 
 is a property of the trace-normalized SPD base alone. The ablation the paper never ran
 has now been run, on Paper 3's own spec (§3.2 PAC matrix normalized by the geometric mean
 of the two block traces; §3.3 Sasaki metric). On 15 real eyes-open/closed subjects, with
-identical windows, detectors and tolerance: base **10/15** localization and **7/15**
+identical windows, detectors and tolerance (centred windows, so absolute localization counts are inflated; the base-vs-fibre comparison is relative): base **10/15** localization and **7/15**
 discrimination (median ratio 1.26); the best fibre-augmented arm **11/15** and **9/15**
 (ratio 1.16); fibre-only 2/15 and 3/15. The deltas are **+1** and **+2** against a
 pre-registered **+3** — *no material gain* — and adding the fibre *lowers* the median
@@ -240,9 +253,12 @@ demonstrated only for *coupling-carried* transitions, which eyes-open/closed is 
 
 **Structural discrimination replicates on real data, across two paradigms.** N2-versus-REM
 discrimination passes **14/15** under a permutation null (median ratio 2.79), and
-within-trajectory sleep-onset localization reaches **10/15** — against 4/15 on
-eyes-open/closed. The earlier limit was the *paradigm*, not the method.
-*(`sleep_stage_localization`, `real_eeg_localization`)*
+within-trajectory sleep-onset localization appeared to reach **10/15** against 4/15 on
+eyes-open/closed, which was read as "the limit was the paradigm, not the method". That reading
+is **withdrawn**: the localization windows were centred on the true transition, a centre-prior
+detector scores every recording there, and off-centre sleep-onset localization falls to 4/7,
+tying a scalar band-power CUSUM (`localization_centerbias_control`). On-line localization is
+open on both paradigms. *(`sleep_stage_localization`, `real_eeg_localization`)*
 
 **Benchmarked against standard methods, with the defeat criterion fixed in advance.**
 Against BOCPD, `ruptures` (PELT, binary segmentation, windowed), a Gaussian HMM and
@@ -251,7 +267,7 @@ and is reported on three axes:
 
 | axis | result |
 |---|---|
-| localization | **10/15** vs best baseline 8/15 — clears the rule, but inside binomial noise |
+| localization | **10/15** vs best baseline 8/15 — inside binomial noise, and both counts are inflated by windows centred on the true transition; off-centre the geodesic CUSUM ties a scalar CUSUM |
 | detection | initially the **worst** method compared (AUC 0.23), later repaired to 0.81 — competitive, not superior (best baseline 0.88) |
 | structure-vs-power | **1.00** vs 0.75 where power is held constant; **0.55** vs 1.00 on the mirror case, losing exactly as its construction requires |
 
@@ -347,13 +363,14 @@ The protocol is only worth something where it changed an outcome.
   that would decide it — an unbounded identity reading with an open direction — is
   unreachable by the present instrument. The closure extends to cardinal as well as
   scale-free contracts (`escape_cardinal_contract`) and has been **formalized in Lean**
-  (`formal/Escape.lean`): the recurrence-on-the-quotient argument is machine-checked, and
-  the axiom audit shows it consumes exactly `poincare_recurrence` — the same analytic
-  axiom the bounded cell uses, which is the precise sense in which the horn closes "by the
-  same argument, stronger and more general". What remains: the Poincaré and Conley axioms
-  are still axioms. Discharging them from Mathlib is closer than before — Mathlib is now
-  clonable from the environment — but still out of reach in-session: its prebuilt `olean`
-  cache host is blocked and a cold source build is impractical (`formal/README.md`). This
+  (`formal/Escape.lean`): the recurrence-on-the-quotient inference is machine-checked, and
+  it consumes the same analytic axiom as the bounded cell. **Correction:** that axiom was
+  first declared pointwise ("every bounded point recurs"), which is false —
+  `formal/Counterexamples.lean` refutes it and the Conley axiom in concrete models with no
+  axioms at all. In the corrected, almost-everywhere form the escape horn closes for almost
+  every initial reading, not every. The corrected axioms are true and dischargeable from
+  Mathlib in principle (the old ones never were); in-session that is still impractical
+  because Mathlib's `olean` cache host is blocked (`formal/README.md`). This
   is an environment limit, not a mathematical one.
 - **Paper 2** — the positive arm is not currently executable on public data. Reviving it
   needs a new mechanism idea or a corpus that does not yet exist, not another run.

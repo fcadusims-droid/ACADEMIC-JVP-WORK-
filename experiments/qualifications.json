@@ -40,5 +40,12 @@
     "claim": "Sasaki-type metric of Section 3.3",
     "requires": "no material gain",
     "why": "the pre-registered fibre ablation found no material gain over the trace-normalized SPD base on the worked paradigm; the construction may not be presented as validated."
+  },
+  {
+    "id": "P3 localization counts carry the centring caveat",
+    "paper": "Paper3.md",
+    "claim": "\\$10/15\\$",
+    "requires": "centr",
+    "why": "every within-trajectory localization window is symmetric about the true transition, so a centre-prior detector scores 22/22 there and 0/22 off-centre (localization_centerbias_control); any 10/15 localization figure quoted without that caveat reads as evidence the method localizes."
   }
 ]

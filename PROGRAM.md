@@ -25,8 +25,10 @@ The antecedent is supplied by philosophy and theology and is contested there; th
 makes no claim that the antecedent is true. Each paper discharges one clause of the
 consequent, and each is written so that it survives the antecedent being false.
 
-- **Paper 1** proves the *negative* half of clause (i): an autonomous, bounded value dynamics
-  read through a bounded identity contract cannot realize the transformation, so if it occurs
+- **Paper 1** argues the *negative* half of clause (i): an autonomous, bounded value dynamics
+  read through a bounded identity contract cannot realize the transformation (for almost every
+  initial condition — the exclusion rests on Poincaré recurrence, which holds almost
+  everywhere, not everywhere), so if it occurs
   it is externally occasioned; and it names **Class G** as the residual admissibility profile
   — the type signature the transformation would have to satisfy. This is a conceptual
   contribution: it licenses *sorting* (which cell an account of transformation occupies) and
@@ -83,8 +85,9 @@ stronger than its parts:
 - **Clause (i) / Paper 1.** The trilemma's exhaustivity is stated for *bounded-reading
   contracts*; the synthetic residue is one load-bearing site (the exogenous costing); the
   first open problem — characterising the admissible contract class — may be ill-posed under
-  §2.2's pragmatic reading of *I*; the central theorem compiles in Lean over two undischarged
-  axioms.
+  §2.2's pragmatic reading of *I*; and the Lean formalization first rested on two axioms that
+  were false as stated (pointwise Poincaré and Conley), now replaced by their true forms — so
+  the forbidden object is excluded only for almost every initial condition.
 - **Clause (ii) / Paper 2.** The positive arm halted at 29% against a 60% bar and is not
   executable on public data; the eliminative arm survives, needs *n* ≈ 40 per condition and a
   subsampling-robust estimator, and one of its three residual filters (Test Two) was

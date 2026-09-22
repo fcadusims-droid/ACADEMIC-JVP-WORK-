@@ -1,0 +1,83 @@
+{
+  "experiment": "discrimination_null_dependence_audit",
+  "question": "do A1's window-permutation discrimination p-values survive a dependence-preserving null?",
+  "n_recordings": 7,
+  "pass_iid": 7,
+  "pass_shift": 7,
+  "preregistered_criterion": "survives iff circular-shift passes >= iid passes - 1",
+  "survives": true,
+  "per_recording": [
+    {
+      "recording": "SC4001",
+      "ratio": 1.9112466172370863,
+      "p_iid": 0.017964071856287425,
+      "p_shift": 0.023952095808383235,
+      "null_iid_p95": 1.5105218021588833,
+      "null_shift_p95": 1.5534265460285221,
+      "pass_iid": true,
+      "pass_shift": true
+    },
+    {
+      "recording": "SC4002",
+      "ratio": 2.1982406112198323,
+      "p_iid": 0.011976047904191617,
+      "p_shift": 0.01996007984031936,
+      "null_iid_p95": 1.4966779493440845,
+      "null_shift_p95": 1.562920467960232,
+      "pass_iid": true,
+      "pass_shift": true
+    },
+    {
+      "recording": "SC4011",
+      "ratio": 4.575047514720262,
+      "p_iid": 0.001996007984031936,
+      "p_shift": 0.001996007984031936,
+      "null_iid_p95": 1.6520057257252512,
+      "null_shift_p95": 0.6755303721648224,
+      "pass_iid": true,
+      "pass_shift": true
+    },
+    {
+      "recording": "SC4021",
+      "ratio": 3.226813851232966,
+      "p_iid": 0.003992015968063872,
+      "p_shift": 0.001996007984031936,
+      "null_iid_p95": 1.4722416940301797,
+      "null_shift_p95": 0.9586365677519126,
+      "pass_iid": true,
+      "pass_shift": true
+    },
+    {
+      "recording": "SC4022",
+      "ratio": 2.445623588941092,
+      "p_iid": 0.003992015968063872,
+      "p_shift": 0.001996007984031936,
+      "null_iid_p95": 1.5531571024806488,
+      "null_shift_p95": 1.282644297486731,
+      "pass_iid": true,
+      "pass_shift": true
+    },
+    {
+      "recording": "SC4031",
+      "ratio": 4.50682264799632,
+      "p_iid": 0.001996007984031936,
+      "p_shift": 0.001996007984031936,
+      "null_iid_p95": 1.5512155008898139,
+      "null_shift_p95": 1.2982661057777778,
+      "pass_iid": true,
+      "pass_shift": true
+    },
+    {
+      "recording": "SC4032",
+      "ratio": 2.8337639998686024,
+      "p_iid": 0.003992015968063872,
+      "p_shift": 0.001996007984031936,
+      "null_iid_p95": 1.5542517748695235,
+      "null_shift_p95": 1.0819261756025311,
+      "pass_iid": true,
+      "pass_shift": true
+    }
+  ],
+  "verdict": "A1 DISCRIMINATION SURVIVES A DEPENDENCE-PRESERVING NULL. On the 7 cached recordings, A1's statistic passes in 7/7 under its original window-permutation null and 7/7 under a circular-shift null that preserves the autocorrelation of both series. Median null 95th percentile: window-permutation 1.55, circular shift 1.28. The 14/15 is not an artefact of the i.i.d. null on these recordings. A check on 7 of A1's 15 recordings, not a replacement for them.",
+  "figures": []
+}
