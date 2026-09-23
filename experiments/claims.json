@@ -206,5 +206,50 @@
     "papers": {
       "Paper3.md": "consistent with eyes open in \\$([0-9]+)\\$ of \\$15\\$"
     }
+  },
+  {
+    "id": "Detection control: OC vs SS AUC",
+    "result": "detection_between_recording_control",
+    "path": "auc_OC_vs_SS",
+    "tol": 0.005,
+    "papers": {
+      "Paper3.md": "at AUC \\$([0-9.]+)\\$ — just above the same"
+    }
+  },
+  {
+    "id": "Detection control: SS vs WN AUC",
+    "result": "detection_between_recording_control",
+    "path": "auc_SS_vs_WN",
+    "tol": 0.005,
+    "papers": {
+      "Paper3.md": "within-recording segments gives AUC \\$([0-9.]+)\\$"
+    }
+  },
+  {
+    "id": "H1 power-up manifold hits",
+    "result": "h1_powerup_offcentre",
+    "path": "primary_record_level.manifold_hits",
+    "tol": 0,
+    "papers": {
+      "Paper3.md": "the geodesic CUSUM localizes \\$([0-9]+)/151\\$, the scalar"
+    }
+  },
+  {
+    "id": "H1 power-up scalar hits",
+    "result": "h1_powerup_offcentre",
+    "path": "primary_record_level.scalar_hits",
+    "tol": 0,
+    "papers": {
+      "Paper3.md": "the scalar band-power CUSUM \\$([0-9]+)/151\\$ \\(McNemar"
+    }
+  },
+  {
+    "id": "H1 power-up McNemar p",
+    "result": "h1_powerup_offcentre",
+    "path": "primary_record_level.mcnemar_p",
+    "tol": 0.005,
+    "papers": {
+      "Paper3.md": "\\$67/151\\$ \\(McNemar \\$p\\\\approx ([0-9.]+)\\$; subject"
+    }
   }
 ]

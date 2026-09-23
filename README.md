@@ -23,7 +23,7 @@ this repository and rebuilt on every push, so it never lags the work; see
 
 ## The trilogy
 
-- **`Paper1.md` — The Cybernetic Impossibility of Conversion.** A transcendental
+- **`Paper1.md` — The Cybernetic Limits of Conversion.** A transcendental
   negative critique: given a definition of control as directed change relative to a
   held-fixed evaluative structure, agency-preserving *conversion* (the
   transformation of that structure) cannot be formulated as control without
@@ -38,11 +38,12 @@ this repository and rebuilt on every push, so it never lags the work; see
   not feed back. Its secure contribution is eliminative; its positive arm (a
   boundary-residual *dissociation*) is heavily conditioned.
 
-- **`Paper3.md` — The Kinematics of Geodesic Flow on Riemannian Vector Bundles.** A
-  single-trajectory, jump-diffusion method for demarcating three geometric regimes
-  (asymptotic geodesic drift, isotropic fibre dispersion, structural rank collapse)
-  of a non-stationary multichannel signal on a curved state space. It is *logically
-  independent* of the two companions and stands or falls as a time-series method.
+- **`Paper3.md` — Geodesic Kinematics on the Covariance Manifold.** A proposed single-trajectory, jump-diffusion
+  method for demarcating geometric regimes of a non-stationary multichannel signal on
+  the covariance manifold, reported with its benchmarks and failure modes: the
+  three-regime demarcation has not been run end-to-end, the vector-bundle extension is
+  net negative where tested, and no component has yet been shown on real data to do
+  more than scalar baselines. It is *logically independent* of the two companions.
 
 ## The experiment suite (`experiments/`)
 
@@ -61,7 +62,7 @@ such, not softened.
   (`data/`, e.g. PhysioNet EEG/ECG) is **not** committed; see
   `paper3_geodesic_kinematics/DATA.md`.
 
-**[`RESULTS.md`](RESULTS.md) summarises what all 50 experiments found**, organised by
+**[`RESULTS.md`](RESULTS.md) summarises what all 52 experiments found**, organised by
 paper, with the open questions at the end.
 
 **`experiments/STATUS.md` is the authoritative live status** — the per-experiment
