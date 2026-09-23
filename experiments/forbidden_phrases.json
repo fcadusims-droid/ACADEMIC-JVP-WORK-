@@ -46,5 +46,68 @@
     "paper": "Paper3.md",
     "pattern": "presents no measured data",
     "why": "the paper reports measured EEG results."
+  },
+  {
+    "id": "Records: no 'structural discrimination validated'",
+    "paper": [
+      "Paper3.md",
+      "RESULTS.md",
+      "experiments/_results/README.md",
+      "experiments/STATUS.md",
+      "OPEN_ISSUES.md",
+      "site/content/data.md",
+      "site/content/overview.md",
+      "site/content/paper1.md",
+      "site/content/paper2.md",
+      "site/content/paper3.md",
+      "site/content/reproduce.md"
+    ],
+    "pattern": "(?i)structural discrimination[^.|]{0,40}\\bvalidated\\b",
+    "why": "The eyes-open/closed ratio compares two separate recordings against one recording's internal drift; it was never validated as structural discrimination (between_recording_control). Strike through historical wording (~~...~~) and annotate it instead."
+  },
+  {
+    "id": "Records: no 'silent on power transitions ... stands'",
+    "paper": [
+      "Paper3.md",
+      "RESULTS.md",
+      "experiments/_results/README.md",
+      "experiments/STATUS.md",
+      "OPEN_ISSUES.md",
+      "site/content/data.md",
+      "site/content/overview.md",
+      "site/content/paper1.md",
+      "site/content/paper2.md",
+      "site/content/paper3.md",
+      "site/content/reproduce.md"
+    ],
+    "pattern": "(?i)silent on power transitions[^.|]{0,40}\\bstands\\b",
+    "why": "Never tested against a power baseline on the eyes-open/closed data; the sleep natural-power arm failed."
+  },
+  {
+    "id": "Records: no 'tracks sleep staging beyond scalar power'",
+    "paper": [
+      "Paper3.md",
+      "RESULTS.md",
+      "experiments/_results/README.md",
+      "experiments/STATUS.md",
+      "OPEN_ISSUES.md",
+      "site/content/data.md",
+      "site/content/overview.md",
+      "site/content/paper1.md",
+      "site/content/paper2.md",
+      "site/content/paper3.md",
+      "site/content/reproduce.md"
+    ],
+    "pattern": "(?i)tracks human sleep staging beyond scalar power",
+    "why": "regime_referent_eog_control attributes the association to the EOG channel at subject level."
+  },
+  {
+    "id": "P1 no unqualified 'necessarily externally occasioned'",
+    "paper": [
+      "Paper1.md",
+      "PROGRAM.md"
+    ],
+    "pattern": "(?i)necessarily \\*?externally occasioned",
+    "why": "Necessary only for measure-preserving value dynamics; for dissipative dynamics it rests on an interpretive argument, relative to the observer's choice of system boundary."
   }
 ]
