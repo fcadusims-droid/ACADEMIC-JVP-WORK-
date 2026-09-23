@@ -206,5 +206,23 @@
     "papers": {
       "Paper3.md": "consistent with eyes open in \\$([0-9]+)\\$ of \\$15\\$"
     }
+  },
+  {
+    "id": "Detection control: OC vs SS AUC",
+    "result": "detection_between_recording_control",
+    "path": "auc_OC_vs_SS",
+    "tol": 0.005,
+    "papers": {
+      "Paper3.md": "at AUC \\$([0-9.]+)\\$ — just above the same"
+    }
+  },
+  {
+    "id": "Detection control: SS vs WN AUC",
+    "result": "detection_between_recording_control",
+    "path": "auc_SS_vs_WN",
+    "tol": 0.005,
+    "papers": {
+      "Paper3.md": "within-recording segments gives AUC \\$([0-9.]+)\\$"
+    }
   }
 ]

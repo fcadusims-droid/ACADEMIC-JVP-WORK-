@@ -59,7 +59,7 @@ they are buying.
 
 ---
 
-## Paper 1 — The Cybernetic Impossibility of Conversion
+## Paper 1 — The Cybernetic Limits of Conversion
 
 **The trichotomy survives its strongest adversarial candidates.** No candidate
 dynamics is the forbidden object — positive entropy together with absence of
@@ -163,7 +163,7 @@ diffusion length. *(`metabolic_null_resolution`)*
 
 ---
 
-## Paper 3 — The Kinematics of Geodesic Flow
+## Paper 3 — Geodesic Kinematics on the Covariance Manifold
 
 **The titular claim is not externally falsifiable as currently defined — the sharpest
 finding in the suite.** A Phase-0 gate, pre-registered before any corpus was inspected and
@@ -299,8 +299,12 @@ and both halves verified *before* any repair was scored. Four repairs were
 pre-registered against a fixed bar; the cheapest passed, lifting detection to **0.813**
 with localization unchanged. Applied unchanged to a paradigm not used to select it, it
 holds at **AUC 0.824**, while the old statistic fails sub-chance a second time
-(**0.434**) — so the *failure* mechanism generalises alongside the fix.
-*(`detection_statistic_repair`, `detection_repair_heldout`)*
+(**0.434**) — so the *failure* mechanism generalises alongside the fix. A later control
+qualifies this: the held-out positives splice two recordings, and a splice of two recordings of
+the *same* state also fires the statistic (AUC 0.74 against within-recording segments). Against
+that same-state splice the eyes-open/closed splice is separated at AUC 0.72, just above the 0.70
+bar (±0.1 at n = 15), so the evidence for detecting a change of *state* is marginal.
+*(`detection_statistic_repair`, `detection_repair_heldout`, `detection_between_recording_control`)*
 
 **A headline figure corrected downward.** The appendix's ≈12× structural effect was
 traced to an estimator choice and corrected to ≈3.3×, and then corrected again: the ≈3.3×

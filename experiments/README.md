@@ -11,7 +11,7 @@ different problems in each:
 
 | Paper | What it is | What simulation **can** do | What it **cannot** do |
 |---|---|---|---|
-| **1 — Cybernetic Impossibility** | Dynamical-systems math applied by analogy to theology | Check whether the theorems hold numerically; try to *falsify* the Sec. 7.5/7.6 trichotomy defence with a real agent | Say anything about grace or metanoia — out of scope of any experiment |
+| **1 — Cybernetic Limits** | Dynamical-systems math applied by analogy to theology | Check whether the theorems hold numerically; try to *falsify* the Sec. 7.5/7.6 trichotomy defence with a real agent | Say anything about grace or metanoia — out of scope of any experiment |
 | **2 — CBRA** | Statistical protocol on biological tissue | Test the *tool*: statistical power, false-positive rate, whether the added dissociation test is even feasible before spending on real subjects | Prove a "Lambda channel" exists in tissue — only real data can, and even that only partially |
 | **3 — Geodesic Kinematics** | Inference method, already in contact with real EEG | Attack the two concrete open problems the appendix already isolated (localization 5/15; drift-vs-jump confusion) | — (this is where simulation pays off fastest) |
 

@@ -45,7 +45,7 @@ REPO_URL = "https://github.com/fcadusims-droid/ACADEMIC-JVP-WORK-"
 PAPERS = [
     {
         "n": 1, "src": "Paper1.md", "slug": "paper-1",
-        "short": "The Cybernetic Impossibility of Conversion",
+        "short": "The Cybernetic Limits of Conversion",
         "sub": "A Transcendental Negative Critique of Control-Theoretic Models of "
                "Existential Transformation",
         "blurb": "A negative result. Given control as directed change relative to a "
@@ -68,14 +68,16 @@ PAPERS = [
     },
     {
         "n": 3, "src": "Paper3.md", "slug": "paper-3",
-        "short": "The Kinematics of Geodesic Flow on Riemannian Vector Bundles",
-        "sub": "A Proposed Non-Equilibrium Jump-Diffusion Protocol for the Asymptotic "
-               "Demarcation of Systemic State Transitions",
+        "short": "Geodesic Kinematics on the Covariance Manifold",
+        "sub": "A Proposed Single-Trajectory Protocol for Regime Change, with Its "
+               "Benchmarks and Failure Modes",
         "blurb": "A proposed single-trajectory method for deciding whether dynamics "
                  "after an abrupt transition is directed drift, undirected diffusion, or "
                  "structural collapse. The three-regime demarcation it is named for has "
                  "not yet been run end-to-end; what has been tested is its trace-normalised "
-                 "SPD base. Independent of its two companions.",
+                 "SPD base, not yet shown on real data to do more than scalar "
+                 "baselines. Reported with its benchmarks and failure modes. Independent "
+                 "of its two companions.",
         "content": "paper3.md", "dir": "paper3_geodesic_kinematics",
     },
 ]

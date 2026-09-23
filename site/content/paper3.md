@@ -74,7 +74,10 @@ records that exposed the problem, so on its own it showed only that some statist
 fits those records. Applied unchanged to a paradigm not used to select it, with the
 bar fixed in advance, it holds at AUC 0.82 — and the old statistic fails sub-chance a
 second time, which is what the mechanistic diagnosis predicted and what single-corpus
-selection could not have shown (`detection_repair_heldout`).
+selection could not have shown (`detection_repair_heldout`). A later control found that a
+change of recording alone also fires the statistic (AUC 0.74), and that a change of state is
+separated from a same-state change of recording only at AUC 0.72, just above the bar
+(`detection_between_recording_control`): the evidence for detecting a change of state is marginal.
 
 **A corrected headline.** The appendix's ≈12× structural effect was traced to an
 estimator choice and corrected to ≈3.3× — and then again to ≈1.3×, because the ≈3.3×

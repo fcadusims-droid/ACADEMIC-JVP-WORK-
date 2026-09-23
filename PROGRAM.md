@@ -40,8 +40,8 @@ consequent, and each is written so that it survives the antecedent being false.
   positive arm halted at its own stopping rule on the one viable public corpus — so what it
   contributes is the protocol, the gate it failed, and the conditions under which it could
   run.
-- **Paper 3** builds clause (iii): a single-trajectory demarcation method on Riemannian vector
-  bundles. It is a methods paper, and a Phase-0 gate found its titular three-regime claim is
+- **Paper 3** builds clause (iii): a single-trajectory demarcation method on the covariance
+  manifold, with a vector-bundle extension that is net negative where tested. It is a methods paper, and a Phase-0 gate found its titular three-regime claim is
   not, as currently defined, externally falsifiable. It borrows *nothing* from the other two
   and is offered on its own terms as time-series methodology.
 
@@ -102,3 +102,34 @@ independent pieces, each of which reports honestly that its central empirical cl
 unconfirmed, untested, or not-yet-falsifiable. That is the state of the work, and it is the
 reason the three are offered as a program of method and honest negatives rather than as a
 trilogy of discoveries.
+
+## Why three limits and negatives are the contribution
+
+A reviewer of the trilogy observed that each paper reads as if it makes a strong claim, then
+spends most of its length withdrawing it. The observation is fair, and the remedy is to state
+at the outset what the papers are, not to remove the qualifications. The titles now do this.
+Paper 1 is about the *limits* of control, Paper 2 about the data a test would need, and Paper 3
+is a *proposed* protocol reported with its benchmarks and failure modes.
+
+What the three offer, read that way:
+
+1. **A map of where the question cannot be answered, and why.** Paper 1 shows which cells a
+   control-theoretic account of transformation must fall into, given a stated definition of
+   control. That is a sorting device, and it is useful whether or not any transformation
+   occurs.
+2. **A statement of what evidence would be needed, and a check of whether it exists.** Paper 2
+   specifies an eliminative protocol and reports, under a stopping rule fixed in advance, that
+   the only open corpus able to run it fails the protocol's own estimability gate. That is a
+   result about the evidence base, and it tells the next person where not to look.
+3. **A method with its failure modes measured, not assumed.** Paper 3 reports which parts of a
+   geometric method were tested on real data, which failed, and against which baselines. A
+   negative methods result saves the next group from building the same apparatus.
+4. **A record of how the claims were corrected.** Every downgrade — the Lean axioms, the
+   exchangeable-window p-values, the centred windows, the EOG channel, the between-recording
+   ratio — is recorded with the control that forced it (`METHODOLOGY.md`, `STATUS.md`). The
+   record lets a reader check that what remains was not selected after the fact.
+
+None of this is a discovery about conversion, biology or EEG, and the program does not claim
+one. It claims that the question has been made precise enough to fail cleanly in three
+places.
+
