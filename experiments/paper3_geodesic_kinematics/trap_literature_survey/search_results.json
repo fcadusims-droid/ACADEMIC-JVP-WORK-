@@ -1,0 +1,800 @@
+{
+ "query": "(EEG OR electroencephalogra*) AND (\"Riemannian\" OR \"covariance matrices\" OR \"SPD matrices\") AND OPEN_ACCESS:y AND PUB_YEAR:[2012 TO 2025]",
+ "hitCount": 1318,
+ "results": [
+  {
+   "rank": 1,
+   "pmcid": "PMC11991455",
+   "title": "The Riemannian Means Field Classifier for EEG-Based BCI Data.",
+   "journal": "Sensors (Basel, Switzerland)",
+   "year": "2025",
+   "doi": "10.3390/s25072305",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<b><b>:</b></b> A substantial amount of research has demonstrated the robustness and accuracy of the Riemannian minimum distance to mean (MDM) classifier for all kinds of EEG-based brain-computer interfaces (BCIs). This classifier is simple, fully deterministic, robust to noise, computationally efficient, and prone to transfer learning. Its training is very simple, requiring just the computation of a geometric mean of a symmetric positive-definite (SPD) matrix per class. We propose an improvement of the MDM involving a number of power means of SPD matrices instead of the sole geometric mean. By the analysis of 20 public databases, 10 for the motor-imagery BCI paradigm and 10 for the P300 BCI paradigm, comprising 587 individuals in total, we show that the proposed classifier clearly outperforms the MDM, approaching the state-of-the art in terms of performance while retaining the simplicity and the deterministic behavior. In order to promote reproducible research, our code will be released as open source."
+  },
+  {
+   "rank": 2,
+   "pmcid": "PMC12521986",
+   "title": "Sensitive and specific fNIRS-based approach for awareness detection in disorders of consciousness: proof of principle in healthy adults.",
+   "journal": "Neurophotonics",
+   "year": "2025",
+   "doi": "10.1117/1.nph.12.4.045001",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<h4>Introduction</h4>Disorders of consciousness (DoCs) are characterized by varying levels of arousal and awareness. Due to severe motor impairments often accompanying these conditions, differentiating between minimally conscious state (MCS) and unresponsive wakefulness syndrome (UWS) remains challenging. Accurate diagnosis, however, is critical for optimal treatment and prognosis. Functional near-infrared spectroscopy (fNIRS), due to its portability and noninvasiveness, holds promise for brain-based diagnostics, although current methods lack sufficient sensitivity and specificity.<h4>Methods</h4>We introduce a highly sensitive, and specific fNIRS-based diagnostic approach tailored to the individual cognitive state of DoC patients. Nine healthy participants received auditory cues instructing them to either perform individually tailored motor-speech imagery or remain at rest. In separate runs, participants were instructed to be responsive to these cues to mimic MCS, or unresponsive, to mimic UWS. fNIRS-channel covariance matrices were classified for responsive and unresponsive states as either imagery or rest using a Riemannian-geometry-based approach.<h4>Results</h4>Classification between responsive and unresponsive states achieved a sensitivity of 100% and a specificity of 89% across participants. Within the two states, imagery and rest were classified with 83,9% and 55,93% accuracy, respectively; the latter result, close to chance level, was expected in the unresponsive state.<h4>Conclusion</h4>This individualized diagnostic approach may have the potential to significantly enhance diagnostic accuracy for DoCs. It provides a noninvasive, efficient, and objective assessment, potentially reducing the rate of misdiagnosis rates. The practicality and minimal technical requirements of fNIRS further support future clinical implementation."
+  },
+  {
+   "rank": 3,
+   "pmcid": "PMC12431285",
+   "title": "Classification of Different Motor Imagery Tasks with the Same Limb Using Electroencephalographic Signals.",
+   "journal": "Sensors (Basel, Switzerland)",
+   "year": "2025",
+   "doi": "10.3390/s25175291",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Stroke is a neurological condition that often results in long-term motor deficits. Given the high prevalence of motor impairments worldwide, there is a critical need to explore innovative neurorehabilitation strategies that aim to enhance the quality of life of patients. One promising approach involves brain-computer interface (BCI) systems controlled by electroencephalographic (EEG) signals elicited when a subject performs motor imagery (MI), which is the mental simulation of movement without actual execution. Such systems have shown potential for facilitating motor recovery by promoting neuroplastic mechanisms. Controlling BCI systems based on MI-EEG signals involves the following sequential stages: recording the raw signal, preprocessing, feature extraction and selection, and classification. Each of these stages can be executed using several techniques and numerous parameter combinations. In this study, we searched for the combination of feature extraction technique, time window, frequency range, and classifier that could provide the best classification accuracy for the BCI Competition 2008 IV 2a benchmark dataset (BCI-C), characterized by EEG-MI data of different limbs (four classes, of which three were used in this work), and the NeuroSCP EEG-MI dataset, a custom experimental protocol developed in our laboratory, consisting of EEG recordings of different movements with the same limb (three classes-right dominant arm). The mean classification accuracy for BCI-C was 76%. When the subjects were evaluated individually, the best-case classification accuracy was 94% and the worst case was 54%. For the NeuroSCP dataset, the average classification result was 53%. The individual subject's evaluation best-case was 71% and the worst case was 35%, which is close to the chance level (33%). These results indicate that techniques commonly applied to classify different limb MI based on EEG features cannot perform well when classifying different MI tasks with the same limb. Therefore, we propose other techniques, such as EEG functional connectivity, as a feature that could be tested in future works to classify different MI tasks of the same limb."
+  },
+  {
+   "rank": 4,
+   "pmcid": "PMC11963017",
+   "title": "GREEN: A lightweight architecture using learnable wavelets and Riemannian geometry for biomarker exploration with EEG signals.",
+   "journal": "Patterns (New York, N.Y.)",
+   "year": "2025",
+   "doi": "10.1016/j.patter.2025.101182",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Spectral analysis using wavelets is widely used for identifying biomarkers in EEG signals. Recently, Riemannian geometry has provided an effective mathematical framework for predicting biomedical outcomes from multichannel electroencephalography (EEG) recordings while showing concord with neuroscientific domain knowledge. However, these methods rely on handcrafted rules and sequential optimization. In contrast, deep learning (DL) offers end-to-end trainable models achieving state-of-the-art performance on various prediction tasks but lacks interpretability and interoperability with established neuroscience concepts. We introduce Gabor Riemann EEGNet (GREEN), a lightweight neural network that integrates wavelet transforms and Riemannian geometry for processing raw EEG data. Benchmarking on six prediction tasks across four datasets with over 5,000 participants, GREEN outperformed non-deep state-of-the-art models and performed favorably against large DL models while using orders-of-magnitude fewer parameters. Computational experiments showed that GREEN facilitates learning sparse representations without compromising performance. By integrating domain knowledge, GREEN combines a desirable complexity-performance trade-off with interpretable representations."
+  },
+  {
+   "rank": 5,
+   "pmcid": "PMC12319850",
+   "title": "Deep Riemannian Networks for end-to-end EEG decoding.",
+   "journal": "Imaging neuroscience (Cambridge, Mass.)",
+   "year": "2025",
+   "doi": "10.1162/imag_a_00511",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "State-of-the-art performance in electroencephalography (EEG) decoding tasks is currently often achieved with either Deep-Learning (DL) or Riemannian-Geometry-based decoders (RBDs). Recently, there is growing interest in Deep Riemannian Networks (DRNs) possibly combining the advantages of both previous classes of methods. However, there are still a range of topics where additional insight is needed to pave the way for a more widespread application of DRNs in EEG. These include architecture design questions such as network size and end-to-end ability. How these factors affect model performance has not been explored. Additionally, it is not clear how the data within these networks are transformed, and whether this would correlate with traditional EEG decoding. Our study aims to lay the groundwork in the area of these topics through the analysis of DRNs for EEG with a wide range of hyperparameters. Networks were tested on five public EEG datasets and compared with state-of-the-art ConvNets. Here, we propose end-to-end EEG SPDNet (EE(G)-SPDNet), and we show that this wide, end-to-end DRN can outperform the ConvNets, and in doing so use physiologically plausible frequency regions. We also show that the end-to-end approach learns more complex filters than traditional bandpass filters targeting the classical alpha, beta, and gamma frequency bands of the EEG, and that performance can benefit from channel-specific filtering approaches. Additionally, architectural analysis revealed areas for further improvement due to the possible under utilisation of Riemannian specific information throughout the network. Our study, thus, shows how to design and train DRNs to infer task-related information from the raw EEG without the need of handcrafted filterbanks and highlights the potential of end-to-end DRNs such as EE(G)-SPDNet for high-performance EEG decoding."
+  },
+  {
+   "rank": 6,
+   "pmcid": "PMC11351530",
+   "title": "EEG Motor Imagery Classification: Tangent Space with Gate-Generated Weight Classifier.",
+   "journal": "Biomimetics (Basel, Switzerland)",
+   "year": "2024",
+   "doi": "10.3390/biomimetics9080459",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Individuals grappling with severe central nervous system injuries often face significant challenges related to sensorimotor function and communication abilities. In response, brain-computer interface (BCI) technology has emerged as a promising solution by offering innovative interaction methods and intelligent rehabilitation training. By leveraging electroencephalographic (EEG) signals, BCIs unlock intriguing possibilities in patient care and neurological rehabilitation. Recent research has utilized covariance matrices as signal descriptors. In this study, we introduce two methodologies for covariance matrix analysis: multiple tangent space projections (M-TSPs) and Cholesky decomposition. Both approaches incorporate a classifier that integrates linear and nonlinear features, resulting in a significant enhancement in classification accuracy, as evidenced by meticulous experimental evaluations. The M-TSP method demonstrates superior performance with an average accuracy improvement of 6.79% over Cholesky decomposition. Additionally, a gender-based analysis reveals a preference for men in the obtained results, with an average improvement of 9.16% over women. These findings underscore the potential of our methodologies to improve BCI performance and highlight gender-specific performance differences to be examined further in our future studies."
+  },
+  {
+   "rank": 7,
+   "pmcid": "PMC12237276",
+   "title": "Utilizing statistical analysis for motion imagination classification in brain-computer interface systems.",
+   "journal": "PloS one",
+   "year": "2025",
+   "doi": "10.1371/journal.pone.0327121",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "In this study, we introduce a novel Field-Agnostic Riemannian-Kernel Alignment (FARKA) method to advance the classification of motion imagination in Brain-Computer Interface (BCI) systems. BCI systems enable direct control of external devices through brain activity, bypassing peripheral nerves and muscles. Among various BCI technologies, electroencephalography (EEG) based on non-intrusive cortical potential signals stands out due to its high temporal resolution and non-invasive nature. EEG-based BCI technology encodes human brain intentions into cortical potentials, which are recorded and decoded into control commands. This technology is crucial for applications in motion rehabilitation, training optimization, and motion control. The proposed FARKA method combines Riemannian Alignment for sample alignment, Riemannian Tangent Space for spatial representation extraction, and Knowledge Kernel Adaptation to learn field-agnostic kernel matrices. Our approach addresses the limitations of current methods by enhancing classification performance and efficiency in inter-individual MI tasks. Experimental results on three public EEG datasets demonstrate the superior performance of FARKA compared to existing methods."
+  },
+  {
+   "rank": 8,
+   "pmcid": "PMC12523035",
+   "title": "Riemannian geometry boosts functional near-infrared spectroscopy-based brain-state classification accuracy.",
+   "journal": "Neurophotonics",
+   "year": "2025",
+   "doi": "10.1117/1.nph.12.4.045002",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<h4>Background</h4>Functional near-infrared spectroscopy (fNIRS) has recently gained momentum as a reliable and accurate tool for assessing brain states based on the vascular response to neural activity. This increase in popularity is due to its robustness to movement, non-invasive nature, portability, and user-friendly application. However, compared with other hemodynamic functional brain-imaging methods such as functional magnetic resonance imaging (fMRI), fNIRS is constrained by its limited spatial resolution and coverage with a particularly limited penetration depth. In addition, due to comparatively fewer methodological advancements, the performance of fNIRS-based brain-state classification still lags behind more prevalent methods such as fMRI.<h4>Methods</h4>We introduce a classification approach grounded in Riemannian geometry for the classification of kernel matrices, leveraging the temporal and spatial relationships between channels and the inherent duality of fNIRS signals, specifically oxygenated and deoxygenated hemoglobin. For the Riemannian-geometry-based models, we compared different kernel matrix estimators and two classifiers: Riemannian Support Vector Classifier and Tangent Space Logistic Regression. These were benchmarked against four models employing traditional feature extraction methods. Our approach was tested on seven participants in two brain-state classification scenarios based on the same fNIRS dataset: an eight-choice classification, which includes seven established plus an individually selected imagery task, and a two-choice classification of all possible 28 two-task combinations.<h4>Results</h4>This approach achieved a mean eight-choice classification accuracy of 65%, significantly surpassing the mean accuracy of 42% obtained with traditional methods. In addition, the best-performing model achieved an average accuracy of 96% for two-choice classification across all task combinations, compared with 78% with traditional models.<h4>Conclusion</h4>To our knowledge, we are the first to demonstrate that the proposed Riemannian-geometry-based classification approach is both powerful and viable for fNIRS data, substantially increasing the accuracy in binary and multi-class classification of brain activation patterns."
+  },
+  {
+   "rank": 9,
+   "pmcid": "PMC11169813",
+   "title": "Riemannian transfer learning based on log-Euclidean metric for EEG classification.",
+   "journal": "Frontiers in neuroscience",
+   "year": "2024",
+   "doi": "10.3389/fnins.2024.1381572",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<h4>Introduction</h4>Brain computer interfaces (BCI), which establish a direct interaction between the brain and the external device bypassing peripheral nerves, is one of the hot research areas. How to effectively convert brain intentions into instructions for controlling external devices in real-time remains a key issue that needs to be addressed in brain computer interfaces. The Riemannian geometry-based methods have achieved competitive results in decoding EEG signals. However, current Riemannian classifiers tend to overlook changes in data distribution, resulting in degenerated classification performance in cross-session and/or cross subject scenarios.<h4>Methods</h4>This paper proposes a brain signal decoding method based on Riemannian transfer learning, fully considering the drift of the data distribution. Two Riemannian transfer learning methods based log-Euclidean metric are developed, such that historical data (source domain) can be used to aid the training of the Riemannian decoder for the current task, or data from other subjects can be used to boost the training of the decoder for the target subject.<h4>Results</h4>The proposed methods were verified on BCI competition III, IIIa, and IV 2a datasets. Compared with the baseline that without transfer learning, the proposed algorithm demonstrates superior classification performance. In contrast to the Riemann transfer learning method based on the affine invariant Riemannian metric, the proposed method obtained comparable classification performance, but is much more computationally efficient.<h4>Discussion</h4>With the help of proposed transfer learning method, the Riemannian classifier obtained competitive performance to existing methods in the literature. More importantly, the transfer learning process is unsupervised and time-efficient, possessing potential for online learning scenarios."
+  },
+  {
+   "rank": 10,
+   "pmcid": "PMC12368069",
+   "title": "Enhancing classification of a large lower-limb motor imagery EEG dataset for BCI in knee pain patients.",
+   "journal": "Scientific data",
+   "year": "2025",
+   "doi": "10.1038/s41597-025-05767-2",
+   "pubtype": [
+    "Research Support, Non-U.S. Gov't",
+    "Dataset",
+    "data-paper",
+    "Journal Article"
+   ],
+   "abstract": "Chronic knee osteoarthritis pain significantly impacts patients' quality of life and motor function. While motor imagery (MI)-based brain-computer interface (BCI) systems have shown promise in rehabilitation, their application to lower-limb conditions, particularly in pain patients, is underexplored. This study evaluates the feasibility of applying an MI-BCI model to a large dataset of knee pain patients, utilizing a novel deep learning algorithm for signal decoding. This EEG data was collected and analysed from 30 knee pain patients, revealing significant event-related (de)synchronization (ERD/ERS) during MI tasks. Traditional decoding algorithms achieved accuracies of 51.43%, 55.71%, and 76.21%, while the proposed OTFWRGD algorithm reached an average accuracy of 86.41%. This dataset highlights the potential of lower-limb MI in enhancing neural plasticity and offers valuable insights for future MI-BCI applications in lower-limb rehabilitation, especially for patients with knee pain."
+  },
+  {
+   "rank": 11,
+   "pmcid": "PMC10696092",
+   "title": "Signature methods for brain-computer interfaces.",
+   "journal": "Scientific reports",
+   "year": "2023",
+   "doi": "10.1038/s41598-023-41326-8",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Brain-computer interfaces (BCIs) allow direct communication between one's central nervous system and a computer without any muscle movement hence by-passing the peripheral nervous system. They can restore disabled people's ability to interact with their environment, e.g. communication and wheelchair control. However, to this day their performance is still hindered by the non-stationarity of electroencephalography (EEG) signals, as well as their susceptibility to noise from the users' environment and from their own physiological activity. Moreover, a non-negligible amount of users struggle to use BCI systems based on motor imagery. In this paper, a new method based on the path signature is introduced to tackle this problem by using features which are different from the usual power-based ones. The path signature is a series of iterated integrals computed from a multidimensional path. It is invariant under translation and time reparametrization, which makes it a robust feature for multichannel EEG time series. The performance can be further boosted by combining the path signature with the gold standard Riemannian classifier in the BCI field exploiting the geometric structure of symmetric positive definite (SPD) matrices. The results obtained on publicly available datasets show that the signature method is more robust to inter-user variability than classical ones, especially on noisy and low-quality data. Hence, this study paves the way towards the use of mathematical tools that until now have been neglected, in order to tackle the EEG-based BCI variability issue. It also sheds light on the lead-lag relationship captured by path signature which seems relevant to assess the underlying neural mechanisms."
+  },
+  {
+   "rank": 12,
+   "pmcid": "PMC11853533",
+   "title": "Hybrid BCI for Meal-Assist Robot Using Dry-Type EEG and Pupillary Light Reflex.",
+   "journal": "Biomimetics (Basel, Switzerland)",
+   "year": "2025",
+   "doi": "10.3390/biomimetics10020118",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Brain-computer interface (BCI)-based assistive technologies enable intuitive and efficient user interaction, significantly enhancing the independence and quality of life of elderly and disabled individuals. Although existing wet EEG-based systems report high accuracy, they suffer from limited practicality. This study presents a hybrid BCI system combining dry-type EEG-based flash visual-evoked potentials (FVEP) and pupillary light reflex (PLR) designed to control an LED-based meal-assist robot. The hybrid system integrates dry-type EEG and eyewear-type infrared cameras, addressing the preparation challenges of wet electrodes, while maintaining practical usability and high classification performance. Offline experiments demonstrated an average accuracy of 88.59% and an information transfer rate (ITR) of 18.23 bit/min across the four target classifications. Real-time implementation uses PLR triggers to initiate the meal cycle and EMG triggers to detect chewing, indicating the completion of the cycle. These features allow intuitive and efficient operation of the meal-assist robot. This study advances the BCI-based assistive technologies by introducing a hybrid system optimized for real-world applications. The successful integration of the FVEP and PLR in a meal-assisted robot demonstrates the potential for robust and user-friendly solutions that empower the users with autonomy and dignity in their daily activities."
+  },
+  {
+   "rank": 13,
+   "pmcid": "PMC12007539",
+   "title": "Harmonizing and aligning M/EEG datasets with covariance-based techniques to enhance predictive regression modeling.",
+   "journal": "Imaging neuroscience (Cambridge, Mass.)",
+   "year": "2023",
+   "doi": "10.1162/imag_a_00040",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Neuroscience studies face challenges in gathering large datasets, which limits the use of machine learning (ML) approaches. One possible solution is to incorporate additional data from large public datasets; however, data collected in different contexts often exhibit systematic differences called dataset shifts. Various factors, for example, site, device type, experimental protocol, or social characteristics, can lead to substantial divergence of brain signals that can hinder the success of ML across datasets. In this work, we focus on dataset shifts in recordings of brain activity using MEG and EEG. State-of-the-art predictive approaches on magneto- and electroencephalography (M/EEG) signals classically represent the data by covariance matrices. Model-based dataset alignment methods can leverage the geometry of covariance matrices, leading to three steps: re-centering, re-scaling, and rotation correction. This work explains theoretically how differences in brain activity, anatomy, or device configuration lead to certain shifts in data covariances. Using controlled simulations, the different alignment methods are evaluated. Their practical relevance is evaluated for brain age prediction on one MEG dataset (Cam-CAN, n = 646) and two EEG datasets (TUAB, n = 1385; LEMON, n = 213). Among the same dataset (Cam-CAN), when training and test recordings were from the same subjects but performing different tasks, paired rotation correction was essential ( δR2=+0.13 (rest-passive) or +0.17 (rest-smt)). When in addition to different tasks we included unseen subjects, re-centering led to improved performance ( δR2=+0.096 for rest-passive, δR2=+0.045 for rest-smt). For generalization to an independent dataset sampled from a different population and recorded with a different device, re-centering was necessary to achieve brain age prediction performance close to within dataset prediction performance. This study demonstrates that the generalization of M/EEG-based regression models across datasets can be substantially enhanced by applying domain adaptation procedures that can statistically harmonize diverse datasets."
+  },
+  {
+   "rank": 14,
+   "pmcid": "PMC11995804",
+   "title": "Exploring the neuromagnetic signatures of cognitive decline from mild cognitive impairment to Alzheimer's disease dementia.",
+   "journal": "EBioMedicine",
+   "year": "2025",
+   "doi": "10.1016/j.ebiom.2025.105659",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<h4>Background</h4>Developing non-invasive and affordable biomarkers to detect Alzheimer's disease (AD) at a prodromal stage is essential, particularly in the context of new disease-modifying therapies. Mild cognitive impairment (MCI) is a critical stage preceding dementia, but not all patients with MCI will progress to AD. This study explores the potential of magnetoencephalography (MEG) to predict cognitive decline from MCI to AD dementia.<h4>Methods</h4>We analysed resting-state MEG data from the BioFIND dataset including 117 patients with MCI among whom 64 developed AD dementia (AD progression), while 53 remained cognitively stable (stable MCI), using spectral analysis. Logistic regression models estimated the additive explanation of selected clinical, MEG, and MRI variables for AD progression risk. We then built a high-dimensional classification model to combine all modalities and variables of interest.<h4>Findings</h4>MEG 16-38Hz spectral power, particularly over parieto-occipital magnetometers, was significantly reduced in the AD progression group. In logistic regression models, decreased MEG 16-38Hz spectral power and reduced hippocampal volume/total grey matter ratio on MRI were independently linked to higher AD progression risk. The data-driven classification model confirmed, among other factors, the complementary information of MEG covariance (AUC = 0.74, SD = 0.13) and MRI cortical volumes (AUC = 0.77, SD = 0.14) to predict AD progression. Combining all inputs led to markedly improved classification scores (AUC = 0.81, SD = 0.12).<h4>Interpretation</h4>These findings highlight the potential of spectral power and covariance as robust non-invasive electrophysiological biomarkers to predict AD progression, complementing other diagnostic measures, including cognitive scores and MRI.<h4>Funding</h4>This work was supported by: Fondation pour la Recherche Médicale (grant FDM202106013579)."
+  },
+  {
+   "rank": 15,
+   "pmcid": "PMC12238400",
+   "title": "Motor imagery EEG signal classification using novel deep learning algorithm.",
+   "journal": "Scientific reports",
+   "year": "2025",
+   "doi": "10.1038/s41598-025-00824-7",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Electroencephalography (EEG) signal classification plays a critical role in various biomedical and cognitive research applications, including neurological disorder detection and cognitive state monitoring. However, these technologies face challenges and exhibit reduced performances due to signal noise, inter-subject variability, and real-time processing demands. Thus, to overcome these limitations a novel model is presented in this research work for motor imagery (MI) EEG signal classification. To begin, the preprocessing stage of the proposed approach includes an innovative hybrid approach that combines empirical mode decomposition (EMD) for extracting intrinsic signal modes. In addition to that, continuous wavelet transform (CWT) is used for multi-resolution analysis. For spatial feature enhancement the proposed approach utilizes source power coherence (SPoC) integrated with common spatial patterns (CSP) for robust feature extraction. For final feature classification, an adaptive deep belief network (ADBN) is proposed. To attain enhanced performance the parameters of the classifier network are optimized using the Far and near optimization (FNO) algorithm. This combined approach provides superior classification accuracy and adaptability to diverse conditions in EEG signal analysis. The evaluations of the proposed approach were conducted using benchmark BCI competition IV Dataset 2a and Physionet dataset. On the BCI dataset, the proposed approach achieves 95.7% accuracy, 96.2% recall, 95.9% precision, and 97.5% specificity. In addition, it delivers 94.1% accuracy, 94.0% recall, 93.6% precision, and 95.0% specificity on the PhysioNet dataset. With better results, the proposed model attained superior performance compared to existing methods such as CNN, LSTM, and BiLSTM algorithms."
+  },
+  {
+   "rank": 16,
+   "pmcid": "PMC12782479",
+   "title": "Decoding Dementia: Classifying Alzheimer's and Frontotemporal Dementia with EEG and Riemannian Geometry",
+   "journal": "Alzheimer's & dementia : the journal of the Alzheimer's Association",
+   "year": "2025",
+   "doi": null,
+   "pubtype": [
+    "Abstract"
+   ],
+   "abstract": ""
+  },
+  {
+   "rank": 17,
+   "pmcid": "PMC12297340",
+   "title": "Enhanced EEG signal classification in brain computer interfaces using hybrid deep learning models.",
+   "journal": "Scientific reports",
+   "year": "2025",
+   "doi": "10.1038/s41598-025-07427-2",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Brain-computer interfaces (BCIs) establish a communication pathway between the human brain and external devices by decoding neural signals. This study focuses on enhancing the classification of Motor Imagery (MI) within BCI systems by leveraging advanced machine learning and deep learning techniques. The accurate classification of electroencephalogram (EEG) data is crucial for enhancing BCI performance. The BCI architecture processes electroencephalography signals through three critical stages: data pre-processing, feature extraction, and classification. The research evaluates the performance of five traditional machine learning classifiers- K-Nearest Neighbors (KNN), Support Vector Classifier (SVC), Logistic Regression (LR), Random Forest (RF), and Naive Bayes (NB)-using the \"PhysioNet EEG Motor Movement/Imagery Dataset\". This dataset encompasses EEG data from various motor tasks, including both actual and imagined movements. Among the traditional classifiers, Random Forest achieved the highest accuracy of 91%, underscoring its efficacy in motor imagery classification within BCI systems. In addition to conventional approaches, the study also explores deep learning techniques, with Convolutional Neural Networks (CNN) and Long Short-Term Memory (LSTM) networks yielding accuracies of 88.18% and 16.13%, respectively. However, the proposed hybrid model, which synergistically combines CNN and LSTM, significantly surpasses both traditional machine learning and individual deep learning methods, achieving an exceptional accuracy of 96.06%. This substantial improvement highlights the potential of hybrid deep learning models to advance the state of the art in BCI systems, offering a more robust and precise approach to motor imagery classification."
+  },
+  {
+   "rank": 18,
+   "pmcid": "PMC10823003",
+   "title": "A study on the combination of functional connection features and Riemannian manifold in EEG emotion recognition.",
+   "journal": "Frontiers in neuroscience",
+   "year": "2023",
+   "doi": "10.3389/fnins.2023.1345770",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<h4>Introduction</h4>Affective computing is the core for Human-computer interface (HCI) to be more intelligent, where electroencephalogram (EEG) based emotion recognition is one of the primary research orientations. Besides, in the field of brain-computer interface, Riemannian manifold is a highly robust and effective method. However, the symmetric positive definiteness (SPD) of the features limits its application.<h4>Methods</h4>In the present work, we introduced the Laplace matrix to transform the functional connection features, i.e., phase locking value (PLV), Pearson correlation coefficient (PCC), spectral coherent (COH), and mutual information (MI), to into semi-positive, and the <i>max</i> operator to ensure the transformed feature be positive. Then the SPD network is employed to extract the deep spatial information and a fully connected layer is employed to validate the effectiveness of the extracted features. Particularly, the decision layer fusion strategy is utilized to achieve more accurate and stable recognition results, and the differences of classification performance of different feature combinations are studied. What's more, the optimal threshold value applied to the functional connection feature is also studied.<h4>Results</h4>The public emotional dataset, SEED, is adopted to test the proposed method with subject dependent cross-validation strategy. The result of average accuracies for the four features indicate that PCC outperform others three features. The proposed model achieve best accuracy of 91.05% for the fusion of PLV, PCC, and COH, followed by the fusion of all four features with the accuracy of 90.16%.<h4>Discussion</h4>The experimental results demonstrate that the optimal thresholds for the four functional connection features always kept relatively stable within a fixed interval. In conclusion, the experimental results demonstrated the effectiveness of the proposed method."
+  },
+  {
+   "rank": 19,
+   "pmcid": "PMC12578254",
+   "title": "Conditional VAE for personalized neurofeedback in cognitive training.",
+   "journal": "PloS one",
+   "year": "2025",
+   "doi": "10.1371/journal.pone.0335364",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Machine learning (ML) offers great potential in healthcare, especially in the analysis of complex physiological signals like electroencephalography (EEG). EEG recordings hold valuable insights into neurological function and can aid in diagnosing various conditions. In this work, we explore the use of a Conditional Variational Autoencoder (CVAE) that injects a binary health label (healthy or orthopedic impairment) into both the encoder input and the latent space coupled with the extracted features, leveraging the conditional input vector to learn representations specific to different health conditions. Our study involved using two public OpenNeuro datasets [1,2]. From the healthy dataset we randomly selected seven subjects to match the seven impaired participants; in both sets we retained the same 11 scalp channels (C3, Cz, C4, FC3, FCz, FC4, CP3, CPz, CP4, F3, F4). Six descriptors-Short time Fourier Transform (STFT), Hurst Exponent (HE), Detrended Fluctuation Analysis (DFA), Correlation Dimension (CD), Kolmogorov-Sinai Entropy (permutation entropy; KS-proxy), and the Largest Lyapunov Exponent (LLE)-are extracted channel-wise and concatenated to form the input feature vector, which distills distinct characteristics from the EEG signals. We rigorously evaluated the performance of our CVAE model in combination with each feature extraction technique. The conditional supply of class labels to both encoder and decoder enabled the CVAE to achieve 93% accuracy on the unseen test split of the dataset with precision of 93%, a recall of 93%, and an F1-score of 0.93 outperforming re-trained CNN baselines. These results highlight the promise of CVAEs and the significance of well-suited feature extraction for robust EEG classification. This work could contribute to the development of automated healthcare diagnostic tools."
+  },
+  {
+   "rank": 20,
+   "pmcid": "PMC10973000",
+   "title": "Combining detrended cross-correlation analysis with Riemannian geometry-based classification for improved brain-computer interface performance.",
+   "journal": "Frontiers in neuroscience",
+   "year": "2024",
+   "doi": "10.3389/fnins.2024.1271831",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Riemannian geometry-based classification (RGBC) gained popularity in the field of brain-computer interfaces (BCIs) lately, due to its ability to deal with non-stationarities arising in electroencephalography (EEG) data. Domain adaptation, however, is most often performed on sample covariance matrices (SCMs) obtained from EEG data, and thus might not fully account for components affecting covariance estimation itself, such as regional trends. Detrended cross-correlation analysis (DCCA) can be utilized to estimate the covariance structure of such signals, yet it is computationally expensive in its original form. A recently proposed online implementation of DCCA, however, allows for its fast computation and thus makes it possible to employ DCCA in real-time applications. In this study we propose to replace the SCM with the DCCA matrix as input to RGBC and assess its effect on offline and online BCI performance. First we evaluated the proposed decoding pipeline offline on previously recorded EEG data from 18 individuals performing left and right hand motor imagery (MI), and benchmarked it against vanilla RGBC and popular MI-detection approaches. Subsequently, we recruited eight participants (with previous BCI experience) who operated an MI-based BCI (MI-BCI) online using the DCCA-enhanced Riemannian decoder. Finally, we tested the proposed method on a public, multi-class MI-BCI dataset. During offline evaluations the DCCA-based decoder consistently and significantly outperformed the other approaches. Online evaluation confirmed that the DCCA matrix could be computed in real-time even for 22-channel EEG, as well as subjects could control the MI-BCI with high command delivery (normalized Cohen's κ: 0.7409 ± 0.1515) and sample-wise MI detection (normalized Cohen's κ: 0.5200 ± 0.1610). <i>Post-hoc</i> analysis indicated characteristic connectivity patterns under both MI conditions, with stronger connectivity in the hemisphere contralateral to the MI task. Additionally, fractal scaling exponent of neural activity was found increased in the contralateral compared to the ipsilateral motor cortices (C4 and C3 for left and right MI, respectively) in both classes. Combining DCCA with Riemannian geometry-based decoding yields a robust and effective decoder, that not only improves upon the SCM-based approach but can also provide relevant information on the neurophysiological processes behind MI."
+  },
+  {
+   "rank": 21,
+   "pmcid": "PMC12563875",
+   "title": "P300 Spatiotemporal Prior-Based Transformer-CNN for Auxiliary Diagnosis of PTSD.",
+   "journal": "Brain sciences",
+   "year": "2025",
+   "doi": "10.3390/brainsci15101124",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<b>Objectives:</b> To address the challenges of subjectivity, misdiagnosis and underdiagnosis in post-traumatic stress disorder (PTSD), this study proposes an objective auxiliary diagnostic method based on P300 signals. Existing studies largely rely on conventional P300 features, lacking the systematic integration of event-related potential (ERP) priors and facing limitations in spatiotemporal feature modeling. <b>Methods:</b> Using common spatiotemporal pattern (CSTP) analysis and quantitative evaluation, we revealed significant spatiotemporal differences in P300 signals between PTSD patients and healthy controls. ERP prior information was then extracted and integrated into a hybrid architecture combining transformer encoders and a convolutional neural network (CNN), enabling joint modeling of long-range temporal dependencies and local spatial patterns. <b>Results:</b> The proposed P300 spatiotemporal transformer-CNN (P300-STTCNet) achieved a classification accuracy of 93.37% in distinguishing PTSD from healthy controls, markedly outperforming traditional approaches. <b>Conclusions:</b> Significant spatiotemporal differences in P300 signals exist between PTSD and healthy control groups. The P300-STTCNet model effectively captures PTSD-related spatiotemporal features, demonstrating strong potential for electroencephalogram-based objective auxiliary diagnosis."
+  },
+  {
+   "rank": 22,
+   "pmcid": "PMC12494903",
+   "title": "Hierarchical attention enhanced deep learning achieves high precision motor imagery classification in brain computer interfaces.",
+   "journal": "Scientific reports",
+   "year": "2025",
+   "doi": "10.1038/s41598-025-17922-1",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Motor imagery-based Brain-Computer Interfaces (BCIs) hold transformative potential for individuals with severe motor impairments, yet their clinical deployment remains constrained by the inherent complexity of electroencephalographic (EEG) signal decoding. This study presents a systematic investigation of hierarchical deep learning architectures for motor imagery classification, introducing a novel attention-enhanced convolutional-recurrent framework that achieves state-of-the-art accuracy of 97.2477% on a custom four-class motor imagery dataset comprising 4,320 trials from 15 participants. By synergistically integrating spatial feature extraction through convolutional layers, temporal dynamics modeling via long short-term memory networks, and selective attention mechanisms for adaptive feature weighting, our approach significantly outperforms conventional methods while providing interpretable insights into the spatiotemporal signatures of motor imagery. Beyond demonstrating competitive performance, this work elucidates the critical role of attention mechanisms in capturing task-relevant neural patterns amidst the high-dimensional, non-stationary nature of EEG signals. Our findings demonstrate that biomimetic computational architectures that mirror the brain's own selective processing strategies can substantially enhance BCI reliability, offering immediate implications for neurorehabilitation technologies and broader applications in restorative neuroscience. Our code is available at https://github.com/Laboratory-EverythingAI/-EEG_Classification ."
+  },
+  {
+   "rank": 23,
+   "pmcid": "PMC11763639",
+   "title": "A Task-Related EEG Microstate Clustering Algorithm Based on Spatial Patterns, Riemannian Distance, and a Deep Autoencoder.",
+   "journal": "Brain sciences",
+   "year": "2024",
+   "doi": "10.3390/brainsci15010027",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<h4>Background</h4>The segmentation of electroencephalography (EEG) signals into a limited number of microstates is of significant importance in the field of cognitive neuroscience. Currently, the microstate analysis algorithm based on global field power has demonstrated its efficacy in clustering resting-state EEG. The task-related EEG was extensively analyzed in the field of brain-computer interfaces (BCIs); however, its primary objective is classification rather than segmentation.<h4>Methods</h4>We propose an innovative algorithm for analyzing task-related EEG microstates based on spatial patterns, Riemannian distance, and a modified deep autoencoder. The objective of this algorithm is to achieve unsupervised segmentation and clustering of task-related EEG signals.<h4>Results</h4>The proposed algorithm was validated through experiments conducted on simulated EEG data and two publicly available cognitive task datasets. The evaluation results and statistical tests demonstrate its robustness and efficiency in clustering task-related EEG microstates.<h4>Conclusions</h4>The proposed unsupervised algorithm can autonomously discretize EEG signals into a finite number of microstates, thereby facilitating investigations into the temporal structures underlying cognitive processes."
+  },
+  {
+   "rank": 24,
+   "pmcid": "PMC9139384",
+   "title": "Motor Imagery Classification via Kernel-Based Domain Adaptation on an SPD Manifold.",
+   "journal": "Brain sciences",
+   "year": "2022",
+   "doi": "10.3390/brainsci12050659",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<h4>Background</h4>Recording the calibration data of a brain-computer interface is a laborious process and is an unpleasant experience for the subjects. Domain adaptation is an effective technology to remedy the shortage of target data by leveraging rich labeled data from the sources. However, most prior methods have needed to extract the features of the EEG signal first, which triggers another challenge in BCI classification, due to small sample sets or a lack of labels for the target.<h4>Methods</h4>In this paper, we propose a novel domain adaptation framework, referred to as kernel-based Riemannian manifold domain adaptation (KMDA). KMDA circumvents the tedious feature extraction process by analyzing the covariance matrices of electroencephalogram (EEG) signals. Covariance matrices define a symmetric positive definite space (SPD) that can be described by Riemannian metrics. In KMDA, the covariance matrices are aligned in the Riemannian manifold, and then are mapped to a high dimensional space by a log-Euclidean metric Gaussian kernel, where subspace learning is performed by minimizing the conditional distribution distance between the sources and the target while preserving the target discriminative information. We also present an approach to convert the EEG trials into 2D frames (E-frames) to further lower the dimension of covariance descriptors.<h4>Results</h4>Experiments on three EEG datasets demonstrated that KMDA outperforms several state-of-the-art domain adaptation methods in classification accuracy, with an average Kappa of 0.56 for BCI competition IV dataset IIa, 0.75 for BCI competition IV dataset IIIa, and an average accuracy of 81.56% for BCI competition III dataset IVa. Additionally, the overall accuracy was further improved by 5.28% with the E-frames. KMDA showed potential in addressing subject dependence and shortening the calibration time of motor imagery-based brain-computer interfaces."
+  },
+  {
+   "rank": 25,
+   "pmcid": "PMC12216635",
+   "title": "Scalable geometric learning with correlation-based functional brain networks.",
+   "journal": "Scientific reports",
+   "year": "2025",
+   "doi": "10.1038/s41598-025-07703-1",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Correlation matrices serve as fundamental representations of functional brain networks in neuroimaging. Conventional analyses often treat pairwise interactions independently within Euclidean space, neglecting the underlying geometry of correlation structures. Although recent efforts have leveraged the quotient geometry of the correlation manifold, they suffer from computational inefficiency and numerical instability, especially in high-dimensional settings. We propose a novel geometric framework that uses diffeomorphic transformations to embed correlation matrices into a Euclidean space while preserving critical manifold characteristics. This approach enables scalable, geometry-aware analyses and integrates seamlessly with standard machine learning techniques, including regression, dimensionality reduction, and clustering. Moreover, it facilitates population-level inference of brain networks. Simulation studies demonstrate significant improvements in both computational speed and predictive accuracy over existing manifold-based methods. Applications to real neuroimaging data further highlight the framework's versatility, improving behavioral score prediction, subject fingerprinting in resting-state fMRI, and hypothesis testing in EEG analyses. To support community adoption and reproducibility, we provide an open-source MATLAB toolbox implementing the proposed techniques. Our work opens new directions for efficient and interpretable geometric modeling in large-scale functional brain network research."
+  },
+  {
+   "rank": 26,
+   "pmcid": "PMC12358810",
+   "title": "Graph-Regularized Manifold-Aware Conditional Wasserstein GAN for Brain Functional Connectivity Generation.",
+   "journal": "Human brain mapping",
+   "year": "2025",
+   "doi": "10.1002/hbm.70322",
+   "pubtype": [
+    "Research Support, Non-U.S. Gov't",
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Common measures of brain functional connectivity (FC) including covariance and correlation matrices are symmetry-positive definite (SPD) matrices residing on a cone-shaped Riemannian manifold. Despite its remarkable success for Euclidean-valued data generation, the use of standard generative adversarial networks (GANs) to generate manifold-valued FC data neglects its inherent SPD structure and hence the inter-relatedness of edges in real FC. We propose a novel graph-regularized manifold-aware conditional Wasserstein GAN (GR-SPD-GAN) for FC data generation on the SPD manifold that can preserve the global FC structure. Specifically, we optimize a generalized Wasserstein distance between the real and generated SPD data under adversarial training, conditioned on the class labels. The resulting generator can synthesize new SPD-valued FC matrices associated with different classes of brain networks, for example, brain disorder or healthy control. Furthermore, we introduce additional population graph-based regularization terms on both the SPD manifold and its tangent space to encourage the generator to respect the inter-subject similarity of FC patterns in the real data. This also helps in avoiding mode collapse and produces more stable GAN training. Evaluated on resting-state functional magnetic resonance imaging (fMRI) data of major depressive disorder (MDD), qualitative and quantitative results show that the proposed GR-SPD-GAN clearly outperforms several state-of-the-art GANs in generating more realistic fMRI-based FC samples. When applied to FC data augmentation for MDD identification, classification models trained on augmented data generated by our approach achieved the largest margin of improvement in classification accuracy among the competing GANs over baselines without data augmentation."
+  },
+  {
+   "rank": 27,
+   "pmcid": "PMC12259573",
+   "title": "The impact of cross-validation choices on pBCI classification metrics: lessons for transparent reporting.",
+   "journal": "Frontiers in neuroergonomics",
+   "year": "2025",
+   "doi": "10.3389/fnrgo.2025.1582724",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Neuroadaptive technologies are a type of passive Brain-computer interface (pBCI) that aim to incorporate implicit user-state information into human-machine interactions by monitoring neurophysiological signals. Evaluating machine learning and signal processing approaches represents a core aspect of research into neuroadaptive technologies. These evaluations are often conducted under controlled laboratory settings and offline, where exhaustive analyses are possible. However, the manner in which classifiers are evaluated offline has been shown to impact reported accuracy levels, possibly biasing conclusions. In the current study, we investigated one of these sources of bias, the choice of cross-validation scheme, which is often not reported in sufficient detail. Across three independent electroencephalography (EEG) n-back datasets and 74 participants, we show how metrics and conclusions based on the same data can diverge with different cross-validation choices. A comparison of cross-validation schemes in which train and test subset boundaries either respect the block-structure of the data collection or not, illustrated how the relative performance of classifiers varies significantly with the evaluation method used. By computing bootstrapped 95% confidence intervals of differences across datasets, we showed that classification accuracies of Riemannian minimum distance (RMDM) classifiers may differ by up to 12.7% while those of a Filter Bank Common Spatial Pattern (FBCSP) based linear discriminant analysis (LDA) may differ by up to 30.4%. These differences across cross-validation implementations may impact the conclusions presented in research papers, which can complicate efforts to foster reproducibility. Our results exemplify why detailed reporting on data splitting procedures should become common practice."
+  },
+  {
+   "rank": 28,
+   "pmcid": "PMC10490287",
+   "title": "Multimodal Approach for Pilot Mental State Detection Based on EEG.",
+   "journal": "Sensors (Basel, Switzerland)",
+   "year": "2023",
+   "doi": "10.3390/s23177350",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "The safety of flight operations depends on the cognitive abilities of pilots. In recent years, there has been growing concern about potential accidents caused by the declining mental states of pilots. We have developed a novel multimodal approach for mental state detection in pilots using electroencephalography (EEG) signals. Our approach includes an advanced automated preprocessing pipeline to remove artefacts from the EEG data, a feature extraction method based on Riemannian geometry analysis of the cleaned EEG data, and a hybrid ensemble learning technique that combines the results of several machine learning classifiers. The proposed approach provides improved accuracy compared to existing methods, achieving an accuracy of 86% when tested on cleaned EEG data. The EEG dataset was collected from 18 pilots who participated in flight experiments and publicly released at NASA's open portal. This study presents a reliable and efficient solution for detecting mental states in pilots and highlights the potential of EEG signals and ensemble learning algorithms in developing cognitive cockpit systems. The use of an automated preprocessing pipeline, feature extraction method based on Riemannian geometry analysis, and hybrid ensemble learning technique set this work apart from previous efforts in the field and demonstrates the innovative nature of the proposed approach."
+  },
+  {
+   "rank": 29,
+   "pmcid": "PMC12024946",
+   "title": "A Capsule Decision Neural Network Based on Transfer Learning for EEG Signal Classification.",
+   "journal": "Biomimetics (Basel, Switzerland)",
+   "year": "2025",
+   "doi": "10.3390/biomimetics10040225",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Transfer learning is the act of using the data or knowledge in a problem to help solve different but related problems. In a brain computer interface (BCI), it is important to deal with individual differences between topics and/or tasks. A kind of capsule decision neural network (CDNN) based on transfer learning is proposed. In order to solve the problem of feature distortion caused by EEG feature extraction algorithm, a deep capsule decision network was constructed. The architecture includes multiple primary capsules to form a hidden layer, and the connection between the advanced capsule and the primary capsule is determined by the neural decision routing algorithm. Unlike the dynamic routing algorithm that iteratively calculates the similarity between primary capsules and advanced capsules, the neural decision network computes the relationship between each capsule in the deep and shallow hidden layers in a probabilistic manner. At the same time, the distribution of the EEG covariance matrix is aligned in Riemann space, and the regional adaptive method is further introduced to improve the independent decoding ability of the capsule decision neural network for the subject's EEG signals. Experiments on two motor imagery EEG datasets show that CDNN outperforms several of the most advanced transfer learning methods."
+  },
+  {
+   "rank": 30,
+   "pmcid": "PMC11850847",
+   "title": "Method for EEG signal recognition based on multi-domain feature fusion and optimization of multi-kernel extreme learning machine.",
+   "journal": "Scientific reports",
+   "year": "2025",
+   "doi": "10.1038/s41598-025-87569-5",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "In response to the current issues of one-sided effective feature extraction and low classification accuracy in multi-class motor imagery recognition, this study proposes an Electroencephalogram (EEG) signal recognition method based on multi-domain feature fusion and optimized multi-kernel extreme learning machine. Firstly, the EEG signals are preprocessed using the Improved Comprehensive Ensemble Empirical Mode Decomposition (ICEEMD) algorithm combined with the Pearson correlation coefficient to eliminate noise and interference. Secondly, multivariate autoregressive (MVAR) model, wavelet packet decomposition, and Riemannian geometry methods are used to extract features from the time domain, frequency domain, and spatial domain, respectively, to construct a joint time-frequency-space feature vector. Subsequently, kernel principal component analysis (KPCA) is employed to fuse and reduce the dimensionality of the joint features, resulting in a reduced-dimensional fused feature vector. Finally, these feature vectors are input into a Radius-incorporated multi-kernel extreme learning machine (RIO-MKELM) for classification. The experimental results indicate that through multi-domain feature fusion and the incorporation of radius in a multi-kernel extreme learning machine, feature selection can be performed more effectively, eliminating redundant or irrelevant features and retaining the most useful information for classification. This approach enhances classification accuracy and other evaluation metrics, with the final classification accuracy reaching 95.49%, sensitivity at 97.88%, specificity at 98.12%, recall at 97.88%, and F1 Score at 96.67%. The findings of this study are of significant importance for the development and practical application of brain-computer interface (BCI) systems."
+  },
+  {
+   "rank": 31,
+   "pmcid": "PMC12739163",
+   "title": "Tactile-evoked EEG Dataset for Natural Perception Using an Integrated Stimulation-Recording Framework.",
+   "journal": "Scientific data",
+   "year": "2025",
+   "doi": "10.1038/s41597-025-06250-8",
+   "pubtype": [
+    "Research Support, Non-U.S. Gov't",
+    "Dataset",
+    "data-paper",
+    "Journal Article"
+   ],
+   "abstract": "The increasing demand for assistive living and medical technologies in aging societies has driven advancements in tactile-evoked Brian Computer Interface (BCI) systems, offering an alternative to traditional visual and auditory-based BCI systems. However, the development of such systems is constrained by challenges in quantifying tactile sensations and a lack of diverse datasets. This study presents an integrated system enabling natural tactile perception during dynamic touch experience while simultaneously recording electroencephalographic (EEG) responses. EEG signals were collected from 10 healthy participants (64 channels, 1000 Hz) in natural tactile perception tasks involving contact with three distinct materials. Preliminary analysis revealed significant differences in the P300 peak latency and amplitude between tactile conditions, highlighting the unique characteristics of tactile-evoked EEG signals. A three-class classification using Common Spatial Pattern (CSP) and Support Vector Machine (SVM) models demonstrated above-chance accuracy. This tactile-evoked EEG dataset provides a valuable resource for seeking tactile-related neural mechanisms and driving the practical application of BCI systems, offering a pathway to improved user experiences and functionality in real-world scenarios."
+  },
+  {
+   "rank": 32,
+   "pmcid": "PMC12564669",
+   "title": "Real-Time EEG Decoding of Motor Imagery via Nonlinear Dimensionality Reduction (Manifold Learning) and Shallow Classifiers.",
+   "journal": "Biosensors",
+   "year": "2025",
+   "doi": "10.3390/bios15100692",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "This study introduces a real-time processing framework for decoding motor imagery EEG signals by integrating manifold learning techniques with shallow classifiers. EEG recordings were obtained from six healthy participants performing five distinct wrist and hand motor imagery tasks. To address the challenges of high dimensionality and inherent nonlinearity in EEG data, five nonlinear dimensionality reduction methods, t-SNE, ISOMAP, LLE, Spectral Embedding, and MDS, were comparatively evaluated. Each method was combined with three shallow classifiers (<i>k</i>-NN, Naive Bayes, and SVM) to investigate performance across binary, ternary, and five-class classification settings. Among all tested configurations, the t-SNE + <i>k</i>-NN pairing achieved the highest accuracies, reaching 99.7% (two-class), 99.3% (three-class), and 89.0% (five-class). ISOMAP and MDS also delivered competitive results, particularly in multi-class scenarios. The presented approach builds upon our previous work involving EEG datasets from individuals with spinal cord injury (SCI), where the same manifold techniques were examined extensively. Comparative findings between healthy and SCI groups reveal consistent advantages of t-SNE and ISOMAP in preserving class separability, despite higher overall accuracies in healthy subjects due to improved signal quality. The proposed pipeline demonstrates low-latency performance, completing signal processing and classification in approximately 150 ms per trial, thereby meeting real-time requirements for responsive BCI applications. These results highlight the potential of nonlinear dimensionality reduction to enhance real-time EEG decoding, offering a low-complexity yet high-accuracy solution applicable to both healthy users and neurologically impaired individuals in neurorehabilitation and assistive technology contexts."
+  },
+  {
+   "rank": 33,
+   "pmcid": "PMC12149092",
+   "title": "Enhanced visibility graph for EEG classification.",
+   "journal": "Frontiers in neuroscience",
+   "year": "2025",
+   "doi": "10.3389/fnins.2025.1541062",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Electroencephalography (EEG) holds immense potential for decoding complex brain patterns associated with cognitive states and neurological conditions. In this paper, we propose an end-to-end framework for EEG classification that integrates power spectral density (PSD) and visibility graph (VG) features together with deep learning (DL) techniques. Our framework offers a holistic approach for capturing both frequency-domain characteristics and temporal dynamics of EEG signals. We evaluate four DL architectures, namely multilayer perceptron (MLP), long short-term memory (LSTM) networks, InceptionTime and ChronoNet, applied to several datasets and in different experimental conditions. Results demonstrate the efficacy of our framework in accurately classifying EEG data, in particular when using VG features. We also shed new light on the relative strengths and limitations of different feature extraction methods and DL architectures in the context of EEG classification. Our work contributes to advancing EEG analysis and facilitating the development of more accurate and reliable EEG-based systems for neuroscience and beyond. The full code of this research work is available on https://github.com/asmab89/VisibilityGraphs.git."
+  },
+  {
+   "rank": 34,
+   "pmcid": "PMC12550537",
+   "title": "Motor Imagery and Motor Execution: A Narrative Review of Electroencephalographic (EEG) Signatures, Methodological Consistency, and Translational Applications.",
+   "journal": "Cureus",
+   "year": "2025",
+   "doi": "10.7759/cureus.93011",
+   "pubtype": [
+    "review-article",
+    "Review",
+    "Journal Article"
+   ],
+   "abstract": "This narrative review evaluates when electroencephalography (EEG) signatures elicited by kinesthetic motor imagery (MI) genuinely approximate those of motor execution (ME), appraises methodological consistency across studies, and outlines pragmatic routes to translation in brain-computer interfaces (BCIs) and neurorehabilitation. A keyword-driven search of Web of Science, Scopus, PubMed, and conference repositories was used to extract empirical, English-language EEG studies reporting sensorimotor rhythm (mu 8-13 Hz; beta 13-30 Hz) event-related desynchronization/synchronization (ERD/ERS) metrics and/or decoding performance for MI and/or ME, with structured extraction of task/sample features, imagery protocol, EEG methods/signatures, MI-ME overlap, translational readouts, and limitations. Across convergent datasets, MI reliably evokes contralateral mu/beta ERD with timing and topography akin to ME, typically with smaller amplitudes and broader fields; realistic decoding benchmarks cluster around the mid-70% for MI versus low-80% for ME, with ≈70% a usability threshold and 15%-30% of naïve users below it. Convergence and performance improve with first-person kinesthetic instructions, higher imagery vividness, synchronised action observation, object-oriented tasks, EMG monitoring, and contingent neurofeedback; source-space modelling and synergy-aware features can lift MI accuracy into the ~82%-95% range in constrained settings, though offline gains often overestimate online control. In stroke cohorts, most patients exhibit clear ERD/ERS, and a meaningful subset exceeds operational thresholds; however, calibration-to-online drops (e.g., ~80% to ~70%) are common and partially recover with adaptive retraining. The principal barriers to translation are heterogeneous protocols (band definitions, referencing, validation), small and selective samples, sparse EMG to exclude covert movement, non-stationarity across sessions, and persistent non-responders. To move from plausibility to practice, future studies should standardise mu/beta windows and baselines, report closed-loop outcomes, personalise training with vividness assessment and synchronised action observation, anticipate drift with adaptive algorithms and periodic recalibration, and integrate MI with robotics, functional electrical stimulation, or virtual reality in multisite trials that track durable functional gains."
+  },
+  {
+   "rank": 35,
+   "pmcid": "PMC9197830",
+   "title": "Riemannian geometry-based transfer learning for reducing training time in c-VEP BCIs.",
+   "journal": "Scientific reports",
+   "year": "2022",
+   "doi": "10.1038/s41598-022-14026-y",
+   "pubtype": [
+    "Research Support, Non-U.S. Gov't",
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "One of the main problems that a brain-computer interface (BCI) face is that a training stage is required for acquiring training data to calibrate its classification model just before every use. Transfer learning is a promising method for addressing the problem. In this paper, we propose a Riemannian geometry-based transfer learning algorithm for code modulated visual evoked potential (c-VEP)-based BCIs, which can effectively reduce the calibration time without sacrificing the classification accuracy. The algorithm includes the main procedures of log-Euclidean data alignment (LEDA), super-trial construction, covariance matrix estimation, training accuracy-based subject selection (TSS) and minimum distance to mean classification. Among them, the LEDA reduces the difference in data distribution between subjects, whereas the TSS promotes the similarity between a target subject and the source subjects. The resulting performance of transfer learning is improved significantly. Sixteen subjects participated in a c-VEP BCI experiment and the recorded data were used in offline analysis. Leave-one subject-out (LOSO) cross-validation was used to evaluate the proposed algorithm on the data set. The results showed that the algorithm achieved much higher classification accuracy than the subject-specific (baseline) algorithm with the same number of training trials. Equivalently, the algorithm reduces the training time of the BCI at the same performance level and thus facilitates its application in real world."
+  },
+  {
+   "rank": 36,
+   "pmcid": "PMC10811218",
+   "title": "An EEG motor imagery dataset for brain computer interface in acute stroke patients.",
+   "journal": "Scientific data",
+   "year": "2024",
+   "doi": "10.1038/s41597-023-02787-8",
+   "pubtype": [
+    "Research Support, Non-U.S. Gov't",
+    "Dataset",
+    "data-paper",
+    "Journal Article"
+   ],
+   "abstract": "The brain-computer interface (BCI) is a technology that involves direct communication with parts of the brain and has evolved rapidly in recent years; it has begun to be used in clinical practice, such as for patient rehabilitation. Patient electroencephalography (EEG) datasets are critical for algorithm optimization and clinical applications of BCIs but are rare at present. We collected data from 50 acute stroke patients with wireless portable saline EEG devices during the performance of two tasks: 1) imagining right-handed movements and 2) imagining left-handed movements. The dataset consists of four types of data: 1) the motor imagery instructions, 2) raw recording data, 3) pre-processed data after removing artefacts and other manipulations, and 4) patient characteristics. This is the first open dataset to address left- and right-handed motor imagery in acute stroke patients. We believe that the dataset will be very helpful for analysing brain activation and designing decoding methods that are more applicable for acute stroke patients, which will greatly facilitate research in the field of motor imagery-BCI."
+  },
+  {
+   "rank": 37,
+   "pmcid": "PMC11841038",
+   "title": "A Graph-Theoretic Approach to Detection of Parkinsonian Freezing of Gait From Videos.",
+   "journal": "Statistics in medicine",
+   "year": "2025",
+   "doi": "10.1002/sim.70020",
+   "pubtype": [
+    "Research Support, Non-U.S. Gov't",
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Freezing of Gait (FOG) is a prevalent symptom in advanced Parkinson's Disease (PD), characterized by intermittent transitions between normal gait and freezing episodes. This study introduces a novel graph-theoretic approach to detect FOG from video data of PD patients. We construct a sequence of pose graphs that represent the spatial relations and temporal progression of a patient's posture over time. Each graph node corresponds to an estimated joint position, while the edges reflect the anatomical connections and their proximity. We propose a hypothesis testing procedure that deploys the Fréchet statistics to identify break points in time between regular gait and FOG episodes, where we model the central tendency and dispersion of the pose graphs in the presentation of graph Laplacian matrices by computing their Fréchet mean and variance. We implement binary segmentation and incremental computation in our algorithm for efficient calculation. The proposed framework is validated on two datasets, Kinect3D and AlphaPose, demonstrating its effectiveness in detecting FOG from video data. The proposed approach that extracts matrix features is distinct from the prevailing pixel-based deep learning methods. It provides a new perspective on feature extraction for FOG detection and potentially contributes to improved diagnosis and treatment of PD."
+  },
+  {
+   "rank": 38,
+   "pmcid": "PMC11970835",
+   "title": "Graphs Constructed from Instantaneous Amplitude and Phase of Electroencephalogram Successfully Differentiate Motor Imagery Tasks.",
+   "journal": "Journal of medical signals and sensors",
+   "year": "2025",
+   "doi": "10.4103/jmss.jmss_63_24",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<h4>Background</h4>Accurate classification of electroencephalogram (EEG) signals is challenging given the nonlinear and nonstationary nature of the data as well as subject-dependent variations. Graph signal processing (GSP) has shown promising results in the analysis of brain imaging data.<h4>Methods</h4>In this article, a GSP-based approach is presented that exploits instantaneous amplitude and phase coupling between EEG time series to decode motor imagery (MI) tasks. A graph spectral representation of the Hilbert-transformed EEG signals is obtained, in which simultaneous diagonalization of covariance matrices provides the basis of a subspace that differentiates two classes of right hand and right foot MI tasks. To determine the most discriminative subspace, an exploratory analysis was conducted in the spectral domain of the graphs by ranking the graph frequency components using a feature selection method. The selected features are fed into a binary support vector machine that predicts the label of the test trials.<h4>Results</h4>The performance of the proposed approach was evaluated on brain-computer interface competition III (IVa) dataset.<h4>Conclusions</h4>Experimental results reflect that brain functional connectivity graphs derived using the instantaneous amplitude and phase of the EEG signals show comparable performance with the best results reported on these data in the literature, indicating the efficiency of the proposed method compared to the state-of-the-art methods."
+  },
+  {
+   "rank": 39,
+   "pmcid": "PMC11347073",
+   "title": "Machine learning of brain-specific biomarkers from EEG.",
+   "journal": "EBioMedicine",
+   "year": "2024",
+   "doi": "10.1016/j.ebiom.2024.105259",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<h4>Background</h4>Electroencephalography (EEG) has a long history as a clinical tool to study brain function, and its potential to derive biomarkers for various applications is far from exhausted. Machine learning (ML) can guide future innovation by harnessing the wealth of complex EEG signals to isolate relevant brain activity. Yet, ML studies in EEG tend to ignore physiological artefacts, which may cause problems for deriving biomarkers specific to the central nervous system (CNS).<h4>Methods</h4>We present a framework for conceptualising machine learning from CNS versus peripheral signals measured with EEG. A signal representation based on Morlet wavelets allowed us to define traditional brain activity features (e.g. log power) and alternative inputs used by state-of-the-art ML approaches based on covariance matrices. Using more than 2600 EEG recordings from large public databases (TUAB, TDBRAIN), we studied the impact of peripheral signals and artefact removal techniques on ML models in age and sex prediction analyses.<h4>Findings</h4>Across benchmarks, basic artefact rejection improved model performance, whereas further removal of peripheral signals using ICA decreased performance. Our analyses revealed that peripheral signals enable age and sex prediction. However, they explained only a fraction of the performance provided by brain signals.<h4>Interpretation</h4>We show that brain signals and body signals, both present in the EEG, allow for prediction of personal characteristics. While these results may depend on specific applications, our work suggests that great care is needed to separate these signals when the goal is to develop CNS-specific biomarkers using ML.<h4>Funding</h4>All authors have been working for F. Hoffmann-La Roche Ltd."
+  },
+  {
+   "rank": 40,
+   "pmcid": "PMC12494983",
+   "title": "Cortical modulation through robotic gait training with motor imagery brain-computer interface enhances bladder function in individuals with spinal cord injury.",
+   "journal": "Scientific reports",
+   "year": "2025",
+   "doi": "10.1038/s41598-025-18277-3",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Neurogenic bladder (NB) dysfunction in individuals with complete spinal cord injury (SCI) is a condition that significantly affects quality of life. Despite the prevalence of interventions, there is a substantial gap in effective treatments for this dysfunction. This study proposes robotic-assisted gait training combined with motor imagery (MI)-based brain-computer interface (BCI) to induce improved cortical modulation, and consequently improve bladder function in patients with SCI. The study involved seven men with complete and chronic SCI in a protocol comprising 24 sessions of robotic-assisted walking with BCI and MI. This regimen was designed to teach both mu (µ, 8-12 Hz) and beta (β, 15-20 Hz) modulation through MI practices using multi-channel EEG neurofeedback (NFB), focusing on sensorimotor rhythm (SMR) activation. Clinical outcomes were measured using the neurogenic bladder symptom score (NBSS), which revealed substantial improvements in bladder control among participants. EEG analysis confirmed a significant correlation between modulation of µ and β rhythms with decreased NBSS scores. Our findings support that robotic-assisted gait training combined with MI-based BCI effectively modulates with more precision the cortical µ and β rhythms and improves NB dysfunction in SCI individuals."
+  },
+  {
+   "rank": 41,
+   "pmcid": "PMC9592202",
+   "title": "Supervised and Semisupervised Manifold Embedded Knowledge Transfer in Motor Imagery-Based BCI.",
+   "journal": "Computational intelligence and neuroscience",
+   "year": "2022",
+   "doi": "10.1155/2022/1603104",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "A long calibration procedure limits the use in practice for a motor imagery (MI)-based brain-computer interface (BCI) system. To tackle this problem, we consider supervised and semisupervised transfer learning. However, it is a challenge for them to cope with high intersession/subject variability in the MI electroencephalographic (EEG) signals. Based on the framework of unsupervised manifold embedded knowledge transfer (MEKT), we propose a supervised MEKT algorithm (sMEKT) and a semisupervised MEKT algorithm (ssMEKT), respectively. sMEKT only has limited labelled samples from a target subject and abundant labelled samples from multiple source subjects. Compared to sMEKT, ssMEKT adds comparably more unlabelled samples from the target subject. After performing Riemannian alignment (RA) and tangent space mapping (TSM), both sMEKT and ssMEKT execute domain adaptation to shorten the differences among subjects. During domain adaptation, to make use of the available samples, two algorithms preserve the source domain discriminability, and ssMEKT preserves the geometric structure embedded in the labelled and unlabelled target domains. Moreover, to obtain a subject-specific classifier, sMEKT minimizes the joint probability distribution shift between the labelled target and source domains, whereas ssMEKT performs the joint probability distribution shift minimization between the unlabelled target domain and all labelled domains. Experimental results on two publicly available MI datasets demonstrate that our algorithms outperform the six competing algorithms, where the sizes of labelled and unlabelled target domains are variable. Especially for the target subjects with 10 labelled samples and 270/190 unlabelled samples, ssMEKT shows 5.27% and 2.69% increase in average accuracy on the two abovementioned datasets compared to the previous best semisupervised transfer learning algorithm (RA-regularized common spatial patterns-weighted adaptation regularization, RA-RCSP-wAR), respectively. Therefore, our algorithms can effectively reduce the need of labelled samples for the target subject, which is of importance for the MI-based BCI application."
+  },
+  {
+   "rank": 42,
+   "pmcid": null,
+   "title": "Modelling Discrete States and Long-Term Dynamics in Functional Brain Networks",
+   "journal": null,
+   "year": "2025",
+   "doi": "10.1101/2025.09.25.678554",
+   "pubtype": [
+    "Preprint"
+   ],
+   "abstract": "Functional brain network dynamics underlie fundamental aspects of human cognition and behaviour, including memory, ageing, and a range of clinical disorders. It has been shown that ongoing brain network dynamics can be reliably inferred at fast, sub-second timescales from electrophysiological data using unsupervised machine learning. However, these methods often struggle with inherent trade-offs. For example, Hidden Markov Models (HMMs) have been used to infer categorical brain network states that provide good interpretability but do not model long-range temporal structure. Recently, deep learning approaches using recurrent neural networks (e.g., Dynamic Network Modes) have been proposed to model long-range temporal dependencies, but at the expense of interpretability. In this paper, we introduce Dynamic Network States (DyNeStE) to address this problem. This new model employs amortised Bayesian inference with recurrent neural networks to model long-range temporal structure and uses a Gumbel-Softmax distribution to enforce categorical states for greater interpretability. In both simulations and real resting-state magnetoencephalography data, DyNeStE was able to recover plausible dynamic brain network states and showed superior performance over the HMM in capturing long-range temporal dependencies in network dynamics. These dynamic networks were reproducible across independent data splits and build on established HMM-based findings. Together, these results highlight DyNeStE as an interpretable and temporally informative framework, capable of representing large-scale neural activity as discrete state transitions while capturing transient and long-range brain network dynamics."
+  },
+  {
+   "rank": 43,
+   "pmcid": "PMC11880255",
+   "title": "Evaluating robotic actions: spatiotemporal brain dynamics of performance assessment in robot-assisted laparoscopic training.",
+   "journal": "Frontiers in neuroergonomics",
+   "year": "2025",
+   "doi": "10.3389/fnrgo.2025.1535799",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<h4>Introduction</h4>Enhancing medical robot training traditionally relies on explicit feedback from physicians to identify optimal and suboptimal robotic actions during surgery. Passive brain-computer interfaces (BCIs) offer an emerging alternative by enabling implicit brain-based performance evaluations. However, effectively decoding these evaluations of robot performance requires a comprehensive understanding of the spatiotemporal brain dynamics identifying optimal and suboptimal robot actions within realistic settings.<h4>Methods</h4>We conducted an electroencephalographic study with 16 participants who mentally assessed the quality of robotic actions while observing simulated robot-assisted laparoscopic surgery scenarios designed to approximate real-world conditions. We aimed to identify key spatiotemporal dynamics using the surface Laplacian technique and two complementary data-driven methods: a mass-univariate permutation-based clustering and multivariate pattern analysis (MVPA)-based temporal decoding. A second goal was to identify the optimal time interval of evoked brain signatures for single-trial classification.<h4>Results</h4>Our analyses revealed three distinct spatiotemporal brain dynamics differentiating the quality assessment of optimal vs. suboptimal robotic actions during video-based laparoscopic training observations. Specifically, an enhanced left fronto-temporal current source, consistent with P300, LPP, and P600 components, indicated heightened attentional allocation and sustained evaluation processes during suboptimal robot actions. Additionally, amplified current sinks in right frontal and mid-occipito-parietal regions suggested prediction-based processing and conflict detection, consistent with the oERN and interaction-based ERN/N400. Both mass-univariate clustering and MVPA provided convergent evidence supporting these neural distinctions.<h4>Discussion</h4>The identified neural signatures propose that suboptimal robotic actions elicit enhanced, sustained brain dynamics linked to continuous attention allocation, action monitoring, conflict detection, and ongoing evaluative processing. The findings highlight the importance of prioritizing late evaluative brain signatures in BCIs to classify robotic actions reliably. These insights have significant implications for advancing machine-learning-based training paradigms."
+  },
+  {
+   "rank": 44,
+   "pmcid": "PMC10643198",
+   "title": "Recognition of motor intentions from EEGs of the same upper limb by signal traceability and Riemannian geometry features.",
+   "journal": "Frontiers in neuroscience",
+   "year": "2023",
+   "doi": "10.3389/fnins.2023.1270785",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<h4>Introduction</h4>The electroencephalographic (EEG) based on the motor imagery task is derived from the physiological electrical signal caused by the autonomous activity of the brain. Its weak potential difference changes make it easy to be overwhelmed by noise, and the EEG acquisition method has a natural limitation of low spatial resolution. These have brought significant obstacles to high-precision recognition, especially the recognition of the motion intention of the same upper limb.<h4>Methods</h4>This research proposes a method that combines signal traceability and Riemannian geometric features to identify six motor intentions of the same upper limb, including grasping/holding of the palm, flexion/extension of the elbow, and abduction/adduction of the shoulder. First, the EEG data of electrodes irrelevant to the task were screened out by low-resolution brain electromagnetic tomography. Subsequently, tangential spatial features are extracted by the Riemannian geometry framework in the covariance matrix estimated from the reconstructed EEG signals. The learned Riemannian geometric features are used for pattern recognition by a support vector machine with a linear kernel function.<h4>Results</h4>The average accuracy of the six classifications on the data set of 15 participants is 22.47%, the accuracy is 19.34% without signal traceability, the accuracy is 18.07% when the features are the filter bank common spatial pattern (FBCSP), and the accuracy is 16.7% without signal traceability and characterized by FBCSP.<h4>Discussion</h4>The results show that the proposed method can significantly improve the accuracy of intent recognition. In addressing the issue of temporal variability in EEG data for active Brain-Machine Interfaces, our method achieved an average standard deviation of 2.98 through model transfer on different days' data."
+  },
+  {
+   "rank": 45,
+   "pmcid": "PMC11861396",
+   "title": "Non-Invasive Brain-Computer Interfaces: State of the Art and Trends.",
+   "journal": "IEEE reviews in biomedical engineering",
+   "year": "2025",
+   "doi": "10.1109/rbme.2024.3449790",
+   "pubtype": [
+    "research-article",
+    "Review",
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+   ],
+   "abstract": "Brain-computer interface (BCI) is a rapidly evolving technology that has the potential to widely influence research, clinical and recreational use. Non-invasive BCI approaches are particularly common as they can impact a large number of participants safely and at a relatively low cost. Where traditional non-invasive BCIs were used for simple computer cursor tasks, it is now increasingly common for these systems to control robotic devices for complex tasks that may be useful in daily life. In this review, we provide an overview of the general BCI framework as well as the various methods that can be used to record neural activity, extract signals of interest, and decode brain states. In this context, we summarize the current state-of-the-art of non-invasive BCI research, focusing on trends in both the application of BCIs for controlling external devices and algorithm development to optimize their use. We also discuss various open-source BCI toolboxes and software, and describe their impact on the field at large."
+  },
+  {
+   "rank": 46,
+   "pmcid": "PMC12473706",
+   "title": "A Systematic Review of Techniques for Artifact Detection and Artifact Category Identification in Electroencephalography from Wearable Devices.",
+   "journal": "Sensors (Basel, Switzerland)",
+   "year": "2025",
+   "doi": "10.3390/s25185770",
+   "pubtype": [
+    "Systematic Review",
+    "review-article",
+    "Journal Article"
+   ],
+   "abstract": "Wearable electroencephalography (EEG) enables brain monitoring in real-world environments beyond clinical settings; however, the relaxed constraints of the acquisition setup often compromise signal quality. This review examines methods for artifact detection and for the identification of artifact categories (e.g., ocular) and specific sources (e.g., eye blink) in wearable EEG. A systematic search was conducted across six databases using the query: (\"electroencephalographic\" OR \"electroencephalography\" OR \"EEG\") AND (\"Artifact detection\" OR \"Artifact identification\" OR \"Artifact removal\" OR \"Artifact rejection\") AND \"wearable\". Following PRISMA guidelines, 58 studies were included. Artifacts in wearable EEG exhibit specific features due to dry electrodes, reduced scalp coverage, and subject mobility, yet only a few studies explicitly address these peculiarities. Most pipelines integrate detection and removal phases but rarely separate their impact on performance metrics, mainly accuracy (71%) when the clean signal is the reference and selectivity (63%), assessed with respect to physiological signal. Wavelet transforms and ICA, often using thresholding as a decision rule, are among the most frequently used techniques for managing ocular and muscular artifacts. ASR-based pipelines are widely applied for ocular, movement, and instrumental artifacts. Deep learning approaches are emerging, especially for muscular and motion artifacts, with promising applications in real-time settings. Auxiliary sensors (e.g., IMUs) are still underutilized despite their potential in enhancing artifact detection under ecological conditions. Only two studies addressed artifact category identification. A mapping of validated pipelines per artifact type and a survey of public datasets are provided to support benchmarking and reproducibility."
+  },
+  {
+   "rank": 47,
+   "pmcid": "PMC11082314",
+   "title": "Machine learning for hand pose classification from phasic and tonic EMG signals during bimanual activities in virtual reality.",
+   "journal": "Frontiers in neuroscience",
+   "year": "2024",
+   "doi": "10.3389/fnins.2024.1329411",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Myoelectric prostheses have recently shown significant promise for restoring hand function in individuals with upper limb loss or deficiencies, driven by advances in machine learning and increasingly accessible bioelectrical signal acquisition devices. Here, we first introduce and validate a novel experimental paradigm using a virtual reality headset equipped with hand-tracking capabilities to facilitate the recordings of synchronized EMG signals and hand pose estimation. Using both the phasic and tonic EMG components of data acquired through the proposed paradigm, we compare hand gesture classification pipelines based on standard signal processing features, convolutional neural networks, and covariance matrices with Riemannian geometry computed from raw or xDAWN-filtered EMG signals. We demonstrate the performance of the latter for gesture classification using EMG signals. We further hypothesize that introducing physiological knowledge in machine learning models will enhance their performances, leading to better myoelectric prosthesis control. We demonstrate the potential of this approach by using the neurophysiological integration of the \"move command\" to better separate the phasic and tonic components of the EMG signals, significantly improving the performance of sustained posture recognition. These results pave the way for the development of new cutting-edge machine learning techniques, likely refined by neurophysiology, that will further improve the decoding of real-time natural gestures and, ultimately, the control of myoelectric prostheses."
+  },
+  {
+   "rank": 48,
+   "pmcid": "PMC11117874",
+   "title": "Efficient Feature Learning Model of Motor Imagery EEG Signals with L1-Norm and Weighted Fusion.",
+   "journal": "Biosensors",
+   "year": "2024",
+   "doi": "10.3390/bios14050211",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Brain-computer interface (BCI) for motor imagery is an advanced technology used in the field of medical rehabilitation. However, due to the poor accuracy of electroencephalogram feature classification, BCI systems often misrecognize user commands. Although many state-of-the-art feature selection methods aim to enhance classification accuracy, they usually overlook the interrelationships between individual features, indirectly impacting the accuracy of feature classification. To overcome this issue, we propose an adaptive feature learning model that employs a Riemannian geometric approach to generate a feature matrix from electroencephalogram signals, serving as the model's input. By integrating the enhanced adaptive L1 penalty and weighted fusion penalty into the sparse learning model, we select the most informative features from the matrix. Specifically, we measure the importance of features using mutual information and introduce an adaptive weight construction strategy to penalize regression coefficients corresponding to each variable adaptively. Moreover, the weighted fusion penalty balances weight differences among correlated variables, reducing the model's overreliance on specific variables and enhancing accuracy. The performance of the proposed method was validated on BCI Competition IV datasets IIa and IIb using the support vector machine. Experimental results demonstrate the effectiveness and superiority of the proposed model compared to the existing models."
+  },
+  {
+   "rank": 49,
+   "pmcid": "PMC11115270",
+   "title": "An auditory brain-computer interface based on selective attention to multiple tone streams.",
+   "journal": "PloS one",
+   "year": "2024",
+   "doi": "10.1371/journal.pone.0303565",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "In this study, we attempted to improve brain-computer interface (BCI) systems by means of auditory stream segregation in which alternately presented tones are perceived as sequences of various different tones (streams). A 3-class BCI using three tone sequences, which were perceived as three different tone streams, was investigated and evaluated. Each presented musical tone was generated by a software synthesizer. Eleven subjects took part in the experiment. Stimuli were presented to each user's right ear. Subjects were requested to attend to one of three streams and to count the number of target stimuli in the attended stream. In addition, 64-channel electroencephalogram (EEG) and two-channel electrooculogram (EOG) signals were recorded from participants with a sampling frequency of 1000 Hz. The measured EEG data were classified based on Riemannian geometry to detect the object of the subject's selective attention. P300 activity was elicited by the target stimuli in the segregated tone streams. In five out of eleven subjects, P300 activity was elicited only by the target stimuli included in the attended stream. In a 10-fold cross validation test, a classification accuracy over 80% for five subjects and over 75% for nine subjects was achieved. For subjects whose accuracy was lower than 75%, either the P300 was also elicited for nonattended streams or the amplitude of P300 was small. It was concluded that the number of selected BCI systems based on auditory stream segregation can be increased to three classes, and these classes can be detected by a single ear without the aid of any visual modality."
+  },
+  {
+   "rank": 50,
+   "pmcid": "PMC11266171",
+   "title": "Editorial: Methods and application in fractal analysis of neuroimaging data.",
+   "journal": "Frontiers in human neuroscience",
+   "year": "2024",
+   "doi": "10.3389/fnhum.2024.1453284",
+   "pubtype": [
+    "Editorial"
+   ],
+   "abstract": ""
+  },
+  {
+   "rank": 51,
+   "pmcid": "PMC10984610",
+   "title": "Neurophysiological basis of respiratory discomfort improvement by mandibular advancement in awake OSA patients.",
+   "journal": "Physiological reports",
+   "year": "2024",
+   "doi": "10.14814/phy2.15951",
+   "pubtype": [
+    "Research Support, Non-U.S. Gov't",
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Patients with obstructive sleep apneas (OSA) do not complain from dyspnea during resting breathing. Placement of a mandibular advancement device (MAD) can lead to a sense of improved respiratory comfort (\"pseudo-relief\") ascribed to a habituation phenomenon. To substantiate this conjecture, we hypothesized that, in non-dyspneic awake OSA patients, respiratory-related electroencephalographic figures, abnormally present during awake resting breathing, would disappear or change in parallel with MAD-associated pseudo-relief. In 20 patients, we compared natural breathing and breathing with MAD on: breathing discomfort (transitional visual analog scale, VAS-2); upper airway mechanics, assessed in terms of pressure peak/time to peak (TTP) ratio respiratory-related electroencephalography (EEG) signatures, including slow event-related preinspiratory potentials; and a between-state discrimination based on continuous connectivity evaluation. MAD improved breathing and upper airway mechanics. The 8 patients in whom the EEG between-state discrimination was considered effective exhibited higher Peak/TTP improvement and transitional VAS ratings while wearing MAD than the 12 patients where it was not. These results support the notion of habituation to abnormal respiratory-related afferents in OSA patients and fuel the causative nature of the relationship between dyspnea, respiratory-related motor cortical activity and impaired upper airway mechanics in this setting."
+  },
+  {
+   "rank": 52,
+   "pmcid": "PMC11751216",
+   "title": "Multimodal consumer choice prediction using EEG signals and eye tracking.",
+   "journal": "Frontiers in computational neuroscience",
+   "year": "2024",
+   "doi": "10.3389/fncom.2024.1516440",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Marketing plays a vital role in the success of a business, driving customer engagement, brand recognition, and revenue growth. Neuromarketing adds depth to this by employing insights into consumer behavior through brain activity and emotional responses to create more effective marketing strategies. Electroencephalogram (EEG) has typically been utilized by researchers for neuromarketing, whereas Eye Tracking (ET) has remained unexplored. To address this gap, we propose a novel multimodal approach to predict consumer choices by integrating EEG and ET data. Noise from EEG signals is mitigated using a bandpass filter, Artifact Subspace Reconstruction (ASR), and Fast Orthogonal Regression for Classification and Estimation (FORCE). Class imbalance is handled by employing the Synthetic Minority Over-sampling Technique (SMOTE). Handcrafted features, including statistical and wavelet features, and automated features from Convolutional Neural Network and Long Short-Term Memory (CNN-LSTM), have been extracted and concatenated to generate a feature space representation. For ET data, preprocessing involved interpolation, gaze plots, and SMOTE, followed by feature extraction using LeNet-5 and handcrafted features like fixations and saccades. Multimodal feature space representation was generated by performing feature-level fusion for EEG and ET, which was later fed into a meta-learner-based ensemble classifier with three base classifiers, including Random Forest, Extended Gradient Boosting, and Gradient Boosting, and Random Forest as the meta-classifier, to perform classification between buy vs. not buy. The performance of the proposed approach is evaluated using a variety of performance metrics, including accuracy, precision, recall, and F1 score. Our model demonstrated superior performance compared to competitors by achieving 84.01% accuracy in predicting consumer choices and 83% precision in identifying positive consumer preferences."
+  },
+  {
+   "rank": 53,
+   "pmcid": "PMC9614270",
+   "title": "Machine-learning model predicting postoperative delirium in older patients using intraoperative frontal electroencephalographic signatures.",
+   "journal": "Frontiers in aging neuroscience",
+   "year": "2022",
+   "doi": "10.3389/fnagi.2022.911088",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<h4>Objective</h4>In older patients receiving general anesthesia, postoperative delirium (POD) is the most frequent form of cerebral dysfunction. Early identification of patients at higher risk to develop POD could provide the opportunity to adapt intraoperative and postoperative therapy. We, therefore, propose a machine learning approach to predict the risk of POD in elderly patients, using routine intraoperative electroencephalography (EEG) and clinical data that are readily available in the operating room.<h4>Methods</h4>We conducted a retrospective analysis of the data of a single-center study at the Charité-Universitätsmedizin Berlin, Department of Anesthesiology [ISRCTN 36437985], including 1,277 patients, older than 60 years with planned surgery and general anesthesia. To deal with the class imbalance, we used balanced ensemble methods, specifically Bagging and Random Forests and as a performance measure, the area under the ROC curve (AUC-ROC). We trained our models including basic clinical parameters and intraoperative EEG features in particular classical spectral and burst suppression signatures as well as multi-band covariance matrices, which were classified, taking advantage of the geometry of a Riemannian manifold. The models were validated with 10 repeats of a 10-fold cross-validation.<h4>Results</h4>Including EEG data in the classification resulted in a robust and reliable risk evaluation for POD. The clinical parameters alone achieved an AUC-ROC score of 0.75. Including EEG signatures improved the classification when the patients were grouped by anesthetic agents and evaluated separately for each group. The spectral features alone showed an AUC-ROC score of 0.66; the covariance features showed an AUC-ROC score of 0.68. The AUC-ROC scores of EEG features relative to patient data differed by anesthetic group. The best performance was reached, combining both the EEG features and the clinical parameters. Overall, the AUC-ROC score was 0.77, for patients receiving Propofol it was 0.78, for those receiving Sevoflurane it was 0.8 and for those receiving Desflurane 0.73. Applying the trained prediction model to an independent data set of a different clinical study confirmed these results for the combined classification, while the classifier on clinical parameters alone did not generalize.<h4>Conclusion</h4>A machine learning approach combining intraoperative frontal EEG signatures with clinical parameters could be an easily applicable tool to early identify patients at risk to develop POD."
+  },
+  {
+   "rank": 54,
+   "pmcid": "PMC12272215",
+   "title": "Do try this at home: Age prediction from sleep and meditation with large-scale low-cost mobile EEG.",
+   "journal": "Imaging neuroscience (Cambridge, Mass.)",
+   "year": "2024",
+   "doi": "10.1162/imag_a_00189",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Electroencephalography (EEG) is an established method for quantifying large-scale neuronal dynamics which enables diverse real-world biomedical applications, including brain-computer interfaces, epilepsy monitoring, and sleep staging. Advances in sensor technology have freed EEG from traditional laboratory settings, making low-cost ambulatory or at-home assessments of brain function possible. While ecologically valid brain assessments are becoming more practical, the impact of their reduced spatial resolution and susceptibility to noise remain to be investigated. This study set out to explore the potential of at-home EEG assessments for biomarker discovery using the brain age framework and four-channel consumer EEG data. We analyzed recordings from more than 5200 human subjects (18-81 years) during meditation and sleep, to predict age at the time of recording. With cross-validated R2 scores between 0.3 - 0.5 , prediction performance was within the range of results obtained by recent benchmarks focused on laboratory-grade EEG. While age prediction was successful from both meditation and sleep recordings, the latter led to higher performance. Analysis by sleep stage uncovered that N2-N3 stages contained most of the signal. When combined, EEG features extracted from all sleep stages gave the best performance, suggesting that the entire night of sleep contains valuable age-related information. Furthermore, model comparisons suggested that information was spread out across electrodes and frequencies, supporting the use of multivariate modeling approaches. Thanks to our unique dataset of longitudinal repeat sessions spanning 153 to 529 days from eight subjects, we finally evaluated the variability of EEG-based age predictions, showing that they reflect both trait- and state-like information. Overall, our results demonstrate that state-of-the-art machine-learning approaches based on age prediction can be readily applied to real-world EEG recordings obtained during at-home sleep and meditation practice."
+  },
+  {
+   "rank": 55,
+   "pmcid": "PMC12852366",
+   "title": "Levels of shared autonomy in brain-robot interfaces: enabling multi-robot multi-human collaboration for activities of daily living.",
+   "journal": "Frontiers in human neuroscience",
+   "year": "2025",
+   "doi": "10.3389/fnhum.2025.1718713",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Individuals with ALS and other severe motor impairments often rely on caregivers for daily tasks, which limits their independence and sense of control. Brain-robot interfaces (BRIs) have the potential to restore autonomy, but many existing systems are task-specific and highly automated, which reduces the users' sense of empowerment and limits opportunities to exercise autonomy. In particular, shared autonomy approaches hold promise for overcoming current BRI limitations, by balancing user control with increased robot capabilities. In this work, we introduce a collaborative BRI that integrates non-invasive EEG, EMG, and eye tracking to enable multi-user, multi-robot interaction in a shared kitchen environment with mobile manipulators. Our system modulates assistance through three levels of autonomy-Assisted Teleoperation, Shared Autonomy, and Full Automation-allowing users to retain meaningful control over task execution while reducing effort for routine operations. We conducted a controlled user study comparing autonomy conditions, evaluating performance, workload, ease of use, and agency. Our results show that, while Full Automation was generally preferred by users due to lower workload and higher usability, Shared Autonomy provided higher reliability and preserved user agency, especially in the presence of noisy EEG decoding. Although there was significant individual variability in EEG decoding performance, our <i>post-hoc</i> analysis revealed the potential benefits of customizing pipelines for each user. Finally, we note that our findings are specific to the multi-modal configuration tested and should not be interpreted as a universal claim about the superiority of any autonomy level, and, furthermore, our user study was limited by the use of healthy adults rather than target population (e.g., individuals with ALS), gender imbalance, and a relatively small sample size, which may affect generalizability. Project website: https://coopopen.github.io/."
+  },
+  {
+   "rank": 56,
+   "pmcid": "PMC11082925",
+   "title": "EEG functional connectivity as a Riemannian mediator: An application to malnutrition and cognition.",
+   "journal": "Human brain mapping",
+   "year": "2024",
+   "doi": "10.1002/hbm.26698",
+   "pubtype": [
+    "Research Support, Non-U.S. Gov't",
+    "research-article",
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+   ],
+   "abstract": "Mediation analysis assesses whether an exposure directly produces changes in cognitive behavior or is influenced by intermediate \"mediators\". Electroencephalographic (EEG) spectral measurements have been previously used as effective mediators representing diverse aspects of brain function. However, it has been necessary to collapse EEG measures onto a single scalar using standard mediation methods. In this article, we overcome this limitation and examine EEG frequency-resolved functional connectivity measures as a mediator using the full EEG cross-spectral tensor (CST). Since CST samples do not exist in Euclidean space but in the Riemannian manifold of positive-definite tensors, we transform the problem, allowing for the use of classic multivariate statistics. Toward this end, we map the data from the original manifold space to the Euclidean tangent space, eliminating redundant information to conform to a \"compressed CST.\" The resulting object is a matrix with rows corresponding to frequencies and columns to cross spectra between channels. We have developed a novel matrix mediation approach that leverages a nuclear norm regularization to determine the matrix-valued regression parameters. Furthermore, we introduced a global test for the overall CST mediation and a test to determine specific channels and frequencies driving the mediation. We validated the method through simulations and applied it to our well-studied 50+-year Barbados Nutrition Study dataset by comparing EEGs collected in school-age children (5-11 years) who were malnourished in the first year of life with those of healthy classmate controls. We hypothesized that the CST mediates the effect of malnutrition on cognitive performance. We can now explicitly pinpoint the frequencies (delta, theta, alpha, and beta bands) and regions (frontal, central, and occipital) in which functional connectivity was altered in previously malnourished children, an improvement to prior studies. Understanding the specific networks impacted by a history of postnatal malnutrition could pave the way for developing more targeted and personalized therapeutic interventions. Our methods offer a versatile framework applicable to mediation studies encompassing matrix and Hermitian 3D tensor mediators alongside scalar exposures and outcomes, facilitating comprehensive analyses across diverse research domains."
+  },
+  {
+   "rank": 57,
+   "pmcid": "PMC11673893",
+   "title": "Unraveling EEG correlates of unimanual finger movements: insights from non-repetitive flexion and extension tasks.",
+   "journal": "Journal of neuroengineering and rehabilitation",
+   "year": "2024",
+   "doi": "10.1186/s12984-024-01533-4",
+   "pubtype": [
+    "Research Support, Non-U.S. Gov't",
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "<h4>Background</h4>The loss of finger control in individuals with neuromuscular disorders significantly impacts their quality of life. Electroencephalography (EEG)-based brain-computer interfaces that actuate neuroprostheses directly via decoded motor intentions can help restore lost finger mobility. However, the extent to which finger movements exhibit distinct and decodable EEG correlates remains unresolved. This study aims to investigate the EEG correlates of unimanual, non-repetitive finger flexion and extension.<h4>Methods</h4>Sixteen healthy, right-handed participants completed multiple sessions of right-hand finger movement experiments. These included five individual (Thumb, Index, Middle, Ring, and Pinky) and four coordinated (Pinch, Point, ThumbsUp, and Fist) finger flexions and extensions, along with a rest condition (None). High-density EEG and finger trajectories were simultaneously recorded and analyzed. We examined low-frequency (0.3-3 Hz) time series and movement-related cortical potentials (MRCPs), and event-related desynchronization/synchronization (ERD/S) in the alpha- (8-13 Hz) and beta (13-30 Hz) bands. A clustering approach based on Riemannian distances was used to chart similarities between the broadband EEG responses (0.3-70 Hz) to the different finger scenarios. The contribution of different state-of-the-art features was identified across sub-bands, from low-frequency to low gamma (30-70 Hz), and an ensemble approach was used to pairwise classify single-trial finger movements and rest.<h4>Results</h4>A significant decrease in EEG amplitude in the low-frequency time series was observed in the contralateral frontal-central regions during finger flexion and extension. Distinct MRCP patterns were found in the pre-, ongoing-, and post-movement stages. Additionally, strong ERD was detected in the contralateral central brain regions in both alpha and beta bands during finger flexion and extension, with the beta band showing a stronger rebound (ERS) post-movement. Within the finger movement repertoire, the Thumb was most distinctive, followed by the Fist. Decoding results indicated that low-frequency time-domain amplitude better differentiates finger movements, while alpha and beta band power and Riemannian features better detect movement versus rest. Combining these features yielded over 80% finger movement detection accuracy, while pairwise classification accuracy exceeded 60% for the Thumb versus the other fingers.<h4>Conclusion</h4>Our findings confirm that non-repetitive finger movements, whether individual or coordinated, can be precisely detected from EEG. However, differentiating between specific movements is challenging due to highly overlapping neural correlates in time, spectral, and spatial domains. Nonetheless, certain finger movements, such as those involving the Thumb, exhibit distinct EEG responses, making them prime candidates for dexterous finger neuroprostheses."
+  },
+  {
+   "rank": 58,
+   "pmcid": "PMC8595943",
+   "title": "Selective Cross-Subject Transfer Learning Based on Riemannian Tangent Space for Motor Imagery Brain-Computer Interface.",
+   "journal": "Frontiers in neuroscience",
+   "year": "2021",
+   "doi": "10.3389/fnins.2021.779231",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "A motor imagery (MI) brain-computer interface (BCI) plays an important role in the neurological rehabilitation training for stroke patients. Electroencephalogram (EEG)-based MI BCI has high temporal resolution, which is convenient for real-time BCI control. Therefore, we focus on EEG-based MI BCI in this paper. The identification of MI EEG signals is always quite challenging. Due to high inter-session/subject variability, each subject should spend long and tedious calibration time in collecting amounts of labeled samples for a subject-specific model. To cope with this problem, we present a supervised selective cross-subject transfer learning (sSCSTL) approach which simultaneously makes use of the labeled samples from target and source subjects based on Riemannian tangent space. Since the covariance matrices representing the multi-channel EEG signals belong to the smooth Riemannian manifold, we perform the Riemannian alignment to make the covariance matrices from different subjects close to each other. Then, all aligned covariance matrices are converted into the Riemannian tangent space features to train a classifier in the Euclidean space. To investigate the role of unlabeled samples, we further propose semi-supervised and unsupervised versions which utilize the total samples and unlabeled samples from target subject, respectively. Sequential forward floating search (SFFS) method is executed for source selection. All our proposed algorithms transfer the labeled samples from most suitable source subjects into the feature space of target subject. Experimental results on two publicly available MI datasets demonstrated that our algorithms outperformed several state-of-the-art algorithms using small number of the labeled samples from target subject, especially for good target subjects."
+  },
+  {
+   "rank": 59,
+   "pmcid": "PMC11679204",
+   "title": "Enhancing Deep-Learning Classification for Remote Motor Imagery Rehabilitation Using Multi-Subject Transfer Learning in IoT Environment.",
+   "journal": "Sensors (Basel, Switzerland)",
+   "year": "2024",
+   "doi": "10.3390/s24248127",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "One of the most promising applications for electroencephalogram (EEG)-based brain-computer interfaces (BCIs) is motor rehabilitation through motor imagery (MI) tasks. However, current MI training requires physical attendance, while remote MI training can be applied anywhere, facilitating flexible rehabilitation. Providing remote MI training raises challenges to ensuring an accurate recognition of MI tasks by healthcare providers, in addition to managing computation and communication costs. The MI tasks are recognized through EEG signal processing and classification, which can drain sensor energy due to the complexity of the data and the presence of redundant information, often influenced by subject-dependent factors. To address these challenges, we propose in this paper a multi-subject transfer-learning approach for an efficient MI training framework in remote rehabilitation within an IoT environment. For efficient implementation, we propose an IoT architecture that includes cloud/edge computing as a solution to enhance the system's efficiency and reduce the use of network resources. Furthermore, deep-learning classification with and without channel selection is applied in the cloud, while multi-subject transfer-learning classification is utilized at the edge node. Various transfer-learning strategies, including different epochs, freezing layers, and data divisions, were employed to improve accuracy and efficiency. To validate this framework, we used the BCI IV 2a dataset, focusing on subjects 7, 8, and 9 as targets. The results demonstrated that our approach significantly enhanced the average accuracy in both multi-subject and single-subject transfer-learning classification. In three-subject transfer-learning classification, the FCNNA model achieved up to 79.77% accuracy without channel selection and 76.90% with channel selection. For two-subject and single-subject transfer learning, the application of transfer learning improved the average accuracy by up to 6.55% and 12.19%, respectively, compared to classification without transfer learning. This framework offers a promising solution for remote MI rehabilitation, providing both accurate task recognition and efficient resource usage."
+  },
+  {
+   "rank": 60,
+   "pmcid": "PMC12630851",
+   "title": "Adaptive EEG preprocessing to mitigate electrode shift variability for robust motor imagery classification.",
+   "journal": "Scientific reports",
+   "year": "2025",
+   "doi": "10.1038/s41598-025-24466-x",
+   "pubtype": [
+    "research-article",
+    "Journal Article"
+   ],
+   "abstract": "Electrode placement variability poses a critical challenge in EEG-based motor imagery tasks, often resulting in reduced classification robustness. We present the Adaptive Channel Mixing Layer (ACML), a plug-and-play preprocessing module that dynamically adjusts input signal weights through a learnable transformation matrix based on inter-channel correlations. By leveraging the inherent spatial structure of EEG caps, ACML effectively compensates for electrode misalignments and noise, enhancing resilience to signal distortion. Experimental validation on two motor imagery datasets with varying channel counts demonstrated consistent improvements in accuracy (up to 1.4%), kappa scores (up to 0.018), and robust performance across subjects, using five neural network architectures including a state-of-the-art model (ATCNet). Notably, ACML requires minimal computational overhead and no task-specific hyperparameter tuning, ensuring compatibility with diverse applications. This method offers a robust and efficient solution for advancing EEG-based motor imagery classification, with potential applications in real-time brain-computer interface systems and neurorehabilitation."
+  }
+ ]
+}
