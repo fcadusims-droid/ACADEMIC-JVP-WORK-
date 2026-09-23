@@ -608,7 +608,7 @@ where $W_U$ is the unilateral transformation, $\Delta_c(Q_I, E)$ is the integrit
 
 A full admissibility predicate for the U-limit parallels the Class G conditions as a conjunction of exclusions:
 
-$$\text{U-Adm}(x) \iff \big[W_U \text{ functionally independent of } \mathcal{F}_{endo}\big] \;\land\; \big[\tfrac{\partial W_U}{\partial\theta}=0\big] \;\land\; \big[|W_U| < \Delta_c(Q_I, E)\big] \;\land\; \big[\mathbf{T}_U(x^-) \in \Omega_I\big],$$
+$$\begin{aligned} \text{U-Adm}(x) \iff{} &\big[W_U \text{ functionally independent of } \mathcal{F}_{endo}\big] \;\land\; \big[\tfrac{\partial W_U}{\partial\theta}=0\big] \\ &\land\; \big[|W_U| < \Delta_c(Q_I, E)\big] \;\land\; \big[\mathbf{T}_U(x^-) \in \Omega_I\big], \end{aligned}$$
 
 where $\mathcal{F}_{endo}$ is the set of transformations the system can actuate from its own resources, functional independence (a relation, stated in prose, not a geometric operator) means $W_U$ is not derivable, parameterizable, actionable, or explicable as a composition of the system's endogenous dynamics, and $\Omega_I$ is the viable region in which the trajectory class is preserved. The first conjunct excludes self-generated jumps (the endogenous horn applied to jumps); the second states orientation does not gate the transition; the third is integrity selectivity (against shattering); and the fourth requires the jump to land in the viable region — which, unpacked, is the requirement that the post-jump topology be Lambda-like rather than a Class P well or Class R dissolution. The U-limit thus parallels Class G's exclusionary form while differing in logical type, and its distinctive condition is the topological one.
 

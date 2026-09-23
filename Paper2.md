@@ -288,7 +288,7 @@ $$\begin{aligned} M_0 &: S^I_{t+1} \sim N^{op}_t, \\ M_1 &: S^I_{t+1} \sim N^{op
 
 Operational biological G-admissibility requires a *cumulative* test, not a single statistical result, and is an operational laboratory criterion, not an ontological equivalence:
 
-$$\text{Operational Biological G-Admissibility} \;\triangleq\; \Big(\Delta_{\text{pred}}(M_G, M_A) > \delta_{\min} \;\land\; \Delta V^{eff}_{M\to\Lambda}\downarrow\Big) \;\land\; D^{eff}_{id} < D_c \;\land\; D^{eff}_{ag} > 0,$$
+$$\begin{aligned} \text{Operational Biological G-Admissibility} \;\triangleq\;{} &\Big(\Delta_{\text{pred}}(M_G, M_A) > \delta_{\min} \;\land\; \Delta V^{eff}_{M\to\Lambda}\downarrow\Big) \\ &\land\; D^{eff}_{id} < D_c \;\land\; D^{eff}_{ag} > 0, \end{aligned}$$
 
 where $\Delta_{\text{pred}}(M_G, M_A) = \text{Score}_{cv/pen}(M_G) - \text{Score}_{cv/pen}(M_A)$ must use a complexity-penalized or cross-validated metric (out-of-sample expected log predictive density, LOO-CV, WAIC, held-out log predictive density), never raw training fit, to exclude trivial overfitting of the interaction term.
 

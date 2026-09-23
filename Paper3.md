@@ -186,6 +186,7 @@ A trace-normalized SPD geometry read through a geodesic change-point statistic l
 ## Data and Code Availability
 
 Every analysis cited is a committed pre-registration, script and result in the accompanying repository (`experiments/paper3_geodesic_kinematics/` and `experiments/_results/`). The key controls are:
+
 - `localization_centerbias_control` and `h1_powerup_offcentre` (centre bias);
 - `eeg_reconciliation`, `regime_referent_nulls` and `discrimination_null_dependence_audit` (dependence);
 - `regime_referent_eog_control` and `discrimination_eog_ablation` (ocular);
