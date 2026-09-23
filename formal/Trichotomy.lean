@@ -22,7 +22,9 @@
   consequences for Paper 1 are real and are stated in §7.5:
 
   1. The forbidden object (bounded non-recurrence under measure preservation) is excluded for
-     **almost every** initial condition, not every. Exceptional trajectories exist; they form a
+     states typical of the invariant measure, not every state. For conservative flows that is almost
+     every initial condition; for dissipative flows (the invariant measure lives on the attractor) the
+     basin's transients are null for it though Lebesgue-generic, and nothing here excludes them. Exceptional trajectories exist; they form a
      null set of the invariant measure.
   2. The entropy hypothesis did no logical work in the old proof (it was discarded by
      `rintro ⟨_, hnr⟩`). It is removed rather than kept as decoration: the load-bearing fact is
@@ -66,7 +68,9 @@ axiom OmegaChainRecurrent {X : Type} : Flow X → X → Prop
 
 /-- **Poincaré recurrence (almost everywhere).** For a flow preserving a finite measure, the
     set of points that are not recurrent is null. (Mathlib: `MeasureTheory.Conservative.ae_mem_imp_frequently_image_mem`, via
-    `MeasurePreserving.conservative` on a finite measure.) -/
+    `MeasureTheory.MeasurePreserving.conservative` on a finite measure — both names checked
+    against Mathlib source at commit 2f3d8f6, not compiled against it here. Mathlib states the
+    set-return form; the metric recurrence used here follows in a second-countable space.) -/
 axiom poincare_recurrence_ae {X : Type} (φ : Flow X) :
     MeasurePreserving φ → NullSet φ (fun x => ¬ Recurrent φ x)
 
@@ -95,7 +99,8 @@ theorem trichotomy_exhaustive {X : Type} (φ : Flow X) (x : X) : Cell φ x := by
 
 /-- **The forbidden object is null.** Under measure preservation, the states whose orbit never
     returns — with or without positive entropy, which does no work here — form a null set. The
-    trilemma's load-bearing exclusion holds for almost every initial condition, and no more. -/
+    trilemma's load-bearing exclusion holds for invariant-measure-typical states, and no more; for a
+    dissipative flow that excludes nothing about its transients. -/
 theorem forbidden_object_null {X : Type} (φ : Flow X) (hmp : MeasurePreserving φ) :
     NullSet φ (fun x => ¬ Recurrent φ x) :=
   poincare_recurrence_ae φ hmp

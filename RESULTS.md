@@ -1,4 +1,4 @@
-# Results — What the 47 Experiments Found
+# Results — What the 49 Experiments Found
 
 A reader-facing synthesis of the validation suite. Every number here is read from a
 committed `result.json`; `experiments/STATUS.md` is the authoritative per-experiment
@@ -29,8 +29,8 @@ Concretely, from the records below:
   may be ill-posed under the paper's own pragmatic reading of the contract; and the Lean
   formalization of the central theorem originally rested on **two axioms that were false as
   stated** (pointwise versions of Poincaré and Conley — now refuted by machine-checked
-  counterexamples and replaced by the true forms), so the forbidden object is excluded for
-  *almost every* initial condition, not every, and its entropy clause does no work.
+  counterexamples and replaced by the true forms), so the forbidden object is excluded
+  only for states typical of the flow's invariant measure — almost every initial condition for conservative dynamics, but nothing about the transients of dissipative dynamics, where the exclusion rests on an interpretive argument, and its entropy clause does no work.
 - **Paper 2** — the positive arm halted at **29%** against a pre-registered 60% bar and is not
   executable on public data; what survives is the eliminative arm, which needs $n \approx 40$ per
   condition and a subsampling-robust estimator. (§12 Test Two and the multivariate IAAFT, long unexercised, are now shown executable and specific in `residual_tests_exercise`; and a dataset inventory `cbra_dataset_inventory` confirms the positive arm has no viable public venue.)
@@ -40,8 +40,9 @@ Concretely, from the records below:
   protocol's own criteria, so no independent referent exists to score against. A later test
   that was first credited as a partial repair measured something narrower: a geodesic-volatility
   proxy, not the demarcation. After an external review corrected its null, that proxy does track
-  human AASM staging (7/7 records, beating total-power and delta-power scalars), but the
-  demarcation itself remains untested and the falsifiability verdict stands. The bundle apparatus is net negative
+  human AASM staging, but a subject-level control shows it is the EOG channel: EOG power alone
+  binds more strongly, and without the EOG channel the geometry's association nearly vanishes
+  (0.452 → 0.021). The demarcation itself remains untested and the falsifiability verdict stands. The bundle apparatus is net negative
   where tested; a matched-detector head-to-head could **not** show the manifold beating a scalar
   band-power CUSUM on within-trajectory localization (14/22 vs 9/22, p = 0.227 — and once the
   centre-bias confound is removed the two tie exactly, 10/22 vs 10/22, so the manifold's small
@@ -188,18 +189,26 @@ was run. The pre-registered re-test answers each. Under a circular-shift null th
 widens **57-fold (0.003 → 0.171)**; V = 0.452 still clears it, with N2/N3 enriched in the low-volatility
 half in **7/7** records (one-sided Wilcoxon p = 0.0078). Scalar measures run through the identical split
 lose in every record: total-power volatility 0.121, log-power 0.127, and — post-hoc, because band power is
-the obvious competitor — relative delta power 0.194 (p = 0.0078 for geometry over the best scalar). So
-geodesic volatility tracks sleep staging beyond scalar power, which is a real if modest positive. But the
-claim that the demarcation's falsifiability was repaired is **withdrawn**: the three-regime demarcation is
-still untested and still not externally falsifiable as defined. n = 7 records.
-*(`regime_external_referent`, `regime_referent_nulls`)*
+the obvious competitor — relative delta power 0.194. But a second review found two further problems, and
+both hold. The 7 records are **4 subjects** (Sleep-EDF `SC4ssN`: subject `ss`, night `N`), so p = 0.0078 is
+the smallest value attainable at n = 7 and treats two nights of one person as independent; at the subject
+level the smallest attainable one-sided p is 0.0625, so no significance claim is possible with these data.
+And the covariance includes a horizontal-EOG channel. A pre-registered subject-level control settles it:
+**EOG power alone binds more strongly than the geometry** (pooled V 0.524 vs 0.452; geometry wins in 0 of
+4 subjects), and **with the EOG channel removed the geometry's association nearly vanishes** (0.452 →
+0.021). What tracks sleep staging is eye movement, not geodesic structure. This also reconciles the two
+Paper 3 results that seemed to pull apart — the geometry *tied* a scalar on centring-corrected localization
+but *beat* scalars on stage association: the association advantage was the eye. On neither task has the
+geometry been shown to add anything over a scalar that carries the same channel. The claim that the
+demarcation's falsifiability was repaired stays **withdrawn**; the demarcation is still untested.
+*(`regime_external_referent`, `regime_referent_nulls`, `regime_referent_eog_control`)*
 
 **The window-permutation nulls elsewhere in the suite were checked for the same defect, and A1's holds.**
 Five experiments permute overlapping windows between state groups, the construction that failed in H2.
 Re-running A1's N2-vs-REM discrimination statistic under a dependence-preserving circular-shift null on the
 7 cached recordings: 7/7 pass under both nulls, and the circular-shift null is in fact narrower (95th
 percentile 1.28 vs 1.55) — the statistic's denominator is built from within-state temporal halves, which
-already absorbs slow drift. The suspected problem does not hold for A1; A2, A3, the fibre-ablation
+already absorbs slow drift. The suspected problem does not hold for A1 — though a separate control then attributed A1's sleep discrimination to the EOG channel (`discrimination_eog_ablation`, above); A2, A3, the fibre-ablation
 discrimination arm and `eeg_reconciliation` use related but not identical constructions and were not
 re-tested individually. *(`discrimination_null_dependence_audit`)*
 
@@ -246,13 +255,16 @@ discrimination ratio, diluting rather than sharpening. The null is readable beca
 localized to **1.25 s** while the base missed by **14.25 s**. So the coupling estimator
 genuinely sees what the base cannot, and the negative is about **redundancy on this
 signal**, not a broken instrument. Honest consequence: on what is measured, Paper 3's
-validated content is the trace-normalized SPD base with long causal windows; the fibre,
+supported content is the trace-normalized SPD base with long causal windows (and even that modestly, see below); the fibre,
 the Sasaki metric and the Ehresmann connection remain a construction whose value is
 demonstrated only for *coupling-carried* transitions, which eyes-open/closed is not.
 *(`fibre_ablation`)*
 
-**Structural discrimination replicates on real data, across two paradigms.** N2-versus-REM
-discrimination passes **14/15** under a permutation null (median ratio 2.79), and
+**Structural discrimination replicates in direction on one paradigm; the sleep replication is the eye.**
+N2-versus-REM discrimination passes **14/15** recordings (median ratio 2.79), but its covariance includes a
+horizontal-EOG channel and REM is defined by eye movement: with that channel removed it holds in only 2 of 4
+subjects on the recordings available for the check (`discrimination_eog_ablation`), so it is attributed to
+eye movement rather than EEG geometry. And
 within-trajectory sleep-onset localization appeared to reach **10/15** against 4/15 on
 eyes-open/closed, which was read as "the limit was the paradigm, not the method". That reading
 is **withdrawn**: the localization windows were centred on the true transition, a centre-prior
@@ -285,9 +297,11 @@ holds at **AUC 0.824**, while the old statistic fails sub-chance a second time
 *(`detection_statistic_repair`, `detection_repair_heldout`)*
 
 **A headline figure corrected downward.** The appendix's ≈12× structural effect was
-traced to an estimator choice and corrected to **≈3.3×** under the null the paper
-commits to. Direction and significance replicated; magnitude did not.
-*(`eeg_reconciliation`)*
+traced to an estimator choice and corrected to ≈3.3×, and then corrected again: the ≈3.3×
+estimator permutes overlapping, autocorrelated windows (and two separate recordings) as if
+exchangeable, which cancels slow drift and would flag almost any two recordings as different. Against
+within-state drift the effect is **≈1.3×**, above unity in **12/15** subjects (cross-subject Wilcoxon
+p ≈ 0.008). Direction replicates; the magnitude is modest. *(`eeg_reconciliation`)*
 
 **Window size, not multiscale — confirmed on real EEG, at a smaller effect.** The large
 window reaches **7/16** against the best short window's 4/16, and the multiscale bank
@@ -339,7 +353,7 @@ The protocol is only worth something where it changed an outcome.
   at 29% against a 60% bar, and B2/B3 were never run.
 - **A bug fix that made the paper's own negative stronger** — replacing a broken R-peak
   detector moved the result from a spuriously higher 42% to a clearer 29%.
-- **A headline corrected downward** — ≈12× to ≈3.3×.
+- **A headline corrected downward twice** — ≈12× to ≈3.3×, then to ≈1.3× against within-state drift.
 - **A rescue arm labelled post-hoc** rather than swapped in as though it had been the
   plan.
 - **A published claim withdrawn** — an escape finding that had already been merged into
@@ -367,8 +381,8 @@ The protocol is only worth something where it changed an outcome.
   it consumes the same analytic axiom as the bounded cell. **Correction:** that axiom was
   first declared pointwise ("every bounded point recurs"), which is false —
   `formal/Counterexamples.lean` refutes it and the Conley axiom in concrete models with no
-  axioms at all. In the corrected, almost-everywhere form the escape horn closes for almost
-  every initial reading, not every. The corrected axioms are true and dischargeable from
+  axioms at all. In the corrected, almost-everywhere form the escape horn closes only for readings typical of the
+  quotient flow's invariant measure, not for every one. The corrected axioms are true and dischargeable from
   Mathlib in principle (the old ones never were); in-session that is still impractical
   because Mathlib's `olean` cache host is blocked (`formal/README.md`). This
   is an environment limit, not a mathematical one.

@@ -26,9 +26,9 @@ makes no claim that the antecedent is true. Each paper discharges one clause of 
 consequent, and each is written so that it survives the antecedent being false.
 
 - **Paper 1** argues the *negative* half of clause (i): an autonomous, bounded value dynamics
-  read through a bounded identity contract cannot realize the transformation (for almost every
-  initial condition — the exclusion rests on Poincaré recurrence, which holds almost
-  everywhere, not everywhere), so if it occurs
+  read through a bounded identity contract cannot realize the transformation (by Poincaré recurrence
+  only for states typical of an invariant measure; for dissipative dynamics the transients are
+  excluded by an interpretive argument, not a theorem), so if it occurs
   it is externally occasioned; and it names **Class G** as the residual admissibility profile
   — the type signature the transformation would have to satisfy. This is a conceptual
   contribution: it licenses *sorting* (which cell an account of transformation occupies) and
@@ -87,7 +87,7 @@ stronger than its parts:
   first open problem — characterising the admissible contract class — may be ill-posed under
   §2.2's pragmatic reading of *I*; and the Lean formalization first rested on two axioms that
   were false as stated (pointwise Poincaré and Conley), now replaced by their true forms — so
-  the forbidden object is excluded only for almost every initial condition.
+  the forbidden object is excluded only for states typical of the flow's invariant measure — almost every initial condition for conservative dynamics, but nothing about the transients of dissipative dynamics, where the exclusion rests on an interpretive argument.
 - **Clause (ii) / Paper 2.** The positive arm halted at 29% against a 60% bar and is not
   executable on public data; the eliminative arm survives, needs *n* ≈ 40 per condition and a
   subsampling-robust estimator, and one of its three residual filters (Test Two) was

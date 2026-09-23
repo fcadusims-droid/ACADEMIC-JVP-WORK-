@@ -34,8 +34,10 @@ a single path, with curvature entering only at second order as holonomy.
 
 ## What the suite established
 
-**On real data, across two paradigms.** Structural discrimination replicates on
-Sleep-EDF (N2 versus REM, 14/15 under a permutation null) and within-trajectory
+**On real data, one paradigm, modestly.** Structural discrimination replicates in direction on
+eyes-open versus eyes-closed EEG (12/15 subjects, about a third above within-state drift). On
+Sleep-EDF (N2 versus REM, 14/15) it is attributed to the EOG channel in the covariance: without
+it the discrimination holds in only 2 of 4 subjects (`discrimination_eog_ablation`). Within-trajectory
 sleep-onset localization appeared to reach 10/15 against 4/15 on eyes-open/closed, which
 was read as showing the limit was the *paradigm*, not the method. A later control withdrew
 that reading: every localization window was centred on the true transition, so a detector
@@ -72,9 +74,10 @@ second time, which is what the mechanistic diagnosis predicted and what single-c
 selection could not have shown (`detection_repair_heldout`).
 
 **A corrected headline.** The appendix's ≈12× structural effect was traced to an
-estimator choice and corrected to ≈3.3× under the null the paper commits to. The
-direction and significance replicated; the magnitude did not, and the paper now
-reports the smaller number (`eeg_reconciliation`).
+estimator choice and corrected to ≈3.3× — and then again to ≈1.3×, because the ≈3.3×
+estimator treats overlapping, autocorrelated windows as exchangeable. Against within-state drift
+the effect is above unity in 12 of 15 subjects; the direction replicated, the magnitude is modest,
+and the paper now reports ≈1.3 (`eeg_reconciliation`).
 
 ## Declared failure modes
 

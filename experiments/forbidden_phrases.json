@@ -1,0 +1,50 @@
+[
+  {
+    "id": "P1 no 'provably destroys'",
+    "paper": "Paper1.md",
+    "pattern": "provably destroy",
+    "why": "Section 7.6 concedes the top-level thesis is definitional; nothing in the paper proves the control paradigm destroys agency-preserving transformation."
+  },
+  {
+    "id": "P1 no 'proves that' for the thesis",
+    "paper": "Paper1.md",
+    "pattern": "(?i)\\b(it|the paper|this paper|the trilemma) proves that\\b",
+    "why": "Section 2.1 says the paper presents no deductive proof of its thesis; use 'argues'."
+  },
+  {
+    "id": "P1 no 'upgraded to a proved' premise",
+    "paper": "Paper1.md",
+    "pattern": "to a proved one",
+    "why": "The theorem-shaped result rests on Poincare/Conley in their almost-everywhere and omega-limit forms and, for dissipative dynamics, on an interpretive argument; it does not prove the premise."
+  },
+  {
+    "id": "P1 no 'the discontinuity is not a stipulation'",
+    "paper": "Paper1.md",
+    "pattern": "(charge fails|discontinuity)[^.]{0,120}not a stipulation",
+    "why": "Section 7.6 concedes the top-level thesis is definitional; answer the tautology objection by conceding that and naming what is not stipulated."
+  },
+  {
+    "id": "P1 no 'almost no autonomous trajectory'",
+    "paper": "Paper1.md",
+    "pattern": "almost no autonomous trajectory can\"?\\s*\\.",
+    "why": "'Almost every' holds only for the invariant measure; for dissipative flows the transients are Lebesgue-generic and Poincare says nothing about them."
+  },
+  {
+    "id": "P3 no 'validated' structural claim",
+    "paper": "Paper3.md",
+    "pattern": "(?i)(structural[^.]{0,60}|dissociation[^.]{0,20}|core[^.]{0,40})\\bis validated\\b|a validated structure",
+    "why": "the structural discrimination replicates in direction on one paradigm with a modest effect; the sleep replication is attributed to EOG."
+  },
+  {
+    "id": "P3 no 'across two paradigms' replication",
+    "paper": "Paper3.md",
+    "pattern": "replicates? (that )?across subjects and \\*?across two",
+    "why": "discrimination_eog_ablation attributes the sleep paradigm to the EOG channel."
+  },
+  {
+    "id": "P3 no 'presents no measured data'",
+    "paper": "Paper3.md",
+    "pattern": "presents no measured data",
+    "why": "the paper reports measured EEG results."
+  }
+]

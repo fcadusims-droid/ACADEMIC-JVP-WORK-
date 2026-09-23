@@ -1,8 +1,8 @@
 [
   {
-    "id": "P3 discrimination 14/15 carries its non-replication qualification",
+    "id": "P3 structural discrimination carries its non-replication qualification",
     "paper": "Paper3.md",
-    "claim": "holds in \\$14\\$ of \\$15\\$ subjects",
+    "claim": "in \\$12\\$ of \\$15\\$ subjects \\(median ratio",
     "requires": "post-hoc",
     "why": "the PRE-REGISTERED natural-power arm did not replicate; the clean pure-amplitude control that is silent was added post-hoc and is paradigm-specific. Quoting 14/15 without that is the site-vs-abstract divergence this gate exists to prevent."
   },
@@ -47,5 +47,19 @@
     "claim": "\\$10/15\\$",
     "requires": "centr",
     "why": "every within-trajectory localization window is symmetric about the true transition, so a centre-prior detector scores 22/22 there and 0/22 off-centre (localization_centerbias_control); any 10/15 localization figure quoted without that caveat reads as evidence the method localizes."
+  },
+  {
+    "id": "P1 limitative-theorems comparison is disclaimed where made",
+    "paper": "Paper1.md",
+    "claim": "limitative theorems",
+    "requires": "analogy of form|formal kinship",
+    "why": "Section 2.1 denies formal kinship with the limitative theorems; any sentence invoking them must carry that disclaimer in the same paragraph."
+  },
+  {
+    "id": "P3 sleep discrimination carries the EOG attribution",
+    "paper": "Paper3.md",
+    "claim": "N2-versus-REM",
+    "requires": "EOG|eye movement",
+    "why": "the sleep covariance includes horizontal EOG, and with it removed the discrimination holds in only 2 of 4 subjects (discrimination_eog_ablation)"
   }
 ]

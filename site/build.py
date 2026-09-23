@@ -69,7 +69,7 @@ PAPERS = [
     {
         "n": 3, "src": "Paper3.md", "slug": "paper-3",
         "short": "The Kinematics of Geodesic Flow on Riemannian Vector Bundles",
-        "sub": "A Non-Equilibrium Jump-Diffusion Protocol for the Asymptotic "
+        "sub": "A Proposed Non-Equilibrium Jump-Diffusion Protocol for the Asymptotic "
                "Demarcation of Systemic State Transitions",
         "blurb": "A proposed single-trajectory method for deciding whether dynamics "
                  "after an abrupt transition is directed drift, undirected diffusion, or "
