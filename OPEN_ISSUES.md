@@ -50,9 +50,11 @@ external review. It is a working list, not a checklist toward a deadline.
   a scalar carrying the same channels: centring-corrected localization ties a scalar, and the
   stage-association advantage was EOG power. A fair test needs EEG-only covariances and scalar
   baselines from the same channels, on more subjects.
-- **Power.** The H1 comparison is underpowered (n = 22); the pre-registered power-up needs
-  ~74 records. It was blocked in the cloud environment (`round2_blocked_on_session_egress`);
-  PhysioNet was reachable again from a cloud session on 2026-09-23, so it may now be runnable.
+- **Power (resolved against the method).** The H1 power-up ran on all 151 usable Sleep-EDF
+  sleep-cassette recordings (78 subjects), off-centre (`h1_powerup_offcentre`): manifold 59/151 vs
+  scalar 67/151 (p ≈ 0.38), subject level 32/78 vs 42/78 (p ≈ 0.12), the same without EOG.
+  Pre-registered verdict inconclusive, but at twice the planned n and with the direction favouring
+  the scalar, the geometry adds nothing to sleep-transition localization.
 
 ## Paper 1 — *The Cybernetic Limits of Conversion*
 

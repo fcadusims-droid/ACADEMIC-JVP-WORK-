@@ -1,4 +1,4 @@
-# Results — What the 50 Experiments Found
+# Results — What the 52 Experiments Found
 
 A reader-facing synthesis of the validation suite. Every number here is read from a
 committed `result.json`; `experiments/STATUS.md` is the authoritative per-experiment
@@ -275,8 +275,11 @@ within-trajectory sleep-onset localization appeared to reach **10/15** against 4
 eyes-open/closed, which was read as "the limit was the paradigm, not the method". That reading
 is **withdrawn**: the localization windows were centred on the true transition, a centre-prior
 detector scores every recording there, and off-centre sleep-onset localization falls to 4/7,
-tying a scalar band-power CUSUM (`localization_centerbias_control`). On-line localization is
-open on both paradigms. *(`sleep_stage_localization`, `real_eeg_localization`)*
+tying a scalar band-power CUSUM (`localization_centerbias_control`). A pre-registered power-up on
+all 151 usable sleep-cassette recordings (78 subjects), off-centre, then found the scalar CUSUM,
+if anything, ahead: manifold **59/151** vs scalar **67/151** (McNemar p ≈ 0.38; subject level
+32/78 vs 42/78; the same without EOG) (`h1_powerup_offcentre`). On-line localization is
+open on both paradigms, and the geometry adds nothing to it on sleep. *(`sleep_stage_localization`, `real_eeg_localization`)*
 
 **Benchmarked against standard methods, with the defeat criterion fixed in advance.**
 Against BOCPD, `ruptures` (PELT, binary segmentation, windowed), a Gaussian HMM and

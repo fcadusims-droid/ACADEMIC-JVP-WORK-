@@ -7,7 +7,9 @@
       "real_eeg_localization",
       "sleep_stage_localization",
       "base_metric_corner",
-      "between_recording_control"
+      "between_recording_control",
+      "detection_between_recording_control",
+      "h1_powerup_offcentre"
     ]
   },
   {

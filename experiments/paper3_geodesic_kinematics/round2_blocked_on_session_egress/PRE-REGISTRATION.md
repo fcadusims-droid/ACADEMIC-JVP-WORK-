@@ -25,6 +25,8 @@ one outside that egress: the maintainer's own machine (confirmed reachable), or 
 runner. Each item below is a straightforward run there; only the cloud sandbox's egress blocks it.
 
 ## Item 1 — H1 power-up (Paper 3, extends `scalar_vs_manifold_localization`)
+
+**[Later: run on 2026-09-23 as `h1_powerup_offcentre`, when PhysioNet became reachable from the cloud session — manifold 59/151 vs scalar 67/151, p = 0.38; see STATUS.md.]**
 `scalar_vs_manifold_localization` returned INCONCLUSIVE at n=22 (manifold 14/22 vs scalar 9/22,
 McNemar p=0.227); the discordant pairs were too few to resolve. The same open corpus
 (Sleep-EDF Expanded, 197 records) supplies the n. **Pre-registered:** re-run the *identical*
