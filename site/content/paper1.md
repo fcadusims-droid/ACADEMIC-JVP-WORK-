@@ -41,8 +41,10 @@ The load-bearing formal result is a **Meta-Optimization Collapse Theorem**, a
 trichotomy. Its first Lean formalization rested on two axioms that were **false as
 stated** — pointwise versions of Poincaré and Conley — which an external review caught
 and `formal/Counterexamples.lean` now refutes in concrete models; the corrected files
-assume the true forms, so the forbidden object is excluded for *almost every* initial
-condition, not every, and its positive-entropy clause does no work. Its high-dimensional stress test (`high_dim_trichotomy`) reported its
+assume the true forms, so the forbidden object is excluded only for states typical of the invariant measure —
+almost every initial condition for conservative dynamics, but not the transients of the
+dissipative agents the suite actually tests, where the exclusion is interpretive — and its
+positive-entropy clause does no work. Its high-dimensional stress test (`high_dim_trichotomy`) reported its
 strong-recession cells as *numerically unresolved* rather than claiming them either
 way — and said so in the paper. The follow-up (`value_base_discontinuity_probe`) then
 showed the apparent falsifier was a coordinate artifact. That result helped the

@@ -26,7 +26,7 @@ consistency contract *I* — and no result flows back.
 
 ## What the experiment suite is for
 
-Forty-seven pre-registered computational experiments. Each has a
+Forty-nine pre-registered computational experiments. Each has a
 `PRE-REGISTRATION.md` fixing the question, the method, the thresholds and a stopping
 rule *before* the run; a machine-readable `result.json` committed after; and a
 verdict issued strictly against the pre-registered criterion. Bands are fixed in
@@ -42,7 +42,7 @@ that, and against nothing else.
 What makes the protocol more than decoration is the list of occasions on which it
 cost something: a pre-registered halt that stopped Paper 2's positive arm dead, a
 detector fix that made the paper's own negative *stronger*, a headline figure
-corrected downward from ≈12× to ≈3.3×, a rescue arm labelled post-hoc rather than
+corrected downward from ≈12× to ≈3.3× and then to ≈1.3×, a rescue arm labelled post-hoc rather than
 swapped in as though it had been the plan, and a process lapse recorded rather than
 back-dated. Those are set out in full on the [methodology](methodology.html) page.
 

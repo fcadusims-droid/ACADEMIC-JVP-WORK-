@@ -43,6 +43,11 @@ and are recorded rather than hidden in [`METHODOLOGY.md`](https://github.com/fca
 - every localization experiment placed the true transition at the **centre of its analysis
   window**, so a detector that simply guessed the middle would have scored perfectly, and a
   conclusion in a paper abstract rested on the inflated numbers;
+- the one positive empirical result left in a paper — that a geometric measure tracked sleep
+  stages better than simpler measures — turned out to be driven by an **eye-movement (EOG)
+  channel** included in the data, and rested on 4 people counted as 7;
+- a paper sentence claimed an experiment had **"confirmed directly"** a mechanism that no
+  experiment in the repository ever tested;
 - the work was described as **ready for submission** when it was not;
 - a local network fault in the AI's own sandbox was misreported as an outage of a public
   data server.

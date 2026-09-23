@@ -50,7 +50,7 @@
     "path": "permutation.median_ratio",
     "tol": 0.05,
     "papers": {
-      "Paper3.md": "median \\$\\\\approx ([0-9.]+)\\$"
+      "Paper3.md": "significant in 14 of 15 subjects, median \\$\\\\approx ([0-9.]+)\\$"
     }
   },
   {
@@ -115,6 +115,33 @@
     "tol": 0.005,
     "papers": {
       "Paper1.md": "critical value \\$D_c=([0-9.]+)\\$"
+    }
+  },
+  {
+    "id": "EEG reconciliation temporal-half median ratio",
+    "result": "eeg_reconciliation",
+    "path": "temporal_half.median_ratio",
+    "tol": 0.05,
+    "papers": {
+      "Paper3.md": "median ratio \\$\\\\approx ([0-9.]+)\\$ against within-state drift"
+    }
+  },
+  {
+    "id": "EEG reconciliation temporal-half subjects above 1",
+    "result": "eeg_reconciliation",
+    "path": "temporal_half.n_above_1",
+    "tol": 0.5,
+    "papers": {
+      "Paper3.md": "in \\$([0-9]+)\\$ of \\$15\\$ subjects \\(median ratio"
+    }
+  },
+  {
+    "id": "EEG reconciliation temporal-half Wilcoxon",
+    "result": "eeg_reconciliation",
+    "path": "temporal_half.wilcoxon_p_vs_1",
+    "tol": 0.001,
+    "papers": {
+      "Paper3.md": "cross-subject Wilcoxon \\$p\\\\approx ([0-9.]+)\\$\\)"
     }
   }
 ]

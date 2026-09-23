@@ -1,0 +1,136 @@
+{
+  "experiment": "regime_referent_eog_control",
+  "question": "is geodesic volatility's advantage over scalars attributable to EOG coupling?",
+  "n_recordings": 7,
+  "n_subjects": 4,
+  "min_attainable_p_one_sided": 0.0625,
+  "pooled_V": {
+    "geo_vol": 0.4524269437743693,
+    "geo_vol_eeg": 0.02065588110000972,
+    "fpz_eog_corr_vol": 0.1822486173228062,
+    "fpz_eog_corr_level": 0.09033165526777788,
+    "eog_pow_vol": 0.4423656469188847,
+    "eog_pow_level": 0.5244254938506546
+  },
+  "best_eog_scalar": "eog_pow_level",
+  "geo_wins_subjects": 0,
+  "geo_eeg_only_wins_subjects": 0,
+  "preregistered_criterion": "eye iff best EOG scalar pooled V >= geo V or wins >= 2/4 subjects; survives iff geo beats it pooled and 4/4 subjects (reported as not significant)",
+  "category": "EYE",
+  "per_subject": [
+    {
+      "subject": "SC400",
+      "n_nights": 2,
+      "V_geo_vol": 0.42145415368003636,
+      "V_geo_vol_eeg": 0.12923537813207256,
+      "V_fpz_eog_corr_vol": 0.1543050934352758,
+      "V_fpz_eog_corr_level": 0.08256952599965407,
+      "V_eog_pow_vol": 0.4513106217752967,
+      "V_eog_pow_level": 0.5109240619037039
+    },
+    {
+      "subject": "SC401",
+      "n_nights": 1,
+      "V_geo_vol": 0.5566569016586935,
+      "V_geo_vol_eeg": 0.16386626891332565,
+      "V_fpz_eog_corr_vol": 0.270848330470101,
+      "V_fpz_eog_corr_level": 0.1431416628945427,
+      "V_eog_pow_vol": 0.5043327725332196,
+      "V_eog_pow_level": 0.5927110349624273
+    },
+    {
+      "subject": "SC402",
+      "n_nights": 2,
+      "V_geo_vol": 0.4691315988596465,
+      "V_geo_vol_eeg": 0.14714941367287676,
+      "V_fpz_eog_corr_vol": 0.21731071540433333,
+      "V_fpz_eog_corr_level": 0.10286661647938004,
+      "V_eog_pow_vol": 0.40157472471616923,
+      "V_eog_pow_level": 0.5274506969094481
+    },
+    {
+      "subject": "SC403",
+      "n_nights": 2,
+      "V_geo_vol": 0.4159284699391573,
+      "V_geo_vol_eeg": 0.05319871621369175,
+      "V_fpz_eog_corr_vol": 0.12974702883351563,
+      "V_fpz_eog_corr_level": 0.05833167444220219,
+      "V_eog_pow_vol": 0.4423494417662617,
+      "V_eog_pow_level": 0.4993994068089934
+    }
+  ],
+  "per_record": [
+    {
+      "record": "SC4001",
+      "subject": "SC400",
+      "V_geo_vol": 0.3972700860508633,
+      "V_geo_vol_eeg": 0.06988730642701556,
+      "V_fpz_eog_corr_vol": 0.14365810578779598,
+      "V_fpz_eog_corr_level": 0.08058278380788272,
+      "V_eog_pow_vol": 0.4101688077528291,
+      "V_eog_pow_level": 0.4713435657613601
+    },
+    {
+      "record": "SC4002",
+      "subject": "SC400",
+      "V_geo_vol": 0.44563822130920944,
+      "V_geo_vol_eeg": 0.18858344983712957,
+      "V_fpz_eog_corr_vol": 0.1649520810827556,
+      "V_fpz_eog_corr_level": 0.08455626819142542,
+      "V_eog_pow_vol": 0.4924524357977642,
+      "V_eog_pow_level": 0.5505045580460477
+    },
+    {
+      "record": "SC4011",
+      "subject": "SC401",
+      "V_geo_vol": 0.5566569016586935,
+      "V_geo_vol_eeg": 0.16386626891332565,
+      "V_fpz_eog_corr_vol": 0.270848330470101,
+      "V_fpz_eog_corr_level": 0.1431416628945427,
+      "V_eog_pow_vol": 0.5043327725332196,
+      "V_eog_pow_level": 0.5927110349624273
+    },
+    {
+      "record": "SC4021",
+      "subject": "SC402",
+      "V_geo_vol": 0.4220729180463922,
+      "V_geo_vol_eeg": 9.76832040773722e-05,
+      "V_fpz_eog_corr_vol": 0.1981021245333802,
+      "V_fpz_eog_corr_level": 0.09823434553004258,
+      "V_eog_pow_vol": 0.3880341965493395,
+      "V_eog_pow_level": 0.5457914918333989
+    },
+    {
+      "record": "SC4022",
+      "subject": "SC402",
+      "V_geo_vol": 0.5161902796729009,
+      "V_geo_vol_eeg": 0.29420114414167614,
+      "V_fpz_eog_corr_vol": 0.23651930627528645,
+      "V_fpz_eog_corr_level": 0.10749888742871751,
+      "V_eog_pow_vol": 0.41511525288299894,
+      "V_eog_pow_level": 0.5091099019854973
+    },
+    {
+      "record": "SC4031",
+      "subject": "SC403",
+      "V_geo_vol": 0.4056505768255813,
+      "V_geo_vol_eeg": 0.07152724377181116,
+      "V_fpz_eog_corr_vol": 0.10657157172672169,
+      "V_fpz_eog_corr_level": 0.04700472623548264,
+      "V_eog_pow_vol": 0.44097808314006887,
+      "V_eog_pow_level": 0.5042577483738826
+    },
+    {
+      "record": "SC4032",
+      "subject": "SC403",
+      "V_geo_vol": 0.42620636305273324,
+      "V_geo_vol_eeg": 0.03487018865557234,
+      "V_fpz_eog_corr_vol": 0.15292248594030958,
+      "V_fpz_eog_corr_level": 0.06965862264892174,
+      "V_eog_pow_vol": 0.4437208003924545,
+      "V_eog_pow_level": 0.49454106524410424
+    }
+  ],
+  "verdict": "ATTRIBUTABLE TO THE EYE, NOT THE GEOMETRY. Unit = subject (n = 4; 7 recordings are 4 people), so the smallest attainable one-sided p is 0.0625 and no significance claim is possible. Pooled V: geometry with EOG 0.452, geometry without EOG 0.021; best EOG-carrying scalar (eog_pow_level) 0.524 (others: fpz_eog_corr_vol 0.182, fpz_eog_corr_level 0.090, eog_pow_vol 0.442). Geometry beats eog_pow_level in 0/4 subjects; with the EOG channel removed the geometry's pooled V falls from 0.452 to 0.021 and it beats eog_pow_level in 0/4 subjects, so the EOG channel carries essentially all of the signal.",
+  "figures": []
+}

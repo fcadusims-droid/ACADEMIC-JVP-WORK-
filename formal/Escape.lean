@@ -26,7 +26,9 @@
   *escape* horn consumes exactly one analytic fact — `poincare_recurrence_ae` — and it is the
   *same* axiom `Trichotomy.lean`'s bounded-cell result consumes. (CORRECTED: that axiom was first
   stated pointwise, which is false — see `Counterexamples.lean`. In its true, almost-everywhere
-  form the closure holds for almost every initial reading, not for every one.) That is the precise sense
+  form the closure holds only for readings typical of the quotient flow's invariant measure —
+  almost every initial reading when that measure is Lebesgue, as for the quasi-periodic escapers
+  tested, but nothing about transients if the reading dynamics is dissipative.) That is the precise sense
   in which "the horn closes by the same argument, stronger and more general" is true rather
   than rhetorical: both cells reduce to one recurrence theorem, the escaping one via the
   quotient.

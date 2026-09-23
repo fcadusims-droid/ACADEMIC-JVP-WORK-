@@ -13,7 +13,9 @@ external review. It is a working list, not a checklist toward a deadline.
   bundle apparatus is net negative where tested, and detection does not beat standard
   baselines. An external review recommends re-scoping the paper to what survived — the
   structure-versus-power behaviour of the trace-normalised SPD base — with the fibre and the
-  three regimes moved to future work. That is an authorial decision and has not been made.
+  three regimes moved to future work. That is an authorial decision and has not been made; in the
+  meantime the title now calls the protocol *proposed* and the abstract says the title claims
+  neither the bundle apparatus nor the demarcation works.
 - **Localization numbers are inflated by a centring artefact.** Every within-trajectory
   localization run places the true transition at the window centre by construction; a
   trivial "always predict the middle" detector scores 22/22 there and 0/22 off-centre
@@ -24,10 +26,20 @@ external review. It is a working list, not a checklist toward a deadline.
   with power held constant the geometry localizes at 1.00 against the best power baseline's
   0.75 — a +0.25 margin, short of the +0.30 fixed in advance. It is not established at the
   pre-registered level.
-- **The external-referent result tests a proxy, not the demarcation.** The AASM binding
-  (`regime_external_referent`, re-tested in `regime_referent_nulls`) is a geodesic-volatility
-  median split, not the drift/diffusion/jump or Lyapunov/complexity demarcation the paper
-  describes. See `STATUS.md` for what survives the corrected nulls.
+- **The external-referent result tests a proxy, and its advantage is the eye.** The AASM binding
+  (`regime_external_referent`) is a geodesic-volatility median split, not the demarcation. Its
+  re-test survives a dependence-preserving null, but the 7 recordings are 4 subjects (no
+  significance claim is possible) and the covariance includes horizontal EOG: EOG power alone
+  binds more strongly, and without EOG the geometry's association nearly vanishes
+  (`regime_referent_eog_control`).
+- **The sleep structural discrimination is the eye too.** A1's N2-vs-REM 14/15 holds in only 2 of
+  4 subjects without the EOG channel (`discrimination_eog_ablation`). What remains is the
+  eyes-open/closed discrimination, modest against within-state drift (12/15 subjects, median
+  ≈1.3; the often-quoted ≈3.3 uses a permutation estimator that ignores autocorrelation).
+- **Geometry vs scalar, overall.** On no task has the geometry yet been shown to add anything over
+  a scalar carrying the same channels: centring-corrected localization ties a scalar, and the
+  stage-association advantage was EOG power. A fair test needs EEG-only covariances and scalar
+  baselines from the same channels, on more subjects.
 - **Power.** The H1 comparison is underpowered (n = 22); the pre-registered power-up needs
   ~74 records and is blocked in the cloud environment (`round2_blocked_on_session_egress`).
 
@@ -36,8 +48,8 @@ external review. It is a working list, not a checklist toward a deadline.
 - **The formalization rested on false axioms (now corrected).** The first `Trichotomy.lean`
   declared pointwise versions of Poincaré and Conley that are false;
   `formal/Counterexamples.lean` refutes them and the files now assume the true forms. The
-  consequence for the paper: the forbidden object is excluded for *almost every* initial
-  condition, not every, and the positive-entropy clause does no work (§7.5).
+  consequence for the paper: the forbidden object is excluded only for states typical of the flow's invariant measure — almost every initial condition for conservative dynamics, but nothing about the transients of dissipative dynamics, where the exclusion rests on an interpretive argument (§7.5). Case 3's exhaustiveness is essentially
+  excluded middle; the argumentative load now sits on the interpretation of the cells.
 - **Internal consistency of claim strength.** The abstract, orientation and conclusion said
   "proves"; §2.1 said the paper presents no deductive proof; §7.6 concedes the top-level
   thesis is definitional. The wording has been aligned to §7.6; any new text should keep to it.

@@ -1,0 +1,94 @@
+{
+  "experiment": "discrimination_eog_ablation",
+  "question": "is A1's N2-vs-REM discrimination carried by the EOG channel?",
+  "n_recordings": 7,
+  "n_subjects": 4,
+  "pass_recordings": {
+    "with_eog": 7,
+    "eeg_only": 4
+  },
+  "pass_subjects": {
+    "with_eog": 4,
+    "eeg_only": 2
+  },
+  "median_ratio": {
+    "with_eog": 2.8337639998686024,
+    "eeg_only": 2.179908767910312
+  },
+  "preregistered_criterion": "survives iff EEG-only subject passes >= with-EOG subject passes - 1",
+  "survives_without_eog": false,
+  "per_recording": [
+    {
+      "recording": "SC4001",
+      "subject": "SC400",
+      "ratio_with_eog": 1.9112466172370863,
+      "p_with_eog": 0.02594810379241517,
+      "pass_with_eog": true,
+      "ratio_eeg_only": 2.398358256521134,
+      "p_eeg_only": 0.041916167664670656,
+      "pass_eeg_only": true
+    },
+    {
+      "recording": "SC4002",
+      "subject": "SC400",
+      "ratio_with_eog": 2.1982406112198323,
+      "p_with_eog": 0.007984031936127744,
+      "pass_with_eog": true,
+      "ratio_eeg_only": 1.4298711030809919,
+      "p_eeg_only": 0.01996007984031936,
+      "pass_eeg_only": true
+    },
+    {
+      "recording": "SC4011",
+      "subject": "SC401",
+      "ratio_with_eog": 4.575047514720262,
+      "p_with_eog": 0.001996007984031936,
+      "pass_with_eog": true,
+      "ratio_eeg_only": 2.3036591667895396,
+      "p_eeg_only": 0.015968063872255488,
+      "pass_eeg_only": true
+    },
+    {
+      "recording": "SC4021",
+      "subject": "SC402",
+      "ratio_with_eog": 3.226813851232966,
+      "p_with_eog": 0.001996007984031936,
+      "pass_with_eog": true,
+      "ratio_eeg_only": 0.7405959116837416,
+      "p_eeg_only": 0.17365269461077845,
+      "pass_eeg_only": false
+    },
+    {
+      "recording": "SC4022",
+      "subject": "SC402",
+      "ratio_with_eog": 2.445623588941092,
+      "p_with_eog": 0.001996007984031936,
+      "pass_with_eog": true,
+      "ratio_eeg_only": 2.179908767910312,
+      "p_eeg_only": 0.06986027944111776,
+      "pass_eeg_only": false
+    },
+    {
+      "recording": "SC4031",
+      "subject": "SC403",
+      "ratio_with_eog": 4.50682264799632,
+      "p_with_eog": 0.001996007984031936,
+      "pass_with_eog": true,
+      "ratio_eeg_only": 2.9410111258586364,
+      "p_eeg_only": 0.003992015968063872,
+      "pass_eeg_only": true
+    },
+    {
+      "recording": "SC4032",
+      "subject": "SC403",
+      "ratio_with_eog": 2.8337639998686024,
+      "p_with_eog": 0.001996007984031936,
+      "pass_with_eog": true,
+      "ratio_eeg_only": 1.4223558886478742,
+      "p_eeg_only": 0.08782435129740519,
+      "pass_eeg_only": false
+    }
+  ],
+  "verdict": "THE SLEEP DISCRIMINATION IS CARRIED BY THE EOG CHANNEL. N2-vs-REM under a circular-shift null: with EOG 7/7 recordings (4/4 subjects), median ratio 2.83; EEG only (Fpz-Cz, Pz-Oz) 4/7 recordings (2/4 subjects), median ratio 2.18. Paper 3 may not cite the sleep 14/15 as evidence that the EEG geometry is sensitive to structural regime. n = 4 subjects, descriptive.",
+  "figures": []
+}

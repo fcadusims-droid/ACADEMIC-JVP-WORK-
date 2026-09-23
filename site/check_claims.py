@@ -161,6 +161,34 @@ def check_verdict_guards(quiet=False):
     return checked, errors
 
 
+def check_forbidden_phrases(quiet=False):
+    """Phrases that overstate what the work has shown, forbidden outright.
+
+    The qualifications gate can only require a caveat NEXT TO a claim; it cannot forbid a
+    phrasing, because it fails when the guarded sentence disappears. Some overclaims have no
+    honest caveated form -- "provably destroys" in a paper whose own section 7.6 concedes the
+    thesis is definitional is one -- so they are listed in experiments/forbidden_phrases.json
+    and must not appear at all.
+    """
+    path = os.path.join(ROOT, "experiments", "forbidden_phrases.json")
+    if not os.path.exists(path):
+        return 0, []
+    with open(path, encoding="utf-8") as fh:
+        rules = json.load(fh)
+    errors, checked = [], 0
+    for r in rules:
+        with open(os.path.join(ROOT, r["paper"]), encoding="utf-8") as fh:
+            text = fh.read()
+        checked += 1
+        for m in re.finditer(r["pattern"], text):
+            line = text.count("\n", 0, m.start()) + 1
+            errors.append(f"[{r['id']}] {r['paper']}:{line} contains a forbidden overclaim "
+                          f"(/{r['pattern']}/). {r['why']}")
+    if not quiet:
+        print(f"forbidden-phrase gate: {len(rules)} rules, {checked} checks")
+    return checked, errors
+
+
 def check(quiet=False):
     with open(MANIFEST, encoding="utf-8") as fh:
         claims = json.load(fh)
@@ -214,7 +242,8 @@ def check(quiet=False):
               f"{len(tagged_results)}/{n_results} result files have a tagged claim")
     _, qerrors = check_qualifications(quiet)
     _, verrors = check_verdict_guards(quiet)
-    qerrors = qerrors + verrors
+    _, ferrors = check_forbidden_phrases(quiet)
+    qerrors = qerrors + verrors + ferrors
     for e in errors:
         print(f"  ERROR  {e}")
     for e in qerrors:

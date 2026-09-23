@@ -15,7 +15,7 @@ locally as well:
 - **`Escape.lean`** — Paper 1 §7.5's *escape horn*, closed by the stronger argument the
   escape experiments produced: an identity contract reads a coordinate that lives on a
   compact quotient, so a state that escapes in the radius stays recurrent in the
-  observable — for almost every initial reading. The axiom audit shows this consumes
+  observable — for readings typical of the quotient flow's invariant measure (almost every initial reading when that measure is Lebesgue, as for the quasi-periodic escapers tested). The axiom audit shows this consumes
   exactly `poincare_recurrence_ae`, the same analytic axiom the bounded cell uses.
 
 ## How the "it compiles" claim is verified
@@ -78,7 +78,7 @@ the proof discarded it (`rintro ⟨_, hnr⟩`). It has been removed rather than 
 - `forbidden_object_null` — bounded non-recurrence under measure preservation is confined to a
   **null set**. That is the whole content of the "forbidden object" result.
 
-**What this costs Paper 1.** The exclusion holds for almost every initial condition, not every;
+**What this costs Paper 1.** The exclusion holds for states typical of the invariant measure, not for every state. For conservative flows that is almost every initial condition; for **dissipative** flows the invariant measure lives on the attractor, the basin's transients are null for it though Lebesgue-generic, and Poincaré says nothing about them;
 exceptional trajectories (separatrices, transients) exist. Case 3 means *asymptotically
 chain-recurrent*, which is what the prose of §7.5 (classifying by attractor type) already
 described, but which is weaker than the "recurrent" the first formal file asserted. The
