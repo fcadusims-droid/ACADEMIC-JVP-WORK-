@@ -123,7 +123,7 @@
     "path": "temporal_half.median_ratio",
     "tol": 0.05,
     "papers": {
-      "Paper3.md": "median ratio \\$\\\\approx ([0-9.]+)\\$ against within-state drift"
+      "Paper3.md": "\\$12\\$ of \\$15\\$ subjects, median ratio \\$\\\\approx ([0-9.]+)\\$ \\(the larger"
     }
   },
   {
@@ -160,6 +160,51 @@
     "tol": 0,
     "papers": {
       "Paper3.md": "\\(\\$10/22\\$ versus \\$([0-9]+)/22\\$ off-centre\\)"
+    }
+  },
+  {
+    "id": "Between-recording control: same-state median",
+    "result": "between_recording_control",
+    "path": "medians.G_SS",
+    "tol": 0.01,
+    "papers": {
+      "Paper3.md": "control median \\$([0-9.]+)\\$, one-sided"
+    }
+  },
+  {
+    "id": "Between-recording control: OC>SS count",
+    "result": "between_recording_control",
+    "path": "C1.n_OC_gt_SS",
+    "tol": 0,
+    "papers": {
+      "Paper3.md": "ratio is higher in \\$([0-9]+)\\$ of \\$15\\$ subjects"
+    }
+  },
+  {
+    "id": "Between-recording control: C1 Wilcoxon",
+    "result": "between_recording_control",
+    "path": "C1.wilcoxon_p_OC_gt_SS",
+    "tol": 0.001,
+    "papers": {
+      "Paper3.md": "control median \\$0.95\\$, one-sided Wilcoxon \\$p\\\\approx ([0-9.]+)\\$"
+    }
+  },
+  {
+    "id": "Between-recording control: scalar median",
+    "result": "between_recording_control",
+    "path": "medians.S_OC",
+    "tol": 0.05,
+    "papers": {
+      "Paper3.md": "scalar median \\$\\\\approx ([0-9.]+)\\$, paired"
+    }
+  },
+  {
+    "id": "Between-recording control: T0 eyes-open count",
+    "result": "between_recording_control",
+    "path": "C3.n_t0_closer_to_open",
+    "tol": 0,
+    "papers": {
+      "Paper3.md": "consistent with eyes open in \\$([0-9]+)\\$ of \\$15\\$"
     }
   }
 ]

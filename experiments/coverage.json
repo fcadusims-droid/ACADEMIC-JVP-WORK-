@@ -6,7 +6,8 @@
     "exercised_by": [
       "real_eeg_localization",
       "sleep_stage_localization",
-      "base_metric_corner"
+      "base_metric_corner",
+      "between_recording_control"
     ]
   },
   {

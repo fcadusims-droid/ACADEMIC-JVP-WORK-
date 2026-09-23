@@ -34,8 +34,11 @@ a single path, with curvature entering only at second order as holonomy.
 
 ## What the suite established
 
-**On real data, one paradigm, modestly.** Structural discrimination replicates in direction on
-eyes-open versus eyes-closed EEG (12/15 subjects, about a third above within-state drift). On
+**On real data, no structure beyond power yet.** On eyes-open versus eyes-closed EEG the geometry
+registers a difference between two recordings that exceeds each one's internal drift (12/15
+subjects, about a third). It beats a same-state between-recording control only weakly (11/15,
+p ≈ 0.024), and a scalar baseline — per-channel relative alpha power on the same channels —
+separates the states far more strongly (median ≈3.5 against ≈1.3; `between_recording_control`). On
 Sleep-EDF (N2 versus REM, 14/15) it is attributed to the EOG channel in the covariance: without
 it the discrimination holds in only 2 of 4 subjects (`discrimination_eog_ablation`). Within-trajectory
 sleep-onset localization appeared to reach 10/15 against 4/15 on eyes-open/closed, which
@@ -76,8 +79,8 @@ selection could not have shown (`detection_repair_heldout`).
 **A corrected headline.** The appendix's ≈12× structural effect was traced to an
 estimator choice and corrected to ≈3.3× — and then again to ≈1.3×, because the ≈3.3×
 estimator treats overlapping, autocorrelated windows as exchangeable. Against within-state drift
-the effect is above unity in 12 of 15 subjects; the direction replicated, the magnitude is modest,
-and the paper now reports ≈1.3 (`eeg_reconciliation`).
+the effect is above unity in 12 of 15 subjects; the paper now reports ≈1.3 (`eeg_reconciliation`), as a
+difference between two recordings that a scalar alpha-power baseline beats (`between_recording_control`).
 
 ## Declared failure modes
 

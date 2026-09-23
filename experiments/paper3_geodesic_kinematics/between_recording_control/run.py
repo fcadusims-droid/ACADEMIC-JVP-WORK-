@@ -192,8 +192,15 @@ def main():
           else "NOT consistent with eyes open")
 
     may_say_structural = c1.startswith("EXCEEDS") and not c2.startswith("SCALAR")
+    # Lead with the pre-registered consequence: the site index compresses verdicts, and a
+    # string opening "C1: EXCEEDS" would read as a win when C2 says the scalar beats it.
+    lead = ("MAY BE CALLED STRUCTURAL DISCRIMINATION (C1 exceeds, C2 not scalar-dominated). "
+            if may_say_structural else
+            "NOT STRUCTURAL DISCRIMINATION: a between-recording difference that per-channel "
+            "alpha power carries better. ")
     verdict = (
-        (f"INSTRUMENT DEFECT: sanity gate failed (G_OC median {med['G_OC']:.3f} vs committed "
+        lead
+        + (f"INSTRUMENT DEFECT: sanity gate failed (G_OC median {med['G_OC']:.3f} vs committed "
          f"{recon:.3f}); no verdict. " if not sanity_ok else "")
         + f"C1: {c1}. Geometry ratio R01-vs-R02 median {med['G_OC']:.2f}; same-state control "
         f"T0(R03)-vs-T0(R07) median {med['G_SS']:.2f}; OC > SS in {n_oc_gt_ss}/{n} subjects, "

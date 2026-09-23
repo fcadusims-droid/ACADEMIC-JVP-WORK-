@@ -109,5 +109,22 @@
     ],
     "pattern": "(?i)necessarily \\*?externally occasioned",
     "why": "Necessary only for measure-preserving value dynamics; for dissipative dynamics it rests on an interpretive argument, relative to the observer's choice of system boundary."
+  },
+  {
+    "id": "P3: eyes-open/closed is not 'structural discrimination'",
+    "paper": [
+      "Paper3.md",
+      "RESULTS.md",
+      "experiments/STATUS.md",
+      "OPEN_ISSUES.md",
+      "site/content/data.md",
+      "site/content/overview.md",
+      "site/content/paper1.md",
+      "site/content/paper2.md",
+      "site/content/paper3.md",
+      "site/content/reproduce.md"
+    ],
+    "pattern": "(?i)(cross-subject-replicated structural discrimination|structural discrimination replicates|structural-regime discrimination\\*? replicates|discriminates a structural regime change)",
+    "why": "between_recording_control: the eyes-open/closed ratio exceeds a same-state between-recording control only weakly and a scalar per-channel alpha-power baseline beats it; describe it as a difference between two recordings that exceeds each one's internal drift."
   }
 ]
