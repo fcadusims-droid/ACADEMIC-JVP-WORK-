@@ -48,8 +48,8 @@ that always predicts the centre scores every recording; off-centre, sleep-onset
 localization falls to 4/7 and ties a scalar band-power CUSUM
 (`sleep_stage_localization`, `localization_centerbias_control`). At full scale — all 151 usable
 sleep-cassette recordings, off-centre — the geometry localizes 59/151 against the scalar CUSUM's
-67/151 (not significant; `h1_powerup_offcentre`). On-line localization is open, and the geometry
-adds nothing to it on sleep.
+67/151 (not significant; `h1_powerup_offcentre`). On-line localization is open, and on sleep the geometry
+does not improve on a scalar CUSUM.
 
 **Against standard baselines, with the defeat criterion fixed in advance.** The
 protocol had never been compared to anything. It now has been — against BOCPD,

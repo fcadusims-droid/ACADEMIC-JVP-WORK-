@@ -35,7 +35,7 @@ external review. It is a working list, not a checklist toward a deadline.
   4 subjects without the EOG channel (`discrimination_eog_ablation`). What remains is the
   eyes-open/closed difference, modest against within-recording drift (12/15 subjects, median
   ≈1.3; the often-quoted ≈3.3 uses a permutation estimator that ignores autocorrelation).
-- **The eyes-open/closed result is a between-recording difference, and power carries it better.**
+- **The eyes-open/closed result is a between-recording difference, and power separates it more strongly.**
   `between_recording_control`: it exceeds a same-state between-recording control only weakly
   (task-run rest periods, 11/15, p ≈ 0.024, with a control biased in the method's favour), and a
   scalar per-channel relative-alpha-power baseline separates the states far more strongly (median
@@ -54,7 +54,7 @@ external review. It is a working list, not a checklist toward a deadline.
   sleep-cassette recordings (78 subjects), off-centre (`h1_powerup_offcentre`): manifold 59/151 vs
   scalar 67/151 (p ≈ 0.38), subject level 32/78 vs 42/78 (p ≈ 0.12), the same without EOG.
   Pre-registered verdict inconclusive, but at twice the planned n and with the direction favouring
-  the scalar, the geometry adds nothing to sleep-transition localization.
+  the scalar, the geometry does not improve on a scalar CUSUM for sleep-transition localization.
 
 ## Paper 1 — *The Cybernetic Limits of Conversion*
 

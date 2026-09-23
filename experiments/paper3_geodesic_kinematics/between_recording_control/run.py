@@ -197,7 +197,7 @@ def main():
     lead = ("MAY BE CALLED STRUCTURAL DISCRIMINATION (C1 exceeds, C2 not scalar-dominated). "
             if may_say_structural else
             "NOT STRUCTURAL DISCRIMINATION: a between-recording difference that per-channel "
-            "alpha power carries better. ")
+            "alpha power separates more strongly. ")
     verdict = (
         lead
         + (f"INSTRUMENT DEFECT: sanity gate failed (G_OC median {med['G_OC']:.3f} vs committed "

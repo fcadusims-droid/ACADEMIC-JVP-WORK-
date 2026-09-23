@@ -265,8 +265,8 @@ On eyes-open versus eyes-closed EEG the geometry registers a difference between 
 exceeds each one's internal drift (12/15 subjects, median ≈1.3). It exceeds a same-state
 between-recording control (rest periods of two task runs: control median 0.95, eyes-open/closed higher
 in 11/15, p ≈ 0.024), but a scalar baseline on the same channels — per-channel relative alpha
-power — separates the two states far more strongly (median ≈3.5, p ≈ 10⁻⁴). So the geometry adds
-nothing measurable over per-channel alpha power there (`between_recording_control`).
+power — separates the two states far more strongly (median ≈3.5, p ≈ 10⁻⁴). So the geometry separates the states less strongly than per-channel alpha power there; whether it
+carries anything beyond alpha power was not tested (`between_recording_control`).
 N2-versus-REM discrimination passes **14/15** recordings (median ratio 2.79), but its covariance includes a
 horizontal-EOG channel and REM is defined by eye movement: with that channel removed it holds in only 2 of 4
 subjects on the recordings available for the check (`discrimination_eog_ablation`), so it is attributed to
@@ -279,7 +279,7 @@ tying a scalar band-power CUSUM (`localization_centerbias_control`). A pre-regis
 all 151 usable sleep-cassette recordings (78 subjects), off-centre, then found the scalar CUSUM,
 if anything, ahead: manifold **59/151** vs scalar **67/151** (McNemar p ≈ 0.38; subject level
 32/78 vs 42/78; the same without EOG) (`h1_powerup_offcentre`). On-line localization is
-open on both paradigms, and the geometry adds nothing to it on sleep. *(`sleep_stage_localization`, `real_eeg_localization`)*
+open on both paradigms, and on sleep the geometry does not improve on a scalar CUSUM. *(`sleep_stage_localization`, `real_eeg_localization`)*
 
 **Benchmarked against standard methods, with the defeat criterion fixed in advance.**
 Against BOCPD, `ruptures` (PELT, binary segmentation, windowed), a Gaussian HMM and
