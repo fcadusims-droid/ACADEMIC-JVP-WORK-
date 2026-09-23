@@ -634,7 +634,7 @@ Beny, C., and Oreshkov, O. 2010. "General Conditions for Approximate Quantum Err
 
 Cao, C., and Lackey, B. 2021. "Approximate Bacon-Shor Code and Holography." *Journal of High Energy Physics* 2021: 127.
 
-Cao, C., Pollack, J., and Wang, Y. 2022. "Hyper-Invariant MERA: Approximate Holographic Error Correction Codes with Power-Law Correlations." *Physical Review D* 105: 026018.
+Cao, C., Pollack, J., and Wang, Y. 2022. "Hyperinvariant Multiscale Entanglement Renormalization Ansatz: Approximate Holographic Error Correction Codes with Power-Law Correlations." *Physical Review D* 105: 026018.
 
 Craig, A. D. 2009. "How Do You Feel — Now? The Anterior Insula and Human Awareness." *Nature Reviews Neuroscience* 10(1): 59–70.
 

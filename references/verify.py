@@ -26,7 +26,6 @@ import time
 import unicodedata
 import urllib.parse
 import urllib.request
-import xml.etree.ElementTree as ET
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.dirname(os.path.abspath(__file__))
@@ -131,23 +130,25 @@ def crossref(ref):
 
 
 def arxiv(ref):
-    xml = fetch("http://export.arxiv.org/api/query?id_list=" + ref["arxiv"])
-    if not xml:
+    """arXiv abstract page -> citation_* meta tags (the export API returns empty bodies from
+    this environment)."""
+    html = fetch("https://arxiv.org/abs/" + ref["arxiv"])
+    if not html:
         return {"auto_status": "NOMATCH", "source": "arxiv"}
-    ns = {"a": "http://www.w3.org/2005/Atom"}
-    e = ET.fromstring(xml).find("a:entry", ns)
-    if e is None or e.find("a:title", ns) is None:
+    meta = lambda k: re.findall(r'<meta name="%s" content="([^"]*)"' % k, html)
+    t = (meta("citation_title") or [""])[0]
+    authors = meta("citation_author")
+    d = (meta("citation_date") or [""])[0]
+    yr = int(d[:4]) if d[:4].isdigit() else None
+    if not t:
         return {"auto_status": "NOMATCH", "source": "arxiv"}
-    t = " ".join(e.find("a:title", ns).text.split())
-    authors = [a.find("a:name", ns).text for a in e.findall("a:author", ns)]
-    yr = int(e.find("a:published", ns).text[:4])
     s = sim(ref["title"] or "", t)
     problems = []
     if s < 0.85:
         problems.append("title")
     if not any(" ".join(norm(ref["surname"])) in " ".join(norm(a)) for a in authors):
         problems.append("author")
-    if ref["year"] and abs(ref["year"] - yr) > 1:
+    if ref["year"] and yr and abs(ref["year"] - yr) > 1:
         problems.append("year")
     return {"source": "arxiv", "url": "https://arxiv.org/abs/" + ref["arxiv"], "found_title": t,
             "found_authors": authors[:6], "found_year": yr, "title_similarity": round(s, 3),
@@ -156,11 +157,12 @@ def arxiv(ref):
 
 
 def openlibrary(ref):
-    q = urllib.parse.urlencode({"title": ref["title"], "author": ref["surname"], "limit": 5})
+    F = "title,author_name,publisher,publish_year,first_publish_year,key"
+    q = urllib.parse.urlencode({"title": ref["title"], "author": ref["surname"], "limit": 5, "fields": F})
     js = fetch("https://openlibrary.org/search.json?" + q)
     docs = json.loads(js).get("docs", []) if js else []
     if not docs:
-        q = urllib.parse.urlencode({"q": f'{ref["title"]} {ref["surname"]}', "limit": 5})
+        q = urllib.parse.urlencode({"q": f'{ref["title"]} {ref["surname"]}', "limit": 5, "fields": F})
         js = fetch("https://openlibrary.org/search.json?" + q)
         docs = json.loads(js).get("docs", []) if js else []
     best, score = None, 0.0
@@ -180,7 +182,8 @@ def openlibrary(ref):
     return {"source": "openlibrary", "url": "https://openlibrary.org" + best.get("key", ""),
             "found_title": best.get("title"), "found_authors": authors,
             "found_first_year": best.get("first_publish_year"),
-            "found_publishers": best.get("publisher", [])[:5], "title_similarity": round(score, 3),
+            "found_publishers": best.get("publisher", [])[:40],
+            "found_publish_years": sorted(set(best.get("publish_year", []))), "title_similarity": round(score, 3),
             "auto_problems": problems,
             "auto_status": "MATCH" if not problems else ("NOMATCH" if "title" in problems else "PARTIAL")}
 

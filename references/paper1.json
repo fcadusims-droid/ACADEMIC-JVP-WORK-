@@ -1,0 +1,669 @@
+[
+  {
+    "n": 1,
+    "citation": "Agar, Nicholas. 2016. \"Enhancement, Mind-Uploading, and Personal Identity.\" In Steve Clarke, Julian Savulescu, C. A. J. Coady, Alberto Giubilini, and Sagar Sanyal, eds., *The Ethics of Human Enhancement: Understanding the Debate*. Oxford University Press.",
+    "status": "verified",
+    "url": "https://doi.org/10.1093/acprof:oso/9780198754855.003.0013",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1093/acprof:oso/9780198754855.003.0013"
+  },
+  {
+    "n": 2,
+    "citation": "Ames, Aaron D., Coogan, Samuel, Egerstedt, Magnus, Notomista, Gennaro, Sreenath, Koushil, and Tabuada, Paulo. 2019. \"Control Barrier Functions: Theory and Applications.\" *2019 18th European Control Conference (ECC)*: 3420-3431. DOI: 10.23919/ECC.2019.8796030.",
+    "status": "verified",
+    "url": "https://doi.org/10.23919/ecc.2019.8796030",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.23919/ecc.2019.8796030"
+  },
+  {
+    "n": 3,
+    "citation": "Adams, Alyssa, Hector Zenil, Paul C. W. Davies, and Sara Imari Walker. 2017. \"Formal Definitions of Unbounded Evolution and Innovation Reveal Universal Mechanisms for Open-Ended Evolution in Dynamical Systems.\" *Scientific Reports* 7: 997. DOI: 10.1038/s41598-017-00810-8. (Closed finite systems are Poincaré-recurrent within their recurrence time; unbounded novelty requires coupling to an external environment.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/s41598-017-00810-8",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/s41598-017-00810-8",
+    "manual_review": "The sentence quoted in §7.5 ('is only possible for a subsystem interacting with an external environment') was found verbatim in the full text (PMC5430523)."
+  },
+  {
+    "n": 4,
+    "citation": "Aquinas, Thomas. *Summa Theologiae*. Trans. Fathers of the English Dominican Province. Benziger Brothers, 1947. Cited by part, question, and article.",
+    "status": "verified",
+    "url": "https://ccel.org/a/aquinas/summa/home.html",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH",
+    "manual_review": "Benziger Brothers 1947 American edition of the English Dominican translation, confirmed; link is the public-domain text of that translation."
+  },
+  {
+    "n": 5,
+    "citation": "Arpaly, Nomy. 2003. *Unprincipled Virtue: An Inquiry Into Moral Agency*. Oxford University Press. (Moral change without deliberation; the Huckleberry Finn case.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL8004189W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 6,
+    "citation": "Ashby, W. Ross. 1956. *An Introduction to Cybernetics*. Chapman and Hall.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL169933W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 7,
+    "citation": "Ashby, W. Ross. 1960. *Design for a Brain: The Origin of Adaptive Behaviour*. 2nd ed. Chapman and Hall.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL169935W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 8,
+    "citation": "Aubin, Jean-Pierre. 1991. *Viability Theory*. Birkhäuser.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL14855000W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 9,
+    "citation": "Augustine. *Confessions*. Trans. Henry Chadwick. Oxford University Press, 1991.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL137872W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 10,
+    "citation": "Augustine. *De gratia et libero arbitrio* (*On Grace and Free Will*). In *Answer to the Pelagians IV*, trans. Roland J. Teske. New City Press, 1999. (The founding statement of the grace/freedom problem this paper's Class G inherits.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/isbn/9781565481367",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Answer to the Pelagians IV (Works of Saint Augustine I/26), trans. Teske, New City Press 1999, confirmed; the volume titles the work 'Grace and Free Choice'."
+  },
+  {
+    "n": 11,
+    "citation": "Bratman, Michael E. 1987. *Intention, Plans, and Practical Reason*. Harvard University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL55014W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 12,
+    "citation": "Bratman, Michael E. 2007. *Structures of Agency: Essays*. Oxford University Press. (Planning agency and self-governance; standing policies as a mechanism for stability of intention.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL8005068W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 13,
+    "citation": "Callard, Agnes. 2018. *Aspiration: The Agency of Becoming*. Oxford University Press. (Proleptic reasons: acknowledged-defective versions of reasons one expects eventually to grasp; the most direct challenge to this paper's thesis.)",
+    "status": "verified-corrected",
+    "url": "https://openlibrary.org/works/OL21160042W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH",
+    "manual_review": "Oxford University Press 2018, confirmed.",
+    "correction": "Paper 1 §7.8.1 put the phrase 'is not a matter of decision-making at all' in quotation marks as Callard's. It is from L. A. Paul's endorsement of the book on the publisher's page, not from Callard's text. The sentence now paraphrases Callard's position without quotation marks."
+  },
+  {
+    "n": 14,
+    "citation": "Calvin, John. *Institutes of the Christian Religion*, Book III. Trans. Ford Lewis Battles, ed. John T. McNeill. 2 vols. Library of Christian Classics 20–21. Westminster Press, 1960. (Effectual calling and the bondage of the will; the monergist pole of the dispute §10 concedes it is not neutral about.)",
+    "status": "verified-corrected",
+    "url": "https://openlibrary.org/isbn/9780664220280",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH",
+    "manual_review": "McNeill/Battles, Library of Christian Classics 20-21, confirmed.",
+    "correction": "Publisher corrected from 'Westminster John Knox Press' (the later name) to 'Westminster Press', which issued the 1960 edition."
+  },
+  {
+    "n": 15,
+    "citation": "Baker, Lynne Rudder. 2000. *Persons and Bodies: A Constitution View*. Cambridge University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL3480099W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 16,
+    "citation": "Bellman, Richard. 1957. *Dynamic Programming*. Princeton University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL2763265W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 17,
+    "citation": "Bowles, Samuel. 1998. \"Endogenous Preferences: The Cultural Consequences of Markets and Other Economic Institutions.\" *Journal of Economic Literature* 36(1): 75-111.",
+    "status": "verified",
+    "url": "https://econpapers.repec.org/RePEc:aea:jeclit:v:36:y:1998:i:1:p:75-111",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Journal of Economic Literature 36(1): 75-111, confirmed (RePEc record; not indexed by Crossref)."
+  },
+  {
+    "n": 18,
+    "citation": "Carr, Jack. 1981. *Applications of Centre Manifold Theory*. Springer.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL25696442W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 19,
+    "citation": "Crutchfield, James P., and Young, Karl. 1989. \"Inferring Statistical Complexity.\" *Physical Review Letters* 63(2): 105-108.",
+    "status": "verified",
+    "url": "https://doi.org/10.1103/physrevlett.63.105",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1103/physrevlett.63.105"
+  },
+  {
+    "n": 20,
+    "citation": "Feldbaum, A. A. 1965. *Optimal Control Systems*. Academic Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL7391575W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 21,
+    "citation": "Crutchfield, James P. 2012. \"Between Order and Chaos.\" *Nature Physics* 8(1): 17-24.",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/nphys2190",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/nphys2190"
+  },
+  {
+    "n": 22,
+    "citation": "Everitt, Tom, Marcus Hutter, Ramana Kumar, and Victoria Krakovna. 2021. \"Reward Tampering Problems and Solutions in Reinforcement Learning: A Causal Influence Diagram Perspective.\" *Synthese* 198: 6435-6467. (Formal results on agents that can modify their own reward channel.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1007/s11229-021-03141-4",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1007/s11229-021-03141-4"
+  },
+  {
+    "n": 23,
+    "citation": "Floridi, Luciano. 2011. *The Philosophy of Information*. Oxford University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL15932655W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 24,
+    "citation": "Frankfurt, Harry G. 1971. \"Freedom of the Will and the Concept of a Person.\" *The Journal of Philosophy* 68(1): 5-20. (Second-order desires; the hierarchy the §7.6 \"one level up\" move presupposes.)",
+    "status": "verified",
+    "url": "https://doi.org/10.2307/2024717",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.2307/2024717"
+  },
+  {
+    "n": 25,
+    "citation": "Friston, Karl. 2010. \"The Free-Energy Principle: A Unified Brain Theory?\" *Nature Reviews Neuroscience* 11(2): 127-138.",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/nrn2787",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/nrn2787"
+  },
+  {
+    "n": 26,
+    "citation": "Friston, Karl. 2013. \"Life as We Know It.\" *Journal of the Royal Society Interface* 10: 20130475.",
+    "status": "verified",
+    "url": "https://doi.org/10.1098/rsif.2013.0475",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1098/rsif.2013.0475"
+  },
+  {
+    "n": 27,
+    "citation": "Gregory of Nyssa. *The Life of Moses*. Trans. Abraham J. Malherbe and Everett Ferguson. Paulist Press, 1978.",
+    "status": "verified",
+    "url": "https://openlibrary.org/isbn/9780809121120",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Classics of Western Spirituality, Paulist Press 1978, trans. Malherbe and Ferguson, confirmed."
+  },
+  {
+    "n": 28,
+    "citation": "Hadfield-Menell, Dylan, Stuart J. Russell, Pieter Abbeel, and Anca Dragan. 2016. \"Cooperative Inverse Reinforcement Learning.\" *Advances in Neural Information Processing Systems* 29. (Value learning as a fixed higher-order objective; §7.8.5 reads it as reabsorption.)",
+    "status": "verified",
+    "url": "https://papers.nips.cc/paper/6420-cooperative-inverse-reinforcement-learning",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "NIPS 2016 (Advances in Neural Information Processing Systems 29), confirmed on the proceedings site."
+  },
+  {
+    "n": 29,
+    "citation": "Haken, Hermann. 1983. *Synergetics: An Introduction*. 3rd ed. Springer.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL19905329W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH",
+    "manual_review": "3rd revised and enlarged edition, Springer 1983 (Springer Series in Synergetics 1), confirmed."
+  },
+  {
+    "n": 30,
+    "citation": "Hubinger, Evan, Chris van Merwijk, Vladimir Mikulik, Joar Skalse, and Scott Garrabrant. 2019. \"Risks from Learned Optimization in Advanced Machine Learning Systems.\" arXiv:1906.01820. (Mesa-optimization: learned optimizers with objectives of their own.)",
+    "status": "verified",
+    "url": "https://arxiv.org/abs/1906.01820",
+    "checked_against": "arxiv",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 31,
+    "citation": "James, William. 1902. *The Varieties of Religious Experience: A Study in Human Nature*. Longmans, Green. (Classical phenomenology of conversion: abruptness, passivity, retained identity.)",
+    "status": "verified",
+    "url": "https://archive.org/details/varietiesofrelig00jameuoft",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH",
+    "manual_review": "Longmans, Green 1902, confirmed; link is a scan of the 1902 edition."
+  },
+  {
+    "n": 32,
+    "citation": "Halmos, Paul R. 1956. *Lectures on Ergodic Theory*. Chelsea Publishing.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL2776843W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 33,
+    "citation": "Bechlioulis, Charalampos P., and George A. Rovithakis. 2008. \"Robust Adaptive Control of Feedback Linearizable MIMO Nonlinear Systems with Prescribed Performance.\" *IEEE Transactions on Automatic Control* 53(9): 2090-2099. (Bounded tracking error with finite control authority.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1109/tac.2008.929402",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1109/tac.2008.929402"
+  },
+  {
+    "n": 34,
+    "citation": "Ilchmann, Achim, Eugene P. Ryan, and Christopher J. Sangwin. 2002. \"Tracking with Prescribed Transient Behaviour.\" *ESAIM: Control, Optimisation and Calculus of Variations* 7: 471-493. (Funnel control: prescribed error bound with finite, state-dependent gain.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1051/cocv:2002064",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1051/cocv:2002064"
+  },
+  {
+    "n": 35,
+    "citation": "Kolchinsky, Artemy, and Wolpert, David H. 2018. \"Semantic Information, Autonomous Agency and Non-Equilibrium Statistical Physics.\" *Interface Focus* 8(6): 20180041.",
+    "status": "verified",
+    "url": "https://doi.org/10.1098/rsfs.2018.0041",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1098/rsfs.2018.0041"
+  },
+  {
+    "n": 36,
+    "citation": "Korsgaard, Christine M. 2009. *Self-Constitution: Agency, Identity, and Integrity*. Oxford University Press. (Agency constituting itself through action; the sharpest internal challenge to a given evaluative point.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL17919734W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 37,
+    "citation": "Kuhn, Thomas S. 1962. *The Structure of Scientific Revolutions*. University of Chicago Press. (Incommensurable paradigms; the structural ancestor of the third horn.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL3259254W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 38,
+    "citation": "Lewis, David. 1976. \"Survival and Identity.\" In Amelie Oksenberg Rorty, ed., *The Identities of Persons*. University of California Press.",
+    "status": "verified",
+    "url": "https://doi.org/10.1525/9780520353060-002",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1525/9780520353060-002"
+  },
+  {
+    "n": 39,
+    "citation": "Lonergan, Bernard J. F. 1972. *Method in Theology*. Herder and Herder. (Intellectual, moral, and religious conversion as a shift of horizon; the closest theological account to what this paper formalizes.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL2277873W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 40,
+    "citation": "MacIntyre, Alasdair. 1988. *Whose Justice? Which Rationality?* University of Notre Dame Press. (Tradition-constituted rationality; the incommensurability horn, with the qualification that cross-tradition rational comparison is sometimes possible.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL14849412W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 41,
+    "citation": "Omohundro, Stephen M. 2008. \"The Basic AI Drives.\" In *Proceedings of the First AGI Conference*, IOS Press: 483-492. (Goal-content integrity as an instrumentally convergent drive: the first horn, derived independently.)",
+    "status": "verified",
+    "url": "https://dl.acm.org/doi/10.5555/1566174.1566226",
+    "checked_against": "manual",
+    "automated_pass": "PARTIAL",
+    "manual_review": "Proceedings of the First AGI Conference (Frontiers in AI and Applications 171), IOS Press 2008, pp. 483-492, confirmed; Crossref indexes only the 2018 reprint."
+  },
+  {
+    "n": 42,
+    "citation": "Paul, L. A. 2014. *Transformative Experience*. Oxford University Press. (Epistemically and personally transformative experience; the epistemic obstacle this paper's structural obstacle survives.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL20492504W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 43,
+    "citation": "Pettigrew, Richard. 2020. *Choosing for Changing Selves*. Oxford University Press. (The Aggregate Utility Solution: each self acts on a weighted average of the values of all selves; §7.8.3 reads it as the best worked-out instance of reabsorption.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL21661144W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 44,
+    "citation": "Bhatia, Harsh, et al. 2013. \"The Helmholtz–Hodge Decomposition — A Survey.\" *IEEE Transactions on Visualization and Computer Graphics* 19(8): 1386-1404. (Helmholtz–Hodge decomposition of vector fields; uniqueness and boundary conditions on bounded domains.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1109/tvcg.2012.316",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1109/tvcg.2012.316"
+  },
+  {
+    "n": 45,
+    "citation": "Conley, Charles. 1978. *Isolated Invariant Sets and the Morse Index*. CBMS Regional Conference Series in Mathematics 38. American Mathematical Society, Providence, RI. (The Fundamental Theorem of Dynamical Systems: every flow on a compact metric space admits a complete Lyapunov function, decreasing off the chain-recurrent set and constant on its transitive components — the gradient-like/chain-recurrent dichotomy.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL16955631W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 46,
+    "citation": "Glötzl, Erhard, and Oliver Richters. 2023. \"Helmholtz Decomposition and Potential Functions for n-Dimensional Analytic Vector Fields.\" *Journal of Mathematical Analysis and Applications* 525(2): 127138. (Existence and structure of the gradient/divergence-free/harmonic parts in $\\mathbb{R}^n$.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/j.jmaa.2023.127138",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1016/j.jmaa.2023.127138"
+  },
+  {
+    "n": 47,
+    "citation": "Russell, Stuart. 2019. *Human Compatible: Artificial Intelligence and the Problem of Control*. Viking. (Value learning and the assistance framing of alignment.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL20492448W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 48,
+    "citation": "Soares, Nate, Benja Fallenstein, Eliezer Yudkowsky, and Stuart Armstrong. 2015. \"Corrigibility.\" In *AAAI Workshop on AI and Ethics*: 74-82. (The corrigibility problem; §7.8.5 gives the trilemma's structural prediction about its solution space.)",
+    "status": "verified",
+    "url": "https://intelligence.org/files/Corrigibility.pdf",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Workshops at the Twenty-Ninth AAAI Conference (AI and Ethics), 2015, pp. 74-82, confirmed."
+  },
+  {
+    "n": 49,
+    "citation": "Nayebi, Aran. 2025. \"Core Safety Values for Provably Corrigible Agents.\" arXiv:2507.20964. To appear in the AAAI 2026 Machine Ethics Workshop proceedings. (Deciding whether an arbitrarily modified agent ever violates corrigibility is undecidable by reduction to the halting problem; §2.1 and §7.8.6 place this neighbouring limitative result and distinguish its object — a predicate over programs — from the trilemma's dynamical claim.)",
+    "status": "verified-corrected",
+    "url": "https://arxiv.org/abs/2507.20964",
+    "checked_against": "arxiv",
+    "automated_pass": "MATCH",
+    "manual_review": "arXiv abstract confirms the undecidability-by-halting-reduction result the annotation describes.",
+    "correction": "Added the venue given on arXiv: to appear in the AAAI 2026 Machine Ethics Workshop proceedings."
+  },
+  {
+    "n": 50,
+    "citation": "Wang, Charles L., Keir Dorchen, and Peter Jin. 2025. \"On the Statistical Limits of Self-Improving Agents.\" arXiv:2510.04399 (TMLR 2026). (Distribution-free PAC-learnability is preserved iff the policy-reachable family stays uniformly capacity-bounded, a VC-dimension condition; §7.8.6 contrasts this static capacity limit with the trilemma's dynamical mechanism.)",
+    "status": "verified",
+    "url": "https://arxiv.org/abs/2510.04399",
+    "checked_against": "arxiv",
+    "automated_pass": "MATCH",
+    "manual_review": "arXiv journal reference confirms publication in TMLR 2026, and the abstract confirms the capacity-bounded PAC-learnability result the annotation describes."
+  },
+  {
+    "n": 51,
+    "citation": "Strogatz, Steven H. 2015. *Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering*. 2nd ed. Westview Press. (Limit cycles, strange attractors, and Lyapunov exponents.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL3907581W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 52,
+    "citation": "Stump, Eleonore. 2010. *Wandering in Darkness: Narrative and the Problem of Suffering*. Oxford University Press. (Quiescence of the will: a candidate mechanism for the receptivity gate that is neither an endogenous act nor an imposed state.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL21041053W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 53,
+    "citation": "Taylor, Charles. 1976. \"Responsibility for Self.\" In Amelie Oksenberg Rorty, ed., *The Identities of Persons*. University of California Press. (Radical reevaluation: the first horn, stated in prose four decades early.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1525/9780520353060-013",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1525/9780520353060-013"
+  },
+  {
+    "n": 54,
+    "citation": "Taylor, Charles. 1985. \"What Is Human Agency?\" In *Human Agency and Language: Philosophical Papers 1*. Cambridge University Press. (Strong evaluation.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1017/cbo9781139173483.002",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1017/cbo9781139173483.002"
+  },
+  {
+    "n": 55,
+    "citation": "Council of Trent. 1547. *Decree on Justification*, Session VI. In Norman P. Tanner, ed., *Decrees of the Ecumenical Councils*, vol. 2. Sheed and Ward / Georgetown University Press, 1990. (The canons on justification; the Catholic pole of the monergism/synergism axis §10 concedes it is partisan about.)",
+    "status": "verified",
+    "url": "https://press.georgetown.edu/Book/Decrees-of-the-Ecumenical-Councils-Volume-2",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Tanner (ed.), Decrees of the Ecumenical Councils, vol. 2, Sheed & Ward / Georgetown University Press 1990, confirmed; Session VI (13 January 1547)."
+  },
+  {
+    "n": 56,
+    "citation": "Lehman, Joel, and Stanley, Kenneth O. 2011. \"Abandoning Objectives: Evolution Through the Search for Novelty Alone.\" *Evolutionary Computation* 19(2): 189-223. DOI: 10.1162/EVCO_a_00025.",
+    "status": "verified",
+    "url": "https://doi.org/10.1162/evco_a_00025",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1162/evco_a_00025"
+  },
+  {
+    "n": 57,
+    "citation": "Liberzon, Daniel. 2003. *Switching in Systems and Control*. Birkhäuser.",
+    "status": "verified",
+    "url": "https://link.springer.com/book/10.1007/978-1-4612-0017-8",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH",
+    "manual_review": "Birkhäuser 2003, Systems & Control: Foundations & Applications, confirmed."
+  },
+  {
+    "n": 58,
+    "citation": "Maximus the Confessor. *On Difficulties in the Church Fathers: The Ambigua*. Ed. and trans. Nicholas Constas. 2 vols. Harvard University Press, 2014.",
+    "status": "verified",
+    "url": "https://www.hup.harvard.edu/books/9780674726666",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Dumbarton Oaks Medieval Library 28-29, Harvard University Press 2014, ed. and trans. Constas, confirmed."
+  },
+  {
+    "n": 59,
+    "citation": "Metzinger, Thomas. 2003. *Being No One: The Self-Model Theory of Subjectivity*. MIT Press.",
+    "status": "verified",
+    "url": "https://direct.mit.edu/books/monograph/1991/Being-No-OneThe-Self-Model-Theory-of-Subjectivity",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "MIT Press 2003, confirmed."
+  },
+  {
+    "n": 60,
+    "citation": "Olson, Eric T. 1997. *The Human Animal: Personal Identity Without Psychology*. Oxford University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL3243269W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 61,
+    "citation": "Palamas, Gregory. *The Triads*. Ed. John Meyendorff, trans. Nicholas Gendle. Paulist Press, 1983.",
+    "status": "verified",
+    "url": "https://openlibrary.org/isbn/9780809124473",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH",
+    "manual_review": "Classics of Western Spirituality, Paulist Press 1983, ed. Meyendorff, trans. Gendle, confirmed."
+  },
+  {
+    "n": 62,
+    "citation": "Parfit, Derek. 1984. *Reasons and Persons*. Oxford University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL3153829W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 63,
+    "citation": "Poincaré, Henri. 1890. \"Sur le problème des trois corps et les équations de la dynamique.\" *Acta Mathematica* 13: 1-270. (Poincaré recurrence theorem.)",
+    "status": "verified",
+    "url": "https://projecteuclid.org/journals/acta-mathematica/volume-13/issue-1-2",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Acta Mathematica 13: 1-270 (1890), confirmed; published in chapters, each with its own DOI (preface 10.1007/BF02392505)."
+  },
+  {
+    "n": 64,
+    "citation": "Pseudo-Dionysius. *The Divine Names*. In *Pseudo-Dionysius: The Complete Works*. Trans. Colm Luibheid. Paulist Press, 1987.",
+    "status": "verified",
+    "url": "https://openlibrary.org/isbn/9780809128389",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH",
+    "manual_review": "Pseudo-Dionysius: The Complete Works, trans. Luibheid, Paulist Press 1987, confirmed."
+  },
+  {
+    "n": 65,
+    "citation": "Ricoeur, Paul. 1992. *Oneself as Another*. University of Chicago Press.",
+    "status": "verified",
+    "url": "https://press.uchicago.edu/ucp/books/book/chicago/O/bo3647498.html",
+    "checked_against": "manual",
+    "automated_pass": "PARTIAL",
+    "manual_review": "University of Chicago Press 1992, trans. Blamey, confirmed."
+  },
+  {
+    "n": 66,
+    "citation": "Schechtman, Marya. 1996. *The Constitution of Selves*. Cornell University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL3265573W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 67,
+    "citation": "Schmidhuber, Jürgen. 2010. \"Formal Theory of Creativity, Fun, and Intrinsic Motivation (1990-2010).\" *IEEE Transactions on Autonomous Mental Development* 2(3): 230-247.",
+    "status": "verified",
+    "url": "https://doi.org/10.1109/tamd.2010.2056368",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1109/tamd.2010.2056368"
+  },
+  {
+    "n": 68,
+    "citation": "Shoemaker, Sydney. 1959. \"Personal Identity and Memory.\" *Journal of Philosophy* 56(22): 868-902.",
+    "status": "verified",
+    "url": "https://doi.org/10.2307/2022317",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.2307/2022317"
+  },
+  {
+    "n": 69,
+    "citation": "Singh, Satinder, Barto, Andrew G., and Chentanez, Nuttapong. 2004. \"Intrinsically Motivated Reinforcement Learning.\" *Advances in Neural Information Processing Systems* 17 (NIPS 2004): 1281-1288.",
+    "status": "verified",
+    "url": "https://papers.nips.cc/paper/2552-intrinsically-motivated-reinforcement-learning",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "manual_review": "NIPS 17 (2004), confirmed on the proceedings site."
+  },
+  {
+    "n": 70,
+    "citation": "Sider, Theodore. 2001. *Four-Dimensionalism: An Ontology of Persistence and Time*. Oxford University Press.",
+    "status": "verified",
+    "url": "https://academic.oup.com/book/9493",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Oxford University Press 2001, confirmed."
+  },
+  {
+    "n": 71,
+    "citation": "Skoulakis, Stratis, Tanner Fiez, Ryann Sim, Georgios Piliouras, and Lillian Ratliff. 2021. \"Evolutionary Game Theory Squared: Evolving Agents in Endogenously Evolving Zero-Sum Games.\" *Proceedings of the AAAI Conference on Artificial Intelligence* 35: 11343-11351. arXiv:2012.08382. (When agents and the game they play co-evolve endogenously, the coupled replicator dynamics is Poincaré recurrent.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1609/aaai.v35i13.17352",
+    "checked_against": "arxiv",
+    "automated_pass": "MATCH",
+    "manual_review": "AAAI 35(13): 11343-11351, confirmed in Crossref; arXiv:2012.08382 is the 2020 preprint."
+  },
+  {
+    "n": 72,
+    "citation": "Sutton, Richard S., and Barto, Andrew G. 2018. *Reinforcement Learning: An Introduction*. 2nd ed. MIT Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL19899345W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 73,
+    "citation": "Waddington, Conrad H. 1957. *The Strategy of the Genes*. George Allen & Unwin.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL1332899W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 74,
+    "citation": "Walters, Peter. 1982. *An Introduction to Ergodic Theory*. Springer.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL6442275W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 75,
+    "citation": "Wiener, Norbert. 1948. *Cybernetics: Or Control and Communication in the Animal and the Machine*. Technology Press and John Wiley & Sons (New York); Hermann (Paris).",
+    "status": "verified-corrected",
+    "url": "https://openlibrary.org/works/OL4307531W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH",
+    "manual_review": "1948 first edition confirmed.",
+    "correction": "Publisher corrected from 'MIT Press' (a name the press took only in 1962) to the 1948 publishers: Technology Press and John Wiley & Sons (New York); Hermann (Paris)."
+  },
+  {
+    "n": 76,
+    "citation": "Wiggins, David. 2001. *Sameness and Substance Renewed*. Cambridge University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL2271283W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 77,
+    "citation": "Williams, Bernard. 1970. \"The Self and the Future.\" *The Philosophical Review* 79(2): 161-180.",
+    "status": "verified",
+    "url": "https://doi.org/10.2307/2183946",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.2307/2183946"
+  }
+]

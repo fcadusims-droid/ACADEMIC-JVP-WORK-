@@ -48,6 +48,9 @@ and are recorded rather than hidden in [`METHODOLOGY.md`](https://github.com/fca
   channel** included in the data, and rested on 4 people counted as 7;
 - a paper sentence claimed an experiment had **"confirmed directly"** a mechanism that no
   experiment in the repository ever tested;
+- a phrase was put in **quotation marks as an author's own words** when it came from someone
+  else's endorsement of her book (found by a one-by-one audit of all 144 citations, which found
+  no fabricated reference but corrected five);
 - the work was described as **ready for submission** when it was not;
 - a local network fault in the AI's own sandbox was misreported as an outage of a public
   data server.
