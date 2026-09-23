@@ -52,11 +52,15 @@ depends on it. If you can help with any item, please open an issue on the
   network model in which the rotation is emergent rather than injected. It waits on the
   partnership decision above. If Paper 2 is reduced, Test Two may leave the protocol altogether.
 
-## Paper 3 — *Geodesic Kinematics on the Covariance Manifold*
+## Paper 3 — *Five Ways an EEG Geometry Method Looked Validated and Was Not*
 
-- **A reader in EEG or brain–computer-interface methods.** Paper 3 is being restructured as a
-  methodological negative: five ways an EEG geometry method looked validated and was not (centre
-  bias, a null that ignores dependence, pseudo-replication, ocular contamination, and confusion
-  between recordings). The claim that these are traps of the *field*, not only of this method,
-  rests on a control run on the field's standard pipeline and on a survey of published studies.
-  A specialist is the right person to check both.
+- **A reader in EEG or brain–computer-interface methods.** Paper 3 is the record of five traps:
+  centre bias, dependence-blind nulls, pseudo-replication, ocular contamination and confusion
+  between recordings. For each it gives the control that exposed it, a check of the field's
+  standard Riemannian pipeline, and a survey of published studies. A specialist is the right
+  person to judge whether the standard-pipeline control and the survey are fair.
+- **A second, independent coder for the literature survey.** The 20 studies were coded by one
+  coder. Every code is committed with the quoted sentence that supports it
+  (`experiments/_results/trap_literature_survey/result.json`), so a second coder can re-code
+  them without re-reading the papers from scratch. Agreement between two coders would make the
+  counts citable.

@@ -68,16 +68,14 @@ PAPERS = [
     },
     {
         "n": 3, "src": "Paper3.md", "slug": "paper-3",
-        "short": "Geodesic Kinematics on the Covariance Manifold",
-        "sub": "A Proposed Single-Trajectory Protocol for Regime Change, with Its "
-               "Benchmarks and Failure Modes",
-        "blurb": "A proposed single-trajectory method for deciding whether dynamics "
-                 "after an abrupt transition is directed drift, undirected diffusion, or "
-                 "structural collapse. The three-regime demarcation it is named for has "
-                 "not yet been run end-to-end; what has been tested is its trace-normalised "
-                 "SPD base, not yet shown on real data to do more than scalar "
-                 "baselines. Reported with its benchmarks and failure modes. Independent "
-                 "of its two companions.",
+        "short": "Five Ways an EEG Geometry Method Looked Validated and Was Not",
+        "sub": "A Pre-Registered Record, with Controls on the Field's Standard Pipeline "
+               "and a Survey of Published Practice",
+        "blurb": "A methodological negative: five traps (centre bias, dependence-blind "
+                 "nulls, pseudo-replication, ocular contamination, recording confound), "
+                 "each with the control that exposed it, a check of the field's standard "
+                 "Riemannian pipeline, and a survey of published studies. Independent of "
+                 "its two companions.",
         "content": "paper3.md", "dir": "paper3_geodesic_kinematics",
     },
 ]

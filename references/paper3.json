@@ -1,7 +1,7 @@
 [
   {
     "n": 1,
-    "citation": "Adams, Ryan P., and MacKay, David J. C. 2007. \"Bayesian Online Changepoint Detection.\" arXiv:0710.3742. (The standard Bayesian online change-point method; a baseline in the appendix benchmark.)",
+    "citation": "Adams, Ryan P., and MacKay, David J. C. 2007. \"Bayesian Online Changepoint Detection.\" arXiv:0710.3742. (The standard Bayesian online change-point method; a baseline in the benchmark.)",
     "status": "verified",
     "url": "https://arxiv.org/abs/0710.3742",
     "checked_against": "arxiv",
@@ -9,24 +9,6 @@
   },
   {
     "n": 2,
-    "citation": "Allen, Elena A., Damaraju, Eswar, Plis, Sergey M., Erhardt, Erik B., Eichele, Tom, and Calhoun, Vince D. 2014. \"Tracking Whole-Brain Connectivity Dynamics in the Resting State.\" *Cerebral Cortex* 24(3): 663-676. (Sliding-window connectivity plus clustering.)",
-    "status": "verified",
-    "url": "https://doi.org/10.1093/cercor/bhs352",
-    "checked_against": "crossref",
-    "automated_pass": "MATCH",
-    "doi": "10.1093/cercor/bhs352"
-  },
-  {
-    "n": 3,
-    "citation": "Baker, Adam P., Brookes, Matthew J., Rezek, Iead A., Smith, Stephen M., Behrens, Timothy, Probert Smith, Penny J., and Woolrich, Mark. 2014. \"Fast Transient Networks in Spontaneous Human Brain Activity.\" *eLife* 3: e01867. (HMM over neural covariance; the field-standard brain-state model.)",
-    "status": "verified",
-    "url": "https://doi.org/10.7554/elife.01867",
-    "checked_against": "crossref",
-    "automated_pass": "MATCH",
-    "doi": "10.7554/elife.01867"
-  },
-  {
-    "n": 4,
     "citation": "Barachant, Alexandre, Bonnet, Stephane, Congedo, Marco, and Jutten, Christian. 2012. \"Multiclass Brain-Computer Interface Classification by Riemannian Geometry.\" *IEEE Transactions on Biomedical Engineering* 59(4): 920-928.",
     "status": "verified",
     "url": "https://doi.org/10.1109/tbme.2011.2172210",
@@ -35,7 +17,7 @@
     "doi": "10.1109/tbme.2011.2172210"
   },
   {
-    "n": 5,
+    "n": 3,
     "citation": "Barachant, Alexandre, Bonnet, Stephane, Congedo, Marco, and Jutten, Christian. 2013. \"Classification of Covariance Matrices Using a Riemannian-Based Kernel for BCI Applications.\" *Neurocomputing* 112: 172-178.",
     "status": "verified",
     "url": "https://doi.org/10.1016/j.neucom.2012.12.039",
@@ -44,69 +26,17 @@
     "doi": "10.1016/j.neucom.2012.12.039"
   },
   {
-    "n": 6,
-    "citation": "Congedo, Marco, Barachant, Alexandre, and Bhatia, Rajendra. 2017. \"Riemannian Geometry for EEG-Based Brain-Computer Interfaces: A Primer and a Review.\" *Brain-Computer Interfaces* 4(3): 155-174. (The decade of Riemannian covariance analysis this protocol must be positioned against: classification between known labelled classes, as against single-trajectory demarcation.)",
+    "n": 4,
+    "citation": "Barachant, Alexandre, Quentin Barthélemy, et al. \"pyRiemann.\" Software, version 0.12. Zenodo. DOI: 10.5281/zenodo.593816.",
     "status": "verified",
-    "url": "https://doi.org/10.1080/2326263x.2017.1297192",
-    "checked_against": "crossref",
-    "automated_pass": "MATCH",
-    "doi": "10.1080/2326263x.2017.1297192"
+    "url": "https://doi.org/10.5281/zenodo.593816",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "doi": "10.5281/zenodo.593816",
+    "manual_review": "pyRiemann software, Zenodo concept DOI 10.5281/zenodo.593816 confirmed on Zenodo (creators Barachant, Barthelemy, et al.); version 0.12 used in mdm_trap_control."
   },
   {
-    "n": 7,
-    "citation": "Schalk, Gerwin, McFarland, Dennis J., Hinterberger, Thilo, Birbaumer, Niels, and Wolpaw, Jonathan R. 2004. \"BCI2000: A General-Purpose Brain-Computer Interface (BCI) System.\" *IEEE Transactions on Biomedical Engineering* 51(6): 1034-1043. (The EEG Motor Movement/Imagery database used for the feasibility probe and for the held-out validation of the detection statistic.)",
-    "status": "verified",
-    "url": "https://doi.org/10.1109/tbme.2004.827072",
-    "checked_against": "crossref",
-    "automated_pass": "MATCH",
-    "doi": "10.1109/tbme.2004.827072"
-  },
-  {
-    "n": 8,
-    "citation": "Truong, Charles, Oudre, Laurent, and Vayatis, Nicolas. 2020. \"Selective Review of Offline Change Point Detection Methods.\" *Signal Processing* 167: 107299. (The `ruptures` library: PELT, binary segmentation, windowed methods.)",
-    "status": "verified",
-    "url": "https://doi.org/10.1016/j.sigpro.2019.107299",
-    "checked_against": "crossref",
-    "automated_pass": "MATCH",
-    "doi": "10.1016/j.sigpro.2019.107299"
-  },
-  {
-    "n": 9,
-    "citation": "Vidaurre, Diego, Abeysuriya, Romesh, Becker, Robert, Quinn, Andrew J., Alfaro-Almagro, Fidel, Smith, Stephen M., and Woolrich, Mark W. 2018. \"Discovering Dynamic Brain Networks from Big Data in Rest and Task.\" *NeuroImage* 180: 646-656. (HMM-based brain-state inference.)",
-    "status": "verified",
-    "url": "https://doi.org/10.1016/j.neuroimage.2017.06.077",
-    "checked_against": "crossref",
-    "automated_pass": "MATCH",
-    "doi": "10.1016/j.neuroimage.2017.06.077"
-  },
-  {
-    "n": 10,
-    "citation": "Amari, Shun-ichi. 2016. *Information Geometry and Its Applications*. Springer.",
-    "status": "verified",
-    "url": "https://openlibrary.org/works/OL20802021W",
-    "checked_against": "openlibrary",
-    "automated_pass": "MATCH"
-  },
-  {
-    "n": 11,
-    "citation": "Barndorff-Nielsen, Ole E., and Shephard, Neil. 2001. \"Non-Gaussian Ornstein–Uhlenbeck-Based Models and Some of Their Uses in Financial Economics.\" *Journal of the Royal Statistical Society: Series B* 63(2): 167-241.",
-    "status": "verified",
-    "url": "https://doi.org/10.1111/1467-9868.00282",
-    "checked_against": "crossref",
-    "automated_pass": "MATCH",
-    "doi": "10.1111/1467-9868.00282"
-  },
-  {
-    "n": 12,
-    "citation": "Barndorff-Nielsen, Ole E., and Shephard, Neil. 2004. \"Power and Bipower Variation with Stochastic Volatility and Jumps.\" *Journal of Financial Econometrics* 2(1): 1-37. DOI: 10.1093/jjfinec/nbh001.",
-    "status": "verified",
-    "url": "https://doi.org/10.1093/jjfinec/nbh001",
-    "checked_against": "crossref",
-    "automated_pass": "MATCH",
-    "doi": "10.1093/jjfinec/nbh001"
-  },
-  {
-    "n": 13,
+    "n": 5,
     "citation": "Bhatia, Rajendra. 2007. *Positive Definite Matrices*. Princeton University Press.",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL20315832W",
@@ -114,78 +44,62 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 14,
-    "citation": "Canolty, Ryan T., and Knight, Robert T. 2010. \"The Functional Role of Cross-Frequency Coupling.\" *Trends in Cognitive Sciences* 14(11): 506-515.",
+    "n": 6,
+    "citation": "Chen, Yilun, Ami Wiesel, Yonina C. Eldar, and Alfred O. Hero. 2010. \"Shrinkage Algorithms for MMSE Covariance Estimation.\" *IEEE Transactions on Signal Processing* 58(10): 5016-5029. DOI: 10.1109/TSP.2010.2053029.",
     "status": "verified",
-    "url": "https://doi.org/10.1016/j.tics.2010.09.001",
+    "url": "https://doi.org/10.1109/tsp.2010.2053029",
     "checked_against": "crossref",
     "automated_pass": "MATCH",
-    "doi": "10.1016/j.tics.2010.09.001"
+    "doi": "10.1109/tsp.2010.2053029"
   },
   {
-    "n": 15,
-    "citation": "Cont, Rama, and Tankov, Peter. 2004. *Financial Modelling with Jump Processes*. Chapman & Hall/CRC.",
+    "n": 7,
+    "citation": "Congedo, Marco, Barachant, Alexandre, and Bhatia, Rajendra. 2017. \"Riemannian Geometry for EEG-Based Brain-Computer Interfaces: A Primer and a Review.\" *Brain-Computer Interfaces* 4(3): 155-174.",
     "status": "verified",
-    "url": "https://openlibrary.org/works/OL8948534W",
-    "checked_against": "openlibrary",
-    "automated_pass": "MATCH"
-  },
-  {
-    "n": 16,
-    "citation": "Crutchfield, James P., and Young, Karl. 1989. \"Inferring Statistical Complexity.\" *Physical Review Letters* 63(2): 105-108.",
-    "status": "verified",
-    "url": "https://doi.org/10.1103/physrevlett.63.105",
+    "url": "https://doi.org/10.1080/2326263x.2017.1297192",
     "checked_against": "crossref",
     "automated_pass": "MATCH",
-    "doi": "10.1103/physrevlett.63.105"
+    "doi": "10.1080/2326263x.2017.1297192"
   },
   {
-    "n": 17,
-    "citation": "Girsanov, Igor V. 1960. \"On Transforming a Certain Class of Stochastic Processes by Absolutely Continuous Substitution of Measures.\" *Theory of Probability and Its Applications* 5(3): 285-301.",
+    "n": 8,
+    "citation": "Goldberger, Ary L., Luis A. N. Amaral, Leon Glass, Jeffrey M. Hausdorff, Plamen Ch. Ivanov, Roger G. Mark, et al. 2000. \"PhysioBank, PhysioToolkit, and PhysioNet: Components of a New Research Resource for Complex Physiologic Signals.\" *Circulation* 101(23): e215-e220. DOI: 10.1161/01.CIR.101.23.e215.",
     "status": "verified",
-    "url": "https://doi.org/10.1137/1105027",
-    "checked_against": "crossref",
-    "automated_pass": "MATCH",
-    "doi": "10.1137/1105027"
-  },
-  {
-    "n": 18,
-    "citation": "Grassberger, Peter. 1986. \"Toward a Quantitative Theory of Self-Generated Complexity.\" *International Journal of Theoretical Physics* 25(9): 907-938. DOI: 10.1007/BF00668821.",
-    "status": "verified",
-    "url": "https://doi.org/10.1007/bf00668821",
-    "checked_against": "crossref",
-    "automated_pass": "MATCH",
-    "doi": "10.1007/bf00668821"
-  },
-  {
-    "n": 19,
-    "citation": "Hsu, Elton P. 2002. *Stochastic Analysis on Manifolds*. Graduate Studies in Mathematics 38. American Mathematical Society.",
-    "status": "verified",
-    "url": "https://bookstore.ams.org/gsm-38",
+    "url": "https://doi.org/10.1161/01.cir.101.23.e215",
     "checked_against": "manual",
     "automated_pass": "NOMATCH",
-    "manual_review": "Graduate Studies in Mathematics 38, American Mathematical Society 2002, confirmed."
+    "doi": "10.1161/01.cir.101.23.e215",
+    "manual_review": "Circulation 101(23): e215-e220, confirmed in Crossref (Crossref lists the title without its subtitle)."
   },
   {
-    "n": 20,
-    "citation": "Ledoit, Olivier, and Wolf, Michael. 2004. \"A Well-Conditioned Estimator for Large-Dimensional Covariance Matrices.\" *Journal of Multivariate Analysis* 88(2): 365-411.",
+    "n": 9,
+    "citation": "Hurlbert, Stuart H. 1984. \"Pseudoreplication and the Design of Ecological Field Experiments.\" *Ecological Monographs* 54(2): 187-211. DOI: 10.2307/1942661.",
     "status": "verified",
-    "url": "https://doi.org/10.1016/s0047-259x(03)00096-4",
+    "url": "https://doi.org/10.2307/1942661",
     "checked_against": "crossref",
     "automated_pass": "MATCH",
-    "doi": "10.1016/s0047-259x(03)00096-4"
+    "doi": "10.2307/1942661"
   },
   {
-    "n": 21,
-    "citation": "Mancini, Cecilia. 2009. \"Non-Parametric Threshold Estimation for Models with Stochastic Diffusion Coefficient and Jumps.\" *Scandinavian Journal of Statistics* 36(2): 270-296.",
+    "n": 10,
+    "citation": "Kemp, Bob, Aeilko H. Zwinderman, Bert Tuk, Hilbert A. C. Kamphuisen, and Josefien J. L. Oberye. 2000. \"Analysis of a Sleep-Dependent Neuronal Feedback Loop: The Slow-Wave Microcontinuity of the EEG.\" *IEEE Transactions on Biomedical Engineering* 47(9): 1185-1194. DOI: 10.1109/10.867928. (The Sleep-EDF data.)",
     "status": "verified",
-    "url": "https://doi.org/10.1111/j.1467-9469.2008.00622.x",
+    "url": "https://doi.org/10.1109/10.867928",
     "checked_against": "crossref",
     "automated_pass": "MATCH",
-    "doi": "10.1111/j.1467-9469.2008.00622.x"
+    "doi": "10.1109/10.867928"
   },
   {
-    "n": 22,
+    "n": 11,
+    "citation": "Lemm, Steven, Benjamin Blankertz, Thorsten Dickhaus, and Klaus-Robert Müller. 2011. \"Introduction to Machine Learning for Brain Imaging.\" *NeuroImage* 56(2): 387-399. DOI: 10.1016/j.neuroimage.2010.11.004.",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/j.neuroimage.2010.11.004",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1016/j.neuroimage.2010.11.004"
+  },
+  {
+    "n": 12,
     "citation": "Pennec, Xavier, Fillard, Pierre, and Ayache, Nicholas. 2006. \"A Riemannian Framework for Tensor Computing.\" *International Journal of Computer Vision* 66(1): 41-66.",
     "status": "verified",
     "url": "https://doi.org/10.1007/s11263-005-3222-z",
@@ -194,21 +108,39 @@
     "doi": "10.1007/s11263-005-3222-z"
   },
   {
-    "n": 23,
-    "citation": "Sasaki, Shigeo. 1958. \"On the Differential Geometry of Tangent Bundles of Riemannian Manifolds.\" *Tôhoku Mathematical Journal* 10(3): 338-354.",
+    "n": 13,
+    "citation": "Schalk, Gerwin, McFarland, Dennis J., Hinterberger, Thilo, Birbaumer, Niels, and Wolpaw, Jonathan R. 2004. \"BCI2000: A General-Purpose Brain-Computer Interface (BCI) System.\" *IEEE Transactions on Biomedical Engineering* 51(6): 1034-1043. (The EEG Motor Movement/Imagery database.)",
     "status": "verified",
-    "url": "https://doi.org/10.2748/tmj/1178244668",
+    "url": "https://doi.org/10.1109/tbme.2004.827072",
     "checked_against": "crossref",
     "automated_pass": "MATCH",
-    "doi": "10.2748/tmj/1178244668"
+    "doi": "10.1109/tbme.2004.827072"
   },
   {
-    "n": 24,
-    "citation": "Tort, Adriano B. L., Komorowski, Robert, Eichenbaum, Howard, and Kopell, Nancy. 2010. \"Measuring Phase-Amplitude Coupling Between Neuronal Oscillations of Different Frequencies.\" *Journal of Neurophysiology* 104(2): 1195-1210.",
+    "n": 14,
+    "citation": "Schroeder, Felix, Stephen Fairclough, Frederic Dehais, and Matthew Richins. 2025. \"The Impact of Cross-Validation Choices on pBCI Classification Metrics: Lessons for Transparent Reporting.\" *Frontiers in Neuroergonomics* 6: 1582724. DOI: 10.3389/fnrgo.2025.1582724.",
     "status": "verified",
-    "url": "https://doi.org/10.1152/jn.00106.2010",
+    "url": "https://doi.org/10.3389/fnrgo.2025.1582724",
     "checked_against": "crossref",
     "automated_pass": "MATCH",
-    "doi": "10.1152/jn.00106.2010"
+    "doi": "10.3389/fnrgo.2025.1582724"
+  },
+  {
+    "n": 15,
+    "citation": "Truong, Charles, Oudre, Laurent, and Vayatis, Nicolas. 2020. \"Selective Review of Offline Change Point Detection Methods.\" *Signal Processing* 167: 107299. (The `ruptures` library: PELT, binary segmentation, windowed methods.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/j.sigpro.2019.107299",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1016/j.sigpro.2019.107299"
+  },
+  {
+    "n": 16,
+    "citation": "Varoquaux, Gaël, Pradeep Reddy Raamana, Denis A. Engemann, Andrés Hoyos-Idrobo, Yannick Schwartz, and Bertrand Thirion. 2017. \"Assessing and Tuning Brain Decoders: Cross-Validation, Caveats, and Guidelines.\" *NeuroImage* 145: 166-179. DOI: 10.1016/j.neuroimage.2016.10.038.",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/j.neuroimage.2016.10.038",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1016/j.neuroimage.2016.10.038"
   }
 ]

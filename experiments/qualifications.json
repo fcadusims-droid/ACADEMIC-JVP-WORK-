@@ -1,10 +1,10 @@
 [
   {
-    "id": "P3 structural discrimination carries its non-replication qualification",
+    "id": "P3 eyes-open/closed result carries its between-recording qualification",
     "paper": "Paper3.md",
     "claim": "in \\$12\\$ of \\$15\\$ subjects \\(median ratio",
-    "requires": "post-hoc",
-    "why": "the PRE-REGISTERED natural-power arm did not replicate; the clean pure-amplitude control that is silent was added post-hoc and is paradigm-specific. Quoting 14/15 without that is the site-vs-abstract divergence this gate exists to prevent."
+    "requires": "two recordings|separate recordings|between-recording|separate runs",
+    "why": "between_recording_control: the ratio compares two separate recordings against within-recording drift; it must not be quoted without that."
   },
   {
     "id": "P3 localization 10/15 is not sold as an advantage",
@@ -37,9 +37,9 @@
   {
     "id": "P3 bundle apparatus carries its ablation result",
     "paper": "Paper3.md",
-    "claim": "Sasaki-type metric of Section 3.3",
-    "requires": "no material gain",
-    "why": "the pre-registered fibre ablation found no material gain over the trace-normalized SPD base on the worked paradigm; the construction may not be presented as validated."
+    "claim": "vector bundle",
+    "requires": "net negative|never shown to work|not tested here",
+    "why": "fibre_ablation found the bundle net negative; it must not be presented as working."
   },
   {
     "id": "P3 localization counts carry the centring caveat",

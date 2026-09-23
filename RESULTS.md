@@ -1,4 +1,4 @@
-# Results — What the 52 Experiments Found
+# Results — What the 54 Experiments Found
 
 A reader-facing synthesis of the validation suite. Every number here is read from a
 committed `result.json`; `experiments/STATUS.md` is the authoritative per-experiment
@@ -163,7 +163,9 @@ diffusion length. *(`metabolic_null_resolution`)*
 
 ---
 
-## Paper 3 — Geodesic Kinematics on the Covariance Manifold
+## Paper 3 — Five Ways an EEG Geometry Method Looked Validated and Was Not
+
+**Restructured as a methodological negative (2026-09-23).** Two pre-registered analyses decided the framing. (1) `mdm_trap_control` put the field's standard pipeline (covariance → MDM, pyRiemann) through the four traps that apply to classification. **None applied** at its pre-registered bar: accuracy dropped by 0.007 without EOG; two same-state recordings were told apart at 0.65 (bar 0.70; eyes open vs closed 0.87); the subject-leakage gap was 0.001; shuffled minus blocked CV was 0.009. By the pre-registered rule, these are traps of *this method*. (2) `trap_literature_survey` coded 20 published covariance/Riemannian EEG studies. Ocular handling was left open in 7/19 (8 unclear), dependence-blind validation in 4/19 (8 unclear), the recording confound in 1/17 and pseudo-replication in 0/9, and one study measured the dependence trap for the standard classifier at up to 12.7 %. The paper is now the record of the five traps. The sections below are the history of how each was found.
 
 **The titular claim is not externally falsifiable as currently defined — the sharpest
 finding in the suite.** A Phase-0 gate, pre-registered before any corpus was inspected and

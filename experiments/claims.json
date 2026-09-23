@@ -5,7 +5,7 @@
     "path": "variants.a_scale_normalised.detection_auc",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "lifts detection to AUC \\$\\\\mathbf\\{([0-9.]+)\\}\\$"
+      "Paper3.md": "lifted detection to AUC \\$\\\\mathbf\\{([0-9.]+)\\}\\$"
     }
   },
   {
@@ -14,7 +14,7 @@
     "path": "baseline_auc",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "detection AUC was \\$([0-9.]+)\\$"
+      "Paper3.md": "scored AUC \\$([0-9.]+)\\$ on sleep-onset detection"
     }
   },
   {
@@ -23,7 +23,7 @@
     "path": "auc_repaired",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "reaches \\*\\*AUC \\$([0-9.]+)\\$\\*\\*"
+      "Paper3.md": "it held at AUC \\$([0-9.]+)\\$, while"
     }
   },
   {
@@ -32,7 +32,7 @@
     "path": "auc_old_statistic",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "old peak-to-median statistic scores \\$([0-9.]+)\\$"
+      "Paper3.md": "fell below chance again \\(\\$([0-9.]+)\\$\\)"
     }
   },
   {
@@ -41,7 +41,7 @@
     "path": "real_task.BinSeg[power].detection_auc",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "best baseline \\(\\$([0-9.]+)\\$\\)"
+      "Paper3.md": "against the best baseline's \\$([0-9.]+)\\$"
     }
   },
   {
@@ -50,7 +50,7 @@
     "path": "permutation.median_ratio",
     "tol": 0.05,
     "papers": {
-      "Paper3.md": "significant in 14 of 15 subjects, median \\$\\\\approx ([0-9.]+)\\$"
+      "Paper3.md": "at a median ratio of about \\$([0-9.]+)\\$"
     }
   },
   {
@@ -59,7 +59,7 @@
     "path": "worst_corner_auc.sqrt",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "strong-drift AUC from \\$([0-9.]+)\\$ to \\$0\\.96\\$"
+      "Paper3.md": "worst-corner AUC \\$([0-9.]+)\\$"
     }
   },
   {
@@ -68,7 +68,7 @@
     "path": "worst_corner_auc.log_euclidean",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "strong-drift AUC from \\$0\\.65\\$ to \\$([0-9.]+)\\$"
+      "Paper3.md": "the same corner reached AUC \\$([0-9.]+)\\$"
     }
   },
   {
@@ -96,7 +96,7 @@
     "path": "test2_localization.cusum_hits",
     "tol": 0.5,
     "papers": {
-      "Paper3.md": "sleep onset in \\$([0-9]+)/15"
+      "Paper3.md": "the geometry's \\$([0-9]+)/15\\$ in centred windows"
     }
   },
   {
@@ -105,7 +105,7 @@
     "path": "test1_discrimination.pass",
     "tol": 0.5,
     "papers": {
-      "Paper3.md": "([0-9]+)/15\\$ subjects, with median ratio"
+      "Paper3.md": "had passed in \\$([0-9]+)\\$ of \\$15\\$ recordings"
     }
   },
   {
@@ -123,7 +123,7 @@
     "path": "temporal_half.median_ratio",
     "tol": 0.05,
     "papers": {
-      "Paper3.md": "\\$12\\$ of \\$15\\$ subjects, median ratio \\$\\\\approx ([0-9.]+)\\$ \\(the larger"
+      "Paper3.md": "the median ratio is about \\$([0-9.]+)\\$, above unity"
     }
   },
   {
@@ -150,7 +150,7 @@
     "path": "offcentre_hits.manifold",
     "tol": 0,
     "papers": {
-      "Paper3.md": "\\(\\$([0-9]+)/22\\$ versus \\$10/22\\$ off-centre\\)"
+      "Paper3.md": "they tied at \\$([0-9]+)/22\\$ versus \\$10/22\\$"
     }
   },
   {
@@ -159,7 +159,7 @@
     "path": "offcentre_hits.scalar",
     "tol": 0,
     "papers": {
-      "Paper3.md": "\\(\\$10/22\\$ versus \\$([0-9]+)/22\\$ off-centre\\)"
+      "Paper3.md": "they tied at \\$10/22\\$ versus \\$([0-9]+)/22\\$"
     }
   },
   {
@@ -177,7 +177,7 @@
     "path": "C1.n_OC_gt_SS",
     "tol": 0,
     "papers": {
-      "Paper3.md": "ratio is higher in \\$([0-9]+)\\$ of \\$15\\$ subjects"
+      "Paper3.md": "exceeded that control in \\$([0-9]+)\\$ of \\$15\\$ subjects"
     }
   },
   {
@@ -195,7 +195,7 @@
     "path": "medians.S_OC",
     "tol": 0.05,
     "papers": {
-      "Paper3.md": "scalar median \\$\\\\approx ([0-9.]+)\\$, paired"
+      "Paper3.md": "far more strongly \\(median ratio \\$\\\\approx ([0-9.]+)\\$"
     }
   },
   {
@@ -213,7 +213,7 @@
     "path": "auc_OC_vs_SS",
     "tol": 0.005,
     "papers": {
-      "Paper3.md": "at AUC \\$([0-9.]+)\\$ — just above the same"
+      "Paper3.md": "same-state change of recording at AUC \\$([0-9.]+)\\$"
     }
   },
   {
@@ -222,7 +222,7 @@
     "path": "auc_SS_vs_WN",
     "tol": 0.005,
     "papers": {
-      "Paper3.md": "within-recording segments gives AUC \\$([0-9.]+)\\$"
+      "Paper3.md": "fires it at AUC \\$([0-9.]+)\\$ against"
     }
   },
   {
@@ -231,7 +231,7 @@
     "path": "primary_record_level.manifold_hits",
     "tol": 0,
     "papers": {
-      "Paper3.md": "the geodesic CUSUM localizes \\$([0-9]+)/151\\$, the scalar"
+      "Paper3.md": "The geodesic CUSUM localized \\$([0-9]+)/151\\$"
     }
   },
   {
@@ -249,7 +249,61 @@
     "path": "primary_record_level.mcnemar_p",
     "tol": 0.005,
     "papers": {
-      "Paper3.md": "\\$67/151\\$ \\(McNemar \\$p\\\\approx ([0-9.]+)\\$; subject"
+      "Paper3.md": "\\$67/151\\$ \\(McNemar \\$p\\\\approx ([0-9.]+)\\$\\)"
+    }
+  },
+  {
+    "id": "MDM control: same-state recordings accuracy",
+    "result": "mdm_trap_control",
+    "path": "T2.median_same_state_acc",
+    "tol": 0.005,
+    "papers": {
+      "Paper3.md": "reached a median balanced accuracy of \\$([0-9.]+)\\$, against"
+    }
+  },
+  {
+    "id": "MDM control: EOG drop",
+    "result": "mdm_trap_control",
+    "path": "T1.median_drop",
+    "tol": 0.0005,
+    "papers": {
+      "Paper3.md": "lowered the median subject-level accuracy by only \\$([0-9.]+)\\$"
+    }
+  },
+  {
+    "id": "MDM control: leakage gap",
+    "result": "mdm_trap_control",
+    "path": "T3.gap",
+    "tol": 0.0005,
+    "papers": {
+      "Paper3.md": "and with subjects as groups, differed by \\$([0-9.]+)\\$ in accuracy"
+    }
+  },
+  {
+    "id": "MDM control: dependence gap",
+    "result": "mdm_trap_control",
+    "path": "T4.median_shuffled_minus_blocked",
+    "tol": 0.0005,
+    "papers": {
+      "Paper3.md": "exceeded contiguous \\(blocked\\) folds by a median of only \\$([0-9.]+)\\$"
+    }
+  },
+  {
+    "id": "Survey: ocular left open",
+    "result": "trap_literature_survey",
+    "path": "summary.ocular.yes",
+    "tol": 0,
+    "papers": {
+      "Paper3.md": "Ocular handling was not reported in \\$([0-9]+)\\$ of \\$19\\$"
+    }
+  },
+  {
+    "id": "Survey: dependence left open",
+    "result": "trap_literature_survey",
+    "path": "summary.dependence.yes",
+    "tol": 0,
+    "papers": {
+      "Paper3.md": "appeared in \\$([0-9]+)\\$ of \\$19\\$"
     }
   }
 ]
