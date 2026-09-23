@@ -38,11 +38,15 @@ disagree. So a citation cannot be added or edited without being checked again.
 
 ## Result
 
+The audit covered 144 references on 2026-09-23. Paper 1 then gained four references (Ullmann-Margalit 2006, de Blanc 2011, Carroll et al. 2024 and Villiger 2024), each checked in the same way. Its theological sections, and the 22 references cited only there, then moved to `drafts/theological_companion.md` (records: `theological_companion.json`). The table shows the current state.
+
+
 | Paper | References | Verified as cited | Corrected |
 |---|---|---|---|
-| 1 | 77 | 73 | 4 |
+| 1 | 59 | 56 | 3 |
 | 2 | 43 | 42 | 1 |
 | 3 | 24 | 24 | 0 |
+| Theological companion draft | 22 | 21 | 1 |
 
 **No cited work was found to be fabricated.** The five corrections:
 

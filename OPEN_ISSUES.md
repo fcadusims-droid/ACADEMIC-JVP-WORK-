@@ -72,7 +72,7 @@ external review. It is a working list, not a checklist toward a deadline.
   source in the system makes the flow autonomous again, and the same event then reads as
   reabsorption. §7.5 now states the boundary as an observer's pragmatic choice (like *I*, §2.2);
   whether a principled criterion for drawing it exists is open.
-- **Framing** (philosophy of action / analytic theology vs an alignment venue) is undecided.
+- **Framing (decided 2026-09-23).** Paper 1 is addressed to the philosophy of action, where §7.8 already argues with Callard, Paul and Pettigrew. The theological sections (formerly §§10–12) were moved to `drafts/theological_companion.md`, a second paper still to be written that cites the first. Still open for the author: whether to move the formalism into an appendix, as a reviewer suggested; and writing the central argument that relativity to the system boundary does not trivialize the thesis (see `drafts/boundary_section_support.md`). That section should be written by the author.
 
 ## Paper 2 — *The Conditional Biological Requirements Architecture*
 

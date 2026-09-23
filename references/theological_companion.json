@@ -1,0 +1,194 @@
+[
+  {
+    "n": 1,
+    "citation": "Aquinas, Thomas. *Summa Theologiae*. Trans. Fathers of the English Dominican Province. Benziger Brothers, 1947. Cited by part, question, and article.",
+    "status": "verified",
+    "url": "https://ccel.org/a/aquinas/summa/home.html",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH",
+    "manual_review": "Benziger Brothers 1947 American edition of the English Dominican translation, confirmed; link is the public-domain text of that translation."
+  },
+  {
+    "n": 2,
+    "citation": "Augustine. *Confessions*. Trans. Henry Chadwick. Oxford University Press, 1991.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL137872W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 3,
+    "citation": "Augustine. *De gratia et libero arbitrio* (*On Grace and Free Will*). In *Answer to the Pelagians IV*, trans. Roland J. Teske. New City Press, 1999. (The founding statement of the grace/freedom problem this paper's Class G inherits.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/isbn/9781565481367",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Answer to the Pelagians IV (Works of Saint Augustine I/26), trans. Teske, New City Press 1999, confirmed; the volume titles the work 'Grace and Free Choice'."
+  },
+  {
+    "n": 4,
+    "citation": "Calvin, John. *Institutes of the Christian Religion*, Book III. Trans. Ford Lewis Battles, ed. John T. McNeill. 2 vols. Library of Christian Classics 20–21. Westminster Press, 1960. (Effectual calling and the bondage of the will; the monergist pole of the dispute §10 concedes it is not neutral about.)",
+    "status": "verified-corrected",
+    "url": "https://openlibrary.org/isbn/9780664220280",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH",
+    "manual_review": "McNeill/Battles, Library of Christian Classics 20-21, confirmed.",
+    "correction": "Publisher corrected from 'Westminster John Knox Press' (the later name) to 'Westminster Press', which issued the 1960 edition."
+  },
+  {
+    "n": 5,
+    "citation": "Baker, Lynne Rudder. 2000. *Persons and Bodies: A Constitution View*. Cambridge University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL3480099W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 6,
+    "citation": "Floridi, Luciano. 2011. *The Philosophy of Information*. Oxford University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL15932655W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 7,
+    "citation": "Friston, Karl. 2010. \"The Free-Energy Principle: A Unified Brain Theory?\" *Nature Reviews Neuroscience* 11(2): 127-138.",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/nrn2787",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/nrn2787"
+  },
+  {
+    "n": 8,
+    "citation": "Friston, Karl. 2013. \"Life as We Know It.\" *Journal of the Royal Society Interface* 10: 20130475.",
+    "status": "verified",
+    "url": "https://doi.org/10.1098/rsif.2013.0475",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1098/rsif.2013.0475"
+  },
+  {
+    "n": 9,
+    "citation": "Gregory of Nyssa. *The Life of Moses*. Trans. Abraham J. Malherbe and Everett Ferguson. Paulist Press, 1978.",
+    "status": "verified",
+    "url": "https://openlibrary.org/isbn/9780809121120",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Classics of Western Spirituality, Paulist Press 1978, trans. Malherbe and Ferguson, confirmed."
+  },
+  {
+    "n": 10,
+    "citation": "Kolchinsky, Artemy, and Wolpert, David H. 2018. \"Semantic Information, Autonomous Agency and Non-Equilibrium Statistical Physics.\" *Interface Focus* 8(6): 20180041.",
+    "status": "verified",
+    "url": "https://doi.org/10.1098/rsfs.2018.0041",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1098/rsfs.2018.0041"
+  },
+  {
+    "n": 11,
+    "citation": "Lonergan, Bernard J. F. 1972. *Method in Theology*. Herder and Herder. (Intellectual, moral, and religious conversion as a shift of horizon; the closest theological account to what this paper formalizes.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL2277873W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 12,
+    "citation": "Stump, Eleonore. 2010. *Wandering in Darkness: Narrative and the Problem of Suffering*. Oxford University Press. (Quiescence of the will: a candidate mechanism for the receptivity gate that is neither an endogenous act nor an imposed state.)",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL21041053W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 13,
+    "citation": "Council of Trent. 1547. *Decree on Justification*, Session VI. In Norman P. Tanner, ed., *Decrees of the Ecumenical Councils*, vol. 2. Sheed and Ward / Georgetown University Press, 1990. (The canons on justification; the Catholic pole of the monergism/synergism axis §10 concedes it is partisan about.)",
+    "status": "verified",
+    "url": "https://press.georgetown.edu/Book/Decrees-of-the-Ecumenical-Councils-Volume-2",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Tanner (ed.), Decrees of the Ecumenical Councils, vol. 2, Sheed & Ward / Georgetown University Press 1990, confirmed; Session VI (13 January 1547)."
+  },
+  {
+    "n": 14,
+    "citation": "Maximus the Confessor. *On Difficulties in the Church Fathers: The Ambigua*. Ed. and trans. Nicholas Constas. 2 vols. Harvard University Press, 2014.",
+    "status": "verified",
+    "url": "https://www.hup.harvard.edu/books/9780674726666",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Dumbarton Oaks Medieval Library 28-29, Harvard University Press 2014, ed. and trans. Constas, confirmed."
+  },
+  {
+    "n": 15,
+    "citation": "Metzinger, Thomas. 2003. *Being No One: The Self-Model Theory of Subjectivity*. MIT Press.",
+    "status": "verified",
+    "url": "https://direct.mit.edu/books/monograph/1991/Being-No-OneThe-Self-Model-Theory-of-Subjectivity",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "MIT Press 2003, confirmed."
+  },
+  {
+    "n": 16,
+    "citation": "Olson, Eric T. 1997. *The Human Animal: Personal Identity Without Psychology*. Oxford University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL3243269W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 17,
+    "citation": "Palamas, Gregory. *The Triads*. Ed. John Meyendorff, trans. Nicholas Gendle. Paulist Press, 1983.",
+    "status": "verified",
+    "url": "https://openlibrary.org/isbn/9780809124473",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH",
+    "manual_review": "Classics of Western Spirituality, Paulist Press 1983, ed. Meyendorff, trans. Gendle, confirmed."
+  },
+  {
+    "n": 18,
+    "citation": "Pseudo-Dionysius. *The Divine Names*. In *Pseudo-Dionysius: The Complete Works*. Trans. Colm Luibheid. Paulist Press, 1987.",
+    "status": "verified",
+    "url": "https://openlibrary.org/isbn/9780809128389",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH",
+    "manual_review": "Pseudo-Dionysius: The Complete Works, trans. Luibheid, Paulist Press 1987, confirmed."
+  },
+  {
+    "n": 19,
+    "citation": "Ricoeur, Paul. 1992. *Oneself as Another*. University of Chicago Press.",
+    "status": "verified",
+    "url": "https://press.uchicago.edu/ucp/books/book/chicago/O/bo3647498.html",
+    "checked_against": "manual",
+    "automated_pass": "PARTIAL",
+    "manual_review": "University of Chicago Press 1992, trans. Blamey, confirmed."
+  },
+  {
+    "n": 20,
+    "citation": "Schechtman, Marya. 1996. *The Constitution of Selves*. Cornell University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL3265573W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 21,
+    "citation": "Shoemaker, Sydney. 1959. \"Personal Identity and Memory.\" *Journal of Philosophy* 56(22): 868-902.",
+    "status": "verified",
+    "url": "https://doi.org/10.2307/2022317",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.2307/2022317"
+  },
+  {
+    "n": 22,
+    "citation": "Sider, Theodore. 2001. *Four-Dimensionalism: An Ontology of Persistence and Time*. Oxford University Press.",
+    "status": "verified",
+    "url": "https://academic.oup.com/book/9493",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Oxford University Press 2001, confirmed."
+  }
+]
