@@ -143,5 +143,23 @@
     "papers": {
       "Paper3.md": "cross-subject Wilcoxon \\$p\\\\approx ([0-9.]+)\\$\\)"
     }
+  },
+  {
+    "id": "Localization off-centre manifold hits",
+    "result": "localization_centerbias_control",
+    "path": "offcentre_hits.manifold",
+    "tol": 0,
+    "papers": {
+      "Paper3.md": "\\(\\$([0-9]+)/22\\$ versus \\$10/22\\$ off-centre\\)"
+    }
+  },
+  {
+    "id": "Localization off-centre scalar hits",
+    "result": "localization_centerbias_control",
+    "path": "offcentre_hits.scalar",
+    "tol": 0,
+    "papers": {
+      "Paper3.md": "\\(\\$10/22\\$ versus \\$([0-9]+)/22\\$ off-centre\\)"
+    }
   }
 ]

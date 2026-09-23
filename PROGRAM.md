@@ -29,7 +29,8 @@ consequent, and each is written so that it survives the antecedent being false.
   read through a bounded identity contract cannot realize the transformation (by Poincaré recurrence
   only for states typical of an invariant measure; for dissipative dynamics the transients are
   excluded by an interpretive argument, not a theorem), so if it occurs
-  it is externally occasioned; and it names **Class G** as the residual admissibility profile
+  it is externally occasioned — relative to where the observer draws the system boundary, a
+  pragmatic choice of the same kind as the identity contract; and it names **Class G** as the residual admissibility profile
   — the type signature the transformation would have to satisfy. This is a conceptual
   contribution: it licenses *sorting* (which cell an account of transformation occupies) and
   *costing* (the agency price of exogenous forcing), and one conditional dynamical result. It

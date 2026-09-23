@@ -10,7 +10,7 @@ Regenerate any result with `python -m experiments.<paper>.<experiment>.run`.
 
 ## What this file does and does not cover
 
-There are **49 experiments** with committed results. The narrative sections below discuss **20** of them — the original core set, written when the suite was small. The later experiments have their full record in their own `PRE-REGISTRATION.md` and `result.json`, and a one-paragraph verdict in **`experiments/STATUS.md`, which is the authoritative and complete per-experiment record**. This file is a narrative supplement, not an index; where the two differ, `STATUS.md` and the raw `result.json` win.
+There are **49 experiments** with committed results. The narrative sections below discuss **20** of them — the original core set, written when the suite was small. The later experiments have their full record in their own `PRE-REGISTRATION.md` and `result.json`, and a one-paragraph verdict in **`experiments/STATUS.md`, which is the authoritative and complete per-experiment record**. This file is a narrative supplement, not an index; where the two differ, `STATUS.md` and the raw `result.json` win. **Passages written before later controls are kept as the historical record but carry struck-through wording and a bold [Later: …] note where a later run withdrew them; the forbidden-phrase gate (`experiments/forbidden_phrases.json`) checks this file too.**
 
 Not narrated below, so that their absence here is not read as their not existing:
 
@@ -619,7 +619,10 @@ paradigm: PhysioNet `eegbci`, 15 subjects, eyes-open (run 1) vs eyes-closed
   tested on the same 15 subjects, doubles this to **8/15** — a real improvement,
   though still not a full solution (~half fail). See the Online-CP section.
 
-This is the honest real-data status: **structural discrimination validated; the
+This was the real-data status as first written: ~~structural discrimination validated~~
+**[Later: withdrawn. The ratio compares two separate recordings against one recording's
+internal drift; see `between_recording_control`. It is reported only as a difference between
+two recordings that exceeds each one's internal drift.]** The
 5/15 within-trajectory localization is confirmed as a genuine open problem, not a
 synthetic artifact**, and its cause is the one Exp C predicted. (EEG is not
 committed; `experiments/**/data/` is git-ignored — MNE re-downloads it.)
@@ -667,8 +670,11 @@ appendix's median-≈12 / range-2–36 figure is therefore **not reproducible on
 data under any reasonable choice**; it is optimistic. The defensible reported ratio
 is **~3–5** (permutation null) or **~1.3** (temporal-half). The qualitative claim
 — a *real, significant, cross-subject-replicated* structural discrimination that is
-silent on power transitions — stands; only the specific magnitude figure should be
-corrected downward before it goes into the paper.
+silent on power transitions — ~~stands~~ **[Later: does not stand as written. The ≈3.3
+permutation figure treats overlapping, autocorrelated windows as exchangeable; the
+temporal-half ≈1.3 compares two recordings against one recording's drift and needs a
+between-recording control (`between_recording_control`); "silent on power transitions" was
+never tested against a power baseline on this data. See STATUS.md.]**
 
 Both within-state estimators are legitimate measurements of *different* quantities:
 the permutation null answers "is eyes-open vs eyes-closed bigger than a random
@@ -719,7 +725,8 @@ statistic that sees the whole trajectory and rewards *permanence*. Two were test
   permanence-aware global detector cannot always tell them apart.
 
 **Honest, publishable bound for Paper 3.** The trace-normalised geometry
-*discriminates* a structural regime (validated, `eeg_reconciliation`), and a global
+*discriminates* a structural regime (~~validated~~ **[Later: withdrawn; see
+`between_recording_control` in STATUS.md]**, `eeg_reconciliation`), and a global
 CUSUM *roughly doubles* on-line localization over the local detector — a real,
 principled improvement worth reporting. But **on-line single-trajectory
 localization on real EEG is improved, not solved**; it remains a partial limitation
@@ -797,6 +804,7 @@ Lyapunov estimate in E2, caught by an explicit dt-convergence gate rather than
 reported as a falsifier). Paper 3's synthetic-adversarial experiments (A/B/C) were
 run while PhysioNet was unreachable; it later became reachable and the **real-EEG
 confirmation is now done** (above): structural discrimination replicates (12/15)
+**[Later: in direction only, as a between-recording difference; see STATUS.md]**
 and the 5/15 within-trajectory localization limitation is confirmed as real, with
 the cause Exp C predicted. A fifth data-hygiene issue was fixed during a rigorous
 review (an out-of-band, non-reproducible kurtosis figure in D, replaced by a

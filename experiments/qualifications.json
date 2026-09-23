@@ -44,9 +44,10 @@
   {
     "id": "P3 localization counts carry the centring caveat",
     "paper": "Paper3.md",
-    "claim": "\\$10/15\\$",
+    "claim": "\\$1[01]/15\\$",
     "requires": "centr",
-    "why": "every within-trajectory localization window is symmetric about the true transition, so a centre-prior detector scores 22/22 there and 0/22 off-centre (localization_centerbias_control); any 10/15 localization figure quoted without that caveat reads as evidence the method localizes."
+    "why": "every within-trajectory localization window is symmetric about the true transition, so a centre-prior detector scores 22/22 there and 0/22 off-centre (localization_centerbias_control); any 10/15 localization figure quoted without that caveat reads as evidence the method localizes. The caveat must sit within 400 characters of each count (a caveat elsewhere in a long paragraph about a different number does not cover it).",
+    "near": 400
   },
   {
     "id": "P1 limitative-theorems comparison is disclaimed where made",

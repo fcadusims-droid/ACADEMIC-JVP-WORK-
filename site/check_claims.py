@@ -94,12 +94,26 @@ def check_qualifications(quiet=False):
             errors.append(f"[{q['id']}] claim pattern not found in {q['paper']} -- "
                           f"the sentence it guards was edited away or reworded")
             continue
+        near = q.get("near")
         for para in hits:
-            checked += 1
-            if not re.search(q["requires"], para):
-                errors.append(
-                    f"[{q['id']}] {q['paper']}: the claim appears WITHOUT its required "
-                    f"qualification (/{q['requires']}/). {q['why']}")
+            if near is None:
+                checked += 1
+                if not re.search(q["requires"], para):
+                    errors.append(
+                        f"[{q['id']}] {q['paper']}: the claim appears WITHOUT its required "
+                        f"qualification (/{q['requires']}/). {q['why']}")
+                continue
+            # `near`: the qualification must sit within `near` characters of EACH
+            # occurrence of the claim, so a caveat about something else elsewhere in a
+            # long paragraph does not satisfy it by accident.
+            for m in re.finditer(q["claim"], para):
+                checked += 1
+                window = para[max(0, m.start() - near):m.end() + near]
+                if not re.search(q["requires"], window):
+                    errors.append(
+                        f"[{q['id']}] {q['paper']}: '{m.group(0)}' appears WITHOUT its "
+                        f"required qualification (/{q['requires']}/) within {near} "
+                        f"characters. {q['why']}")
     if not quiet or errors:
         print(f"qualifications gate: {len(quals)} guarded claims, {checked} paragraph checks")
     return checked, errors
@@ -177,13 +191,20 @@ def check_forbidden_phrases(quiet=False):
         rules = json.load(fh)
     errors, checked = [], 0
     for r in rules:
-        with open(os.path.join(ROOT, r["paper"]), encoding="utf-8") as fh:
-            text = fh.read()
-        checked += 1
-        for m in re.finditer(r["pattern"], text):
-            line = text.count("\n", 0, m.start()) + 1
-            errors.append(f"[{r['id']}] {r['paper']}:{line} contains a forbidden overclaim "
-                          f"(/{r['pattern']}/). {r['why']}")
+        # `paper` is one file or a list of files (papers, results narratives, site pages).
+        files = r["paper"] if isinstance(r["paper"], list) else [r["paper"]]
+        for rel in files:
+            with open(os.path.join(ROOT, rel), encoding="utf-8") as fh:
+                text = fh.read()
+            # Struck-through text (~~...~~) is the historical record of a withdrawn claim,
+            # kept visibly withdrawn; blank it (keeping newlines, so line numbers hold).
+            text = re.sub(r"~~.*?~~",
+                          lambda m: re.sub(r"[^\n]", " ", m.group(0)), text, flags=re.S)
+            checked += 1
+            for m in re.finditer(r["pattern"], text):
+                line = text.count("\n", 0, m.start()) + 1
+                errors.append(f"[{r['id']}] {rel}:{line} contains a forbidden overclaim "
+                              f"(/{r['pattern']}/). {r['why']}")
     if not quiet:
         print(f"forbidden-phrase gate: {len(rules)} rules, {checked} checks")
     return checked, errors
