@@ -438,7 +438,7 @@ Two things must be said, and the first is a concession that narrows this paper's
 
 *The concession.* The trilemma is a claim about **unanchored** value change. Callard's aspirant is anchored: she has a defective but genuine grasp of the value she is acquiring, and that grasp is what guides her. Under that description the aspirant's trajectory is endogenous refinement of an evaluative structure already present *in nuce* — Case 1 of the trichotomy, gradient-like motion on a meta-potential whose potential is fidelity to the imperfectly grasped value. So the aspirant is no falsifier of the theorem; but neither does the theorem tell against her, because what she describes is not what this paper means by conversion. The honest consequence is that the thesis must be stated more narrowly than §7.5 alone suggests: the trilemma bites against value change that is *not proleptically anchored*, and Callard makes a powerful case that a large and important class of ordinary value change is anchored. This paper does not claim that all value change is unformulable; it claims that value change without an anchor cannot be formulated as control.
 
-*The convergence, which is easy to miss.* Callard insists that aspiration "is not a matter of decision-making at all." That is this paper's negative thesis in another vocabulary. She and the present argument agree that value acquisition is not decision-theoretic; they disagree about what follows. Where this paper concludes that conversion is therefore *externally occasioned* (§7.5) and asks what external profile is admissible (§8), Callard concludes that there is a *distinct rationality internal to the aspirant*. Proleptic rationality is thus best read not as a rival to the trilemma but as a candidate occupant of the space the trilemma leaves empty — a mode of transformation that is neither optimization against a fixed criterion nor coercive override.
+*The convergence, which is easy to miss.* On Callard's account aspiration is not a species of decision-making: the aspirant does not adjudicate between the old and the new values by deliberating or choosing, but works to come to see the world in a new way. That is this paper's negative thesis in another vocabulary. She and the present argument agree that value acquisition is not decision-theoretic; they disagree about what follows. Where this paper concludes that conversion is therefore *externally occasioned* (§7.5) and asks what external profile is admissible (§8), Callard concludes that there is a *distinct rationality internal to the aspirant*. Proleptic rationality is thus best read not as a rival to the trilemma but as a candidate occupant of the space the trilemma leaves empty — a mode of transformation that is neither optimization against a fixed criterion nor coercive override.
 
 Whether it can occupy that space is a real and open question, and the Class G conditions make it precise. Condition 10 requires the transformative field not to lie in the endogenous span, $W_{ext}\notin\langle F_0\rangle$. A proleptic grasp is, by construction, the *agent's own* — defective, but hers. If it is endogenous, aspiration is Case 1 and not Class G; if the proleptic grasp is itself externally occasioned (someone showed her the value; a tradition handed it to her), aspiration may be G-admissible after all, and Callard's account and this one converge almost completely. Callard would likely resist the dichotomy, and the resistance is principled: the aspirant's grasp is neither simply hers nor simply given. That is the sharpest live disagreement between the two accounts, and it is left standing here rather than resolved by stipulation.
 
@@ -760,7 +760,7 @@ Bratman, Michael E. 2007. *Structures of Agency: Essays*. Oxford University Pres
 
 Callard, Agnes. 2018. *Aspiration: The Agency of Becoming*. Oxford University Press. (Proleptic reasons: acknowledged-defective versions of reasons one expects eventually to grasp; the most direct challenge to this paper's thesis.)
 
-Calvin, John. *Institutes of the Christian Religion*, Book III. Trans. Ford Lewis Battles, ed. John T. McNeill. Westminster John Knox Press, 1960. (Effectual calling and the bondage of the will; the monergist pole of the dispute §10 concedes it is not neutral about.)
+Calvin, John. *Institutes of the Christian Religion*, Book III. Trans. Ford Lewis Battles, ed. John T. McNeill. 2 vols. Library of Christian Classics 20–21. Westminster Press, 1960. (Effectual calling and the bondage of the will; the monergist pole of the dispute §10 concedes it is not neutral about.)
 
 Baker, Lynne Rudder. 2000. *Persons and Bodies: A Constitution View*. Cambridge University Press.
 
@@ -830,7 +830,7 @@ Russell, Stuart. 2019. *Human Compatible: Artificial Intelligence and the Proble
 
 Soares, Nate, Benja Fallenstein, Eliezer Yudkowsky, and Stuart Armstrong. 2015. "Corrigibility." In *AAAI Workshop on AI and Ethics*: 74-82. (The corrigibility problem; §7.8.5 gives the trilemma's structural prediction about its solution space.)
 
-Nayebi, Aran. 2025. "Core Safety Values for Provably Corrigible Agents." arXiv:2507.20964. (Deciding whether an arbitrarily modified agent ever violates corrigibility is undecidable by reduction to the halting problem; §2.1 and §7.8.6 place this neighbouring limitative result and distinguish its object — a predicate over programs — from the trilemma's dynamical claim.)
+Nayebi, Aran. 2025. "Core Safety Values for Provably Corrigible Agents." arXiv:2507.20964. To appear in the AAAI 2026 Machine Ethics Workshop proceedings. (Deciding whether an arbitrarily modified agent ever violates corrigibility is undecidable by reduction to the halting problem; §2.1 and §7.8.6 place this neighbouring limitative result and distinguish its object — a predicate over programs — from the trilemma's dynamical claim.)
 
 Wang, Charles L., Keir Dorchen, and Peter Jin. 2025. "On the Statistical Limits of Self-Improving Agents." arXiv:2510.04399 (TMLR 2026). (Distribution-free PAC-learnability is preserved iff the policy-reachable family stays uniformly capacity-bounded, a VC-dimension condition; §7.8.6 contrasts this static capacity limit with the trilemma's dynamical mechanism.)
 
@@ -883,7 +883,7 @@ Waddington, Conrad H. 1957. *The Strategy of the Genes*. George Allen & Unwin.
 
 Walters, Peter. 1982. *An Introduction to Ergodic Theory*. Springer.
 
-Wiener, Norbert. 1948. *Cybernetics: Or Control and Communication in the Animal and the Machine*. MIT Press.
+Wiener, Norbert. 1948. *Cybernetics: Or Control and Communication in the Animal and the Machine*. Technology Press and John Wiley & Sons (New York); Hermann (Paris).
 
 Wiggins, David. 2001. *Sameness and Substance Renewed*. Cambridge University Press.
 

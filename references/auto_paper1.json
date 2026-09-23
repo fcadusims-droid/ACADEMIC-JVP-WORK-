@@ -1,0 +1,2450 @@
+[
+  {
+    "raw": "Agar, Nicholas. 2016. \"Enhancement, Mind-Uploading, and Personal Identity.\" In Steve Clarke, Julian Savulescu, C. A. J. Coady, Alberto Giubilini, and Sagar Sanyal, eds., *The Ethics of Human Enhancement: Understanding the Debate*. Oxford University Press.",
+    "surname": "Agar",
+    "year": 2016,
+    "title": "Enhancement, Mind-Uploading, and Personal Identity",
+    "container": "The Ethics of Human Enhancement: Understanding the Debate",
+    "doi": "10.1093/acprof:oso/9780198754855.003.0013",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1093/acprof:oso/9780198754855.003.0013",
+    "found_title": "Enhancement, Mind-Uploading, and Personal Identity",
+    "found_container": "The Ethics of Human Enhancement",
+    "found_authors": [
+      "Agar"
+    ],
+    "found_year": 2016,
+    "found_volume": null,
+    "found_page": "184-197",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Ames, Aaron D., Coogan, Samuel, Egerstedt, Magnus, Notomista, Gennaro, Sreenath, Koushil, and Tabuada, Paulo. 2019. \"Control Barrier Functions: Theory and Applications.\" *2019 18th European Control Conference (ECC)*: 3420-3431. DOI: 10.23919/ECC.2019.8796030.",
+    "surname": "Ames",
+    "year": 2019,
+    "title": "Control Barrier Functions: Theory and Applications",
+    "container": "2019 18th European Control Conference (ECC)",
+    "doi": "10.23919/ecc.2019.8796030",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.23919/ecc.2019.8796030",
+    "found_title": "Control Barrier Functions: Theory and Applications",
+    "found_container": "2019 18th European Control Conference (ECC)",
+    "found_authors": [
+      "Ames",
+      "Coogan",
+      "Egerstedt",
+      "Notomista",
+      "Sreenath",
+      "Tabuada"
+    ],
+    "found_year": 2019,
+    "found_volume": null,
+    "found_page": "3420-3431",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Adams, Alyssa, Hector Zenil, Paul C. W. Davies, and Sara Imari Walker. 2017. \"Formal Definitions of Unbounded Evolution and Innovation Reveal Universal Mechanisms for Open-Ended Evolution in Dynamical Systems.\" *Scientific Reports* 7: 997. DOI: 10.1038/s41598-017-00810-8. (Closed finite systems are Poincaré-recurrent within their recurrence time; unbounded novelty requires coupling to an external environment.)",
+    "surname": "Adams",
+    "year": 2017,
+    "title": "Formal Definitions of Unbounded Evolution and Innovation Reveal Universal Mechanisms for Open-Ended Evolution in Dynamical Systems",
+    "container": "Scientific Reports",
+    "volume": "7",
+    "first_page": "997",
+    "doi": "10.1038/s41598-017-00810-8",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1038/s41598-017-00810-8",
+    "found_title": "Formal Definitions of Unbounded Evolution and Innovation Reveal Universal Mechanisms for Open-Ended Evolution in Dynamical Systems",
+    "found_container": "Scientific Reports",
+    "found_authors": [
+      "Adams",
+      "Zenil",
+      "Davies",
+      "Walker"
+    ],
+    "found_year": 2017,
+    "found_volume": "7",
+    "found_page": null,
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Aquinas, Thomas. *Summa Theologiae*. Trans. Fathers of the English Dominican Province. Benziger Brothers, 1947. Cited by part, question, and article.",
+    "surname": "Aquinas",
+    "year": 1947,
+    "title": "Summa Theologiae",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL26440307W",
+    "found_title": "Summa Theologiae",
+    "found_authors": [
+      "Thomas Aquinas",
+      "The Aquinas Institute"
+    ],
+    "found_first_year": 2012,
+    "found_publishers": [
+      "Aquinas Institute",
+      "Emmaus Academic"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2012
+    ],
+    "pub_check": false,
+    "year_check": false
+  },
+  {
+    "raw": "Arpaly, Nomy. 2003. *Unprincipled Virtue: An Inquiry Into Moral Agency*. Oxford University Press. (Moral change without deliberation; the Huckleberry Finn case.)",
+    "surname": "Arpaly",
+    "year": 2003,
+    "title": "Unprincipled Virtue: An Inquiry Into Moral Agency",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL8004189W",
+    "found_title": "Unprincipled Virtue",
+    "found_authors": [
+      "Nomy Arpaly"
+    ],
+    "found_first_year": 2002,
+    "found_publishers": [
+      "Oxford University Press, USA",
+      "Oxford University Press"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2002,
+      2003,
+      2004
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Ashby, W. Ross. 1956. *An Introduction to Cybernetics*. Chapman and Hall.",
+    "surname": "Ashby",
+    "year": 1956,
+    "title": "An Introduction to Cybernetics",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL169933W",
+    "found_title": "An introduction to cybernetics",
+    "found_authors": [
+      "William Ross Ashby"
+    ],
+    "found_first_year": 1956,
+    "found_publishers": [
+      "Methuen",
+      "Chapman & Hall",
+      "University Paperbacks",
+      "Chapman and Hall",
+      "J. Wiley",
+      "Science Editions"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1956,
+      1961,
+      1963,
+      1964,
+      1970
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Ashby, W. Ross. 1960. *Design for a Brain: The Origin of Adaptive Behaviour*. 2nd ed. Chapman and Hall.",
+    "surname": "Ashby",
+    "year": 1960,
+    "title": "Design for a Brain: The Origin of Adaptive Behaviour",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL169935W",
+    "found_title": "Design for a brain",
+    "found_authors": [
+      "William Ross Ashby"
+    ],
+    "found_first_year": 1952,
+    "found_publishers": [
+      "Chapman & Hall",
+      "Chapman & Hall and Science Paperbacks",
+      "Chapman& Hall",
+      "Wiley",
+      "J. Wiley"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1952,
+      1954,
+      1960,
+      1965,
+      1966
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Aubin, Jean-Pierre. 1991. *Viability Theory*. Birkhäuser.",
+    "surname": "Aubin",
+    "year": 1991,
+    "title": "Viability Theory",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL14855000W",
+    "found_title": "Viability theory",
+    "found_authors": [
+      "Jean Pierre Aubin"
+    ],
+    "found_first_year": 1991,
+    "found_publishers": [
+      "Birkhäuser",
+      "Birkhauser"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1991,
+      2009
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Augustine. *Confessions*. Trans. Henry Chadwick. Oxford University Press, 1991.",
+    "surname": "Augustine",
+    "year": 1991,
+    "title": "Confessions",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL137872W",
+    "found_title": "Confessions",
+    "found_authors": [
+      "Augustine of Hippo"
+    ],
+    "found_first_year": 1482,
+    "found_publishers": [
+      "Joannis Baptistae Coignard",
+      "Methuen & Co. Ltd.",
+      "Brepols",
+      "John Henry Parker",
+      "Brand: Hackett Publishing Co.",
+      "In aedibus B. G. Teubneri",
+      "E.P. Dutton & co.",
+      "Harvard University Press",
+      "Charpentier",
+      "BookSurge Classics",
+      "The Macmillan co.",
+      "Fondazione Lorenzo Valla",
+      "E.P. Peabody",
+      "1st World Library",
+      "Pocket Books",
+      "Penguin USA, Inc.",
+      "Catholic Book Pub. Co.",
+      "Printed for T. Meighan",
+      "Collier Books",
+      "Burns & Oates",
+      "Paraclete Press",
+      "Printed by Iohn Norton, for Iohn Partridge ...",
+      "Touchstone",
+      "Editrice Bibliografica",
+      "CreateSpace Independent Publishing Platform",
+      "Seeley",
+      "Arc Manor",
+      "International collectors Library American headquarters",
+      "G. P. Putnam's Sons",
+      "World Pub. Co.",
+      "por los herederos de Arnoldo Bircmanno",
+      "Griffith, Farran, Browne & Co., Limited",
+      "J.G. and F. Rivington",
+      "Apud Balthasarem ab Egmont et Soc.",
+      "Vintage Books",
+      "Meiner",
+      "Ignatius Press",
+      "Printed by Iohn Norton, for Iohn Partridge: and are to be sold at the signe of the Sunne in Pauls Church-yard",
+      "Grosset & Dunlap",
+      "Signet Classics"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1482,
+      1555,
+      1556,
+      1569,
+      1595,
+      1619,
+      1631,
+      1647,
+      1650,
+      1662,
+      1663,
+      1670,
+      1673,
+      1683,
+      1687,
+      1712,
+      1731,
+      1736,
+      1739,
+      1740,
+      1746,
+      1748,
+      1757,
+      1762,
+      1770,
+      1777,
+      1779,
+      1807,
+      1836,
+      1837,
+      1838,
+      1840,
+      1841,
+      1842,
+      1843,
+      1844,
+      1845,
+      1853,
+      1860,
+      1867,
+      1869,
+      1871,
+      1876,
+      1878,
+      1879,
+      1882,
+      1886,
+      1887,
+      1890,
+      1892,
+      1898,
+      1900,
+      1903,
+      1906,
+      1907,
+      1908,
+      1909,
+      1910,
+      1912,
+      1913,
+      1914,
+      1917,
+      1919,
+      1920,
+      1922,
+      1923,
+      1924,
+      1927,
+      1929,
+      1930,
+      1931,
+      1932,
+      1937,
+      1938,
+      1939,
+      1942,
+      1943,
+      1944,
+      1945,
+      1946,
+      1947,
+      1948,
+      1949,
+      1950,
+      1951,
+      1952,
+      1953,
+      1954,
+      1955,
+      1957,
+      1958,
+      1960,
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1968,
+      1969,
+      1971,
+      1973,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2012,
+      2013,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Augustine. *De gratia et libero arbitrio* (*On Grace and Free Will*). In *Answer to the Pelagians IV*, trans. Roland J. Teske. New City Press, 1999. (The founding statement of the grace/freedom problem this paper's Class G inherits.)",
+    "surname": "Augustine",
+    "year": 1999,
+    "title": "De gratia et libero arbitrio",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL33454753W",
+    "found_title": "D. Aurelii Augustini Hipponensis episcopi De gratia & libero arbitrio",
+    "found_authors": [
+      "Augustine of Hippo"
+    ],
+    "found_first_year": 1530,
+    "found_publishers": [
+      "Ioannes Gymnicus excudebat"
+    ],
+    "title_similarity": 0.532,
+    "auto_problems": [
+      "title"
+    ],
+    "auto_status": "NOMATCH",
+    "found_publish_years": [
+      1530
+    ],
+    "pub_check": false,
+    "year_check": false
+  },
+  {
+    "raw": "Bratman, Michael E. 1987. *Intention, Plans, and Practical Reason*. Harvard University Press.",
+    "surname": "Bratman",
+    "year": 1987,
+    "title": "Intention, Plans, and Practical Reason",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL55014W",
+    "found_title": "Intention, plans, and practical reason",
+    "found_authors": [
+      "Michael Bratman"
+    ],
+    "found_first_year": 1987,
+    "found_publishers": [
+      "Harvard University Press",
+      "Center for the Study of Language and Information"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1987,
+      1990,
+      1999
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Bratman, Michael E. 2007. *Structures of Agency: Essays*. Oxford University Press. (Planning agency and self-governance; standing policies as a mechanism for stability of intention.)",
+    "surname": "Bratman",
+    "year": 2007,
+    "title": "Structures of Agency: Essays",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL8005068W",
+    "found_title": "Structures of Agency",
+    "found_authors": [
+      "Michael E. Bratman"
+    ],
+    "found_first_year": 2006,
+    "found_publishers": [
+      "Oxford University Press, USA",
+      "Ebsco Publishing",
+      "Oxford University Press"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2006,
+      2007
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Callard, Agnes. 2018. *Aspiration: The Agency of Becoming*. Oxford University Press. (Proleptic reasons: acknowledged-defective versions of reasons one expects eventually to grasp; the most direct challenge to this paper's thesis.)",
+    "surname": "Callard",
+    "year": 2018,
+    "title": "Aspiration: The Agency of Becoming",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL21160042W",
+    "found_title": "Aspiration",
+    "found_authors": [
+      "Agnes Callard"
+    ],
+    "found_first_year": 2018,
+    "found_publishers": [
+      "Oxford University Press, Incorporated"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2018,
+      2019
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Calvin, John. *Institutes of the Christian Religion*, Book III. Trans. Ford Lewis Battles, ed. John T. McNeill. Westminster John Knox Press, 1960. (Effectual calling and the bondage of the will; the monergist pole of the dispute §10 concedes it is not neutral about.)",
+    "surname": "Calvin",
+    "year": 1960,
+    "title": "Institutes of the Christian Religion",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL27784787W",
+    "found_title": "Institutes of the Christian Religion",
+    "found_authors": [
+      "John Calvin"
+    ],
+    "found_first_year": 2009,
+    "found_publishers": [
+      "Tyndale House Publishers",
+      "Hendrickson Publishers Marketing, LLC",
+      "Murine Publications LLC"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2009,
+      2022
+    ],
+    "pub_check": false,
+    "year_check": false
+  },
+  {
+    "raw": "Baker, Lynne Rudder. 2000. *Persons and Bodies: A Constitution View*. Cambridge University Press.",
+    "surname": "Baker",
+    "year": 2000,
+    "title": "Persons and Bodies: A Constitution View",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL3480099W",
+    "found_title": "Persons and Bodies",
+    "found_authors": [
+      "Lynne Rudder Baker"
+    ],
+    "found_first_year": 2000,
+    "found_publishers": [
+      "Cambridge University Press"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2000
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Bellman, Richard. 1957. *Dynamic Programming*. Princeton University Press.",
+    "surname": "Bellman",
+    "year": 1957,
+    "title": "Dynamic Programming",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL2763265W",
+    "found_title": "Dynamic programming",
+    "found_authors": [
+      "Richard Ernest Bellman"
+    ],
+    "found_first_year": 1956,
+    "found_publishers": [
+      "Princeton University Press",
+      "Rand Corp.",
+      "University Press"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1956,
+      1957,
+      1962,
+      1964
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Bowles, Samuel. 1998. \"Endogenous Preferences: The Cultural Consequences of Markets and Other Economic Institutions.\" *Journal of Economic Literature* 36(1): 75-111.",
+    "surname": "Bowles",
+    "year": 1998,
+    "title": "Endogenous Preferences: The Cultural Consequences of Markets and Other Economic Institutions",
+    "container": "Journal of Economic Literature",
+    "volume": "36",
+    "first_page": "75",
+    "doi": "10.2139/ssrn.1333626",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.2139/ssrn.1333626",
+    "found_title": "Endogenous Preferences: The Political Consequences of Economic Institutions",
+    "found_container": "",
+    "found_authors": [
+      "De Neve"
+    ],
+    "found_year": 2009,
+    "found_volume": null,
+    "found_page": null,
+    "title_similarity": 0.824,
+    "auto_status": "NOMATCH",
+    "auto_problems": [
+      "title",
+      "author",
+      "year"
+    ]
+  },
+  {
+    "raw": "Carr, Jack. 1981. *Applications of Centre Manifold Theory*. Springer.",
+    "surname": "Carr",
+    "year": 1981,
+    "title": "Applications of Centre Manifold Theory",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL25696442W",
+    "found_title": "Applications of Centre Manifold Theory",
+    "found_authors": [
+      "J. Carr"
+    ],
+    "found_first_year": 1981,
+    "found_publishers": [
+      "Island Press",
+      "Springer London, Limited"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1981,
+      2012
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Crutchfield, James P., and Young, Karl. 1989. \"Inferring Statistical Complexity.\" *Physical Review Letters* 63(2): 105-108.",
+    "surname": "Crutchfield",
+    "year": 1989,
+    "title": "Inferring Statistical Complexity",
+    "container": "Physical Review Letters",
+    "volume": "63",
+    "first_page": "105",
+    "doi": "10.1103/physrevlett.63.105",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1103/physrevlett.63.105",
+    "found_title": "Inferring statistical complexity",
+    "found_container": "Physical Review Letters",
+    "found_authors": [
+      "Crutchfield",
+      "Young"
+    ],
+    "found_year": 1989,
+    "found_volume": "63",
+    "found_page": "105-108",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Feldbaum, A. A. 1965. *Optimal Control Systems*. Academic Press.",
+    "surname": "Feldbaum",
+    "year": 1965,
+    "title": "Optimal Control Systems",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL7391575W",
+    "found_title": "Optimal control systems",
+    "found_authors": [
+      "A. A. Feld́baum"
+    ],
+    "found_first_year": 1965,
+    "found_publishers": [
+      "Academic Press"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1965
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Crutchfield, James P. 2012. \"Between Order and Chaos.\" *Nature Physics* 8(1): 17-24.",
+    "surname": "Crutchfield",
+    "year": 2012,
+    "title": "Between Order and Chaos",
+    "container": "Nature Physics",
+    "volume": "8",
+    "first_page": "17",
+    "doi": "10.1038/nphys2190",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1038/nphys2190",
+    "found_title": "Between order and chaos",
+    "found_container": "Nature Physics",
+    "found_authors": [
+      "Crutchfield"
+    ],
+    "found_year": 2012,
+    "found_volume": "8",
+    "found_page": "17-24",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Everitt, Tom, Marcus Hutter, Ramana Kumar, and Victoria Krakovna. 2021. \"Reward Tampering Problems and Solutions in Reinforcement Learning: A Causal Influence Diagram Perspective.\" *Synthese* 198: 6435-6467. (Formal results on agents that can modify their own reward channel.)",
+    "surname": "Everitt",
+    "year": 2021,
+    "title": "Reward Tampering Problems and Solutions in Reinforcement Learning: A Causal Influence Diagram Perspective",
+    "container": "Synthese",
+    "volume": "198",
+    "first_page": "6435",
+    "doi": "10.1007/s11229-021-03141-4",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1007/s11229-021-03141-4",
+    "found_title": "Reward tampering problems and solutions in reinforcement learning: a causal influence diagram perspective",
+    "found_container": "Synthese",
+    "found_authors": [
+      "Everitt",
+      "Hutter",
+      "Kumar",
+      "Krakovna"
+    ],
+    "found_year": 2021,
+    "found_volume": "198",
+    "found_page": "6435-6467",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Floridi, Luciano. 2011. *The Philosophy of Information*. Oxford University Press.",
+    "surname": "Floridi",
+    "year": 2011,
+    "title": "The Philosophy of Information",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL15932655W",
+    "found_title": "The philosophy of information",
+    "found_authors": [
+      "Luciano Floridi"
+    ],
+    "found_first_year": 2011,
+    "found_publishers": [
+      "Oxford University Press"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2011
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Frankfurt, Harry G. 1971. \"Freedom of the Will and the Concept of a Person.\" *The Journal of Philosophy* 68(1): 5-20. (Second-order desires; the hierarchy the §7.6 \"one level up\" move presupposes.)",
+    "surname": "Frankfurt",
+    "year": 1971,
+    "title": "Freedom of the Will and the Concept of a Person",
+    "container": "The Journal of Philosophy",
+    "volume": "68",
+    "first_page": "5",
+    "doi": "10.2307/2024717",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.2307/2024717",
+    "found_title": "Freedom of the Will and the Concept of a Person",
+    "found_container": "The Journal of Philosophy",
+    "found_authors": [
+      "Frankfurt"
+    ],
+    "found_year": 1971,
+    "found_volume": "68",
+    "found_page": "5",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Friston, Karl. 2010. \"The Free-Energy Principle: A Unified Brain Theory?\" *Nature Reviews Neuroscience* 11(2): 127-138.",
+    "surname": "Friston",
+    "year": 2010,
+    "title": "The Free-Energy Principle: A Unified Brain Theory?",
+    "container": "Nature Reviews Neuroscience",
+    "volume": "11",
+    "first_page": "127",
+    "doi": "10.1038/nrn2787",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1038/nrn2787",
+    "found_title": "The free-energy principle: a unified brain theory?",
+    "found_container": "Nature Reviews Neuroscience",
+    "found_authors": [
+      "Friston"
+    ],
+    "found_year": 2010,
+    "found_volume": "11",
+    "found_page": "127-138",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Friston, Karl. 2013. \"Life as We Know It.\" *Journal of the Royal Society Interface* 10: 20130475.",
+    "surname": "Friston",
+    "year": 2013,
+    "title": "Life as We Know It",
+    "container": "Journal of the Royal Society Interface",
+    "volume": "10",
+    "first_page": "20130475",
+    "doi": "10.1098/rsif.2013.0475",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1098/rsif.2013.0475",
+    "found_title": "Life as we know it",
+    "found_container": "Journal of The Royal Society Interface",
+    "found_authors": [
+      "Friston"
+    ],
+    "found_year": 2013,
+    "found_volume": "10",
+    "found_page": "20130475",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Gregory of Nyssa. *The Life of Moses*. Trans. Abraham J. Malherbe and Everett Ferguson. Paulist Press, 1978.",
+    "surname": "Gregory of Nyssa",
+    "year": 1978,
+    "title": "The Life of Moses",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL15201186W",
+    "found_title": "De vita Moysis",
+    "found_authors": [
+      "Gregorius Nyssenus"
+    ],
+    "found_first_year": 1941,
+    "found_publishers": [
+      "E. J. Brill",
+      "Brill Academic Pub",
+      "HarperSanFrancisco",
+      "Editions du Cerf",
+      "Brill",
+      "Éditions du Cerf",
+      "Cerf",
+      "A. Mondadori",
+      "E.J. Brill",
+      "Éditions du Cerf",
+      "Fondazione Lorenzo Valla",
+      "Paulist Press"
+    ],
+    "title_similarity": 0.516,
+    "auto_problems": [
+      "title",
+      "author"
+    ],
+    "auto_status": "NOMATCH",
+    "found_publish_years": [
+      1941,
+      1956,
+      1964,
+      1968,
+      1978,
+      1984,
+      1991,
+      2000,
+      2006
+    ],
+    "pub_check": false,
+    "year_check": true
+  },
+  {
+    "raw": "Hadfield-Menell, Dylan, Stuart J. Russell, Pieter Abbeel, and Anca Dragan. 2016. \"Cooperative Inverse Reinforcement Learning.\" *Advances in Neural Information Processing Systems* 29. (Value learning as a fixed higher-order objective; §7.8.5 reads it as reabsorption.)",
+    "surname": "Hadfield-Menell",
+    "year": 2016,
+    "title": "Cooperative Inverse Reinforcement Learning",
+    "container": "Advances in Neural Information Processing Systems",
+    "doi": "10.52202/068431-1923",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.52202/068431-1923",
+    "found_title": "On the Effectiveness of Fine-Tuning Versus Meta-Reinforcement Learning",
+    "found_container": "Advances in Neural Information Processing Systems 35",
+    "found_authors": [
+      "Zhao",
+      "Abbeel",
+      "James"
+    ],
+    "found_year": 2022,
+    "found_volume": null,
+    "found_page": "26519-26531",
+    "title_similarity": 0.643,
+    "auto_status": "NOMATCH",
+    "auto_problems": [
+      "title",
+      "author",
+      "year"
+    ]
+  },
+  {
+    "raw": "Haken, Hermann. 1983. *Synergetics: An Introduction*. 3rd ed. Springer.",
+    "surname": "Haken",
+    "year": 1983,
+    "title": "Synergetics: An Introduction",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL19905329W",
+    "found_title": "Synergetics",
+    "found_authors": [
+      "Hermann Haken"
+    ],
+    "found_first_year": 1977,
+    "found_publishers": [
+      "Springer Berlin / Heidelberg",
+      "Springer Berlin Heidelberg",
+      "Springer"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1977,
+      2012,
+      2013,
+      2020
+    ],
+    "pub_check": true,
+    "year_check": false
+  },
+  {
+    "raw": "Hubinger, Evan, Chris van Merwijk, Vladimir Mikulik, Joar Skalse, and Scott Garrabrant. 2019. \"Risks from Learned Optimization in Advanced Machine Learning Systems.\" arXiv:1906.01820. (Mesa-optimization: learned optimizers with objectives of their own.)",
+    "surname": "Hubinger",
+    "year": 2019,
+    "title": "Risks from Learned Optimization in Advanced Machine Learning Systems",
+    "container": null,
+    "doi": null,
+    "arxiv": "1906.01820",
+    "auto_status": "MATCH",
+    "source": "arxiv",
+    "url": "https://arxiv.org/abs/1906.01820",
+    "found_title": "Risks from Learned Optimization in Advanced Machine Learning Systems",
+    "found_authors": [
+      "Hubinger, Evan",
+      "van Merwijk, Chris",
+      "Mikulik, Vladimir",
+      "Skalse, Joar",
+      "Garrabrant, Scott"
+    ],
+    "found_year": 2019,
+    "title_similarity": 1.0,
+    "auto_problems": []
+  },
+  {
+    "raw": "James, William. 1902. *The Varieties of Religious Experience: A Study in Human Nature*. Longmans, Green. (Classical phenomenology of conversion: abruptness, passivity, retained identity.)",
+    "surname": "James",
+    "year": 1902,
+    "title": "The Varieties of Religious Experience: A Study in Human Nature",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL17420496W",
+    "found_title": "The Varieties Of Religious Experience A Study In Human Nature",
+    "found_authors": [
+      "William James"
+    ],
+    "found_first_year": 2012,
+    "found_publishers": [
+      "Oxford University Press, USA"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2012
+    ],
+    "pub_check": false,
+    "year_check": false
+  },
+  {
+    "raw": "Halmos, Paul R. 1956. *Lectures on Ergodic Theory*. Chelsea Publishing.",
+    "surname": "Halmos",
+    "year": 1956,
+    "title": "Lectures on Ergodic Theory",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL2776843W",
+    "found_title": "Lectures on ergodic theory",
+    "found_authors": [
+      "Paul R. Halmos"
+    ],
+    "found_first_year": 1956,
+    "found_publishers": [
+      "Chelsea Pub. Co.",
+      "Mathematical Society of Japan"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1956
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Bechlioulis, Charalampos P., and George A. Rovithakis. 2008. \"Robust Adaptive Control of Feedback Linearizable MIMO Nonlinear Systems with Prescribed Performance.\" *IEEE Transactions on Automatic Control* 53(9): 2090-2099. (Bounded tracking error with finite control authority.)",
+    "surname": "Bechlioulis",
+    "year": 2008,
+    "title": "Robust Adaptive Control of Feedback Linearizable MIMO Nonlinear Systems with Prescribed Performance",
+    "container": "IEEE Transactions on Automatic Control",
+    "volume": "53",
+    "first_page": "2090",
+    "doi": "10.1109/tac.2008.929402",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1109/tac.2008.929402",
+    "found_title": "Robust Adaptive Control of Feedback Linearizable MIMO Nonlinear Systems With Prescribed Performance",
+    "found_container": "IEEE Transactions on Automatic Control",
+    "found_authors": [
+      "Bechlioulis",
+      "Rovithakis"
+    ],
+    "found_year": 2008,
+    "found_volume": "53",
+    "found_page": "2090-2099",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Ilchmann, Achim, Eugene P. Ryan, and Christopher J. Sangwin. 2002. \"Tracking with Prescribed Transient Behaviour.\" *ESAIM: Control, Optimisation and Calculus of Variations* 7: 471-493. (Funnel control: prescribed error bound with finite, state-dependent gain.)",
+    "surname": "Ilchmann",
+    "year": 2002,
+    "title": "Tracking with Prescribed Transient Behaviour",
+    "container": "ESAIM: Control, Optimisation and Calculus of Variations",
+    "volume": "7",
+    "first_page": "471",
+    "doi": "10.1051/cocv:2002064",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1051/cocv:2002064",
+    "found_title": "Tracking with prescribed transient behaviour",
+    "found_container": "ESAIM: Control, Optimisation and Calculus of Variations",
+    "found_authors": [
+      "Ilchmann",
+      "Ryan",
+      "Sangwin"
+    ],
+    "found_year": 2002,
+    "found_volume": "7",
+    "found_page": "471-493",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Kolchinsky, Artemy, and Wolpert, David H. 2018. \"Semantic Information, Autonomous Agency and Non-Equilibrium Statistical Physics.\" *Interface Focus* 8(6): 20180041.",
+    "surname": "Kolchinsky",
+    "year": 2018,
+    "title": "Semantic Information, Autonomous Agency and Non-Equilibrium Statistical Physics",
+    "container": "Interface Focus",
+    "volume": "8",
+    "first_page": "20180041",
+    "doi": "10.1098/rsfs.2018.0041",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1098/rsfs.2018.0041",
+    "found_title": "Semantic information, autonomous agency and non-equilibrium statistical physics",
+    "found_container": "Interface Focus",
+    "found_authors": [
+      "Kolchinsky",
+      "Wolpert"
+    ],
+    "found_year": 2018,
+    "found_volume": "8",
+    "found_page": "20180041",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Korsgaard, Christine M. 2009. *Self-Constitution: Agency, Identity, and Integrity*. Oxford University Press. (Agency constituting itself through action; the sharpest internal challenge to a given evaluative point.)",
+    "surname": "Korsgaard",
+    "year": 2009,
+    "title": "Self-Constitution: Agency, Identity, and Integrity",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL17919734W",
+    "found_title": "Self-constitution : agency, identity, and integrity",
+    "found_authors": [
+      "Christine M. Korsgaard"
+    ],
+    "found_first_year": 2009,
+    "found_publishers": [
+      "Oxford University Press"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2009
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Kuhn, Thomas S. 1962. *The Structure of Scientific Revolutions*. University of Chicago Press. (Incommensurable paradigms; the structural ancestor of the third horn.)",
+    "surname": "Kuhn",
+    "year": 1962,
+    "title": "The Structure of Scientific Revolutions",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL3259254W",
+    "found_title": "The Structure of Scientific Revolutions",
+    "found_authors": [
+      "Thomas S. Kuhn",
+      "Dennis Holland"
+    ],
+    "found_first_year": 1955,
+    "found_publishers": [
+      "The University of Chicago Press",
+      "Fondo de Cultura Economica USA",
+      "Fondo De Cultura Economica USA",
+      "Paidos Iberica, Ediciones S. A.",
+      "A Phoenix Book/ Published by The Univeristy of Chicago Press",
+      "Chicago University Press",
+      "Phoenix Books, University of Chicago Press",
+      "University of Chicago Press",
+      "Sifre ḥemed",
+      "Dukagjini",
+      "Uni Of Chicago Press.",
+      "Humanitas",
+      "Fondo de Cultura Económica de España",
+      "Fondo de Cultura Economica",
+      "University Of Chicago Press",
+      "Yediʻot aḥaronot",
+      "Perspectiva",
+      "Flammarion",
+      "University Press",
+      "Fondo de Cultura Económica",
+      "Audible Studios on Brilliance Audio",
+      "CreateSpace Independent Publishing Platform",
+      "Suhrkamp",
+      "Audible Studios on Brilliance",
+      "University of Chicago P.",
+      "Alan"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1955,
+      1962,
+      1964,
+      1965,
+      1967,
+      1970,
+      1971,
+      1973,
+      1976,
+      1982,
+      1983,
+      1989,
+      1992,
+      1993,
+      1995,
+      1996,
+      2000,
+      2002,
+      2004,
+      2005,
+      2007,
+      2008,
+      2009,
+      2012,
+      2013,
+      2016,
+      2017,
+      2018,
+      2020
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Lewis, David. 1976. \"Survival and Identity.\" In Amelie Oksenberg Rorty, ed., *The Identities of Persons*. University of California Press.",
+    "surname": "Lewis",
+    "year": 1976,
+    "title": "Survival and Identity",
+    "container": "The Identities of Persons",
+    "doi": "10.1525/9780520353060-002",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1525/9780520353060-002",
+    "found_title": "I SURVIVAL AND IDENTITY",
+    "found_container": "Identities of Persons",
+    "found_authors": [
+      "Lewis"
+    ],
+    "found_year": 1976,
+    "found_volume": null,
+    "found_page": "17-40",
+    "title_similarity": 0.955,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Lonergan, Bernard J. F. 1972. *Method in Theology*. Herder and Herder. (Intellectual, moral, and religious conversion as a shift of horizon; the closest theological account to what this paper formalizes.)",
+    "surname": "Lonergan",
+    "year": 1972,
+    "title": "Method in Theology",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL2277873W",
+    "found_title": "Method in theology",
+    "found_authors": [
+      "Bernard J. F. Lonergan"
+    ],
+    "found_first_year": 1972,
+    "found_publishers": [
+      "Seabury",
+      "Seabury Press",
+      "Herder and Herder",
+      "Darton, Longman & Todd",
+      "Benno Verlag",
+      "Darton, Longman and Todd",
+      "Ediciones Sígueme"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1972,
+      1973,
+      1975,
+      1979,
+      1991,
+      2001
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "MacIntyre, Alasdair. 1988. *Whose Justice? Which Rationality?* University of Notre Dame Press. (Tradition-constituted rationality; the incommensurability horn, with the qualification that cross-tradition rational comparison is sometimes possible.)",
+    "surname": "MacIntyre",
+    "year": 1988,
+    "title": "Whose Justice? Which Rationality?",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL14849412W",
+    "found_title": "Whose justice? Which rationality?",
+    "found_authors": [
+      "Alasdair C. MacIntyre"
+    ],
+    "found_first_year": 1988,
+    "found_publishers": [
+      "Duckworth",
+      "Bloomsbury Academic",
+      "University of Notre Dame Press",
+      "Duckworth Pub"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1988
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Omohundro, Stephen M. 2008. \"The Basic AI Drives.\" In *Proceedings of the First AGI Conference*, IOS Press: 483-492. (Goal-content integrity as an instrumentally convergent drive: the first horn, derived independently.)",
+    "surname": "Omohundro",
+    "year": 2008,
+    "title": "The Basic AI Drives",
+    "container": "Proceedings of the First AGI Conference",
+    "doi": "10.1201/9781351251389-3",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1201/9781351251389-3",
+    "found_title": "The Basic AI Drives",
+    "found_container": "Artificial Intelligence Safety and Security",
+    "found_authors": [
+      "Omohundro"
+    ],
+    "found_year": 2018,
+    "found_volume": null,
+    "found_page": "47-55",
+    "title_similarity": 1.0,
+    "auto_status": "PARTIAL",
+    "auto_problems": [
+      "year"
+    ]
+  },
+  {
+    "raw": "Paul, L. A. 2014. *Transformative Experience*. Oxford University Press. (Epistemically and personally transformative experience; the epistemic obstacle this paper's structural obstacle survives.)",
+    "surname": "Paul",
+    "year": 2014,
+    "title": "Transformative Experience",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL20492504W",
+    "found_title": "Transformative Experience",
+    "found_authors": [
+      "L. A. Paul"
+    ],
+    "found_first_year": 2014,
+    "found_publishers": [
+      "Oxford University Press"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2014,
+      2016
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Pettigrew, Richard. 2020. *Choosing for Changing Selves*. Oxford University Press. (The Aggregate Utility Solution: each self acts on a weighted average of the values of all selves; §7.8.3 reads it as the best worked-out instance of reabsorption.)",
+    "surname": "Pettigrew",
+    "year": 2020,
+    "title": "Choosing for Changing Selves",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL21661144W",
+    "found_title": "Choosing for Changing Selves",
+    "found_authors": [
+      "Richard Pettigrew"
+    ],
+    "found_first_year": 2020,
+    "found_publishers": [
+      "Oxford University Press"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2020
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Bhatia, Harsh, et al. 2013. \"The Helmholtz–Hodge Decomposition — A Survey.\" *IEEE Transactions on Visualization and Computer Graphics* 19(8): 1386-1404. (Helmholtz–Hodge decomposition of vector fields; uniqueness and boundary conditions on bounded domains.)",
+    "surname": "Bhatia",
+    "year": 2013,
+    "title": "The Helmholtz–Hodge Decomposition — A Survey",
+    "container": "IEEE Transactions on Visualization and Computer Graphics",
+    "volume": "19",
+    "first_page": "1386",
+    "doi": "10.1109/tvcg.2012.316",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1109/tvcg.2012.316",
+    "found_title": "The Helmholtz-Hodge Decomposition—A Survey",
+    "found_container": "IEEE Transactions on Visualization and Computer Graphics",
+    "found_authors": [
+      "Bhatia",
+      "Norgard",
+      "Pascucci",
+      "Bremer"
+    ],
+    "found_year": 2013,
+    "found_volume": "19",
+    "found_page": "1386-1404",
+    "title_similarity": 0.976,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Conley, Charles. 1978. *Isolated Invariant Sets and the Morse Index*. CBMS Regional Conference Series in Mathematics 38. American Mathematical Society, Providence, RI. (The Fundamental Theorem of Dynamical Systems: every flow on a compact metric space admits a complete Lyapunov function, decreasing off the chain-recurrent set and constant on its transitive components — the gradient-like/chain-recurrent dichotomy.)",
+    "surname": "Conley",
+    "year": 1978,
+    "title": "Isolated Invariant Sets and the Morse Index",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL16955631W",
+    "found_title": "Isolated invariant sets and the Morse index",
+    "found_authors": [
+      "Charles Conley"
+    ],
+    "found_first_year": 1978,
+    "found_publishers": [
+      "American Mathematical Society"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1978
+    ],
+    "pub_check": false,
+    "year_check": true
+  },
+  {
+    "raw": "Glötzl, Erhard, and Oliver Richters. 2023. \"Helmholtz Decomposition and Potential Functions for n-Dimensional Analytic Vector Fields.\" *Journal of Mathematical Analysis and Applications* 525(2): 127138. (Existence and structure of the gradient/divergence-free/harmonic parts in $\\mathbb{R}^n$.)",
+    "surname": "Glötzl",
+    "year": 2023,
+    "title": "Helmholtz Decomposition and Potential Functions for n-Dimensional Analytic Vector Fields",
+    "container": "Journal of Mathematical Analysis and Applications",
+    "volume": "525",
+    "first_page": "127138",
+    "doi": "10.1016/j.jmaa.2023.127138",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1016/j.jmaa.2023.127138",
+    "found_title": "Helmholtz decomposition and potential functions for n-dimensional analytic vector fields",
+    "found_container": "Journal of Mathematical Analysis and Applications",
+    "found_authors": [
+      "Glötzl",
+      "Richters"
+    ],
+    "found_year": 2023,
+    "found_volume": "525",
+    "found_page": "127138",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Russell, Stuart. 2019. *Human Compatible: Artificial Intelligence and the Problem of Control*. Viking. (Value learning and the assistance framing of alignment.)",
+    "surname": "Russell",
+    "year": 2019,
+    "title": "Human Compatible: Artificial Intelligence and the Problem of Control",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL20492448W",
+    "found_title": "Human Compatible",
+    "found_authors": [
+      "Stuart J. Russell"
+    ],
+    "found_first_year": 2019,
+    "found_publishers": [
+      "Audible",
+      "Penguin Books",
+      "Allen Lane",
+      "Penguin Books, Limited",
+      "Penguin Audio",
+      "Viking"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2019,
+      2020
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Soares, Nate, Benja Fallenstein, Eliezer Yudkowsky, and Stuart Armstrong. 2015. \"Corrigibility.\" In *AAAI Workshop on AI and Ethics*: 74-82. (The corrigibility problem; §7.8.5 gives the trilemma's structural prediction about its solution space.)",
+    "surname": "Soares",
+    "year": 2015,
+    "title": "Corrigibility",
+    "container": "AAAI Workshop on AI and Ethics",
+    "doi": "10.55277/researchhub.q6ukobgj.1",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.55277/researchhub.q6ukobgj.1",
+    "found_title": "{pdf download} If Anyone Builds It, Everyone Dies: Why Superhuman AI Would Kill Us All by Eliezer Yudkowsky, Nate Soares",
+    "found_container": "",
+    "found_authors": [
+      "Cunningham"
+    ],
+    "found_year": 2026,
+    "found_volume": null,
+    "found_page": null,
+    "title_similarity": 0.125,
+    "auto_status": "NOMATCH",
+    "auto_problems": [
+      "title",
+      "author",
+      "year"
+    ]
+  },
+  {
+    "raw": "Nayebi, Aran. 2025. \"Core Safety Values for Provably Corrigible Agents.\" arXiv:2507.20964. (Deciding whether an arbitrarily modified agent ever violates corrigibility is undecidable by reduction to the halting problem; §2.1 and §7.8.6 place this neighbouring limitative result and distinguish its object — a predicate over programs — from the trilemma's dynamical claim.)",
+    "surname": "Nayebi",
+    "year": 2025,
+    "title": "Core Safety Values for Provably Corrigible Agents",
+    "container": null,
+    "doi": null,
+    "arxiv": "2507.20964",
+    "auto_status": "MATCH",
+    "source": "arxiv",
+    "url": "https://arxiv.org/abs/2507.20964",
+    "found_title": "Core Safety Values for Provably Corrigible Agents",
+    "found_authors": [
+      "Nayebi, Aran"
+    ],
+    "found_year": 2025,
+    "title_similarity": 1.0,
+    "auto_problems": []
+  },
+  {
+    "raw": "Wang, Charles L., Keir Dorchen, and Peter Jin. 2025. \"On the Statistical Limits of Self-Improving Agents.\" arXiv:2510.04399 (TMLR 2026). (Distribution-free PAC-learnability is preserved iff the policy-reachable family stays uniformly capacity-bounded, a VC-dimension condition; §7.8.6 contrasts this static capacity limit with the trilemma's dynamical mechanism.)",
+    "surname": "Wang",
+    "year": 2025,
+    "title": "On the Statistical Limits of Self-Improving Agents",
+    "container": null,
+    "doi": null,
+    "arxiv": "2510.04399",
+    "auto_status": "MATCH",
+    "source": "arxiv",
+    "url": "https://arxiv.org/abs/2510.04399",
+    "found_title": "On The Statistical Limits of Self-Improving Agents",
+    "found_authors": [
+      "Wang, Charles L.",
+      "Dorchen, Keir",
+      "Jin, Peter"
+    ],
+    "found_year": 2025,
+    "title_similarity": 1.0,
+    "auto_problems": []
+  },
+  {
+    "raw": "Strogatz, Steven H. 2015. *Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering*. 2nd ed. Westview Press. (Limit cycles, strange attractors, and Lyapunov exponents.)",
+    "surname": "Strogatz",
+    "year": 2015,
+    "title": "Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL3907581W",
+    "found_title": "Nonlinear dynamics and Chaos",
+    "found_authors": [
+      "Steven H. Strogatz",
+      "Steven Strogatz",
+      "Steven H. Strogatz"
+    ],
+    "found_first_year": 1994,
+    "found_publishers": [
+      "Westview Press",
+      "Taylor & Francis Group",
+      "CRC Press LLC",
+      "Addison-Wesley Pub.",
+      "Perseus Books Group",
+      "Avalon Publishing"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1994,
+      2000,
+      2001,
+      2008,
+      2014,
+      2015,
+      2016,
+      2018,
+      2019,
+      2021,
+      2024
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Stump, Eleonore. 2010. *Wandering in Darkness: Narrative and the Problem of Suffering*. Oxford University Press. (Quiescence of the will: a candidate mechanism for the receptivity gate that is neither an endogenous act nor an imposed state.)",
+    "surname": "Stump",
+    "year": 2010,
+    "title": "Wandering in Darkness: Narrative and the Problem of Suffering",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL21041053W",
+    "found_title": "Wandering in Darkness",
+    "found_authors": [
+      "Eleonore Stump"
+    ],
+    "found_first_year": 2010,
+    "found_publishers": [
+      "Oxford University Press",
+      "Oxford University Press, Incorporated"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2010,
+      2012
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Taylor, Charles. 1976. \"Responsibility for Self.\" In Amelie Oksenberg Rorty, ed., *The Identities of Persons*. University of California Press. (Radical reevaluation: the first horn, stated in prose four decades early.)",
+    "surname": "Taylor",
+    "year": 1976,
+    "title": "Responsibility for Self",
+    "container": "The Identities of Persons",
+    "doi": "10.1525/9780520353060-013",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1525/9780520353060-013",
+    "found_title": "XII RESPONSIBILITY FOR SELF",
+    "found_container": "Identities of Persons",
+    "found_authors": [
+      "Taylor"
+    ],
+    "found_year": 1976,
+    "found_volume": null,
+    "found_page": "281-300",
+    "title_similarity": 0.92,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Taylor, Charles. 1985. \"What Is Human Agency?\" In *Human Agency and Language: Philosophical Papers 1*. Cambridge University Press. (Strong evaluation.)",
+    "surname": "Taylor",
+    "year": 1985,
+    "title": "What Is Human Agency?",
+    "container": "Human Agency and Language: Philosophical Papers 1",
+    "doi": "10.1017/cbo9781139173483.002",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1017/cbo9781139173483.002",
+    "found_title": "What is human agency?",
+    "found_container": "Human Agency and Language",
+    "found_authors": [
+      "Taylor"
+    ],
+    "found_year": null,
+    "found_volume": null,
+    "found_page": "15-44",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Council of Trent. 1547. *Decree on Justification*, Session VI. In Norman P. Tanner, ed., *Decrees of the Ecumenical Councils*, vol. 2. Sheed and Ward / Georgetown University Press, 1990. (The canons on justification; the Catholic pole of the monergism/synergism axis §10 concedes it is partisan about.)",
+    "surname": "Council of Trent",
+    "year": 1547,
+    "title": "Decree on Justification",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL8986771W",
+    "found_title": "The History Of Heresies And Their Refutation",
+    "found_authors": [
+      "Alphonsus Maria de Liguori"
+    ],
+    "found_first_year": 1857,
+    "found_publishers": [
+      "J. Duffy",
+      "Kessinger Publishing, LLC"
+    ],
+    "title_similarity": 0.418,
+    "auto_problems": [
+      "title",
+      "author"
+    ],
+    "auto_status": "NOMATCH",
+    "found_publish_years": [
+      1857,
+      2007
+    ],
+    "pub_check": false,
+    "year_check": false
+  },
+  {
+    "raw": "Lehman, Joel, and Stanley, Kenneth O. 2011. \"Abandoning Objectives: Evolution Through the Search for Novelty Alone.\" *Evolutionary Computation* 19(2): 189-223. DOI: 10.1162/EVCO_a_00025.",
+    "surname": "Lehman",
+    "year": 2011,
+    "title": "Abandoning Objectives: Evolution Through the Search for Novelty Alone",
+    "container": "Evolutionary Computation",
+    "volume": "19",
+    "first_page": "189",
+    "doi": "10.1162/evco_a_00025",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1162/evco_a_00025",
+    "found_title": "Abandoning Objectives: Evolution Through the Search for Novelty Alone",
+    "found_container": "Evolutionary Computation",
+    "found_authors": [
+      "Lehman",
+      "Stanley"
+    ],
+    "found_year": 2011,
+    "found_volume": "19",
+    "found_page": "189-223",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Liberzon, Daniel. 2003. *Switching in Systems and Control*. Birkhäuser.",
+    "surname": "Liberzon",
+    "year": 2003,
+    "title": "Switching in Systems and Control",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL20728796W",
+    "found_title": "Switching in Systems and Control",
+    "found_authors": [
+      "Daniel Liberzon"
+    ],
+    "found_first_year": 2012,
+    "found_publishers": [
+      "Birkhauser Verlag",
+      "Springer"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2012
+    ],
+    "pub_check": false,
+    "year_check": false
+  },
+  {
+    "raw": "Maximus the Confessor. *On Difficulties in the Church Fathers: The Ambigua*. Ed. and trans. Nicholas Constas. 2 vols. Harvard University Press, 2014.",
+    "surname": "Maximus the Confessor",
+    "year": 2014,
+    "title": "On Difficulties in the Church Fathers: The Ambigua",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "auto_status": "NOMATCH",
+    "source": "openlibrary",
+    "pub_check": false,
+    "year_check": false
+  },
+  {
+    "raw": "Metzinger, Thomas. 2003. *Being No One: The Self-Model Theory of Subjectivity*. MIT Press.",
+    "surname": "Metzinger",
+    "year": 2003,
+    "title": "Being No One: The Self-Model Theory of Subjectivity",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "auto_status": "NOMATCH",
+    "source": "openlibrary",
+    "pub_check": false,
+    "year_check": false
+  },
+  {
+    "raw": "Olson, Eric T. 1997. *The Human Animal: Personal Identity Without Psychology*. Oxford University Press.",
+    "surname": "Olson",
+    "year": 1997,
+    "title": "The Human Animal: Personal Identity Without Psychology",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL3243269W",
+    "found_title": "The Human Animal",
+    "found_authors": [
+      "Eric T. Olson"
+    ],
+    "found_first_year": 1997,
+    "found_publishers": [
+      "Oxford University Press, USA",
+      "Oxford University Press"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1997,
+      1999
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Palamas, Gregory. *The Triads*. Ed. John Meyendorff, trans. Nicholas Gendle. Paulist Press, 1983.",
+    "surname": "Palamas",
+    "year": 1983,
+    "title": "The Triads",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL35267257W",
+    "found_title": "The Triads",
+    "found_authors": [
+      "St. Gregory Palamas"
+    ],
+    "found_first_year": 2021,
+    "found_publishers": [
+      "Newfound Publishing"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2021
+    ],
+    "pub_check": false,
+    "year_check": false
+  },
+  {
+    "raw": "Parfit, Derek. 1984. *Reasons and Persons*. Oxford University Press.",
+    "surname": "Parfit",
+    "year": 1984,
+    "title": "Reasons and Persons",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL3153829W",
+    "found_title": "Reasons and Persons",
+    "found_authors": [
+      "Derek Parfit"
+    ],
+    "found_first_year": 1984,
+    "found_publishers": [
+      "Oxford University Press, Incorporated",
+      "Oxford University Press",
+      "Oxford University Press, USA"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1984,
+      1986
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Poincaré, Henri. 1890. \"Sur le problème des trois corps et les équations de la dynamique.\" *Acta Mathematica* 13: 1-270. (Poincaré recurrence theorem.)",
+    "surname": "Poincaré",
+    "year": 1890,
+    "title": "Sur le problème des trois corps et les équations de la dynamique",
+    "container": "Acta Mathematica",
+    "volume": "13",
+    "first_page": "1",
+    "doi": "10.1007/bf02422379",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1007/bf02422379",
+    "found_title": "Mémoire sur le problème des trois corps",
+    "found_container": "Acta Mathematica",
+    "found_authors": [
+      "Sundman"
+    ],
+    "found_year": 1913,
+    "found_volume": "36",
+    "found_page": "105-179",
+    "title_similarity": 0.602,
+    "auto_status": "NOMATCH",
+    "auto_problems": [
+      "title",
+      "author",
+      "year",
+      "volume"
+    ]
+  },
+  {
+    "raw": "Pseudo-Dionysius. *The Divine Names*. In *Pseudo-Dionysius: The Complete Works*. Trans. Colm Luibheid. Paulist Press, 1987.",
+    "surname": "Pseudo-Dionysius",
+    "year": 1987,
+    "title": "The Divine Names",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL2467508W",
+    "found_title": "The  divine names",
+    "found_authors": [
+      "Pseudo-Dionysius the Areopagite"
+    ],
+    "found_first_year": 1957,
+    "found_publishers": [
+      "SPCK",
+      "The Shrine of Wisdom",
+      "Marquette University Press",
+      "Shrine of Wisdom"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1957,
+      1977,
+      1980
+    ],
+    "pub_check": false,
+    "year_check": false
+  },
+  {
+    "raw": "Ricoeur, Paul. 1992. *Oneself as Another*. University of Chicago Press.",
+    "surname": "Ricoeur",
+    "year": 1992,
+    "title": "Oneself as Another",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL2145413W",
+    "found_title": "Oneself as another",
+    "found_authors": [
+      "Paul Ricœur"
+    ],
+    "found_first_year": 1992,
+    "found_publishers": [
+      "University of Chicago Press"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [
+      "author"
+    ],
+    "auto_status": "PARTIAL",
+    "found_publish_years": [
+      1992
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Schechtman, Marya. 1996. *The Constitution of Selves*. Cornell University Press.",
+    "surname": "Schechtman",
+    "year": 1996,
+    "title": "The Constitution of Selves",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL3265573W",
+    "found_title": "The constitution of selves",
+    "found_authors": [
+      "Marya Schechtman"
+    ],
+    "found_first_year": 1996,
+    "found_publishers": [
+      "Cornell University Press"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1996,
+      2007
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Schmidhuber, Jürgen. 2010. \"Formal Theory of Creativity, Fun, and Intrinsic Motivation (1990-2010).\" *IEEE Transactions on Autonomous Mental Development* 2(3): 230-247.",
+    "surname": "Schmidhuber",
+    "year": 2010,
+    "title": "Formal Theory of Creativity, Fun, and Intrinsic Motivation (1990-2010)",
+    "container": "IEEE Transactions on Autonomous Mental Development",
+    "volume": "2",
+    "first_page": "230",
+    "doi": "10.1109/tamd.2010.2056368",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1109/tamd.2010.2056368",
+    "found_title": "Formal Theory of Creativity, Fun, and Intrinsic Motivation (1990–2010)",
+    "found_container": "IEEE Transactions on Autonomous Mental Development",
+    "found_authors": [
+      "Schmidhuber"
+    ],
+    "found_year": 2010,
+    "found_volume": "2",
+    "found_page": "230-247",
+    "title_similarity": 0.992,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Shoemaker, Sydney. 1959. \"Personal Identity and Memory.\" *Journal of Philosophy* 56(22): 868-902.",
+    "surname": "Shoemaker",
+    "year": 1959,
+    "title": "Personal Identity and Memory",
+    "container": "Journal of Philosophy",
+    "volume": "56",
+    "first_page": "868",
+    "doi": "10.2307/2022317",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.2307/2022317",
+    "found_title": "Personal Identity and Memory",
+    "found_container": "The Journal of Philosophy",
+    "found_authors": [
+      "Shoemaker"
+    ],
+    "found_year": 1959,
+    "found_volume": "56",
+    "found_page": "868",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Singh, Satinder, Barto, Andrew G., and Chentanez, Nuttapong. 2004. \"Intrinsically Motivated Reinforcement Learning.\" *Advances in Neural Information Processing Systems* 17 (NIPS 2004): 1281-1288.",
+    "surname": "Singh",
+    "year": 2004,
+    "title": "Intrinsically Motivated Reinforcement Learning",
+    "container": "Advances in Neural Information Processing Systems",
+    "doi": "10.21236/ada440280",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.21236/ada440280",
+    "found_title": "Intrinsically Motivated Reinforcement Learning",
+    "found_container": "",
+    "found_authors": [
+      "Singh",
+      "Barto",
+      "Chentanez"
+    ],
+    "found_year": 2005,
+    "found_volume": null,
+    "found_page": null,
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Sider, Theodore. 2001. *Four-Dimensionalism: An Ontology of Persistence and Time*. Oxford University Press.",
+    "surname": "Sider",
+    "year": 2001,
+    "title": "Four-Dimensionalism: An Ontology of Persistence and Time",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL18206258W",
+    "found_title": "Contemporary debates in metaphysics",
+    "found_authors": [
+      "Theodore Sider",
+      "John Hawthorne"
+    ],
+    "found_first_year": 2007,
+    "found_publishers": [
+      "Blackwell Pub.",
+      "Wiley-Blackwell",
+      "Wiley-Interscience",
+      "Wiley & Sons, Incorporated, John"
+    ],
+    "title_similarity": 0.37,
+    "auto_problems": [
+      "title"
+    ],
+    "auto_status": "NOMATCH",
+    "found_publish_years": [
+      2007,
+      2008,
+      2013
+    ],
+    "pub_check": false,
+    "year_check": false
+  },
+  {
+    "raw": "Skoulakis, Stratis, Tanner Fiez, Ryann Sim, Georgios Piliouras, and Lillian Ratliff. 2021. \"Evolutionary Game Theory Squared: Evolving Agents in Endogenously Evolving Zero-Sum Games.\" *Proceedings of the AAAI Conference on Artificial Intelligence* 35: 11343-11351. arXiv:2012.08382. (When agents and the game they play co-evolve endogenously, the coupled replicator dynamics is Poincaré recurrent.)",
+    "surname": "Skoulakis",
+    "year": 2021,
+    "title": "Evolutionary Game Theory Squared: Evolving Agents in Endogenously Evolving Zero-Sum Games",
+    "container": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "volume": "35",
+    "first_page": "11343",
+    "doi": null,
+    "arxiv": "2012.08382",
+    "auto_status": "MATCH",
+    "source": "arxiv",
+    "url": "https://arxiv.org/abs/2012.08382",
+    "found_title": "Evolutionary Game Theory Squared: Evolving Agents in Endogenously Evolving Zero-Sum Games",
+    "found_authors": [
+      "Skoulakis, Stratis",
+      "Fiez, Tanner",
+      "Sim, Ryann",
+      "Piliouras, Georgios",
+      "Ratliff, Lillian"
+    ],
+    "found_year": 2020,
+    "title_similarity": 1.0,
+    "auto_problems": []
+  },
+  {
+    "raw": "Sutton, Richard S., and Barto, Andrew G. 2018. *Reinforcement Learning: An Introduction*. 2nd ed. MIT Press.",
+    "surname": "Sutton",
+    "year": 2018,
+    "title": "Reinforcement Learning: An Introduction",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL19899345W",
+    "found_title": "Reinforcement Learning",
+    "found_authors": [
+      "Richard S. Sutton"
+    ],
+    "found_first_year": 1992,
+    "found_publishers": [
+      "MIT Press",
+      "Springer US",
+      "A Bradford Book"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1992,
+      1998,
+      2018
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Waddington, Conrad H. 1957. *The Strategy of the Genes*. George Allen & Unwin.",
+    "surname": "Waddington",
+    "year": 1957,
+    "title": "The Strategy of the Genes",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL1332899W",
+    "found_title": "The strategy of the genes",
+    "found_authors": [
+      "Conrad H. Waddington"
+    ],
+    "found_first_year": 1957,
+    "found_publishers": [
+      "Allen & Unwin",
+      "Macmillan"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1957
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Walters, Peter. 1982. *An Introduction to Ergodic Theory*. Springer.",
+    "surname": "Walters",
+    "year": 1982,
+    "title": "An Introduction to Ergodic Theory",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL6442275W",
+    "found_title": "An introduction to ergodic theory",
+    "found_authors": [
+      "Walters, Peter"
+    ],
+    "found_first_year": 1982,
+    "found_publishers": [
+      "Springer-Verlag"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1982
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Wiener, Norbert. 1948. *Cybernetics: Or Control and Communication in the Animal and the Machine*. MIT Press.",
+    "surname": "Wiener",
+    "year": 1948,
+    "title": "Cybernetics: Or Control and Communication in the Animal and the Machine",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL4307531W",
+    "found_title": "Cybernetics, or control and communication in the animal and the machine",
+    "found_authors": [
+      "Norbert Wiener",
+      "Doug Hill",
+      "Sanjoy Mitter"
+    ],
+    "found_first_year": 1948,
+    "found_publishers": [
+      "John Wiley & Sons, Inc.",
+      "Quid Pro, LLC",
+      "the M.I.T. press",
+      "Union générale d'éditions",
+      "M.I.T. Press and John Wiley",
+      "The Technology Press//Wiley",
+      "Tusquets",
+      "Mockingbird Press",
+      "Wiley",
+      "Tusquets Editores S.A.",
+      "The Technology Press",
+      "MIT Press",
+      "Union générale d'éditions",
+      "Hermann",
+      "Technology Press",
+      "Massachusetts Institute of Technology",
+      "The MIT Press",
+      "Martino Fine Books",
+      "Kessinger Publishing, LLC",
+      "J. Wiley",
+      "M.I.T. Press",
+      "Perspectiva"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      1948,
+      1949,
+      1957,
+      1961,
+      1962,
+      1965,
+      1971,
+      1980,
+      2002,
+      2007,
+      2013,
+      2015,
+      2016,
+      2017,
+      2019,
+      2021,
+      2023
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Wiggins, David. 2001. *Sameness and Substance Renewed*. Cambridge University Press.",
+    "surname": "Wiggins",
+    "year": 2001,
+    "title": "Sameness and Substance Renewed",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL2271283W",
+    "found_title": "Sameness and substance renewed",
+    "found_authors": [
+      "David Wiggins",
+      "David Wiggins"
+    ],
+    "found_first_year": 2001,
+    "found_publishers": [
+      "Cambridge University Press"
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH",
+    "found_publish_years": [
+      2001,
+      2005,
+      2012
+    ],
+    "pub_check": true,
+    "year_check": true
+  },
+  {
+    "raw": "Williams, Bernard. 1970. \"The Self and the Future.\" *The Philosophical Review* 79(2): 161-180.",
+    "surname": "Williams",
+    "year": 1970,
+    "title": "The Self and the Future",
+    "container": "The Philosophical Review",
+    "volume": "79",
+    "first_page": "161",
+    "doi": "10.2307/2183946",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.2307/2183946",
+    "found_title": "The Self and the Future",
+    "found_container": "The Philosophical Review",
+    "found_authors": [
+      "Williams"
+    ],
+    "found_year": 1970,
+    "found_volume": "79",
+    "found_page": "161",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  }
+]

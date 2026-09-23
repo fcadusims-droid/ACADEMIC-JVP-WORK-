@@ -1,0 +1,389 @@
+[
+  {
+    "n": 1,
+    "citation": "Al, Esra, Iliopoulos, Fivos, Forschack, Norman, Nierhaus, Till, Grund, Martin, Motyka, Paweł, Gaebler, Michael, Nikulin, Vadim V., and Villringer, Arno. 2020. \"Heart-Brain Interactions Shape Somatosensory Perception and Evoked Potentials.\" *Proceedings of the National Academy of Sciences* 117(19): 10575-10584.",
+    "status": "verified",
+    "url": "https://doi.org/10.1101/750315",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1101/750315"
+  },
+  {
+    "n": 2,
+    "citation": "Garfinkel, Sarah N., Seth, Anil K., Barrett, Adam B., Suzuki, Keisuke, and Critchley, Hugo D. 2015. \"Knowing Your Own Heart: Distinguishing Interoceptive Accuracy from Interoceptive Awareness.\" *Biological Psychology* 104: 65-74. (Accuracy/sensibility/awareness dissociation; the basis for treating the receptivity gate as graded.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/j.biopsycho.2014.11.004",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1016/j.biopsycho.2014.11.004"
+  },
+  {
+    "n": 3,
+    "citation": "Park, Hyeong-Dong, Correia, Stephanie, Ducorps, Antoine, and Tallon-Baudry, Catherine. 2014. \"Spontaneous Fluctuations in Neural Responses to Heartbeats Predict Visual Detection.\" *Nature Neuroscience* 17(4): 612-618. (A bodily rhythm modulating the efficacy of an exteroceptive input: the type signature the receptivity gate requires.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/nn.3671",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/nn.3671"
+  },
+  {
+    "n": 4,
+    "citation": "Park, Hyeong-Dong, and Tallon-Baudry, Catherine. 2014. \"The Neural Subjective Frame: From Bodily Signals to Perceptual Consciousness.\" *Philosophical Transactions of the Royal Society B* 369: 20130208.",
+    "status": "verified",
+    "url": "https://doi.org/10.1098/rstb.2013.0208",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1098/rstb.2013.0208"
+  },
+  {
+    "n": 5,
+    "citation": "Rebollo, Ignacio, Devauchelle, Anne-Dominique, Beranger, Benoit, and Tallon-Baudry, Catherine. 2018. \"Stomach-Brain Synchrony Reveals a Novel, Delayed-Connectivity Resting-State Network in Humans.\" *eLife* 7: e33321. (A gastric boundary would be equally admissible under CBRA's criteria.)",
+    "status": "verified",
+    "url": "https://doi.org/10.7554/elife.33321",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.7554/elife.33321"
+  },
+  {
+    "n": 6,
+    "citation": "Seth, Anil K. 2013. \"Interoceptive Inference, Emotion, and the Embodied Self.\" *Trends in Cognitive Sciences* 17(11): 565-573.",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/j.tics.2013.09.007",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1016/j.tics.2013.09.007"
+  },
+  {
+    "n": 7,
+    "citation": "Seth, Anil K., and Friston, Karl J. 2016. \"Active Interoceptive Inference and the Emotional Brain.\" *Philosophical Transactions of the Royal Society B* 371: 20160007. (Precision-weighted interoceptive inference as an operationalization of the gate variable.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1098/rstb.2016.0007",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1098/rstb.2016.0007"
+  },
+  {
+    "n": 8,
+    "citation": "Zelano, Christina, Jiang, Heidi, Zhou, Guangyu, Arora, Nikita, Schuele, Stephan, Rosenow, Joshua, and Gottfried, Jay A. 2016. \"Nasal Respiration Entrains Human Limbic Oscillations and Modulates Cognitive Function.\" *Journal of Neuroscience* 36(49): 12448-12467. (A respiratory boundary would be equally admissible.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1523/jneurosci.2586-16.2016",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1523/jneurosci.2586-16.2016"
+  },
+  {
+    "n": 9,
+    "citation": "Beggs, John M., and Plenz, Dietmar. 2003. \"Neuronal Avalanches in Neocortical Circuits.\" *Journal of Neuroscience* 23(35): 11167-11177.",
+    "status": "verified",
+    "url": "https://doi.org/10.1523/jneurosci.23-35-11167.2003",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1523/jneurosci.23-35-11167.2003"
+  },
+  {
+    "n": 10,
+    "citation": "Beny, C., and Oreshkov, O. 2010. \"General Conditions for Approximate Quantum Error Correction and Near-Optimal Recovery Channels.\" *Physical Review Letters* 104: 120501.",
+    "status": "verified",
+    "url": "https://doi.org/10.1103/physrevlett.104.120501",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1103/physrevlett.104.120501"
+  },
+  {
+    "n": 11,
+    "citation": "Cao, C., and Lackey, B. 2021. \"Approximate Bacon-Shor Code and Holography.\" *Journal of High Energy Physics* 2021: 127.",
+    "status": "verified",
+    "url": "https://doi.org/10.1007/jhep05(2021)127",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1007/jhep05(2021)127"
+  },
+  {
+    "n": 12,
+    "citation": "Cao, C., Pollack, J., and Wang, Y. 2022. \"Hyperinvariant Multiscale Entanglement Renormalization Ansatz: Approximate Holographic Error Correction Codes with Power-Law Correlations.\" *Physical Review D* 105: 026018.",
+    "status": "verified-corrected",
+    "url": "https://doi.org/10.1103/physrevd.105.026018",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "doi": "10.1103/physrevd.105.026018",
+    "manual_review": "Physical Review D 105: 026018, confirmed.",
+    "correction": "Title corrected from the abbreviated 'Hyper-Invariant MERA: …' to the published title 'Hyperinvariant Multiscale Entanglement Renormalization Ansatz: Approximate Holographic Error Correction Codes with Power-Law Correlations'."
+  },
+  {
+    "n": 13,
+    "citation": "Craig, A. D. 2009. \"How Do You Feel — Now? The Anterior Insula and Human Awareness.\" *Nature Reviews Neuroscience* 10(1): 59–70.",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/nrn2555",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/nrn2555"
+  },
+  {
+    "n": 14,
+    "citation": "Critchley, Hugo D., and Harrison, Neil A. 2013. \"Visceral Influences on Brain and Behavior.\" *Neuron* 77(4): 624-638.",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/j.neuron.2013.02.008",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1016/j.neuron.2013.02.008"
+  },
+  {
+    "n": 15,
+    "citation": "Curic, D., Ashby, D. M., McGirr, A., et al. 2024. \"Existence of Multiple Transitions of the Critical State Due to Anesthetics.\" *Nature Communications* 15: 7025.",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/s41467-024-51399-2",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/s41467-024-51399-2"
+  },
+  {
+    "n": 16,
+    "citation": "Friston, Karl. 2010. \"The Free-Energy Principle: A Unified Brain Theory?\" *Nature Reviews Neuroscience* 11(2): 127-138.",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/nrn2787",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/nrn2787"
+  },
+  {
+    "n": 17,
+    "citation": "Friston, Karl. 2013. \"Life as We Know It.\" *Journal of the Royal Society Interface* 10: 20130475.",
+    "status": "verified",
+    "url": "https://doi.org/10.1098/rsif.2013.0475",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1098/rsif.2013.0475"
+  },
+  {
+    "n": 18,
+    "citation": "Gammaitoni, L., et al. 1998. \"Stochastic Resonance.\" *Reviews of Modern Physics* 70(1): 223-287.",
+    "status": "verified",
+    "url": "https://doi.org/10.1103/revmodphys.70.223",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1103/revmodphys.70.223"
+  },
+  {
+    "n": 19,
+    "citation": "Goldberger, Ary L. 2006. \"Giles F. Filley Lecture. Complex Systems.\" *Proceedings of the American Thoracic Society* 3(6): 467-471.",
+    "status": "verified",
+    "url": "https://doi.org/10.1513/pats.200603-028ms",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1513/pats.200603-028ms"
+  },
+  {
+    "n": 20,
+    "citation": "Hameroff, S., and Penrose, R. 2014. \"Consciousness in the Universe: A Review of the Orch OR Theory.\" *Physics of Life Reviews* 11(1): 39-78.",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/j.plrev.2013.08.002",
+    "checked_against": "manual",
+    "automated_pass": "PARTIAL",
+    "doi": "10.1016/j.plrev.2013.08.002",
+    "manual_review": "Physics of Life Reviews 11(1): 39-78, confirmed; the automated pass matched a 2016 book chapter with a similar title instead."
+  },
+  {
+    "n": 21,
+    "citation": "Kinouchi, Osame, and Copelli, Mauro. 2006. \"Optimal Dynamical Range of Excitable Networks at Criticality.\" *Nature Physics* 2(5): 348-351. DOI: 10.1038/nphys289.",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/nphys289",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/nphys289"
+  },
+  {
+    "n": 22,
+    "citation": "Kantz, Holger, and Schreiber, Thomas. 2004. *Nonlinear Time Series Analysis*. 2nd ed. Cambridge University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL3333310W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 23,
+    "citation": "Mashour, G. A., Roelfsema, P., Changeux, J.-P., and Dehaene, S. 2020. \"Conscious Processing and the Global Neuronal Workspace Hypothesis.\" *Neuron* 105(5): 776-798.",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/j.neuron.2020.01.026",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1016/j.neuron.2020.01.026"
+  },
+  {
+    "n": 24,
+    "citation": "Maturana, Humberto R., and Varela, Francisco J. 1980. *Autopoiesis and Cognition: The Realization of the Living*. D. Reidel.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL15015691W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 25,
+    "citation": "Metzinger, Thomas. 2003. *Being No One: The Self-Model Theory of Subjectivity*. MIT Press.",
+    "status": "verified",
+    "url": "https://direct.mit.edu/books/monograph/1991/Being-No-OneThe-Self-Model-Theory-of-Subjectivity",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "MIT Press 2003, confirmed."
+  },
+  {
+    "n": 26,
+    "citation": "Mori, Hazime. 1965. \"Transport, Collective Motion, and Brownian Motion.\" *Progress of Theoretical Physics* 33(3): 423-455.",
+    "status": "verified",
+    "url": "https://doi.org/10.1143/ptp.33.423",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1143/ptp.33.423"
+  },
+  {
+    "n": 27,
+    "citation": "Mossio, Matteo, Saborido, Cristian, and Moreno, Alvaro. 2009. \"An Organizational Account of Biological Functions.\" *British Journal for the Philosophy of Science* 60(4): 813-841.",
+    "status": "verified",
+    "url": "https://doi.org/10.1093/bjps/axp036",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1093/bjps/axp036"
+  },
+  {
+    "n": 28,
+    "citation": "Palacios, E. R., Razi, A., Parr, T., Kirchhoff, M., and Friston, K. 2020. \"On Markov Blankets and Hierarchical Self-Organisation.\" *Journal of Theoretical Biology* 486: 110089.",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/j.jtbi.2019.110089",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1016/j.jtbi.2019.110089"
+  },
+  {
+    "n": 29,
+    "citation": "Park, Hyeong-Dong, and Blanke, Olaf. 2019. \"Coupling Inner and Outer Body for Self-Consciousness.\" *Trends in Cognitive Sciences* 23(5): 377-388.",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/j.tics.2019.02.002",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1016/j.tics.2019.02.002"
+  },
+  {
+    "n": 30,
+    "citation": "Pastawski, F., Yoshida, B., Harlow, D., and Preskill, J. 2015. \"Holographic Quantum Error-Correcting Codes: Toy Models for the Bulk/Boundary Correspondence.\" *Journal of High Energy Physics* 2015: 149.",
+    "status": "verified",
+    "url": "https://doi.org/10.1007/jhep06(2015)149",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1007/jhep06(2015)149"
+  },
+  {
+    "n": 31,
+    "citation": "Perouansky, M., Johnson-Schlitz, D., Sedensky, M. M., and Morgan, P. G. 2023. \"A Primordial Target: Mitochondria Mediate Both Primary and Collateral Anesthetic Effects of Volatile Anesthetics.\" *Experimental Biology and Medicine* 248(7): 545-552.",
+    "status": "verified",
+    "url": "https://doi.org/10.1177/15353702231165025",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1177/15353702231165025"
+  },
+  {
+    "n": 32,
+    "citation": "Pradeu, Thomas. 2012. *The Limits of the Self: Immunology and Biological Identity*. Oxford University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL16686844W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 33,
+    "citation": "Pradeu, Thomas. 2016. \"Organisms or Biological Individuals? Combining Physiological and Evolutionary Individuality.\" *Biology & Philosophy* 31(6): 797-817.",
+    "status": "verified",
+    "url": "https://doi.org/10.1007/s10539-016-9551-1",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1007/s10539-016-9551-1"
+  },
+  {
+    "n": 34,
+    "citation": "Schreiber, Thomas, and Schmitz, Andreas. 1996. \"Improved Surrogate Data for Nonlinearity Tests.\" *Physical Review Letters* 77(4): 635-638.",
+    "status": "verified",
+    "url": "https://doi.org/10.1103/physrevlett.77.635",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1103/physrevlett.77.635"
+  },
+  {
+    "n": 35,
+    "citation": "Seth, Anil K., and Tsakiris, Manos. 2018. \"Being a Beast Machine: The Somatic Basis of Selfhood.\" *Trends in Cognitive Sciences* 22(11): 969-981.",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/j.tics.2018.08.008",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1016/j.tics.2018.08.008"
+  },
+  {
+    "n": 36,
+    "citation": "Speigel, I., Patel, K., Osman, V., and Hemmings, H. C. Jr. 2023. \"Volatile Anesthetics Inhibit Presynaptic cGMP Signaling to Depress Presynaptic Excitability in Rat Hippocampal Neurons.\" *Neuropharmacology* 240: 109705.",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/j.neuropharm.2023.109705",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1016/j.neuropharm.2023.109705"
+  },
+  {
+    "n": 37,
+    "citation": "Tegmark, M. 2000. \"Importance of Quantum Decoherence in Brain Processes.\" *Physical Review E* 61(4): 4194.",
+    "status": "verified",
+    "url": "https://doi.org/10.1103/physreve.61.4194",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1103/physreve.61.4194"
+  },
+  {
+    "n": 38,
+    "citation": "Thayer, Julian F., and Lane, Richard D. 2009. \"Claude Bernard and the Heart-Brain Connection: Further Elaboration of a Model of Neurovisceral Integration.\" *Neuroscience & Biobehavioral Reviews* 33(2): 81-88.",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/j.neubiorev.2008.08.004",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1016/j.neubiorev.2008.08.004"
+  },
+  {
+    "n": 39,
+    "citation": "Theiler, J., Eubank, S., Longtin, A., Galdrikian, B., and Farmer, J. D. 1992. \"Testing for Nonlinearity in Time Series: The Method of Surrogate Data.\" *Physica D* 58(1-4): 77-94.",
+    "status": "verified",
+    "url": "https://doi.org/10.1016/0167-2789(92)90102-s",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1016/0167-2789(92)90102-s"
+  },
+  {
+    "n": 40,
+    "citation": "Wilting, Jens, and Priesemann, Viola. 2018. \"Inferring Collective Dynamical States from Widely Unobserved Systems.\" *Nature Communications* 9: 2325.",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/s41467-018-04725-4",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/s41467-018-04725-4"
+  },
+  {
+    "n": 41,
+    "citation": "Wootters, William K., and Zurek, Wojciech H. 1982. \"A Single Quantum Cannot Be Cloned.\" *Nature* 299: 802-803.",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/299802a0",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/299802a0"
+  },
+  {
+    "n": 42,
+    "citation": "Zurek, W. H. 2003. \"Decoherence, Einselection, and the Quantum Origins of the Classical.\" *Reviews of Modern Physics* 75: 715.",
+    "status": "verified",
+    "url": "https://doi.org/10.1103/revmodphys.75.715",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1103/revmodphys.75.715"
+  },
+  {
+    "n": 43,
+    "citation": "Zwanzig, Robert. 1961. \"Memory Effects in Irreversible Thermodynamics.\" *Physical Review* 124(4): 983-992.",
+    "status": "verified",
+    "url": "https://doi.org/10.1103/physrev.124.983",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1103/physrev.124.983"
+  }
+]

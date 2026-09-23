@@ -210,6 +210,37 @@ def check_forbidden_phrases(quiet=False):
     return checked, errors
 
 
+def check_references(quiet=False):
+    """The citation audit must cover the reference list as it stands.
+
+    references/paperN.json records, for every reference, how it was checked and against what.
+    If a reference is added, removed or edited in a paper without the audit record being
+    rebuilt (references/build_records.py after a manual check), the site would show an unchecked
+    citation as checked. This fails the build instead.
+    """
+    errors, checked = [], 0
+    for n in (1, 2, 3):
+        rec_path = os.path.join(ROOT, "references", f"paper{n}.json")
+        if not os.path.exists(rec_path):
+            continue
+        with open(os.path.join(ROOT, f"Paper{n}.md"), encoding="utf-8") as fh:
+            sec = fh.read().split("## References", 1)[1].split("\n## ", 1)[0]
+        lines = [l.strip() for l in sec.split("\n") if l.strip()]
+        with open(rec_path, encoding="utf-8") as fh:
+            recs = json.load(fh)
+        cited = [r["citation"] for r in recs]
+        checked += 1
+        if lines != cited:
+            new = [l[:70] for l in lines if l not in cited]
+            gone = [c[:70] for c in cited if c not in lines]
+            errors.append(f"[citations] Paper{n}.md reference list differs from the audit record "
+                          f"references/paper{n}.json (new/edited: {new[:3]}; removed: {gone[:3]}). "
+                          f"Check the changed entries and rebuild with references/build_records.py.")
+    if not quiet:
+        print(f"citation-audit gate: {checked} papers checked")
+    return checked, errors
+
+
 def check(quiet=False):
     with open(MANIFEST, encoding="utf-8") as fh:
         claims = json.load(fh)
@@ -264,7 +295,8 @@ def check(quiet=False):
     _, qerrors = check_qualifications(quiet)
     _, verrors = check_verdict_guards(quiet)
     _, ferrors = check_forbidden_phrases(quiet)
-    qerrors = qerrors + verrors + ferrors
+    _, rerrors = check_references(quiet)
+    qerrors = qerrors + verrors + ferrors + rerrors
     for e in errors:
         print(f"  ERROR  {e}")
     for e in qerrors:

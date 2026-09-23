@@ -497,6 +497,37 @@ def json_block(data) -> str:
 # builders
 # --------------------------------------------------------------------------
 
+def cited_works_html(n: int) -> str:
+    """The paper's reference list as links, from the citation audit (references/paperN.json).
+    Every entry was checked against a primary index or publisher record; corrections made to
+    the paper are shown next to the entry they affected."""
+    path = os.path.join(ROOT, "references", f"paper{n}.json")
+    if not os.path.exists(path):
+        return ""
+    with open(path, encoding="utf-8") as fh:
+        refs = json.load(fh)
+    items = []
+    for r in refs:
+        cit = re.sub(r"\*([^*]+)\*", r"<em>\1</em>", html.escape(r["citation"]))
+        link = (f' <a href="{html.escape(r["url"])}" rel="noopener">link</a>'
+                if r.get("url") else "")
+        note = ""
+        if r.get("correction"):
+            note = (f'<br><span class="cite-fix"><strong>Corrected in this paper:</strong> '
+                    f'{html.escape(r["correction"])}</span>')
+        items.append(f"<li>{cit}{link}{note}</li>")
+    n_fix = sum(1 for r in refs if r.get("correction"))
+    return (f'<h2 id="cited-works">Cited works ({len(refs)})</h2>'
+            f'<p>Every work cited by this paper, with a link to it. Each reference was checked '
+            f'one by one against a primary index (Crossref, arXiv, Open Library) or the '
+            f'publisher\'s record, for authors, title, year, venue and pages; {n_fix} needed a '
+            f'correction, made in the paper and noted below. The record, with how each entry was '
+            f'checked, is <a href="{REPO_URL}/blob/main/references/paper{n}.json">'
+            f'<code>references/paper{n}.json</code></a>. A checked citation means the work exists '
+            f'as cited; it does not certify every use the paper makes of it.</p>'
+            f'<ol class="cited-works">{"".join(items)}</ol>')
+
+
 def build_papers(with_pdf: bool):
     cards = []
     for p in PAPERS:
@@ -538,6 +569,8 @@ def build_papers(with_pdf: bool):
             rel_html = (f'<h2>Experiments testing this paper</h2>'
                         f'<ul class="plain">{items}</ul>')
 
+        cited_html = cited_works_html(p["n"])
+
         actions = (
             f'<div class="btn-row">'
             f'<a class="btn primary" href="{p["slug"]}-pdf.html">Read the PDF in browser</a>'
@@ -554,6 +587,7 @@ def build_papers(with_pdf: bool):
 <div class="prose">
 {summary}
 {rel_html}
+{cited_html}
 </div>
 <h2 id="full-text">Full text</h2>
 <p class="prose">The complete paper follows, rendered from its source with a section

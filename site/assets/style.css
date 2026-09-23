@@ -506,3 +506,9 @@ aside.ai-banner .ai-banner-title {
 }
 aside.ai-banner .ai-banner-links a { font-weight: 600; }
 .ai-disclosure h1 { color: var(--warn); }
+
+/* cited-works list on each paper page (citation audit) */
+ol.cited-works { padding-left: 1.6em; }
+ol.cited-works li { margin: 0 0 .55em; line-height: 1.45; overflow-wrap: anywhere; }
+ol.cited-works .cite-fix { display: inline-block; margin-top: .2em; font-size: .92em;
+  color: var(--warn, #8a5a00); }
