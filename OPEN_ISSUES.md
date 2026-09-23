@@ -34,14 +34,22 @@ external review. It is a working list, not a checklist toward a deadline.
   (`regime_referent_eog_control`).
 - **The sleep structural discrimination is the eye too.** A1's N2-vs-REM 14/15 holds in only 2 of
   4 subjects without the EOG channel (`discrimination_eog_ablation`). What remains is the
-  eyes-open/closed discrimination, modest against within-state drift (12/15 subjects, median
+  eyes-open/closed difference, modest against within-recording drift (12/15 subjects, median
   ≈1.3; the often-quoted ≈3.3 uses a permutation estimator that ignores autocorrelation).
+- **The eyes-open/closed result is a between-recording difference, and power carries it better.**
+  `between_recording_control`: it exceeds a same-state between-recording control only weakly
+  (task-run rest periods, 11/15, p ≈ 0.024, with a control biased in the method's favour), and a
+  scalar per-channel relative-alpha-power baseline separates the states far more strongly (median
+  ≈3.5 vs ≈1.3, p ≈ 10⁻⁴). It is described as "a difference between two recordings that exceeds
+  each one's internal drift", not as structural discrimination. T0 eyes-open status is not
+  documented by PhysioNet; alpha power is only consistent with eyes open (14/15).
 - **Geometry vs scalar, overall.** On no task has the geometry yet been shown to add anything over
   a scalar carrying the same channels: centring-corrected localization ties a scalar, and the
   stage-association advantage was EOG power. A fair test needs EEG-only covariances and scalar
   baselines from the same channels, on more subjects.
 - **Power.** The H1 comparison is underpowered (n = 22); the pre-registered power-up needs
-  ~74 records and is blocked in the cloud environment (`round2_blocked_on_session_egress`).
+  ~74 records. It was blocked in the cloud environment (`round2_blocked_on_session_egress`);
+  PhysioNet was reachable again from a cloud session on 2026-09-23, so it may now be runnable.
 
 ## Paper 1 — *The Cybernetic Impossibility of Conversion*
 
@@ -55,6 +63,10 @@ external review. It is a working list, not a checklist toward a deadline.
   thesis is definitional. The wording has been aligned to §7.6; any new text should keep to it.
 - **Open problem.** Characterising the admissible identity contracts (§7.5) remains open and
   may be ill-posed under §2.2's pragmatic reading.
+- **The Class-G / reabsorption line depends on the system boundary.** Including the trigger's
+  source in the system makes the flow autonomous again, and the same event then reads as
+  reabsorption. §7.5 now states the boundary as an observer's pragmatic choice (like *I*, §2.2);
+  whether a principled criterion for drawing it exists is open.
 - **Framing** (philosophy of action / analytic theology vs an alignment venue) is undecided.
 
 ## Paper 2 — *The Conditional Biological Requirements Architecture*

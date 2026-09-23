@@ -10,7 +10,7 @@ Regenerate any result with `python -m experiments.<paper>.<experiment>.run`.
 
 ## What this file does and does not cover
 
-There are **49 experiments** with committed results. The narrative sections below discuss **20** of them — the original core set, written when the suite was small. The later experiments have their full record in their own `PRE-REGISTRATION.md` and `result.json`, and a one-paragraph verdict in **`experiments/STATUS.md`, which is the authoritative and complete per-experiment record**. This file is a narrative supplement, not an index; where the two differ, `STATUS.md` and the raw `result.json` win. **Passages written before later controls are kept as the historical record but carry struck-through wording and a bold [Later: …] note where a later run withdrew them; the forbidden-phrase gate (`experiments/forbidden_phrases.json`) checks this file too.**
+There are **50 experiments** with committed results. The narrative sections below discuss **20** of them — the original core set, written when the suite was small. The later experiments have their full record in their own `PRE-REGISTRATION.md` and `result.json`, and a one-paragraph verdict in **`experiments/STATUS.md`, which is the authoritative and complete per-experiment record**. This file is a narrative supplement, not an index; where the two differ, `STATUS.md` and the raw `result.json` win. **Passages written before later controls are kept as the historical record but carry struck-through wording and a bold [Later: …] note where a later run withdrew them; the forbidden-phrase gate (`experiments/forbidden_phrases.json`) checks this file too.**
 
 Not narrated below, so that their absence here is not read as their not existing:
 
@@ -43,6 +43,7 @@ Not narrated below, so that their absence here is not read as their not existing
 - `regime_groundtruth_gate`
 - `sleep_structure_power_dissociation`
 - `value_base_discontinuity_probe`
+- `between_recording_control`
 
 ---
 

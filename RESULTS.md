@@ -1,4 +1,4 @@
-# Results — What the 49 Experiments Found
+# Results — What the 50 Experiments Found
 
 A reader-facing synthesis of the validation suite. Every number here is read from a
 committed `result.json`; `experiments/STATUS.md` is the authoritative per-experiment
@@ -260,7 +260,13 @@ the Sasaki metric and the Ehresmann connection remain a construction whose value
 demonstrated only for *coupling-carried* transitions, which eyes-open/closed is not.
 *(`fibre_ablation`)*
 
-**Structural discrimination replicates in direction on one paradigm; the sleep replication is the eye.**
+**No real-data evidence yet that the geometry sees structure beyond power; the sleep replication is the eye.**
+On eyes-open versus eyes-closed EEG the geometry registers a difference between two recordings that
+exceeds each one's internal drift (12/15 subjects, median ≈1.3). It exceeds a same-state
+between-recording control (rest periods of two task runs: control median 0.95, eyes-open/closed higher
+in 11/15, p ≈ 0.024), but a scalar baseline on the same channels — per-channel relative alpha
+power — separates the two states far more strongly (median ≈3.5, p ≈ 10⁻⁴). So the geometry adds
+nothing measurable over per-channel alpha power there (`between_recording_control`).
 N2-versus-REM discrimination passes **14/15** recordings (median ratio 2.79), but its covariance includes a
 horizontal-EOG channel and REM is defined by eye movement: with that channel removed it holds in only 2 of 4
 subjects on the recordings available for the check (`discrimination_eog_ablation`), so it is attributed to
@@ -301,7 +307,8 @@ traced to an estimator choice and corrected to ≈3.3×, and then corrected agai
 estimator permutes overlapping, autocorrelated windows (and two separate recordings) as if
 exchangeable, which cancels slow drift and would flag almost any two recordings as different. Against
 within-state drift the effect is **≈1.3×**, above unity in **12/15** subjects (cross-subject Wilcoxon
-p ≈ 0.008). Direction replicates; the magnitude is modest. *(`eeg_reconciliation`)*
+p ≈ 0.008). That is a difference between two recordings exceeding each one's internal drift, and a
+scalar per-channel alpha-power baseline beats it (`between_recording_control`). *(`eeg_reconciliation`)*
 
 **Window size, not multiscale — confirmed on real EEG, at a smaller effect.** The large
 window reaches **7/16** against the best short window's 4/16, and the multiscale bank
