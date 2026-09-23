@@ -133,3 +133,14 @@ None of this is a discovery about conversion, biology or EEG, and the program do
 one. It claims that the question has been made precise enough to fail cleanly in three
 places.
 
+## Freeze criterion
+
+Adopted 2026-09-23, after a reviewer observed that the three papers were caught in a loop of audit, correction and re-audit. Each round made the text more honest, and none brought a paper closer to finished. From now on:
+
+- only factual-error corrections enter the papers;
+- no new experiment is run unless a stated decision point depends on its result;
+- each paper has one decision that fixes its scope:
+  - Paper 3: the MDM control and the literature survey decide whether it is about this method's traps or the field's;
+  - Paper 1: the author's section on the system boundary;
+  - Paper 2: whether a laboratory partnership is under discussion by 2026-12-23.
+

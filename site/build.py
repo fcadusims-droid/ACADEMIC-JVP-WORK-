@@ -94,6 +94,7 @@ NAV = [
     ("coverage.html", "Coverage"),
     ("formal.html", "Formal"),
     ("reproduce.html", "Reproduce"),
+    ("needs.html", "Needs"),
 ]
 
 
@@ -934,6 +935,14 @@ miscounted as dead). Unreachable:</p>
             f'<div class="prose">{md_file_to_html(os.path.join(SITE, "content", "reproduce.md"))}</div>')
     write("reproduce.html", page("Reproduce", body, depth=0, current="reproduce.html",
                                  desc="How to run the experiment suite."))
+
+    # what the work needs from others
+    body = ('<h1>What this work needs from others</h1>'
+            '<p class="lede prose">What cannot be done by the author alone or by running more '
+            'code, and which experiment or paper depends on each item.</p>'
+            f'<div class="prose">{md_file_to_html(os.path.join(SITE, "content", "needs.md"))}</div>')
+    write("needs.html", page("What this work needs", body, depth=0, current="needs.html",
+                             desc="Readers, data and partners the work depends on."))
 
     # formal
     fr = os.path.join(ROOT, "formal", "README.md")

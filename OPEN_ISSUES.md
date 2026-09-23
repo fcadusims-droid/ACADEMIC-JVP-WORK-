@@ -1,5 +1,7 @@
 # Open issues — all three papers are work in progress
 
+**Freeze criterion (adopted 2026-09-23).** After the items of the current development plan (Paper 3: the MDM control, the literature survey and the restructure; Paper 1: the author's boundary section; Paper 2: the partnership decision), only factual-error corrections enter the papers. No new experiment is run unless a decision point depends on its result. The public list of what the work needs from others is on the site's [Needs](https://fcadusims-droid.github.io/ACADEMIC-JVP-WORK-/needs.html) page and in `site/content/needs.md`.
+
 **None of the three papers is ready for submission.** This file used to be titled
 "Submission readiness" and declared Paper 3 "ready first"; that was premature and is
 withdrawn. What follows is what remains open for each paper, including problems found by
@@ -86,6 +88,9 @@ external review. It is a working list, not a checklist toward a deadline.
   suppress the signal; it is not a verdict on the architecture. The title and abstract now
   say "in public data" and name the corpus confound.
 - **Positive arm.** Not executable on public data as of 2026-09 (`cbra_dataset_inventory`).
+- **Route (decided 2026-09-23): partnership first, until 2026-12-23.** The data the positive arm needs exist in anaesthesiology and neurointensive-care laboratories, not in repositories. A data specification for a partner lab is in `drafts/paper2_data_specification.md`, as a draft for the author to review and sign; it has not been sent. A *new* collection with the protocol registered first could be a genuine Registered Report. That is distinct from the I-CARE analysis, which cannot be one. If no partnership is under discussion by 2026-12-23, the paper moves to the reduced version: a short data-requirements paper with the I-CARE negative, without Paper 1's vocabulary (Class G, contract *I*).
+- **Test Two sensitivity (deferred).** Test Two has shown specificity but has no emergent true positive. The planned test uses a network model in which the rotation is emergent, not injected, and pre-registers the model family and the hit rate across its parameter space, not a first positive case. It waits on the route decision above: under the reduced version, Test Two may leave the protocol.
+- **The 95 % variance-capture precondition.** This needs proxy recordings with directly measured ground truth, which are not public. Until they exist, it is stated as a limit on the positive arm.
 
 ## Not blocked on the papers, but pending
 
