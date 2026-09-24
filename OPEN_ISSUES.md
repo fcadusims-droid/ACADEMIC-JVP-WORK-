@@ -12,11 +12,20 @@ external review. It is a working list, not a checklist toward a deadline.
 - **Restructured (2026-09-23) as a methodological negative, per the author's decision.** The
   earlier protocol text (vector bundle, jump-diffusion, three-regime demarcation) is preserved in
   `drafts/paper3_protocol_full_2026-09-23.md`.
-- **Framing follows the pre-registered rule: traps of this method.** `mdm_trap_control` found
-  none of the four applicable traps moved the field's standard covariance→MDM pipeline past its
-  bar. The survey (`trap_literature_survey`) qualifies this: ocular handling is left open or
-  unreported in 7/19 studies (8 unclear), and dependence-blind validation in 4/19 (8 unclear).
-  The paper says both things. It does not claim the traps are general properties of the field.
+- **Framing follows the pre-registered rule: traps of this method, read as traps of this
+  design.** `mdm_trap_control` found none of the four applicable traps moved the field's
+  standard covariance→MDM pipeline past its bar. But the control changed the design as well as
+  the classifier: it keeps absolute power (no trace normalization) and uses non-overlapping
+  epochs. The paper now says so, and labels as interpretation its explanation of why the
+  standard pipeline escaped: removing power removes the dominant signal and leaves artefacts to
+  carry it.
+- **Not run: a matched control.** The same MDM on trace-normalized covariances of overlapping
+  windows would say which difference protects the standard pipeline. By the freeze criterion it
+  is not run unless a decision depends on it.
+- **The survey measures reporting, not the presence of a trap.** Ocular handling is unreported in
+  7/19 studies, 7–15/19 counting the unclear codes. Dependence-blind validation is 4/19,
+  4–12/19 counting them. The paper gives ranges and does not claim the traps are general
+  properties of the field.
 - **The survey had one coder.** A second, independent coder of the 20 studies (every code is
   quoted, so re-coding is straightforward) would make the counts citable. Listed on the site's
   Needs page.
@@ -24,8 +33,8 @@ external review. It is a working list, not a checklist toward a deadline.
   That needs an incremental comparison (scalar alone versus scalar plus geometry). By the freeze
   criterion it is not run unless a decision depends on it.
 - **The recording confound for the standard pipeline is below the bar but not zero**
-  (0.65 on two same-state recordings). A reader in EEG methods should judge whether that
-  deserves more than the paper gives it.
+  (0.65 on two same-state recordings; chance 0.50, eyes open vs closed 0.87). The abstract and
+  conclusion now say "below the pre-registered bar, but above chance".
 - **A reader in EEG or brain–computer-interface methods** is the most useful next step (Needs page).
 
 ## Paper 1 — *The Cybernetic Limits of Conversion*
