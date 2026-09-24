@@ -43,9 +43,9 @@ consequent, and each is written so that it survives the antecedent being false.
 - **Paper 3** was meant to build clause (iii): a single-trajectory demarcation method on the
   covariance manifold. That method did not survive testing, and Paper 3 is now the
   methodological record of how it looked validated and was not (five traps), with the
-  original proposal kept as a draft. It is a methods paper, and a Phase-0 gate found its titular three-regime claim is
-  not, as currently defined, externally falsifiable. It borrows *nothing* from the other two
-  and is offered on its own terms as time-series methodology.
+  original proposal kept as a draft. A Phase-0 gate had found that proposal's titular
+  three-regime claim not, as defined, externally falsifiable. It borrows *nothing* from the
+  other two and is offered on its own terms, as a record for time-series methodology.
 
 ## The dependency runs one way, and only through definitions
 

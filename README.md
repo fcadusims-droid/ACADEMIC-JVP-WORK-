@@ -10,7 +10,7 @@
 > and none of it is ready for submission. Full statement: [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md) ·
 > open problems: [`OPEN_ISSUES.md`](OPEN_ISSUES.md).
 
-Three interlinked papers by **João Vitor Perazzolo** (July 2026) and an in-silico
+Three papers by **João Vitor Perazzolo** (begun July 2026, last revised September 2026) and an in-silico
 validation suite that tests their formal and statistical claims. The suite is
 deliberately scoped by what simulation and available data *can* and *cannot*
 establish for each paper.
@@ -29,14 +29,19 @@ this repository and rebuilt on every push, so it never lags the work; see
   transformation of that structure) cannot be formulated as control without
   collapsing into tautology, annihilation, or incommensurable indeterminacy. Its
   load-bearing formal result is a *Meta-Optimization Collapse Theorem* (a
-  trichotomy), and it defines the residual admissibility profile **Class G**.
+  trichotomy), and it defines the residual admissibility profile **Class G**. It is
+  addressed to the philosophy of action; its formal statements are collected in an appendix,
+  and its theological applications are in a separate draft (`drafts/theological_companion.md`).
 
 - **`Paper2.md` — The Conditional Biological Requirements Architecture (CBRA).** A
   strict *eliminative* statistical protocol for whether a biological state
   transition preserves a hidden, identity-indexed boundary organization. It depends
   conceptually on Paper 1 (Class G, the contract *I*) but its empirical fate does
   not feed back. Its secure contribution is eliminative; its positive arm (a
-  boundary-residual *dissociation*) is heavily conditioned.
+  boundary-residual *dissociation*) is heavily conditioned. Run once on the only public corpus
+  with the right structure (I-CARE), it halted at its own gate (6 of 21 patients against a 60 %
+  bar). The paper now specifies the data a test would need, and a partner laboratory is being
+  sought until 2026-12-23.
 
 - **`Paper3.md` — Five Ways an EEG Geometry Method Looked Validated and Was Not.** A methodological negative: how a trace-normalized SPD
   geometry method for EEG looked validated and was not, through five traps (centre bias,

@@ -10,5 +10,6 @@ echo "Running shared_lib self-tests..."
 python -m experiments.shared_lib.test_shared_lib
 
 echo
-echo "Environment ready. Recommended run order: D -> A -> B -> C, G -> F -> E, H -> I -> J."
-echo "See experiments/STATUS.md for live state."
+echo "Environment ready. Run any experiment with:"
+echo "  python -m experiments.<paper_dir>.<experiment>.run"
+echo "The full list, with verdicts, is in experiments/STATUS.md."

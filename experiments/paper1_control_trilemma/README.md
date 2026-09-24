@@ -1,4 +1,7 @@
-# Paper 1 — Control Trilemma (Phase 2)
+# Paper 1 — Control Trilemma (Phase 2 plan)
+
+*Planning note from Phase 2. The experiments added since, and every verdict, are in
+`../STATUS.md` and `../../RESULTS.md`.*
 
 Checkable dynamical-systems claims, and the experiment that can *falsify* the
 Sec. 7.5/7.6 defence as written. Simulation says nothing about grace or metanoia —

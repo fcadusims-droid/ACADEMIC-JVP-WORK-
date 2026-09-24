@@ -5,6 +5,8 @@ that followed the same protocol. This document states the protocol, and then —
 usefully — lists the occasions on which it **cost something**, because a
 pre-registration that never changes an outcome is decoration.
 
+Paper 3 section numbers in historical entries (§2 regimes, §3.2 fibre, §3.3 Sasaki metric, §7.6) refer to the earlier protocol text, preserved as `drafts/paper3_protocol_full_2026-09-23.md`; the current Paper 3 has a different structure.
+
 ## The protocol
 
 1. **Pre-registration before execution.** Each experiment has a

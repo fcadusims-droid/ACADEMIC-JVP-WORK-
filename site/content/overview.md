@@ -16,8 +16,8 @@ result and its argument is transcendental — it does not propose a mechanism, i
 argues that a dominant family of mechanisms cannot state the question. Paper 2 is
 conditional throughout and its secure contribution is *eliminative*: it says what
 would have to be measurable, and reports a pre-registered negative on whether it
-presently can be. Paper 3 is logically independent of both and stands or falls as a
-time-series method.
+presently can be. Paper 3 is logically independent of both. It no longer offers a method; it is the
+pre-registered record of how one came to look validated, and stands or falls as that record.
 
 That asymmetry matters for reading them. A reader who accepts Paper 3 incurs no
 commitment to Paper 1; a reader who rejects Paper 2's empirical arm leaves Paper 1

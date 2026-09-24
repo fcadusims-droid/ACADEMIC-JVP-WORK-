@@ -1,4 +1,7 @@
-# Paper 2 — CBRA Protocol (Phase 3)
+# Paper 2 — CBRA Protocol (Phase 3 plan)
+
+*Planning note from Phase 3. The experiments added since, and every verdict, are in
+`../STATUS.md` and `../../RESULTS.md`.*
 
 Scope is deliberately narrow: **simulation cannot confirm CBRA.** It can only say
 whether the statistical design is feasible before spending on real subjects. No
