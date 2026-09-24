@@ -15,9 +15,11 @@ external review. It is a working list, not a checklist toward a deadline.
 - **Framing follows the pre-registered rule: traps of this method, read as traps of this
   design.** `mdm_trap_control` found none of the four applicable traps moved the field's
   standard covariance→MDM pipeline past its bar. But the control changed the design as well as
-  the classifier: it keeps absolute power (no trace normalization) and uses non-overlapping
+  the classifier: it keeps each epoch's amplitude (no trace normalization) and uses non-overlapping
   epochs. The paper now says so, and labels as interpretation its explanation of why the
-  standard pipeline escaped: removing power removes the dominant signal and leaves artefacts to
+  standard pipeline escaped. Band-pass filtering followed by trace normalization removes the
+  amplitude of a band relative to the rest of the spectrum, not power in general. Where the
+  states differ in that amplitude (alpha, eyes open vs closed), that leaves correlation structure and artefacts to
   carry it.
 - **Not run: a matched control.** The same MDM on trace-normalized covariances of overlapping
   windows would say which difference protects the standard pipeline. By the freeze criterion it
@@ -53,7 +55,7 @@ external review. It is a working list, not a checklist toward a deadline.
   source in the system makes the flow autonomous again, and the same event then reads as
   reabsorption. §7.5 now states the boundary as an observer's pragmatic choice (like *I*, §2.2);
   whether a principled criterion for drawing it exists is open.
-- **Framing (decided 2026-09-23).** Paper 1 is addressed to the philosophy of action, where §7.8 already argues with Callard, Paul and Pettigrew. The theological sections (formerly §§10–12) were moved to `drafts/theological_companion.md`, a second paper still to be written that cites the first. Still open for the author: whether to move the formalism into an appendix, as a reviewer suggested; and writing the central argument that relativity to the system boundary does not trivialize the thesis (see `drafts/boundary_section_support.md`). That section should be written by the author.
+- **Framing (decided 2026-09-23).** Paper 1 is addressed to the philosophy of action, where §7.8 already argues with Callard, Paul and Pettigrew. The theological sections (formerly §§10–12) were moved to `drafts/theological_companion.md`, a second paper still to be written that cites the first. The formalism was moved into Appendix A (2026-09-24). The body now states in words: the contract *I* (§2.2, §4); the distinction between a non-tracking trigger and deviation-penalizing tracking (§7.3, §7.5); the identity-bearing/agency-bearing vocabulary and the two constraints (§7.1); the theorem's three cases (§7.5); and the Class G definition, with its ten conditions in words (§8.3). The equations, the theorem's formal statement, the simulation numbers and the U-limit predicate are in the appendix, moved verbatim, so every checked sentence is still in the paper. The author should confirm that the body keeps every definition that §7.8 and the future boundary section argue with. Still open for the author: writing the central argument that relativity to the system boundary does not trivialize the thesis (see `drafts/boundary_section_support.md`). That section should be written by the author.
 
 ## Paper 2 — *The Conditional Biological Requirements Architecture*
 
@@ -67,7 +69,7 @@ external review. It is a working list, not a checklist toward a deadline.
   suppress the signal; it is not a verdict on the architecture. The title and abstract now
   say "in public data" and name the corpus confound.
 - **Positive arm.** Not executable on public data as of 2026-09 (`cbra_dataset_inventory`).
-- **Route (decided 2026-09-23): partnership first, until 2026-12-23.** The data the positive arm needs exist in anaesthesiology and neurointensive-care laboratories, not in repositories. A data specification for a partner lab is in `drafts/paper2_data_specification.md`, as a draft for the author to review and sign; it has not been sent. A *new* collection with the protocol registered first could be a genuine Registered Report. That is distinct from the I-CARE analysis, which cannot be one. If no partnership is under discussion by 2026-12-23, the paper moves to the reduced version: a short data-requirements paper with the I-CARE negative, without Paper 1's vocabulary (Class G, contract *I*).
+- **Route (decided 2026-09-23): partnership first, until 2026-12-23.** The data the positive arm needs exist in anaesthesiology and neurointensive-care laboratories, not in repositories. A data specification for a partner lab is in `drafts/paper2_data_specification.md`, as a draft for the author to review and sign; it has not been sent. A shortlist of candidate groups is in `drafts/paper2_candidate_groups.md` (2026-09-24). Each group has at least one verified study that recorded raw EEG with simultaneous ECG in coma or anaesthesia; none meets all three data properties as published. A *new* collection with the protocol registered first could be a genuine Registered Report. That is distinct from the I-CARE analysis, which cannot be one. If no partnership is under discussion by 2026-12-23, the paper moves to the reduced version: a short data-requirements paper with the I-CARE negative, without Paper 1's vocabulary (Class G, contract *I*).
 - **Test Two sensitivity (deferred).** Test Two has shown specificity but has no emergent true positive. The planned test uses a network model in which the rotation is emergent, not injected, and pre-registers the model family and the hit rate across its parameter space, not a first positive case. It waits on the route decision above: under the reduced version, Test Two may leave the protocol.
 - **The 95 % variance-capture precondition.** This needs proxy recordings with directly measured ground truth, which are not public. Until they exist, it is stated as a limit on the positive arm.
 

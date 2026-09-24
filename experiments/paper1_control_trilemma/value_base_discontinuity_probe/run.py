@@ -365,7 +365,6 @@ def local_lipschitz(rr, dp, field, seed=1, n_samples=400, eps=1e-4):
     rng = np.random.default_rng(seed + 7)
     theta = rng.random((M, D))
     bumps = rng.random((K, D))
-    worst = 0.0
     vals = []
     for i in range(n_samples):
         theta, bumps = _rk4(theta, bumps, rr, dp, DT, field)
@@ -491,8 +490,6 @@ def main():
     elif all_smooth_converged:
         lam_vals = {k: round(lam_star(v), 3) for k, v in divergent_cells.items()}
         rec_vals = {k: round(v["recurrence_smooth"], 3) for k, v in divergent_cells.items()}
-        pos_hi = all(lam_star(v) < 0.02 or v["recurrence_smooth"] >= 0.5
-                     for v in divergent_cells.values())
         band = ("all Case-1 (negative lambda)" if all(lam_star(v) < 0 for v in divergent_cells.values())
                 else "genuine finite near-zero lambda WITH high recurrence -- Case 3 "
                      "(bounded-recurrent), the allowed 'positive-entropy-but-recurrent' "

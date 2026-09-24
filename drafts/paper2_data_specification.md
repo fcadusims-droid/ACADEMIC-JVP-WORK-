@@ -76,7 +76,8 @@ exists. The one public attempt was negative.
 ## For the author before sending
 
 - Check every number above against the cited `result.json`.
-- Decide which groups to write to. A reviewer offered to help identify three to five named
+- Decide which groups to write to. A verified shortlist is in `drafts/paper2_candidate_groups.md`.
+  A reviewer also offered to help identify three to five named
   groups, for example anaesthesiology EEG labs or neurointensive care units with concurrent
   EEG/ECG monitoring. A direct e-mail to named groups is what brings collaborators; a web page
   does not.

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "jvp-geodesic-kinematics"
 version = "0.1.0"
-description = "SPD-manifold geometry, jump-diffusion demarcation, and change-point detectors for non-stationary multichannel signals on curved state spaces (JVP trilogy, Paper 3)."
+description = "SPD-manifold geometry, jump-diffusion simulation, and change-point detectors for non-stationary multichannel signals, as used in the JVP experiment suite."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }

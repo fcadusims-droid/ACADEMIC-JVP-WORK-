@@ -58,8 +58,8 @@ def main():
     survives = s2 >= s3 - 1
     med3 = float(np.median([r["ratio_with_eog"] for r in rows]))
     med2 = float(np.median([r["ratio_eeg_only"] for r in rows]))
-    verdict = ((f"THE SLEEP DISCRIMINATION SURVIVES WITHOUT THE EYE. " if survives else
-                f"THE SLEEP DISCRIMINATION IS CARRIED BY THE EOG CHANNEL. ") +
+    verdict = (("THE SLEEP DISCRIMINATION SURVIVES WITHOUT THE EYE. " if survives else
+                "THE SLEEP DISCRIMINATION IS CARRIED BY THE EOG CHANNEL. ") +
                f"N2-vs-REM under a circular-shift null: with EOG {k3}/{len(rows)} recordings "
                f"({s3}/{len(subs)} subjects), median ratio {med3:.2f}; EEG only (Fpz-Cz, Pz-Oz) "
                f"{k2}/{len(rows)} recordings ({s2}/{len(subs)} subjects), median ratio {med2:.2f}. " +

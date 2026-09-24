@@ -278,7 +278,6 @@ def main():
     #   subsampled + subsampling-robust MR estimator. "Works in practice" requires an
     #   executable estimator on the physiological observable (a continuous stream).
     works_aval = (res_real <= 0.30 and acc_safe >= 0.50)
-    works_naive = (res_cont <= 0.30 and acc_safe_cont >= 0.50 and cert_power_cont >= 0.5)
     works_mr = (res_mr <= 0.30 and acc_safe_mr >= 0.50 and cert_power_mr >= 0.5)
 
     concept_note = (
@@ -300,7 +299,7 @@ def main():
 
     if works_mr:
         verdict = (
-            f"CONTROL WORKS -- BUT ONLY WITH A SUBSAMPLING-ROBUST ESTIMATOR; Sec 14.1 "
+            "CONTROL WORKS -- BUT ONLY WITH A SUBSAMPLING-ROBUST ESTIMATOR; Sec 14.1 "
             f"must specify one. " + concept_note + " " + naive_note +
             f" The subsampling-robust multistep-regression (MR) estimator on the SAME "
             f"short trace removes the attenuation (true sigma=0.94 -> "
@@ -315,7 +314,7 @@ def main():
             f"estimator requirement; with it, the loop closes.")
     elif works_aval and not works_mr:
         verdict = (
-            f"CONTROL NOT EXECUTABLE ON SHORT CONTINUOUS DATA -- a new, more serious "
+            "CONTROL NOT EXECUTABLE ON SHORT CONTINUOUS DATA -- a new, more serious "
             f"limitation. " + concept_note + " " + naive_note +
             f" Even the subsampling-robust MR estimator does not rescue it on this "
             f"short a recording (residual confound {res_mr:.0%}, accept(safe) "

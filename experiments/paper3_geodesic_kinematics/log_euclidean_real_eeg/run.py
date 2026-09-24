@@ -33,9 +33,8 @@ from experiments.shared_lib import spd_manifold as spd
 from experiments.shared_lib import manifold_trajectory as mt
 from experiments.paper3_geodesic_kinematics.sleep_stage_localization.run import (
     load_subject, discover_subjects, sliding_covs_labeled, find_transition,
-    discrimination as sqrt_discrimination, _ratio,
-    N_PERM, N_SUBJECTS, SEG_SEC, STEP_SEC, TOL_SEC, MIN_SEG_SEC, LARGE_W, DISC_STAGES,
-    WANT_CH, BAND,
+    discrimination as sqrt_discrimination, N_PERM,
+    N_SUBJECTS, SEG_SEC, STEP_SEC, TOL_SEC, MIN_SEG_SEC, DISC_STAGES,
 )
 from experiments.paper3_geodesic_kinematics.online_localization_cusum.run import (
     cusum_changepoint, _hit,

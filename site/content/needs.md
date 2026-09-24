@@ -40,7 +40,10 @@ depends on it. If you can help with any item, please open an issue on the
   This exists in anaesthesiology and neurointensive-care laboratories, not in repositories. The
   design, with its numbers, is in `drafts/paper2_data_specification.md`. The analysis would be
   registered before any data are seen. If no partnership is under discussion by 2026-12-23,
-  Paper 2 moves to a short data-requirements version.
+  Paper 2 moves to a short data-requirements version. A verified shortlist of groups that have
+  recorded raw EEG with simultaneous ECG in coma or anaesthesia is in
+  `drafts/paper2_candidate_groups.md`. None meets all three properties as published; the closest
+  (post-cardiac-arrest coma with survivors and non-survivors in one cohort) lacks only length.
 - **Proxy data with a known ground truth, for the 95 % precondition.** The positive rung requires
   a proxy that captures about 95 % of the variance of the process it stands in for. Quantifying
   this for cardio-interoceptive proxies needs recordings in which the proxied process is also

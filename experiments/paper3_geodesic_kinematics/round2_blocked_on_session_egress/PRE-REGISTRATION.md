@@ -1,6 +1,6 @@
 # Pre-registration — Round-2 data items blocked on this session's egress TLS path
 
-**Status:** pre-registered, NOT run. Blocked by this session's egress TLS path (see corrected diagnosis below), not by a global PhysioNet outage. No `result.json`, so none
+**Status (updated 2026-09-24):** the blocker below cleared on 2026-09-23, when PhysioNet became reachable from the cloud session. Item 1 was then run as `h1_powerup_offcentre`. Items 2 and 3 remain pre-registered and not run; under the freeze criterion in `OPEN_ISSUES.md` they run only if a decision depends on them. **Original status:** pre-registered, NOT run. Blocked by this session's egress TLS path (see corrected diagnosis below), not by a global PhysioNet outage. No `result.json`, so none
 of these is counted as a completed experiment. The designs are fixed here *before* data access
 precisely so that, when the data becomes reachable, they cannot be retro-fitted to a result.
 

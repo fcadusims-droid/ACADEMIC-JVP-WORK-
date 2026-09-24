@@ -152,7 +152,6 @@ def main():
     sym_best_hits = max(sym[w]["hits"] for w in WINDOWS)
     cau_best_hits = max(cau[w]["hits"] for w in WINDOWS)
     cadj_best_hits = max(cadj[w]["hits"] for w in WINDOWS)
-    gap_naive = sym_best_hits - cau_best_hits
     gap_adjacent = sym_best_hits - cadj_best_hits
 
     smallest_guarded_w = min(cadj_guarded) if cadj_guarded else None

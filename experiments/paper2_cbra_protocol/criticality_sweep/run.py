@@ -153,7 +153,7 @@ def main():
     vmax = max(D_gated, max(grid[fb].max() for fb in FEEDBACKS), 0.01)
     vmin = min(0.0, min(grid[fb].min() for fb in FEEDBACKS))
     for ax, fb in zip(axes, FEEDBACKS):
-        im = ax.imshow(grid[fb], origin="lower", aspect="auto", cmap="magma",
+        ax.imshow(grid[fb], origin="lower", aspect="auto", cmap="magma",
                        vmin=vmin, vmax=vmax)
         ax.set_xticks(range(len(READOUT_NOISES))); ax.set_xticklabels(READOUT_NOISES)
         ax.set_yticks(range(len(CRIT_EXPONENTS))); ax.set_yticklabels(CRIT_EXPONENTS)

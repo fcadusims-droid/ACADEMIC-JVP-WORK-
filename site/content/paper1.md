@@ -37,6 +37,9 @@ adjectival shielding.
 
 ## What the suite established, and what it cost
 
+The paper's body states the argument in prose. The equations, the theorem's formal statement,
+the simulation numbers and the U-limit predicate are collected in its Appendix A.
+
 The load-bearing formal result is a **Meta-Optimization Collapse Theorem**, a
 trichotomy. Its first Lean formalization rested on two axioms that were **false as
 stated** — pointwise versions of Poincaré and Conley — which an external review caught

@@ -161,5 +161,23 @@
     ],
     "pattern": "(?i)adds nothing measurable over|carried at least as well by per-channel",
     "why": "between_recording_control C2 compares two ratios in different spaces; it shows alpha power separates the states more strongly, not that the geometry carries nothing beyond it."
+  },
+  {
+    "id": "P3: the MDM control does not keep absolute power; the lesson is cross-band amplitude",
+    "paper": [
+      "Paper3.md",
+      "RESULTS.md",
+      "experiments/STATUS.md",
+      "OPEN_ISSUES.md",
+      "METHODOLOGY.md",
+      "site/content/data.md",
+      "site/content/overview.md",
+      "site/content/paper1.md",
+      "site/content/paper2.md",
+      "site/content/paper3.md",
+      "site/content/reproduce.md"
+    ],
+    "pattern": "(?i)keeps? absolute power|kept absolute power|removing power removes|normalizes covariances to remove power",
+    "why": "mdm_trap_control used band-filtered data (standardized over the night for sleep), so it keeps epoch amplitude, not absolute power; and the eyes-open/closed scalar is relative alpha (8-13 / 1-40 Hz, unfiltered), itself normalized. What band-pass filtering plus trace normalization removes is the amplitude of a band relative to the rest of the spectrum."
   }
 ]

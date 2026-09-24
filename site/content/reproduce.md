@@ -4,7 +4,12 @@
 git clone https://github.com/fcadusims-droid/ACADEMIC-JVP-WORK-.git
 cd ACADEMIC-JVP-WORK-
 pip install -e .
+pip install -r experiments/requirements.txt
 ```
+
+The first line installs the shared library; the second adds what individual experiments
+need (EDF and MNE readers for the real-data runs, pyRiemann and scikit-learn for the
+standard-pipeline control, ruptures and hmmlearn for the change-point baselines).
 
 ## Running an experiment
 

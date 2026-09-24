@@ -2,7 +2,6 @@
 numpy>=1.26
 scipy>=1.11
 matplotlib>=3.8
-pandas>=2.1
 
 # Real-data experiments need EDF / MATLAB-WFDB readers (imported lazily inside the
 # loaders, so the synthetic experiments and shared_lib do not require them):
@@ -15,6 +14,10 @@ mne>=1.6
 # The field's standard Riemannian baseline (mdm_trap_control): covariance -> MDM.
 pyriemann==0.12
 scikit-learn>=1.3
+# Standard change-point and HMM baselines (baseline_benchmark,
+# scalar_vs_manifold_localization), imported inside those experiments.
+ruptures>=1.1
+hmmlearn>=0.3
 
 # Phase 2 (Paper 1 RL trichotomy, Exp E) pulls these in on demand; they are not
 # needed for the shared_lib, Paper 3, or Paper 2 experiments and are listed

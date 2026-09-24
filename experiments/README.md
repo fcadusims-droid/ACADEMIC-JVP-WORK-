@@ -11,9 +11,11 @@ different problems in each:
 
 | Paper | What it is | What simulation **can** do | What it **cannot** do |
 |---|---|---|---|
-| **1 — Cybernetic Limits** | Dynamical-systems math applied by analogy to theology | Check whether the theorems hold numerically; try to *falsify* the Sec. 7.5/7.6 trichotomy defence with a real agent | Say anything about grace or metanoia — out of scope of any experiment |
+| **1 — Cybernetic Limits** | Conceptual argument in the philosophy of action with a dynamical-systems core (the theological applications are now in `drafts/theological_companion.md`) | Check whether the theorems hold numerically; try to *falsify* the Sec. 7.5/7.6 trichotomy defence with a real agent | Say anything about grace or metanoia — out of scope of any experiment |
 | **2 — CBRA** | Statistical protocol on biological tissue | Test the *tool*: statistical power, false-positive rate, whether the added dissociation test is even feasible before spending on real subjects | Prove a "Lambda channel" exists in tissue — only real data can, and even that only partially |
-| **3 — Geodesic Kinematics** | Inference method, already in contact with real EEG | Attack the two concrete open problems the appendix already isolated (localization 5/15; drift-vs-jump confusion) | — (this is where simulation pays off fastest) |
+| **3 — Five Ways (EEG geometry)** | Methodological negative on an EEG geometry method, in contact with real EEG | Attack the two concrete open problems the earlier protocol text had isolated (localization 5/15; drift-vs-jump confusion) | — (this is where simulation pays off fastest) |
+
+*The priority, layout and execution order below are the original Phase 1–3 plan (Exps A–J). The suite has since grown to 54 experiments; all of them, with verdicts, are listed in `STATUS.md`.*
 
 **Priority: Paper 3 first** (highest return per effort, problem already isolated),
 **Paper 1 second** (checkable, and can falsify the defence as written),

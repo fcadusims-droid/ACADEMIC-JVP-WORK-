@@ -1,7 +1,11 @@
-# Paper 3 — Geodesic Kinematics (Phase 1)
+# Paper 3 — EEG geometry method (Phase 1 plan)
+
+*Planning note from Phase 1. The experiments added since, and every verdict, are in
+`../STATUS.md` and `../../RESULTS.md`. Paper 3 is now a methodological negative (*Five Ways
+an EEG Geometry Method Looked Validated and Was Not*).*
 
 The only paper already in contact with real data (EEG), with two concrete open
-problems the appendix isolated. Highest return per effort.
+problems the earlier protocol text isolated. Highest return per effort.
 
 | Exp | Folder | Attacks |
 |---|---|---|
