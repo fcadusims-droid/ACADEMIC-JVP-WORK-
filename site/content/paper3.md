@@ -36,10 +36,12 @@ It is logically independent of its two companions.
   applied at its pre-registered bar on these data (`mdm_trap_control`), so by the
   pre-registered rule these are traps of *this method*. Two same-state recordings were still
   told apart at 0.65: below the bar of 0.70, but above chance.
-- **Design, not classifier.** The standard pipeline keeps absolute power, which this method
-  divides out, and it was run on non-overlapping epochs. So the defensible reading is traps of
-  this *design*. The paper offers this as interpretation: removing power removes the dominant
-  signal and leaves the statistic answering to artefacts.
+- **Design, not classifier.** The standard pipeline keeps each epoch's amplitude, which this
+  method's trace normalization removes, and it was run on non-overlapping epochs. So the
+  defensible reading is traps of this *design*. The paper offers this as interpretation.
+  Band-pass filtering followed by trace normalization removes the amplitude of a band relative
+  to the rest of the spectrum. Eyes open and closed differ in exactly that, so the method is left
+  with correlation structure and artefacts.
 - **Published studies.** A pre-registered survey of 20 published covariance/Riemannian EEG
   studies measured what they report (`trap_literature_survey`). For two of the traps,
   published practice often does not let a reader rule them out:

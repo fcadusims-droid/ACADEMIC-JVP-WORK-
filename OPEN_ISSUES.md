@@ -15,9 +15,11 @@ external review. It is a working list, not a checklist toward a deadline.
 - **Framing follows the pre-registered rule: traps of this method, read as traps of this
   design.** `mdm_trap_control` found none of the four applicable traps moved the field's
   standard covariance→MDM pipeline past its bar. But the control changed the design as well as
-  the classifier: it keeps absolute power (no trace normalization) and uses non-overlapping
+  the classifier: it keeps each epoch's amplitude (no trace normalization) and uses non-overlapping
   epochs. The paper now says so, and labels as interpretation its explanation of why the
-  standard pipeline escaped: removing power removes the dominant signal and leaves artefacts to
+  standard pipeline escaped. Band-pass filtering followed by trace normalization removes the
+  amplitude of a band relative to the rest of the spectrum, not power in general. Where the
+  states differ in that amplitude (alpha, eyes open vs closed), that leaves correlation structure and artefacts to
   carry it.
 - **Not run: a matched control.** The same MDM on trace-normalized covariances of overlapping
   windows would say which difference protects the standard pipeline. By the freeze criterion it
