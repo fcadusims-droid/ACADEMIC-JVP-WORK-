@@ -49,7 +49,6 @@ BAND = (0.5, 30.0)
 WIN_SEC = 2.0
 STEP_SEC = 1.0
 EIG_FLOOR = 1e-3
-EPOCH_SEC = 30.0
 LARGE_W = 40            # persistence-sensitive window (windows), ~40 s each side
 MIN_SEG_SEC = 20.0
 TOL_SEC = 30.0          # +/- one scoring epoch
@@ -118,12 +117,6 @@ def sliding_covs_labeled(data, fs, stage):
 # ======================================================================
 #  Test 1 -- structural discrimination with within-state permutation null
 # ======================================================================
-def _mean_density(covs):
-    embs = np.mean([spd.sqrt_embed(c) for c in covs], axis=0)
-    nrm = np.sqrt(np.sum(embs * embs))
-    return spd.sqrt_unembed(embs * (_R / nrm)) if nrm > 1e-12 else spd.sqrt_unembed(embs)
-
-
 def _ratio(embA, embB):
     """between/within ratio from two groups of embedded covs (arrays (n,d,d))."""
     def gmean(E):
@@ -242,7 +235,6 @@ def main():
         if d is None and l is None:
             print(f"  {pref}: no usable N2/REM bank and no qualifying transition -- skipped")
             continue
-        row = {"subject": pref}
         if d is not None:
             disc_rows.append({"subject": pref, **d})
         if l is not None:
@@ -260,8 +252,8 @@ def main():
     n_subj_loc = len({subj_id(r["subject"]) for r in loc_rows})
     from collections import Counter
     trans_types = dict(Counter(f"{r['from']}->{r['to']}" for r in loc_rows))
-    rec_note = (f" [N={{n}} are RECORDINGS from {{ns}} distinct subjects, both nights; "
-                f"nights of one subject are not fully independent.]")
+    rec_note = (" [N={n} are RECORDINGS from {ns} distinct subjects, both nights; "
+                "nights of one subject are not fully independent.]")
 
     # ---- Test 1 verdict ----
     nd = len(disc_rows)
@@ -274,7 +266,6 @@ def main():
     med_ratio = float(np.median([r["ratio"] for r in disc_rows])) if nd else float("nan")
     cu_med_err = float(np.median([r["cusum"]["err_s"] for r in loc_rows])) if nl else float("nan")
 
-    disc_ok = nd >= 12 and disc_pass >= 12
     if nd < 12:
         disc_verdict = (f"UNDERPOWERED: only {nd} subjects had a usable N2/REM bank "
                         f"(need 15); of those {disc_pass} discriminate. Re-run with more "
@@ -283,7 +274,7 @@ def main():
         disc_verdict = (f"GENERALIZES: N2-vs-REM structural discrimination passes the "
                         f"permutation null in {disc_pass}/{nd} recordings (median ratio "
                         f"{med_ratio:.2f})" + rec_note.format(n=nd, ns=n_subj_disc) +
-                        f" The trace-normalized geometry discriminates a real structural "
+                        " The trace-normalized geometry discriminates a real structural "
                         f"regime beyond occipital alpha -- a second, independent paradigm, "
                         f"as pre-registered.")
     else:

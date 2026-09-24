@@ -26,13 +26,12 @@ from experiments.paper3_geodesic_kinematics.online_localization_cusum.run import
 )
 from experiments.paper3_geodesic_kinematics.sleep_stage_localization.run import (
     load_subject, sliding_covs_labeled, find_transition, discover_subjects,
-    SEG_SEC, STEP_SEC, TOL_SEC, MIN_SEG_SEC, WIN_SEC, EIG_FLOOR,
+    SEG_SEC, STEP_SEC, TOL_SEC, MIN_SEG_SEC, WIN_SEC,
 )
 from experiments.paper3_geodesic_kinematics.real_eeg_localization.run import (
     load_state_covs, sliding_covs, SEG_SEC as AL_SEG_SEC, STEP_SEC as AL_STEP,
     TOL_SEC as AL_TOL_SEC, N_SUBJECTS as AL_N,
 )
-from experiments.shared_lib import spd_manifold as spd
 
 warnings.filterwarnings("ignore")
 RESULTS_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "_results",

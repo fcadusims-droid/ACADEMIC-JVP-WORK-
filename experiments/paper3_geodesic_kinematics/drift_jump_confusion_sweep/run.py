@@ -157,7 +157,7 @@ def window_dependence(metric="sqrt", seed0=8000):
 
 
 def seed_stability(metric="sqrt"):
-    d, cf, T = 0.3, 0.3, T0
+    d, T = 0.3, T0
     rates = []
     for bank in range(3):
         s0 = 90000 + bank * 5000

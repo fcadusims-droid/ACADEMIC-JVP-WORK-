@@ -38,7 +38,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import spearmanr
 
 from experiments.paper3_geodesic_kinematics.localization_multiscale.run import (
-    embed_cumsum, _win_mean_emb, _sphere_dist_emb, _R,
+    embed_cumsum, _win_mean_emb, _sphere_dist_emb,
 )
 from experiments.paper3_geodesic_kinematics.online_localization_cusum.run import (
     cusum_changepoint,

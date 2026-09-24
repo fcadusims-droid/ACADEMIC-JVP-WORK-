@@ -37,16 +37,6 @@ RATE_BAR = 0.95          # Test Three: >=95% of repeats on the right side
 # ======================================================================
 #  Test Two -- idempotent covariance rotation, and its two nulls
 # ======================================================================
-def _rot_matrix(d, theta, rng):
-    """A random orthogonal rotation by fixed principal angle theta in a random plane."""
-    Q, _ = np.linalg.qr(rng.standard_normal((d, d)))
-    G = np.eye(d)
-    i, j = 0, 1
-    G[i, i] = np.cos(theta); G[j, j] = np.cos(theta)
-    G[i, j] = -np.sin(theta); G[j, i] = np.sin(theta)
-    return Q @ G @ Q.T
-
-
 def test_two():
     rng = np.random.default_rng(0)
     d = D

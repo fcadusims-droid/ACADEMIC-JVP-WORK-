@@ -19,9 +19,9 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-from experiments.paper3_geodesic_kinematics.localization_multiscale.run import embed_cumsum, _R, _sphere_dist_emb
+from experiments.paper3_geodesic_kinematics.localization_multiscale.run import embed_cumsum, _sphere_dist_emb
 from experiments.paper3_geodesic_kinematics.sleep_stage_localization.run import (
-    load_subject, sliding_covs_labeled, discover_subjects, WIN_SEC, STEP_SEC, EIG_FLOOR,
+    load_subject, sliding_covs_labeled, discover_subjects,
 )
 
 warnings.filterwarnings("ignore")

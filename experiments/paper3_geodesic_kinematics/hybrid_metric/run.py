@@ -127,8 +127,6 @@ def main():
     power_h = np.array([np.mean(coll_h[cf] > thr_h) for cf in COLLAPSE_FACTORS])
 
     # the corner = weak jump (collapse 0.7, col 0) x moderate/strong drift (rows >=2)
-    corner_o = auc_o[2:, 0]
-    corner_h = auc_h[2:, 0]
     worst_o = float(np.min(auc_o[2:, 0]))
     worst_h = float(np.min(auc_h[2:, 0]))
     # jump power on genuine strong collapses (collapse <= 0.3, cols 2,3)

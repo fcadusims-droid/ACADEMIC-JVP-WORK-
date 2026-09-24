@@ -126,7 +126,7 @@ def main():
     # figure: power heatmaps per matching + min-n bars
     fig, axes = plt.subplots(1, len(MATCHINGS), figsize=(16, 5), sharey=True)
     for ax, m in zip(axes, MATCHINGS):
-        im = ax.imshow(grids[m], origin="lower", aspect="auto", vmin=0, vmax=1, cmap="viridis")
+        ax.imshow(grids[m], origin="lower", aspect="auto", vmin=0, vmax=1, cmap="viridis")
         ax.set_xticks(range(len(SAMPLE_SIZES))); ax.set_xticklabels(SAMPLE_SIZES)
         ax.set_yticks(range(len(SNRS))); ax.set_yticklabels(SNRS)
         ax.set_xlabel("n per condition"); ax.set_title(f"matching sd={m}\nFPR@H0={fpr[m]:.2f}")

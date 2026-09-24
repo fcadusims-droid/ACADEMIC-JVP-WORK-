@@ -127,7 +127,7 @@ def main():
     os.makedirs(RESULTS_DIR, exist_ok=True)
     rng = np.random.default_rng(0)
     mats = sorted(glob.glob(os.path.join(DATA_DIR, "*_ECG.mat")))
-    print(f"Trilha B1 -- CBRA boundary residual estimability on I-CARE")
+    print("Trilha B1 -- CBRA boundary residual estimability on I-CARE")
     print(f"  Part A (ECG coverage): {ECG_COVERAGE['with_ecg_and_eeg']}/"
           f"{ECG_COVERAGE['sampled']} = {ECG_COVERAGE['fraction']:.0%} have ECG+EEG")
     print(f"  Part B: {len(mats)} ECG segments on disk; time-reversal asymmetry vs "

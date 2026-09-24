@@ -160,7 +160,6 @@ def main():
     partial = [k for k in FAIR_ALTERNATIVES
                if worst[k] > baseline + 0.05 and strong_power[k] >= 0.80 and worst[k] < 0.85]
     tradeoff = [k for k in FAIR_ALTERNATIVES if worst[k] > baseline + 0.05 and strong_power[k] < 0.80]
-    best_alt = max(FAIR_ALTERNATIVES, key=lambda k: worst[k])
 
     valid_note = ("" if sqrt_reproduces else
                   f" WARNING: the path-wise square-root did NOT reproduce the corner "
@@ -231,7 +230,7 @@ def main():
     fig, axes = plt.subplots(1, len(show) + 1, figsize=(4.5 * (len(show) + 1), 4.5))
     for ax, k in zip(axes[:-1], show):
         Mgrid = auc_grid[k]
-        im = ax.imshow(Mgrid, origin="lower", aspect="auto", vmin=0.5, vmax=1.0, cmap="viridis")
+        ax.imshow(Mgrid, origin="lower", aspect="auto", vmin=0.5, vmax=1.0, cmap="viridis")
         ax.set_xticks(range(nc)); ax.set_xticklabels(COLLAPSE_FACTORS)
         ax.set_yticks(range(nd)); ax.set_yticklabels(DRIFT_STRENGTHS)
         ax.set_xlabel("collapse factor"); ax.set_ylabel("drift strength")

@@ -41,9 +41,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 from experiments.paper1_control_trilemma.escape_endogeneity.run import (
-    assert_autonomous, integrate, log_radius, obs_dir, obs_raw, persistence,
-    angular_lyapunov, recurrence_fraction, selftest, f_bounded_lorenz,
-    THR_PF, THR_SURR_P, THR_VAR_COLLAPSE, THR_RECURRENT, DT,
+    assert_autonomous, integrate, log_radius, persistence, angular_lyapunov, recurrence_fraction,
+    selftest, f_bounded_lorenz, THR_PF, THR_SURR_P,
+    THR_VAR_COLLAPSE, THR_RECURRENT, DT,
 )
 from experiments.paper1_control_trilemma.class_g_coherence.run import (
     periodicity_report, THR_RATIONAL_Q, THR_RATIONAL_TOL,

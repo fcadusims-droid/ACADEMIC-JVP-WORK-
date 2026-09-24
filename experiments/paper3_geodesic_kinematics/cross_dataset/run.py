@@ -34,7 +34,7 @@ import matplotlib.pyplot as plt
 from experiments.shared_lib import spd_manifold as spd
 from experiments.shared_lib import manifold_trajectory as mt
 from experiments.paper3_geodesic_kinematics.localization_multiscale.run import (
-    embed_cumsum, break_curve, _R,
+    embed_cumsum, break_curve,
 )
 
 RESULTS_DIR = os.path.join(

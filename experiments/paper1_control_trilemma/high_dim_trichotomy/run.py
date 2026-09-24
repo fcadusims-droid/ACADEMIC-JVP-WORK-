@@ -191,12 +191,12 @@ def lyapunov_rk4(recession_rate, diversity_pressure, seed=0, dt=None, t_total=60
     return s / (n_renorm * RENORM_EVERY * dt) if n_renorm else 0.0
 
 
-def lyapunov_with_convergence_check(recession_rate, diversity_pressure, seed=0, rel_tol=0.3):
+def lyapunov_with_convergence_check(recession_rate, diversity_pressure, seed=0):
     """Classify a cell's Lyapunov behaviour by its RESOLUTION SCALING, using RK4
-    (4th-order) on the smooth-saturated field at dt = DT, DT/2, DT/4.
+    (4th-order) on the smooth-saturated field at dt = DT and dt = DT/4.
 
     Three outcomes:
-      * "converged"  -- the three estimates agree within rel_tol: a genuine,
+      * "converged"  -- the two estimates agree within 15 % (relative): a genuine,
                         well-posed Lyapunov exponent. Reported and classified.
       * "one_over_dt"-- lambda roughly quadruples over a 4x-finer dt (lambda ~ 1/dt),
                         consistent with a per-step NUMERICAL ARTIFACT: nearby

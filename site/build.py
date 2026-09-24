@@ -413,10 +413,6 @@ def paper_of(slug: str) -> str:
     return (STATUS.get(slug, {}).get("paper") or "?").strip()
 
 
-VERDICT_KEYS = ["verdict", "outcome", "preregistered_criterion",
-                "preregistered_question", "question", "motivation"]
-
-
 def load_results() -> list:
     """One record per experiment with a committed result.json."""
     recs = []
@@ -473,7 +469,7 @@ def headline(rec) -> str:
     different."""
     d = rec["data"]
     slug = rec["slug"]
-    sup = SUPERSEDES_NOTE = SUPERSESSIONS.get(slug)
+    sup = SUPERSESSIONS.get(slug)
     guard = GUARDS.get(slug)
     for k in ("verdict", "outcome"):
         v = d.get(k)
@@ -764,7 +760,7 @@ def build_experiment_page(r):
     if isinstance(q, str) and q.strip():
         parts.append(f'<p class="lede prose">{html.escape(q.strip())}</p>')
 
-    links = [f'<a class="btn" href="index.html">All experiments</a>']
+    links = ['<a class="btn" href="index.html">All experiments</a>']
     if r["src"]:
         links.append(f'<a class="btn" href="{REPO_URL}/blob/main/{r["src"]}/run.py">'
                      f'Source code</a>')

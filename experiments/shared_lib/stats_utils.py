@@ -203,13 +203,12 @@ def relaxation_asymmetry(x: NDArray) -> float:
 
     A driven, memory-bearing (Lambda-like) process relaxes asymmetrically in
     time; a linear-Gaussian or reversible process does not. Measured as the
-    difference in lag-1 conditional variance for rising vs. falling segments,
-    a simple time-reversal-asymmetry statistic. Compare against surrogates.
+    standardized third moment (skewness) of the one-step increments,
+    <(x_{t+1}-x_t)^3> / sd^3, a simple time-reversal-asymmetry statistic that is
+    zero in expectation under reversibility. Compare against surrogates.
     """
     x = np.asarray(x, float)
     dx = np.diff(x)
-    up = dx > 0
-    down = dx < 0
     # third-moment time-asymmetry: <(x_{t+1}-x_t)^3> is 0 under reversibility
     asym = np.mean(dx ** 3) / (np.std(dx) ** 3 + 1e-12)
     return float(asym)

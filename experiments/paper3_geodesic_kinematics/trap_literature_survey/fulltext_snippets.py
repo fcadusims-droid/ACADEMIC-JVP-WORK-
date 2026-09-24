@@ -1,4 +1,7 @@
-import sys,re,json,urllib.request,os
+import sys
+import re
+import urllib.request
+import os
 D='/tmp/claude-0/-home-user-ACADEMIC-JVP-WORK-/45846392-2c30-55c7-ba68-e8fc861add6f/scratchpad/ft'
 KW={'data':r'dataset|recorded|recording|session|run\b|runs\b|trials?\b|subjects?\b|participants?|BCI Competition|PhysioNet|eyes',
     'cv':r'cross-validat|\bfolds?\b|\b\d+-fold|leave-one|shuffl|train(ing)? and test|test set|split|permutation|held-out|hold-out|chronolog|session-to-session|cross-session|cross-subject',
@@ -9,7 +12,7 @@ def get(pmc):
     if os.path.exists(f): return open(f).read()
     try:
         x=urllib.request.urlopen(f'https://www.ebi.ac.uk/europepmc/webservices/rest/{pmc}/fullTextXML',timeout=60).read().decode('utf8','replace')
-    except Exception as e:
+    except Exception:
         return ''
     t=re.sub(r'<ref-list.*?</ref-list>','',x,flags=re.S)
     t=re.sub(r'<[^>]+>',' ',t); t=re.sub(r'\s+',' ',t)

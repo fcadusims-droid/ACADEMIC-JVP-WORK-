@@ -28,7 +28,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 from experiments.paper3_geodesic_kinematics.localization_multiscale.run import (
-    embed_cumsum, break_curve, _win_mean_emb, _sphere_dist_emb, _R,
+    embed_cumsum, break_curve, _win_mean_emb, _sphere_dist_emb,
 )
 from experiments.paper3_geodesic_kinematics.real_eeg_localization.run import (
     load_state_covs, sliding_covs,
