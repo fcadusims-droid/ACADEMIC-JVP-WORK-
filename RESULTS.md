@@ -238,7 +238,8 @@ manifold, and it lowers rather than leaves neutral the prior for a properly powe
 is a validity control, not a power increase: n is unchanged because the power-up to ~74 records
 is blocked in *this session* by an environment-side egress-TLS failure for the data hosts (not a
 PhysioNet outage — the site is reachable elsewhere); the rematch is pre-registered and awaits an
-environment that can reach the records. *(`localization_centerbias_control`)*
+environment that can reach the records. *(`localization_centerbias_control`)* *[Later: the rematch was run on
+2026-09-23 as `h1_powerup_offcentre`, once the records became reachable; see below.]*
 
 **The bundle apparatus does not earn its place on the worked paradigm — and it had
 never been exercised.** An external review asked which experiment isolates the fibre's

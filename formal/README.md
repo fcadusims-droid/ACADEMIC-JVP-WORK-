@@ -3,13 +3,13 @@
 Four files, machine-checked in CI — and, as of the environment change noted below,
 locally as well:
 
-- **`Trichotomy.lean`** — Paper 1 §7.5's Meta-Optimization Collapse Theorem: the
+- **`Trichotomy.lean`** — Paper 1 §7.5's Meta-Optimization Collapse Theorem (formal statement in the paper's Appendix A.3): the
   exhaustiveness of the three cells and the *almost-everywhere* exclusion of the forbidden
   object (corrected; see below).
 - **`Counterexamples.lean`** — machine-checked refutations, in concrete models and with no
   axioms, of the two *pointwise* axioms the first version of `Trichotomy.lean` and
   `Escape.lean` declared.
-- **`ClassG.lean`** — Paper 1 §8.3's Class G: logical satisfiability of the
+- **`ClassG.lean`** — Paper 1 §8.3's Class G (symbolic conditions and satisfiability tests in Appendix A.6): logical satisfiability of the
   ten-condition conjunction, exclusion of every near-miss, and the derivation of the
   filter's effective dimensionality.
 - **`Escape.lean`** — Paper 1 §7.5's *escape horn*, closed by the stronger argument the
