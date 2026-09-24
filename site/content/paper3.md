@@ -34,11 +34,17 @@ It is logically independent of its two companions.
 - **Standard pipeline.** A pre-registered control ran the field's standard pipeline
   (covariance → MDM, pyRiemann) through the four traps that apply to classification. None
   applied at its pre-registered bar on these data (`mdm_trap_control`), so by the
-  pre-registered rule these are traps of *this method*.
+  pre-registered rule these are traps of *this method*. Two same-state recordings were still
+  told apart at 0.65: below the bar of 0.70, but above chance.
+- **Design, not classifier.** The standard pipeline keeps absolute power, which this method
+  divides out, and it was run on non-overlapping epochs. So the defensible reading is traps of
+  this *design*. The paper offers this as interpretation: removing power removes the dominant
+  signal and leaves the statistic answering to artefacts.
 - **Published studies.** A pre-registered survey of 20 published covariance/Riemannian EEG
-  studies found two of the traps often left open or unreported (`trap_literature_survey`):
-  - ocular handling: open in 7/19 studies, unclear in 8;
-  - dependence-respecting validation: open in 4/19, unclear in 8.
+  studies measured what they report (`trap_literature_survey`). For two of the traps,
+  published practice often does not let a reader rule them out:
+  - ocular handling: unreported in 7/19 studies, unclear in 8 more (7–15/19);
+  - dependence-respecting validation: not respected in 4/19, unclear in 8 more (4–12/19).
 
   One of those studies measured the dependence trap directly for the standard classifier, at up
   to 12.7 %.

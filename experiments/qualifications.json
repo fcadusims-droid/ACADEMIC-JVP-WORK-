@@ -62,5 +62,26 @@
     "claim": "N2-versus-REM",
     "requires": "EOG|eye movement",
     "why": "the sleep covariance includes horizontal EOG, and with it removed the discrimination holds in only 2 of 4 subjects (discrimination_eog_ablation)"
+  },
+  {
+    "id": "P3 MDM framing carries the design asymmetry",
+    "paper": "Paper3.md",
+    "claim": "traps of \\**this method",
+    "requires": "design",
+    "why": "mdm_trap_control keeps absolute power and uses non-overlapping epochs; it separates this design from the standard one, not this classifier from another"
+  },
+  {
+    "id": "P3 MDM 'none applied' carries the above-chance same-state result",
+    "paper": "Paper3.md",
+    "claim": "None of the four|any of the four that apply",
+    "requires": "0\\.65",
+    "why": "mdm_trap_control T2: two same-state recordings classified at 0.65 (bar 0.70, chance 0.50)"
+  },
+  {
+    "id": "P3 survey counts carry their Unclear range",
+    "paper": "Paper3.md",
+    "claim": "not reported in \\$7\\$ of \\$19\\$|appeared in \\$4\\$ of \\$19\\$",
+    "requires": "between \\$[0-9]+\\$ and \\$[0-9]+\\$",
+    "why": "trap_literature_survey: 8 Unclear codes on each of these traps; the count is the lower end of a range and measures reporting"
   }
 ]
