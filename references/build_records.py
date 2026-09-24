@@ -82,6 +82,10 @@ MANUAL = {
         "correction": "Title corrected from the abbreviated 'Hyper-Invariant MERA: …' to the published title 'Hyperinvariant Multiscale Entanglement Renormalization Ansatz: Approximate Holographic Error Correction Codes with Power-Law Correlations'."},
     (2, "Metzinger", 2003): {"url": "https://direct.mit.edu/books/monograph/1991/Being-No-OneThe-Self-Model-Theory-of-Subjectivity",
         "manual": "MIT Press 2003, confirmed."},
+    (3, "Barachant", None): {"url": "https://doi.org/10.5281/zenodo.593816",
+        "manual": "pyRiemann software, Zenodo concept DOI 10.5281/zenodo.593816 confirmed on Zenodo (creators Barachant, Barthelemy, et al.); version 0.12 used in mdm_trap_control."},
+    (3, "Goldberger", 2000): {"url": "https://doi.org/10.1161/01.cir.101.23.e215",
+        "manual": "Circulation 101(23): e215-e220, confirmed in Crossref (Crossref lists the title without its subtitle)."},
     (3, "Hsu", 2002): {"url": "https://bookstore.ams.org/gsm-38",
         "manual": "Graduate Studies in Mathematics 38, American Mathematical Society 2002, confirmed."},
 }

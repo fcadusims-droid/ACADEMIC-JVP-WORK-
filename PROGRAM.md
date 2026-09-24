@@ -40,8 +40,10 @@ consequent, and each is written so that it survives the antecedent being false.
   positive arm halted at its own stopping rule on the one viable public corpus — so what it
   contributes is the protocol, the gate it failed, and the conditions under which it could
   run.
-- **Paper 3** builds clause (iii): a single-trajectory demarcation method on the covariance
-  manifold, with a vector-bundle extension that is net negative where tested. It is a methods paper, and a Phase-0 gate found its titular three-regime claim is
+- **Paper 3** was meant to build clause (iii): a single-trajectory demarcation method on the
+  covariance manifold. That method did not survive testing, and Paper 3 is now the
+  methodological record of how it looked validated and was not (five traps), with the
+  original proposal kept as a draft. It is a methods paper, and a Phase-0 gate found its titular three-regime claim is
   not, as currently defined, externally falsifiable. It borrows *nothing* from the other two
   and is offered on its own terms as time-series methodology.
 
@@ -93,9 +95,12 @@ stronger than its parts:
   executable on public data; the eliminative arm survives, needs *n* ≈ 40 per condition and a
   subsampling-robust estimator, and one of its three residual filters (Test Two) was
   unexercised until recently.
-- **Clause (iii) / Paper 3.** The titular three-regime demarcation has never been run
-  end-to-end and, as currently defined, is not externally falsifiable; the bundle apparatus is
-  net negative where tested; detection does not beat standard baselines.
+- **Clause (iii) / Paper 3.** The three-regime demarcation has never been run end-to-end and,
+  as defined, is not externally falsifiable; the bundle apparatus is net negative where tested;
+  on real data the method does nothing better than a scalar baseline. Paper 3 now reports how it
+  came to look validated (five traps). The field's standard pipeline does not fall into those
+  traps on the same data, but published studies often do not report the checks that would
+  expose them.
 
 The program, in short, is a well-posed conditional whose consequent is built out in three
 independent pieces, each of which reports honestly that its central empirical claim is
@@ -132,4 +137,15 @@ What the three offer, read that way:
 None of this is a discovery about conversion, biology or EEG, and the program does not claim
 one. It claims that the question has been made precise enough to fail cleanly in three
 places.
+
+## Freeze criterion
+
+Adopted 2026-09-23, after a reviewer observed that the three papers were caught in a loop of audit, correction and re-audit. Each round made the text more honest, and none brought a paper closer to finished. From now on:
+
+- only factual-error corrections enter the papers;
+- no new experiment is run unless a stated decision point depends on its result;
+- each paper has one decision that fixes its scope:
+  - Paper 3: the MDM control and the literature survey decide whether it is about this method's traps or the field's;
+  - Paper 1: the author's section on the system boundary;
+  - Paper 2: whether a laboratory partnership is under discussion by 2026-12-23.
 

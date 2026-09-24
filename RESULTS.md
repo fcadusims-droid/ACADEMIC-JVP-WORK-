@@ -1,4 +1,4 @@
-# Results — What the 52 Experiments Found
+# Results — What the 54 Experiments Found
 
 A reader-facing synthesis of the validation suite. Every number here is read from a
 committed `result.json`; `experiments/STATUS.md` is the authoritative per-experiment
@@ -163,7 +163,9 @@ diffusion length. *(`metabolic_null_resolution`)*
 
 ---
 
-## Paper 3 — Geodesic Kinematics on the Covariance Manifold
+## Paper 3 — Five Ways an EEG Geometry Method Looked Validated and Was Not
+
+**Restructured as a methodological negative (2026-09-23).** Two pre-registered analyses decided the framing. (1) `mdm_trap_control` put the field's standard pipeline (covariance → MDM, pyRiemann) through the four traps that apply to classification. **None applied** at its pre-registered bar: accuracy dropped by 0.007 without EOG; two same-state recordings were told apart at 0.65 (bar 0.70; eyes open vs closed 0.87); the subject-leakage gap was 0.001; shuffled minus blocked CV was 0.009. By the pre-registered rule, these are traps of *this method*. (2) `trap_literature_survey` coded 20 published covariance/Riemannian EEG studies. Ocular handling was left open in 7/19 (8 unclear), dependence-blind validation in 4/19 (8 unclear), the recording confound in 1/17 and pseudo-replication in 0/9, and one study measured the dependence trap for the standard classifier at up to 12.7 %. The paper is now the record of the five traps. The sections below are the history of how each was found.
 
 **The titular claim is not externally falsifiable as currently defined — the sharpest
 finding in the suite.** A Phase-0 gate, pre-registered before any corpus was inspected and
@@ -265,8 +267,8 @@ On eyes-open versus eyes-closed EEG the geometry registers a difference between 
 exceeds each one's internal drift (12/15 subjects, median ≈1.3). It exceeds a same-state
 between-recording control (rest periods of two task runs: control median 0.95, eyes-open/closed higher
 in 11/15, p ≈ 0.024), but a scalar baseline on the same channels — per-channel relative alpha
-power — separates the two states far more strongly (median ≈3.5, p ≈ 10⁻⁴). So the geometry adds
-nothing measurable over per-channel alpha power there (`between_recording_control`).
+power — separates the two states far more strongly (median ≈3.5, p ≈ 10⁻⁴). So the geometry separates the states less strongly than per-channel alpha power there; whether it
+carries anything beyond alpha power was not tested (`between_recording_control`).
 N2-versus-REM discrimination passes **14/15** recordings (median ratio 2.79), but its covariance includes a
 horizontal-EOG channel and REM is defined by eye movement: with that channel removed it holds in only 2 of 4
 subjects on the recordings available for the check (`discrimination_eog_ablation`), so it is attributed to
@@ -279,7 +281,7 @@ tying a scalar band-power CUSUM (`localization_centerbias_control`). A pre-regis
 all 151 usable sleep-cassette recordings (78 subjects), off-centre, then found the scalar CUSUM,
 if anything, ahead: manifold **59/151** vs scalar **67/151** (McNemar p ≈ 0.38; subject level
 32/78 vs 42/78; the same without EOG) (`h1_powerup_offcentre`). On-line localization is
-open on both paradigms, and the geometry adds nothing to it on sleep. *(`sleep_stage_localization`, `real_eeg_localization`)*
+open on both paradigms, and on sleep the geometry does not improve on a scalar CUSUM. *(`sleep_stage_localization`, `real_eeg_localization`)*
 
 **Benchmarked against standard methods, with the defeat criterion fixed in advance.**
 Against BOCPD, `ruptures` (PELT, binary segmentation, windowed), a Gaussian HMM and

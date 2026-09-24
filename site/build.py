@@ -68,16 +68,14 @@ PAPERS = [
     },
     {
         "n": 3, "src": "Paper3.md", "slug": "paper-3",
-        "short": "Geodesic Kinematics on the Covariance Manifold",
-        "sub": "A Proposed Single-Trajectory Protocol for Regime Change, with Its "
-               "Benchmarks and Failure Modes",
-        "blurb": "A proposed single-trajectory method for deciding whether dynamics "
-                 "after an abrupt transition is directed drift, undirected diffusion, or "
-                 "structural collapse. The three-regime demarcation it is named for has "
-                 "not yet been run end-to-end; what has been tested is its trace-normalised "
-                 "SPD base, not yet shown on real data to do more than scalar "
-                 "baselines. Reported with its benchmarks and failure modes. Independent "
-                 "of its two companions.",
+        "short": "Five Ways an EEG Geometry Method Looked Validated and Was Not",
+        "sub": "A Pre-Registered Record, with Controls on the Field's Standard Pipeline "
+               "and a Survey of Published Practice",
+        "blurb": "A methodological negative: five traps (centre bias, dependence-blind "
+                 "nulls, pseudo-replication, ocular contamination, recording confound), "
+                 "each with the control that exposed it, a check of the field's standard "
+                 "Riemannian pipeline, and a survey of published studies. Independent of "
+                 "its two companions.",
         "content": "paper3.md", "dir": "paper3_geodesic_kinematics",
     },
 ]
@@ -94,6 +92,7 @@ NAV = [
     ("coverage.html", "Coverage"),
     ("formal.html", "Formal"),
     ("reproduce.html", "Reproduce"),
+    ("needs.html", "Needs"),
 ]
 
 
@@ -151,9 +150,17 @@ def md_to_html_with_toc(text: str) -> tuple[str, str]:
     return toc.strip(), body.strip()
 
 
+# Overfull lines narrower than this are invisible in print (a hair past the margin).
+OVERFULL_TOLERANCE_PT = 5.0
+
 PDF_HEADER = r"""
 \usepackage{microtype}
 \setlength{\emergencystretch}{3em}
+% Let long code identifiers (experiment_names_like_this) break after an underscore
+% instead of running past the right margin.
+\let\origunderscore\_
+\renewcommand{\_}{\origunderscore\allowbreak}
+\tolerance=2000
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -220,15 +227,23 @@ def build_pdf(src: str, dest: str, title: str, subtitle: str, date: str) -> bool
     meta = (f"---\ntitle: |\n  {title}\nsubtitle: |\n  {subtitle}\n"
             f"author: João Vitor Perazzolo\ndate: {date}\n---\n\n")
     try:
-        subprocess.run(
+        proc = subprocess.run(
             ["pandoc", "-f", "markdown+tex_math_dollars+pipe_tables+raw_tex-raw_html",
              "-o", dest, "--pdf-engine=xelatex", "--toc", "--toc-depth=2",
              "-V", "documentclass=article", "-V", "papersize=a4",
              "-V", "geometry:margin=2.6cm", "-V", "fontsize=11pt",
              "-V", "linkcolor=RoyalBlue", "-V", "urlcolor=RoyalBlue",
              "-V", "colorlinks=true", "-V", "linestretch=1.08",
-             f"--include-in-header={hdr}"],
+             f"--include-in-header={hdr}", "--verbose"],
             input=meta + body, capture_output=True, text=True, check=True)
+        # An equation or a line wider than the text block is cut off at the page edge,
+        # and LaTeX reports it only as a warning. Treat it as a build failure.
+        wide = sorted({float(m.group(1)) for m in
+                       re.finditer(r"Overfull \\hbox \(([\d.]+)pt too wide\)", proc.stderr)
+                       if float(m.group(1)) > OVERFULL_TOLERANCE_PT}, reverse=True)
+        if wide:
+            FAILURES.append(f"{os.path.basename(dest)}: {len(wide)} line(s) run past the "
+                            f"margin (widest {wide[0]:.0f}pt); break the equation or line")
         return True
     except FileNotFoundError:
         print("  ! pandoc not found; skipping PDF", file=sys.stderr)
@@ -934,6 +949,14 @@ miscounted as dead). Unreachable:</p>
             f'<div class="prose">{md_file_to_html(os.path.join(SITE, "content", "reproduce.md"))}</div>')
     write("reproduce.html", page("Reproduce", body, depth=0, current="reproduce.html",
                                  desc="How to run the experiment suite."))
+
+    # what the work needs from others
+    body = ('<h1>What this work needs from others</h1>'
+            '<p class="lede prose">What cannot be done by the author alone or by running more '
+            'code, and which experiment or paper depends on each item.</p>'
+            f'<div class="prose">{md_file_to_html(os.path.join(SITE, "content", "needs.md"))}</div>')
+    write("needs.html", page("What this work needs", body, depth=0, current="needs.html",
+                             desc="Readers, data and partners the work depends on."))
 
     # formal
     fr = os.path.join(ROOT, "formal", "README.md")

@@ -1,60 +1,32 @@
 # Open issues — all three papers are work in progress
 
+**Freeze criterion (adopted 2026-09-23).** After the items of the current development plan (Paper 3: the MDM control, the literature survey and the restructure; Paper 1: the author's boundary section; Paper 2: the partnership decision), only factual-error corrections enter the papers. No new experiment is run unless a decision point depends on its result. The public list of what the work needs from others is on the site's [Needs](https://fcadusims-droid.github.io/ACADEMIC-JVP-WORK-/needs.html) page and in `site/content/needs.md`.
+
 **None of the three papers is ready for submission.** This file used to be titled
 "Submission readiness" and declared Paper 3 "ready first"; that was premature and is
 withdrawn. What follows is what remains open for each paper, including problems found by
 external review. It is a working list, not a checklist toward a deadline.
 
-## Paper 3 — *Geodesic Kinematics on the Covariance Manifold*
+## Paper 3 — *Five Ways an EEG Geometry Method Looked Validated and Was Not*
 
-- **Title and scope (resolved by retitling).** The earlier title promised a geodesic-flow protocol
-  on Riemannian vector bundles for the asymptotic demarcation of three regimes, which the abstract
-  then denied. An external review recommended re-scoping to the structure-versus-power behaviour
-  of the trace-normalised base; `between_recording_control` then removed that support. A later
-  review proposed framing the paper by what it delivers. The paper is now titled *Geodesic
-  Kinematics on the Covariance Manifold: A Proposed Single-Trajectory Protocol for Regime Change,
-  with Its Benchmarks and Failure Modes*; the bundle and the three-regime demarcation are kept in
-  the body as a proposed extension. Whether to cut them entirely remains open.
-- **Localization numbers are inflated by a centring artefact.** Every within-trajectory
-  localization run places the true transition at the window centre by construction; a
-  trivial "always predict the middle" detector scores 22/22 there and 0/22 off-centre
-  (`localization_centerbias_control`). The previously quoted "10/15 vs the best baseline's
-  8/15" must not be used as an argument for the method; off-centre, the manifold ties a
-  scalar band-power CUSUM exactly (10/22 vs 10/22).
-- **The structural-scenario result falls short of its own bar.** On a structural transition
-  with power held constant the geometry localizes at 1.00 against the best power baseline's
-  0.75 — a +0.25 margin, short of the +0.30 fixed in advance. It is not established at the
-  pre-registered level.
-- **The external-referent result tests a proxy, and its advantage is the eye.** The AASM binding
-  (`regime_external_referent`) is a geodesic-volatility median split, not the demarcation. Its
-  re-test survives a dependence-preserving null, but the 7 recordings are 4 subjects (no
-  significance claim is possible) and the covariance includes horizontal EOG: EOG power alone
-  binds more strongly, and without EOG the geometry's association nearly vanishes
-  (`regime_referent_eog_control`).
-- **The sleep structural discrimination is the eye too.** A1's N2-vs-REM 14/15 holds in only 2 of
-  4 subjects without the EOG channel (`discrimination_eog_ablation`). What remains is the
-  eyes-open/closed difference, modest against within-recording drift (12/15 subjects, median
-  ≈1.3; the often-quoted ≈3.3 uses a permutation estimator that ignores autocorrelation).
-- **The eyes-open/closed result is a between-recording difference, and power carries it better.**
-  `between_recording_control`: it exceeds a same-state between-recording control only weakly
-  (task-run rest periods, 11/15, p ≈ 0.024, with a control biased in the method's favour), and a
-  scalar per-channel relative-alpha-power baseline separates the states far more strongly (median
-  ≈3.5 vs ≈1.3, p ≈ 10⁻⁴). It is described as "a difference between two recordings that exceeds
-  each one's internal drift", not as structural discrimination. T0 eyes-open status is not
-  documented by PhysioNet; alpha power is only consistent with eyes open (14/15).
-- **Detection's out-of-sample evidence is marginal.** `detection_between_recording_control`: a
-  change of recording alone fires the scale-normalised statistic (AUC 0.74); a change of state is
-  separated from a same-state recording change at AUC 0.72, just above the 0.70 bar (±0.1 at
-  n = 15). A larger held-out set with same-state between-recording nulls is needed.
-- **Geometry vs scalar, overall.** On no task has the geometry yet been shown to add anything over
-  a scalar carrying the same channels: centring-corrected localization ties a scalar, and the
-  stage-association advantage was EOG power. A fair test needs EEG-only covariances and scalar
-  baselines from the same channels, on more subjects.
-- **Power (resolved against the method).** The H1 power-up ran on all 151 usable Sleep-EDF
-  sleep-cassette recordings (78 subjects), off-centre (`h1_powerup_offcentre`): manifold 59/151 vs
-  scalar 67/151 (p ≈ 0.38), subject level 32/78 vs 42/78 (p ≈ 0.12), the same without EOG.
-  Pre-registered verdict inconclusive, but at twice the planned n and with the direction favouring
-  the scalar, the geometry adds nothing to sleep-transition localization.
+- **Restructured (2026-09-23) as a methodological negative, per the author's decision.** The
+  earlier protocol text (vector bundle, jump-diffusion, three-regime demarcation) is preserved in
+  `drafts/paper3_protocol_full_2026-09-23.md`.
+- **Framing follows the pre-registered rule: traps of this method.** `mdm_trap_control` found
+  none of the four applicable traps moved the field's standard covariance→MDM pipeline past its
+  bar. The survey (`trap_literature_survey`) qualifies this: ocular handling is left open or
+  unreported in 7/19 studies (8 unclear), and dependence-blind validation in 4/19 (8 unclear).
+  The paper says both things. It does not claim the traps are general properties of the field.
+- **The survey had one coder.** A second, independent coder of the 20 studies (every code is
+  quoted, so re-coding is straightforward) would make the counts citable. Listed on the site's
+  Needs page.
+- **Not tested: whether the geometry carries information beyond per-channel alpha power.**
+  That needs an incremental comparison (scalar alone versus scalar plus geometry). By the freeze
+  criterion it is not run unless a decision depends on it.
+- **The recording confound for the standard pipeline is below the bar but not zero**
+  (0.65 on two same-state recordings). A reader in EEG methods should judge whether that
+  deserves more than the paper gives it.
+- **A reader in EEG or brain–computer-interface methods** is the most useful next step (Needs page).
 
 ## Paper 1 — *The Cybernetic Limits of Conversion*
 
@@ -72,7 +44,7 @@ external review. It is a working list, not a checklist toward a deadline.
   source in the system makes the flow autonomous again, and the same event then reads as
   reabsorption. §7.5 now states the boundary as an observer's pragmatic choice (like *I*, §2.2);
   whether a principled criterion for drawing it exists is open.
-- **Framing** (philosophy of action / analytic theology vs an alignment venue) is undecided.
+- **Framing (decided 2026-09-23).** Paper 1 is addressed to the philosophy of action, where §7.8 already argues with Callard, Paul and Pettigrew. The theological sections (formerly §§10–12) were moved to `drafts/theological_companion.md`, a second paper still to be written that cites the first. Still open for the author: whether to move the formalism into an appendix, as a reviewer suggested; and writing the central argument that relativity to the system boundary does not trivialize the thesis (see `drafts/boundary_section_support.md`). That section should be written by the author.
 
 ## Paper 2 — *The Conditional Biological Requirements Architecture*
 
@@ -86,6 +58,9 @@ external review. It is a working list, not a checklist toward a deadline.
   suppress the signal; it is not a verdict on the architecture. The title and abstract now
   say "in public data" and name the corpus confound.
 - **Positive arm.** Not executable on public data as of 2026-09 (`cbra_dataset_inventory`).
+- **Route (decided 2026-09-23): partnership first, until 2026-12-23.** The data the positive arm needs exist in anaesthesiology and neurointensive-care laboratories, not in repositories. A data specification for a partner lab is in `drafts/paper2_data_specification.md`, as a draft for the author to review and sign; it has not been sent. A *new* collection with the protocol registered first could be a genuine Registered Report. That is distinct from the I-CARE analysis, which cannot be one. If no partnership is under discussion by 2026-12-23, the paper moves to the reduced version: a short data-requirements paper with the I-CARE negative, without Paper 1's vocabulary (Class G, contract *I*).
+- **Test Two sensitivity (deferred).** Test Two has shown specificity but has no emergent true positive. The planned test uses a network model in which the rotation is emergent, not injected, and pre-registers the model family and the hit rate across its parameter space, not a first positive case. It waits on the route decision above: under the reduced version, Test Two may leave the protocol.
+- **The 95 % variance-capture precondition.** This needs proxy recordings with directly measured ground truth, which are not public. Until they exist, it is stated as a limit on the positive arm.
 
 ## Not blocked on the papers, but pending
 
