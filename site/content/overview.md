@@ -12,8 +12,9 @@ repository changes, this site rebuilds.
 ## The three papers
 
 The trilogy is deliberately asymmetric in what it claims. Paper 1 is a negative
-result and its argument is transcendental — it does not propose a mechanism, it
-argues that a dominant family of mechanisms cannot state the question. Paper 2 is
+result about formulation — it does not propose a mechanism; it argues that a dominant
+family of models, and the formal models of value change built like it, cannot state the
+question. Paper 2 is
 conditional throughout and its secure contribution is *eliminative*: it says what
 would have to be measurable, and reports a pre-registered negative on whether it
 presently can be. Paper 3 is logically independent of both. It no longer offers a method; it is the

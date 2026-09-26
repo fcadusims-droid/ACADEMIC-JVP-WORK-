@@ -147,7 +147,7 @@
   },
   {
     "n": 18,
-    "citation": "Frankfurt, Harry G. 1971. \"Freedom of the Will and the Concept of a Person.\" *The Journal of Philosophy* 68(1): 5-20. (Second-order desires; the hierarchy the §7.6 \"one level up\" move presupposes.)",
+    "citation": "Frankfurt, Harry G. 1971. \"Freedom of the Will and the Concept of a Person.\" *The Journal of Philosophy* 68(1): 5-20. (Second-order desires; the hierarchy the §6.6 \"one level up\" move presupposes.)",
     "status": "verified",
     "url": "https://doi.org/10.2307/2024717",
     "checked_against": "crossref",
@@ -156,7 +156,7 @@
   },
   {
     "n": 19,
-    "citation": "Hadfield-Menell, Dylan, Stuart J. Russell, Pieter Abbeel, and Anca Dragan. 2016. \"Cooperative Inverse Reinforcement Learning.\" *Advances in Neural Information Processing Systems* 29. (Value learning as a fixed higher-order objective; §7.8.5 reads it as reabsorption.)",
+    "citation": "Hadfield-Menell, Dylan, Stuart J. Russell, Pieter Abbeel, and Anca Dragan. 2016. \"Cooperative Inverse Reinforcement Learning.\" *Advances in Neural Information Processing Systems* 29. (Value learning as a fixed higher-order objective; §7.6 reads it as reabsorption.)",
     "status": "verified",
     "url": "https://papers.nips.cc/paper/6420-cooperative-inverse-reinforcement-learning",
     "checked_against": "manual",
@@ -267,7 +267,7 @@
   },
   {
     "n": 32,
-    "citation": "Pettigrew, Richard. 2020. *Choosing for Changing Selves*. Oxford University Press. (The Aggregate Utility Solution: each self acts on a weighted average of the values of all selves; §7.8.3 reads it as the best worked-out instance of reabsorption.)",
+    "citation": "Pettigrew, Richard. 2020. *Choosing for Changing Selves*. Oxford University Press. (The Aggregate Utility Solution: each self acts on a weighted average of the values of all selves; §7.3 reads it as the best worked-out instance of reabsorption.)",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL21661144W",
     "checked_against": "openlibrary",
@@ -309,7 +309,7 @@
   },
   {
     "n": 37,
-    "citation": "Soares, Nate, Benja Fallenstein, Eliezer Yudkowsky, and Stuart Armstrong. 2015. \"Corrigibility.\" In *AAAI Workshop on AI and Ethics*: 74-82. (The corrigibility problem; §7.8.5 gives the trilemma's structural prediction about its solution space.)",
+    "citation": "Soares, Nate, Benja Fallenstein, Eliezer Yudkowsky, and Stuart Armstrong. 2015. \"Corrigibility.\" In *AAAI Workshop on AI and Ethics*: 74-82. (The corrigibility problem; §7.6 gives the trilemma's structural prediction about its solution space.)",
     "status": "verified",
     "url": "https://intelligence.org/files/Corrigibility.pdf",
     "checked_against": "manual",
@@ -318,7 +318,7 @@
   },
   {
     "n": 38,
-    "citation": "Nayebi, Aran. 2025. \"Core Safety Values for Provably Corrigible Agents.\" arXiv:2507.20964. To appear in the AAAI 2026 Machine Ethics Workshop proceedings. (Deciding whether an arbitrarily modified agent ever violates corrigibility is undecidable by reduction to the halting problem; §2.1 and §7.8.6 place this neighbouring limitative result and distinguish its object — a predicate over programs — from the trilemma's dynamical claim.)",
+    "citation": "Nayebi, Aran. 2025. \"Core Safety Values for Provably Corrigible Agents.\" arXiv:2507.20964. To appear in the AAAI 2026 Machine Ethics Workshop proceedings. (Deciding whether an arbitrarily modified agent ever violates corrigibility is undecidable by reduction to the halting problem; §2.1 and §7.7 place this neighbouring limitative result and distinguish its object — a predicate over programs — from the trilemma's dynamical claim.)",
     "status": "verified-corrected",
     "url": "https://arxiv.org/abs/2507.20964",
     "checked_against": "arxiv",
@@ -328,7 +328,7 @@
   },
   {
     "n": 39,
-    "citation": "Wang, Charles L., Keir Dorchen, and Peter Jin. 2025. \"On the Statistical Limits of Self-Improving Agents.\" arXiv:2510.04399 (TMLR 2026). (Distribution-free PAC-learnability is preserved iff the policy-reachable family stays uniformly capacity-bounded, a VC-dimension condition; §7.8.6 contrasts this static capacity limit with the trilemma's dynamical mechanism.)",
+    "citation": "Wang, Charles L., Keir Dorchen, and Peter Jin. 2025. \"On the Statistical Limits of Self-Improving Agents.\" arXiv:2510.04399 (TMLR 2026). (Distribution-free PAC-learnability is preserved iff the policy-reachable family stays uniformly capacity-bounded, a VC-dimension condition; §7.7 contrasts this static capacity limit with the trilemma's dynamical mechanism.)",
     "status": "verified",
     "url": "https://arxiv.org/abs/2510.04399",
     "checked_against": "arxiv",
@@ -507,5 +507,54 @@
     "checked_against": "crossref",
     "automated_pass": "MATCH",
     "doi": "10.1111/phc3.13000"
+  },
+  {
+    "n": 60,
+    "citation": "Bradley, Richard. 2009. \"Becker's Thesis and Three Models of Preference Change.\" *Politics, Philosophy & Economics* 8(2): 223-242. DOI: 10.1177/1470594X09102238. (Becker's invariant tastes can almost always be saved by refining the state space, at a price \"as ad hoc\" as postulating taste change; generalised conditioning represents any change of attitudes, fundamental desires included. Quotations in §7.4 follow the working-paper version, CPNSS, LSE, 2008, and should be checked against the published text.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1177/1470594x09102238",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1177/1470594x09102238",
+    "manual_review": "PPE 8(2): 223-242 confirmed in Crossref. Full text read in the LSE working-paper version (CPNSS 2008, eprint 27007); the quotation in §7.4 was checked verbatim there, not in the published text, and the reference says so."
+  },
+  {
+    "n": 61,
+    "citation": "Bykvist, Krister. 2006. \"Prudence for Changing Selves.\" *Utilitas* 18(3): 264-283. DOI: 10.1017/S0953820806002032. (Prudence when actions shape preferences, evaluated by the attitudes held while leading a life; a fixed higher-order rule, precursor of Pettigrew's aggregation.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1017/s0953820806002032",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1017/s0953820806002032",
+    "manual_review": "Utilitas 18(3): 264-283 confirmed; publisher abstract read (evaluation by the attitudes held while leading a life)."
+  },
+  {
+    "n": 62,
+    "citation": "Carroll, Micah, Anca Dragan, Stuart Russell, and Dylan Hadfield-Menell. 2022. \"Estimating and Penalizing Induced Preference Shifts in Recommender Systems.\" ICML 2022. arXiv:2204.11966. (Optimizing systems have incentives to shift users' preferences; judging shifts requires a reference such as the uninfluenced dynamics.)",
+    "status": "verified",
+    "url": "https://arxiv.org/abs/2204.11966",
+    "checked_against": "arxiv",
+    "automated_pass": "MATCH",
+    "manual_review": "arXiv:2204.11966 confirmed, with the arXiv comment 'Accepted to ICML 2022 (Spotlight)'; abstract read."
+  },
+  {
+    "n": 63,
+    "citation": "Dietrich, Franz, and Christian List. 2013. \"Where Do Preferences Come From?\" *International Journal of Game Theory* 42(3): 613-637. DOI: 10.1007/s00182-012-0333-y. (Preferences derived from a stable weighing relation over motivationally salient properties; preference change as a change of salience. Quotations in §7.4 follow the authors' accepted manuscript, LSE Research Online.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1007/s00182-012-0333-y",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1007/s00182-012-0333-y",
+    "manual_review": "IJGT 42(3): 613-637 confirmed in Crossref. Full text read in the authors' accepted manuscript (LSE Research Online, eprint 46864); the two quotations in §7.4 were checked verbatim there."
+  },
+  {
+    "n": 64,
+    "citation": "Hansson, Sven Ove. 1995. \"Changes in Preference.\" *Theory and Decision* 38(1): 1-28. DOI: 10.1007/BF01083166. (Preference revision, contraction, addition and subtraction under postulates for rational change.)",
+    "status": "verified",
+    "url": "https://doi.org/10.1007/bf01083166",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1007/bf01083166",
+    "manual_review": "Theory and Decision 38(1): 1-28 confirmed; publisher abstract read (revision, contraction, addition, subtraction under rationality postulates)."
   }
 ]

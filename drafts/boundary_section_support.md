@@ -8,7 +8,7 @@ author can write it. Nothing here should be pasted into the paper as it stands.
 
 ## 1. The problem, stated as a referee would state it
 
-Paper 1 §7.5 now says the following. Relative to a declared system boundary, an autonomous value
+Paper 1 §6.5 now says the following. Relative to a declared system boundary, an autonomous value
 dynamics does not realize conversion. A Class-G occasion is one whose source the declared boundary
 excludes.
 
@@ -87,7 +87,7 @@ These are candidate arguments, stated as prompts. They are not settled.
 - The theological reading (now in `drafts/theological_companion.md`) is **one declared boundary
   among others**, and the argument does not establish it.
 - For dissipative dynamics, the exclusion still rests on the reabsorption interpretation, not on a
-  theorem (§7.5).
+  theorem (§6.5).
 
 ## 5. Literature, each item checked in Crossref
 
@@ -113,3 +113,45 @@ These are candidate arguments, stated as prompts. They are not settled.
   (exit b)?
 - Which one or two of the arguments in §3 does the author actually hold? A section that uses all four
   will read as a list, not an argument.
+
+## 7. A colleague's observations (2026-09-26), with an assessment
+
+These come from the Paper 1 development plan (`drafts/paper1_restructure_plan.md`, phase 2.1).
+All three are right. The last carries a caveat.
+
+1. **Declaring the boundary in advance does not answer arbitrariness.**
+   - The argument in §2 above says that redrawing the boundary *after* seeing the event is
+     post-hoc selection, which §2.2 already forbids. That is true, and it is not enough.
+   - An observer can declare a narrow boundary *in advance*, precisely so that the event will
+     come out as Class G. The rule against post-hoc selection stops cheating after the fact. It
+     does not stop a tendentious choice made before it.
+   - The section needs a restriction on *which* boundaries are admissible, not only on *when*
+     they are declared.
+2. **A candidate restriction from within the philosophy of action.**
+   - Individuate the agent by the boundary used to assign responsibility or practical identity:
+     what the agent can answer for as its own. The obvious sources are Korsgaard on practical
+     identity (*The Sources of Normativity*, 1996, lecture 3) and Frankfurt on identification
+     ("Identification and Wholeheartedness", 1988). Both are verified in
+     `references/paper1_phase3_literature.md`.
+   - This sits between exits (a) and (b). It is not pure relativity, and it is not a
+     Markov-blanket metaphysics, because it uses a criterion the field already accepts.
+   - **Caveat.** Practical identity and identification are *contents*, and conversion may
+     change exactly those contents. A boundary drawn by what the agent identifies with could
+     move with the very event it is meant to classify. That reproduces the problem.
+   - A criterion that survives conversion is the *formal* accountability relation, not its
+     content: the responsibility-bearing, non-branching history that §4.3 already treats as a
+     constitutive invariant of moral conversion. The agent is whoever can be held to answer,
+     before and after, for what was done under the old values. Whether this is better than
+     Korsgaard's or Frankfurt's criterion is the author's call. It has the advantage of already
+     being in the paper.
+3. **The velocity analogy works only if the invariant is named.**
+   - Velocity depends on the frame; acceleration is invariant across inertial frames. So the
+     analogy needs to say what plays the part of acceleration here: the verdict, *given* a fixed
+     individuation of the agent. That is §3's first argument, and the section should say it in
+     one sentence.
+   - On the choice among the four arguments of §3, the colleague judges argument 2 ("redrawing
+     the boundary changes the subject of the claim") the strongest, because it defuses the
+     objection without conceding anything. I agree.
+   - Argument 2 works only together with the admissibility restriction of point 1. Without it,
+     "which subject?" has no principled answer, and the objection returns as "why this
+     subject?".

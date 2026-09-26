@@ -5,7 +5,7 @@ that followed the same protocol. This document states the protocol, and then —
 usefully — lists the occasions on which it **cost something**, because a
 pre-registration that never changes an outcome is decoration.
 
-Paper 3 section numbers in historical entries (§2 regimes, §3.2 fibre, §3.3 Sasaki metric, §7.6) refer to the earlier protocol text, preserved as `drafts/paper3_protocol_full_2026-09-23.md`; the current Paper 3 has a different structure.
+Paper 3 section numbers in historical entries (§2 regimes, §3.2 fibre, §3.3 Sasaki metric, §7.6) refer to the earlier protocol text, preserved as `drafts/paper3_protocol_full_2026-09-23.md`; the current Paper 3 has a different structure. Paper 1 section numbers in historical entries refer to the text before its 2026-09-26 restructure, preserved as `drafts/paper1_full_2026-09-26.md` (old §7.1–7.7 are now §6.1–6.7, old §7.8.x is now section 7, the appendix lost A.4).
 
 ## The protocol
 
