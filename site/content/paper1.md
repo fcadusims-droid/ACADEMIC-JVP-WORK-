@@ -32,11 +32,11 @@ the bifurcation.
 the cost function is itself replaced, producing singularities and indeterminacy in
 backward induction.
 
-The space these three leave empty is exactly the space a non-coercive transformation
-would have to occupy. **Class G** is the residual admissibility profile that occupies
-it — a conjunction of ten conditions, distinguished categorically from a unilateral
-integrity-bounded transition by divergent post-jump topology rather than by
-adjectival shielding.
+The space these three leave empty is the space a non-coercive transformation would have
+to occupy. **Class G** is the admissibility profile that describes it: a conjunction of ten
+conditions, stated as a type signature rather than a mechanism. A neighbouring case, the
+**U-limit**, is a single unilateral jump that leaves the subject an agent; it looks like
+coercion at the moment of the jump and differs from it in what it leaves open afterwards.
 
 ## The substantive claim
 
@@ -63,19 +63,18 @@ The paper's body states the argument in prose. The equations, the theorem's form
 the simulation numbers and the U-limit predicate are collected in its Appendix A.
 
 The load-bearing formal result is a **Meta-Optimization Collapse Theorem**, a
-trichotomy. Its first Lean formalization rested on two axioms that were **false as
-stated** — pointwise versions of Poincaré and Conley — which an external review caught
-and `formal/Counterexamples.lean` now refutes in concrete models; the corrected files
-assume the true forms, so the forbidden object is excluded only for states typical of the invariant measure —
-almost every initial condition for conservative dynamics, but not the transients of the
-dissipative agents the suite actually tests, where the exclusion is interpretive — and its
-positive-entropy clause does no work. Its high-dimensional stress test (`high_dim_trichotomy`) reported its
-strong-recession cells as *numerically unresolved* rather than claiming them either
-way — and said so in the paper. The follow-up (`value_base_discontinuity_probe`) then
-showed the apparent falsifier was a coordinate artifact. That result helped the
-thesis, and it was only credible because the earlier run had declined to guess.
+trichotomy for agents that revise their own preferences. Its first Lean formalization
+rested on two axioms that were **false as stated** (pointwise versions of Poincaré's and
+Conley's theorems). An external review caught this, and `formal/Counterexamples.lean` now
+refutes those forms in concrete models. With the true forms, the theorem excludes
+conversion only for states typical of the flow's invariant measure. For the transients of
+dissipative dynamics, which is what the tested agents are, the exclusion rests on an
+interpretation, and the paper says so. In the experiment record, a high-dimensional stress
+test (`high_dim_trichotomy`) left some cells *numerically unresolved* rather than guessing,
+and a follow-up (`value_base_discontinuity_probe`) showed that the apparent falsifier there
+was an artefact of coordinates.
 
-The existential risk to the whole positive residue was Class G's **satisfiability**.
+The main risk to the positive residue was Class G's **satisfiability**.
 A ten-condition conjunction invites two opposite and equally fatal objections: empty
 by over-specification, or vacuous by under-specification. An explicit stochastic
 witness meets all ten simultaneously against thresholds fixed in advance, and every

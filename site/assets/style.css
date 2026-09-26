@@ -512,3 +512,54 @@ ol.cited-works { padding-left: 1.6em; }
 ol.cited-works li { margin: 0 0 .55em; line-height: 1.45; overflow-wrap: anywhere; }
 ol.cited-works .cite-fix { display: inline-block; margin-top: .2em; font-size: .92em;
   color: var(--warn, #8a5a00); }
+
+/* ---------- reader-experience additions ---------- */
+
+/* secondary navigation: the audit trail, quieter than the main links */
+nav.site.records { margin-top: 0.35rem; font-size: 0.78rem; gap: 0.1rem 1rem; }
+nav.site.records a { color: var(--ink-faint); }
+nav.site .nav-label {
+  color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 0.68rem; font-weight: 700; padding: 0.25rem 0;
+}
+
+/* where-to-start panel on the overview */
+.start-here {
+  border-left: 3px solid var(--accent);
+  background: var(--panel);
+  padding: 0.3rem 1.2rem 0.6rem;
+  margin: 0 0 2rem;
+  max-width: var(--measure);
+}
+.start-here h2 { margin-top: 0.8rem; border-bottom: 0; }
+.start-here li { margin: 0.45rem 0; }
+
+.card p.card-status, p.status-line {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--warn);
+}
+.card p.card-status { margin: 0.2rem 0 0.4rem; }
+.status-line { margin: -0.8rem 0 1.2rem; }
+.status-line a { margin-left: 0.4rem; }
+
+/* narrow screens: nothing may widen the page */
+.paper-layout > * { min-width: 0; }
+p code, li code, td code { overflow-wrap: anywhere; }
+@media (max-width: 60rem) {
+  .paper-layout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 30rem) {
+  main { padding-top: 1.6rem; }
+  h1 { font-size: 1.6rem; }
+  aside.ai-banner .ai-banner-inner { font-size: 0.95rem; padding: 0.9rem 1.1rem; }
+  aside.ai-banner .ai-banner-title { font-size: 1.1rem; }
+}
+
+.exp-jump { font-family: var(--sans); font-size: 0.86rem; }
+.exp-filter { font-family: var(--sans); font-size: 0.86rem; margin: 1rem 0; }
+.exp-filter label { display: block; color: var(--ink-faint); margin-bottom: 0.25rem; }
+.exp-filter input {
+  width: min(100%, 26rem); padding: 0.45rem 0.6rem; font: inherit;
+  border: 1px solid var(--rule); border-radius: 4px; background: var(--paper); color: var(--ink);
+}

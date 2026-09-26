@@ -27,7 +27,7 @@ consistency contract *I* — and no result flows back.
 
 ## What the experiment suite is for
 
-Fifty-four pre-registered computational experiments. Each has a
+Every computational experiment is pre-registered. Each has a
 `PRE-REGISTRATION.md` fixing the question, the method, the thresholds and a stopping
 rule *before* the run; a machine-readable `result.json` committed after; and a
 verdict issued strictly against the pre-registered criterion. Bands are fixed in
@@ -46,16 +46,3 @@ detector fix that made the paper's own negative *stronger*, a headline figure
 corrected downward from ≈12× to ≈3.3× and then to ≈1.3×, a rescue arm labelled post-hoc rather than
 swapped in as though it had been the plan, and a process lapse recorded rather than
 back-dated. Those are set out in full on the [methodology](methodology.html) page.
-
-## Reading paths
-
-If you want the argument, read the paper summaries and then the papers themselves —
-each is available as navigable HTML with a section index, as a PDF you can read in
-the browser, and as a PDF you can download.
-
-If you want the evidence, go to the [experiments](experiments/index.html): every run
-is there with its pre-registration, its verdict, its figures, and its raw JSON.
-
-If you want to check the work, the [reproduction](reproduce.html) page gives the
-commands. Results, code and pre-registrations are committed; only the datasets are
-not, and they are all public.

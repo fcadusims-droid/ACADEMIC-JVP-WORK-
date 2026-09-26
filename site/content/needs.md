@@ -16,10 +16,12 @@ depends on it. If you can help with any item, please open an issue on the
   with Callard, Paul and Pettigrew. The errors found so far — axioms stated more strongly than the
   theorems they named, "proves" where only an argument was given — are the kind a specialist sees
   in minutes. Most needed: a reading of §6 and of the system-boundary argument (§6.6).
-- **The system-boundary section — done (§6.6).** Whether relativity to the observer's system
-  boundary trivializes the thesis was the paper's central open question. The section answering it,
-  and §8.4 on the common-influence objection, were drafted with Claude in the project's chat and revised by the author.
-  They were not written by the author alone. Support notes: `drafts/boundary_section_support.md`.
+- **A critical reading of the two newest sections.** §6.6 answers whether relativity to the
+  observer's system boundary trivializes the thesis, and §8.4 whether Class G is just ordinary
+  interpersonal influence (it adds a reply on manipulation). Both were drafted with Claude in the
+  project's chat and revised by the author; they were not written by the author alone, and no one
+  in the field has read them yet. Support notes: `drafts/boundary_section_support.md`,
+  `drafts/influence_objection_support.md`.
 - **A reader in philosophical theology.** The theological applications (grace, sanctity, acedia,
   resurrection) were moved to a separate draft, `drafts/theological_companion.md`. It needs a
   reader from that field before it becomes a paper.
