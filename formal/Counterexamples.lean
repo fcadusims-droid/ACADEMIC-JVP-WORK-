@@ -1,6 +1,6 @@
 /-
   Machine-checked counterexamples to the POINTWISE axioms the first version of
-  `Trichotomy.lean` and `Escape.lean` declared (Paper 1, §7.5).
+  `Trichotomy.lean` and `Escape.lean` declared (Paper 1, §6.5).
 
   WHY THIS FILE EXISTS. An external review observed that the original axioms were
   stronger than the theorems they were named after, and so false under the intended

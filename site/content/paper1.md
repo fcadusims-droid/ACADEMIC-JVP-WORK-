@@ -1,12 +1,15 @@
 ## The claim in one paragraph
 
-Given a definition of control as directed change relative to a held-fixed evaluative
-structure, agency-preserving *conversion* — the transformation of that structure —
-cannot be formulated as control without collapsing into one of three failures. The
-argument is transcendental, not constructive: it proposes no new mechanism of
-transformation, and instead argues that the inherited apparatus of cybernetics and
-optimal control cannot so much as pose the question without annihilating the agency
-of the subject it claims to transform.
+Formal models of value change — decision theories for changing selves, formal theories
+of preference change, learning agents that revise their own objectives, corrigibility
+schemes — each hold some evaluative point fixed: an aggregation rule, a weighing relation,
+invariant tastes, revision postulates, a higher-order objective. Used to direct change,
+such a model is control relative to that point, and control meets a trilemma: given a
+definition of control as directed change relative to a held-fixed evaluative structure,
+agency-preserving *conversion* — the transformation of that structure — cannot be
+formulated as control. The paper concedes that this top level is definitional. Its
+substantive claim is the case-by-case one: that the models on offer do hold such a point
+fixed. It proposes no mechanism of transformation.
 
 ## The trilemma
 
@@ -18,10 +21,10 @@ requisite variety and ultrastability — is the execution of a latent subroutine
 system changes *state* precisely so as not to change *organization*. Nothing has been
 converted.
 
-**Exogenous annihilation.** Coercive trajectory-tracking drives the agency
+**Agency collapse under tracking.** Coercive trajectory-tracking drives the agency
 eigenvalues to negative infinity and zeroes adaptive diffusion: in the
-perfect-tracking limit the controller must kill the agent to hold it on a prescribed
-path. Finite-gain forcing pays a graded, monotone agency cost instead — which is a
+perfect-tracking limit the controller holds the agent on a prescribed path only by
+collapsing its agency-bearing openness. Finite-gain forcing pays a graded, monotone agency cost instead — which is a
 weaker claim than the limit, and the suite measures the curve rather than asserting
 the bifurcation.
 
@@ -34,6 +37,17 @@ would have to occupy. **Class G** is the residual admissibility profile that occ
 it — a conjunction of ten conditions, distinguished categorically from a unilateral
 integrity-bounded transition by divergent post-jump topology rather than by
 adjectival shielding.
+
+## The substantive claim
+
+The paper's core section examines the formal models one by one: Callard's proleptic
+reasons (which narrow the thesis to *unanchored* change), Paul's transformative
+experience, Pettigrew's aggregation and Bykvist's prudence for changing selves,
+Dietrich and List's stable weighing relation, Hansson's revision postulates, Becker's
+invariant tastes and Bradley's three models of preference change, and value learning and
+corrigibility. None directs or evaluates a change of fundamental values without a fixed
+higher-order reference. The one formal model that represents such a change (Bradley's
+generalised conditioning) says nothing about what produces it.
 
 ## What the suite established, and what it cost
 

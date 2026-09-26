@@ -1,10 +1,10 @@
 /-
-  The escape horn closes by recurrence-on-the-quotient (Paper 1, §7.5) — formal skeleton.
+  The escape horn closes by recurrence-on-the-quotient (Paper 1, §6.5) — formal skeleton.
 
   SCOPE, stated first because it bounds what this file is worth.
 
   `escape_persistence_decider` and `escape_cardinal_contract` established, numerically,
-  a *stronger* closure of §7.5's escape horn than the paper's own argument. The paper
+  a *stronger* closure of §6.5's escape horn than the paper's own argument. The paper
   reasoned that escape (leaving the compact value space) forfeits persistence and so
   lands in "a more extreme Class M". The experiments refuted that reason and supplied a
   better one: escape happens in the *radius*, an identity contract reads the *direction*,
@@ -47,7 +47,7 @@
   parity-of-proof-structure result, which is what defeats the charge that the escape branch
   closes by an ad hoc appeal, and is all it defeats. Whether every admissible identity
   contract factors through such a reading is unproved, is not decidable inside this file, and
-  is recorded in Paper 1 §7.5 as the first open problem the argument leaves. A reader who
+  is recorded in Paper 1 §6.5 as the first open problem the argument leaves. A reader who
   rejects that premise loses the closure of the escaping cell and keeps everything else here.
 -/
 
@@ -86,7 +86,7 @@ axiom poincare_recurrence_ae {T : Type} (ψ : Flow T) :
 /-! ### The escape structure
 
 `proj : X → Q` is the *reading* an identity contract performs: it sends a full state to the
-coordinate the contract actually evaluates. In §7.5 that coordinate is the direction on the
+coordinate the contract actually evaluates. In §6.5 that coordinate is the direction on the
 compact quotient; for a *cardinal* contract it is the direction paired with a bounded
 magnitude reading. Either way `Q` is the reading's quotient, and the flow `ψ` is the
 dynamics the reading induces on it. -/

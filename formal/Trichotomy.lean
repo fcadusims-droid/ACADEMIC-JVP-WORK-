@@ -1,5 +1,5 @@
 /-
-  Meta-Optimization Collapse Theorem (Paper 1, §7.5) — formal skeleton, CORRECTED.
+  Meta-Optimization Collapse Theorem (Paper 1, §6.5) — formal skeleton, CORRECTED.
 
   WHAT CHANGED, AND WHY. The first version of this file declared two axioms named after
   Poincaré and Conley that were strictly stronger than those theorems and false under the
@@ -19,7 +19,7 @@
   discharging them from Mathlib was never possible, because Mathlib proves the correct forms.
 
   This version declares the correct forms and proves only what follows from them. The
-  consequences for Paper 1 are real and are stated in §7.5:
+  consequences for Paper 1 are real and are stated in §6.5:
 
   1. The forbidden object (bounded non-recurrence under measure preservation) is excluded for
      states typical of the invariant measure, not every state. For conservative flows that is almost
@@ -33,7 +33,7 @@
      orbit. Conley's theorem contributes one thing — that a bounded orbit's ω-limit set lies in
      the chain-recurrent set — and chain recurrence is weaker than recurrence, so "Case 3" is
      *asymptotically chain-recurrent*, not "recurrent". A transient spiralling onto a limit
-     cycle is in Case 3 by this definition, as the prose of §7.5 (which classifies by attractor)
+     cycle is in Case 3 by this definition, as the prose of §6.5 (which classifies by attractor)
      already has it.
 
   With opaque predicates, Lean verifies only the propositional step from these axioms. That is
@@ -81,7 +81,7 @@ axiom conley_omega {X : Type} (φ : Flow X) (x : X) :
 
 /-! ### The trichotomy, classified by asymptotic behaviour -/
 
-/-- The three cells of §7.5. Case 3 is *asymptotically chain-recurrent and not at rest* —
+/-- The three cells of §6.5. Case 3 is *asymptotically chain-recurrent and not at rest* —
     not "recurrent". -/
 inductive Cell {X : Type} (φ : Flow X) (x : X) : Prop where
   | convergent : Bounded φ x → OmegaAtRest φ x → Cell φ x

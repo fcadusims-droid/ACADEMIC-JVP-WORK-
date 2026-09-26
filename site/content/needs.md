@@ -12,10 +12,10 @@ depends on it. If you can help with any item, please open an issue on the
 
 ## Paper 1 — *The Cybernetic Limits of Conversion*
 
-- **A reader in the philosophy of action.** Paper 1 is addressed to that field, and §7.8 argues
+- **A reader in the philosophy of action.** Paper 1 is addressed to that field, and §7 argues
   with Callard, Paul and Pettigrew. The errors found so far — axioms stated more strongly than the
   theorems they named, "proves" where only an argument was given — are the kind a specialist sees
-  in minutes. Most needed: a reading of §7 and of the system-boundary argument (§7.5).
+  in minutes. Most needed: a reading of §6 and of the system-boundary argument (§6.5).
 - **The system-boundary section — being written by the author.** Whether relativity to the
   observer's system boundary trivializes the thesis is the paper's central open question. By
   decision it is being written by the author, not by the AI assistant. Support notes:

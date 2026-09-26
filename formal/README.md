@@ -3,16 +3,16 @@
 Four files, machine-checked in CI — and, as of the environment change noted below,
 locally as well:
 
-- **`Trichotomy.lean`** — Paper 1 §7.5's Meta-Optimization Collapse Theorem (formal statement in the paper's Appendix A.3): the
+- **`Trichotomy.lean`** — Paper 1 §6.5's Meta-Optimization Collapse Theorem (formal statement in the paper's Appendix A.3): the
   exhaustiveness of the three cells and the *almost-everywhere* exclusion of the forbidden
   object (corrected; see below).
 - **`Counterexamples.lean`** — machine-checked refutations, in concrete models and with no
   axioms, of the two *pointwise* axioms the first version of `Trichotomy.lean` and
   `Escape.lean` declared.
-- **`ClassG.lean`** — Paper 1 §8.3's Class G (symbolic conditions and satisfiability tests in Appendix A.6): logical satisfiability of the
+- **`ClassG.lean`** — Paper 1 §8.3's Class G (symbolic conditions and satisfiability tests in Appendix A.5): logical satisfiability of the
   ten-condition conjunction, exclusion of every near-miss, and the derivation of the
   filter's effective dimensionality.
-- **`Escape.lean`** — Paper 1 §7.5's *escape horn*, closed by the stronger argument the
+- **`Escape.lean`** — Paper 1 §6.5's *escape horn*, closed by the stronger argument the
   escape experiments produced: an identity contract reads a coordinate that lives on a
   compact quotient, so a state that escapes in the radius stays recurrent in the
   observable — for readings typical of the quotient flow's invariant measure (almost every initial reading when that measure is Lebesgue, as for the quasi-periodic escapers tested). The axiom audit shows this consumes
@@ -80,10 +80,10 @@ the proof discarded it (`rintro ⟨_, hnr⟩`). It has been removed rather than 
 
 **What this costs Paper 1.** The exclusion holds for states typical of the invariant measure, not for every state. For conservative flows that is almost every initial condition; for **dissipative** flows the invariant measure lives on the attractor, the basin's transients are null for it though Lebesgue-generic, and Poincaré says nothing about them;
 exceptional trajectories (separatrices, transients) exist. Case 3 means *asymptotically
-chain-recurrent*, which is what the prose of §7.5 (classifying by attractor type) already
+chain-recurrent*, which is what the prose of §6.5 (classifying by attractor type) already
 described, but which is weaker than the "recurrent" the first formal file asserted. The
 load-bearing fact is recurrence on a compact set with an invariant measure; positive entropy
-contributes nothing to the exclusion. §7.5 now says so.
+contributes nothing to the exclusion. §6.5 now says so.
 
 ### On discharging the axioms from Mathlib
 

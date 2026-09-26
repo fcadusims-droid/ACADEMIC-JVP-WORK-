@@ -46,12 +46,12 @@ PAPERS = [
     {
         "n": 1, "src": "Paper1.md", "slug": "paper-1",
         "short": "The Cybernetic Limits of Conversion",
-        "sub": "A Transcendental Negative Critique of Control-Theoretic Models of "
-               "Existential Transformation",
+        "sub": "Formal Models of Value Change and the Fixed Evaluative Point",
         "blurb": "A negative result. Given control as directed change relative to a "
                  "held-fixed evaluative structure, agency-preserving conversion cannot "
                  "be formulated as control without collapsing into tautology, "
-                 "annihilation, or incommensurability.",
+                 "agency collapse, or incommensurability; and the formal models of value "
+                 "change on offer each hold such a structure fixed.",
         "content": "paper1.md", "dir": "paper1_control_trilemma",
     },
     {
@@ -671,14 +671,14 @@ can download.</p>
 <h2>How they depend on one another</h2>
 <p>The dependency runs one way. Paper&nbsp;2 borrows Paper&nbsp;1's Class&nbsp;G and
 its consistency contract <em>I</em>; nothing flows back, so Paper&nbsp;2's empirical
-fate leaves Paper&nbsp;1 untouched. Paper&nbsp;3 is logically independent of both and
-stands or falls as a time-series method, which is why a reader who accepts it incurs
-no commitment to the other two.</p>
-<p>They also differ in kind. Paper&nbsp;1 is transcendental and negative: it argues
-that a family of models cannot pose a question, not that some particular model is
+fate leaves Paper&nbsp;1 untouched. Paper&nbsp;3 is logically independent of both,
+which is why a reader who accepts it incurs no commitment to the other two.</p>
+<p>They also differ in kind. Paper&nbsp;1 is negative and about formulation: it
+argues that a family of models cannot pose a question, not that some particular model is
 wrong. Paper&nbsp;2 is conditional and eliminative, and its title now carries the
-pre-registered negative that halted its positive arm. Paper&nbsp;3 is an ordinary
-methods paper making an ordinary methods claim, tested against ordinary baselines.</p>
+pre-registered negative that halted its positive arm. Paper&nbsp;3 is a methodological
+negative: the pre-registered record of how one method came to look validated, and of the
+controls that showed it was not.</p>
 </div>
 """
     write("papers/index.html",

@@ -179,5 +179,27 @@
     ],
     "pattern": "(?i)keeps? absolute power|kept absolute power|removing power removes|normalizes covariances to remove power",
     "why": "mdm_trap_control used band-filtered data (standardized over the night for sleep), so it keeps epoch amplitude, not absolute power; and the eyes-open/closed scalar is relative alpha (8-13 / 1-40 Hz, unfiltered), itself normalized. What band-pass filtering plus trace normalization removes is the amplitude of a band relative to the rest of the spectrum."
+  },
+  {
+    "id": "P1: retired terminology (2026-09-26 restructure)",
+    "paper": [
+      "Paper1.md",
+      "Paper2.md",
+      "README.md",
+      "site/content/paper1.md",
+      "site/content/overview.md"
+    ],
+    "pattern": "(?i)cybernetic impossibility|\\bannihilat|bellman collapse|\\btranscendental",
+    "why": "Terms that needed a 'discount' note were replaced (drafts/paper1_restructure_plan.md, 4.1): 'transcendental' misdescribes the argument's form (Stroud 1968), 'annihilation' is now 'agency collapse' (the limit D_ag -> 0), 'Bellman collapse' is the optimization horn, and the 'Trilemma of Cybernetic Impossibility' is the control trilemma, conceded definitional at its top level."
+  },
+  {
+    "id": "P1: novelty is not the joint exhaustiveness",
+    "paper": [
+      "Paper1.md",
+      "README.md",
+      "site/content/paper1.md"
+    ],
+    "pattern": "(?i)novelty is the joint exhaustiveness",
+    "why": "§6.6 concedes the trilemma is definitional at its top level; the contribution is the case-by-case claim of section 7."
   }
 ]

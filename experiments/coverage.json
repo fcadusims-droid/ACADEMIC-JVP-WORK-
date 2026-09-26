@@ -169,7 +169,7 @@
   {
     "construct": "Helmholtz-Hodge split of the value field",
     "paper": "Paper1",
-    "where": "§7.5",
+    "where": "§6.5",
     "exercised_by": [
       "rl_agents_trichotomy"
     ]
@@ -177,7 +177,7 @@
   {
     "construct": "Poincare recurrence / trichotomy classification",
     "paper": "Paper1",
-    "where": "§7.5",
+    "where": "§6.5",
     "exercised_by": [
       "poincare_recurrence_check",
       "rl_agents_trichotomy",
@@ -187,7 +187,7 @@
   {
     "construct": "Finite-gain agency cost curve (exogenous costing)",
     "paper": "Paper1",
-    "where": "§7.3",
+    "where": "§6.3",
     "exercised_by": [
       "tracking_cost_curve"
     ]
@@ -204,7 +204,7 @@
   {
     "construct": "Escape horn closure by recurrence on the quotient",
     "paper": "Paper1",
-    "where": "§7.5, §7.7",
+    "where": "§6.5, §6.7",
     "exercised_by": [
       "escape_endogeneity",
       "escape_persistence_decider",

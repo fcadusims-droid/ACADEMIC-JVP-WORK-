@@ -72,15 +72,6 @@
     }
   },
   {
-    "id": "Lorenz recurrence fraction",
-    "result": "rl_agents_trichotomy",
-    "path": "candidates.lorenz_chaos.recurrence_fraction",
-    "tol": 0.005,
-    "papers": {
-      "Paper1.md": "remains recurrent \\(\\$([0-9.]+)\\$\\)"
-    }
-  },
-  {
     "id": "CBRA structured-residual fraction",
     "result": "cbra_boundary_residual",
     "path": "fraction_structured",

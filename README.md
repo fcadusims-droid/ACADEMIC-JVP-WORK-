@@ -23,11 +23,13 @@ this repository and rebuilt on every push, so it never lags the work; see
 
 ## The trilogy
 
-- **`Paper1.md` — The Cybernetic Limits of Conversion.** A transcendental
-  negative critique: given a definition of control as directed change relative to a
-  held-fixed evaluative structure, agency-preserving *conversion* (the
-  transformation of that structure) cannot be formulated as control without
-  collapsing into tautology, annihilation, or incommensurable indeterminacy. Its
+- **`Paper1.md` — The Cybernetic Limits of Conversion.** A negative critique:
+  given a definition of control as directed change relative to a held-fixed evaluative
+  structure, agency-preserving *conversion* (the transformation of that structure)
+  cannot be formulated as control without collapsing into tautology, agency collapse,
+  or incommensurable indeterminacy. That top level is conceded to be definitional; the
+  substantive claim is that the formal models of value change on offer each hold such
+  a structure fixed. Its
   load-bearing formal result is a *Meta-Optimization Collapse Theorem* (a
   trichotomy), and it defines the residual admissibility profile **Class G**. It is
   addressed to the philosophy of action; its formal statements are collected in an appendix,

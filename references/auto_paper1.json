@@ -95,16 +95,14 @@
       "Oxford University Press, USA",
       "Oxford University Press"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       2002,
       2003,
       2004
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Ashby, W. Ross. 1956. *An Introduction to Cybernetics*. Chapman and Hall.",
@@ -130,9 +128,6 @@
       "J. Wiley",
       "Science Editions"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1956,
       1961,
@@ -140,8 +135,9 @@
       1964,
       1970
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Ashby, W. Ross. 1960. *Design for a Brain: The Origin of Adaptive Behaviour*. 2nd ed. Chapman and Hall.",
@@ -166,9 +162,6 @@
       "Wiley",
       "J. Wiley"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1952,
       1954,
@@ -176,8 +169,9 @@
       1965,
       1966
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Aubin, Jean-Pierre. 1991. *Viability Theory*. Birkhäuser.",
@@ -199,15 +193,13 @@
       "Birkhäuser",
       "Birkhauser"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1991,
       2009
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Bratman, Michael E. 1987. *Intention, Plans, and Practical Reason*. Harvard University Press.",
@@ -229,16 +221,14 @@
       "Harvard University Press",
       "Center for the Study of Language and Information"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1987,
       1990,
       1999
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Bratman, Michael E. 2007. *Structures of Agency: Essays*. Oxford University Press. (Planning agency and self-governance; standing policies as a mechanism for stability of intention.)",
@@ -261,15 +251,13 @@
       "Ebsco Publishing",
       "Oxford University Press"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       2006,
       2007
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Callard, Agnes. 2018. *Aspiration: The Agency of Becoming*. Oxford University Press. (Proleptic reasons: acknowledged-defective versions of reasons one expects eventually to grasp; the most direct challenge to this paper's thesis.)",
@@ -290,15 +278,13 @@
     "found_publishers": [
       "Oxford University Press, Incorporated"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       2018,
       2019
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Bellman, Richard. 1957. *Dynamic Programming*. Princeton University Press.",
@@ -321,17 +307,15 @@
       "Rand Corp.",
       "University Press"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1956,
       1957,
       1962,
       1964
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Bowles, Samuel. 1998. \"Endogenous Preferences: The Cultural Consequences of Markets and Other Economic Institutions.\" *Journal of Economic Literature* 36(1): 75-111.",
@@ -381,15 +365,13 @@
       "Island Press",
       "Springer London, Limited"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1981,
       2012
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Crutchfield, James P., and Young, Karl. 1989. \"Inferring Statistical Complexity.\" *Physical Review Letters* 63(2): 105-108.",
@@ -435,14 +417,12 @@
     "found_publishers": [
       "Academic Press"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1965
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Crutchfield, James P. 2012. \"Between Order and Chaos.\" *Nature Physics* 8(1): 17-24.",
@@ -496,7 +476,7 @@
     "auto_problems": []
   },
   {
-    "raw": "Frankfurt, Harry G. 1971. \"Freedom of the Will and the Concept of a Person.\" *The Journal of Philosophy* 68(1): 5-20. (Second-order desires; the hierarchy the §7.6 \"one level up\" move presupposes.)",
+    "raw": "Frankfurt, Harry G. 1971. \"Freedom of the Will and the Concept of a Person.\" *The Journal of Philosophy* 68(1): 5-20. (Second-order desires; the hierarchy the §6.6 \"one level up\" move presupposes.)",
     "surname": "Frankfurt",
     "year": 1971,
     "title": "Freedom of the Will and the Concept of a Person",
@@ -520,7 +500,7 @@
     "auto_problems": []
   },
   {
-    "raw": "Hadfield-Menell, Dylan, Stuart J. Russell, Pieter Abbeel, and Anca Dragan. 2016. \"Cooperative Inverse Reinforcement Learning.\" *Advances in Neural Information Processing Systems* 29. (Value learning as a fixed higher-order objective; §7.8.5 reads it as reabsorption.)",
+    "raw": "Hadfield-Menell, Dylan, Stuart J. Russell, Pieter Abbeel, and Anca Dragan. 2016. \"Cooperative Inverse Reinforcement Learning.\" *Advances in Neural Information Processing Systems* 29. (Value learning as a fixed higher-order objective; §7.6 reads it as reabsorption.)",
     "surname": "Hadfield-Menell",
     "year": 2016,
     "title": "Cooperative Inverse Reinforcement Learning",
@@ -568,17 +548,15 @@
       "Springer Berlin Heidelberg",
       "Springer"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1977,
       2012,
       2013,
       2020
     ],
-    "pub_check": true,
-    "year_check": false
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Hubinger, Evan, Chris van Merwijk, Vladimir Mikulik, Joar Skalse, and Scott Garrabrant. 2019. \"Risks from Learned Optimization in Advanced Machine Learning Systems.\" arXiv:1906.01820. (Mesa-optimization: learned optimizers with objectives of their own.)",
@@ -588,7 +566,6 @@
     "container": null,
     "doi": null,
     "arxiv": "1906.01820",
-    "auto_status": "MATCH",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/1906.01820",
     "found_title": "Risks from Learned Optimization in Advanced Machine Learning Systems",
@@ -601,7 +578,8 @@
     ],
     "found_year": 2019,
     "title_similarity": 1.0,
-    "auto_problems": []
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "James, William. 1902. *The Varieties of Religious Experience: A Study in Human Nature*. Longmans, Green. (Classical phenomenology of conversion: abruptness, passivity, retained identity.)",
@@ -622,14 +600,12 @@
     "found_publishers": [
       "Oxford University Press, USA"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       2012
     ],
-    "pub_check": false,
-    "year_check": false
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Halmos, Paul R. 1956. *Lectures on Ergodic Theory*. Chelsea Publishing.",
@@ -651,14 +627,12 @@
       "Chelsea Pub. Co.",
       "Mathematical Society of Japan"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1956
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Bechlioulis, Charalampos P., and George A. Rovithakis. 2008. \"Robust Adaptive Control of Feedback Linearizable MIMO Nonlinear Systems with Prescribed Performance.\" *IEEE Transactions on Automatic Control* 53(9): 2090-2099. (Bounded tracking error with finite control authority.)",
@@ -730,14 +704,12 @@
     "found_publishers": [
       "Oxford University Press"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       2009
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Kuhn, Thomas S. 1962. *The Structure of Scientific Revolutions*. University of Chicago Press. (Incommensurable paradigms; the structural ancestor of the third horn.)",
@@ -784,9 +756,6 @@
       "University of Chicago P.",
       "Alan"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1955,
       1962,
@@ -818,8 +787,9 @@
       2018,
       2020
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Lewis, David. 1976. \"Survival and Identity.\" In Amelie Oksenberg Rorty, ed., *The Identities of Persons*. University of California Press.",
@@ -865,14 +835,12 @@
       "University of Notre Dame Press",
       "Duckworth Pub"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1988
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Omohundro, Stephen M. 2008. \"The Basic AI Drives.\" In *Proceedings of the First AGI Conference*, IOS Press: 483-492. (Goal-content integrity as an instrumentally convergent drive: the first horn, derived independently.)",
@@ -917,18 +885,16 @@
     "found_publishers": [
       "Oxford University Press"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       2014,
       2016
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
-    "raw": "Pettigrew, Richard. 2020. *Choosing for Changing Selves*. Oxford University Press. (The Aggregate Utility Solution: each self acts on a weighted average of the values of all selves; §7.8.3 reads it as the best worked-out instance of reabsorption.)",
+    "raw": "Pettigrew, Richard. 2020. *Choosing for Changing Selves*. Oxford University Press. (The Aggregate Utility Solution: each self acts on a weighted average of the values of all selves; §7.3 reads it as the best worked-out instance of reabsorption.)",
     "surname": "Pettigrew",
     "year": 2020,
     "title": "Choosing for Changing Selves",
@@ -946,14 +912,12 @@
     "found_publishers": [
       "Oxford University Press"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       2020
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Bhatia, Harsh, et al. 2013. \"The Helmholtz–Hodge Decomposition — A Survey.\" *IEEE Transactions on Visualization and Computer Graphics* 19(8): 1386-1404. (Helmholtz–Hodge decomposition of vector fields; uniqueness and boundary conditions on bounded domains.)",
@@ -1001,14 +965,12 @@
     "found_publishers": [
       "American Mathematical Society"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1978
     ],
-    "pub_check": false,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Glötzl, Erhard, and Oliver Richters. 2023. \"Helmholtz Decomposition and Potential Functions for n-Dimensional Analytic Vector Fields.\" *Journal of Mathematical Analysis and Applications* 525(2): 127138. (Existence and structure of the gradient/divergence-free/harmonic parts in $\\mathbb{R}^n$.)",
@@ -1059,18 +1021,16 @@
       "Penguin Audio",
       "Viking"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       2019,
       2020
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
-    "raw": "Soares, Nate, Benja Fallenstein, Eliezer Yudkowsky, and Stuart Armstrong. 2015. \"Corrigibility.\" In *AAAI Workshop on AI and Ethics*: 74-82. (The corrigibility problem; §7.8.5 gives the trilemma's structural prediction about its solution space.)",
+    "raw": "Soares, Nate, Benja Fallenstein, Eliezer Yudkowsky, and Stuart Armstrong. 2015. \"Corrigibility.\" In *AAAI Workshop on AI and Ethics*: 74-82. (The corrigibility problem; §7.6 gives the trilemma's structural prediction about its solution space.)",
     "surname": "Soares",
     "year": 2015,
     "title": "Corrigibility",
@@ -1096,14 +1056,13 @@
     ]
   },
   {
-    "raw": "Nayebi, Aran. 2025. \"Core Safety Values for Provably Corrigible Agents.\" arXiv:2507.20964. (Deciding whether an arbitrarily modified agent ever violates corrigibility is undecidable by reduction to the halting problem; §2.1 and §7.8.6 place this neighbouring limitative result and distinguish its object — a predicate over programs — from the trilemma's dynamical claim.)",
+    "raw": "Nayebi, Aran. 2025. \"Core Safety Values for Provably Corrigible Agents.\" arXiv:2507.20964. To appear in the AAAI 2026 Machine Ethics Workshop proceedings. (Deciding whether an arbitrarily modified agent ever violates corrigibility is undecidable by reduction to the halting problem; §2.1 and §7.7 place this neighbouring limitative result and distinguish its object — a predicate over programs — from the trilemma's dynamical claim.)",
     "surname": "Nayebi",
     "year": 2025,
     "title": "Core Safety Values for Provably Corrigible Agents",
     "container": null,
     "doi": null,
     "arxiv": "2507.20964",
-    "auto_status": "MATCH",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2507.20964",
     "found_title": "Core Safety Values for Provably Corrigible Agents",
@@ -1112,17 +1071,17 @@
     ],
     "found_year": 2025,
     "title_similarity": 1.0,
-    "auto_problems": []
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
-    "raw": "Wang, Charles L., Keir Dorchen, and Peter Jin. 2025. \"On the Statistical Limits of Self-Improving Agents.\" arXiv:2510.04399 (TMLR 2026). (Distribution-free PAC-learnability is preserved iff the policy-reachable family stays uniformly capacity-bounded, a VC-dimension condition; §7.8.6 contrasts this static capacity limit with the trilemma's dynamical mechanism.)",
+    "raw": "Wang, Charles L., Keir Dorchen, and Peter Jin. 2025. \"On the Statistical Limits of Self-Improving Agents.\" arXiv:2510.04399 (TMLR 2026). (Distribution-free PAC-learnability is preserved iff the policy-reachable family stays uniformly capacity-bounded, a VC-dimension condition; §7.7 contrasts this static capacity limit with the trilemma's dynamical mechanism.)",
     "surname": "Wang",
     "year": 2025,
     "title": "On the Statistical Limits of Self-Improving Agents",
     "container": null,
     "doi": null,
     "arxiv": "2510.04399",
-    "auto_status": "MATCH",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2510.04399",
     "found_title": "On The Statistical Limits of Self-Improving Agents",
@@ -1133,7 +1092,8 @@
     ],
     "found_year": 2025,
     "title_similarity": 1.0,
-    "auto_problems": []
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Strogatz, Steven H. 2015. *Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering*. 2nd ed. Westview Press. (Limit cycles, strange attractors, and Lyapunov exponents.)",
@@ -1161,9 +1121,6 @@
       "Perseus Books Group",
       "Avalon Publishing"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1994,
       2000,
@@ -1177,8 +1134,9 @@
       2021,
       2024
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Taylor, Charles. 1976. \"Responsibility for Self.\" In Amelie Oksenberg Rorty, ed., *The Identities of Persons*. University of California Press. (Radical reevaluation: the first horn, stated in prose four decades early.)",
@@ -1269,14 +1227,12 @@
       "Birkhauser Verlag",
       "Springer"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       2012
     ],
-    "pub_check": false,
-    "year_check": false
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Parfit, Derek. 1984. *Reasons and Persons*. Oxford University Press.",
@@ -1299,15 +1255,13 @@
       "Oxford University Press",
       "Oxford University Press, USA"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1984,
       1986
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Poincaré, Henri. 1890. \"Sur le problème des trois corps et les équations de la dynamique.\" *Acta Mathematica* 13: 1-270. (Poincaré recurrence theorem.)",
@@ -1396,7 +1350,6 @@
     "first_page": "11343",
     "doi": null,
     "arxiv": "2012.08382",
-    "auto_status": "MATCH",
     "source": "arxiv",
     "url": "https://arxiv.org/abs/2012.08382",
     "found_title": "Evolutionary Game Theory Squared: Evolving Agents in Endogenously Evolving Zero-Sum Games",
@@ -1409,7 +1362,8 @@
     ],
     "found_year": 2020,
     "title_similarity": 1.0,
-    "auto_problems": []
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Sutton, Richard S., and Barto, Andrew G. 2018. *Reinforcement Learning: An Introduction*. 2nd ed. MIT Press.",
@@ -1432,16 +1386,14 @@
       "Springer US",
       "A Bradford Book"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1992,
       1998,
       2018
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Waddington, Conrad H. 1957. *The Strategy of the Genes*. George Allen & Unwin.",
@@ -1463,14 +1415,12 @@
       "Allen & Unwin",
       "Macmillan"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1957
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Walters, Peter. 1982. *An Introduction to Ergodic Theory*. Springer.",
@@ -1491,17 +1441,15 @@
     "found_publishers": [
       "Springer-Verlag"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1982
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
-    "raw": "Wiener, Norbert. 1948. *Cybernetics: Or Control and Communication in the Animal and the Machine*. MIT Press.",
+    "raw": "Wiener, Norbert. 1948. *Cybernetics: Or Control and Communication in the Animal and the Machine*. Technology Press and John Wiley & Sons (New York); Hermann (Paris).",
     "surname": "Wiener",
     "year": 1948,
     "title": "Cybernetics: Or Control and Communication in the Animal and the Machine",
@@ -1542,9 +1490,6 @@
       "M.I.T. Press",
       "Perspectiva"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       1948,
       1949,
@@ -1564,8 +1509,9 @@
       2021,
       2023
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Wiggins, David. 2001. *Sameness and Substance Renewed*. Cambridge University Press.",
@@ -1587,16 +1533,14 @@
     "found_publishers": [
       "Cambridge University Press"
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH",
     "found_publish_years": [
       2001,
       2005,
       2012
     ],
-    "pub_check": true,
-    "year_check": true
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
   },
   {
     "raw": "Williams, Bernard. 1970. \"The Self and the Future.\" *The Philosophical Review* 79(2): 161-180.",
@@ -1708,6 +1652,125 @@
     "found_year": 2024,
     "found_volume": "19",
     "found_page": null,
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Bradley, Richard. 2009. \"Becker's Thesis and Three Models of Preference Change.\" *Politics, Philosophy & Economics* 8(2): 223-242. DOI: 10.1177/1470594X09102238. (Becker's invariant tastes can almost always be saved by refining the state space, at a price \"as ad hoc\" as postulating taste change; generalised conditioning represents any change of attitudes, fundamental desires included.)",
+    "surname": "Bradley",
+    "year": 2009,
+    "title": "Becker's Thesis and Three Models of Preference Change",
+    "container": "Politics, Philosophy & Economics",
+    "volume": "8",
+    "first_page": "223",
+    "doi": "10.1177/1470594x09102238",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1177/1470594x09102238",
+    "found_title": "Becker's thesis and three models of preference change",
+    "found_container": "Politics, Philosophy &amp; Economics",
+    "found_authors": [
+      "Bradley"
+    ],
+    "found_year": 2009,
+    "found_volume": "8",
+    "found_page": "223-242",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Bykvist, Krister. 2006. \"Prudence for Changing Selves.\" *Utilitas* 18(3): 264-283. DOI: 10.1017/S0953820806002032. (Prudence when actions shape preferences, evaluated by the attitudes held while leading a life; a fixed higher-order rule, precursor of Pettigrew's aggregation.)",
+    "surname": "Bykvist",
+    "year": 2006,
+    "title": "Prudence for Changing Selves",
+    "container": "Utilitas",
+    "volume": "18",
+    "first_page": "264",
+    "doi": "10.1017/s0953820806002032",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1017/s0953820806002032",
+    "found_title": "Prudence for Changing Selves",
+    "found_container": "Utilitas",
+    "found_authors": [
+      "BYKVIST"
+    ],
+    "found_year": 2006,
+    "found_volume": "18",
+    "found_page": "264-283",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Carroll, Micah, Anca Dragan, Stuart Russell, and Dylan Hadfield-Menell. 2022. \"Estimating and Penalizing Induced Preference Shifts in Recommender Systems.\" ICML 2022. arXiv:2204.11966. (Optimizing systems have incentives to shift users' preferences; judging shifts requires a reference such as the uninfluenced dynamics.)",
+    "surname": "Carroll",
+    "year": 2022,
+    "title": "Estimating and Penalizing Induced Preference Shifts in Recommender Systems",
+    "container": null,
+    "doi": null,
+    "arxiv": "2204.11966",
+    "source": "arxiv",
+    "url": "https://arxiv.org/abs/2204.11966",
+    "found_title": "Estimating and Penalizing Induced Preference Shifts in Recommender Systems",
+    "found_authors": [
+      "Carroll, Micah",
+      "Dragan, Anca",
+      "Russell, Stuart",
+      "Hadfield-Menell, Dylan"
+    ],
+    "found_year": 2022,
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Dietrich, Franz, and Christian List. 2013. \"Where Do Preferences Come From?\" *International Journal of Game Theory* 42(3): 613-637. DOI: 10.1007/s00182-012-0333-y. (Preferences derived from a stable weighing relation over motivationally salient properties; preference change as a change of salience.)",
+    "surname": "Dietrich",
+    "year": 2013,
+    "title": "Where Do Preferences Come From?",
+    "container": "International Journal of Game Theory",
+    "volume": "42",
+    "first_page": "613",
+    "doi": "10.1007/s00182-012-0333-y",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1007/s00182-012-0333-y",
+    "found_title": "Where do preferences come from?",
+    "found_container": "International Journal of Game Theory",
+    "found_authors": [
+      "Dietrich",
+      "List"
+    ],
+    "found_year": 2013,
+    "found_volume": "42",
+    "found_page": "613-637",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Hansson, Sven Ove. 1995. \"Changes in Preference.\" *Theory and Decision* 38(1): 1-28. DOI: 10.1007/BF01083166. (Preference revision, contraction, addition and subtraction under postulates for rational change.)",
+    "surname": "Hansson",
+    "year": 1995,
+    "title": "Changes in Preference",
+    "container": "Theory and Decision",
+    "volume": "38",
+    "first_page": "1",
+    "doi": "10.1007/bf01083166",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1007/bf01083166",
+    "found_title": "Changes in preference",
+    "found_container": "Theory and Decision",
+    "found_authors": [
+      "Hansson"
+    ],
+    "found_year": 1995,
+    "found_volume": "38",
+    "found_page": "1-28",
     "title_similarity": 1.0,
     "auto_status": "MATCH",
     "auto_problems": []
