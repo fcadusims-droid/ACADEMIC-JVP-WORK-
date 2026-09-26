@@ -1,4 +1,146 @@
-# Paper 1: cut map to 15,000 words (for the author's approval — nothing applied)
+# Paper 1: cut map (round 1 applied; round 2 and the appendix map await approval)
+
+## Status (2026-09-26)
+
+**Target, corrected by the author.** Synthese's guideline of 15–30 printed pages covers the whole
+article. The target is therefore:
+- body plus notes: at most **13,500** words;
+- appendix: at most **2,500** words;
+- references: no target, but any reference that loses its citation leaves the list.
+
+That is roughly 17,500 words in all, about 33 pages. It replaces the earlier rule (15,000 words
+excluding the appendix and references), under which the article would have run to about 45 pages.
+
+**Round 1 is applied.** The author approved it with the changes listed below. The pre-cut text is
+`drafts/paper1_precut_2026-09-26.md`, which already includes the author's corrections to §6.6 and §8.4.
+
+| | Words (body + notes) |
+|---|---|
+| Before the author's corrections to §6.6 and §8.4 | 25,107 |
+| After those corrections (the pre-cut text) | 25,428 |
+| After round 1 | **14,256** |
+| Target | ≤ 13,500 |
+| Still to cut | **≥ 756** |
+| Appendix now / target | 5,070 / ≤ 2,500 |
+
+*Counting method.* The count is whitespace-separated tokens from `## Abstract` up to the appendix,
+plus the footnote. The earlier figure, 25,129, came from a slightly different tokenization of the
+same text.
+
+**How round 1 was applied, and where it differs from the table below.**
+- **Rows applied as approved:** F1–F7, F9–F11, T1–T4, T6, T7, T9–T11, T13–T18, L1, L3, L4, L6, L7,
+  G1–G3, U1 and C1. **Reserve applied:** R1, R2 and R3. **R4 was rejected**, so the deflationary
+  alternative (§6.4) keeps about 190 words.
+- **F8.** "Limitative theorems" appeared nowhere else in the body, so the whole paragraph was removed.
+  The qualification rule that guarded the phrase was withdrawn from `experiments/qualifications.json`.
+  The Nayebi reference annotation no longer cites §2.1.
+- **T5.** Condensed to about 510 words, with one paragraph per architecture.
+- **T8.** Removed. A 59-word pointer stays in the body and carries the second `[^lean]` anchor.
+- **T12.** Condensed to about 280 words, with its content updated:
+  - what §6.6 settles: which system a contract may be about, namely the bearer of the
+    responsibility-bearing history;
+  - what stays open: which readings of that bearer's value state are admissible, and so whether
+    every admissible contract factors through a bounded reading.
+
+  Both qualification phrases are kept.
+- **L2.** One clause each for Frankfurt, Korsgaard, Parfit and Bratman. Taylor, Kuhn and MacIntyre
+  were removed, together with their four reference entries (Taylor has two).
+- **L5 and R1.** §7.7 is now 153 words. Omohundro, Hubinger and Everitt left the list.
+- **U1 and R3.** §9 keeps the definition, the post-jump criterion and the reason §7.6 needs the
+  profile (120 words). Subsections 9.1–9.3 are gone from the text and the table of contents; the
+  conditions remain in A.6.
+- **L7.** One clause added to §7.4 on Bradley's first model, classical conditioning. §8.4 already
+  cited "§7.4, Bradley's first model", but §7.4 did not mention it. The clause is taken from the
+  verified notes (`references/paper1_phase3_literature.md`).
+- **Cross-references repaired:**
+  - §7.3 cited "§2.1" for the premise; it is now §2;
+  - the A.6 heading now points to §9, not §9.3;
+  - the table of contents no longer lists the glossary.
+
+**Reference classification (item 4 of the decision).** Apart from the references the author named,
+the map had flagged these:
+
+| Reference | Rule applied | Result |
+|---|---|---|
+| Adams et al. 2017 | priority (same recurrence argument for externality) | kept, one clause in §6.5 |
+| Conley 1978 | priority | kept, §6.5 |
+| Carroll et al. 2024 | priority (alignment under changing preferences) | kept, §7.5 |
+| Aubin 1991, Ames et al. 2019 | the viability-theory counterpart of conditions 1–5 | kept, §8.3 |
+| Haken 1983, Carr 1981 | the dynamical rationale for the decomposition | kept, §8.1 |
+| Soares 2015, Hadfield-Menell 2016, Russell 2019, Nayebi 2025, Wang 2025 | the corrigibility claims that §7.7 keeps | kept |
+
+Five references were cited without a year (Lehman and Stanley, Schmidhuber, Singh et al., Bowles
+and James), so the citation check could not match them. The years were added. Paper 1 now has
+57 references (64 before). The audit record was rebuilt, with the removed entries taken out of
+`references/auto_paper1.json`.
+
+## Round 2: proposals to reach 13,500 (nothing applied)
+
+Protected, as instructed:
+- the abstract;
+- §3, §4.1 and §4.2;
+- §6.6 and §8.4;
+- the §7 introduction, §7.3 and §8.2;
+- the two §8.3 tables.
+
+"Now" is measured; "saves" is an estimate. The core rows (S1–S8) sum to 791, which gives about
+13,465.
+
+| # | Where | Now | Action | Saves | What the argument loses | Gates / references |
+|---|---|---|---|---|---|---|
+| S1 | §6.5 "The closure of the trichotomy" | 236 | Condense to ~120. Drop the parenthesis about the withdrawn "confirmed directly" sentence (its history is in the repository) | 116 | The in-text record of a withdrawn claim. The measure-preserving/dissipative distinction stays | — |
+| S2 | §6.5 summary table of the three horns | 107 | Remove | 107 | A table restating §6.2–6.4. The "conjunction is the result" paragraph stays | — |
+| S3 | §6.7 "costing" paragraph | 254 | Condense to ~130 | 124 | The funnel-control detail (in §6.3) and the "600 lines of dynamics" sentence | Ilchmann and Bechlioulis stay cited in §6.3 |
+| S4 | §6.7 opening paragraph | 191 | Condense to ~100 | 91 | The bachelor analogy and part of the statement of the vacuity worry | — |
+| S5 | §8.1 four-way table, its lead-in and the closing sentence | 138 | Remove | 138 | A contrast the §8.3 candidate table already draws (damping, forcing, feedback, coercion) | — |
+| S6 | §8.1 forcing/Class G bullets and "Both can pass…" | 162 | Merge into ~80 | 82 | Some wording. The dimensionality contrast stays; the formal version is in A.2 | — |
+| S7 | §7.5 Arpaly paragraph | 135 | Condense to ~60 and update it | 75 | The paragraph still says Huck's case is "not obviously externally occasioned" and "the clearest test the framework has not passed". After the author's correction, §8.4 treats Huck as a candidate if the occasion is external (Jim) and §6.6 puts purely internal change inside the boundary. The condensed text would point to §8.4 | Arpaly stays |
+| S8 | §2 "Failure conditions of the critique" | 108 | Condense to ~50 | 58 | The three failure conditions become one sentence | — |
+
+Reserve:
+
+| # | Where | Now | Action | Saves | What the argument loses |
+|---|---|---|---|---|---|
+| S9 | §2.1 first two paragraphs | 187 | Condense to ~100 | 87 | The perpetual-motion analogy and the "dominant paradigm" paragraph |
+| S10 | §5 closing paragraph | 134 | Condense to ~70 | 64 | Part of the P/Lambda contrast and the bridge to §6 |
+| S11 | §6.2 two argument paragraphs | 294 | Condense to ~180 | 114 | Detail on requisite variety; the "self-salvation" gloss, which belongs to the companion paper |
+| S12 | §8 opening two paragraphs | 153 | Condense to ~80 | 73 | "Admissibility predicate, not mechanism" is said twice; once remains |
+| S13 | §7.1 concession paragraph | 170 | Condense to ~120 | 50 | Wording |
+
+## Appendix map to 2,500 (nothing applied)
+
+To keep, as instructed:
+- the theorem's statement (A.3, first paragraph, 250 words);
+- the Class G conditions in symbols (A.5 table);
+- the satisfiability witness, including the measured $D_c$ checked by `claims.json` (A.5,
+  satisfiability paragraph, 310 words).
+
+The core rows sum to 2,629, which gives about 2,441.
+
+| # | Where | Now | Action | Saves | What is lost | Gates |
+|---|---|---|---|---|---|---|
+| AP1 | A.1 taxonomy | 749 | Keep only the correlation-power definition (~150). The class descriptions and the comparison table go; §5 already defines the classes | 599 | The Lambda comparison table (quasi-periodicity, metastability, long memory) | — |
+| AP2 | A.2 decomposition | 444 | Keep the formal decomposition (~120). Drop the 277-word "distinction is technical" paragraph, which restates §8.1 | 324 | A second statement of the forcing/reconfiguration contrast | — |
+| AP3 | A.3 "Two limitations" | 654 | Condense to ~200. Keep the bounded-reading closure and the conditional wording | 454 | The long discussion of unbounded drift and the three sampled contracts | **Qualification rule:** "closed by the *same* argument as the bounded cell" must keep "bounded reading" or "conditional" in its paragraph |
+| AP4 | A.5 independence paragraph | 378 | Condense to ~120 | 258 | The per-condition breakdown of which conditions are entailed; "about six independent constraints" stays | — |
+| AP5 | A.6 U-limit predicate | 1,244 | Keep the displayed predicate and its definitions (~250). The $\Omega_I$ discussion and the continuity floor go to one sentence each | 994 | The full argument that $\Omega_I$ is a product of the transformation, not an input, and the continuity floor | — |
+
+Appendix reserve: A.3 Case 3, 434 → ~200 (saves 234; loses the attractor-by-attractor
+discussion).
+
+## What the author needs to decide
+
+1. Approve, change or strike each of S1–S8, and pick reserve rows if needed.
+2. Approve, change or strike AP1–AP5.
+3. S7 is also a consistency fix. Its current text contradicts the corrected §8.4. If S7 is struck,
+   that paragraph should still be updated.
+
+---
+
+## Round 1 map (as prepared; applied with the changes above)
+
+*Original introduction, kept for the record:*
+
 
 *Prepared 2026-09-26, after §6.6 and §8.4 were inserted. The count follows the author's rule:*
 *body plus notes; excluding the references, the appendix and the table of contents, which is not
@@ -114,7 +256,7 @@ some reserve items will be needed.
 | R3 | §9 U-limit | Keep only its definition and the "why §7.6 needs it" sentence (~100) instead of U1's ~250 | +150 | The four conditions move to the appendix too |
 | R4 | §6.4 deflationary alternative | Reduce to two sentences instead of T4's ~180 | +130 | The one reply that could remove the optimization horn, reduced to its statement |
 
-## What the author needs to decide
+## What the author needed to decide (round 1, done)
 
 1. Approve, change or strike each row. Where the author approves fewer rows, the reserve fills
    the gap.

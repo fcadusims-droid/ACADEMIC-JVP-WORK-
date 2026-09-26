@@ -69,12 +69,18 @@ external review. It is a working list, not a checklist toward a deadline.
   - (2) §8.4, "Is Class G just ordinary interpersonal influence?". It chooses answer A in a restricted form, with an *anchored* criterion: endorsable ex ante by the pre-change standards. Answer B was rejected because it contradicts §7.4, where persuasion by reasons is Bradley's first model and so falls under the endogenous horn.
   - The objection table has a new row.
   - The thesis wording was narrowed by the author: models that **direct or evaluate** value change, no longer "explain". With "explain" the thesis would be close to trivial, since every explanation fixes some invariant.
-- **Target journal and length (decided by the author, 2026-09-26).** *Synthese* (no fixed limit, typically 15–30 printed pages; abstract 150–250 words). Target: at most 15,000 words including notes, excluding references and the appendix. A cut map has been prepared for the author's approval; no cut has been applied (`drafts/paper1_cut_map.md`).
+- **Target journal and length (decided by the author, 2026-09-26; target corrected the same day).** *Synthese*, whose guideline of 15–30 printed pages covers the whole article. Target: body plus notes at most 13,500 words; appendix at most 2,500; uncited references leave the list. About 17,500 words, or 33 pages.
+  - The first round of cuts is applied. Body plus notes went from 25,428 to 14,256 words, and references from 64 to 57. The pre-cut text is `drafts/paper1_precut_2026-09-26.md`.
+  - A second round (≥756 words) and an appendix map (5,070 → ≤2,500) await approval in `drafts/paper1_cut_map.md`.
+  - The author's corrections are in: §6.6 now says the criterion also blocks narrowing the boundary; §8.4 conditions Huck Finn on an external occasion and adds a paragraph on manipulation.
+  - **Open, for the author:**
+    - §8.4's manipulation paragraph cites §8.3 for Class G's non-tracking condition, but §8.3's ten conditions do not state it. The non-tracking trigger is defined in §6.3 and §6.5. §8.3 was not changed.
+    - The Arpaly paragraph in §7.5 still calls Huck's case untested, which contradicts the corrected §8.4 (round-2 row S7).
 - **Freeze criterion for Paper 1.** Paper 1 freezes when all four hold:
   1. the boundary section is in the paper — **done**, §6.6;
   2. the answer to the common-influence objection is in the paper — **done**, §8.4;
   3. Dietrich and List have been engaged — **done**, §7.4;
-  4. the text is within the chosen journal's length — **open**; the cut map awaits approval.
+  4. the text is within the chosen journal's length — **open**: 14,256 of 13,500 body words and 5,070 of 2,500 appendix words, with round 2 and the appendix map awaiting approval.
 
   After that, only a reader in the field, and no further audit round.
 

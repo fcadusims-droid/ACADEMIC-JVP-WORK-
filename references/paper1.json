@@ -138,15 +138,6 @@
   },
   {
     "n": 17,
-    "citation": "Everitt, Tom, Marcus Hutter, Ramana Kumar, and Victoria Krakovna. 2021. \"Reward Tampering Problems and Solutions in Reinforcement Learning: A Causal Influence Diagram Perspective.\" *Synthese* 198: 6435-6467. (Formal results on agents that can modify their own reward channel.)",
-    "status": "verified",
-    "url": "https://doi.org/10.1007/s11229-021-03141-4",
-    "checked_against": "crossref",
-    "automated_pass": "MATCH",
-    "doi": "10.1007/s11229-021-03141-4"
-  },
-  {
-    "n": 18,
     "citation": "Frankfurt, Harry G. 1971. \"Freedom of the Will and the Concept of a Person.\" *The Journal of Philosophy* 68(1): 5-20. (Second-order desires; the hierarchy the §6.7 \"one level up\" move presupposes.)",
     "status": "verified",
     "url": "https://doi.org/10.2307/2024717",
@@ -155,7 +146,7 @@
     "doi": "10.2307/2024717"
   },
   {
-    "n": 19,
+    "n": 18,
     "citation": "Hadfield-Menell, Dylan, Stuart J. Russell, Pieter Abbeel, and Anca Dragan. 2016. \"Cooperative Inverse Reinforcement Learning.\" *Advances in Neural Information Processing Systems* 29. (Value learning as a fixed higher-order objective; §7.6 reads it as reabsorption.)",
     "status": "verified",
     "url": "https://papers.nips.cc/paper/6420-cooperative-inverse-reinforcement-learning",
@@ -164,7 +155,7 @@
     "manual_review": "NIPS 2016 (Advances in Neural Information Processing Systems 29), confirmed on the proceedings site."
   },
   {
-    "n": 20,
+    "n": 19,
     "citation": "Haken, Hermann. 1983. *Synergetics: An Introduction*. 3rd ed. Springer.",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL19905329W",
@@ -173,15 +164,7 @@
     "manual_review": "3rd revised and enlarged edition, Springer 1983 (Springer Series in Synergetics 1), confirmed."
   },
   {
-    "n": 21,
-    "citation": "Hubinger, Evan, Chris van Merwijk, Vladimir Mikulik, Joar Skalse, and Scott Garrabrant. 2019. \"Risks from Learned Optimization in Advanced Machine Learning Systems.\" arXiv:1906.01820. (Mesa-optimization: learned optimizers with objectives of their own.)",
-    "status": "verified",
-    "url": "https://arxiv.org/abs/1906.01820",
-    "checked_against": "arxiv",
-    "automated_pass": "MATCH"
-  },
-  {
-    "n": 22,
+    "n": 20,
     "citation": "James, William. 1902. *The Varieties of Religious Experience: A Study in Human Nature*. Longmans, Green. (Classical phenomenology of conversion: abruptness, passivity, retained identity.)",
     "status": "verified",
     "url": "https://archive.org/details/varietiesofrelig00jameuoft",
@@ -190,7 +173,7 @@
     "manual_review": "Longmans, Green 1902, confirmed; link is a scan of the 1902 edition."
   },
   {
-    "n": 23,
+    "n": 21,
     "citation": "Halmos, Paul R. 1956. *Lectures on Ergodic Theory*. Chelsea Publishing.",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL2776843W",
@@ -198,7 +181,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 24,
+    "n": 22,
     "citation": "Bechlioulis, Charalampos P., and George A. Rovithakis. 2008. \"Robust Adaptive Control of Feedback Linearizable MIMO Nonlinear Systems with Prescribed Performance.\" *IEEE Transactions on Automatic Control* 53(9): 2090-2099. (Bounded tracking error with finite control authority.)",
     "status": "verified",
     "url": "https://doi.org/10.1109/tac.2008.929402",
@@ -207,7 +190,7 @@
     "doi": "10.1109/tac.2008.929402"
   },
   {
-    "n": 25,
+    "n": 23,
     "citation": "Ilchmann, Achim, Eugene P. Ryan, and Christopher J. Sangwin. 2002. \"Tracking with Prescribed Transient Behaviour.\" *ESAIM: Control, Optimisation and Calculus of Variations* 7: 471-493. (Funnel control: prescribed error bound with finite, state-dependent gain.)",
     "status": "verified",
     "url": "https://doi.org/10.1051/cocv:2002064",
@@ -216,7 +199,7 @@
     "doi": "10.1051/cocv:2002064"
   },
   {
-    "n": 26,
+    "n": 24,
     "citation": "Korsgaard, Christine M. 2009. *Self-Constitution: Agency, Identity, and Integrity*. Oxford University Press. (Agency constituting itself through action; the sharpest internal challenge to a given evaluative point.)",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL17919734W",
@@ -224,15 +207,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 27,
-    "citation": "Kuhn, Thomas S. 1962. *The Structure of Scientific Revolutions*. University of Chicago Press. (Incommensurable paradigms; the structural ancestor of the third horn.)",
-    "status": "verified",
-    "url": "https://openlibrary.org/works/OL3259254W",
-    "checked_against": "openlibrary",
-    "automated_pass": "MATCH"
-  },
-  {
-    "n": 28,
+    "n": 25,
     "citation": "Lewis, David. 1976. \"Survival and Identity.\" In Amelie Oksenberg Rorty, ed., *The Identities of Persons*. University of California Press.",
     "status": "verified",
     "url": "https://doi.org/10.1525/9780520353060-002",
@@ -241,24 +216,7 @@
     "doi": "10.1525/9780520353060-002"
   },
   {
-    "n": 29,
-    "citation": "MacIntyre, Alasdair. 1988. *Whose Justice? Which Rationality?* University of Notre Dame Press. (Tradition-constituted rationality; the incommensurability horn, with the qualification that cross-tradition rational comparison is sometimes possible.)",
-    "status": "verified",
-    "url": "https://openlibrary.org/works/OL14849412W",
-    "checked_against": "openlibrary",
-    "automated_pass": "MATCH"
-  },
-  {
-    "n": 30,
-    "citation": "Omohundro, Stephen M. 2008. \"The Basic AI Drives.\" In *Proceedings of the First AGI Conference*, IOS Press: 483-492. (Goal-content integrity as an instrumentally convergent drive: the first horn, derived independently.)",
-    "status": "verified",
-    "url": "https://dl.acm.org/doi/10.5555/1566174.1566226",
-    "checked_against": "manual",
-    "automated_pass": "PARTIAL",
-    "manual_review": "Proceedings of the First AGI Conference (Frontiers in AI and Applications 171), IOS Press 2008, pp. 483-492, confirmed; Crossref indexes only the 2018 reprint."
-  },
-  {
-    "n": 31,
+    "n": 26,
     "citation": "Paul, L. A. 2014. *Transformative Experience*. Oxford University Press. (Epistemically and personally transformative experience; the epistemic obstacle this paper's structural obstacle survives.)",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL20492504W",
@@ -266,7 +224,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 32,
+    "n": 27,
     "citation": "Pettigrew, Richard. 2020. *Choosing for Changing Selves*. Oxford University Press. (The Aggregate Utility Solution: each self acts on a weighted average of the values of all selves; §7.3 reads it as the best worked-out instance of reabsorption.)",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL21661144W",
@@ -274,7 +232,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 33,
+    "n": 28,
     "citation": "Bhatia, Harsh, et al. 2013. \"The Helmholtz–Hodge Decomposition — A Survey.\" *IEEE Transactions on Visualization and Computer Graphics* 19(8): 1386-1404. (Helmholtz–Hodge decomposition of vector fields; uniqueness and boundary conditions on bounded domains.)",
     "status": "verified",
     "url": "https://doi.org/10.1109/tvcg.2012.316",
@@ -283,7 +241,7 @@
     "doi": "10.1109/tvcg.2012.316"
   },
   {
-    "n": 34,
+    "n": 29,
     "citation": "Conley, Charles. 1978. *Isolated Invariant Sets and the Morse Index*. CBMS Regional Conference Series in Mathematics 38. American Mathematical Society, Providence, RI. (The Fundamental Theorem of Dynamical Systems: every flow on a compact metric space admits a complete Lyapunov function, decreasing off the chain-recurrent set and constant on its transitive components — the gradient-like/chain-recurrent dichotomy.)",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL16955631W",
@@ -291,7 +249,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 35,
+    "n": 30,
     "citation": "Glötzl, Erhard, and Oliver Richters. 2023. \"Helmholtz Decomposition and Potential Functions for n-Dimensional Analytic Vector Fields.\" *Journal of Mathematical Analysis and Applications* 525(2): 127138. (Existence and structure of the gradient/divergence-free/harmonic parts in $\\mathbb{R}^n$.)",
     "status": "verified",
     "url": "https://doi.org/10.1016/j.jmaa.2023.127138",
@@ -300,7 +258,7 @@
     "doi": "10.1016/j.jmaa.2023.127138"
   },
   {
-    "n": 36,
+    "n": 31,
     "citation": "Russell, Stuart. 2019. *Human Compatible: Artificial Intelligence and the Problem of Control*. Viking. (Value learning and the assistance framing of alignment.)",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL20492448W",
@@ -308,7 +266,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 37,
+    "n": 32,
     "citation": "Soares, Nate, Benja Fallenstein, Eliezer Yudkowsky, and Stuart Armstrong. 2015. \"Corrigibility.\" In *AAAI Workshop on AI and Ethics*: 74-82. (The corrigibility problem; §7.6 gives the trilemma's structural prediction about its solution space.)",
     "status": "verified",
     "url": "https://intelligence.org/files/Corrigibility.pdf",
@@ -317,8 +275,8 @@
     "manual_review": "Workshops at the Twenty-Ninth AAAI Conference (AI and Ethics), 2015, pp. 74-82, confirmed."
   },
   {
-    "n": 38,
-    "citation": "Nayebi, Aran. 2025. \"Core Safety Values for Provably Corrigible Agents.\" arXiv:2507.20964. To appear in the AAAI 2026 Machine Ethics Workshop proceedings. (Deciding whether an arbitrarily modified agent ever violates corrigibility is undecidable by reduction to the halting problem; §2.1 and §7.7 place this neighbouring limitative result and distinguish its object — a predicate over programs — from the trilemma's dynamical claim.)",
+    "n": 33,
+    "citation": "Nayebi, Aran. 2025. \"Core Safety Values for Provably Corrigible Agents.\" arXiv:2507.20964. To appear in the AAAI 2026 Machine Ethics Workshop proceedings. (Deciding whether an arbitrarily modified agent ever violates corrigibility is undecidable by reduction to the halting problem; §7.7 places this neighbouring result and distinguishes its object — a predicate over programs — from the trilemma's dynamical claim.)",
     "status": "verified-corrected",
     "url": "https://arxiv.org/abs/2507.20964",
     "checked_against": "arxiv",
@@ -327,7 +285,7 @@
     "correction": "Added the venue given on arXiv: to appear in the AAAI 2026 Machine Ethics Workshop proceedings."
   },
   {
-    "n": 39,
+    "n": 34,
     "citation": "Wang, Charles L., Keir Dorchen, and Peter Jin. 2025. \"On the Statistical Limits of Self-Improving Agents.\" arXiv:2510.04399 (TMLR 2026). (Distribution-free PAC-learnability is preserved iff the policy-reachable family stays uniformly capacity-bounded, a VC-dimension condition; §7.7 contrasts this static capacity limit with the trilemma's dynamical mechanism.)",
     "status": "verified",
     "url": "https://arxiv.org/abs/2510.04399",
@@ -336,7 +294,7 @@
     "manual_review": "arXiv journal reference confirms publication in TMLR 2026, and the abstract confirms the capacity-bounded PAC-learnability result the annotation describes."
   },
   {
-    "n": 40,
+    "n": 35,
     "citation": "Strogatz, Steven H. 2015. *Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering*. 2nd ed. Westview Press. (Limit cycles, strange attractors, and Lyapunov exponents.)",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL3907581W",
@@ -344,25 +302,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 41,
-    "citation": "Taylor, Charles. 1976. \"Responsibility for Self.\" In Amelie Oksenberg Rorty, ed., *The Identities of Persons*. University of California Press. (Radical reevaluation: the first horn, stated in prose four decades early.)",
-    "status": "verified",
-    "url": "https://doi.org/10.1525/9780520353060-013",
-    "checked_against": "crossref",
-    "automated_pass": "MATCH",
-    "doi": "10.1525/9780520353060-013"
-  },
-  {
-    "n": 42,
-    "citation": "Taylor, Charles. 1985. \"What Is Human Agency?\" In *Human Agency and Language: Philosophical Papers 1*. Cambridge University Press. (Strong evaluation.)",
-    "status": "verified",
-    "url": "https://doi.org/10.1017/cbo9781139173483.002",
-    "checked_against": "crossref",
-    "automated_pass": "MATCH",
-    "doi": "10.1017/cbo9781139173483.002"
-  },
-  {
-    "n": 43,
+    "n": 36,
     "citation": "Lehman, Joel, and Stanley, Kenneth O. 2011. \"Abandoning Objectives: Evolution Through the Search for Novelty Alone.\" *Evolutionary Computation* 19(2): 189-223. DOI: 10.1162/EVCO_a_00025.",
     "status": "verified",
     "url": "https://doi.org/10.1162/evco_a_00025",
@@ -371,7 +311,7 @@
     "doi": "10.1162/evco_a_00025"
   },
   {
-    "n": 44,
+    "n": 37,
     "citation": "Liberzon, Daniel. 2003. *Switching in Systems and Control*. Birkhäuser.",
     "status": "verified",
     "url": "https://link.springer.com/book/10.1007/978-1-4612-0017-8",
@@ -380,7 +320,7 @@
     "manual_review": "Birkhäuser 2003, Systems & Control: Foundations & Applications, confirmed."
   },
   {
-    "n": 45,
+    "n": 38,
     "citation": "Parfit, Derek. 1984. *Reasons and Persons*. Oxford University Press.",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL3153829W",
@@ -388,7 +328,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 46,
+    "n": 39,
     "citation": "Poincaré, Henri. 1890. \"Sur le problème des trois corps et les équations de la dynamique.\" *Acta Mathematica* 13: 1-270. (Poincaré recurrence theorem.)",
     "status": "verified",
     "url": "https://projecteuclid.org/journals/acta-mathematica/volume-13/issue-1-2",
@@ -397,7 +337,7 @@
     "manual_review": "Acta Mathematica 13: 1-270 (1890), confirmed; published in chapters, each with its own DOI (preface 10.1007/BF02392505)."
   },
   {
-    "n": 47,
+    "n": 40,
     "citation": "Schmidhuber, Jürgen. 2010. \"Formal Theory of Creativity, Fun, and Intrinsic Motivation (1990-2010).\" *IEEE Transactions on Autonomous Mental Development* 2(3): 230-247.",
     "status": "verified",
     "url": "https://doi.org/10.1109/tamd.2010.2056368",
@@ -406,7 +346,7 @@
     "doi": "10.1109/tamd.2010.2056368"
   },
   {
-    "n": 48,
+    "n": 41,
     "citation": "Singh, Satinder, Barto, Andrew G., and Chentanez, Nuttapong. 2004. \"Intrinsically Motivated Reinforcement Learning.\" *Advances in Neural Information Processing Systems* 17 (NIPS 2004): 1281-1288.",
     "status": "verified",
     "url": "https://papers.nips.cc/paper/2552-intrinsically-motivated-reinforcement-learning",
@@ -415,7 +355,7 @@
     "manual_review": "NIPS 17 (2004), confirmed on the proceedings site."
   },
   {
-    "n": 49,
+    "n": 42,
     "citation": "Skoulakis, Stratis, Tanner Fiez, Ryann Sim, Georgios Piliouras, and Lillian Ratliff. 2021. \"Evolutionary Game Theory Squared: Evolving Agents in Endogenously Evolving Zero-Sum Games.\" *Proceedings of the AAAI Conference on Artificial Intelligence* 35: 11343-11351. arXiv:2012.08382. (When agents and the game they play co-evolve endogenously, the coupled replicator dynamics is Poincaré recurrent.)",
     "status": "verified",
     "url": "https://doi.org/10.1609/aaai.v35i13.17352",
@@ -424,7 +364,7 @@
     "manual_review": "AAAI 35(13): 11343-11351, confirmed in Crossref; arXiv:2012.08382 is the 2020 preprint."
   },
   {
-    "n": 50,
+    "n": 43,
     "citation": "Sutton, Richard S., and Barto, Andrew G. 2018. *Reinforcement Learning: An Introduction*. 2nd ed. MIT Press.",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL19899345W",
@@ -432,7 +372,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 51,
+    "n": 44,
     "citation": "Waddington, Conrad H. 1957. *The Strategy of the Genes*. George Allen & Unwin.",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL1332899W",
@@ -440,7 +380,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 52,
+    "n": 45,
     "citation": "Walters, Peter. 1982. *An Introduction to Ergodic Theory*. Springer.",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL6442275W",
@@ -448,7 +388,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 53,
+    "n": 46,
     "citation": "Wiener, Norbert. 1948. *Cybernetics: Or Control and Communication in the Animal and the Machine*. Technology Press and John Wiley & Sons (New York); Hermann (Paris).",
     "status": "verified-corrected",
     "url": "https://openlibrary.org/works/OL4307531W",
@@ -458,7 +398,7 @@
     "correction": "Publisher corrected from 'MIT Press' (a name the press took only in 1962) to the 1948 publishers: Technology Press and John Wiley & Sons (New York); Hermann (Paris)."
   },
   {
-    "n": 54,
+    "n": 47,
     "citation": "Wiggins, David. 2001. *Sameness and Substance Renewed*. Cambridge University Press.",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL2271283W",
@@ -466,7 +406,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 55,
+    "n": 48,
     "citation": "Williams, Bernard. 1970. \"The Self and the Future.\" *The Philosophical Review* 79(2): 161-180.",
     "status": "verified",
     "url": "https://doi.org/10.2307/2183946",
@@ -475,7 +415,7 @@
     "doi": "10.2307/2183946"
   },
   {
-    "n": 56,
+    "n": 49,
     "citation": "Ullmann-Margalit, Edna. 2006. \"Big Decisions: Opting, Converting, Drifting.\" *Royal Institute of Philosophy Supplement* 58: 157-172. DOI: 10.1017/S1358246100009358. (Big, transformative decisions as a limit of decision theory; the prior statement of the observation this paper extends.)",
     "status": "verified",
     "url": "https://doi.org/10.1017/s1358246100009358",
@@ -484,7 +424,7 @@
     "doi": "10.1017/s1358246100009358"
   },
   {
-    "n": 57,
+    "n": 50,
     "citation": "de Blanc, Peter. 2011. \"Ontological Crises in Artificial Agents' Value Systems.\" arXiv:1105.3821. (A goal defined over one ontology is ill-defined after the agent replaces that ontology.)",
     "status": "verified",
     "url": "https://arxiv.org/abs/1105.3821",
@@ -492,7 +432,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 58,
+    "n": 51,
     "citation": "Carroll, Micah, Davis Foote, Anand Siththaranjan, Stuart Russell, and Anca Dragan. 2024. \"AI Alignment with Changing and Influenceable Reward Functions.\" arXiv:2405.17713. (Dynamic-reward MDPs; alignment notions under changing preferences either permit undesirable influence or are overly risk-averse.)",
     "status": "verified",
     "url": "https://arxiv.org/abs/2405.17713",
@@ -500,7 +440,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 59,
+    "n": 52,
     "citation": "Villiger, Daniel. 2024. \"Transformative Experience.\" *Philosophy Compass* 19(6): e13000. DOI: 10.1111/phc3.13000. (Survey of the literature on transformative experience after Paul 2014.)",
     "status": "verified",
     "url": "https://doi.org/10.1111/phc3.13000",
@@ -509,7 +449,7 @@
     "doi": "10.1111/phc3.13000"
   },
   {
-    "n": 60,
+    "n": 53,
     "citation": "Bradley, Richard. 2009. \"Becker's Thesis and Three Models of Preference Change.\" *Politics, Philosophy & Economics* 8(2): 223-242. DOI: 10.1177/1470594X09102238. (Becker's invariant tastes can almost always be saved by refining the state space, at a price \"as ad hoc\" as postulating taste change; generalised conditioning represents any change of attitudes, fundamental desires included. Quotations in §7.4 follow the working-paper version, CPNSS, LSE, 2008, and should be checked against the published text.)",
     "status": "verified",
     "url": "https://doi.org/10.1177/1470594x09102238",
@@ -519,7 +459,7 @@
     "manual_review": "PPE 8(2): 223-242 confirmed in Crossref. Full text read in the LSE working-paper version (CPNSS 2008, eprint 27007); the quotation in §7.4 was checked verbatim there, not in the published text, and the reference says so."
   },
   {
-    "n": 61,
+    "n": 54,
     "citation": "Bykvist, Krister. 2006. \"Prudence for Changing Selves.\" *Utilitas* 18(3): 264-283. DOI: 10.1017/S0953820806002032. (Prudence when actions shape preferences, evaluated by the attitudes held while leading a life; a fixed higher-order rule, precursor of Pettigrew's aggregation.)",
     "status": "verified",
     "url": "https://doi.org/10.1017/s0953820806002032",
@@ -529,7 +469,7 @@
     "manual_review": "Utilitas 18(3): 264-283 confirmed; publisher abstract read (evaluation by the attitudes held while leading a life)."
   },
   {
-    "n": 62,
+    "n": 55,
     "citation": "Carroll, Micah, Anca Dragan, Stuart Russell, and Dylan Hadfield-Menell. 2022. \"Estimating and Penalizing Induced Preference Shifts in Recommender Systems.\" ICML 2022. arXiv:2204.11966. (Optimizing systems have incentives to shift users' preferences; judging shifts requires a reference such as the uninfluenced dynamics.)",
     "status": "verified",
     "url": "https://arxiv.org/abs/2204.11966",
@@ -538,7 +478,7 @@
     "manual_review": "arXiv:2204.11966 confirmed, with the arXiv comment 'Accepted to ICML 2022 (Spotlight)'; abstract read."
   },
   {
-    "n": 63,
+    "n": 56,
     "citation": "Dietrich, Franz, and Christian List. 2013. \"Where Do Preferences Come From?\" *International Journal of Game Theory* 42(3): 613-637. DOI: 10.1007/s00182-012-0333-y. (Preferences derived from a stable weighing relation over motivationally salient properties; preference change as a change of salience. Quotations in §7.4 follow the authors' accepted manuscript, LSE Research Online.)",
     "status": "verified",
     "url": "https://doi.org/10.1007/s00182-012-0333-y",
@@ -548,7 +488,7 @@
     "manual_review": "IJGT 42(3): 613-637 confirmed in Crossref. Full text read in the authors' accepted manuscript (LSE Research Online, eprint 46864); the two quotations in §7.4 were checked verbatim there."
   },
   {
-    "n": 64,
+    "n": 57,
     "citation": "Hansson, Sven Ove. 1995. \"Changes in Preference.\" *Theory and Decision* 38(1): 1-28. DOI: 10.1007/BF01083166. (Preference revision, contraction, addition and subtraction under postulates for rational change.)",
     "status": "verified",
     "url": "https://doi.org/10.1007/bf01083166",

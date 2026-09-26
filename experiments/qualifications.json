@@ -50,13 +50,6 @@
     "near": 400
   },
   {
-    "id": "P1 limitative-theorems comparison is disclaimed where made",
-    "paper": "Paper1.md",
-    "claim": "limitative theorems",
-    "requires": "analogy of form|formal kinship",
-    "why": "Section 2.1 denies formal kinship with the limitative theorems; any sentence invoking them must carry that disclaimer in the same paragraph."
-  },
-  {
     "id": "P3 sleep discrimination carries the EOG attribution",
     "paper": "Paper3.md",
     "claim": "N2-versus-REM",
