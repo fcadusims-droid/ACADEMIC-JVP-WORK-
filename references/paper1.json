@@ -373,14 +373,6 @@
   },
   {
     "n": 44,
-    "citation": "Waddington, Conrad H. 1957. *The Strategy of the Genes*. George Allen & Unwin.",
-    "status": "verified",
-    "url": "https://openlibrary.org/works/OL1332899W",
-    "checked_against": "openlibrary",
-    "automated_pass": "MATCH"
-  },
-  {
-    "n": 45,
     "citation": "Walters, Peter. 1982. *An Introduction to Ergodic Theory*. Springer.",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL6442275W",
@@ -388,7 +380,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 46,
+    "n": 45,
     "citation": "Wiener, Norbert. 1948. *Cybernetics: Or Control and Communication in the Animal and the Machine*. Technology Press and John Wiley & Sons (New York); Hermann (Paris).",
     "status": "verified-corrected",
     "url": "https://openlibrary.org/works/OL4307531W",
@@ -398,7 +390,7 @@
     "correction": "Publisher corrected from 'MIT Press' (a name the press took only in 1962) to the 1948 publishers: Technology Press and John Wiley & Sons (New York); Hermann (Paris)."
   },
   {
-    "n": 47,
+    "n": 46,
     "citation": "Wiggins, David. 2001. *Sameness and Substance Renewed*. Cambridge University Press.",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL2271283W",
@@ -406,7 +398,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 48,
+    "n": 47,
     "citation": "Williams, Bernard. 1970. \"The Self and the Future.\" *The Philosophical Review* 79(2): 161-180.",
     "status": "verified",
     "url": "https://doi.org/10.2307/2183946",
@@ -415,7 +407,7 @@
     "doi": "10.2307/2183946"
   },
   {
-    "n": 49,
+    "n": 48,
     "citation": "Ullmann-Margalit, Edna. 2006. \"Big Decisions: Opting, Converting, Drifting.\" *Royal Institute of Philosophy Supplement* 58: 157-172. DOI: 10.1017/S1358246100009358. (Big, transformative decisions as a limit of decision theory; the prior statement of the observation this paper extends.)",
     "status": "verified",
     "url": "https://doi.org/10.1017/s1358246100009358",
@@ -424,7 +416,7 @@
     "doi": "10.1017/s1358246100009358"
   },
   {
-    "n": 50,
+    "n": 49,
     "citation": "de Blanc, Peter. 2011. \"Ontological Crises in Artificial Agents' Value Systems.\" arXiv:1105.3821. (A goal defined over one ontology is ill-defined after the agent replaces that ontology.)",
     "status": "verified",
     "url": "https://arxiv.org/abs/1105.3821",
@@ -432,7 +424,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 51,
+    "n": 50,
     "citation": "Carroll, Micah, Davis Foote, Anand Siththaranjan, Stuart Russell, and Anca Dragan. 2024. \"AI Alignment with Changing and Influenceable Reward Functions.\" arXiv:2405.17713. (Dynamic-reward MDPs; alignment notions under changing preferences either permit undesirable influence or are overly risk-averse.)",
     "status": "verified",
     "url": "https://arxiv.org/abs/2405.17713",
@@ -440,7 +432,7 @@
     "automated_pass": "MATCH"
   },
   {
-    "n": 52,
+    "n": 51,
     "citation": "Villiger, Daniel. 2024. \"Transformative Experience.\" *Philosophy Compass* 19(6): e13000. DOI: 10.1111/phc3.13000. (Survey of the literature on transformative experience after Paul 2014.)",
     "status": "verified",
     "url": "https://doi.org/10.1111/phc3.13000",
@@ -449,7 +441,7 @@
     "doi": "10.1111/phc3.13000"
   },
   {
-    "n": 53,
+    "n": 52,
     "citation": "Bradley, Richard. 2009. \"Becker's Thesis and Three Models of Preference Change.\" *Politics, Philosophy & Economics* 8(2): 223-242. DOI: 10.1177/1470594X09102238. (Becker's invariant tastes can almost always be saved by refining the state space, at a price \"as ad hoc\" as postulating taste change; generalised conditioning represents any change of attitudes, fundamental desires included. Quotations in §7.4 follow the working-paper version, CPNSS, LSE, 2008, and should be checked against the published text.)",
     "status": "verified",
     "url": "https://doi.org/10.1177/1470594x09102238",
@@ -459,7 +451,7 @@
     "manual_review": "PPE 8(2): 223-242 confirmed in Crossref. Full text read in the LSE working-paper version (CPNSS 2008, eprint 27007); the quotation in §7.4 was checked verbatim there, not in the published text, and the reference says so."
   },
   {
-    "n": 54,
+    "n": 53,
     "citation": "Bykvist, Krister. 2006. \"Prudence for Changing Selves.\" *Utilitas* 18(3): 264-283. DOI: 10.1017/S0953820806002032. (Prudence when actions shape preferences, evaluated by the attitudes held while leading a life; a fixed higher-order rule, precursor of Pettigrew's aggregation.)",
     "status": "verified",
     "url": "https://doi.org/10.1017/s0953820806002032",
@@ -469,7 +461,7 @@
     "manual_review": "Utilitas 18(3): 264-283 confirmed; publisher abstract read (evaluation by the attitudes held while leading a life)."
   },
   {
-    "n": 55,
+    "n": 54,
     "citation": "Carroll, Micah, Anca Dragan, Stuart Russell, and Dylan Hadfield-Menell. 2022. \"Estimating and Penalizing Induced Preference Shifts in Recommender Systems.\" ICML 2022. arXiv:2204.11966. (Optimizing systems have incentives to shift users' preferences; judging shifts requires a reference such as the uninfluenced dynamics.)",
     "status": "verified",
     "url": "https://arxiv.org/abs/2204.11966",
@@ -478,7 +470,7 @@
     "manual_review": "arXiv:2204.11966 confirmed, with the arXiv comment 'Accepted to ICML 2022 (Spotlight)'; abstract read."
   },
   {
-    "n": 56,
+    "n": 55,
     "citation": "Dietrich, Franz, and Christian List. 2013. \"Where Do Preferences Come From?\" *International Journal of Game Theory* 42(3): 613-637. DOI: 10.1007/s00182-012-0333-y. (Preferences derived from a stable weighing relation over motivationally salient properties; preference change as a change of salience. Quotations in §7.4 follow the authors' accepted manuscript, LSE Research Online.)",
     "status": "verified",
     "url": "https://doi.org/10.1007/s00182-012-0333-y",
@@ -488,7 +480,7 @@
     "manual_review": "IJGT 42(3): 613-637 confirmed in Crossref. Full text read in the authors' accepted manuscript (LSE Research Online, eprint 46864); the two quotations in §7.4 were checked verbatim there."
   },
   {
-    "n": 57,
+    "n": 56,
     "citation": "Hansson, Sven Ove. 1995. \"Changes in Preference.\" *Theory and Decision* 38(1): 1-28. DOI: 10.1007/BF01083166. (Preference revision, contraction, addition and subtraction under postulates for rational change.)",
     "status": "verified",
     "url": "https://doi.org/10.1007/bf01083166",

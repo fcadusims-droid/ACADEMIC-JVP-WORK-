@@ -1169,33 +1169,6 @@
     "auto_status": "MATCH"
   },
   {
-    "raw": "Waddington, Conrad H. 1957. *The Strategy of the Genes*. George Allen & Unwin.",
-    "surname": "Waddington",
-    "year": 1957,
-    "title": "The Strategy of the Genes",
-    "container": null,
-    "book": true,
-    "doi": null,
-    "arxiv": null,
-    "source": "openlibrary",
-    "url": "https://openlibrary.org/works/OL1332899W",
-    "found_title": "The strategy of the genes",
-    "found_authors": [
-      "Conrad H. Waddington"
-    ],
-    "found_first_year": 1957,
-    "found_publishers": [
-      "Allen & Unwin",
-      "Macmillan"
-    ],
-    "found_publish_years": [
-      1957
-    ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH"
-  },
-  {
     "raw": "Walters, Peter. 1982. *An Introduction to Ergodic Theory*. Springer.",
     "surname": "Walters",
     "year": 1982,

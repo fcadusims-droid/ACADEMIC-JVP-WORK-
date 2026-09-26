@@ -52,7 +52,8 @@ PAPERS = [
                  "change they are control, and control cannot formulate agency-preserving "
                  "conversion without tautology, agency collapse or incommensurability. The "
                  "top level is conceded to be definitional; the case-by-case claim is not.",
-        "status": "In revision: being cut to journal length. Not submitted.",
+        "status": "Frozen at journal length (target: Synthese); only factual corrections. "
+                  "Awaiting a reader in the field. Not submitted.",
         "content": "paper1.md", "dir": "paper1_control_trilemma",
     },
     {
