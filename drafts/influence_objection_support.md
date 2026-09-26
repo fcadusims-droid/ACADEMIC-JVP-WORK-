@@ -91,3 +91,5 @@ showing that only this form survives.
 - A new row in the objection table (§2), "Class G is just ordinary interpersonal influence",
   pointing to that subsection.
 - The row was not added here, because its content depends on the choice.
+- *Later (2026-09-26):* the row was added with §8.4, and then removed with the whole objection
+  table in the first round of length cuts (row R2 of `drafts/paper1_cut_map.md`). The answer stays in §8.4.

@@ -93,7 +93,7 @@ about six, and the paper now says so. Counted by distinct failure signature the 
 is nine; the defended claim is the lower bound. *(`class_g_independence`)*
 
 **The escape horn closes — but the paper's reason for it was wrong.** Two claims were
-travelling together in §7.5:
+travelling together in the paper's escape-horn argument (then §7.5, now §6.5):
 
 | claim | verdict |
 |---|---|
@@ -108,7 +108,7 @@ lives on a compact quotient where the recurrence theorem applies unchanged. So t
 escaping cell closes by the *same* argument as the bounded cell — stronger and more
 general. A follow-up widened the closure past the scale-free case: **cardinal**
 (magnitude-reading) contracts with a *bounded* or *linear* magnitude term leave the
-observable recurrent too ($0.81$–$0.93$), so §7.5's persistence argument is
+observable recurrent too ($0.81$–$0.93$), so the old persistence argument is
 vindicated by none of them. **The closure is conditional, not general, and the
 condition is where compactness now lives.** It requires the contract to factor
 through a *bounded* reading — compactness moved from the state space to the
@@ -120,7 +120,9 @@ ones that overflow the estimator, so the exclusion is systematic and correlated 
 the property under test — the same defect Paper 2 §8.1 identifies in someone else's
 confound. The deciding cell (an *unbounded* identity reading whose direction is
 nonetheless *open*) is empty and unreachable here, and characterising the class of
-admissible identity contracts is the argument's **first open problem**. *(`escape_endogeneity`, `escape_persistence_decider`,
+admissible identity contracts is the argument's **first open problem** (§6.5). The
+system-boundary section (§6.6) settles which system a contract may be about, not which readings
+of its value state are admissible. *(`escape_endogeneity`, `escape_persistence_decider`,
 `escape_cardinal_contract`)*
 
 ---

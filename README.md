@@ -23,17 +23,18 @@ this repository and rebuilt on every push, so it never lags the work; see
 
 ## The trilogy
 
-- **`Paper1.md` — The Cybernetic Limits of Conversion.** A negative critique:
-  given a definition of control as directed change relative to a held-fixed evaluative
-  structure, agency-preserving *conversion* (the transformation of that structure)
-  cannot be formulated as control without collapsing into tautology, agency collapse,
-  or incommensurable indeterminacy. That top level is conceded to be definitional; the
-  substantive claim is that the formal models of value change on offer each hold such
-  a structure fixed. Its
-  load-bearing formal result is a *Meta-Optimization Collapse Theorem* (a
-  trichotomy), and it defines the residual admissibility profile **Class G**. It is
-  addressed to the philosophy of action; its formal statements are collected in an appendix,
-  and its theological applications are in a separate draft (`drafts/theological_companion.md`).
+- **`Paper1.md` — The Cybernetic Limits of Conversion.** A negative result about
+  formulation. The formal models that direct or evaluate value change (decision theories for
+  changing selves, preference-change models, value learning, corrigibility schemes) each hold
+  an evaluative point fixed. Used to direct change they are control, and control cannot
+  formulate agency-preserving *conversion*, the transformation of that point, without
+  collapsing into tautology, agency collapse or incommensurability. That top level is conceded
+  to be definitional; the case-by-case claim about the models is not. Its load-bearing formal
+  result is a *Meta-Optimization Collapse Theorem* (a trichotomy), and it defines the residual
+  admissibility profile **Class G**. It is addressed to the philosophy of action and is being
+  cut to journal length (`drafts/paper1_cut_map.md`); its formal statements are in an
+  appendix, and its theological applications are in a separate draft
+  (`drafts/theological_companion.md`).
 
 - **`Paper2.md` — The Conditional Biological Requirements Architecture (CBRA).** A
   strict *eliminative* statistical protocol for whether a biological state
@@ -110,5 +111,5 @@ python -m experiments.shared_lib.test_shared_lib          # verify the shared co
 python -m experiments.paper3_geodesic_kinematics.<name>.run   # run an experiment
 ```
 
-Real-data experiments download their PhysioNet records on first run (network is
-reachable through the environment's proxy).
+Real-data experiments download their PhysioNet records on first run, so they need network
+access to physionet.org.
