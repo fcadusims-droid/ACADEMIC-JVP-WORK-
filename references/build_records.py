@@ -38,8 +38,6 @@ MANUAL = {
         "manual": "Classics of Western Spirituality, Paulist Press 1978, trans. Malherbe and Ferguson, confirmed."},
     (1, "Hadfield-Menell", 2016): {"url": "https://papers.nips.cc/paper/6420-cooperative-inverse-reinforcement-learning",
         "manual": "NIPS 2016 (Advances in Neural Information Processing Systems 29), confirmed on the proceedings site."},
-    (1, "Omohundro", 2008): {"url": "https://dl.acm.org/doi/10.5555/1566174.1566226",
-        "manual": "Proceedings of the First AGI Conference (Frontiers in AI and Applications 171), IOS Press 2008, pp. 483-492, confirmed; Crossref indexes only the 2018 reprint."},
     (1, "Soares", 2015): {"url": "https://intelligence.org/files/Corrigibility.pdf",
         "manual": "Workshops at the Twenty-Ninth AAAI Conference (AI and Ethics), 2015, pp. 74-82, confirmed."},
     (1, "Council of Trent", 1547): {"url": "https://press.georgetown.edu/Book/Decrees-of-the-Ecumenical-Councils-Volume-2",

@@ -78,7 +78,7 @@ belong to the author are marked as such.
   - **Done:** A.4 moved verbatim to `experiments/paper1_control_trilemma/IN_SILICO_RECORD.md`;
     §7.7 is reduced to a pointer paragraph.
 
-### 1.3 Target journal — **decided provisionally; this is the author's call and the one decision to override if he disagrees**
+### 1.3 Target journal — **decided by the author: Synthese**
 
 Limits checked on the journals' own pages on 2026-09-26:
 
@@ -93,8 +93,15 @@ Limits checked on the journals' own pages on 2026-09-26:
 - **Recommendation: *Synthese*.** It publishes formal work in the philosophy of action and
   decision theory, and it has no hard limit. Thirty printed pages is roughly 13,000–15,000
   words including notes and appendix.
-- **Target: at most 15,000 words all in**, against 31,418 before this restructure and 29,123 after it. The front matter moved into §2 and the new §7.4 was added, so the structural cuts alone save little. The alternative, *Philosophical
-  Studies*, would mean about 10,000 words.
+- **Target (corrected by the author, 2026-09-26).** Synthese's 15–30 pages cover the whole article,
+  so the target is: body plus notes at most **13,500** words; appendix at most **2,500**; references
+  with no target, but uncited ones leave the list. That is about 17,500 words, or 33 pages. An
+  earlier rule (15,000 words excluding the appendix and references) would have given about 45
+  pages and was withdrawn. The alternative, *Philosophical Studies*, would mean about 10,000
+  words.
+- **Where it stands.** The first round of cuts is applied: body plus notes went from 25,428 to
+  14,256 words. A second round and an appendix map await the author's approval
+  (`drafts/paper1_cut_map.md`).
 - **Order.** The final trim to the target comes last, after the author's two sections (phase
   2). Those sections add text and change what the paper needs.
 
@@ -162,6 +169,6 @@ Paper 1 freezes when all of these hold:
 1. the boundary section is in the paper — **done**, §6.6 (drafted with Claude, revised by the author);
 2. the answer to the common-influence objection is in the paper — **done**, §8.4 (drafted with Claude, revised by the author);
 3. Dietrich and List have been engaged — **done**;
-4. the text is within the chosen journal's length.
+4. the text is within the chosen journal's length — **open**: 14,256 of 13,500 body words, and 5,070 of 2,500 appendix words.
 
 After that, only a reader in the field, and no further audit round.

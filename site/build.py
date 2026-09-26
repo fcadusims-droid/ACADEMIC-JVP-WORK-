@@ -47,11 +47,12 @@ PAPERS = [
         "n": 1, "src": "Paper1.md", "slug": "paper-1",
         "short": "The Cybernetic Limits of Conversion",
         "sub": "Formal Models of Value Change and the Fixed Evaluative Point",
-        "blurb": "A negative result. Given control as directed change relative to a "
-                 "held-fixed evaluative structure, agency-preserving conversion cannot "
-                 "be formulated as control without collapsing into tautology, "
-                 "agency collapse, or incommensurability; and the formal models of value "
-                 "change on offer each hold such a structure fixed.",
+        "blurb": "A negative result about formulation. The formal models that direct or "
+                 "evaluate value change each hold an evaluative point fixed. Used to direct "
+                 "change they are control, and control cannot formulate agency-preserving "
+                 "conversion without tautology, agency collapse or incommensurability. The "
+                 "top level is conceded to be definitional; the case-by-case claim is not.",
+        "status": "In revision: being cut to journal length. Not submitted.",
         "content": "paper1.md", "dir": "paper1_control_trilemma",
     },
     {
@@ -64,6 +65,8 @@ PAPERS = [
                  "a clean negative is expected unless a structured boundary residual "
                  "survives an adversarial sequence of controls. Its positive arm halted "
                  "at a pre-registered gate.",
+        "status": "Route pending: a data partnership is sought until 2026-12-23. "
+                  "Not submitted.",
         "content": "paper2.md", "dir": "paper2_cbra_protocol",
     },
     {
@@ -76,23 +79,29 @@ PAPERS = [
                  "each with the control that exposed it, a check of the field's standard "
                  "Riemannian pipeline, and a survey of published studies. Independent of "
                  "its two companions.",
+        "status": "Restructured; awaiting a second survey coder and a reader in EEG "
+                  "methods. Not submitted.",
         "content": "paper3.md", "dir": "paper3_geodesic_kinematics",
     },
 ]
 
+# Primary navigation: what a first-time reader looks for. The records row holds the
+# audit trail, which matters to a checker but should not compete with the papers.
 NAV = [
     ("index.html", "Overview"),
-    ("ai-disclosure.html", "AI disclosure"),
     ("papers/index.html", "Papers"),
     ("experiments/index.html", "Experiments"),
+    ("needs.html", "What the work needs"),
+    ("ai-disclosure.html", "AI disclosure"),
+]
+NAV_RECORDS = [
     ("results.html", "Results"),
-    ("data.html", "Data"),
     ("methodology.html", "Methodology"),
     ("program.html", "Program"),
     ("coverage.html", "Coverage"),
-    ("formal.html", "Formal"),
+    ("formal.html", "Formal proofs"),
+    ("data.html", "Data"),
     ("reproduce.html", "Reproduce"),
-    ("needs.html", "Needs"),
 ]
 
 
@@ -271,10 +280,14 @@ math[display="block"] { display: block; margin: 1.1rem 0; overflow-x: auto; over
 def page(title: str, body: str, depth: int = 0, current: str = "",
          wide: bool = False, desc: str = "", math: bool = True) -> str:
     up = "../" * depth
-    nav = "\n".join(
-        '      <a href="{}{}"{}>{}</a>'.format(
-            up, href, ' class="current"' if href == current else "", label)
-        for href, label in NAV)
+    def links(items):
+        return "\n".join(
+            '      <a href="{}{}"{}>{}</a>'.format(
+                up, href, ' class="current" aria-current="page"' if href == current else "",
+                label)
+            for href, label in items)
+    nav = links(NAV)
+    nav_records = links(NAV_RECORDS)
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -290,8 +303,12 @@ def page(title: str, body: str, depth: int = 0, current: str = "",
 <header class="masthead">
   <div class="masthead-inner">
     <a class="wordmark" href="{up}index.html">João Vitor Perazzolo &middot; Research Programme</a>
-    <nav class="site">
+    <nav class="site" aria-label="Main">
 {nav}
+    </nav>
+    <nav class="site records" aria-label="Records">
+      <span class="nav-label">Records</span>
+{nav_records}
     </nav>
   </div>
 </header>
@@ -568,6 +585,9 @@ def build_papers(with_pdf: bool):
         # --- full text, navigable ---------------------------------------
         toc, body = md_to_html_with_toc(raw)
         body = wrap_tables(body)
+        # Reading time for the body alone: the appendix and references are consulted, not read.
+        main_text = raw.split("## Appendix", 1)[0].split("## References", 1)[0]
+        minutes = max(1, round(len(main_text.split()) / 230))
         summary = wrap_tables(md_file_to_html(os.path.join(SITE, "content", p["content"])))
 
         related = [r for r in RECORDS if r["paper"] == str(p["n"])]
@@ -593,7 +613,10 @@ def build_papers(with_pdf: bool):
 <p class="kicker">Paper {p['n']}</p>
 <h1>{html.escape(p['short'])}</h1>
 <p class="lede">{html.escape(p['sub'])}</p>
-<p class="meta">João Vitor Perazzolo &middot; {pdate}</p>
+<p class="meta">João Vitor Perazzolo &middot; {pdate} &middot; about {minutes} minutes to read
+   &middot; <a href="#full-text">jump to the full text</a></p>
+<p class="status-line"><strong>Status:</strong> {html.escape(p['status'])}
+   <a href="{REPO_URL}/blob/main/OPEN_ISSUES.md">What remains open</a></p>
 {actions}
 <div class="prose">
 {summary}
@@ -653,6 +676,7 @@ some mobile browsers decline to embed PDFs — use <em>Download</em> or
   <span class="num">Paper {p['n']}</span>
   <h3>{html.escape(p['short'])}</h3>
   <p>{html.escape(p['blurb'])}</p>
+  <p class="card-status">{html.escape(p['status'])}</p>
   <div class="spacer"></div>
   <div class="btn-row">
     <a class="btn primary" href="{p['slug']}.html">Read</a>
@@ -708,12 +732,36 @@ def build_experiments():
         title = f"Paper {pnum}" if pnum.isdigit() else "Shared"
         sections.append(f"""
 <h2 id="paper-{pnum}">{title} &mdash; {len(by_paper[pnum])} experiments</h2>
-<div class="table-scroll"><table>
+<div class="table-scroll"><table class="exp-table">
 <thead><tr><th>Experiment</th><th>Finding</th><th>Figures</th></tr></thead>
 <tbody>{''.join(rows)}</tbody>
 </table></div>""")
 
     n_fig = sum(len(r["figures"]) for r in RECORDS)
+    jump = " &middot; ".join(
+        f'<a href="#paper-{pn}">{"Paper " + pn if pn.isdigit() else "Shared"} '
+        f'({len(by_paper[pn])})</a>'
+        for pn in sorted(by_paper, key=lambda x: (not x.isdigit(), x)))
+    # A plain-text filter over the rows. Without JavaScript the input stays hidden and the
+    # full tables remain, so nothing depends on it.
+    filt = """
+<p class="exp-jump">Jump to: """ + jump + """</p>
+<p class="exp-filter" hidden><label for="exp-q">Filter experiments</label>
+  <input id="exp-q" type="search" placeholder="e.g. EOG, Class G, localization"
+         autocomplete="off"></p>
+<script>
+(function () {
+  var box = document.querySelector('.exp-filter'); if (!box) return;
+  box.hidden = false;
+  var q = document.getElementById('exp-q');
+  q.addEventListener('input', function () {
+    var t = q.value.trim().toLowerCase();
+    document.querySelectorAll('.exp-table tbody tr').forEach(function (tr) {
+      tr.hidden = t && tr.textContent.toLowerCase().indexOf(t) < 0;
+    });
+  });
+})();
+</script>"""
     idx = f"""
 <h1>Experiments</h1>
 <p class="lede prose">Every computational run in the repository, with the question it
@@ -731,6 +779,7 @@ results, so a new experiment appears here without anyone editing the site.</p>
 <code>result.json</code>. Synthetic results are about instruments rather than biology;
 single-corpus results are about that corpus; and the logical results say nothing about
 instantiation. Negative and qualified results are listed exactly as they came out.</div>
+{filt}
 {''.join(sections)}
 """
     write("experiments/index.html",
@@ -980,6 +1029,7 @@ def build_index():
   <span class="num">Paper {p['n']}</span>
   <h3>{html.escape(p['short'])}</h3>
   <p>{html.escape(p['blurb'])}</p>
+  <p class="card-status">{html.escape(p['status'])}</p>
   <div class="spacer"></div>
   <div class="btn-row">
     <a class="btn primary" href="papers/{p['slug']}.html">Read</a>
@@ -996,6 +1046,24 @@ def build_index():
 pre-registered computational suite that tests them.</p>
 
 <div class="cards">{cards}</div>
+
+<div class="start-here">
+  <h2>Where to start</h2>
+  <ul>
+    <li><strong>For the argument:</strong> open a paper and read its first panel, "the claim
+      in one paragraph", then the full text. Paper&nbsp;3 stands alone; Paper&nbsp;2 borrows
+      two notions from Paper&nbsp;1.</li>
+    <li><strong>For the evidence:</strong> the <a href="experiments/index.html">experiments</a>,
+      each with the pre-registration written before the run, its verdict, figures and raw
+      JSON.</li>
+    <li><strong>To see what went wrong and was corrected:</strong> the
+      <a href="methodology.html">methodology</a> page.</li>
+    <li><strong>To help:</strong> <a href="needs.html">what the work needs</a> from readers,
+      coders and laboratories.</li>
+    <li><strong>To check it yourself:</strong> <a href="reproduce.html">reproduce</a> any
+      result from the repository.</li>
+  </ul>
+</div>
 
 <div class="stat-grid">
   <div class="stat"><span class="k">Papers</span><span class="v">3</span></div>

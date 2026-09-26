@@ -449,33 +449,6 @@
     "auto_problems": []
   },
   {
-    "raw": "Everitt, Tom, Marcus Hutter, Ramana Kumar, and Victoria Krakovna. 2021. \"Reward Tampering Problems and Solutions in Reinforcement Learning: A Causal Influence Diagram Perspective.\" *Synthese* 198: 6435-6467. (Formal results on agents that can modify their own reward channel.)",
-    "surname": "Everitt",
-    "year": 2021,
-    "title": "Reward Tampering Problems and Solutions in Reinforcement Learning: A Causal Influence Diagram Perspective",
-    "container": "Synthese",
-    "volume": "198",
-    "first_page": "6435",
-    "doi": "10.1007/s11229-021-03141-4",
-    "arxiv": null,
-    "source": "crossref",
-    "url": "https://doi.org/10.1007/s11229-021-03141-4",
-    "found_title": "Reward tampering problems and solutions in reinforcement learning: a causal influence diagram perspective",
-    "found_container": "Synthese",
-    "found_authors": [
-      "Everitt",
-      "Hutter",
-      "Kumar",
-      "Krakovna"
-    ],
-    "found_year": 2021,
-    "found_volume": "198",
-    "found_page": "6435-6467",
-    "title_similarity": 1.0,
-    "auto_status": "MATCH",
-    "auto_problems": []
-  },
-  {
     "raw": "Frankfurt, Harry G. 1971. \"Freedom of the Will and the Concept of a Person.\" *The Journal of Philosophy* 68(1): 5-20. (Second-order desires; the hierarchy the §6.6 \"one level up\" move presupposes.)",
     "surname": "Frankfurt",
     "year": 1971,
@@ -554,29 +527,6 @@
       2013,
       2020
     ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH"
-  },
-  {
-    "raw": "Hubinger, Evan, Chris van Merwijk, Vladimir Mikulik, Joar Skalse, and Scott Garrabrant. 2019. \"Risks from Learned Optimization in Advanced Machine Learning Systems.\" arXiv:1906.01820. (Mesa-optimization: learned optimizers with objectives of their own.)",
-    "surname": "Hubinger",
-    "year": 2019,
-    "title": "Risks from Learned Optimization in Advanced Machine Learning Systems",
-    "container": null,
-    "doi": null,
-    "arxiv": "1906.01820",
-    "source": "arxiv",
-    "url": "https://arxiv.org/abs/1906.01820",
-    "found_title": "Risks from Learned Optimization in Advanced Machine Learning Systems",
-    "found_authors": [
-      "Hubinger, Evan",
-      "van Merwijk, Chris",
-      "Mikulik, Vladimir",
-      "Skalse, Joar",
-      "Garrabrant, Scott"
-    ],
-    "found_year": 2019,
     "title_similarity": 1.0,
     "auto_problems": [],
     "auto_status": "MATCH"
@@ -712,86 +662,6 @@
     "auto_status": "MATCH"
   },
   {
-    "raw": "Kuhn, Thomas S. 1962. *The Structure of Scientific Revolutions*. University of Chicago Press. (Incommensurable paradigms; the structural ancestor of the third horn.)",
-    "surname": "Kuhn",
-    "year": 1962,
-    "title": "The Structure of Scientific Revolutions",
-    "container": null,
-    "book": true,
-    "doi": null,
-    "arxiv": null,
-    "source": "openlibrary",
-    "url": "https://openlibrary.org/works/OL3259254W",
-    "found_title": "The Structure of Scientific Revolutions",
-    "found_authors": [
-      "Thomas S. Kuhn",
-      "Dennis Holland"
-    ],
-    "found_first_year": 1955,
-    "found_publishers": [
-      "The University of Chicago Press",
-      "Fondo de Cultura Economica USA",
-      "Fondo De Cultura Economica USA",
-      "Paidos Iberica, Ediciones S. A.",
-      "A Phoenix Book/ Published by The Univeristy of Chicago Press",
-      "Chicago University Press",
-      "Phoenix Books, University of Chicago Press",
-      "University of Chicago Press",
-      "Sifre ḥemed",
-      "Dukagjini",
-      "Uni Of Chicago Press.",
-      "Humanitas",
-      "Fondo de Cultura Económica de España",
-      "Fondo de Cultura Economica",
-      "University Of Chicago Press",
-      "Yediʻot aḥaronot",
-      "Perspectiva",
-      "Flammarion",
-      "University Press",
-      "Fondo de Cultura Económica",
-      "Audible Studios on Brilliance Audio",
-      "CreateSpace Independent Publishing Platform",
-      "Suhrkamp",
-      "Audible Studios on Brilliance",
-      "University of Chicago P.",
-      "Alan"
-    ],
-    "found_publish_years": [
-      1955,
-      1962,
-      1964,
-      1965,
-      1967,
-      1970,
-      1971,
-      1973,
-      1976,
-      1982,
-      1983,
-      1989,
-      1992,
-      1993,
-      1995,
-      1996,
-      2000,
-      2002,
-      2004,
-      2005,
-      2007,
-      2008,
-      2009,
-      2012,
-      2013,
-      2016,
-      2017,
-      2018,
-      2020
-    ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH"
-  },
-  {
     "raw": "Lewis, David. 1976. \"Survival and Identity.\" In Amelie Oksenberg Rorty, ed., *The Identities of Persons*. University of California Press.",
     "surname": "Lewis",
     "year": 1976,
@@ -812,59 +682,6 @@
     "title_similarity": 0.955,
     "auto_status": "MATCH",
     "auto_problems": []
-  },
-  {
-    "raw": "MacIntyre, Alasdair. 1988. *Whose Justice? Which Rationality?* University of Notre Dame Press. (Tradition-constituted rationality; the incommensurability horn, with the qualification that cross-tradition rational comparison is sometimes possible.)",
-    "surname": "MacIntyre",
-    "year": 1988,
-    "title": "Whose Justice? Which Rationality?",
-    "container": null,
-    "book": true,
-    "doi": null,
-    "arxiv": null,
-    "source": "openlibrary",
-    "url": "https://openlibrary.org/works/OL14849412W",
-    "found_title": "Whose justice? Which rationality?",
-    "found_authors": [
-      "Alasdair C. MacIntyre"
-    ],
-    "found_first_year": 1988,
-    "found_publishers": [
-      "Duckworth",
-      "Bloomsbury Academic",
-      "University of Notre Dame Press",
-      "Duckworth Pub"
-    ],
-    "found_publish_years": [
-      1988
-    ],
-    "title_similarity": 1.0,
-    "auto_problems": [],
-    "auto_status": "MATCH"
-  },
-  {
-    "raw": "Omohundro, Stephen M. 2008. \"The Basic AI Drives.\" In *Proceedings of the First AGI Conference*, IOS Press: 483-492. (Goal-content integrity as an instrumentally convergent drive: the first horn, derived independently.)",
-    "surname": "Omohundro",
-    "year": 2008,
-    "title": "The Basic AI Drives",
-    "container": "Proceedings of the First AGI Conference",
-    "doi": "10.1201/9781351251389-3",
-    "arxiv": null,
-    "source": "crossref",
-    "url": "https://doi.org/10.1201/9781351251389-3",
-    "found_title": "The Basic AI Drives",
-    "found_container": "Artificial Intelligence Safety and Security",
-    "found_authors": [
-      "Omohundro"
-    ],
-    "found_year": 2018,
-    "found_volume": null,
-    "found_page": "47-55",
-    "title_similarity": 1.0,
-    "auto_status": "PARTIAL",
-    "auto_problems": [
-      "year"
-    ]
   },
   {
     "raw": "Paul, L. A. 2014. *Transformative Experience*. Oxford University Press. (Epistemically and personally transformative experience; the epistemic obstacle this paper's structural obstacle survives.)",
@@ -1137,50 +954,6 @@
     "title_similarity": 1.0,
     "auto_problems": [],
     "auto_status": "MATCH"
-  },
-  {
-    "raw": "Taylor, Charles. 1976. \"Responsibility for Self.\" In Amelie Oksenberg Rorty, ed., *The Identities of Persons*. University of California Press. (Radical reevaluation: the first horn, stated in prose four decades early.)",
-    "surname": "Taylor",
-    "year": 1976,
-    "title": "Responsibility for Self",
-    "container": "The Identities of Persons",
-    "doi": "10.1525/9780520353060-013",
-    "arxiv": null,
-    "source": "crossref",
-    "url": "https://doi.org/10.1525/9780520353060-013",
-    "found_title": "XII RESPONSIBILITY FOR SELF",
-    "found_container": "Identities of Persons",
-    "found_authors": [
-      "Taylor"
-    ],
-    "found_year": 1976,
-    "found_volume": null,
-    "found_page": "281-300",
-    "title_similarity": 0.92,
-    "auto_status": "MATCH",
-    "auto_problems": []
-  },
-  {
-    "raw": "Taylor, Charles. 1985. \"What Is Human Agency?\" In *Human Agency and Language: Philosophical Papers 1*. Cambridge University Press. (Strong evaluation.)",
-    "surname": "Taylor",
-    "year": 1985,
-    "title": "What Is Human Agency?",
-    "container": "Human Agency and Language: Philosophical Papers 1",
-    "doi": "10.1017/cbo9781139173483.002",
-    "arxiv": null,
-    "source": "crossref",
-    "url": "https://doi.org/10.1017/cbo9781139173483.002",
-    "found_title": "What is human agency?",
-    "found_container": "Human Agency and Language",
-    "found_authors": [
-      "Taylor"
-    ],
-    "found_year": null,
-    "found_volume": null,
-    "found_page": "15-44",
-    "title_similarity": 1.0,
-    "auto_status": "MATCH",
-    "auto_problems": []
   },
   {
     "raw": "Lehman, Joel, and Stanley, Kenneth O. 2011. \"Abandoning Objectives: Evolution Through the Search for Novelty Alone.\" *Evolutionary Computation* 19(2): 189-223. DOI: 10.1162/EVCO_a_00025.",

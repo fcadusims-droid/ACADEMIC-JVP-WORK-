@@ -13,7 +13,7 @@ It is logically independent of its two companions.
 
 - **Centre bias.** Localization windows were centred on the true transition, so a detector that
   guesses the middle scores every recording. Off-centre, the geometry's lead over a scalar
-  detector became a tie (10/22 vs 10/22). At full scale the scalar was ahead (59/151 vs 67/151,
+  detector became a tie (10/22 vs 10/22). At full scale the scalar was slightly ahead (geometry 59/151, scalar 67/151,
   not significant) (`localization_centerbias_control`, `h1_powerup_offcentre`).
 - **Nulls and validation that ignore dependence.** Permuting autocorrelated windows as if
   exchangeable made an eyes-open/closed effect look like ≈3.3× and significant in 14/15. Against
