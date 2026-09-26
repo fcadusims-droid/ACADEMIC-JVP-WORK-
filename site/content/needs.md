@@ -15,11 +15,11 @@ depends on it. If you can help with any item, please open an issue on the
 - **A reader in the philosophy of action.** Paper 1 is addressed to that field, and §7 argues
   with Callard, Paul and Pettigrew. The errors found so far — axioms stated more strongly than the
   theorems they named, "proves" where only an argument was given — are the kind a specialist sees
-  in minutes. Most needed: a reading of §6 and of the system-boundary argument (§6.5).
-- **The system-boundary section — being written by the author.** Whether relativity to the
-  observer's system boundary trivializes the thesis is the paper's central open question. By
-  decision it is being written by the author, not by the AI assistant. Support notes:
-  `drafts/boundary_section_support.md`.
+  in minutes. Most needed: a reading of §6 and of the system-boundary argument (§6.6).
+- **The system-boundary section — done (§6.6).** Whether relativity to the observer's system
+  boundary trivializes the thesis was the paper's central open question. The section answering it,
+  and §8.4 on the common-influence objection, were drafted with Claude in the project's chat and revised by the author.
+  They were not written by the author alone. Support notes: `drafts/boundary_section_support.md`.
 - **A reader in philosophical theology.** The theological applications (grace, sanctity, acedia,
   resurrection) were moved to a separate draft, `drafts/theological_companion.md`. It needs a
   reader from that field before it becomes a paper.

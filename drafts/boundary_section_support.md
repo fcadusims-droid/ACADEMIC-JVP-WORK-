@@ -1,5 +1,7 @@
 # Support notes for the author: the system-boundary section of Paper 1
 
+**Status (2026-09-26).** The section is now §6.6 of Paper 1. It was drafted with Claude in the project's chat and revised by the author, not written by the author alone. It adopts the accountability criterion of §7 below and argument 2 of §3. These notes remain as its support material.
+
 **This is working material, not paper text.** A reviewer of the development plan recommended that
 the central argument of Paper 1 be written by the author: why relativity to the system boundary does
 not trivialize the thesis. That section is where a referee will test whether the author commands the

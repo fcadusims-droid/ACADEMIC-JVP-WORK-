@@ -30,7 +30,8 @@ belong to the author are marked as such.
   desires. Stated as "the dominant formal models are instances of control", the thesis is false
   of the first and has a counterexample in the second. The version adopted:
 
-  > Formal models that direct, evaluate or explain value change locate a fixed evaluative point.
+  > Formal models that direct or evaluate value change locate a fixed evaluative point.
+  > *(Originally "direct, evaluate or explain". The author removed "explain" on 2026-09-26, because every explanation fixes some invariant.)*
   > Used to direct change, they are control in the paper's sense and inherit the trilemma. Used
   > only to represent change, they represent it as reabsorption (a moving coordinate within a
   > fixed higher-order structure), or as a change of fundamental values about whose production
@@ -97,7 +98,9 @@ Limits checked on the journals' own pages on 2026-09-26:
 - **Order.** The final trim to the target comes last, after the author's two sections (phase
   2). Those sections add text and change what the paper needs.
 
-## Phase 2: the two arguments that must be the author's — **accepted; prepared, not written**
+## Phase 2: the two arguments the plan reserved for the author — **accepted; now §6.6 and §8.4**
+
+*Outcome (2026-09-26):* both sections were drafted with Claude in the project's chat and revised by the author, and inserted as §6.6 and §8.4. The author chose answer A to the influence objection, in a restricted form, and narrowed the thesis to models that direct or evaluate value change ("explain" removed). What follows records how the support material was prepared.
 
 The plan assigns both to the author, and so did an earlier review for the boundary section.
 They were not written here. Support material:
@@ -156,8 +159,8 @@ They were not written here. Support material:
 ## Freeze criterion for Paper 1 (adopted from the plan)
 
 Paper 1 freezes when all of these hold:
-1. the boundary section has been written by the author;
-2. the answer to the common-influence objection has been written by the author;
+1. the boundary section is in the paper — **done**, §6.6 (drafted with Claude, revised by the author);
+2. the answer to the common-influence objection is in the paper — **done**, §8.4 (drafted with Claude, revised by the author);
 3. Dietrich and List have been engaged — **done**;
 4. the text is within the chosen journal's length.
 

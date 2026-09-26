@@ -1,6 +1,6 @@
 # Open issues — all three papers are work in progress
 
-**Freeze criterion (adopted 2026-09-23).** After the items of the current development plan (Paper 3: the MDM control, the literature survey and the restructure; Paper 1: the author's boundary section; Paper 2: the partnership decision), only factual-error corrections enter the papers. No new experiment is run unless a decision point depends on its result. The public list of what the work needs from others is on the site's [Needs](https://fcadusims-droid.github.io/ACADEMIC-JVP-WORK-/needs.html) page and in `site/content/needs.md`.
+**Freeze criterion (adopted 2026-09-23).** After the items of the current development plan (Paper 3: the MDM control, the literature survey and the restructure; Paper 1: the boundary section, now §6.6, drafted with Claude and revised by the author; Paper 2: the partnership decision), only factual-error corrections enter the papers. No new experiment is run unless a decision point depends on its result. The public list of what the work needs from others is on the site's [Needs](https://fcadusims-droid.github.io/ACADEMIC-JVP-WORK-/needs.html) page and in `site/content/needs.md`.
 
 **None of the three papers is ready for submission.** This file used to be titled
 "Submission readiness" and declared Paper 3 "ready first"; that was premature and is
@@ -47,30 +47,34 @@ external review. It is a working list, not a checklist toward a deadline.
   consequence for the paper: the forbidden object is excluded only for states typical of the flow's invariant measure — almost every initial condition for conservative dynamics, but nothing about the transients of dissipative dynamics, where the exclusion rests on an interpretive argument (§6.5). Case 3's exhaustiveness is essentially
   excluded middle; the argumentative load now sits on the interpretation of the cells.
 - **Internal consistency of claim strength.** The abstract, orientation and conclusion said
-  "proves"; §2.1 said the paper presents no deductive proof; §6.6 concedes the top-level
-  thesis is definitional. The wording has been aligned to §6.6; any new text should keep to it.
+  "proves"; §2.1 said the paper presents no deductive proof; §6.7 concedes the top-level
+  thesis is definitional. The wording has been aligned to §6.7; any new text should keep to it.
 - **Open problem.** Characterising the admissible identity contracts (§6.5) remains open and
   may be ill-posed under §2.2's pragmatic reading.
 - **The Class-G / reabsorption line depends on the system boundary.** Including the trigger's
   source in the system makes the flow autonomous again, and the same event then reads as
-  reabsorption. §6.5 now states the boundary as an observer's pragmatic choice (like *I*, §2.2);
-  whether a principled criterion for drawing it exists is open.
-- **Framing (decided 2026-09-23).** Paper 1 is addressed to the philosophy of action, where §7 already argues with Callard, Paul and Pettigrew. The theological sections (formerly §§10–12) were moved to `drafts/theological_companion.md`, a second paper still to be written that cites the first. The formalism was moved into Appendix A (2026-09-24). The body now states in words: the contract *I* (§2.2, §4); the distinction between a non-tracking trigger and deviation-penalizing tracking (§6.3, §6.5); the identity-bearing/agency-bearing vocabulary and the two constraints (§6.1); the theorem's three cases (§6.5); and the Class G definition, with its ten conditions in words (§8.3). The equations, the theorem's formal statement, the simulation numbers and the U-limit predicate are in the appendix, moved verbatim, so every checked sentence is still in the paper. The author should confirm that the body keeps every definition that §7 and the future boundary section argue with. Still open for the author: writing the central argument that relativity to the system boundary does not trivialize the thesis (see `drafts/boundary_section_support.md`). That section should be written by the author.
+  reabsorption. §6.6 (added 2026-09-26) answers this with an admissibility criterion: the boundary
+  of the bearer of the responsibility-bearing history (§4.3). It adds that the enlarged boundary
+  changes the subject of the claim. Still open, and stated there: genuine joint agents, and cases
+  where responsibility attributions are themselves contested.
+- **Framing (decided 2026-09-23).** Paper 1 is addressed to the philosophy of action, where §7 already argues with Callard, Paul and Pettigrew. The theological sections (formerly §§10–12) were moved to `drafts/theological_companion.md`, a second paper still to be written that cites the first. The formalism was moved into Appendix A (2026-09-24). The body now states in words: the contract *I* (§2.2, §4); the distinction between a non-tracking trigger and deviation-penalizing tracking (§6.3, §6.5); the identity-bearing/agency-bearing vocabulary and the two constraints (§6.1); the theorem's three cases (§6.5); and the Class G definition, with its ten conditions in words (§8.3). The equations, the theorem's formal statement, the simulation numbers and the U-limit predicate are in the appendix, moved verbatim, so every checked sentence is still in the paper. The system-boundary argument is now §6.6 (see below).
 - **Restructured around its substantive claim (2026-09-26).** A colleague's plan, assessed and carried out point by point in `drafts/paper1_restructure_plan.md`. What changed:
-  - The contribution is no longer the trilemma's "joint exhaustiveness", which §6.6 concedes is definitional. It is the case-by-case claim of section 7 (formerly §7.8, "related work"): the formal models of value change on offer each hold an evaluative point fixed.
+  - The contribution is no longer the trilemma's "joint exhaustiveness", which §6.7 concedes is definitional. It is the case-by-case claim of section 7 (formerly §7.8, "related work"): the formal models of value change on offer each hold an evaluative point fixed.
   - Dietrich and List, Hansson, Bradley (Becker's thesis), Bykvist and Carroll et al. 2022 were verified and engaged (`references/paper1_phase3_literature.md`). No model that *directs* a change of fundamental values without a fixed reference was found. Bradley's generalised conditioning *represents* such a change without saying what produces it, which is why the thesis is worded as it is.
   - Retired terms: "transcendental", "annihilation", "Bellman collapse", "Trilemma of Cybernetic Impossibility". The note on terminology is gone, and a gate rule blocks the old terms.
   - §5–6 were compressed. The U-limit (§9) was compressed, not removed, because the conversion of the hostile in §7.6 needs it. The in-silico appendix moved to `experiments/paper1_control_trilemma/IN_SILICO_RECORD.md`.
   - The full earlier text is `drafts/paper1_full_2026-09-26.md`.
-- **Two arguments that must be the author's.**
-  - (1) The boundary section. See `drafts/boundary_section_support.md` §7 for the colleague's observations: a restriction on *which* boundaries are admissible, not only on *when* they are declared.
-  - (2) The objection that Class G is just ordinary interpersonal influence. See `drafts/influence_objection_support.md`. The text must choose one of two answers explicitly.
-- **Target journal and length (provisional; the author's call).** *Synthese* (no fixed limit, typically 15–30 printed pages; abstract 150–250 words). Target: at most 15,000 words all in, against about 29,000 now. The final trim comes after the author's two sections. The alternative is *Philosophical Studies*, ordinarily at most 10,000 words.
+- **The two arguments the plan reserved for the author are in the paper (2026-09-26).** Both were drafted with Claude in the project's chat and revised by the author; neither was written by the author alone (`AI_DISCLOSURE.md`).
+  - (1) §6.6, the system boundary. It gives an admissibility criterion, argues that the enlarged boundary changes the subject, and leaves joint agents open.
+  - (2) §8.4, "Is Class G just ordinary interpersonal influence?". It chooses answer A in a restricted form, with an *anchored* criterion: endorsable ex ante by the pre-change standards. Answer B was rejected because it contradicts §7.4, where persuasion by reasons is Bradley's first model and so falls under the endogenous horn.
+  - The objection table has a new row.
+  - The thesis wording was narrowed by the author: models that **direct or evaluate** value change, no longer "explain". With "explain" the thesis would be close to trivial, since every explanation fixes some invariant.
+- **Target journal and length (decided by the author, 2026-09-26).** *Synthese* (no fixed limit, typically 15–30 printed pages; abstract 150–250 words). Target: at most 15,000 words including notes, excluding references and the appendix. A cut map has been prepared for the author's approval; no cut has been applied (`drafts/paper1_cut_map.md`).
 - **Freeze criterion for Paper 1.** Paper 1 freezes when all four hold:
-  1. the boundary section is written by the author;
-  2. the answer to the common-influence objection is written by the author;
-  3. Dietrich and List have been engaged — done, §7.4;
-  4. the text is within the chosen journal's length.
+  1. the boundary section is in the paper — **done**, §6.6;
+  2. the answer to the common-influence objection is in the paper — **done**, §8.4;
+  3. Dietrich and List have been engaged — **done**, §7.4;
+  4. the text is within the chosen journal's length — **open**; the cut map awaits approval.
 
   After that, only a reader in the field, and no further audit round.
 

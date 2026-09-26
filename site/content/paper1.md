@@ -1,8 +1,8 @@
 ## The claim in one paragraph
 
-Formal models of value change — decision theories for changing selves, formal theories
-of preference change, learning agents that revise their own objectives, corrigibility
-schemes — each hold some evaluative point fixed: an aggregation rule, a weighing relation,
+Formal models that direct or evaluate value change — decision theories for changing selves,
+formal theories of preference change, learning agents that revise their own objectives,
+corrigibility schemes — each hold some evaluative point fixed: an aggregation rule, a weighing relation,
 invariant tastes, revision postulates, a higher-order objective. Used to direct change,
 such a model is control relative to that point, and control meets a trilemma: given a
 definition of control as directed change relative to a held-fixed evaluative structure,
@@ -48,6 +48,14 @@ invariant tastes and Bradley's three models of preference change, and value lear
 corrigibility. None directs or evaluates a change of fundamental values without a fixed
 higher-order reference. The one formal model that represents such a change (Bradley's
 generalised conditioning) says nothing about what produces it.
+
+Two objections get their own sections. Whether an event reads as Class G or as reabsorption
+depends on where the system boundary is drawn; §6.6 argues that the admissible boundary is
+that of the bearer of the responsibility-bearing history, and that enlarging it changes the
+subject of the claim. Joint agents are left open. And Class G is not ordinary interpersonal
+influence (§8.4): persuasion by reasons the agent can already weigh is anchored and falls
+under the endogenous horn. Class G covers only changes not endorsable by the agent's
+pre-change standards, and the paper leaves open whether any occur.
 
 ## What the suite established, and what it cost
 

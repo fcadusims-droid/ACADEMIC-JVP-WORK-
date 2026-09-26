@@ -1,5 +1,7 @@
 # Support notes for the author: "Is Class G just ordinary interpersonal influence?"
 
+**Status (2026-09-26).** The answer is now §8.4 of Paper 1. It chooses answer A in a restricted form, with an *anchored* criterion (endorsable ex ante by the pre-change standards). It was drafted with Claude in the project's chat and revised by the author, not written by the author alone.
+
 **This is working material, not paper text.** The Paper 1 development plan
 (`drafts/paper1_restructure_plan.md`, phase 2.2) names this as the most dangerous objection for
 a philosophy-of-action audience, and assigns the answer to the author. These notes set out the
