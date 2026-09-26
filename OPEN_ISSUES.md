@@ -73,7 +73,6 @@ external review. It is a working list, not a checklist toward a deadline.
   - **Met (2026-09-26), after two approved rounds of cuts.** Body plus notes: 13,297 words (25,428 before the cuts). Appendix: 2,427 (5,070 before). References: 56 (64 before).
   - The earlier texts are preserved: `drafts/paper1_precut_2026-09-26.md` before round 1, and `drafts/paper1_precut_round2_2026-09-26.md` before round 2 and the appendix cuts. What was cut, and why, is in `drafts/paper1_cut_map.md`.
   - §8.4's manipulation paragraph now rests on condition 8 of §8.3 (no fixed optimum target), and says the reading is an interpretation of that condition, not a consequence of it. No condition was added to §8.3, so `class_g_coherence` and `class_g_independence` still test the definition in the paper.
-  - The phrase "external gift" remains in two places: the row for condition 9 in the §8.3 table, and the matching row of the A.5 table. It is left for the author to decide, since the §8.3 tables were protected.
 - **Freeze criterion for Paper 1.** Paper 1 freezes when all four hold:
   1. the boundary section is in the paper — **done**, §6.6;
   2. the answer to the common-influence objection is in the paper — **done**, §8.4;
@@ -81,6 +80,12 @@ external review. It is a working list, not a checklist toward a deadline.
   4. the text is within the chosen journal's length — **done** (13,297 of 13,500 body words; 2,427 of 2,500 appendix words).
 
   **Paper 1 is frozen (2026-09-26).** Only corrections of factual error enter it. What remains is a reader in the field (site Needs page).
+
+  **One exception, recorded (2026-09-26, the author's decision).** Condition 9's "Function" cell, in the §8.3 and A.5 tables, said "Separates external gift from receptivity". It now says "Separates the external field from the receptivity gate".
+  - The reason: "gift" is theological vocabulary inside the definition of Class G, and §2 says the paper makes no theological claim. The author treats this as an internal inconsistency, that is, as an error.
+  - The statement of the condition is unchanged, so `class_g_coherence` and `class_g_independence` still apply.
+  - A final search found one remaining theological term, left for the author: "Conversion / sanctification" in the §8.3 candidate table.
+  - Paper 1 is now closed.
 
   After that, only a reader in the field, and no further audit round.
 

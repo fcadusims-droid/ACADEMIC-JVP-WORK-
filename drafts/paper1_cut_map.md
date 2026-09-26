@@ -1,4 +1,22 @@
-# Paper 1: cut map (all approved rounds applied; target met; Paper 1 frozen)
+# Paper 1: cut map (all approved rounds applied; target met; Paper 1 frozen, with one recorded exception)
+
+## Exception to the freeze (2026-09-26, decided by the author)
+
+The only change after the freeze is to one phrase, in two table cells: the "Function" column of
+condition 9, in the §8.3 table and in the A.5 table. "Separates external gift from receptivity"
+now reads "Separates the external field from the receptivity gate".
+
+**Why.** §2 says the paper makes no theological claim, and "gift" is theological vocabulary
+inside the definition of Class G. The author treats this as an internal inconsistency, that is,
+as an error, not as a revision.
+
+**What did not change.** The statement of condition 9 is identical, so `class_g_coherence` and
+`class_g_independence` still apply. No other text was changed.
+
+**Final search**, as instructed, of the body and appendix for "gift", "grace", "sin",
+"salvation" and "sanctif". One occurrence remains, listed for the author and not changed: the
+§8.3 candidate table, row "Conversion / sanctification". It is not a quotation from another
+author.
 
 ## Final status (2026-09-26): target met
 
