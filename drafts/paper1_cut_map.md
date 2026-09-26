@@ -1,6 +1,42 @@
-# Paper 1: cut map (round 1 applied; round 2 and the appendix map await approval)
+# Paper 1: cut map (all approved rounds applied; target met; Paper 1 frozen)
 
-## Status (2026-09-26)
+## Final status (2026-09-26): target met
+
+| | Before | After | Target |
+|---|---|---|---|
+| Body plus notes | 25,428 | **13,297** | ≤ 13,500 |
+| Appendix | 5,070 | **2,427** | ≤ 2,500 |
+| References | 64 | **56** | uncited ones leave |
+
+**Round 2, as approved.**
+- Applied as proposed: S1, S2, S4, S5 and S6.
+- S3 applied, keeping the sentence with the quantitative costing claim.
+- S7 applied. Huck's case is a candidate only if his companionship with Jim is declared as the external occasion (§6.6, §8.4). The text says no empirical test was made.
+- S8 applied. The single sentence names all three failure conditions.
+- Reserve rows applied: S11, which also removes "self-salvation", and S12. S9, S10 and S13 were not applied.
+- The text before round 2 is `drafts/paper1_precut_round2_2026-09-26.md`.
+
+**§8.4 wording changed, as instructed.** The opening now cites condition 8 and §6.3/§6.5. The
+manipulation paragraph rests on condition 8, and says that reading it this way is an
+interpretation. §8.3 is unchanged.
+
+**The terms "self-salvation" and "external gift".** After S11 and S5, "self-salvation" no longer
+appears in the paper. "External gift" remains in two places outside §8.2, both left unchanged
+for the author:
+- the §8.3 condition table, row 9, "Separates external gift from receptivity";
+- the A.5 table, row 9, the same wording.
+
+**Appendix, as approved.**
+- AP1 applied. The Crutchfield sentence was kept, since removing it would have dropped two cited works.
+- AP2 applied.
+- AP3 applied. Its qualification phrase and "bounded reading" are in the same paragraph.
+- AP4 applied, keeping 8⇒7 and 5⇒6, 7.
+- AP5 condensed to about 400 words of prose. It keeps the predicate, the definitions, the argument that $\Omega_I$ is a product of the transformation, and the continuity floor.
+- The Case 3 reserve row applied.
+- Waddington 1957 lost its only citation with AP1 (an illustrative use), so it left the list.
+- A.5 said "the filter table below"; it now says "the §8.3 filter table".
+
+## Status after round 1 (2026-09-26)
 
 **Target, corrected by the author.** Synthese's guideline of 15–30 printed pages covers the whole
 article. The target is therefore:

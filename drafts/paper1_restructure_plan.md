@@ -99,9 +99,8 @@ Limits checked on the journals' own pages on 2026-09-26:
   earlier rule (15,000 words excluding the appendix and references) would have given about 45
   pages and was withdrawn. The alternative, *Philosophical Studies*, would mean about 10,000
   words.
-- **Where it stands.** The first round of cuts is applied: body plus notes went from 25,428 to
-  14,256 words. A second round and an appendix map await the author's approval
-  (`drafts/paper1_cut_map.md`).
+- **Where it stands.** Met on 2026-09-26 after two approved rounds of cuts: body plus notes
+  13,297 words, appendix 2,427 (`drafts/paper1_cut_map.md`). Paper 1 is frozen.
 - **Order.** The final trim to the target comes last, after the author's two sections (phase
   2). Those sections add text and change what the paper needs.
 
@@ -169,6 +168,6 @@ Paper 1 freezes when all of these hold:
 1. the boundary section is in the paper — **done**, §6.6 (drafted with Claude, revised by the author);
 2. the answer to the common-influence objection is in the paper — **done**, §8.4 (drafted with Claude, revised by the author);
 3. Dietrich and List have been engaged — **done**;
-4. the text is within the chosen journal's length — **open**: 14,256 of 13,500 body words, and 5,070 of 2,500 appendix words.
+4. the text is within the chosen journal's length — **done** (13,297 body words; 2,427 appendix words). Paper 1 is frozen.
 
 After that, only a reader in the field, and no further audit round.

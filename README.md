@@ -31,8 +31,8 @@ this repository and rebuilt on every push, so it never lags the work; see
   collapsing into tautology, agency collapse or incommensurability. That top level is conceded
   to be definitional; the case-by-case claim about the models is not. Its load-bearing formal
   result is a *Meta-Optimization Collapse Theorem* (a trichotomy), and it defines the residual
-  admissibility profile **Class G**. It is addressed to the philosophy of action and is being
-  cut to journal length (`drafts/paper1_cut_map.md`); its formal statements are in an
+  admissibility profile **Class G**. It is addressed to the philosophy of action and is frozen at
+  journal length (`drafts/paper1_cut_map.md`); its formal statements are in an
   appendix, and its theological applications are in a separate draft
   (`drafts/theological_companion.md`).
 
