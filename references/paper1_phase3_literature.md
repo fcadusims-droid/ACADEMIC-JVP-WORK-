@@ -4,7 +4,8 @@
 Crossref or the publisher's record. Where the text was read, the entry says so. "Supports",
 "complicates" and "contradicts" are relative to the novelty thesis chosen in phase 1:*
 
-> Formal models that direct, evaluate or explain value change locate a fixed evaluative point.
+> Formal models that direct or evaluate value change locate a fixed evaluative point.
+> *(Originally "direct, evaluate or explain"; narrowed by the author on 2026-09-26.)*
 > When they are used to direct change, they are control in the paper's sense and inherit the
 > trilemma. When they only represent change, they represent it either as reabsorption (a moving
 > coordinate within a fixed higher-order structure) or as a change of fundamental values about
@@ -65,7 +66,7 @@ Crossref or the publisher's record. Where the text was read, the entry says so. 
   - *Complicates.* Generalised conditioning *represents* a change of fundamental desires. So a
     formal representation of what the paper calls conversion exists. It is a kinematics of
     attitude change and says nothing about what produces or directs the change. The thesis
-    therefore has to be restricted to models that direct, evaluate or explain change. Otherwise
+    therefore has to be restricted to models that direct or evaluate change. Otherwise
     Bradley's third model is a counterexample.
 - **What the paper must do.**
   - Cite Bradley in §7.6, as prior art on reabsorption and on the charge that it is ad hoc.
@@ -120,7 +121,7 @@ Crossref or the publisher's record. Where the text was read, the entry says so. 
 
 ## Other sources
 
-### For phase 2 (the boundary section; the author's work)
+### For phase 2 (the boundary section, now Paper 1 §6.6)
 - **Korsgaard 1996.** *The Sources of Normativity*, Cambridge University Press,
   DOI 10.1017/CBO9780511554476. Practical identity is in lecture 3, "The authority of
   reflection", pp. 90–130.

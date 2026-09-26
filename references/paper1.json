@@ -25,7 +25,7 @@
     "checked_against": "crossref",
     "automated_pass": "MATCH",
     "doi": "10.1038/s41598-017-00810-8",
-    "manual_review": "The sentence quoted in §7.5 ('is only possible for a subsystem interacting with an external environment') was found verbatim in the full text (PMC5430523)."
+    "manual_review": "The sentence quoted in §7.5 (now §6.5; 'is only possible for a subsystem interacting with an external environment') was found verbatim in the full text (PMC5430523)."
   },
   {
     "n": 4,
@@ -83,7 +83,7 @@
     "checked_against": "openlibrary",
     "automated_pass": "MATCH",
     "manual_review": "Oxford University Press 2018, confirmed.",
-    "correction": "Paper 1 §7.8.1 put the phrase 'is not a matter of decision-making at all' in quotation marks as Callard's. It is from L. A. Paul's endorsement of the book on the publisher's page, not from Callard's text. The sentence now paraphrases Callard's position without quotation marks."
+    "correction": "Paper 1 §7.8.1 (now §7.1) put the phrase 'is not a matter of decision-making at all' in quotation marks as Callard's. It is from L. A. Paul's endorsement of the book on the publisher's page, not from Callard's text. The sentence now paraphrases Callard's position without quotation marks."
   },
   {
     "n": 11,
@@ -147,7 +147,7 @@
   },
   {
     "n": 18,
-    "citation": "Frankfurt, Harry G. 1971. \"Freedom of the Will and the Concept of a Person.\" *The Journal of Philosophy* 68(1): 5-20. (Second-order desires; the hierarchy the §6.6 \"one level up\" move presupposes.)",
+    "citation": "Frankfurt, Harry G. 1971. \"Freedom of the Will and the Concept of a Person.\" *The Journal of Philosophy* 68(1): 5-20. (Second-order desires; the hierarchy the §6.7 \"one level up\" move presupposes.)",
     "status": "verified",
     "url": "https://doi.org/10.2307/2024717",
     "checked_against": "crossref",

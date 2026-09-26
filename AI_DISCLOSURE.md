@@ -20,6 +20,8 @@ Claude has been used, under the author's direction, to:
   and coverage gates);
 - review the work, including its own earlier output.
 
+This includes sections that were at one point reserved for the author alone. Paper 1's §6.6 (the system boundary) and §8.4 (whether Class G is just ordinary interpersonal influence) were drafted with Claude in the project's chat and revised by the author. They were not written by the author alone.
+
 The author directs the work and is responsible for it. The AI assistance is disclosed here,
 not offered as a source of authority.
 
