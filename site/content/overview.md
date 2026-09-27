@@ -11,19 +11,16 @@ repository changes, this site rebuilds.
 
 ## The three papers
 
-The trilogy is deliberately asymmetric in what it claims. Paper 1 is a negative
-result about formulation — it does not propose a mechanism; it argues that a dominant
-family of models, and the formal models of value change built like it, cannot state the
-question. Paper 2 is
-conditional throughout and its secure contribution is *eliminative*: it says what
-would have to be measurable, and reports a pre-registered negative on whether it
-presently can be. Paper 3 is logically independent of both. It no longer offers a method; it is the
-pre-registered record of how one came to look validated, and stands or falls as that record.
+The papers were rewritten on 27 September 2026, and in their current versions they are
+logically independent. Paper 1 is a philosophical argument: formal models used to direct or
+evaluate value change take their standard from the agent's attitudes, and so cannot tell
+conversion from manipulation. Paper 2 says what data a test of a physiological version of the
+persistence question would need, and reports that the one public corpus with the right contrast
+failed the first pre-specified step. Paper 3 is the validation record of one EEG method: five
+traps that made it look validated, and the controls that overturned it. Each paper's remaining
+analyses are specified in its text before they are run; their results are marked as pending.
 
-That asymmetry matters for reading them. A reader who accepts Paper 3 incurs no
-commitment to Paper 1; a reader who rejects Paper 2's empirical arm leaves Paper 1
-untouched. The dependency runs one way — Paper 2 borrows Paper 1's Class G and the
-consistency contract *I* — and no result flows back.
+The earlier versions are kept, marked as superseded, in `archive/papers_2026-09-26_superseded/`.
 
 ## What the experiment suite is for
 

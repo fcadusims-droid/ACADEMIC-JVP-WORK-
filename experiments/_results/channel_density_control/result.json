@@ -1,0 +1,198 @@
+{
+  "experiment": "channel_density_control",
+  "plan_id": "E3.3",
+  "fills": "R3.3",
+  "question": "Do the between-recording controls' negative results depend on using only seven channels?",
+  "n_channels": 64,
+  "channels": [
+    "FC5",
+    "FC3",
+    "FC1",
+    "FCz",
+    "FC2",
+    "FC4",
+    "FC6",
+    "C5",
+    "C3",
+    "C1",
+    "Cz",
+    "C2",
+    "C4",
+    "C6",
+    "CP5",
+    "CP3",
+    "CP1",
+    "CPz",
+    "CP2",
+    "CP4",
+    "CP6",
+    "Fp1",
+    "Fpz",
+    "Fp2",
+    "AF7",
+    "AF3",
+    "AFz",
+    "AF4",
+    "AF8",
+    "F7",
+    "F5",
+    "F3",
+    "F1",
+    "Fz",
+    "F2",
+    "F4",
+    "F6",
+    "F8",
+    "FT7",
+    "FT8",
+    "T7",
+    "T8",
+    "T9",
+    "T10",
+    "TP7",
+    "TP8",
+    "P7",
+    "P5",
+    "P3",
+    "P1",
+    "Pz",
+    "P2",
+    "P4",
+    "P6",
+    "P8",
+    "PO7",
+    "PO3",
+    "POz",
+    "PO4",
+    "PO8",
+    "O1",
+    "Oz",
+    "O2",
+    "Iz"
+  ],
+  "geometry": {
+    "n_OC_gt_SS": 13,
+    "wilcoxon_p_one_sided": 0.001678466796875,
+    "median_ratio_OC": 1.2429058851160224,
+    "median_ratio_SS": 0.7766939403289436
+  },
+  "scalar_rel_alpha_64": {
+    "median_ratio_OC": 4.007991522010035,
+    "median_ratio_SS": 0.9817211237209412,
+    "n_OC_gt_SS": 14
+  },
+  "detection": {
+    "auc_OC_vs_SS": 0.4088888888888889,
+    "auc_SS_vs_WN": 0.5733333333333334,
+    "auc_OC_vs_WN": 0.4577777777777778
+  },
+  "criterion_met_depends_on_density": false,
+  "verdict": "RESULTS DO NOT DEPEND ON CHANNEL DENSITY (by the pre-registered bar): with 64 channels the eyes-open/closed geometric ratio exceeds the same-state control in 13/15 subjects (one-sided Wilcoxon p = 0.00168; bar >= 12/15 and p < 0.01; 7 channels: 11/15, p = 0.024), and the detection statistic separates a change of state from a same-state change of recording at AUC 0.409 (bar 0.80; 7 channels: 0.72). A recording change alone fires it at AUC 0.573. Relative alpha power with 64 channels: median ratio 4.01 (eyes open/closed) against 0.98 (same state).",
+  "per_subject_ratios": [
+    {
+      "subject": 1,
+      "G_OC": 1.4005697469761593,
+      "G_SS": 1.0901587390923175,
+      "S_OC": 4.086288888889312,
+      "S_SS": 1.2755715867297373
+    },
+    {
+      "subject": 2,
+      "G_OC": 1.0258924397045055,
+      "G_SS": 0.6952855471379966,
+      "S_OC": 4.17934022538425,
+      "S_SS": 0.47874795829735933
+    },
+    {
+      "subject": 3,
+      "G_OC": 2.101366464887693,
+      "G_SS": 0.7766939403289436,
+      "S_OC": 6.9979572001992825,
+      "S_SS": 0.7720821599904671
+    },
+    {
+      "subject": 4,
+      "G_OC": 3.338214977830386,
+      "G_SS": 0.7602626871423436,
+      "S_OC": 7.815245974455488,
+      "S_SS": 1.4651892761842078
+    },
+    {
+      "subject": 5,
+      "G_OC": 0.8616585523827371,
+      "G_SS": 0.7567174899583742,
+      "S_OC": 2.1147622201275125,
+      "S_SS": 2.1809384583685114
+    },
+    {
+      "subject": 6,
+      "G_OC": 0.906283707500562,
+      "G_SS": 1.229562145587667,
+      "S_OC": 0.5827310749887789,
+      "S_SS": 0.5799763764090246
+    },
+    {
+      "subject": 7,
+      "G_OC": 1.1112099798402186,
+      "G_SS": 0.7421011593638153,
+      "S_OC": 3.1592637670354318,
+      "S_SS": 2.289687772957741
+    },
+    {
+      "subject": 8,
+      "G_OC": 1.7470596376621836,
+      "G_SS": 0.6623960016960984,
+      "S_OC": 5.895273936103803,
+      "S_SS": 0.549283468542895
+    },
+    {
+      "subject": 9,
+      "G_OC": 0.8788327300293346,
+      "G_SS": 1.1506135439981293,
+      "S_OC": 4.007991522010035,
+      "S_SS": 0.9817211237209412
+    },
+    {
+      "subject": 10,
+      "G_OC": 1.2429058851160224,
+      "G_SS": 0.9301414199581309,
+      "S_OC": 1.017555492923001,
+      "S_SS": 0.5250841146979761
+    },
+    {
+      "subject": 11,
+      "G_OC": 1.273432125003338,
+      "G_SS": 0.8556493953363388,
+      "S_OC": 4.023732543597284,
+      "S_SS": 0.33920165146266473
+    },
+    {
+      "subject": 12,
+      "G_OC": 1.8187334434906428,
+      "G_SS": 0.7405199247818715,
+      "S_OC": 1.5260306148585947,
+      "S_SS": 0.5959671130212666
+    },
+    {
+      "subject": 13,
+      "G_OC": 1.1376029274050394,
+      "G_SS": 1.0108888429376304,
+      "S_OC": 2.835561398377714,
+      "S_SS": 1.053199023269145
+    },
+    {
+      "subject": 14,
+      "G_OC": 2.0750162800694882,
+      "G_SS": 0.8605969885928413,
+      "S_OC": 5.168075263614572,
+      "S_SS": 1.0078751278176092
+    },
+    {
+      "subject": 15,
+      "G_OC": 0.8155652955161062,
+      "G_SS": 0.7349110366547624,
+      "S_OC": 1.0063559136155806,
+      "S_SS": 0.992394310249282
+    }
+  ]
+}

@@ -1,0 +1,1540 @@
+{
+  "experiment": "mdm_matched_control",
+  "plan_id": "E3.1",
+  "fills": "R3.1",
+  "question": "Does the standard OAS->MDM pipeline fall into the dependence, ocular or recording trap when given this method's design (trace normalization, overlapping windows)?",
+  "pipeline": "pyriemann 0.12 Covariances(oas) / trace -> MDM(riemann); balanced accuracy",
+  "windows": {
+    "eegmmidb": [
+      1.0,
+      0.25
+    ],
+    "sleep": [
+      2.0,
+      1.0
+    ]
+  },
+  "crosses_bar": {
+    "T4_dependence": false,
+    "T3_pseudoreplication": false,
+    "T1_ocular": true,
+    "T2_recording": false
+  },
+  "reading_rule_met": true,
+  "reading": "TRAPS OF THE DESIGN (trace normalization + overlap): Paper 3 \u00a74.1 stands",
+  "T1_ocular": {
+    "per_subject_drop": {
+      "median": 0.09247832155989968,
+      "q25": 0.04895153186250098,
+      "q75": 0.13155222894012253,
+      "min": 0.002455987852632513,
+      "max": 0.24787436407376023,
+      "n": 78
+    },
+    "wilcoxon_p_one_sided": 8.410875224353286e-15,
+    "strict_original_conjunction_met": true
+  },
+  "T2_recording": {
+    "same_state_acc": {
+      "median": 0.6076923076923078,
+      "q25": 0.5384615384615385,
+      "q75": 0.6923076923076923,
+      "min": 0.4358974358974359,
+      "max": 0.9333333333333333,
+      "n": 15
+    },
+    "open_closed_acc": {
+      "median": 0.8485477178423236,
+      "q25": 0.7302904564315352,
+      "q75": 0.8869294605809128,
+      "min": 0.46887966804979253,
+      "max": 0.995850622406639,
+      "n": 15
+    }
+  },
+  "T3_pseudoreplication": {
+    "grouped_by_recording": 0.6389196005977629,
+    "grouped_by_subject": 0.6389814763921425,
+    "n_windows_pooled": 2791656,
+    "gap": -6.187579437966217e-05
+  },
+  "T4_dependence": {
+    "shuffled_minus_blocked": {
+      "median": 0.0032877456219426726,
+      "q25": 0.0017373014744834214,
+      "q75": 0.005698880801799255,
+      "min": -0.0007267441860465684,
+      "max": 0.05329917098729764,
+      "n": 151
+    }
+  },
+  "verdict": "TRAPS OF THE DESIGN (trace normalization + overlap): Paper 3 \u00a74.1 stands. Dependence (shuffled - blocked): median +0.003 over 151 recordings (bar 0.05) -> below. Ocular (drop without EOG): median +0.092 over 78 subjects, one-sided Wilcoxon p = 8.4e-15 (bar 0.05) -> crosses. Recording (two same-state recordings): median balanced accuracy 0.608 over 15 subjects (bar 0.70; eyes open vs closed 0.849) -> below. Pseudo-replication (grouped by recording - by subject): -0.0001 (bar 0.05; not part of the reading rule) -> below.",
+  "per_record_sleep": [
+    {
+      "record": "SC4001E",
+      "subject": "00",
+      "n_N2": 7460,
+      "n_REM": 3744,
+      "acc_eog_blocked": 0.7157238176256273,
+      "acc_noeog_blocked": 0.6245188727343554,
+      "acc_eog_shuffled": 0.7202074167640522
+    },
+    {
+      "record": "SC4002E",
+      "subject": "00",
+      "n_N2": 11153,
+      "n_REM": 6438,
+      "acc_eog_blocked": 0.7368010972352776,
+      "acc_noeog_blocked": 0.5825461658197245,
+      "acc_eog_shuffled": 0.740766411281844
+    },
+    {
+      "record": "SC4011E",
+      "subject": "01",
+      "n_N2": 16820,
+      "n_REM": 5092,
+      "acc_eog_blocked": 0.7247843718387847,
+      "acc_noeog_blocked": 0.6067232832645085,
+      "acc_eog_shuffled": 0.7269814485990475
+    },
+    {
+      "record": "SC4021E",
+      "subject": "02",
+      "n_N2": 16294,
+      "n_REM": 4875,
+      "acc_eog_blocked": 0.6863385295200688,
+      "acc_noeog_blocked": 0.5137870979721968,
+      "acc_eog_shuffled": 0.6919792593152112
+    },
+    {
+      "record": "SC4022E",
+      "subject": "02",
+      "n_N2": 11997,
+      "n_REM": 5359,
+      "acc_eog_blocked": 0.6985603385980538,
+      "acc_noeog_blocked": 0.6419028872413725,
+      "acc_eog_shuffled": 0.7025220493093666
+    },
+    {
+      "record": "SC4031E",
+      "subject": "03",
+      "n_N2": 14508,
+      "n_REM": 6260,
+      "acc_eog_blocked": 0.6769147527727348,
+      "acc_noeog_blocked": 0.6262797169965056,
+      "acc_eog_shuffled": 0.6769322158712038
+    },
+    {
+      "record": "SC4032E",
+      "subject": "03",
+      "n_N2": 11967,
+      "n_REM": 5958,
+      "acc_eog_blocked": 0.6800312558091314,
+      "acc_noeog_blocked": 0.5919416613208983,
+      "acc_eog_shuffled": 0.6805715549920723
+    },
+    {
+      "record": "SC4042E",
+      "subject": "04",
+      "n_N2": 15372,
+      "n_REM": 8067,
+      "acc_eog_blocked": 0.6749035110612942,
+      "acc_noeog_blocked": 0.5837621676848277,
+      "acc_eog_shuffled": 0.6784071743217687
+    },
+    {
+      "record": "SC4051E",
+      "subject": "05",
+      "n_N2": 6465,
+      "n_REM": 2037,
+      "acc_eog_blocked": 0.6611974299131953,
+      "acc_noeog_blocked": 0.593723197413967,
+      "acc_eog_shuffled": 0.6638302767706934
+    },
+    {
+      "record": "SC4052E",
+      "subject": "05",
+      "n_N2": 18448,
+      "n_REM": 5388,
+      "acc_eog_blocked": 0.7535017466780762,
+      "acc_noeog_blocked": 0.6495727109679986,
+      "acc_eog_shuffled": 0.7552993916647511
+    },
+    {
+      "record": "SC4061E",
+      "subject": "06",
+      "n_N2": 12183,
+      "n_REM": 3056,
+      "acc_eog_blocked": 0.5933384371106765,
+      "acc_noeog_blocked": 0.5760733430155229,
+      "acc_eog_shuffled": 0.5989139284291518
+    },
+    {
+      "record": "SC4062E",
+      "subject": "06",
+      "n_N2": 12484,
+      "n_REM": 5604,
+      "acc_eog_blocked": 0.662608138417174,
+      "acc_noeog_blocked": 0.49224263302566185,
+      "acc_eog_shuffled": 0.6630574501528981
+    },
+    {
+      "record": "SC4071E",
+      "subject": "07",
+      "n_N2": 12057,
+      "n_REM": 5929,
+      "acc_eog_blocked": 0.7007431865670168,
+      "acc_noeog_blocked": 0.5426072797826449,
+      "acc_eog_shuffled": 0.7035024559300482
+    },
+    {
+      "record": "SC4072E",
+      "subject": "07",
+      "n_N2": 11717,
+      "n_REM": 5009,
+      "acc_eog_blocked": 0.7211569230859404,
+      "acc_noeog_blocked": 0.5140203722741754,
+      "acc_eog_shuffled": 0.7230642349957668
+    },
+    {
+      "record": "SC4081E",
+      "subject": "08",
+      "n_N2": 7818,
+      "n_REM": 3926,
+      "acc_eog_blocked": 0.670320668879776,
+      "acc_noeog_blocked": 0.5749931223151454,
+      "acc_eog_shuffled": 0.6723010576712934
+    },
+    {
+      "record": "SC4082E",
+      "subject": "08",
+      "n_N2": 9815,
+      "n_REM": 7792,
+      "acc_eog_blocked": 0.6932842349900259,
+      "acc_noeog_blocked": 0.5290432027414771,
+      "acc_eog_shuffled": 0.6934120683360863
+    },
+    {
+      "record": "SC4091E",
+      "subject": "09",
+      "n_N2": 16776,
+      "n_REM": 6943,
+      "acc_eog_blocked": 0.5836790404335432,
+      "acc_noeog_blocked": 0.5536282748528432,
+      "acc_eog_shuffled": 0.5868897597653102
+    },
+    {
+      "record": "SC4092E",
+      "subject": "09",
+      "n_N2": 15323,
+      "n_REM": 7938,
+      "acc_eog_blocked": 0.6360401206656292,
+      "acc_noeog_blocked": 0.5771734712868956,
+      "acc_eog_shuffled": 0.6365508455721425
+    },
+    {
+      "record": "SC4101E",
+      "subject": "10",
+      "n_N2": 20108,
+      "n_REM": 6206,
+      "acc_eog_blocked": 0.7123437962876715,
+      "acc_noeog_blocked": 0.5755073745826678,
+      "acc_eog_shuffled": 0.7140207542499635
+    },
+    {
+      "record": "SC4102E",
+      "subject": "10",
+      "n_N2": 18160,
+      "n_REM": 5967,
+      "acc_eog_blocked": 0.795602082562759,
+      "acc_noeog_blocked": 0.6242567648129322,
+      "acc_eog_shuffled": 0.7999773534173638
+    },
+    {
+      "record": "SC4111E",
+      "subject": "11",
+      "n_N2": 15010,
+      "n_REM": 4734,
+      "acc_eog_blocked": 0.6474112174759146,
+      "acc_noeog_blocked": 0.5835592213274519,
+      "acc_eog_shuffled": 0.6558584658530702
+    },
+    {
+      "record": "SC4112E",
+      "subject": "11",
+      "n_N2": 11835,
+      "n_REM": 4523,
+      "acc_eog_blocked": 0.6402303076394686,
+      "acc_noeog_blocked": 0.5368737227302112,
+      "acc_eog_shuffled": 0.6426876908811658
+    },
+    {
+      "record": "SC4121E",
+      "subject": "12",
+      "n_N2": 13852,
+      "n_REM": 7732,
+      "acc_eog_blocked": 0.5785801875088046,
+      "acc_noeog_blocked": 0.5801180994144141,
+      "acc_eog_shuffled": 0.5848033359531005
+    },
+    {
+      "record": "SC4122E",
+      "subject": "12",
+      "n_N2": 8574,
+      "n_REM": 5965,
+      "acc_eog_blocked": 0.584826160143016,
+      "acc_noeog_blocked": 0.5459555888472352,
+      "acc_eog_shuffled": 0.5880772412590277
+    },
+    {
+      "record": "SC4131E",
+      "subject": "13",
+      "n_N2": 14873,
+      "n_REM": 5148,
+      "acc_eog_blocked": 0.6845541604752927,
+      "acc_noeog_blocked": 0.527800516269554,
+      "acc_eog_shuffled": 0.6868962904312195
+    },
+    {
+      "record": "SC4141E",
+      "subject": "14",
+      "n_N2": 12090,
+      "n_REM": 6983,
+      "acc_eog_blocked": 0.6386047374653344,
+      "acc_noeog_blocked": 0.59050292527747,
+      "acc_eog_shuffled": 0.6404102270348869
+    },
+    {
+      "record": "SC4142E",
+      "subject": "14",
+      "n_N2": 11550,
+      "n_REM": 6382,
+      "acc_eog_blocked": 0.6380546748769876,
+      "acc_noeog_blocked": 0.6186204435906724,
+      "acc_eog_shuffled": 0.64363955171539
+    },
+    {
+      "record": "SC4151E",
+      "subject": "15",
+      "n_N2": 10592,
+      "n_REM": 6236,
+      "acc_eog_blocked": 0.7374383271095228,
+      "acc_noeog_blocked": 0.5612330229987075,
+      "acc_eog_shuffled": 0.7402175434907727
+    },
+    {
+      "record": "SC4152E",
+      "subject": "15",
+      "n_N2": 13112,
+      "n_REM": 8752,
+      "acc_eog_blocked": 0.7431420538898178,
+      "acc_noeog_blocked": 0.5522650170155476,
+      "acc_eog_shuffled": 0.7446846978861905
+    },
+    {
+      "record": "SC4161E",
+      "subject": "16",
+      "n_N2": 13400,
+      "n_REM": 7792,
+      "acc_eog_blocked": 0.6880443010818598,
+      "acc_noeog_blocked": 0.599562658984339,
+      "acc_eog_shuffled": 0.6924049158723835
+    },
+    {
+      "record": "SC4162E",
+      "subject": "16",
+      "n_N2": 13723,
+      "n_REM": 5844,
+      "acc_eog_blocked": 0.6783919745240021,
+      "acc_noeog_blocked": 0.5972901589147512,
+      "acc_eog_shuffled": 0.682042332095036
+    },
+    {
+      "record": "SC4171E",
+      "subject": "17",
+      "n_N2": 9787,
+      "n_REM": 7850,
+      "acc_eog_blocked": 0.585668562027231,
+      "acc_noeog_blocked": 0.5394476619511519,
+      "acc_eog_shuffled": 0.5932481863696741
+    },
+    {
+      "record": "SC4172E",
+      "subject": "17",
+      "n_N2": 20539,
+      "n_REM": 4933,
+      "acc_eog_blocked": 0.6807032088696355,
+      "acc_noeog_blocked": 0.6273581055030737,
+      "acc_eog_shuffled": 0.7161980421281178
+    },
+    {
+      "record": "SC4181E",
+      "subject": "18",
+      "n_N2": 11585,
+      "n_REM": 3536,
+      "acc_eog_blocked": 0.6316509319275003,
+      "acc_noeog_blocked": 0.5793833254891545,
+      "acc_eog_shuffled": 0.6339162192880871
+    },
+    {
+      "record": "SC4182E",
+      "subject": "18",
+      "n_N2": 8669,
+      "n_REM": 3471,
+      "acc_eog_blocked": 0.6798091624756701,
+      "acc_noeog_blocked": 0.6024055121919007,
+      "acc_eog_shuffled": 0.6826049326059047
+    },
+    {
+      "record": "SC4191E",
+      "subject": "19",
+      "n_N2": 24936,
+      "n_REM": 8562,
+      "acc_eog_blocked": 0.738882218226382,
+      "acc_noeog_blocked": 0.6222029868081068,
+      "acc_eog_shuffled": 0.7466308142678474
+    },
+    {
+      "record": "SC4192E",
+      "subject": "19",
+      "n_N2": 12984,
+      "n_REM": 9948,
+      "acc_eog_blocked": 0.7851607471606512,
+      "acc_noeog_blocked": 0.6218281923674085,
+      "acc_eog_shuffled": 0.7898420678470747
+    },
+    {
+      "record": "SC4201E",
+      "subject": "20",
+      "n_N2": 16155,
+      "n_REM": 5304,
+      "acc_eog_blocked": 0.7713664885281304,
+      "acc_noeog_blocked": 0.678844053155867,
+      "acc_eog_shuffled": 0.7765876316957752
+    },
+    {
+      "record": "SC4202E",
+      "subject": "20",
+      "n_N2": 14359,
+      "n_REM": 6205,
+      "acc_eog_blocked": 0.8016711842783186,
+      "acc_noeog_blocked": 0.7248034697232849,
+      "acc_eog_shuffled": 0.8036459569980536
+    },
+    {
+      "record": "SC4211E",
+      "subject": "21",
+      "n_N2": 15766,
+      "n_REM": 4525,
+      "acc_eog_blocked": 0.7036846125973579,
+      "acc_noeog_blocked": 0.6616751902653657,
+      "acc_eog_shuffled": 0.7096174227637204
+    },
+    {
+      "record": "SC4212E",
+      "subject": "21",
+      "n_N2": 12030,
+      "n_REM": 2608,
+      "acc_eog_blocked": 0.6831171049880411,
+      "acc_noeog_blocked": 0.6371208035636879,
+      "acc_eog_shuffled": 0.6869783618662955
+    },
+    {
+      "record": "SC4221E",
+      "subject": "22",
+      "n_N2": 13776,
+      "n_REM": 5451,
+      "acc_eog_blocked": 0.7751364788099488,
+      "acc_noeog_blocked": 0.7888149219175973,
+      "acc_eog_shuffled": 0.7832710944895831
+    },
+    {
+      "record": "SC4222E",
+      "subject": "22",
+      "n_N2": 14856,
+      "n_REM": 6591,
+      "acc_eog_blocked": 0.658593963129337,
+      "acc_noeog_blocked": 0.6178375214990628,
+      "acc_eog_shuffled": 0.6615311573107598
+    },
+    {
+      "record": "SC4231E",
+      "subject": "23",
+      "n_N2": 12381,
+      "n_REM": 6349,
+      "acc_eog_blocked": 0.6402074732076236,
+      "acc_noeog_blocked": 0.551678102484781,
+      "acc_eog_shuffled": 0.6412109783803012
+    },
+    {
+      "record": "SC4232E",
+      "subject": "23",
+      "n_N2": 6348,
+      "n_REM": 6494,
+      "acc_eog_blocked": 0.6249259167834436,
+      "acc_noeog_blocked": 0.5632178721902958,
+      "acc_eog_shuffled": 0.6262507546590921
+    },
+    {
+      "record": "SC4241E",
+      "subject": "24",
+      "n_N2": 15389,
+      "n_REM": 5517,
+      "acc_eog_blocked": 0.6905907699937927,
+      "acc_noeog_blocked": 0.5615761185604244,
+      "acc_eog_shuffled": 0.6915774531719037
+    },
+    {
+      "record": "SC4242E",
+      "subject": "24",
+      "n_N2": 16653,
+      "n_REM": 5265,
+      "acc_eog_blocked": 0.6893125696404385,
+      "acc_noeog_blocked": 0.5251619661455726,
+      "acc_eog_shuffled": 0.6903278466119995
+    },
+    {
+      "record": "SC4251E",
+      "subject": "25",
+      "n_N2": 17036,
+      "n_REM": 4372,
+      "acc_eog_blocked": 0.6958649483887196,
+      "acc_noeog_blocked": 0.662049871463197,
+      "acc_eog_shuffled": 0.6992846750232595
+    },
+    {
+      "record": "SC4252E",
+      "subject": "25",
+      "n_N2": 12701,
+      "n_REM": 5217,
+      "acc_eog_blocked": 0.6663933163094731,
+      "acc_noeog_blocked": 0.6420986383311347,
+      "acc_eog_shuffled": 0.6673039106781131
+    },
+    {
+      "record": "SC4261F",
+      "subject": "26",
+      "n_N2": 12110,
+      "n_REM": 6764,
+      "acc_eog_blocked": 0.7381910522555659,
+      "acc_noeog_blocked": 0.6843759354546657,
+      "acc_eog_shuffled": 0.7520913409066603
+    },
+    {
+      "record": "SC4262F",
+      "subject": "26",
+      "n_N2": 13890,
+      "n_REM": 5783,
+      "acc_eog_blocked": 0.7788664162616601,
+      "acc_noeog_blocked": 0.7353327825767714,
+      "acc_eog_shuffled": 0.7905738836068629
+    },
+    {
+      "record": "SC4271F",
+      "subject": "27",
+      "n_N2": 14202,
+      "n_REM": 5217,
+      "acc_eog_blocked": 0.6548875750598913,
+      "acc_noeog_blocked": 0.6229656361320466,
+      "acc_eog_shuffled": 0.6587681039181728
+    },
+    {
+      "record": "SC4272F",
+      "subject": "27",
+      "n_N2": 11321,
+      "n_REM": 6674,
+      "acc_eog_blocked": 0.6210894916925187,
+      "acc_noeog_blocked": 0.5850907985845903,
+      "acc_eog_shuffled": 0.6274136785372147
+    },
+    {
+      "record": "SC4281G",
+      "subject": "28",
+      "n_N2": 15875,
+      "n_REM": 5066,
+      "acc_eog_blocked": 0.6228142596466796,
+      "acc_noeog_blocked": 0.5967149531693458,
+      "acc_eog_shuffled": 0.6334959199977619
+    },
+    {
+      "record": "SC4282G",
+      "subject": "28",
+      "n_N2": 14197,
+      "n_REM": 4977,
+      "acc_eog_blocked": 0.6164436919797965,
+      "acc_noeog_blocked": 0.6178642364866411,
+      "acc_eog_shuffled": 0.634706386010147
+    },
+    {
+      "record": "SC4291G",
+      "subject": "29",
+      "n_N2": 12745,
+      "n_REM": 5216,
+      "acc_eog_blocked": 0.6187940597419413,
+      "acc_noeog_blocked": 0.5278686893332403,
+      "acc_eog_shuffled": 0.6245510915503975
+    },
+    {
+      "record": "SC4292G",
+      "subject": "29",
+      "n_N2": 13678,
+      "n_REM": 6586,
+      "acc_eog_blocked": 0.6221327484998664,
+      "acc_noeog_blocked": 0.5624963061969261,
+      "acc_eog_shuffled": 0.6234796683976125
+    },
+    {
+      "record": "SC4301E",
+      "subject": "30",
+      "n_N2": 13665,
+      "n_REM": 3653,
+      "acc_eog_blocked": 0.7203156581326127,
+      "acc_noeog_blocked": 0.5490494507569326,
+      "acc_eog_shuffled": 0.7202695827948278
+    },
+    {
+      "record": "SC4302E",
+      "subject": "30",
+      "n_N2": 12498,
+      "n_REM": 4042,
+      "acc_eog_blocked": 0.7037506802671802,
+      "acc_noeog_blocked": 0.5530470624928885,
+      "acc_eog_shuffled": 0.7079123357411604
+    },
+    {
+      "record": "SC4311E",
+      "subject": "31",
+      "n_N2": 10821,
+      "n_REM": 4256,
+      "acc_eog_blocked": 0.7015789295633039,
+      "acc_noeog_blocked": 0.5508922578486694,
+      "acc_eog_shuffled": 0.7039472489964862
+    },
+    {
+      "record": "SC4312E",
+      "subject": "31",
+      "n_N2": 9972,
+      "n_REM": 5695,
+      "acc_eog_blocked": 0.6787239476856533,
+      "acc_noeog_blocked": 0.5446257950707988,
+      "acc_eog_shuffled": 0.6818713204699234
+    },
+    {
+      "record": "SC4321E",
+      "subject": "32",
+      "n_N2": 12706,
+      "n_REM": 8570,
+      "acc_eog_blocked": 0.7411103107142024,
+      "acc_noeog_blocked": 0.6609425053186497,
+      "acc_eog_shuffled": 0.7429203138347708
+    },
+    {
+      "record": "SC4322E",
+      "subject": "32",
+      "n_N2": 14217,
+      "n_REM": 7214,
+      "acc_eog_blocked": 0.7044109551194085,
+      "acc_noeog_blocked": 0.6470878947699621,
+      "acc_eog_shuffled": 0.7058932032524738
+    },
+    {
+      "record": "SC4331F",
+      "subject": "33",
+      "n_N2": 13563,
+      "n_REM": 5031,
+      "acc_eog_blocked": 0.7040239038202032,
+      "acc_noeog_blocked": 0.5458121161736846,
+      "acc_eog_shuffled": 0.7101391413053271
+    },
+    {
+      "record": "SC4332F",
+      "subject": "33",
+      "n_N2": 19413,
+      "n_REM": 4131,
+      "acc_eog_blocked": 0.7568195155257796,
+      "acc_noeog_blocked": 0.6137232344473702,
+      "acc_eog_shuffled": 0.7609556159557523
+    },
+    {
+      "record": "SC4341F",
+      "subject": "34",
+      "n_N2": 16818,
+      "n_REM": 5152,
+      "acc_eog_blocked": 0.6329770482158645,
+      "acc_noeog_blocked": 0.5436399180226155,
+      "acc_eog_shuffled": 0.6438391116734584
+    },
+    {
+      "record": "SC4342F",
+      "subject": "34",
+      "n_N2": 17859,
+      "n_REM": 4962,
+      "acc_eog_blocked": 0.7421906743222284,
+      "acc_noeog_blocked": 0.6198658265779778,
+      "acc_eog_shuffled": 0.7423307782520243
+    },
+    {
+      "record": "SC4351F",
+      "subject": "35",
+      "n_N2": 12509,
+      "n_REM": 713,
+      "acc_eog_blocked": 0.7253518560605509,
+      "acc_noeog_blocked": 0.640387728689481,
+      "acc_eog_shuffled": 0.7401112713572735
+    },
+    {
+      "record": "SC4352F",
+      "subject": "35",
+      "n_N2": 14884,
+      "n_REM": 2156,
+      "acc_eog_blocked": 0.6264643858080722,
+      "acc_noeog_blocked": 0.5787668295922606,
+      "acc_eog_shuffled": 0.6394952755234169
+    },
+    {
+      "record": "SC4362F",
+      "subject": "36",
+      "n_N2": 14933,
+      "n_REM": 2035,
+      "acc_eog_blocked": 0.7678087266448614,
+      "acc_noeog_blocked": 0.6690200997707862,
+      "acc_eog_shuffled": 0.7692489680770669
+    },
+    {
+      "record": "SC4371F",
+      "subject": "37",
+      "n_N2": 14475,
+      "n_REM": 1349,
+      "acc_eog_blocked": 0.793405004154552,
+      "acc_noeog_blocked": 0.5443948373451325,
+      "acc_eog_shuffled": 0.8040928417519022
+    },
+    {
+      "record": "SC4372F",
+      "subject": "37",
+      "n_N2": 12976,
+      "n_REM": 3177,
+      "acc_eog_blocked": 0.8071734306612688,
+      "acc_noeog_blocked": 0.5604348693231678,
+      "acc_eog_shuffled": 0.8078892991278638
+    },
+    {
+      "record": "SC4381F",
+      "subject": "38",
+      "n_N2": 18335,
+      "n_REM": 4794,
+      "acc_eog_blocked": 0.7972108747879217,
+      "acc_noeog_blocked": 0.6332836279873977,
+      "acc_eog_shuffled": 0.8024199757013784
+    },
+    {
+      "record": "SC4382F",
+      "subject": "38",
+      "n_N2": 17457,
+      "n_REM": 5061,
+      "acc_eog_blocked": 0.7563308152653117,
+      "acc_noeog_blocked": 0.5945319142889129,
+      "acc_eog_shuffled": 0.7628288209161853
+    },
+    {
+      "record": "SC4401E",
+      "subject": "40",
+      "n_N2": 11292,
+      "n_REM": 3296,
+      "acc_eog_blocked": 0.7545818695424891,
+      "acc_noeog_blocked": 0.5943299277089373,
+      "acc_eog_shuffled": 0.7548975733314074
+    },
+    {
+      "record": "SC4402E",
+      "subject": "40",
+      "n_N2": 11202,
+      "n_REM": 7611,
+      "acc_eog_blocked": 0.6593035465751407,
+      "acc_noeog_blocked": 0.5381592565717437,
+      "acc_eog_shuffled": 0.6609474897389023
+    },
+    {
+      "record": "SC4411E",
+      "subject": "41",
+      "n_N2": 14992,
+      "n_REM": 6114,
+      "acc_eog_blocked": 0.6503202209426098,
+      "acc_noeog_blocked": 0.5328356783196813,
+      "acc_eog_shuffled": 0.6513198490508862
+    },
+    {
+      "record": "SC4412E",
+      "subject": "41",
+      "n_N2": 10630,
+      "n_REM": 2991,
+      "acc_eog_blocked": 0.6354620304941164,
+      "acc_noeog_blocked": 0.5569896424928595,
+      "acc_eog_shuffled": 0.6394168708697432
+    },
+    {
+      "record": "SC4421E",
+      "subject": "42",
+      "n_N2": 8451,
+      "n_REM": 4736,
+      "acc_eog_blocked": 0.5455724544432612,
+      "acc_noeog_blocked": 0.5364702262166319,
+      "acc_eog_shuffled": 0.5460468455676123
+    },
+    {
+      "record": "SC4422E",
+      "subject": "42",
+      "n_N2": 8903,
+      "n_REM": 2637,
+      "acc_eog_blocked": 0.5574434075665973,
+      "acc_noeog_blocked": 0.4839689220325191,
+      "acc_eog_shuffled": 0.563032742688218
+    },
+    {
+      "record": "SC4431E",
+      "subject": "43",
+      "n_N2": 9891,
+      "n_REM": 2425,
+      "acc_eog_blocked": 0.5813172654094579,
+      "acc_noeog_blocked": 0.47183800330822456,
+      "acc_eog_shuffled": 0.593409337031374
+    },
+    {
+      "record": "SC4432E",
+      "subject": "43",
+      "n_N2": 12867,
+      "n_REM": 5907,
+      "acc_eog_blocked": 0.5906569902976196,
+      "acc_noeog_blocked": 0.4553457466932369,
+      "acc_eog_shuffled": 0.5941181536793803
+    },
+    {
+      "record": "SC4441E",
+      "subject": "44",
+      "n_N2": 12117,
+      "n_REM": 2998,
+      "acc_eog_blocked": 0.6664555551132738,
+      "acc_noeog_blocked": 0.6554966660120529,
+      "acc_eog_shuffled": 0.6752122250574135
+    },
+    {
+      "record": "SC4442E",
+      "subject": "44",
+      "n_N2": 15858,
+      "n_REM": 2877,
+      "acc_eog_blocked": 0.6458078283662184,
+      "acc_noeog_blocked": 0.629029653292891,
+      "acc_eog_shuffled": 0.6496012380997095
+    },
+    {
+      "record": "SC4451F",
+      "subject": "45",
+      "n_N2": 7708,
+      "n_REM": 4158,
+      "acc_eog_blocked": 0.6447066046832524,
+      "acc_noeog_blocked": 0.5558988331432545,
+      "acc_eog_shuffled": 0.650994182065796
+    },
+    {
+      "record": "SC4452F",
+      "subject": "45",
+      "n_N2": 10687,
+      "n_REM": 5624,
+      "acc_eog_blocked": 0.6916782710571772,
+      "acc_noeog_blocked": 0.5201641619728892,
+      "acc_eog_shuffled": 0.6962727312174255
+    },
+    {
+      "record": "SC4461F",
+      "subject": "46",
+      "n_N2": 14494,
+      "n_REM": 5270,
+      "acc_eog_blocked": 0.6359100500658652,
+      "acc_noeog_blocked": 0.5596402123079655,
+      "acc_eog_shuffled": 0.6388250690137043
+    },
+    {
+      "record": "SC4462F",
+      "subject": "46",
+      "n_N2": 14119,
+      "n_REM": 5570,
+      "acc_eog_blocked": 0.5873365060743618,
+      "acc_noeog_blocked": 0.518208176129979,
+      "acc_eog_shuffled": 0.5904742809992978
+    },
+    {
+      "record": "SC4471F",
+      "subject": "47",
+      "n_N2": 10390,
+      "n_REM": 3590,
+      "acc_eog_blocked": 0.6301678815874487,
+      "acc_noeog_blocked": 0.6039704987386093,
+      "acc_eog_shuffled": 0.6347645180575924
+    },
+    {
+      "record": "SC4472F",
+      "subject": "47",
+      "n_N2": 8910,
+      "n_REM": 3591,
+      "acc_eog_blocked": 0.6185256913327088,
+      "acc_noeog_blocked": 0.5958768976312836,
+      "acc_eog_shuffled": 0.6287077120410454
+    },
+    {
+      "record": "SC4481F",
+      "subject": "48",
+      "n_N2": 14080,
+      "n_REM": 7069,
+      "acc_eog_blocked": 0.6691258407386926,
+      "acc_noeog_blocked": 0.6323594224221634,
+      "acc_eog_shuffled": 0.6718156720604689
+    },
+    {
+      "record": "SC4482F",
+      "subject": "48",
+      "n_N2": 15538,
+      "n_REM": 4781,
+      "acc_eog_blocked": 0.6679302718969887,
+      "acc_noeog_blocked": 0.6757812162416508,
+      "acc_eog_shuffled": 0.6695955054316372
+    },
+    {
+      "record": "SC4491G",
+      "subject": "49",
+      "n_N2": 15319,
+      "n_REM": 6467,
+      "acc_eog_blocked": 0.6622690513714256,
+      "acc_noeog_blocked": 0.4852626943321027,
+      "acc_eog_shuffled": 0.6636588799490225
+    },
+    {
+      "record": "SC4492G",
+      "subject": "49",
+      "n_N2": 12433,
+      "n_REM": 3982,
+      "acc_eog_blocked": 0.7127068591416946,
+      "acc_noeog_blocked": 0.4911414483489868,
+      "acc_eog_shuffled": 0.7170640257091925
+    },
+    {
+      "record": "SC4501E",
+      "subject": "50",
+      "n_N2": 12036,
+      "n_REM": 5781,
+      "acc_eog_blocked": 0.5953810640384676,
+      "acc_noeog_blocked": 0.6329779904362333,
+      "acc_eog_shuffled": 0.6486802350257652
+    },
+    {
+      "record": "SC4502E",
+      "subject": "50",
+      "n_N2": 14739,
+      "n_REM": 5717,
+      "acc_eog_blocked": 0.6677304864421708,
+      "acc_noeog_blocked": 0.5405636763137278,
+      "acc_eog_shuffled": 0.6690535069998749
+    },
+    {
+      "record": "SC4511E",
+      "subject": "51",
+      "n_N2": 11918,
+      "n_REM": 3774,
+      "acc_eog_blocked": 0.694136126986092,
+      "acc_noeog_blocked": 0.6222877616370406,
+      "acc_eog_shuffled": 0.6969801504415485
+    },
+    {
+      "record": "SC4512E",
+      "subject": "51",
+      "n_N2": 13029,
+      "n_REM": 3349,
+      "acc_eog_blocked": 0.6927583919932752,
+      "acc_noeog_blocked": 0.6163661231997775,
+      "acc_eog_shuffled": 0.6952107732386772
+    },
+    {
+      "record": "SC4522E",
+      "subject": "52",
+      "n_N2": 15881,
+      "n_REM": 2515,
+      "acc_eog_blocked": 0.7262584933694852,
+      "acc_noeog_blocked": 0.6616756109649014,
+      "acc_eog_shuffled": 0.7326238776646838
+    },
+    {
+      "record": "SC4531E",
+      "subject": "53",
+      "n_N2": 13870,
+      "n_REM": 5390,
+      "acc_eog_blocked": 0.7470371579188142,
+      "acc_noeog_blocked": 0.6325288626297999,
+      "acc_eog_shuffled": 0.7479648017036008
+    },
+    {
+      "record": "SC4532E",
+      "subject": "53",
+      "n_N2": 16253,
+      "n_REM": 5086,
+      "acc_eog_blocked": 0.7554079794918045,
+      "acc_noeog_blocked": 0.6777866702681272,
+      "acc_eog_shuffled": 0.7566077579942349
+    },
+    {
+      "record": "SC4541F",
+      "subject": "54",
+      "n_N2": 16650,
+      "n_REM": 4041,
+      "acc_eog_blocked": 0.7650447106349111,
+      "acc_noeog_blocked": 0.624319241290288,
+      "acc_eog_shuffled": 0.7691770835423397
+    },
+    {
+      "record": "SC4542F",
+      "subject": "54",
+      "n_N2": 13754,
+      "n_REM": 3585,
+      "acc_eog_blocked": 0.7287214126525687,
+      "acc_noeog_blocked": 0.616850470176395,
+      "acc_eog_shuffled": 0.7293090038571763
+    },
+    {
+      "record": "SC4551F",
+      "subject": "55",
+      "n_N2": 14578,
+      "n_REM": 3203,
+      "acc_eog_blocked": 0.7655657657686212,
+      "acc_noeog_blocked": 0.6272447797366536,
+      "acc_eog_shuffled": 0.7725173790331613
+    },
+    {
+      "record": "SC4552F",
+      "subject": "55",
+      "n_N2": 11828,
+      "n_REM": 7340,
+      "acc_eog_blocked": 0.7799966412309405,
+      "acc_noeog_blocked": 0.6419603785042466,
+      "acc_eog_shuffled": 0.7825849436841781
+    },
+    {
+      "record": "SC4561F",
+      "subject": "56",
+      "n_N2": 8117,
+      "n_REM": 3380,
+      "acc_eog_blocked": 0.7016201660187218,
+      "acc_noeog_blocked": 0.5812791547872717,
+      "acc_eog_shuffled": 0.7035801112866342
+    },
+    {
+      "record": "SC4562F",
+      "subject": "56",
+      "n_N2": 10009,
+      "n_REM": 4093,
+      "acc_eog_blocked": 0.666628961371853,
+      "acc_noeog_blocked": 0.5661310879333936,
+      "acc_eog_shuffled": 0.6715035871575831
+    },
+    {
+      "record": "SC4571F",
+      "subject": "57",
+      "n_N2": 15331,
+      "n_REM": 7486,
+      "acc_eog_blocked": 0.6609506662779632,
+      "acc_noeog_blocked": 0.5992610030755473,
+      "acc_eog_shuffled": 0.6825932661325254
+    },
+    {
+      "record": "SC4572F",
+      "subject": "57",
+      "n_N2": 17022,
+      "n_REM": 6533,
+      "acc_eog_blocked": 0.6430401168381998,
+      "acc_noeog_blocked": 0.6565031013160358,
+      "acc_eog_shuffled": 0.6506648917061313
+    },
+    {
+      "record": "SC4581G",
+      "subject": "58",
+      "n_N2": 17288,
+      "n_REM": 4821,
+      "acc_eog_blocked": 0.7184066969080303,
+      "acc_noeog_blocked": 0.6144704087498576,
+      "acc_eog_shuffled": 0.7238539410094718
+    },
+    {
+      "record": "SC4582G",
+      "subject": "58",
+      "n_N2": 16241,
+      "n_REM": 2562,
+      "acc_eog_blocked": 0.6842520623083578,
+      "acc_noeog_blocked": 0.6225580121934824,
+      "acc_eog_shuffled": 0.6863554310581719
+    },
+    {
+      "record": "SC4591G",
+      "subject": "59",
+      "n_N2": 10837,
+      "n_REM": 7726,
+      "acc_eog_blocked": 0.6888150336149792,
+      "acc_noeog_blocked": 0.592817631974866,
+      "acc_eog_shuffled": 0.706272626752993
+    },
+    {
+      "record": "SC4592G",
+      "subject": "59",
+      "n_N2": 8249,
+      "n_REM": 4631,
+      "acc_eog_blocked": 0.6887076789556872,
+      "acc_noeog_blocked": 0.5899911989489104,
+      "acc_eog_shuffled": 0.6915072697216016
+    },
+    {
+      "record": "SC4601E",
+      "subject": "60",
+      "n_N2": 7502,
+      "n_REM": 5093,
+      "acc_eog_blocked": 0.5974359321315612,
+      "acc_noeog_blocked": 0.5959230166412067,
+      "acc_eog_shuffled": 0.5982177250933229
+    },
+    {
+      "record": "SC4602E",
+      "subject": "60",
+      "n_N2": 7850,
+      "n_REM": 7458,
+      "acc_eog_blocked": 0.5923245076889179,
+      "acc_noeog_blocked": 0.5889254474740073,
+      "acc_eog_shuffled": 0.6045929562236423
+    },
+    {
+      "record": "SC4611E",
+      "subject": "61",
+      "n_N2": 8201,
+      "n_REM": 11935,
+      "acc_eog_blocked": 0.5465251690774935,
+      "acc_noeog_blocked": 0.5421542694554247,
+      "acc_eog_shuffled": 0.5780930697703239
+    },
+    {
+      "record": "SC4612E",
+      "subject": "61",
+      "n_N2": 14315,
+      "n_REM": 6414,
+      "acc_eog_blocked": 0.5962733949192742,
+      "acc_noeog_blocked": 0.5192662891088858,
+      "acc_eog_shuffled": 0.5995611405412169
+    },
+    {
+      "record": "SC4621E",
+      "subject": "62",
+      "n_N2": 22290,
+      "n_REM": 2332,
+      "acc_eog_blocked": 0.6430454010636342,
+      "acc_noeog_blocked": 0.5526536217196214,
+      "acc_eog_shuffled": 0.6459891712780308
+    },
+    {
+      "record": "SC4622E",
+      "subject": "62",
+      "n_N2": 12884,
+      "n_REM": 3434,
+      "acc_eog_blocked": 0.6447325917189122,
+      "acc_noeog_blocked": 0.5456155793273504,
+      "acc_eog_shuffled": 0.6481967041783345
+    },
+    {
+      "record": "SC4631E",
+      "subject": "63",
+      "n_N2": 14380,
+      "n_REM": 3594,
+      "acc_eog_blocked": 0.6074718681963371,
+      "acc_noeog_blocked": 0.550637749672418,
+      "acc_eog_shuffled": 0.6086538335024454
+    },
+    {
+      "record": "SC4632E",
+      "subject": "63",
+      "n_N2": 16686,
+      "n_REM": 4197,
+      "acc_eog_blocked": 0.6405199918059311,
+      "acc_noeog_blocked": 0.6107703555655283,
+      "acc_eog_shuffled": 0.6486363095435457
+    },
+    {
+      "record": "SC4641E",
+      "subject": "64",
+      "n_N2": 11436,
+      "n_REM": 2334,
+      "acc_eog_blocked": 0.7806808607823937,
+      "acc_noeog_blocked": 0.6167397682508939,
+      "acc_eog_shuffled": 0.7818438098783349
+    },
+    {
+      "record": "SC4642E",
+      "subject": "64",
+      "n_N2": 15512,
+      "n_REM": 3807,
+      "acc_eog_blocked": 0.7985135058338966,
+      "acc_noeog_blocked": 0.6507014050012104,
+      "acc_eog_shuffled": 0.8011830711266792
+    },
+    {
+      "record": "SC4651E",
+      "subject": "65",
+      "n_N2": 24528,
+      "n_REM": 4758,
+      "acc_eog_blocked": 0.6685368046318529,
+      "acc_noeog_blocked": 0.6490056349631355,
+      "acc_eog_shuffled": 0.678375625889942
+    },
+    {
+      "record": "SC4652E",
+      "subject": "65",
+      "n_N2": 13765,
+      "n_REM": 6306,
+      "acc_eog_blocked": 0.6785897205931333,
+      "acc_noeog_blocked": 0.6547557149833605,
+      "acc_eog_shuffled": 0.6833294682190256
+    },
+    {
+      "record": "SC4661E",
+      "subject": "66",
+      "n_N2": 12610,
+      "n_REM": 3294,
+      "acc_eog_blocked": 0.7391627629501551,
+      "acc_noeog_blocked": 0.588538120158874,
+      "acc_eog_shuffled": 0.7839918492614115
+    },
+    {
+      "record": "SC4662E",
+      "subject": "66",
+      "n_N2": 12375,
+      "n_REM": 7486,
+      "acc_eog_blocked": 0.7050656768054577,
+      "acc_noeog_blocked": 0.5916583359645075,
+      "acc_eog_shuffled": 0.7193417638851782
+    },
+    {
+      "record": "SC4671G",
+      "subject": "67",
+      "n_N2": 15148,
+      "n_REM": 4461,
+      "acc_eog_blocked": 0.707807667330401,
+      "acc_noeog_blocked": 0.5540084896198945,
+      "acc_eog_shuffled": 0.7100707007603437
+    },
+    {
+      "record": "SC4672G",
+      "subject": "67",
+      "n_N2": 10141,
+      "n_REM": 2845,
+      "acc_eog_blocked": 0.70790748512754,
+      "acc_noeog_blocked": 0.476577099453072,
+      "acc_eog_shuffled": 0.7155632124825548
+    },
+    {
+      "record": "SC4701E",
+      "subject": "70",
+      "n_N2": 20903,
+      "n_REM": 3146,
+      "acc_eog_blocked": 0.6928864714284815,
+      "acc_noeog_blocked": 0.6439716522468889,
+      "acc_eog_shuffled": 0.6961672082098467
+    },
+    {
+      "record": "SC4702E",
+      "subject": "70",
+      "n_N2": 13280,
+      "n_REM": 2935,
+      "acc_eog_blocked": 0.7615208277744709,
+      "acc_noeog_blocked": 0.7195705522259396,
+      "acc_eog_shuffled": 0.7700319805627963
+    },
+    {
+      "record": "SC4711E",
+      "subject": "71",
+      "n_N2": 18116,
+      "n_REM": 3529,
+      "acc_eog_blocked": 0.7442579201031907,
+      "acc_noeog_blocked": 0.4806204901243778,
+      "acc_eog_shuffled": 0.7481863440298255
+    },
+    {
+      "record": "SC4712E",
+      "subject": "71",
+      "n_N2": 13349,
+      "n_REM": 4033,
+      "acc_eog_blocked": 0.7447279325295133,
+      "acc_noeog_blocked": 0.5481665539395871,
+      "acc_eog_shuffled": 0.7465580193458652
+    },
+    {
+      "record": "SC4721E",
+      "subject": "72",
+      "n_N2": 10218,
+      "n_REM": 5216,
+      "acc_eog_blocked": 0.666749710603326,
+      "acc_noeog_blocked": 0.590666510710679,
+      "acc_eog_shuffled": 0.6680581122931144
+    },
+    {
+      "record": "SC4722E",
+      "subject": "72",
+      "n_N2": 13280,
+      "n_REM": 4073,
+      "acc_eog_blocked": 0.646058380341893,
+      "acc_noeog_blocked": 0.6169831301636697,
+      "acc_eog_shuffled": 0.6494108646715514
+    },
+    {
+      "record": "SC4731E",
+      "subject": "73",
+      "n_N2": 14070,
+      "n_REM": 4043,
+      "acc_eog_blocked": 0.7233019999469105,
+      "acc_noeog_blocked": 0.5608794390648785,
+      "acc_eog_shuffled": 0.7261250371582952
+    },
+    {
+      "record": "SC4732E",
+      "subject": "73",
+      "n_N2": 10857,
+      "n_REM": 4072,
+      "acc_eog_blocked": 0.7037690978433151,
+      "acc_noeog_blocked": 0.6156365919120381,
+      "acc_eog_shuffled": 0.7085428122296408
+    },
+    {
+      "record": "SC4741E",
+      "subject": "74",
+      "n_N2": 18275,
+      "n_REM": 6381,
+      "acc_eog_blocked": 0.6502388439002502,
+      "acc_noeog_blocked": 0.5595549544207313,
+      "acc_eog_shuffled": 0.6544548656868855
+    },
+    {
+      "record": "SC4742E",
+      "subject": "74",
+      "n_N2": 10182,
+      "n_REM": 6232,
+      "acc_eog_blocked": 0.6986497541913049,
+      "acc_noeog_blocked": 0.5666396928910518,
+      "acc_eog_shuffled": 0.699360061514581
+    },
+    {
+      "record": "SC4751E",
+      "subject": "75",
+      "n_N2": 13996,
+      "n_REM": 1408,
+      "acc_eog_blocked": 0.7469434245823482,
+      "acc_noeog_blocked": 0.6030328876432227,
+      "acc_eog_shuffled": 0.7468698443061654
+    },
+    {
+      "record": "SC4752E",
+      "subject": "75",
+      "n_N2": 13036,
+      "n_REM": 2153,
+      "acc_eog_blocked": 0.6940376052482197,
+      "acc_noeog_blocked": 0.6358321099297426,
+      "acc_eog_shuffled": 0.6953542991525701
+    },
+    {
+      "record": "SC4761E",
+      "subject": "76",
+      "n_N2": 12711,
+      "n_REM": 1042,
+      "acc_eog_blocked": 0.6657385709265977,
+      "acc_noeog_blocked": 0.47476674351155945,
+      "acc_eog_shuffled": 0.6706078930833708
+    },
+    {
+      "record": "SC4762E",
+      "subject": "76",
+      "n_N2": 7986,
+      "n_REM": 11763,
+      "acc_eog_blocked": 0.7751350504801409,
+      "acc_noeog_blocked": 0.7623246636727765,
+      "acc_eog_shuffled": 0.7949037058157054
+    },
+    {
+      "record": "SC4771G",
+      "subject": "77",
+      "n_N2": 13810,
+      "n_REM": 3258,
+      "acc_eog_blocked": 0.6753816928774222,
+      "acc_noeog_blocked": 0.6245613204548799,
+      "acc_eog_shuffled": 0.6807530863703627
+    },
+    {
+      "record": "SC4772G",
+      "subject": "77",
+      "n_N2": 7165,
+      "n_REM": 3984,
+      "acc_eog_blocked": 0.690941242289465,
+      "acc_noeog_blocked": 0.6018355347418985,
+      "acc_eog_shuffled": 0.6937185237810979
+    },
+    {
+      "record": "SC4801G",
+      "subject": "80",
+      "n_N2": 17822,
+      "n_REM": 4245,
+      "acc_eog_blocked": 0.677899061772886,
+      "acc_noeog_blocked": 0.5579168769981491,
+      "acc_eog_shuffled": 0.6818986710486992
+    },
+    {
+      "record": "SC4802G",
+      "subject": "80",
+      "n_N2": 16192,
+      "n_REM": 4067,
+      "acc_eog_blocked": 0.6985499825793454,
+      "acc_noeog_blocked": 0.547619887876099,
+      "acc_eog_shuffled": 0.7001528285846459
+    },
+    {
+      "record": "SC4811G",
+      "subject": "81",
+      "n_N2": 15782,
+      "n_REM": 5860,
+      "acc_eog_blocked": 0.6673129581676625,
+      "acc_noeog_blocked": 0.5989445789323216,
+      "acc_eog_shuffled": 0.6693114223098593
+    },
+    {
+      "record": "SC4812G",
+      "subject": "81",
+      "n_N2": 10375,
+      "n_REM": 4128,
+      "acc_eog_blocked": 0.6583241687680956,
+      "acc_noeog_blocked": 0.5772339123937611,
+      "acc_eog_shuffled": 0.6575974245820491
+    },
+    {
+      "record": "SC4821G",
+      "subject": "82",
+      "n_N2": 12176,
+      "n_REM": 6834,
+      "acc_eog_blocked": 0.7181655685397701,
+      "acc_noeog_blocked": 0.5043029158336015,
+      "acc_eog_shuffled": 0.7180655093935902
+    },
+    {
+      "record": "SC4822G",
+      "subject": "82",
+      "n_N2": 11964,
+      "n_REM": 5364,
+      "acc_eog_blocked": 0.677800085566169,
+      "acc_noeog_blocked": 0.5358956249808335,
+      "acc_eog_shuffled": 0.6800632135032989
+    }
+  ],
+  "per_subject_eeg": [
+    {
+      "subject": "S001",
+      "acc_open_vs_closed": 0.975103734439834,
+      "n_per_class_oc": 241,
+      "acc_same_state_T0_R03_vs_R07": 0.5461538461538462,
+      "n_per_class_ss": 195
+    },
+    {
+      "subject": "S002",
+      "acc_open_vs_closed": 0.7593360995850622,
+      "n_per_class_oc": 241,
+      "acc_same_state_T0_R03_vs_R07": 0.48205128205128206,
+      "n_per_class_ss": 195
+    },
+    {
+      "subject": "S003",
+      "acc_open_vs_closed": 0.892116182572614,
+      "n_per_class_oc": 241,
+      "acc_same_state_T0_R03_vs_R07": 0.9333333333333333,
+      "n_per_class_ss": 195
+    },
+    {
+      "subject": "S004",
+      "acc_open_vs_closed": 0.995850622406639,
+      "n_per_class_oc": 241,
+      "acc_same_state_T0_R03_vs_R07": 0.5307692307692308,
+      "n_per_class_ss": 195
+    },
+    {
+      "subject": "S005",
+      "acc_open_vs_closed": 0.7012448132780082,
+      "n_per_class_oc": 241,
+      "acc_same_state_T0_R03_vs_R07": 0.6871794871794872,
+      "n_per_class_ss": 195
+    },
+    {
+      "subject": "S006",
+      "acc_open_vs_closed": 0.46887966804979253,
+      "n_per_class_oc": 241,
+      "acc_same_state_T0_R03_vs_R07": 0.6333333333333333,
+      "n_per_class_ss": 195
+    },
+    {
+      "subject": "S007",
+      "acc_open_vs_closed": 0.6991701244813278,
+      "n_per_class_oc": 241,
+      "acc_same_state_T0_R03_vs_R07": 0.6666666666666666,
+      "n_per_class_ss": 195
+    },
+    {
+      "subject": "S008",
+      "acc_open_vs_closed": 0.8008298755186722,
+      "n_per_class_oc": 241,
+      "acc_same_state_T0_R03_vs_R07": 0.5769230769230769,
+      "n_per_class_ss": 195
+    },
+    {
+      "subject": "S009",
+      "acc_open_vs_closed": 0.8485477178423236,
+      "n_per_class_oc": 241,
+      "acc_same_state_T0_R03_vs_R07": 0.6025641025641026,
+      "n_per_class_ss": 195
+    },
+    {
+      "subject": "S010",
+      "acc_open_vs_closed": 0.8817427385892116,
+      "n_per_class_oc": 241,
+      "acc_same_state_T0_R03_vs_R07": 0.7692307692307692,
+      "n_per_class_ss": 195
+    },
+    {
+      "subject": "S011",
+      "acc_open_vs_closed": 0.8589211618257262,
+      "n_per_class_oc": 241,
+      "acc_same_state_T0_R03_vs_R07": 0.7128205128205127,
+      "n_per_class_ss": 195
+    },
+    {
+      "subject": "S012",
+      "acc_open_vs_closed": 0.6763485477178424,
+      "n_per_class_oc": 241,
+      "acc_same_state_T0_R03_vs_R07": 0.5179487179487179,
+      "n_per_class_ss": 195
+    },
+    {
+      "subject": "S013",
+      "acc_open_vs_closed": 0.8257261410788381,
+      "n_per_class_oc": 241,
+      "acc_same_state_T0_R03_vs_R07": 0.6076923076923078,
+      "n_per_class_ss": 195
+    },
+    {
+      "subject": "S014",
+      "acc_open_vs_closed": 0.8945147679324894,
+      "n_per_class_oc": 237,
+      "acc_same_state_T0_R03_vs_R07": 0.6974358974358974,
+      "n_per_class_ss": 195
+    },
+    {
+      "subject": "S015",
+      "acc_open_vs_closed": 0.8568464730290456,
+      "n_per_class_oc": 241,
+      "acc_same_state_T0_R03_vs_R07": 0.4358974358974359,
+      "n_per_class_ss": 195
+    }
+  ]
+}

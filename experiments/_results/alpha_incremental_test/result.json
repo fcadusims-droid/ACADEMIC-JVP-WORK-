@@ -1,0 +1,269 @@
+{
+  "experiment": "alpha_incremental_test",
+  "plan_id": "E3.2",
+  "fills": "R3.2",
+  "question": "Do tangent-space coordinates of the trace-normalized covariance improve held-out eyes-open/closed classification beyond per-channel relative alpha power?",
+  "params": {
+    "epoch_s": 2.0,
+    "subjects": 15,
+    "model": "StandardScaler + LogisticRegression(C=1)",
+    "tangent_space": "pyriemann TangentSpace(metric='riemann') fitted on training folds"
+  },
+  "n_B_better": 11,
+  "wilcoxon_p_two_sided": 0.76153564453125,
+  "wilcoxon_p_one_sided": 0.380767822265625,
+  "median_logloss_A": 0.5176804697393812,
+  "median_logloss_B": 0.3733535652951997,
+  "criterion_met": false,
+  "control_same_state": {
+    "median_balacc_A": 0.5333333333333333,
+    "median_balacc_B": 0.55,
+    "median_logloss_A": 0.6947508640218795,
+    "median_logloss_B": 0.7210484587641895,
+    "per_subject": [
+      {
+        "subject": "S001",
+        "n_test": 60,
+        "logloss_A": 0.6999807358157891,
+        "balacc_A": 0.5333333333333333,
+        "logloss_B": 0.6752868761022631,
+        "balacc_B": 0.6166666666666667
+      },
+      {
+        "subject": "S002",
+        "n_test": 60,
+        "logloss_A": 0.7173070578531516,
+        "balacc_A": 0.48333333333333334,
+        "logloss_B": 1.1253721197043334,
+        "balacc_B": 0.5
+      },
+      {
+        "subject": "S003",
+        "n_test": 60,
+        "logloss_A": 0.7071887170121782,
+        "balacc_A": 0.45,
+        "logloss_B": 0.7210484587641895,
+        "balacc_B": 0.5333333333333333
+      },
+      {
+        "subject": "S004",
+        "n_test": 60,
+        "logloss_A": 0.6947508640218795,
+        "balacc_A": 0.5666666666666667,
+        "logloss_B": 0.7104886807292331,
+        "balacc_B": 0.5333333333333333
+      },
+      {
+        "subject": "S005",
+        "n_test": 60,
+        "logloss_A": 0.6907986841199959,
+        "balacc_A": 0.5666666666666667,
+        "logloss_B": 0.739587211331995,
+        "balacc_B": 0.5666666666666667
+      },
+      {
+        "subject": "S006",
+        "n_test": 60,
+        "logloss_A": 0.6897572075152328,
+        "balacc_A": 0.55,
+        "logloss_B": 0.9674997213394817,
+        "balacc_B": 0.5
+      },
+      {
+        "subject": "S007",
+        "n_test": 60,
+        "logloss_A": 0.6574172887447585,
+        "balacc_A": 0.6000000000000001,
+        "logloss_B": 0.9292085767289561,
+        "balacc_B": 0.5333333333333333
+      },
+      {
+        "subject": "S008",
+        "n_test": 60,
+        "logloss_A": 0.6965219579039409,
+        "balacc_A": 0.5,
+        "logloss_B": 0.7762133199445883,
+        "balacc_B": 0.4166666666666667
+      },
+      {
+        "subject": "S009",
+        "n_test": 60,
+        "logloss_A": 0.6851533363509087,
+        "balacc_A": 0.6166666666666667,
+        "logloss_B": 0.623675358446962,
+        "balacc_B": 0.6833333333333333
+      },
+      {
+        "subject": "S010",
+        "n_test": 60,
+        "logloss_A": 0.7214320597444174,
+        "balacc_A": 0.5,
+        "logloss_B": 0.6729619505832745,
+        "balacc_B": 0.6166666666666667
+      },
+      {
+        "subject": "S011",
+        "n_test": 60,
+        "logloss_A": 0.6863117083455035,
+        "balacc_A": 0.5666666666666667,
+        "logloss_B": 0.6101524448769303,
+        "balacc_B": 0.7
+      },
+      {
+        "subject": "S012",
+        "n_test": 60,
+        "logloss_A": 0.6968184961880471,
+        "balacc_A": 0.5166666666666667,
+        "logloss_B": 0.7566824883234893,
+        "balacc_B": 0.55
+      },
+      {
+        "subject": "S013",
+        "n_test": 60,
+        "logloss_A": 0.6890754050604578,
+        "balacc_A": 0.5666666666666667,
+        "logloss_B": 0.673188989105092,
+        "balacc_B": 0.5666666666666667
+      },
+      {
+        "subject": "S014",
+        "n_test": 60,
+        "logloss_A": 0.6877234254261921,
+        "balacc_A": 0.5,
+        "logloss_B": 0.676228377521488,
+        "balacc_B": 0.6166666666666667
+      },
+      {
+        "subject": "S015",
+        "n_test": 60,
+        "logloss_A": 0.7099494964026686,
+        "balacc_A": 0.43333333333333335,
+        "logloss_B": 0.7521978497444525,
+        "balacc_B": 0.55
+      }
+    ]
+  },
+  "verdict": "NO EVIDENCE THAT THE GEOMETRY ADDS INFORMATION BEYOND ALPHA POWER (pre-registered bar: B better in >= 11/15 and two-sided paired Wilcoxon p < 0.05). Held-out log-loss lower with the geometry in 11/15 subjects; median log-loss A 0.518, B 0.373; Wilcoxon p = 0.762 two-sided (0.381 one-sided). Control (two same-state recordings): median held-out balanced accuracy A 0.53, B 0.55; median log-loss A 0.695, B 0.721 (chance log-loss ln 2 = 0.693).",
+  "per_subject": [
+    {
+      "subject": "S001",
+      "n_test": 60,
+      "logloss_A": 0.31240769627134685,
+      "balacc_A": 0.9333333333333333,
+      "logloss_B": 0.17511512065678345,
+      "balacc_B": 0.9333333333333333
+    },
+    {
+      "subject": "S002",
+      "n_test": 60,
+      "logloss_A": 0.6082555600940788,
+      "balacc_A": 0.75,
+      "logloss_B": 0.4920704844426603,
+      "balacc_B": 0.85
+    },
+    {
+      "subject": "S003",
+      "n_test": 60,
+      "logloss_A": 0.3543873499831654,
+      "balacc_A": 0.8833333333333333,
+      "logloss_B": 0.24506781545446463,
+      "balacc_B": 0.9
+    },
+    {
+      "subject": "S004",
+      "n_test": 60,
+      "logloss_A": 0.2242460611670817,
+      "balacc_A": 1.0,
+      "logloss_B": 0.12330019283831091,
+      "balacc_B": 0.9833333333333334
+    },
+    {
+      "subject": "S005",
+      "n_test": 60,
+      "logloss_A": 0.7596774698465539,
+      "balacc_A": 0.5166666666666667,
+      "logloss_B": 1.4307624761914253,
+      "balacc_B": 0.5
+    },
+    {
+      "subject": "S006",
+      "n_test": 60,
+      "logloss_A": 0.8757090001367327,
+      "balacc_A": 0.5166666666666667,
+      "logloss_B": 1.6286378426342352,
+      "balacc_B": 0.48333333333333334
+    },
+    {
+      "subject": "S007",
+      "n_test": 60,
+      "logloss_A": 1.004012938204034,
+      "balacc_A": 0.5666666666666667,
+      "logloss_B": 1.508599628166399,
+      "balacc_B": 0.5333333333333333
+    },
+    {
+      "subject": "S008",
+      "n_test": 60,
+      "logloss_A": 0.4743327043328964,
+      "balacc_A": 0.7666666666666666,
+      "logloss_B": 0.13092953816526495,
+      "balacc_B": 0.9833333333333334
+    },
+    {
+      "subject": "S009",
+      "n_test": 60,
+      "logloss_A": 0.5176804697393812,
+      "balacc_A": 0.75,
+      "logloss_B": 0.19280808364939414,
+      "balacc_B": 0.9666666666666667
+    },
+    {
+      "subject": "S010",
+      "n_test": 60,
+      "logloss_A": 0.4064835394140834,
+      "balacc_A": 0.8666666666666667,
+      "logloss_B": 0.27165411051501587,
+      "balacc_B": 0.8833333333333333
+    },
+    {
+      "subject": "S011",
+      "n_test": 60,
+      "logloss_A": 0.40645760626549127,
+      "balacc_A": 0.85,
+      "logloss_B": 0.36984156809874985,
+      "balacc_B": 0.8166666666666667
+    },
+    {
+      "subject": "S012",
+      "n_test": 60,
+      "logloss_A": 0.818424444876787,
+      "balacc_A": 0.5,
+      "logloss_B": 0.6442097970016005,
+      "balacc_B": 0.6166666666666667
+    },
+    {
+      "subject": "S013",
+      "n_test": 60,
+      "logloss_A": 0.6651624135102305,
+      "balacc_A": 0.5666666666666667,
+      "logloss_B": 1.110301957517121,
+      "balacc_B": 0.6166666666666667
+    },
+    {
+      "subject": "S014",
+      "n_test": 60,
+      "logloss_A": 0.4958396894783926,
+      "balacc_A": 0.75,
+      "logloss_B": 0.4555258958717207,
+      "balacc_B": 0.7166666666666667
+    },
+    {
+      "subject": "S015",
+      "n_test": 60,
+      "logloss_A": 0.5673080201050972,
+      "balacc_A": 0.6833333333333333,
+      "logloss_B": 0.3733535652951997,
+      "balacc_B": 0.8333333333333334
+    }
+  ]
+}

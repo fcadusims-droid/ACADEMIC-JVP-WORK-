@@ -1,0 +1,90 @@
+{
+  "experiment": "kac_recurrence_dimension",
+  "plan_id": "E1.2",
+  "fills": "R-A2",
+  "question": "Does the mean return time to a box of side 0.1 grow as 10^d (Kac's lemma) for an ergodic rotation of the d-torus, d = 1..5?",
+  "params": {
+    "alpha_primes": [
+      2,
+      3,
+      5,
+      7,
+      11
+    ],
+    "side": 0.1,
+    "n_points": 200,
+    "cap": 10000000,
+    "seed": 0
+  },
+  "rows": [
+    {
+      "d": 1,
+      "kac_expected": 10.0,
+      "mean": 10.215,
+      "sd": 3.0586848094923242,
+      "median": 12.0,
+      "min": 5,
+      "max": 12,
+      "n_distinct_return_times": 2,
+      "ratio_to_kac": 1.0215,
+      "within_15pct": true,
+      "n_capped": 0
+    },
+    {
+      "d": 2,
+      "kac_expected": 100.0,
+      "mean": 88.415,
+      "sd": 119.30099080491819,
+      "median": 41.0,
+      "min": 41,
+      "max": 582,
+      "n_distinct_return_times": 10,
+      "ratio_to_kac": 0.8841500000000001,
+      "within_15pct": true,
+      "n_capped": 0
+    },
+    {
+      "d": 3,
+      "kac_expected": 1000.0,
+      "mean": 964.835,
+      "sd": 651.6866619024112,
+      "median": 1224.0,
+      "min": 123,
+      "max": 4109,
+      "n_distinct_return_times": 13,
+      "ratio_to_kac": 0.964835,
+      "within_15pct": true,
+      "n_capped": 0
+    },
+    {
+      "d": 4,
+      "kac_expected": 10000.0,
+      "mean": 10363.46,
+      "sd": 14853.696061649414,
+      "median": 3986.0,
+      "min": 1101,
+      "max": 68192,
+      "n_distinct_return_times": 26,
+      "ratio_to_kac": 1.036346,
+      "within_15pct": true,
+      "n_capped": 0
+    },
+    {
+      "d": 5,
+      "kac_expected": 100000.0,
+      "mean": 101051.585,
+      "sd": 100060.94909178364,
+      "median": 75910.0,
+      "min": 3986,
+      "max": 504812,
+      "n_distinct_return_times": 44,
+      "ratio_to_kac": 1.01051585,
+      "within_15pct": true,
+      "n_capped": 0
+    }
+  ],
+  "slope_log10_mean_vs_d": 1.0059588341966874,
+  "intercept": -0.025823447199957262,
+  "prediction_met": true,
+  "verdict": "PREDICTION MET. Mean return time / Kac value (10^d) for d = 1..5: 1.022, 0.884, 0.965, 1.036, 1.011 (bar within +/-15% each: yes); slope of log10(mean) on d = 1.006 (bar 0.9-1.1). 0 of 1000 starts hit the cap."
+}

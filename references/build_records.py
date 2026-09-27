@@ -67,17 +67,30 @@ MANUAL = {
         "manual": "Pseudo-Dionysius: The Complete Works, trans. Luibheid, Paulist Press 1987, confirmed."},
     (1, "Wiener", 1948): {"manual": "1948 first edition confirmed.",
         "correction": "Publisher corrected from 'MIT Press' (a name the press took only in 1962) to the 1948 publishers: Technology Press and John Wiley & Sons (New York); Hermann (Paris)."},
-    (1, "Callard", 2018): {"manual": "Oxford University Press 2018, confirmed.",
-        "correction": "Paper 1 §7.8.1 (now §7.1) put the phrase 'is not a matter of decision-making at all' in quotation marks as Callard's. It is from L. A. Paul's endorsement of the book on the publisher's page, not from Callard's text. The sentence now paraphrases Callard's position without quotation marks."},
+    (1, "Callard", 2018): {"manual": "Oxford University Press 2018, confirmed. (A 2026-09 version of Paper 1 misattributed a quotation to this book; the 2026-09-27 text quotes nothing from it.)"},
     (1, "Nayebi", 2025): {"manual": "arXiv abstract confirms the undecidability-by-halting-reduction result the annotation describes.",
         "correction": "Added the venue given on arXiv: to appear in the AAAI 2026 Machine Ethics Workshop proceedings."},
     (1, "Wang", 2025): {"manual": "arXiv journal reference confirms publication in TMLR 2026, and the abstract confirms the capacity-bounded PAC-learnability result the annotation describes."},
     (1, "Adams", 2017): {"manual": "The sentence quoted in §7.5 (now §6.5; 'is only possible for a subsystem interacting with an external environment') was found verbatim in the full text (PMC5430523)."},
-    (1, "Dietrich", 2013): {"manual": "IJGT 42(3): 613-637 confirmed in Crossref. Full text read in the authors' accepted manuscript (LSE Research Online, eprint 46864); the two quotations in §7.4 were checked verbatim there."},
-    (1, "Bradley", 2009): {"manual": "PPE 8(2): 223-242 confirmed in Crossref. Full text read in the LSE working-paper version (CPNSS 2008, eprint 27007); the quotation in §7.4 was checked verbatim there, not in the published text, and the reference says so."},
+    (1, "Dietrich", 2013): {"manual": "IJGT 42(3): 613-637 confirmed in Crossref. Full text read in the authors' accepted manuscript (LSE Research Online, eprint 46864); the 2026-09-27 text paraphrases the model (stable weighing relation, changing salient properties) and quotes nothing."},
+    (1, "Bradley", 2009): {"manual": "PPE 8(2): 223-242 confirmed in Crossref. Full text read in the LSE working-paper version (CPNSS 2008, eprint 27007): three models (classical, Jeffrey, generalised conditioning) and the 'as ad hoc' point, as the 2026-09-27 text paraphrases them."},
     (1, "Bykvist", 2006): {"manual": "Utilitas 18(3): 264-283 confirmed; publisher abstract read (evaluation by the attitudes held while leading a life)."},
     (1, "Hansson", 1995): {"manual": "Theory and Decision 38(1): 1-28 confirmed; publisher abstract read (revision, contraction, addition, subtraction under rationality postulates)."},
     (1, "Carroll", 2022): {"url": "https://arxiv.org/abs/2204.11966", "manual": "arXiv:2204.11966 confirmed, with the arXiv comment 'Accepted to ICML 2022 (Spotlight)'; abstract read."},
+    (1, "Bykvist", 2021): {"url": "https://doi.org/10.1093/mind/fzaa094",
+        "manual": "Crossref: review of Pettigrew, Choosing for Changing Selves, Mind 130(520): 1327-1336, DOI 10.1093/mind/fzaa094. The automated title comparison fails only because the review has no title of its own.",
+        "correction": "The 2026-09-27 draft gave the end page as '[end page to be checked]' and no DOI; end page 1336 and the DOI were added from Crossref."},
+    (1, "Mele", 1995): {"url": "https://openlibrary.org/search?q=autonomous+agents+mele",
+        "manual": "Open Library: Alfred R. Mele, Autonomous Agents, Oxford University Press, first published 1995. The automated title+author query returned nothing; a keyword query found it."},
+    (2, "Amorim", 2023, "I-CARE"): {"url": "https://doi.org/10.13026/m33r-bj81",
+        "manual": "DataCite record for DOI 10.13026/m33r-bj81: dataset 'I-CARE: International Cardiac Arrest REsearch consortium Database', version 2.1, PhysioNet, 2023, twelve authors from Amorim to Westover as listed."},
+    (2, "Iyengar", 1996): {"url": "https://doi.org/10.1152/ajpregu.1996.271.4.R1078",
+        "manual": "Crossref and OpenAlex: Am J Physiol Regul Integr Comp Physiol 271(4): R1078-R1084.",
+        "correction": "The 2026-09-27 draft gave the journal as 'American Journal of Physiology' with pages 1078-1084; the section title, issue, R-prefixed pages and DOI were added."},
+    (2, "Pan", 1985): {"url": "https://doi.org/10.1109/TBME.1985.325532",
+        "manual": "Crossref: IEEE Trans Biomed Eng BME-32(3): 230-236. The automated volume check fails only on IEEE's 'BME-32' form of volume 32."},
+    (3, "Li", 2021): {"url": "https://doi.org/10.1109/TPAMI.2020.2973153",
+        "manual": "Crossref holds only the 2020 early-access record (pages 1-1). Semantic Scholar gives the issue: IEEE TPAMI 43: 316-333 (January 2021 issue), as the paper cites."},
     (2, "Hameroff", 2014): {"url": "https://doi.org/10.1016/j.plrev.2013.08.002",
         "manual": "Physics of Life Reviews 11(1): 39-78, confirmed; the automated pass matched a 2016 book chapter with a similar title instead."},
     (2, "Cao", 2022): {"url": "https://doi.org/10.1103/physrevd.105.026018",
@@ -107,7 +120,9 @@ def main():
         assert len(current) == len(auto), f"Paper{n}: reference count changed"
         out = []
         for i, (a, line) in enumerate(zip(auto, current)):
-            m = MANUAL.get((n, a["surname"], a["year"]), {})
+            m = next((v for k, v in MANUAL.items() if len(k) == 4 and k[:3] == (n, a["surname"], a["year"])
+                      and (a.get("title") or "").startswith(k[3])), None) \
+                or MANUAL.get((n, a["surname"], a["year"]), {})
             if a["auto_status"] != "MATCH" and not m:
                 raise SystemExit(f"Paper{n} #{i} {a['surname']} {a['year']}: automated non-match "
                                  f"with no manual review recorded")

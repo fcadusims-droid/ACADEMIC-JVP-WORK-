@@ -1,0 +1,363 @@
+{
+  "experiment": "audit_recheck",
+  "plan_id": "E2.4",
+  "fills": "R2.4",
+  "question": "Do CHB-MIT files carry an ECG channel, and does VitalDB carry raw EEG tracks?",
+  "chbmit": {
+    "n_files": 30,
+    "n_with_cardiac": 0,
+    "patients_with_cardiac": [],
+    "per_file": [
+      {
+        "file": "chb01/chb01_01.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_02.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_03.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_04.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_05.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_06.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_07.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_08.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_09.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_10.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_11.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_12.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_13.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_14.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_15.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_16.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_17.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_18.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_19.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_20.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_21.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_22.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_23.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_24.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_25.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_26.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_27.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_29.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_30.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "file": "chb01/chb01_31.edf",
+        "n_signals": 23,
+        "cardiac_labels": [],
+        "has_cardiac": false
+      }
+    ]
+  },
+  "tuh": {
+    "done": false,
+    "reason": "access requires an application"
+  },
+  "vitaldb": {
+    "done": true,
+    "n_cases_total": 6388,
+    "eeg_track_names": [
+      "BIS/EEG1_WAV",
+      "BIS/EEG2_WAV"
+    ],
+    "cases_per_eeg_track": {
+      "BIS/EEG1_WAV": 5871,
+      "BIS/EEG2_WAV": 5871
+    },
+    "cases_with_any_eeg_track": 5871
+  },
+  "verdict": "CHB-MIT: 0/30 of the first EDF files carry an ECG/EKG channel (patients none of chb01). TUH EEG: not checked (access requires an application). VitalDB: 5871 of 6388 cases have a track named EEG (BIS/EEG1_WAV, BIS/EEG2_WAV). None of these corpora has a recovery/non-recovery contrast; this only corrects Table 1's P1 column.",
+  "exploratory_not_preregistered": {
+    "why": "The pre-registered rule (first 30 files in RECORDS) covered one patient (chb01) only. Added after seeing that, labelled exploratory, and not used for the verdict.",
+    "rule": "first EDF file of each CHB-MIT patient",
+    "n_patients": 24,
+    "n_with_cardiac": 0,
+    "per_patient": [
+      {
+        "patient": "chb01",
+        "file": "chb01/chb01_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb02",
+        "file": "chb02/chb02_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb03",
+        "file": "chb03/chb03_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb04",
+        "file": "chb04/chb04_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb05",
+        "file": "chb05/chb05_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb06",
+        "file": "chb06/chb06_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb07",
+        "file": "chb07/chb07_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb08",
+        "file": "chb08/chb08_02.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb09",
+        "file": "chb09/chb09_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb10",
+        "file": "chb10/chb10_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb11",
+        "file": "chb11/chb11_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb12",
+        "file": "chb12/chb12_06.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb13",
+        "file": "chb13/chb13_02.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb14",
+        "file": "chb14/chb14_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb15",
+        "file": "chb15/chb15_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb16",
+        "file": "chb16/chb16_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb17",
+        "file": "chb17/chb17a_03.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb18",
+        "file": "chb18/chb18_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb19",
+        "file": "chb19/chb19_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb20",
+        "file": "chb20/chb20_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb21",
+        "file": "chb21/chb21_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb22",
+        "file": "chb22/chb22_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb23",
+        "file": "chb23/chb23_06.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      },
+      {
+        "patient": "chb24",
+        "file": "chb24/chb24_01.edf",
+        "cardiac_labels": [],
+        "has_cardiac": false
+      }
+    ]
+  }
+}

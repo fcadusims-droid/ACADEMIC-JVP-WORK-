@@ -21,38 +21,27 @@ its pre-registration, verdict, figures and raw results. The site is generated fr
 this repository and rebuilt on every push, so it never lags the work; see
 [`site/README.md`](site/README.md) for how it is built and gated.
 
-## The trilogy
+## The three papers (versions of 27 September 2026)
 
-- **`Paper1.md` — The Cybernetic Limits of Conversion.** A negative result about
-  formulation. The formal models that direct or evaluate value change (decision theories for
-  changing selves, preference-change models, value learning, corrigibility schemes) each hold
-  an evaluative point fixed. Used to direct change they are control, and control cannot
-  formulate agency-preserving *conversion*, the transformation of that point, without
-  collapsing into tautology, agency collapse or incommensurability. That top level is conceded
-  to be definitional; the case-by-case claim about the models is not. Its load-bearing formal
-  result is a *Meta-Optimization Collapse Theorem* (a trichotomy), and it defines the residual
-  admissibility profile **Class G**. It is addressed to the philosophy of action and is frozen at
-  journal length (`drafts/paper1_cut_map.md`); its formal statements are in an
-  appendix, and its theological applications are in a separate draft
-  (`drafts/theological_companion.md`).
+- **`Paper1.md` — The Cybernetic Limits of Conversion: Why Models That Direct Value Change Cannot
+  Tell Conversion from Manipulation.** Formal models used to direct or evaluate value change take
+  their reference standard from the agent's attitudes (before the change, after it, or a fixed rule
+  over both). Conversion and manipulation can share an attitudinal profile, so none of these models
+  can tell them apart; the one history-sensitive proposal penalizes conversion along with
+  manipulation. Two appendix computations are specified before they are run.
+- **`Paper2.md` — Does an Interoceptive Signal Mark the Transitions a Person Survives? Data
+  Requirements, and a Failed Estimability Gate on Public Post-Cardiac-Arrest Recordings.** What a
+  test would need, a bounded audit of public corpora (one, I-CARE, qualifies), and a pre-specified
+  heart-period gate that passed in 6 of 21 patients against a 60% bar. Simulation audits of the
+  planned statistics, and follow-up analyses specified before they are run.
+- **`Paper3.md` — Five Ways a Covariance-Geometry EEG Method Appeared Validated, and the Controls
+  That Overturned It.** The validation record of a trace-normalized SPD geometry read through a
+  geodesic CUSUM: five traps, the control that exposed each, the field's standard pipeline under the
+  same controls, and a survey of published studies.
 
-- **`Paper2.md` — The Conditional Biological Requirements Architecture (CBRA).** A
-  strict *eliminative* statistical protocol for whether a biological state
-  transition preserves a hidden, identity-indexed boundary organization. It depends
-  conceptually on Paper 1 (Class G, the contract *I*) but its empirical fate does
-  not feed back. Its secure contribution is eliminative; its positive arm (a
-  boundary-residual *dissociation*) is heavily conditioned. Run once on the only public corpus
-  with the right structure (I-CARE), it halted at its own gate (6 of 21 patients against a 60 %
-  bar). The paper now specifies the data a test would need, and a partner laboratory is being
-  sought until 2026-12-23.
-
-- **`Paper3.md` — Five Ways an EEG Geometry Method Looked Validated and Was Not.** A methodological negative: how a trace-normalized SPD
-  geometry method for EEG looked validated and was not, through five traps (centre bias,
-  dependence-blind nulls, pseudo-replication, ocular contamination, recording confound), each
-  with the pre-registered control that exposed it, a check of the field's standard
-  Riemannian pipeline, and a survey of published studies. The earlier protocol (vector
-  bundle, three-regime demarcation) is preserved as a draft. It is *logically independent*
-  of the two companions.
+The three are logically independent. The earlier versions (26 September 2026) are kept, with their
+titles marked as superseded, in [`archive/papers_2026-09-26_superseded/`](archive/papers_2026-09-26_superseded/).
+The experiments specified in the new texts are listed in [`EXPERIMENTOS_2026-09-27.md`](EXPERIMENTOS_2026-09-27.md).
 
 ## The experiment suite (`experiments/`)
 

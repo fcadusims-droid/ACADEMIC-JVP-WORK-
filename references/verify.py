@@ -60,8 +60,43 @@ def references(paper):
     return [l.strip() for l in sec.split("\n") if l.strip()]
 
 
+APA_YEAR = re.compile(r"^[^()]*?\((\d{4})[a-z]?\)\.\s+|^[^()]*?\((n\.d\.)\)\.\s+")
+
+
+def parse_apa(line):
+    """APA style: Author, A. (Year). Title. *Journal, vol*(issue), pages. https://doi.org/..."""
+    m = APA_YEAR.match(line)
+    ref = {"raw": line, "style": "apa"}
+    ref["surname"] = re.split(r"[,.]", line, 1)[0].strip()
+    ref["year"] = int(m.group(1)) if m.group(1) else None
+    rest = line[m.end():]
+    d = re.search(r"https?://doi\.org/(10\.\S+?)[.)]?(\s|$)", line)
+    ref["doi"] = d.group(1) if d else None
+    a = re.search(r"arXiv:(\d{4}\.\d{4,5})", line)
+    ref["arxiv"] = a.group(1) if a else None
+    if rest.startswith("*"):                       # book, or software: title is italic
+        ref["title"] = re.match(r"\*([^*]+)\*", rest).group(1).rstrip(".")
+        ref["book"] = True
+        return ref
+    if rest.startswith("["):                       # e.g. [Review of the book ...]
+        ref["title"] = rest[1:rest.index("]")]
+        ref["container"] = (re.findall(r"\*([^*]+)\*", rest[rest.index("]"):]) or [None])[0]
+        return ref
+    t = re.match(r"(.+?[.?!])\s+(?:In\s|\*|arXiv|https?://)", rest)
+    ref["title"] = (t.group(1) if t else rest).rstrip(".")
+    it = re.search(r"\*([^*]+?),\s*(\d+)\*\s*(?:\(([^)]*)\))?,\s*([A-Za-z]?\d+)", rest)
+    if it:
+        ref["container"], ref["volume"], ref["first_page"] = it.group(1), it.group(2), it.group(4)
+    else:
+        c = re.search(r"\*([^*]+)\*", rest)
+        ref["container"] = c.group(1) if c else None
+    return ref
+
+
 def parse(line):
     """Pull first-author surname, year, quoted title, italic title, volume, pages, DOI, arXiv."""
+    if APA_YEAR.match(line):
+        return parse_apa(line)
     ref = {"raw": line}
     ref["surname"] = re.split(r"[,.]", line, 1)[0].strip()
     y = re.search(r"\b(1[5-9]\d\d|20\d\d)\b", line)

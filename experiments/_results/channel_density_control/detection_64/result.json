@@ -1,0 +1,109 @@
+{
+  "experiment": "detection_between_recording_control",
+  "question": "Does the held-out detection statistic separate a state change from a recording change?",
+  "data": "PhysioNet eegmmidb S001-S015: R01, R02 spaced chunks; T0 chunks of R03, R07",
+  "params": {
+    "chunk_sec": 4.2,
+    "spacing_sec": 8.3,
+    "n_chunks_per_side": 6,
+    "bar": 0.7,
+    "not_shown_below": 0.6
+  },
+  "auc_OC_vs_SS": 0.4088888888888889,
+  "auc_SS_vs_WN": 0.5733333333333334,
+  "auc_OC_vs_WN": 0.4577777777777778,
+  "outcome": "STATE DETECTION NOT SHOWN",
+  "verdict": "STATE DETECTION NOT SHOWN: AUC(eyes-open/closed splice vs same-state between-recording splice) = 0.409 (bar 0.7, not-shown below 0.6). Secondary: AUC(same-state splice vs within-recording) = 0.573 -- a recording change alone does not reach the bar. The held-out design rebuilt on chunks, AUC(eyes-open/closed splice vs within-recording) = 0.458 (committed held-out figure 0.824). n = 15 subjects, unpaired AUCs over 15 vs 15 (about +/-0.1). Per the pre-registration, detection_repair_heldout's 0.824 is not evidence of state detection: the statistic does not separate a change of state from a change of recording.",
+  "per_subject": [
+    {
+      "subject": "S001",
+      "OC": 5.628990825507615,
+      "SS": 4.730020107667397,
+      "WN": 6.459300304214765
+    },
+    {
+      "subject": "S002",
+      "OC": 5.072247284532384,
+      "SS": 6.48672639687716,
+      "WN": 6.2305179151787335
+    },
+    {
+      "subject": "S003",
+      "OC": 5.582468066357785,
+      "SS": 5.856950863964256,
+      "WN": 4.364300345261043
+    },
+    {
+      "subject": "S004",
+      "OC": 6.593780609540739,
+      "SS": 4.481380521082719,
+      "WN": 4.639872835547244
+    },
+    {
+      "subject": "S005",
+      "OC": 8.383061082609522,
+      "SS": 6.353797456228407,
+      "WN": 9.538835784199454
+    },
+    {
+      "subject": "S006",
+      "OC": 4.665423807564113,
+      "SS": 7.5592953238830765,
+      "WN": 5.71434648839496
+    },
+    {
+      "subject": "S007",
+      "OC": 6.897517170810787,
+      "SS": 5.779544924765226,
+      "WN": 5.421996722834744
+    },
+    {
+      "subject": "S008",
+      "OC": 4.801751417807937,
+      "SS": 5.995566922702724,
+      "WN": 6.886610460434056
+    },
+    {
+      "subject": "S009",
+      "OC": 5.853677122983993,
+      "SS": 7.497765125554707,
+      "WN": 7.482311180930225
+    },
+    {
+      "subject": "S010",
+      "OC": 9.165850900354776,
+      "SS": 7.3343917889456565,
+      "WN": 6.633089789464505
+    },
+    {
+      "subject": "S011",
+      "OC": 6.081556212870956,
+      "SS": 6.764805430928648,
+      "WN": 6.433173208314051
+    },
+    {
+      "subject": "S012",
+      "OC": 6.414433656137745,
+      "SS": 6.657909962848099,
+      "WN": 5.9739299045030405
+    },
+    {
+      "subject": "S013",
+      "OC": 8.357664814920609,
+      "SS": 6.923670886464135,
+      "WN": 6.866310365211221
+    },
+    {
+      "subject": "S014",
+      "OC": 5.296885362360085,
+      "SS": 7.313016942534297,
+      "WN": 6.600841724958363
+    },
+    {
+      "subject": "S015",
+      "OC": 5.221322557162942,
+      "SS": 5.939141602943435,
+      "WN": 4.990476239223448
+    }
+  ]
+}
