@@ -63,8 +63,8 @@ def main():
     lm = np.log10([r["mean"] for r in rows])
     slope, intercept = np.polyfit(ds, lm, 1)
     all15 = all(r["within_15pct"] for r in rows)
-    slope_ok = 0.9 <= slope <= 1.1
-    passed = all15 and slope_ok
+    slope_ok = bool(0.9 <= slope <= 1.1)
+    passed = bool(all15 and slope_ok)
     verdict = (f"{'PREDICTION MET' if passed else 'PREDICTION NOT MET'}. Mean return time / Kac value "
                f"(10^d) for d = 1..5: " + ", ".join(f"{r['ratio_to_kac']:.3f}" for r in rows) +
                f" (bar within +/-15% each: {'yes' if all15 else 'no'}); slope of log10(mean) on d = "
