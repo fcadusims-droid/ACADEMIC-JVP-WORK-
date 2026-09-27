@@ -15,6 +15,10 @@ R = os.path.join(HERE, "_results")
 PREREG_COMMIT = "fbe4b6f"
 
 
+def sn(b):
+    return "sim" if b else "não"
+
+
 def load(name):
     p = os.path.join(R, name, "result.json")
     return json.load(open(p)) if os.path.exists(p) else None
@@ -39,7 +43,7 @@ def main(commit):
         c = e31["crosses_bar"]
         rows.append(("E3.1", "R3.1", ("Armadilhas do **desenho**: a §4.1 fica" if e31["reading_rule_met"] else
                                        "Armadilhas do **CUSUM**: a §4.1 deve ser retirada")
-                     + f" (ocular cruza: {c['T1_ocular']}; dependência: {c['T4_dependence']}; gravação: {c['T2_recording']})"))
+                     + f" (ocular cruza: {sn(c['T1_ocular'])}; dependência: {sn(c['T4_dependence'])}; gravação: {sn(c['T2_recording'])})"))
     e32 = load("alpha_incremental_test")
     if e32:
         rows.append(("E3.2", "R3.2", ("Critério **atingido**" if e32["criterion_met"] else "Critério **não atingido**")
@@ -92,13 +96,13 @@ def main(commit):
         section("E3.1 — Controle pareado (Paper 3, R3.1)", t, [
             "Pipeline padrão (OAS → MDM) com normalização pelo traço e janelas sobrepostas. Mediana [IQR; mín–máx]:", "",
             "| Armadilha | Estatística | Mediana | IQR | Mín–máx | n | Barra | Cruza? |", "|---|---|---|---|---|---|---|---|",
-            *[f"| {name} | {lab} | {d['median']:.3f} | {d['q25']:.3f}–{d['q75']:.3f} | {d['min']:.3f}–{d['max']:.3f} | {d['n']} | {bar} | {cr} |"
+            *[f"| {name} | {lab} | {d['median']:.3f} | {d['q25']:.3f}–{d['q75']:.3f} | {d['min']:.3f}–{d['max']:.3f} | {d['n']} | {bar} | {sn(cr)} |"
               for name, lab, d, bar, cr in (
                   ("Dependência", "shuffled − blocked, por gravação", t["T4_dependence"]["shuffled_minus_blocked"], "≥ 0,05", t["crosses_bar"]["T4_dependence"]),
                   ("Ocular", "queda sem EOG, por sujeito", t["T1_ocular"]["per_subject_drop"], "≥ 0,05", t["crosses_bar"]["T1_ocular"]),
                   ("Gravação", "acurácia balanceada, mesmo estado", t["T2_recording"]["same_state_acc"], "≥ 0,70", t["crosses_bar"]["T2_recording"]))],
             f"| Pseudorreplicação | por gravação − por sujeito (pooled) | {t['T3_pseudoreplication']['gap']:+.4f} | — | — | "
-            f"{t['T3_pseudoreplication']['n_windows_pooled']} janelas | ≥ 0,05 | {t['crosses_bar']['T3_pseudoreplication']} |", "",
+            f"{t['T3_pseudoreplication']['n_windows_pooled']} janelas | ≥ 0,05 | {sn(t['crosses_bar']['T3_pseudoreplication'])} |", "",
             f"Wilcoxon unilateral da queda ocular: p = {t['T1_ocular']['wilcoxon_p_one_sided']:.2g}. Olhos abertos × fechados "
             f"(referência): mediana {t['T2_recording']['open_closed_acc']['median']:.3f}. Duas gravações de sono estavam truncadas "
             f"no cache (SC4012E0, SC4041E0) e foram puladas, como no registro original (151 de 153)."])
@@ -178,7 +182,20 @@ def main(commit):
             *[f"| {r['d']} | {r['mean']:.1f} | {r['sd']:.1f} | {r['kac_expected']:.0f} | {r['ratio_to_kac']:.3f} | {'sim' if r['within_15pct'] else 'não'} |" for r in t["rows"]],
             "", f"Inclinação de log₁₀(média) contra d: {t['slope_log10_mean_vs_d']:.3f}."])
     out += ["## E3.4 — Recodificação do survey (R3.4)", "",
-            "Não executado: o plano fixa início a partir de 07/10/2026 e exige recodificação cega. Ver `experiments/E3.4_DEFERRED.md`.", ""]
+            "Não executado: o plano fixa início a partir de 07/10/2026 e exige recodificação cega. Ver `experiments/E3.4_DEFERRED.md`.", "",
+            "## Leitura por paper (resultados negativos primeiro)", "",
+            "- **Paper 2 — contra o texto atual.** O teste de estrutura é sensível (E2.1), e aplicado ao I-CARE como o paper o "
+            "descreve (4 Hz) dá 16/21 estruturados; na versão multiescala, 15/21 (E2.2). O \"6/21\" do paper vem da versão por "
+            "batimento que foi de fato executada, não da descrita. A conclusão de que a maioria dos segmentos do I-CARE não passa no "
+            "teste precisa ser revista. A Tabela 1 está errada para o VitalDB (há EEG bruto em 5871/6388 casos) (E2.4). O paciente "
+            "0313 tem resumo 50.21, provável artefato, a inspecionar. No E2.3 os grupos não diferem (p = 0.163) e diferem em "
+            "covariáveis (idade, ritmo chocável); é descritivo e não testa a dissociação.",
+            "- **Paper 3 — negativo para a geometria, coerente com o enquadramento de negativo metodológico.** A geometria não "
+            "acrescenta informação além da potência alfa pelo critério pré-registrado (E3.2). Com 64 canais a razão geométrica "
+            "melhora (13/15), mas a detecção cai para AUC 0.409, e o critério conjunto não é atingido (E3.3). A §4.1 se mantém (E3.1).",
+            "- **Paper 1 — a favor, apenas como ilustração.** As duas computações do Apêndice A se confirmam (E1.1, E1.2). São "
+            "simulações de brinquedo; não são evidência empírica para a tese.", "",
+            "Nenhum destes resultados torna qualquer paper pronto para submissão.", ""]
     open(os.path.join(HERE, "RESULTADOS_2026-09-27.md"), "w").write("\n".join(l for l in out if l is not None) + "\n")
     print("wrote RESULTADOS_2026-09-27.md")
 
