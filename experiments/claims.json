@@ -5,7 +5,7 @@
     "path": "variants.a_scale_normalised.detection_auc",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "lifted detection to AUC \\$\\\\mathbf\\{([0-9.]+)\\}\\$"
+      "Paper3.md": "raised detection to AUC ([0-9.]+) with"
     }
   },
   {
@@ -14,7 +14,7 @@
     "path": "baseline_auc",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "scored AUC \\$([0-9.]+)\\$ on sleep-onset detection"
+      "Paper3.md": "statistic scored AUC ([0-9.]+) on sleep-onset detection"
     }
   },
   {
@@ -23,7 +23,7 @@
     "path": "auc_repaired",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "it held at AUC \\$([0-9.]+)\\$, while"
+      "Paper3.md": "it held at ([0-9.]+), while"
     }
   },
   {
@@ -32,7 +32,7 @@
     "path": "auc_old_statistic",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "fell below chance again \\(\\$([0-9.]+)\\$\\)"
+      "Paper3.md": "the old statistic fell to ([0-9.]+)\\."
     }
   },
   {
@@ -41,7 +41,7 @@
     "path": "real_task.BinSeg[power].detection_auc",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "against the best baseline's \\$([0-9.]+)\\$"
+      "Paper3.md": "\\(AUC 0\\.81 against ([0-9.]+) for the best\\)"
     }
   },
   {
@@ -50,7 +50,7 @@
     "path": "permutation.median_ratio",
     "tol": 0.05,
     "papers": {
-      "Paper3.md": "at a median ratio of about \\$([0-9.]+)\\$"
+      "Paper3.md": "at a median of about ([0-9.]+)\\."
     }
   },
   {
@@ -59,7 +59,7 @@
     "path": "worst_corner_auc.sqrt",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "worst-corner AUC \\$([0-9.]+)\\$"
+      "Paper3.md": "worst-corner AUC ([0-9.]+)\\)"
     }
   },
   {
@@ -68,17 +68,7 @@
     "path": "worst_corner_auc.log_euclidean",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "the same corner reached AUC \\$([0-9.]+)\\$"
-    }
-  },
-  {
-    "id": "CBRA structured-residual fraction",
-    "result": "cbra_boundary_residual",
-    "path": "fraction_structured",
-    "scale": 100,
-    "tol": 1.0,
-    "papers": {
-      "Paper2.md": "residual confound to \\$\\\\approx ([0-9.]+)\\\\%\\$"
+      "Paper3.md": "the same corner reached ([0-9.]+),"
     }
   },
   {
@@ -87,7 +77,7 @@
     "path": "test2_localization.cusum_hits",
     "tol": 0.5,
     "papers": {
-      "Paper3.md": "the geometry's \\$([0-9]+)/15\\$ in centred windows"
+      "Paper3.md": "the geometry's ([0-9]+)/15 in centred windows"
     }
   },
   {
@@ -96,16 +86,7 @@
     "path": "test1_discrimination.pass",
     "tol": 0.5,
     "papers": {
-      "Paper3.md": "had passed in \\$([0-9]+)\\$ of \\$15\\$ recordings"
-    }
-  },
-  {
-    "id": "Class G measured D_c",
-    "result": "class_g_coherence",
-    "path": "measured_D_c",
-    "tol": 0.005,
-    "papers": {
-      "Paper1.md": "critical value \\$D_c=([0-9.]+)\\$"
+      "Paper3.md": "which had passed in ([0-9]+) of 15 recordings"
     }
   },
   {
@@ -114,7 +95,7 @@
     "path": "temporal_half.median_ratio",
     "tol": 0.05,
     "papers": {
-      "Paper3.md": "the median ratio is about \\$([0-9.]+)\\$, above unity"
+      "Paper3.md": "the median ratio was about ([0-9.]+), above one"
     }
   },
   {
@@ -123,7 +104,7 @@
     "path": "temporal_half.n_above_1",
     "tol": 0.5,
     "papers": {
-      "Paper3.md": "in \\$([0-9]+)\\$ of \\$15\\$ subjects \\(median ratio"
+      "Paper3.md": "above one in ([0-9]+) of 15 subjects \\(Wilcoxon"
     }
   },
   {
@@ -132,7 +113,7 @@
     "path": "temporal_half.wilcoxon_p_vs_1",
     "tol": 0.001,
     "papers": {
-      "Paper3.md": "cross-subject Wilcoxon \\$p\\\\approx ([0-9.]+)\\$\\)"
+      "Paper3.md": "of 15 subjects \\(Wilcoxon p ≈ ([0-9.]+)\\)"
     }
   },
   {
@@ -141,7 +122,7 @@
     "path": "offcentre_hits.manifold",
     "tol": 0,
     "papers": {
-      "Paper3.md": "they tied at \\$([0-9]+)/22\\$ versus \\$10/22\\$"
+      "Paper3.md": "Off-centre they tied, ([0-9]+)/22 against 10/22"
     }
   },
   {
@@ -150,7 +131,7 @@
     "path": "offcentre_hits.scalar",
     "tol": 0,
     "papers": {
-      "Paper3.md": "they tied at \\$10/22\\$ versus \\$([0-9]+)/22\\$"
+      "Paper3.md": "Off-centre they tied, 10/22 against ([0-9]+)/22"
     }
   },
   {
@@ -159,7 +140,7 @@
     "path": "medians.G_SS",
     "tol": 0.01,
     "papers": {
-      "Paper3.md": "control median \\$([0-9.]+)\\$, one-sided"
+      "Paper3.md": "the same statistic had a median of ([0-9.]+),"
     }
   },
   {
@@ -168,7 +149,7 @@
     "path": "C1.n_OC_gt_SS",
     "tol": 0,
     "papers": {
-      "Paper3.md": "exceeded that control in \\$([0-9]+)\\$ of \\$15\\$ subjects"
+      "Paper3.md": "exceeded this control in ([0-9]+) of 15 subjects"
     }
   },
   {
@@ -177,7 +158,7 @@
     "path": "C1.wilcoxon_p_OC_gt_SS",
     "tol": 0.001,
     "papers": {
-      "Paper3.md": "control median \\$0.95\\$, one-sided Wilcoxon \\$p\\\\approx ([0-9.]+)\\$"
+      "Paper3.md": "of 15 subjects \\(one-sided Wilcoxon p ≈ ([0-9.]+)\\)"
     }
   },
   {
@@ -186,7 +167,7 @@
     "path": "medians.S_OC",
     "tol": 0.05,
     "papers": {
-      "Paper3.md": "far more strongly \\(median ratio \\$\\\\approx ([0-9.]+)\\$"
+      "Paper3.md": "far more strongly \\(median ratio ≈ ([0-9.]+),"
     }
   },
   {
@@ -195,7 +176,7 @@
     "path": "C3.n_t0_closer_to_open",
     "tol": 0,
     "papers": {
-      "Paper3.md": "consistent with eyes open in \\$([0-9]+)\\$ of \\$15\\$"
+      "Paper3.md": "consistent with eyes open in ([0-9]+) of 15 subjects"
     }
   },
   {
@@ -204,7 +185,7 @@
     "path": "auc_OC_vs_SS",
     "tol": 0.005,
     "papers": {
-      "Paper3.md": "same-state change of recording at AUC \\$([0-9.]+)\\$"
+      "Paper3.md": "same-state change of recording at AUC ([0-9.]+),"
     }
   },
   {
@@ -213,7 +194,7 @@
     "path": "auc_SS_vs_WN",
     "tol": 0.005,
     "papers": {
-      "Paper3.md": "fires it at AUC \\$([0-9.]+)\\$ against"
+      "Paper3.md": "fired it at AUC ([0-9.]+) against"
     }
   },
   {
@@ -222,7 +203,7 @@
     "path": "primary_record_level.manifold_hits",
     "tol": 0,
     "papers": {
-      "Paper3.md": "The geodesic CUSUM localized \\$([0-9]+)/151\\$"
+      "Paper3.md": "The geodesic CUSUM localized ([0-9]+)/151 transitions"
     }
   },
   {
@@ -231,7 +212,7 @@
     "path": "primary_record_level.scalar_hits",
     "tol": 0,
     "papers": {
-      "Paper3.md": "the scalar band-power CUSUM \\$([0-9]+)/151\\$ \\(McNemar"
+      "Paper3.md": "the scalar CUSUM ([0-9]+)/151 \\(44%"
     }
   },
   {
@@ -240,7 +221,7 @@
     "path": "primary_record_level.mcnemar_p",
     "tol": 0.005,
     "papers": {
-      "Paper3.md": "\\$67/151\\$ \\(McNemar \\$p\\\\approx ([0-9.]+)\\$\\)"
+      "Paper3.md": "37–52%; McNemar p ≈ ([0-9.]+)\\)"
     }
   },
   {
@@ -249,7 +230,7 @@
     "path": "T2.median_same_state_acc",
     "tol": 0.005,
     "papers": {
-      "Paper3.md": "reached a median balanced accuracy of \\$([0-9.]+)\\$, against"
+      "Paper3.md": "gave a median balanced accuracy of ([0-9.]+), against"
     }
   },
   {
@@ -258,7 +239,7 @@
     "path": "T1.median_drop",
     "tol": 0.0005,
     "papers": {
-      "Paper3.md": "lowered the median subject-level accuracy by only \\$([0-9.]+)\\$"
+      "Paper3.md": "lowered median subject-level accuracy by ([0-9.]+)\\."
     }
   },
   {
@@ -267,7 +248,7 @@
     "path": "T3.gap",
     "tol": 0.0005,
     "papers": {
-      "Paper3.md": "and with subjects as groups, differed by \\$([0-9.]+)\\$ in accuracy"
+      "Paper3.md": "changed pooled accuracy by ([0-9.]+)\\."
     }
   },
   {
@@ -276,7 +257,7 @@
     "path": "T4.median_shuffled_minus_blocked",
     "tol": 0.0005,
     "papers": {
-      "Paper3.md": "exceeded contiguous \\(blocked\\) folds by a median of only \\$([0-9.]+)\\$"
+      "Paper3.md": "exceeded blocked folds by a median of ([0-9.]+) over"
     }
   },
   {
@@ -285,7 +266,7 @@
     "path": "summary.ocular.yes",
     "tol": 0,
     "papers": {
-      "Paper3.md": "Ocular handling was not reported in \\$([0-9]+)\\$ of \\$19\\$"
+      "Paper3.md": "plausibly differ in eye movements: ([0-9]+) of 19"
     }
   },
   {
@@ -294,7 +275,81 @@
     "path": "summary.dependence.yes",
     "tol": 0,
     "papers": {
-      "Paper3.md": "appeared in \\$([0-9]+)\\$ of \\$19\\$"
+      "Paper3.md": "ignored dependence between trials or windows: ([0-9]+) of 19"
+    }
+  },
+  {
+    "id": "I-CARE gate structured count",
+    "result": "cbra_boundary_residual",
+    "path": "n_structured",
+    "tol": 0,
+    "papers": {
+      "Paper2.md": "Of the remaining 21, ([0-9]+) showed time-reversal asymmetry"
+    }
+  },
+  {
+    "id": "I-CARE gate patients analysed",
+    "result": "cbra_boundary_residual",
+    "path": "n_patients",
+    "tol": 0,
+    "papers": {
+      "Paper2.md": "Of the remaining ([0-9]+), 6 showed"
+    }
+  },
+  {
+    "id": "I-CARE gate structured fraction (%)",
+    "result": "cbra_boundary_residual",
+    "path": "fraction_structured",
+    "scale": 100,
+    "tol": 0.5,
+    "papers": {
+      "Paper2.md": "surrogate distribution \\(([0-9]+)%; Wilson"
+    }
+  },
+  {
+    "id": "I-CARE gate skipped short",
+    "result": "cbra_boundary_residual",
+    "path": "n_skipped_short",
+    "tol": 0,
+    "papers": {
+      "Paper2.md": "Of 24 patients examined in record order, ([0-9]+) had no segment"
+    }
+  },
+  {
+    "id": "I-CARE ECG coverage (%)",
+    "result": "cbra_boundary_residual",
+    "path": "part_a_ecg_coverage.fraction",
+    "scale": 100,
+    "tol": 0.5,
+    "papers": {
+      "Paper2.md": "45 \\(([0-9]+)%\\) had both ECG and EEG segments"
+    }
+  },
+  {
+    "id": "Sleep staging V with EOG",
+    "result": "regime_referent_eog_control",
+    "path": "pooled_V.geo_vol",
+    "tol": 0.0005,
+    "papers": {
+      "Paper3.md": "association with sleep stage fell from V = ([0-9.]+) to"
+    }
+  },
+  {
+    "id": "Sleep staging V without EOG",
+    "result": "regime_referent_eog_control",
+    "path": "pooled_V.geo_vol_eeg",
+    "tol": 0.0005,
+    "papers": {
+      "Paper3.md": "sleep stage fell from V = 0\\.452 to ([0-9.]+),"
+    }
+  },
+  {
+    "id": "EOG power alone V",
+    "result": "regime_referent_eog_control",
+    "path": "pooled_V.eog_pow_level",
+    "tol": 0.0005,
+    "papers": {
+      "Paper3.md": "more strongly associated with stage \\(V = ([0-9.]+)\\)"
     }
   }
 ]

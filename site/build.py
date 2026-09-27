@@ -46,42 +46,48 @@ PAPERS = [
     {
         "n": 1, "src": "Paper1.md", "slug": "paper-1",
         "short": "The Cybernetic Limits of Conversion",
-        "sub": "Formal Models of Value Change and the Fixed Evaluative Point",
-        "blurb": "A negative result about formulation. The formal models that direct or "
-                 "evaluate value change each hold an evaluative point fixed. Used to direct "
-                 "change they are control, and control cannot formulate agency-preserving "
-                 "conversion without tautology, agency collapse or incommensurability. The "
-                 "top level is conceded to be definitional; the case-by-case claim is not.",
-        "status": "Frozen at journal length (target: Synthese); only factual corrections. "
-                  "Awaiting a reader in the field. Not submitted.",
+        "sub": "Why Models That Direct Value Change Cannot Tell Conversion from Manipulation",
+        "blurb": "Formal models used to direct or evaluate value change take their reference "
+                 "standard from the agent's attitudes: before the change, after it, or a fixed "
+                 "rule over both. Conversion and manipulation can share an attitudinal profile, "
+                 "so none of these models can tell them apart. The one history-sensitive "
+                 "proposal penalizes conversion along with manipulation.",
+        "status": "New version (27 September 2026). Its two appendix computations are "
+                  "specified in advance; results pending. Not submitted.",
+        "experiments_note": "Most experiments filed under Paper 1 were run for its earlier "
+                  "versions (the trichotomy, Class G, the escape horn), which the 27 September "
+                  "2026 text no longer uses. The current text's Appendix A specifies two new "
+                  "computations.",
         "content": "paper1.md", "dir": "paper1_control_trilemma",
     },
     {
         "n": 2, "src": "Paper2.md", "slug": "paper-2",
-        "short": "The Conditional Biological Requirements Architecture",
-        "sub": "Data Requirements for Testing Hidden Boundary Organization in "
-               "Biological State Transitions, and a Pre-Registered Negative on Their "
-               "Present Availability in Public Data",
-        "blurb": "A strict eliminative protocol, conditional throughout, built so that "
-                 "a clean negative is expected unless a structured boundary residual "
-                 "survives an adversarial sequence of controls. Its positive arm halted "
-                 "at a pre-registered gate.",
-        "status": "Route pending: a data partnership is sought until 2026-12-23. "
-                  "Not submitted.",
+        "short": "Does an Interoceptive Signal Mark the Transitions a Person Survives?",
+        "sub": "Data Requirements, and a Failed Estimability Gate on Public "
+               "Post-Cardiac-Arrest Recordings",
+        "blurb": "What a test of whether a bodily signal is specific to transitions a person "
+                 "survives would need, and the attempt on public data. One corpus (I-CARE) has "
+                 "the required contrast; a pre-specified heart-period gate passed in 6 of 21 "
+                 "patients, below its 60% bar, and the gate lacked a positive control.",
+        "status": "New version (27 September 2026). Follow-up analyses specified in advance; "
+                  "results pending. Not submitted.",
+        "experiments_note": "The simulation audits and the I-CARE gate reported in the paper "
+                  "are among these experiments. Some entries test protocol elements of earlier "
+                  "versions that the current text drops.",
         "content": "paper2.md", "dir": "paper2_cbra_protocol",
     },
     {
         "n": 3, "src": "Paper3.md", "slug": "paper-3",
-        "short": "Five Ways an EEG Geometry Method Looked Validated and Was Not",
-        "sub": "A Pre-Registered Record, with Controls on the Field's Standard Pipeline "
-               "and a Survey of Published Practice",
-        "blurb": "A methodological negative: five traps (centre bias, dependence-blind "
-                 "nulls, pseudo-replication, ocular contamination, recording confound), "
-                 "each with the control that exposed it, a check of the field's standard "
-                 "Riemannian pipeline, and a survey of published studies. Independent of "
-                 "its two companions.",
-        "status": "Restructured; awaiting a second survey coder and a reader in EEG "
-                  "methods. Not submitted.",
+        "short": "Five Ways a Covariance-Geometry EEG Method Appeared Validated",
+        "sub": "and the Controls That Overturned It",
+        "blurb": "The validation record of a trace-normalized SPD geometry read through a "
+                 "geodesic change-point statistic. Five traps inflated its performance (centred "
+                 "windows, dependence-blind nulls, pseudo-replication, an eye channel, recording "
+                 "confound); after correction it did no better than a scalar power detector.",
+        "status": "New version (27 September 2026). Matched control, incremental test and "
+                  "channel-density check specified in advance; results pending. Not submitted.",
+        "experiments_note": "The controls behind each of the five traps are among these "
+                  "experiments.",
         "content": "paper3.md", "dir": "paper3_geodesic_kinematics",
     },
 ]
@@ -121,7 +127,8 @@ def paper_date(src_path: str) -> str:
     with open(src_path, encoding="utf-8") as fh:
         head = [next(fh, "").strip() for _ in range(8)]
     for line in head:
-        if re.match(r"^[A-Z][a-z]+ \d{1,2}, \d{4}$", line):
+        if re.match(r"^[A-Z][a-z]+ \d{1,2}, \d{4}$", line) or \
+                re.match(r"^\d{1,2} [A-Z][a-z]+ \d{4}$", line):
             return line
     return "2026"
 
@@ -598,7 +605,8 @@ def build_papers(with_pdf: bool):
                 f'<li><a href="../experiments/{r["slug"]}.html">'
                 f'<code>{r["slug"]}</code></a> &mdash; {html.escape(headline(r))}</li>'
                 for r in related)
-            rel_html = (f'<h2>Experiments testing this paper</h2>'
+            rel_html = (f'<h2>Experiments filed under this paper</h2>'
+                        f'<p class="note">{html.escape(p["experiments_note"])}</p>'
                         f'<ul class="plain">{items}</ul>')
 
         cited_html = cited_works_html(p["n"])
@@ -693,17 +701,16 @@ page with a section index, as a PDF you can read here in the browser, and as a P
 can download.</p>
 <div class="cards">{''.join(cards)}</div>
 <div class="prose">
-<h2>How they depend on one another</h2>
-<p>The dependency runs one way. Paper&nbsp;2 borrows Paper&nbsp;1's Class&nbsp;G and
-its consistency contract <em>I</em>; nothing flows back, so Paper&nbsp;2's empirical
-fate leaves Paper&nbsp;1 untouched. Paper&nbsp;3 is logically independent of both,
-which is why a reader who accepts it incurs no commitment to the other two.</p>
-<p>They also differ in kind. Paper&nbsp;1 is negative and about formulation: it
-argues that a family of models cannot pose a question, not that some particular model is
-wrong. Paper&nbsp;2 is conditional and eliminative, and its title now carries the
-pre-registered negative that halted its positive arm. Paper&nbsp;3 is a methodological
-negative: the pre-registered record of how one method came to look validated, and of the
-controls that showed it was not.</p>
+<h2>How they relate</h2>
+<p>In their 27 September 2026 versions the three papers are logically independent: none
+relies on another's result. Paper&nbsp;1 is a philosophical argument about formal models of
+value change. Paper&nbsp;2 asks what data a test of a physiological version of the persistence
+question would need, and reports that public data do not yet support one. Paper&nbsp;3 is a
+methodological record of one EEG method's validation. They share a project and a discipline:
+criteria fixed before the analyses, negatives reported as prominently as positives.</p>
+<p>Earlier versions (26 September 2026) are kept, marked as superseded, in
+<a href="{REPO_URL}/tree/main/archive/papers_2026-09-26_superseded"><code>archive/papers_2026-09-26_superseded/</code></a>.
+In those versions Paper&nbsp;2 borrowed notions from Paper&nbsp;1; the new versions do not.</p>
 </div>
 """
     write("papers/index.html",
@@ -712,8 +719,26 @@ controls that showed it was not.</p>
                     "as PDFs."))
 
 
+def current_use() -> dict:
+    """experiments/current_use.json: does each experiment support the current text of its
+    paper, or did it test a claim of an earlier version? Every result must be classified,
+    so a new experiment cannot appear on the site without saying which text it bears on."""
+    path = os.path.join(ROOT, "experiments", "current_use.json")
+    with open(path, encoding="utf-8") as fh:
+        use = json.load(fh)["experiments"]
+    for r in RECORDS:
+        if r["slug"] not in use:
+            FAILURES.append(f"experiments/current_use.json has no entry for {r['slug']}")
+    return use
+
+
+USE_LABEL = {"current": "Used by the current text",
+             "earlier": "Earlier version only"}
+
+
 def build_experiments():
     os.makedirs(os.path.join(OUT, "experiments"), exist_ok=True)
+    use = current_use()
 
     by_paper = {}
     for r in RECORDS:
@@ -725,6 +750,9 @@ def build_experiments():
         for r in sorted(by_paper[pnum], key=lambda x: x["slug"]):
             label = (r["status"] or {}).get("label", "")
             chip = ('<br><span class="tag">%s</span>' % html.escape(label)) if label else ""
+            u = use.get(r["slug"], {}).get("use")
+            if u:
+                chip += ('<br><span class="tag use-%s">%s</span>' % (u, USE_LABEL[u]))
             rows.append(
                 '<tr><td><a href="{slug}.html"><code>{slug}</code></a>{chip}</td>'
                 '<td>{hl}</td><td>{nf}</td></tr>'.format(
@@ -788,14 +816,14 @@ instantiation. Negative and qualified results are listed exactly as they came ou
                desc="Every pre-registered run, with verdicts, figures and raw results."))
 
     for r in RECORDS:
-        build_experiment_page(r)
+        build_experiment_page(r, use.get(r["slug"], {}))
 
 
 SKIP_IN_TABLE = {"experiment", "verdict", "figures", "question", "motivation",
                  "outcome", "condition_names", "per_subject", "subjects"}
 
 
-def build_experiment_page(r):
+def build_experiment_page(r, use=None):
     slug, d = r["slug"], r["data"]
     figdir = os.path.join(OUT, "experiments", "figures", slug)
     os.makedirs(figdir, exist_ok=True)
@@ -820,6 +848,13 @@ def build_experiment_page(r):
     links.append(f'<a class="btn" href="{REPO_URL}/blob/main/experiments/_results/'
                  f'{slug}/result.json">result.json</a>')
     parts.append(f'<div class="btn-row">{"".join(links)}</div>')
+
+    if use:
+        parts.append(
+            f'<div class="note prose use-note use-{use["use"]}"><strong>'
+            f'{USE_LABEL[use["use"]]}.</strong> {html.escape(use["note"])} Section numbers in '
+            f'the pre-registration below are those of the paper version it was written '
+            f'against.</div>')
 
     if isinstance(d.get("motivation"), str):
         parts.append(f'<div class="prose"><p>{html.escape(d["motivation"])}</p></div>')
@@ -944,6 +979,11 @@ def build_static_pages():
     cov_body = f"""<h1>Coverage</h1>
 <p class="lede prose">Which constructs named in the three papers are actually exercised by a
 pre-registered experiment &mdash; and which are not.</p>
+<div class="note prose"><p><strong>Paper versions.</strong> The constructs and section numbers
+below come from the versions of the papers before 27 September 2026. The new versions drop most
+of them (Paper&nbsp;1 no longer uses the trichotomy or Class&nbsp;G; Paper&nbsp;3 evaluates only
+the trace-normalized base and its CUSUM). Which experiments the new texts rely on is shown on each
+experiment page.</p></div>
 <div class="note prose"><p>Every other gate on this site checks something the suite
 <em>does</em>. None could see what it <em>omits</em>, and that blind spot was real: half of
 Paper&nbsp;3's construction &mdash; the fibre, the Sasaki metric, the Ehresmann connection &mdash;

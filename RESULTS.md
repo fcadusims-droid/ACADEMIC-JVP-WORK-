@@ -1,5 +1,7 @@
 # Results — What the 54 Experiments Found
 
+> **Papers rewritten on 27 September 2026.** Statements below about what "the paper" says, and section numbers, refer to the versions before that date, now in `archive/papers_2026-09-26_superseded/`. Which experiments the new texts still rely on is recorded in `experiments/current_use.json` and shown on each experiment page.
+
 A reader-facing synthesis of the validation suite. Every number here is read from a
 committed `result.json`; `experiments/STATUS.md` is the authoritative per-experiment
 record, and this document is the summary of it.

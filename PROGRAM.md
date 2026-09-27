@@ -1,5 +1,7 @@
 # The Conditional Program — how the three papers relate, and why they are kept apart
 
+> **Papers rewritten on 27 September 2026.** Statements below about what "the paper" says, and section numbers, refer to the versions before that date, now in `archive/papers_2026-09-26_superseded/`. Which experiments the new texts still rely on is recorded in `experiments/current_use.json` and shown on each experiment page.
+
 This document exists because a review of the trilogy found the connective tissue nowhere
 written down: each paper states its own scope, but the *program* that motivates all three —
 and the precise sense in which they do and do not depend on one another — lived only in the

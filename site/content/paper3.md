@@ -1,62 +1,42 @@
 ## What this paper is
 
-A methodological negative. It records how a geometric method for EEG — trace-normalized
-covariance matrices on the SPD manifold, read through a geodesic change-point statistic —
-passed a series of tests that later, pre-registered controls showed it had not passed. The
-record is organized as five trap mechanisms. For each it gives what the trap did to the result,
-the control that exposed it, whether the field's standard Riemannian pipeline falls into it, and
-how often published studies leave it open.
-
-It is logically independent of its two companions.
+The full validation record of a method that reads trace-normalized channel covariances on the
+SPD manifold through a geodesic cumulative-sum (CUSUM) change-point statistic. Five traps made it
+look validated, each removed by a specific control. The paper does not offer the method for
+adoption.
 
 ## The five traps
 
-- **Centre bias.** Localization windows were centred on the true transition, so a detector that
-  guesses the middle scores every recording. Off-centre, the geometry's lead over a scalar
-  detector became a tie (10/22 vs 10/22). At full scale the scalar was slightly ahead (geometry 59/151, scalar 67/151,
-  not significant) (`localization_centerbias_control`, `h1_powerup_offcentre`).
-- **Nulls and validation that ignore dependence.** Permuting autocorrelated windows as if
-  exchangeable made an eyes-open/closed effect look like ≈3.3× and significant in 14/15. Against
-  within-recording drift it is ≈1.3× (`eeg_reconciliation`, `regime_referent_nulls`).
-- **Pseudo-replication.** Seven sleep recordings were four people. The record-level p of 0.0078
-  had no subject-level counterpart (`regime_referent_eog_control`).
-- **Ocular contamination.** A sleep-staging association and an N2-vs-REM discrimination were
-  carried by the EOG channel in the covariance (`regime_referent_eog_control`,
-  `discrimination_eog_ablation`).
-- **Confusion between recordings.** The eyes-open/closed effect compares two separate
-  recordings against the drift within one. It beats a same-state between-recording control
-  only weakly, and per-channel alpha power separates the states more strongly. The detection
-  statistic also fires on a change of recording alone (`between_recording_control`,
-  `detection_between_recording_control`).
+- **Centre bias.** Localization windows centred on the transition. Off-centre, the geometry's
+  lead over a scalar detector became a tie (10/22 vs 10/22). On all 151 usable sleep recordings
+  the scalar was slightly ahead (geometry 59/151, scalar 67/151; McNemar p ≈ 0.38).
+- **Dependence ignored.** Permutation nulls on overlapping windows made an eyes-open/closed
+  ratio look like ≈3.3; against within-recording drift it was ≈1.3.
+- **Pseudo-replication.** Seven sleep recordings came from four people; no subject-level
+  significance was possible.
+- **Ocular contamination.** Without the eye channel, a sleep-staging association fell from
+  V = 0.452 to 0.021; EOG power alone was more strongly associated with stage.
+- **Recording confound.** Eyes open and closed were separate recordings; relative alpha power
+  separated them far more strongly than the geometry, and a change of recording alone fired the
+  detector.
 
-## Method or field?
+## The field's standard pipeline
 
-- **Standard pipeline.** A pre-registered control ran the field's standard pipeline
-  (covariance → MDM, pyRiemann) through the four traps that apply to classification. None
-  applied at its pre-registered bar on these data (`mdm_trap_control`), so by the
-  pre-registered rule these are traps of *this method*. Two same-state recordings were still
-  told apart at 0.65: below the bar of 0.70, but above chance.
-- **Design, not classifier.** The standard pipeline keeps each epoch's amplitude, which this
-  method's trace normalization removes, and it was run on non-overlapping epochs. So the
-  defensible reading is traps of this *design*. The paper offers this as interpretation.
-  Band-pass filtering followed by trace normalization removes the amplitude of a band relative
-  to the rest of the spectrum. Eyes open and closed differ in exactly that, so the method is left
-  with correlation structure and artefacts.
-- **Published studies.** A pre-registered survey of 20 published covariance/Riemannian EEG
-  studies measured what they report (`trap_literature_survey`). For two of the traps,
-  published practice often does not let a reader rule them out:
-  - ocular handling: unreported in 7/19 studies, unclear in 8 more (7–15/19);
-  - dependence-respecting validation: not respected in 4/19, unclear in 8 more (4–12/19).
+The standard covariance → minimum-distance-to-mean pipeline, put through the same controls,
+crossed none of the pre-specified bars, though it partly separated two recordings of one state
+(balanced accuracy 0.65). The paper's favoured explanation is the method's design (band-pass
+filtering followed by trace normalization, overlapping windows), and a matched control that
+would test it is specified in advance.
 
-  One of those studies measured the dependence trap directly for the standard classifier, at up
-  to 12.7 %.
+## A survey of published practice
 
-## What survives
+In 20 open-access covariance-based EEG studies, ocular handling was not reported in 7 of 19
+(7–15 counting unclear codes) and dependence-blind validation appeared in 4 of 19 (4–12). The
+counts describe reporting, not the presence of a trap, and the survey had one coder.
 
-- A repair to the detection statistic (AUC 0.227 → 0.813). Its out-of-sample evidence for
-  detecting a change of state is marginal.
-- A synthetic base-metric result.
-- On real data, nothing the method does better than a scalar baseline.
+## Recommendations
 
-The original construction — vector bundle, jump-diffusion, three-regime demarcation — was never
-shown to work. It is preserved as a draft in the repository, not presented in the paper.
+Off-centre localization with a centre-prior baseline; dependence-respecting nulls and folds;
+the subject as the unit of inference; reported and tested ocular handling; a same-condition
+between-recording control and a scalar baseline; and, for pipelines that combine band-pass
+filtering with trace normalization, a relative band-power baseline on the unfiltered signal.

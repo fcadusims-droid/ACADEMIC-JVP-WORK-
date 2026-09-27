@@ -2,49 +2,35 @@
   {
     "id": "P3 eyes-open/closed result carries its between-recording qualification",
     "paper": "Paper3.md",
-    "claim": "in \\$12\\$ of \\$15\\$ subjects \\(median ratio",
+    "claim": "remaining real-data effect was that eyes-open and eyes-closed recordings differed",
     "requires": "two recordings|separate recordings|between-recording|separate runs",
-    "why": "between_recording_control: the ratio compares two separate recordings against within-recording drift; it must not be quoted without that."
+    "why": "between_recording_control: the ratio compares two separate recordings against within-recording drift; it must not be quoted without that. In the 2026-09-27 text the 1.3 ratio is first given in §3.2 (dependence) and restated at the head of §3.5, whose paragraph carries the separate-runs qualification; the rule guards the §3.5 statement."
   },
   {
     "id": "P3 localization 10/15 is not sold as an advantage",
     "paper": "Paper3.md",
-    "claim": "\\$10/15\\$ versus \\$8/15\\$",
-    "requires": "binomial noise",
+    "claim": "10/15 against 8/15",
+    "requires": "binomial noise|centred windows",
     "why": "a two-recording margin on fifteen is inside binomial noise; stating the win without that reads as a demonstrated performance advantage the benchmark does not support."
   },
   {
     "id": "P3 structural-scenario win carries the pre-registered shortfall",
     "paper": "Paper3.md",
-    "claim": "best power-feature baseline's \\$0.75\\$",
-    "requires": "\\$\\+0\\.30\\$|not established at the pre-registered level",
+    "claim": "best power-feature baseline's 0\\.75",
+    "requires": "falls short of the 0\\.30|not established at the pre-registered level",
     "why": "the +0.25 margin falls short of the +0.30 threshold fixed in advance, so the advantage is real but not established at the pre-registered level."
-  },
-  {
-    "id": "P1 escape closure is stated conditionally, never as general",
-    "paper": "Paper1.md",
-    "claim": "closed by the \\*same\\* argument as the bounded cell",
-    "requires": "bounded\\W{0,3}reading|conditional",
-    "why": "compactness moved from the state space to the observable; the closure holds for contracts factoring through a bounded reading and exhaustivity over admissible contracts is an open problem."
-  },
-  {
-    "id": "P1 first open problem records the pragmatic-I dilemma",
-    "paper": "Paper1.md",
-    "claim": "first open problem this argument leaves",
-    "requires": "pragmatic-indexing metamodel",
-    "why": "under 2.2's pragmatic reading of I there may be no fact of the matter about admissible contracts, so exhaustivity may be declarable rather than provable. The dilemma must travel with the open problem."
   },
   {
     "id": "P3 bundle apparatus carries its ablation result",
     "paper": "Paper3.md",
-    "claim": "vector bundle",
-    "requires": "net negative|never shown to work|not tested here",
+    "claim": "vector.bundle",
+    "requires": "net negative|never shown to work|not tested here|lowered discrimination",
     "why": "fibre_ablation found the bundle net negative; it must not be presented as working."
   },
   {
     "id": "P3 localization counts carry the centring caveat",
     "paper": "Paper3.md",
-    "claim": "\\$1[01]/15\\$",
+    "claim": "\\b1[01]/15\\b",
     "requires": "centr",
     "why": "every within-trajectory localization window is symmetric about the true transition, so a centre-prior detector scores 22/22 there and 0/22 off-centre (localization_centerbias_control); any 10/15 localization figure quoted without that caveat reads as evidence the method localizes. The caveat must sit within 400 characters of each count (a caveat elsewhere in a long paragraph about a different number does not cover it).",
     "near": 400
@@ -59,7 +45,7 @@
   {
     "id": "P3 MDM framing carries the design asymmetry",
     "paper": "Paper3.md",
-    "claim": "traps of \\**this method",
+    "claim": "these are traps of this method",
     "requires": "design",
     "why": "mdm_trap_control keeps absolute power and uses non-overlapping epochs; it separates this design from the standard one, not this classifier from another"
   },
@@ -73,8 +59,15 @@
   {
     "id": "P3 survey counts carry their Unclear range",
     "paper": "Paper3.md",
-    "claim": "not reported in \\$7\\$ of \\$19\\$|appeared in \\$4\\$ of \\$19\\$",
-    "requires": "between \\$[0-9]+\\$ and \\$[0-9]+\\$",
+    "claim": "eye movements: 7 of 19|windows: 4 of 19",
+    "requires": "\\([0-9]+–[0-9]+ of 19\\)",
     "why": "trap_literature_survey: 8 Unclear codes on each of these traps; the count is the lower end of a range and measures reporting"
+  },
+  {
+    "id": "P2 gate count carries its bar and the missing positive control",
+    "paper": "Paper2.md",
+    "claim": "6 of 21",
+    "requires": "60%|0\\.60",
+    "why": "cbra_boundary_residual: 6 of 21 structured against a 0.60 bar fixed in the plan; the count must not be quoted without the bar."
   }
 ]

@@ -1,5 +1,15 @@
 # Open issues — all three papers are work in progress
 
+> **All three papers were replaced on 27 September 2026 by new versions supplied by the author.** The
+> earlier texts, including the Paper 1 that was frozen on 26 September, are in
+> `archive/papers_2026-09-26_superseded/` with their titles marked as superseded. The Paper 1 freeze
+> and cut map below apply to that superseded text. The new versions contain `[RESULT …]` placeholders
+> for the analyses specified in `EXPERIMENTOS_2026-09-27.md`. Two references in the new texts were
+> corrected with the author's permission (Bykvist 2021: end page and DOI; Iyengar 1996: journal
+> section, R-pages and DOI; see `references/paper1.json`, `references/paper2.json`). Paper 2's
+> common-generator audit (§3.3) and its Appendix A degeneracy table have no committed result in this
+> repository.
+
 **Freeze criterion (adopted 2026-09-23).** After the items of the current development plan (Paper 3: the MDM control, the literature survey and the restructure; Paper 1: the boundary section, now §6.6, drafted with Claude and revised by the author; Paper 2: the partnership decision), only factual-error corrections enter the papers. No new experiment is run unless a decision point depends on its result. The public list of what the work needs from others is on the site's [Needs](https://fcadusims-droid.github.io/ACADEMIC-JVP-WORK-/needs.html) page and in `site/content/needs.md`.
 
 **None of the three papers is ready for submission.** This file used to be titled

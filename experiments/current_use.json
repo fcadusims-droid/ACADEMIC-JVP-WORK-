@@ -1,0 +1,221 @@
+{
+  "_note": "Whether each committed experiment supports the current (27 September 2026) text of its paper. 'current': the paper reports or relies on it. 'earlier': it tested a claim of an earlier version; it stays in the record. Section numbers are those of the current text. Pre-registrations keep the section numbers of the version they were written against.",
+  "experiments": {
+    "abc_real_eeg": {
+      "use": "earlier",
+      "note": "On-line localization programme of the earlier protocol."
+    },
+    "base_metric_corner": {
+      "use": "current",
+      "note": "§3.9: synthetic base-metric result (0.653 vs 0.960)."
+    },
+    "baseline_benchmark": {
+      "use": "current",
+      "note": "§3.1 (earlier 10/15 vs 8/15 benchmark, centred) and §3.9 (fourth of nineteen)."
+    },
+    "between_recording_control": {
+      "use": "current",
+      "note": "§3.5: same-state control and relative alpha power."
+    },
+    "causal_vs_offline_localization": {
+      "use": "earlier",
+      "note": "On-line localization programme of the earlier protocol."
+    },
+    "cbra_boundary_residual": {
+      "use": "current",
+      "note": "§2.4 and §3.2: the estimability gate (6 of 21) and ECG coverage (45 of 60)."
+    },
+    "cbra_dataset_inventory": {
+      "use": "current",
+      "note": "§2.2 and §3.1: the dataset audit."
+    },
+    "class_g_coherence": {
+      "use": "earlier",
+      "note": "Tested a claim of an earlier version of Paper 1 (the trichotomy, Class G, the escape horn or the exogenous-cost curve). The 27 September 2026 text does not use it."
+    },
+    "class_g_independence": {
+      "use": "earlier",
+      "note": "Tested a claim of an earlier version of Paper 1 (the trichotomy, Class G, the escape horn or the exogenous-cost curve). The 27 September 2026 text does not use it."
+    },
+    "corrigibility_candidate": {
+      "use": "earlier",
+      "note": "Tested a claim of an earlier version of Paper 1 (the trichotomy, Class G, the escape horn or the exogenous-cost curve). The 27 September 2026 text does not use it."
+    },
+    "criticality_sweep": {
+      "use": "current",
+      "note": "§3.3: critical branching reproduces the stratified gating differential (15 of 24 cells)."
+    },
+    "cross_dataset": {
+      "use": "earlier",
+      "note": "On-line localization programme of the earlier protocol."
+    },
+    "cross_dataset_real": {
+      "use": "earlier",
+      "note": "On-line localization programme of the earlier protocol."
+    },
+    "dataset_viability_gate": {
+      "use": "current",
+      "note": "§2.2 and §3.1: the dataset audit that named I-CARE."
+    },
+    "detection_between_recording_control": {
+      "use": "current",
+      "note": "§3.5: AUC 0.72 and 0.74."
+    },
+    "detection_repair_heldout": {
+      "use": "current",
+      "note": "§3.9: held-out AUC 0.824."
+    },
+    "detection_statistic_repair": {
+      "use": "current",
+      "note": "§3.9: AUC 0.227 → 0.813."
+    },
+    "discrimination_eog_ablation": {
+      "use": "current",
+      "note": "§3.4: N2-vs-REM holds without EOG in 2 of 4 subjects."
+    },
+    "discrimination_null_dependence_audit": {
+      "use": "current",
+      "note": "§3.2: the N2-vs-REM discrimination under a circular-shift null."
+    },
+    "dissociation_confound": {
+      "use": "current",
+      "note": "§3.3: the dissociation statistic reaches about 73% of the class-dependent signal."
+    },
+    "dissociation_power_analysis": {
+      "use": "current",
+      "note": "§2.1 and §3.3: matching and about 40 patients per condition."
+    },
+    "drift_jump_confusion_sweep": {
+      "use": "earlier",
+      "note": "The synthetic sweep behind the base-metric question; the current text reports only base_metric_corner."
+    },
+    "eeg_reconciliation": {
+      "use": "current",
+      "note": "§3.2: permutation ratio ≈3.3 against temporal-half ≈1.3."
+    },
+    "escape_cardinal_contract": {
+      "use": "earlier",
+      "note": "Tested a claim of an earlier version of Paper 1 (the trichotomy, Class G, the escape horn or the exogenous-cost curve). The 27 September 2026 text does not use it."
+    },
+    "escape_endogeneity": {
+      "use": "earlier",
+      "note": "Tested a claim of an earlier version of Paper 1 (the trichotomy, Class G, the escape horn or the exogenous-cost curve). The 27 September 2026 text does not use it."
+    },
+    "escape_persistence_decider": {
+      "use": "earlier",
+      "note": "Tested a claim of an earlier version of Paper 1 (the trichotomy, Class G, the escape horn or the exogenous-cost curve). The 27 September 2026 text does not use it."
+    },
+    "fibre_ablation": {
+      "use": "current",
+      "note": "§2.2: the fibre lowered discrimination and is not evaluated further."
+    },
+    "h1_powerup_offcentre": {
+      "use": "current",
+      "note": "§3.1: 59/151 vs 67/151 on all usable sleep-cassette recordings."
+    },
+    "high_dim_trichotomy": {
+      "use": "earlier",
+      "note": "Tested a claim of an earlier version of Paper 1 (the trichotomy, Class G, the escape horn or the exogenous-cost curve). The 27 September 2026 text does not use it."
+    },
+    "hybrid_metric": {
+      "use": "earlier",
+      "note": "Tested a metric repair of the earlier protocol text."
+    },
+    "localization_centerbias_control": {
+      "use": "current",
+      "note": "§3.1: centre-prior 22/22 vs 0/22 and the off-centre tie."
+    },
+    "localization_multiscale": {
+      "use": "earlier",
+      "note": "On-line localization programme of the earlier protocol."
+    },
+    "localization_priors": {
+      "use": "earlier",
+      "note": "On-line localization programme of the earlier protocol."
+    },
+    "localization_priors_real": {
+      "use": "earlier",
+      "note": "On-line localization programme of the earlier protocol."
+    },
+    "log_euclidean_real_eeg": {
+      "use": "earlier",
+      "note": "Tested a metric trade-off of the earlier protocol text."
+    },
+    "mdm_trap_control": {
+      "use": "current",
+      "note": "§3.6: the standard-pipeline control."
+    },
+    "metabolic_null_resolution": {
+      "use": "earlier",
+      "note": "Tested the metabolic-null resolution claim of an earlier version."
+    },
+    "online_localization_cusum": {
+      "use": "earlier",
+      "note": "On-line localization programme of the earlier protocol."
+    },
+    "online_localization_permanence": {
+      "use": "earlier",
+      "note": "On-line localization programme of the earlier protocol."
+    },
+    "poincare_recurrence_check": {
+      "use": "earlier",
+      "note": "Tested a claim of an earlier version of Paper 1 (the trichotomy, Class G, the escape horn or the exogenous-cost curve). The 27 September 2026 text does not use it."
+    },
+    "real_eeg_localization": {
+      "use": "earlier",
+      "note": "Early record of the eyes-open/closed task (its 12/15, ratio 1.7 figures are not in the current text)."
+    },
+    "regime_external_referent": {
+      "use": "current",
+      "note": "§3.2: the sleep-staging association (V = 0.452) first tested against an i.i.d. shuffle."
+    },
+    "regime_groundtruth_gate": {
+      "use": "current",
+      "note": "§2.2: the three-regime demarcation had no external label."
+    },
+    "regime_referent_eog_control": {
+      "use": "current",
+      "note": "§3.3 and §3.4: seven recordings from four subjects; V 0.452 → 0.021 without EOG."
+    },
+    "regime_referent_nulls": {
+      "use": "current",
+      "note": "§3.2: circular-shift null (95th percentile 0.171)."
+    },
+    "residual_tests_exercise": {
+      "use": "earlier",
+      "note": "Tested the residual-structure tests of an earlier version and found them specific. The current text drops both tests, on the basis of a separate degeneracy analysis (its Appendix A) that has no committed result in this repository."
+    },
+    "rl_agents_trichotomy": {
+      "use": "earlier",
+      "note": "Tested a claim of an earlier version of Paper 1 (the trichotomy, Class G, the escape horn or the exogenous-cost curve). The 27 September 2026 text does not use it."
+    },
+    "scalar_vs_manifold_localization": {
+      "use": "current",
+      "note": "§3.1: the centred 14/22 vs 9/22 comparison later overturned."
+    },
+    "sleep_stage_localization": {
+      "use": "current",
+      "note": "§3.1 and §3.4: the centred 10/15 sleep-onset figure and the 14/15 N2-vs-REM discrimination, both later overturned."
+    },
+    "sleep_structure_power_dissociation": {
+      "use": "earlier",
+      "note": "Tested the structure/power dissociation headline of an earlier version."
+    },
+    "subcriticality_control": {
+      "use": "current",
+      "note": "§3.3: naive versus multistep-regression branching-ratio estimators."
+    },
+    "tracking_cost_curve": {
+      "use": "earlier",
+      "note": "Tested a claim of an earlier version of Paper 1 (the trichotomy, Class G, the escape horn or the exogenous-cost curve). The 27 September 2026 text does not use it."
+    },
+    "trap_literature_survey": {
+      "use": "current",
+      "note": "§3.10: the literature survey."
+    },
+    "value_base_discontinuity_probe": {
+      "use": "earlier",
+      "note": "Tested a claim of an earlier version of Paper 1 (the trichotomy, Class G, the escape horn or the exogenous-cost curve). The 27 September 2026 text does not use it."
+    }
+  }
+}

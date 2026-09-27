@@ -1,5 +1,7 @@
 # Formal development (Lean 4)
 
+> **Paper 1 was rewritten on 27 September 2026.** The new text does not use the trichotomy, the escape horn or Class G, so these files formalize arguments of its earlier versions (`archive/papers_2026-09-26_superseded/`).
+
 Four files, machine-checked in CI — and, as of the environment change noted below,
 locally as well:
 

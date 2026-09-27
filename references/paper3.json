@@ -1,7 +1,7 @@
 [
   {
     "n": 1,
-    "citation": "Adams, Ryan P., and MacKay, David J. C. 2007. \"Bayesian Online Changepoint Detection.\" arXiv:0710.3742. (The standard Bayesian online change-point method; a baseline in the benchmark.)",
+    "citation": "Adams, R. P., & MacKay, D. J. C. (2007). Bayesian online changepoint detection. arXiv:0710.3742.",
     "status": "verified",
     "url": "https://arxiv.org/abs/0710.3742",
     "checked_against": "arxiv",
@@ -9,7 +9,7 @@
   },
   {
     "n": 2,
-    "citation": "Barachant, Alexandre, Bonnet, Stephane, Congedo, Marco, and Jutten, Christian. 2012. \"Multiclass Brain-Computer Interface Classification by Riemannian Geometry.\" *IEEE Transactions on Biomedical Engineering* 59(4): 920-928.",
+    "citation": "Barachant, A., Bonnet, S., Congedo, M., & Jutten, C. (2012). Multiclass brain–computer interface classification by Riemannian geometry. *IEEE Transactions on Biomedical Engineering, 59*(4), 920–928.",
     "status": "verified",
     "url": "https://doi.org/10.1109/tbme.2011.2172210",
     "checked_against": "crossref",
@@ -18,7 +18,7 @@
   },
   {
     "n": 3,
-    "citation": "Barachant, Alexandre, Bonnet, Stephane, Congedo, Marco, and Jutten, Christian. 2013. \"Classification of Covariance Matrices Using a Riemannian-Based Kernel for BCI Applications.\" *Neurocomputing* 112: 172-178.",
+    "citation": "Barachant, A., Bonnet, S., Congedo, M., & Jutten, C. (2013). Classification of covariance matrices using a Riemannian-based kernel for BCI applications. *Neurocomputing, 112*, 172–178.",
     "status": "verified",
     "url": "https://doi.org/10.1016/j.neucom.2012.12.039",
     "checked_against": "crossref",
@@ -27,7 +27,7 @@
   },
   {
     "n": 4,
-    "citation": "Barachant, Alexandre, Quentin Barthélemy, et al. \"pyRiemann.\" Software, version 0.12. Zenodo. DOI: 10.5281/zenodo.593816.",
+    "citation": "Barachant, A., Barthélemy, Q., et al. (n.d.). *pyRiemann* (Version 0.12) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.593816",
     "status": "verified",
     "url": "https://doi.org/10.5281/zenodo.593816",
     "checked_against": "manual",
@@ -37,7 +37,7 @@
   },
   {
     "n": 5,
-    "citation": "Bhatia, Rajendra. 2007. *Positive Definite Matrices*. Princeton University Press.",
+    "citation": "Bhatia, R. (2007). *Positive definite matrices*. Princeton University Press.",
     "status": "verified",
     "url": "https://openlibrary.org/works/OL20315832W",
     "checked_against": "openlibrary",
@@ -45,7 +45,7 @@
   },
   {
     "n": 6,
-    "citation": "Chen, Yilun, Ami Wiesel, Yonina C. Eldar, and Alfred O. Hero. 2010. \"Shrinkage Algorithms for MMSE Covariance Estimation.\" *IEEE Transactions on Signal Processing* 58(10): 5016-5029. DOI: 10.1109/TSP.2010.2053029.",
+    "citation": "Chen, Y., Wiesel, A., Eldar, Y. C., & Hero, A. O. (2010). Shrinkage algorithms for MMSE covariance estimation. *IEEE Transactions on Signal Processing, 58*(10), 5016–5029. https://doi.org/10.1109/TSP.2010.2053029",
     "status": "verified",
     "url": "https://doi.org/10.1109/tsp.2010.2053029",
     "checked_against": "crossref",
@@ -54,7 +54,7 @@
   },
   {
     "n": 7,
-    "citation": "Congedo, Marco, Barachant, Alexandre, and Bhatia, Rajendra. 2017. \"Riemannian Geometry for EEG-Based Brain-Computer Interfaces: A Primer and a Review.\" *Brain-Computer Interfaces* 4(3): 155-174.",
+    "citation": "Congedo, M., Barachant, A., & Bhatia, R. (2017). Riemannian geometry for EEG-based brain–computer interfaces: A primer and a review. *Brain-Computer Interfaces, 4*(3), 155–174.",
     "status": "verified",
     "url": "https://doi.org/10.1080/2326263x.2017.1297192",
     "checked_against": "crossref",
@@ -63,7 +63,7 @@
   },
   {
     "n": 8,
-    "citation": "Goldberger, Ary L., Luis A. N. Amaral, Leon Glass, Jeffrey M. Hausdorff, Plamen Ch. Ivanov, Roger G. Mark, et al. 2000. \"PhysioBank, PhysioToolkit, and PhysioNet: Components of a New Research Resource for Complex Physiologic Signals.\" *Circulation* 101(23): e215-e220. DOI: 10.1161/01.CIR.101.23.e215.",
+    "citation": "Goldberger, A. L., Amaral, L. A. N., Glass, L., Hausdorff, J. M., Ivanov, P. Ch., Mark, R. G., et al. (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. *Circulation, 101*(23), e215–e220. https://doi.org/10.1161/01.CIR.101.23.e215",
     "status": "verified",
     "url": "https://doi.org/10.1161/01.cir.101.23.e215",
     "checked_against": "manual",
@@ -73,7 +73,7 @@
   },
   {
     "n": 9,
-    "citation": "Hurlbert, Stuart H. 1984. \"Pseudoreplication and the Design of Ecological Field Experiments.\" *Ecological Monographs* 54(2): 187-211. DOI: 10.2307/1942661.",
+    "citation": "Hurlbert, S. H. (1984). Pseudoreplication and the design of ecological field experiments. *Ecological Monographs, 54*(2), 187–211. https://doi.org/10.2307/1942661",
     "status": "verified",
     "url": "https://doi.org/10.2307/1942661",
     "checked_against": "crossref",
@@ -82,7 +82,7 @@
   },
   {
     "n": 10,
-    "citation": "Kemp, Bob, Aeilko H. Zwinderman, Bert Tuk, Hilbert A. C. Kamphuisen, and Josefien J. L. Oberye. 2000. \"Analysis of a Sleep-Dependent Neuronal Feedback Loop: The Slow-Wave Microcontinuity of the EEG.\" *IEEE Transactions on Biomedical Engineering* 47(9): 1185-1194. DOI: 10.1109/10.867928. (The Sleep-EDF data.)",
+    "citation": "Kemp, B., Zwinderman, A. H., Tuk, B., Kamphuisen, H. A. C., & Oberye, J. J. L. (2000). Analysis of a sleep-dependent neuronal feedback loop: The slow-wave microcontinuity of the EEG. *IEEE Transactions on Biomedical Engineering, 47*(9), 1185–1194. https://doi.org/10.1109/10.867928",
     "status": "verified",
     "url": "https://doi.org/10.1109/10.867928",
     "checked_against": "crossref",
@@ -91,7 +91,7 @@
   },
   {
     "n": 11,
-    "citation": "Lemm, Steven, Benjamin Blankertz, Thorsten Dickhaus, and Klaus-Robert Müller. 2011. \"Introduction to Machine Learning for Brain Imaging.\" *NeuroImage* 56(2): 387-399. DOI: 10.1016/j.neuroimage.2010.11.004.",
+    "citation": "Lemm, S., Blankertz, B., Dickhaus, T., & Müller, K.-R. (2011). Introduction to machine learning for brain imaging. *NeuroImage, 56*(2), 387–399. https://doi.org/10.1016/j.neuroimage.2010.11.004",
     "status": "verified",
     "url": "https://doi.org/10.1016/j.neuroimage.2010.11.004",
     "checked_against": "crossref",
@@ -100,7 +100,17 @@
   },
   {
     "n": 12,
-    "citation": "Pennec, Xavier, Fillard, Pierre, and Ayache, Nicholas. 2006. \"A Riemannian Framework for Tensor Computing.\" *International Journal of Computer Vision* 66(1): 41-66.",
+    "citation": "Li, R., Johansen, J. S., Ahmed, H., Ilyevsky, T. V., Wilbur, R. B., Bharadwaj, H. M., & Siskind, J. M. (2021). The perils and pitfalls of block design for EEG classification experiments. *IEEE Transactions on Pattern Analysis and Machine Intelligence, 43*(1), 316–333. https://doi.org/10.1109/TPAMI.2020.2973153",
+    "status": "verified",
+    "url": "https://doi.org/10.1109/TPAMI.2020.2973153",
+    "checked_against": "manual",
+    "automated_pass": "PARTIAL",
+    "doi": "10.1109/TPAMI.2020.2973153",
+    "manual_review": "Crossref holds only the 2020 early-access record (pages 1-1). Semantic Scholar gives the issue: IEEE TPAMI 43: 316-333 (January 2021 issue), as the paper cites."
+  },
+  {
+    "n": 13,
+    "citation": "Pennec, X., Fillard, P., & Ayache, N. (2006). A Riemannian framework for tensor computing. *International Journal of Computer Vision, 66*(1), 41–66.",
     "status": "verified",
     "url": "https://doi.org/10.1007/s11263-005-3222-z",
     "checked_against": "crossref",
@@ -108,8 +118,17 @@
     "doi": "10.1007/s11263-005-3222-z"
   },
   {
-    "n": 13,
-    "citation": "Schalk, Gerwin, McFarland, Dennis J., Hinterberger, Thilo, Birbaumer, Niels, and Wolpaw, Jonathan R. 2004. \"BCI2000: A General-Purpose Brain-Computer Interface (BCI) System.\" *IEEE Transactions on Biomedical Engineering* 51(6): 1034-1043. (The EEG Motor Movement/Imagery database.)",
+    "n": 14,
+    "citation": "Pernet, C., Garrido, M. I., Gramfort, A., Maurits, N., Michel, C. M., Pang, E., et al. (2020). Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. *Nature Neuroscience, 23*, 1473–1483. https://doi.org/10.1038/s41593-020-00709-0",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/s41593-020-00709-0",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/s41593-020-00709-0"
+  },
+  {
+    "n": 15,
+    "citation": "Schalk, G., McFarland, D. J., Hinterberger, T., Birbaumer, N., & Wolpaw, J. R. (2004). BCI2000: A general-purpose brain–computer interface (BCI) system. *IEEE Transactions on Biomedical Engineering, 51*(6), 1034–1043.",
     "status": "verified",
     "url": "https://doi.org/10.1109/tbme.2004.827072",
     "checked_against": "crossref",
@@ -117,8 +136,8 @@
     "doi": "10.1109/tbme.2004.827072"
   },
   {
-    "n": 14,
-    "citation": "Schroeder, Felix, Stephen Fairclough, Frederic Dehais, and Matthew Richins. 2025. \"The Impact of Cross-Validation Choices on pBCI Classification Metrics: Lessons for Transparent Reporting.\" *Frontiers in Neuroergonomics* 6: 1582724. DOI: 10.3389/fnrgo.2025.1582724.",
+    "n": 16,
+    "citation": "Schroeder, F., Fairclough, S., Dehais, F., & Richins, M. (2025). The impact of cross-validation choices on pBCI classification metrics: Lessons for transparent reporting. *Frontiers in Neuroergonomics, 6*, 1582724. https://doi.org/10.3389/fnrgo.2025.1582724",
     "status": "verified",
     "url": "https://doi.org/10.3389/fnrgo.2025.1582724",
     "checked_against": "crossref",
@@ -126,8 +145,8 @@
     "doi": "10.3389/fnrgo.2025.1582724"
   },
   {
-    "n": 15,
-    "citation": "Truong, Charles, Oudre, Laurent, and Vayatis, Nicolas. 2020. \"Selective Review of Offline Change Point Detection Methods.\" *Signal Processing* 167: 107299. (The `ruptures` library: PELT, binary segmentation, windowed methods.)",
+    "n": 17,
+    "citation": "Truong, C., Oudre, L., & Vayatis, N. (2020). Selective review of offline change point detection methods. *Signal Processing, 167*, 107299.",
     "status": "verified",
     "url": "https://doi.org/10.1016/j.sigpro.2019.107299",
     "checked_against": "crossref",
@@ -135,8 +154,8 @@
     "doi": "10.1016/j.sigpro.2019.107299"
   },
   {
-    "n": 16,
-    "citation": "Varoquaux, Gaël, Pradeep Reddy Raamana, Denis A. Engemann, Andrés Hoyos-Idrobo, Yannick Schwartz, and Bertrand Thirion. 2017. \"Assessing and Tuning Brain Decoders: Cross-Validation, Caveats, and Guidelines.\" *NeuroImage* 145: 166-179. DOI: 10.1016/j.neuroimage.2016.10.038.",
+    "n": 18,
+    "citation": "Varoquaux, G., Raamana, P. R., Engemann, D. A., Hoyos-Idrobo, A., Schwartz, Y., & Thirion, B. (2017). Assessing and tuning brain decoders: Cross-validation, caveats, and guidelines. *NeuroImage, 145*, 166–179. https://doi.org/10.1016/j.neuroimage.2016.10.038",
     "status": "verified",
     "url": "https://doi.org/10.1016/j.neuroimage.2016.10.038",
     "checked_against": "crossref",

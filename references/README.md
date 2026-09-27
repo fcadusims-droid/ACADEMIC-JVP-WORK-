@@ -38,6 +38,13 @@ disagree. So a citation cannot be added or edited without being checked again.
 
 ## Result
 
+**27 September 2026.** All three papers were replaced by new versions with APA-style reference
+lists (37, 13 and 18 references). `verify.py` gained an APA parser, and every reference was checked
+again. 62 matched automatically and 6 needed a manual review (recorded in `build_records.py`). Two
+were corrected, with the author's permission: Bykvist 2021 (end page 1336 and DOI added) and
+Iyengar et al. 1996 (journal section, issue, R-prefixed pages and DOI added). No cited work was
+found to be fabricated. The account below describes the audit of the earlier versions.
+
 The audit covered 144 references on 2026-09-23. Paper 1 then gained four references (Ullmann-Margalit 2006, de Blanc 2011, Carroll et al. 2024 and Villiger 2024), each checked in the same way. Its theological sections, and the 22 references cited only there, then moved to `drafts/theological_companion.md` (records: `theological_companion.json`). The table shows the current state.
 
 
