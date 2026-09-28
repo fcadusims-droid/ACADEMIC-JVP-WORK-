@@ -119,7 +119,7 @@
   },
   {
     "n": 14,
-    "citation": "Pernet, C., Garrido, M. I., Gramfort, A., Maurits, N., Michel, C. M., Pang, E., et al. (2020). Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. *Nature Neuroscience, 23*, 1473–1483. https://doi.org/10.1038/s41593-020-00709-0",
+    "citation": "Pernet, C., Garrido, M. I., Gramfort, A., Maurits, N., Michel, C. M., Pang, E., et al. (2020). Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. *Nature Neuroscience, 23*(12), 1473–1483. https://doi.org/10.1038/s41593-020-00709-0",
     "status": "verified",
     "url": "https://doi.org/10.1038/s41593-020-00709-0",
     "checked_against": "crossref",
@@ -128,6 +128,15 @@
   },
   {
     "n": 15,
+    "citation": "Pollard, T., Moody, B. E., Lehman, L.-W. H., Gow, B. J., Fernandes, C., Xie, C., et al. (2026). PhysioNet as a global platform for biomedical research. *Nature Health, 1*(8), 792–795. https://doi.org/10.1038/s44360-026-00096-z",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/s44360-026-00096-z",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/s44360-026-00096-z"
+  },
+  {
+    "n": 16,
     "citation": "Schalk, G., McFarland, D. J., Hinterberger, T., Birbaumer, N., & Wolpaw, J. R. (2004). BCI2000: A general-purpose brain–computer interface (BCI) system. *IEEE Transactions on Biomedical Engineering, 51*(6), 1034–1043.",
     "status": "verified",
     "url": "https://doi.org/10.1109/tbme.2004.827072",
@@ -136,7 +145,7 @@
     "doi": "10.1109/tbme.2004.827072"
   },
   {
-    "n": 16,
+    "n": 17,
     "citation": "Schroeder, F., Fairclough, S., Dehais, F., & Richins, M. (2025). The impact of cross-validation choices on pBCI classification metrics: Lessons for transparent reporting. *Frontiers in Neuroergonomics, 6*, 1582724. https://doi.org/10.3389/fnrgo.2025.1582724",
     "status": "verified",
     "url": "https://doi.org/10.3389/fnrgo.2025.1582724",
@@ -145,7 +154,7 @@
     "doi": "10.3389/fnrgo.2025.1582724"
   },
   {
-    "n": 17,
+    "n": 18,
     "citation": "Truong, C., Oudre, L., & Vayatis, N. (2020). Selective review of offline change point detection methods. *Signal Processing, 167*, 107299.",
     "status": "verified",
     "url": "https://doi.org/10.1016/j.sigpro.2019.107299",
@@ -154,7 +163,7 @@
     "doi": "10.1016/j.sigpro.2019.107299"
   },
   {
-    "n": 18,
+    "n": 19,
     "citation": "Varoquaux, G., Raamana, P. R., Engemann, D. A., Hoyos-Idrobo, A., Schwartz, Y., & Thirion, B. (2017). Assessing and tuning brain decoders: Cross-validation, caveats, and guidelines. *NeuroImage, 145*, 166–179. https://doi.org/10.1016/j.neuroimage.2016.10.038",
     "status": "verified",
     "url": "https://doi.org/10.1016/j.neuroimage.2016.10.038",

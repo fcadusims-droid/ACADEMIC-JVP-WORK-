@@ -103,7 +103,7 @@ PAPERS = [
                  "is a condition on manner: grace heals the capacity rather than installing "
                  "values. Certainty of grace cannot rest on introspection.",
         "status": "First version (28 September 2026). Analytic theology; no experiments. "
-                  "Some source locators are still marked for confirmation. Not submitted.",
+                  "Not submitted.",
         "experiments_note": "",
         "content": "paper4.md", "dir": None,
     },

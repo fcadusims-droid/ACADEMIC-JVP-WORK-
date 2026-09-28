@@ -261,7 +261,7 @@
     "auto_status": "MATCH"
   },
   {
-    "raw": "Carroll, M., Chan, A., Ashton, H., & Krueger, D. (2023). Characterizing manipulation from AI systems. In *Proceedings of the 3rd ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization (EAAMO '23)*. https://doi.org/10.1145/3617694.3623226",
+    "raw": "Carroll, M., Chan, A., Ashton, H., & Krueger, D. (2023). Characterizing manipulation from AI systems. In *Proceedings of the 3rd ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization (EAAMO '23)* (pp. 1–13). Association for Computing Machinery. https://doi.org/10.1145/3617694.3623226",
     "style": "apa",
     "surname": "Carroll",
     "year": 2023,
@@ -517,7 +517,7 @@
     "auto_problems": []
   },
   {
-    "raw": "Hadfield-Menell, D., Russell, S. J., Abbeel, P., & Dragan, A. (2016). Cooperative inverse reinforcement learning. In *Advances in Neural Information Processing Systems 29*.",
+    "raw": "Hadfield-Menell, D., Dragan, A., Abbeel, P., & Russell, S. (2016). Cooperative inverse reinforcement learning. In *Advances in Neural Information Processing Systems 29*.",
     "style": "apa",
     "surname": "Hadfield-Menell",
     "year": 2016,
@@ -882,30 +882,29 @@
     "auto_problems": []
   },
   {
-    "raw": "Soares, N., Fallenstein, B., Yudkowsky, E., & Armstrong, S. (2015). Corrigibility. In *AAAI Workshop on AI and Ethics* (pp. 74–82).",
+    "raw": "Soares, N., Fallenstein, B., Yudkowsky, E., & Armstrong, S. (2015). Corrigibility. In *Artificial Intelligence and Ethics: Papers from the 2015 AAAI Workshop* (pp. 74–82). AAAI Press.",
     "style": "apa",
     "surname": "Soares",
     "year": 2015,
-    "doi": "10.1007/s43681-024-00484-9",
+    "doi": "10.1609/aaai.v29i1.9763",
     "arxiv": null,
     "title": "Corrigibility",
-    "container": "AAAI Workshop on AI and Ethics",
+    "container": "Artificial Intelligence and Ethics: Papers from the 2015 AAAI Workshop",
     "source": "crossref",
-    "url": "https://doi.org/10.1007/s43681-024-00484-9",
-    "found_title": "Addressing corrigibility in near-future AI systems",
-    "found_container": "AI and Ethics",
+    "url": "https://doi.org/10.1609/aaai.v29i1.9763",
+    "found_title": "Compile!",
+    "found_container": "Proceedings of the AAAI Conference on Artificial Intelligence",
     "found_authors": [
-      "Firt"
+      "Marquis"
     ],
-    "found_year": 2025,
-    "found_volume": "5",
-    "found_page": "1481-1490",
-    "title_similarity": 0.413,
+    "found_year": 2015,
+    "found_volume": "29",
+    "found_page": null,
+    "title_similarity": 0.4,
     "auto_status": "NOMATCH",
     "auto_problems": [
       "title",
-      "author",
-      "year"
+      "author"
     ]
   },
   {

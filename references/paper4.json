@@ -218,11 +218,12 @@
   },
   {
     "n": 26,
-    "citation": "Lossky, Vladimir. 1957. *The Mystical Theology of the Eastern Church*. London: James Clarke. [LOCATOR TO BE CONFIRMED.]",
+    "citation": "Lossky, Vladimir. 1976. *The Mystical Theology of the Eastern Church*. Crestwood, NY: St Vladimir's Seminary Press. First published in English, London: James Clarke, 1957; French original 1944.",
     "status": "verified",
-    "url": "https://openlibrary.org/works/OL12055538W",
+    "url": "https://openlibrary.org/isbn/0913836311",
     "checked_against": "openlibrary",
-    "automated_pass": "MATCH"
+    "automated_pass": "MATCH",
+    "manual_review": "St Vladimir's Seminary Press edition (ISBN 0913836311) of the 1957 James Clarke translation; Open Library lists a 1997 printing of it, and the SVS edition dates from 1976. The page locators 126-27 for the quoted passages were not checked against the text."
   },
   {
     "n": 27,
@@ -243,7 +244,7 @@
   },
   {
     "n": 29,
-    "citation": "Perazzolo, João Vitor. 2026. \"The Cybernetic Limits of Conversion: Why Models That Direct Value Change Cannot Tell Conversion from Manipulation.\" Manuscript. [ANONYMIZE FOR REVIEW.]",
+    "citation": "Perazzolo, João Vitor. 2026. \"The Cybernetic Limits of Conversion: Why Models That Direct Value Change Cannot Tell Conversion from Manipulation.\" Unpublished manuscript.",
     "status": "verified",
     "url": "https://github.com/fcadusims-droid/ACADEMIC-JVP-WORK-/blob/main/Paper1.md",
     "checked_against": "manual",

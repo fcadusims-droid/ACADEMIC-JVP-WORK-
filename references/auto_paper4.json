@@ -587,9 +587,9 @@
     "auto_status": "MATCH"
   },
   {
-    "raw": "Lossky, Vladimir. 1957. *The Mystical Theology of the Eastern Church*. London: James Clarke. [LOCATOR TO BE CONFIRMED.]",
+    "raw": "Lossky, Vladimir. 1976. *The Mystical Theology of the Eastern Church*. Crestwood, NY: St Vladimir's Seminary Press. First published in English, London: James Clarke, 1957; French original 1944.",
     "surname": "Lossky",
-    "year": 1957,
+    "year": 1976,
     "title": "The Mystical Theology of the Eastern Church",
     "container": null,
     "book": true,
@@ -657,24 +657,24 @@
     "auto_status": "MATCH"
   },
   {
-    "raw": "Perazzolo, João Vitor. 2026. \"The Cybernetic Limits of Conversion: Why Models That Direct Value Change Cannot Tell Conversion from Manipulation.\" Manuscript. [ANONYMIZE FOR REVIEW.]",
+    "raw": "Perazzolo, João Vitor. 2026. \"The Cybernetic Limits of Conversion: Why Models That Direct Value Change Cannot Tell Conversion from Manipulation.\" Unpublished manuscript.",
     "surname": "Perazzolo",
     "year": 2026,
     "title": "The Cybernetic Limits of Conversion: Why Models That Direct Value Change Cannot Tell Conversion from Manipulation",
     "container": null,
-    "doi": "10.21203/rs.3.rs-8856269/v1",
+    "doi": "10.2139/ssrn.6782841",
     "arxiv": null,
     "source": "crossref",
-    "url": "https://doi.org/10.21203/rs.3.rs-8856269/v1",
-    "found_title": "The Algorithmic Calculation Problem: Why Foundation Models Cannot Solve Socialist Planning",
+    "url": "https://doi.org/10.2139/ssrn.6782841",
+    "found_title": "The Limits of Persuasion: Why an Appeal Cannot Cut India's Crude Bill",
     "found_container": "",
     "found_authors": [
-      "Wright"
+      "Sharma"
     ],
     "found_year": 2026,
     "found_volume": null,
     "found_page": null,
-    "title_similarity": 0.428,
+    "title_similarity": 0.444,
     "auto_status": "NOMATCH",
     "auto_problems": [
       "title",

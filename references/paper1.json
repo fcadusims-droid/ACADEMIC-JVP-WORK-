@@ -81,7 +81,7 @@
   },
   {
     "n": 10,
-    "citation": "Carroll, M., Chan, A., Ashton, H., & Krueger, D. (2023). Characterizing manipulation from AI systems. In *Proceedings of the 3rd ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization (EAAMO '23)*. https://doi.org/10.1145/3617694.3623226",
+    "citation": "Carroll, M., Chan, A., Ashton, H., & Krueger, D. (2023). Characterizing manipulation from AI systems. In *Proceedings of the 3rd ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization (EAAMO '23)* (pp. 1–13). Association for Computing Machinery. https://doi.org/10.1145/3617694.3623226",
     "status": "verified",
     "url": "https://doi.org/10.1145/3617694.3623226",
     "checked_against": "crossref",
@@ -167,7 +167,7 @@
   },
   {
     "n": 20,
-    "citation": "Hadfield-Menell, D., Russell, S. J., Abbeel, P., & Dragan, A. (2016). Cooperative inverse reinforcement learning. In *Advances in Neural Information Processing Systems 29*.",
+    "citation": "Hadfield-Menell, D., Dragan, A., Abbeel, P., & Russell, S. (2016). Cooperative inverse reinforcement learning. In *Advances in Neural Information Processing Systems 29*.",
     "status": "verified",
     "url": "https://papers.nips.cc/paper/6420-cooperative-inverse-reinforcement-learning",
     "checked_against": "manual",
@@ -290,7 +290,7 @@
   },
   {
     "n": 34,
-    "citation": "Soares, N., Fallenstein, B., Yudkowsky, E., & Armstrong, S. (2015). Corrigibility. In *AAAI Workshop on AI and Ethics* (pp. 74–82).",
+    "citation": "Soares, N., Fallenstein, B., Yudkowsky, E., & Armstrong, S. (2015). Corrigibility. In *Artificial Intelligence and Ethics: Papers from the 2015 AAAI Workshop* (pp. 74–82). AAAI Press.",
     "status": "verified",
     "url": "https://intelligence.org/files/Corrigibility.pdf",
     "checked_against": "manual",
