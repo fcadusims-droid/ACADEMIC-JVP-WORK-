@@ -569,3 +569,5 @@ p code, li code, td code { overflow-wrap: anywhere; }
 .tag.use-earlier { background: color-mix(in srgb, var(--ink-faint) 14%, transparent); color: var(--ink-soft); }
 .use-note.use-earlier { border-color: var(--ink-faint); }
 .use-note.use-current { border-color: var(--ok); }
+.tag.use-supplementary { background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); }
+.use-note.use-supplementary { border-color: var(--accent); }

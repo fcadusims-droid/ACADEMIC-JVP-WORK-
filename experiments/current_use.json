@@ -1,5 +1,5 @@
 {
-  "_note": "Whether each committed experiment supports the current (27 September 2026) text of its paper. 'current': the paper reports or relies on it. 'earlier': it tested a claim of an earlier version; it stays in the record. Section numbers are those of the current text. Pre-registrations keep the section numbers of the version they were written against.",
+  "_note": "Whether each committed experiment supports the current (27 September 2026) text of its paper. 'current': the paper reports or relies on it. 'supplementary': it bears on the current text but the text does not cite it. 'earlier': it tested a claim of an earlier version; it stays in the record. Section numbers are those of the current text. Pre-registrations keep the section numbers of the version they were written against.",
   "experiments": {
     "abc_real_eeg": {
       "use": "earlier",
@@ -252,6 +252,10 @@
     "value_base_discontinuity_probe": {
       "use": "earlier",
       "note": "Tested a claim of an earlier version of Paper 1 (the trichotomy, Class G, the escape horn or the exogenous-cost curve). The 27 September 2026 text does not use it."
+    },
+    "model_indiscernibility": {
+      "use": "supplementary",
+      "note": "Paper 1 §§4-6: implementations of the value-change models discussed there, run on matched conversions and manipulations in a small causal model of an agent; also the §6.8 counterfactual benchmark and the two ways out of §5.4. Pre-registered and run on 28 September 2026. Not cited in the current text."
     }
   }
 }
