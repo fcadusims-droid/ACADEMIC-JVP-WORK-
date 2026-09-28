@@ -4,8 +4,6 @@ João Vitor Perazzolo
 
 28 September 2026
 
-[TITLE PAGE: REMOVE AUTHOR NAME AND ALL SELF-CITATIONS FROM THE ANONYMIZED MANUSCRIPT, PER THE JOURNAL'S "ENSURING AN ANONYMOUS REVIEW".]
-
 ---
 
 ## Abstract
@@ -52,7 +50,7 @@ The Canons of Dort head their Third and Fourth Main Points "Of the Corruption of
 
 The Formula of Concord holds that "God does not force man to become godly," but draws him "in such a way that his darkened understanding is turned into an enlightened one and his perverse will into an obedient one." The impulse of the Spirit "is not a *coactio*, or coercion" (Solid Declaration II.60, II.64).
 
-Eastern Orthodox theology characteristically describes the relation between grace and freedom as *synergeia*, a co-working of divine and human energies. [SOURCE AND LOCATOR TO BE CONFIRMED: Lossky 1957; the page could not be verified.]
+Eastern Orthodox theology describes the relation as a co-working of two wills. For Lossky, deification requires "the concurrence of two wills": "the divine and deifying will granting grace," and "the human will which submits to the will of God in receiving grace and making it its own" (1976, 126–27).
 
 ### 2.3 Where the traditions disagree
 
@@ -205,7 +203,7 @@ A source condition says that God was causally involved. That is a presence condi
 
 If "caused by God" were sufficient for grace, then a change produced by God in the way Diana produces Ernie's act would count as grace. The difference between grace and manipulation would then be a difference of who acts, not how. That is not what the traditions of §2 say. They do not claim merely that God is not a manipulator. They claim that grace does not work as a manipulator works: not on stocks and blocks, not on something inanimate.
 
-The free-will literature has drawn the consequence explicitly. Manipulation arguments have been applied to divine determinism at length (Furlong 2019, ch. 3). Divine election and hardening have been argued to make God resemble a covert manipulator, posing "significant challenges" for Christian divine determinists (Visala 2023). One compatibilist reply to manipulation arguments locates the difference in causal sourcehood: the source of a manipulated agent's action "lies outside of the agent in the intentions of the manipulator" (Deery and Nahmias 2017, abstract). Applied to a God who intends a particular conversion, that criterion appears to put divine determination on the side of manipulation rather than rescue it. A source condition therefore needs a manner condition as much as any other account does.
+The free-will literature has drawn the consequence explicitly. Manipulation arguments have been applied to divine determinism at length (Furlong 2019, ch. 3). Divine election and hardening have been argued to make God resemble a covert manipulator, posing "significant challenges" for Christian divine determinists (Visala 2023). One compatibilist reply to manipulation arguments locates the difference in causal sourcehood: the source of a manipulated agent's action "lies outside of the agent in the intentions of the manipulator" (Deery and Nahmias 2017, 1255). Applied to a God who intends a particular conversion, that criterion appears to put divine determination on the side of manipulation rather than rescue it. A source condition therefore needs a manner condition as much as any other account does.
 
 ### 5.3 The non-competition reply
 
@@ -282,10 +280,11 @@ Three observations follow.
 - Dort says that grace "quickens, heals, corrects" the will and that "the true and spiritual restoration and freedom of our will" consists in the obedience that follows (III/IV, art. 16).
 - Aquinas describes habitual grace as "a habitual gift whereby corrupted human nature is healed, and after being healed is lifted up" (*ST* I-II q. 109 a. 9). He says that God moves "everything in its own manner" (q. 113 a. 3).
 - Edwards describes the new sense as "not a new faculty ... but ... a new foundation laid in the nature of the soul."
+- Lossky says the human will "acts by grace to the extent in which nature participates in grace, in which the likeness is restored" (1976, 127).
 
 **Operating and cooperating grace.** On this reading, operating grace is the restoration, $do(C = c^*)$, and cooperating grace is the agent's activity under the restored capacity. This also reconciles two formulas that look opposed. Trent denies that the will is passive "as something inanimate." Westminster holds that the person is "altogether passive" until "quickened and renewed" and so "enabled to answer." In restoration the agent is passive as a patient is passive in being healed, not as a stone is passive. Once restored, the will "becomes itself active" (Dort III/IV, art. 12). The two formulas may still disagree about when the agent's activity begins. They need not disagree about what grace acts on.
 
-**Relation to Deery and Nahmias.** The proposal is related to Deery and Nahmias's (2017) interventionist treatment of manipulation, but it asks a different question. They ask where the causal source of an action lies. The target condition asks which variable in the agent's evaluative life an influence sets. [THE AUTHOR SHOULD READ DEERY AND NAHMIAS IN FULL AND CONFIRM THIS DIFFERENCE BEFORE SUBMISSION.]
+**Relation to Deery and Nahmias.** The proposal is related to Deery and Nahmias's (2017) interventionist treatment of manipulation, but it asks a different question. They ask where the causal source of an action lies. The target condition asks which variable in the agent's evaluative life an influence sets.
 
 ### 6.4 What the condition does not settle
 
@@ -371,7 +370,7 @@ What remains is a condition on manner. The proposal of §6 is that grace, as the
 
 ## Notes
 
-[^1]: **Note on primary sources.** Aquinas's *Summa Theologiae* is cited by part, question and article, in the translation of the Fathers of the English Dominican Province. Augustine is cited by work and section: *Sermo* 169.11.13 in Latin from the Nuova Biblioteca Agostiniana text, and *De correptione et gratia* 13.40 from the Nicene and Post-Nicene Fathers translation. Conciliar and confessional texts are cited by session, chapter and canon, or by chapter and section. The Council of Orange (529) is quoted in the widely reproduced English translation; Trent, Session VI, in the translation reproduced at papalencyclicals.net; the Canons of Dort in the traditional English translation; the Formula of Concord in the *Triglot Concordia* translation; and the Westminster Confession in the text of the Orthodox Presbyterian Church. Calvin's *Institutes* are quoted in Henry Beveridge's translation. Edwards's *Religious Affections* is quoted from the 1746 text as reproduced by the Christian Classics Ethereal Library and cited by part and sign. [BEFORE SUBMISSION: REPLACE ONLINE TEXTS WITH CRITICAL EDITIONS WHERE REQUIRED, including Denzinger–Hünermann numbers for Orange and Trent and page references to the Yale edition of Edwards (*Works of Jonathan Edwards*, vol. 2, ed. John E. Smith, 1959).]
+[^1]: **Note on primary sources.** Aquinas's *Summa Theologiae* is cited by part, question and article, in the translation of the Fathers of the English Dominican Province. Augustine is cited by work and section: *Sermo* 169.11.13 in Latin from the Nuova Biblioteca Agostiniana text, and *De correptione et gratia* 13.40 from the Nicene and Post-Nicene Fathers translation. Conciliar and confessional texts are cited by session, chapter and canon, or by chapter and section. The Council of Orange (529) is quoted in the widely reproduced English translation; Trent, Session VI, in the translation reproduced at papalencyclicals.net; the Canons of Dort in the traditional English translation; the Formula of Concord in the *Triglot Concordia* translation; and the Westminster Confession in the text of the Orthodox Presbyterian Church. Calvin's *Institutes* are quoted in Henry Beveridge's translation. Edwards's *Religious Affections* is quoted from the 1746 text as reproduced by the Christian Classics Ethereal Library and cited by part and sign.
 
 [^2]: The notation $do(\cdot)$ marks an intervention that sets a variable's value, as in interventionist accounts of causation. Nothing in the argument depends on a particular formal theory of causation. The variables are coarse: $C$, for instance, stands for whatever subserves the agent's responsiveness to reasons of value. The claim is only that the difference between restoration and installation is a difference in which variable an influence sets, and, for influences on $X$, whether they fix its outcome.
 
@@ -379,7 +378,7 @@ What remains is a condition on manner. The proposal of §6 is that grace, as the
 
 ## Statements and Declarations
 
-**Use of generative AI.** This manuscript was drafted by Claude (Anthropic), a large language model, on 28 September 2026. It was based on the author's outline and earlier theological drafts and followed the author's decisions about thesis and scope. The proposal in §6.3 originated in that drafting and is marked in the text as a proposal. The author reviewed each argument, revised the text and takes full responsibility for the content. [AUTHOR TO CONFIRM OR AMEND BEFORE SUBMISSION.]
+**Use of generative AI.** This manuscript was drafted by Claude (Anthropic), a large language model, on 28 September 2026. It was based on the author's outline and earlier theological drafts and followed the author's decisions about thesis and scope. The proposal in §6.3 originated in that drafting and is marked in the text as a proposal. The author reviewed each argument, revised the text and takes full responsibility for the content.
 
 **Competing interests.** The author declares no competing interests.
 
@@ -443,13 +442,13 @@ Kittle, Simon. 2015. "Grace and Free Will: Quiescence and Control." *Journal of 
 
 Lonergan, Bernard. 1972. *Method in Theology*. London: Darton, Longman & Todd.
 
-Lossky, Vladimir. 1957. *The Mystical Theology of the Eastern Church*. London: James Clarke. [LOCATOR TO BE CONFIRMED.]
+Lossky, Vladimir. 1976. *The Mystical Theology of the Eastern Church*. Crestwood, NY: St Vladimir's Seminary Press. First published in English, London: James Clarke, 1957; French original 1944.
 
 Mele, Alfred R. 1995. *Autonomous Agents: From Self-Control to Autonomy*. New York: Oxford University Press.
 
 Mele, Alfred R. 2006. *Free Will and Luck*. New York: Oxford University Press.
 
-Perazzolo, João Vitor. 2026. "The Cybernetic Limits of Conversion: Why Models That Direct Value Change Cannot Tell Conversion from Manipulation." Manuscript. [ANONYMIZE FOR REVIEW.]
+Perazzolo, João Vitor. 2026. "The Cybernetic Limits of Conversion: Why Models That Direct Value Change Cannot Tell Conversion from Manipulation." Unpublished manuscript.
 
 Pereboom, Derk. 2001. *Living Without Free Will*. Cambridge: Cambridge University Press.
 
