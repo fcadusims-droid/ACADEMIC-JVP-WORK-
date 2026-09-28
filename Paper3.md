@@ -42,7 +42,7 @@ The record is useful for three reasons. It shows how each trap operated on real 
 
 ### 2.1 Data
 
-Two public PhysioNet corpora were used (Goldberger et al. 2000).
+Two public PhysioNet corpora were used (Goldberger et al. 2000; Pollard et al. 2026).
 
 **EEG Motor Movement/Imagery Database** (Schalk et al. 2004). We used the one-minute eyes-open (run R01) and eyes-closed (run R02) baselines and the rest intervals (T0) of task runs R03 and R07, in 15 subjects. Analyses used seven occipito-parietal channels (O1, Oz, O2, PO3, POz, PO4, Pz), band-pass filtered to 8–13 Hz except where stated.
 
@@ -90,7 +90,7 @@ This control differs from the method under test in three ways at once: the class
 
 ### 2.7 Literature survey
 
-A fixed Europe PMC query, `(EEG OR electroencephalogra*) AND ("Riemannian" OR "covariance matrices" OR "SPD matrices") AND OPEN_ACCESS:y AND PUB_YEAR:[2012 TO 2025]`, was walked in the order returned. The first 20 eligible studies were included; 7 were screened out on the way (for example, fNIRS-only or MEG-only studies, or studies without covariance features). For each study and trap, a code of Yes (left open), No (addressed), Unclear or Not applicable was assigned by rules fixed in advance, and the sentence supporting each code was archived. The survey measures what studies report, not whether a trap was present. There was one coder. An intra-rater re-coding after at least two weeks, blind to the first codes, is planned as a check on coding stability, not before 7 October 2026; it is not a substitute for an independent second coder.
+A fixed Europe PMC query, `(EEG OR electroencephalogra*) AND ("Riemannian" OR "covariance matrices" OR "SPD matrices") AND OPEN_ACCESS:y AND PUB_YEAR:[2012 TO 2025]`, was walked in the order returned. The first 20 eligible studies were included; 7 were screened out on the way (for example, fNIRS-only or MEG-only studies, or studies without covariance features). For each study and trap, a code of Yes (left open), No (addressed), Unclear or Not applicable was assigned by rules fixed in advance, and the sentence supporting each code was archived. The survey measures what studies report, not whether a trap was present. There was one coder. An intra-rater re-coding after at least two weeks, blind to the first codes, is planned as a check on coding stability; it is not a substitute for an independent second coder.
 
 ### 2.8 Statistics
 
@@ -132,7 +132,7 @@ The same asymmetry was present in the method's one out-of-sample detection succe
 
 None of the four applicable traps moved the standard pipeline past its pre-specified bar (Table 1). Shuffled folds exceeded blocked folds by a median of 0.009 over 151 recordings in within-recording N2-versus-REM classification. Grouping folds by recording or by subject changed pooled accuracy by 0.001. Removing EOG lowered median subject-level accuracy by 0.007. On two same-state recordings, blocked cross-validation gave a median balanced accuracy of 0.65, against 0.87 for eyes open versus closed: below the bar of 0.70, but above chance.
 
-Two qualifications apply. The epochs were non-overlapping, so the small shuffled-minus-blocked difference shows that this epoch design does not create the dependence, not that the classifier resists it. Standard practice does not guard against it by construction: the pyRiemann motor-imagery example cross-validates with shuffled k-fold over epochs, which is harmless on interleaved trial designs and not on block designs (Schroeder et al. 2025). And the 0.65 on same-state recordings shows that the recording confound is not zero for the standard pipeline either.
+Two qualifications apply. The epochs were non-overlapping, so the small shuffled-minus-blocked difference shows that this epoch design does not create the dependence, not that the classifier resists it. Standard practice does not guard against it by construction: the pyRiemann motor-imagery example cross-validates with shuffled k-fold over epochs (Barachant et al. n.d.), which is harmless on interleaved trial designs and not on block designs (Schroeder et al. 2025). And the 0.65 on same-state recordings shows that the recording confound is not zero for the standard pipeline either.
 
 ### 3.7 Matched control
 
@@ -164,7 +164,7 @@ Of the 20 included studies, trap codes were as follows (Yes = left open; the ran
 - classes confounded with recordings: 1 of 17 (1–3 of 17);
 - centre bias: not applicable to any study, none of which localized a transition in time.
 
-A Yes for ocular handling means that no handling was reported, not that the study was contaminated. One included study measured the dependence trap directly for the standard classifier on block-design n-back data, finding accuracy differences of up to 12.7% between cross-validation that respected the block structure and cross-validation that did not (Schroeder et al. 2025). [Intra-rater agreement: RESULT R3.4 — pending experiment E3.4, not before 7 October 2026]
+A Yes for ocular handling means that no handling was reported, not that the study was contaminated. One included study measured the dependence trap directly for the standard classifier on block-design n-back data, finding accuracy differences of up to 12.7% between cross-validation that respected the block structure and cross-validation that did not (Schroeder et al. 2025).
 
 **Table 1.** Summary of the five traps.
 
@@ -214,13 +214,13 @@ A trace-normalized SPD geometry read through a geodesic change-point statistic a
 
 ## Declarations
 
-**Use of generative AI.** The analyses, code and text of the underlying project were developed with substantial assistance from a large language model (Claude, Anthropic), and this manuscript was drafted by that model on 27 September 2026 from the author's earlier drafts and experimental record. Several of the traps reported here were introduced and then caught within that process. The author reviewed the manuscript and takes full responsibility for its content. Readers are asked to re-run the archived analyses rather than rely on the reported numbers. [AUTHOR TO CONFIRM OR AMEND BEFORE SUBMISSION.]
+**Use of generative AI.** The analyses, code and text of the underlying project were developed with substantial assistance from a large language model (Claude, Anthropic), and this manuscript was drafted by that model on 27 September 2026 from the author's earlier drafts and experimental record. Several of the traps reported here were introduced and then caught within that process. The author reviewed the manuscript and takes full responsibility for its content. Readers are asked to re-run the archived analyses rather than rely on the reported numbers.
 
 **CRediT authorship contribution statement.** João Vitor Perazzolo: Conceptualization, Methodology, Software, Formal analysis, Investigation, Data curation, Writing – review and editing, Visualization.
 
 **Ethics.** The study used only publicly available, de-identified data. No ethical approval was required.
 
-**Data and code availability.** Data are available from PhysioNet. Code, analysis plans and raw results are available in the author's repository (`experiments/paper3_geodesic_kinematics/`, `experiments/_results/`). [LINK AND COMMIT HASH TO BE ADDED.]
+**Data and code availability.** Data are available from PhysioNet. Code, analysis plans and raw results are available in the author's repository, https://github.com/fcadusims-droid/ACADEMIC-JVP-WORK- (`experiments/paper3_geodesic_kinematics/`, `experiments/_results/`; pre-registration of the §2.6 analyses `fbe4b6f`, results `46b168f`).
 
 **Competing interests.** None.
 
@@ -256,7 +256,9 @@ Li, R., Johansen, J. S., Ahmed, H., Ilyevsky, T. V., Wilbur, R. B., Bharadwaj, H
 
 Pennec, X., Fillard, P., & Ayache, N. (2006). A Riemannian framework for tensor computing. *International Journal of Computer Vision, 66*(1), 41–66.
 
-Pernet, C., Garrido, M. I., Gramfort, A., Maurits, N., Michel, C. M., Pang, E., et al. (2020). Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. *Nature Neuroscience, 23*, 1473–1483. https://doi.org/10.1038/s41593-020-00709-0
+Pernet, C., Garrido, M. I., Gramfort, A., Maurits, N., Michel, C. M., Pang, E., et al. (2020). Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. *Nature Neuroscience, 23*(12), 1473–1483. https://doi.org/10.1038/s41593-020-00709-0
+
+Pollard, T., Moody, B. E., Lehman, L.-W. H., Gow, B. J., Fernandes, C., Xie, C., et al. (2026). PhysioNet as a global platform for biomedical research. *Nature Health, 1*(8), 792–795. https://doi.org/10.1038/s44360-026-00096-z
 
 Schalk, G., McFarland, D. J., Hinterberger, T., Birbaumer, N., & Wolpaw, J. R. (2004). BCI2000: A general-purpose brain–computer interface (BCI) system. *IEEE Transactions on Biomedical Engineering, 51*(6), 1034–1043.
 
