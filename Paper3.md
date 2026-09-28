@@ -8,15 +8,15 @@ João Vitor Perazzolo
 
 ## Abstract
 
-**Background.** Validation of EEG methods can be inflated by features of the evaluation design unrelated to whether the method works. Such traps are well described in general but rarely reported as they occur in one project.
+**Background.** EEG validation results can be inflated by evaluation designs unrelated to whether a method works. Such traps are rarely reported as they occur.
 
 **New method.** We report the full validation record of a method that reads trace-normalized channel covariances on the symmetric positive-definite (SPD) manifold through a geodesic cumulative-sum (CUSUM) change-point statistic.
 
 **Results.** Five traps inflated performance: localization windows centred on the transition, nulls ignoring dependence between windows, recordings counted as subjects, an eye channel inside the covariance, and conditions confounded with recordings. After correction, the method's lead over a scalar power detector disappeared (59/151 against 67/151 sleep transitions localized; McNemar p ≈ 0.38), and a sleep-staging association fell from Cramér's V = 0.452 to 0.021 without the eye channel.
 
-**Comparison with existing methods.** The standard minimum-distance-to-Riemannian-mean pipeline crossed none of the pre-specified bars on the same data, though it partly separated two recordings of one state (balanced accuracy 0.65). Relative alpha power separated eyes open from closed more strongly than the geometry. In 20 published covariance-based EEG studies, ocular contamination could not be ruled out in 7–15 of 19 and dependence-blind validation in 4–12 of 19.
+**Comparison with existing methods.** The standard minimum-distance-to-Riemannian-mean pipeline crossed none of the pre-specified bars. Given trace-normalized, overlapping covariances, it became dependent on the eye channel (accuracy drop 0.092 against 0.007) but showed no other trap. There was no evidence that the geometry adds information beyond relative alpha power (Wilcoxon p = 0.76), and with 64 channels its state detection fell below chance (AUC 0.41). In 20 published covariance-based EEG studies, ocular contamination could not be ruled out in 7–15 of 19 and dependence-blind validation in 4–12 of 19.
 
-**Conclusions.** The traps most plausibly belonged to the design, pending a matched control: band-pass filtering followed by trace normalization removes relative band amplitude and leaves correlation structure, where artefacts dominate. We recommend six controls.
+**Conclusions.** One trap, ocular dependence, belonged to the design, most plausibly to trace normalization, which removes amplitude and leaves correlation structure, where the eye channel weighed most. The others arose in how the method was evaluated. We recommend six controls.
 
 **Keywords:** EEG; covariance matrices; Riemannian geometry; change-point detection; cross-validation; negative results
 
@@ -25,7 +25,7 @@ João Vitor Perazzolo
 - A covariance-geometry EEG method passed five validations later controls reversed.
 - Each false pass had an ordinary cause, from centred windows to eye channels.
 - The standard Riemannian pipeline crossed no pre-specified bar on the same data.
-- Trace normalization after band-pass filtering discards relative band amplitude.
+- With this method's covariances, the standard classifier relied on the eye channel.
 - Published covariance-EEG studies often omit the controls that expose these traps.
 
 ---
@@ -52,7 +52,7 @@ All data are de-identified and publicly available. No new data were collected.
 
 ### 2.2 The method under test
 
-**Representation.** The band-passed, standardized signal was cut into overlapping windows: 1 s with a 0.25 s step for the eyes-open/closed analyses, and 2 s with a 1 s step for sleep. Each window's channel covariance was floored at a small eigenvalue and divided by its trace, which places it on the manifold of unit-trace SPD matrices and removes overall power: two windows that differ by a gain factor map to the same point. Matrices were compared under the square-root (Bures-type) metric, in which $\rho \mapsto \sqrt{\rho}$ embeds unit-trace SPD matrices in a sphere and geodesic distance is arc length between embedded points (Bhatia 2007; see Pennec et al. 2006 for the affine-invariant alternative).
+**Representation.** The band-passed, standardized signal was cut into overlapping windows: 1 s with a 0.25 s step for the eyes-open/closed analyses, and 2 s with a 1 s step for sleep. Each window's channel covariance was floored at a small eigenvalue and divided by its trace, which places it on the manifold of unit-trace SPD matrices and removes overall power: two windows that differ by a gain factor map to the same point. Matrices were compared under the square-root metric, in which $\rho \mapsto \sqrt{\rho}$ embeds unit-trace SPD matrices in a sphere and geodesic distance is arc length between embedded points (Bhatia 2007; see Pennec et al. 2006 for the affine-invariant alternative).
 
 **Localization.** The embedded coordinates were accumulated in a multivariate CUSUM, and the change point was taken as the argmax of $|S_t|$.
 
@@ -76,7 +76,7 @@ For sleep, the transition in each recording was the first stage boundary involvi
 
 ### 2.5 Standard-pipeline control
 
-To separate traps of this method from traps of the field, the standard pipeline was put through the same controls: covariance estimation with oracle approximating shrinkage (Chen et al. 2010) followed by minimum distance to Riemannian mean (MDM; Barachant et al. 2012), as implemented in pyRiemann 0.12. The pipeline used the band-passed signal, standardized per channel over the recording, without trace normalization, on non-overlapping epochs: the 30 s scoring epochs for sleep, and 2 s epochs for the motor/imagery corpus. The pre-specified criteria were: a shuffled-minus-blocked cross-validation difference of at least 0.05 (dependence); a difference of at least 0.05 between grouping folds by recording and by subject (pseudo-replication); an accuracy drop of at least 0.05 without EOG (ocular); and balanced accuracy of at least 0.70 on two same-state recordings (recording confound). The framing rule, fixed before the run, was that a trap the standard pipeline also fell into would be reported as a trap of the field.
+To separate traps of this method from traps of the field, the standard pipeline was put through the same controls: covariance estimation with oracle approximating shrinkage (Chen et al. 2010) followed by minimum distance to Riemannian mean (MDM; Barachant et al. 2012), as implemented in pyRiemann 0.12 (Barachant et al. n.d.). The pipeline used the band-passed signal, standardized per channel over the recording, without trace normalization, on non-overlapping epochs: the 30 s scoring epochs for sleep, and 2 s epochs for the motor/imagery corpus. The pre-specified criteria were: a shuffled-minus-blocked cross-validation difference of at least 0.05 (dependence); a difference of at least 0.05 between grouping folds by recording and by subject (pseudo-replication); an accuracy drop of at least 0.05 without EOG (ocular); and balanced accuracy of at least 0.70 on two same-state recordings (recording confound). The framing rule, fixed before the run, was that a trap the standard pipeline also fell into would be reported as a trap of the field.
 
 This control differs from the method under test in three ways at once: the classifier, the absence of trace normalization, and the absence of overlap. Section 2.6 adds the control that separates them.
 
@@ -90,7 +90,7 @@ This control differs from the method under test in three ways at once: the class
 
 ### 2.7 Literature survey
 
-A fixed Europe PMC query, `(EEG OR electroencephalogra*) AND ("Riemannian" OR "covariance matrices" OR "SPD matrices") AND OPEN_ACCESS:y AND PUB_YEAR:[2012 TO 2025]`, was walked in the order returned. The first 20 eligible studies were included; 7 were screened out on the way (for example, fNIRS-only or MEG-only studies, or studies without covariance features). For each study and trap, a code of Yes (left open), No (addressed), Unclear or Not applicable was assigned by rules fixed in advance, and the sentence supporting each code was archived. The survey measures what studies report, not whether a trap was present. There was one coder. An intra-rater re-coding after at least two weeks, blind to the first codes, is reported as a check on coding stability; it is not a substitute for an independent second coder.
+A fixed Europe PMC query, `(EEG OR electroencephalogra*) AND ("Riemannian" OR "covariance matrices" OR "SPD matrices") AND OPEN_ACCESS:y AND PUB_YEAR:[2012 TO 2025]`, was walked in the order returned. The first 20 eligible studies were included; 7 were screened out on the way (for example, fNIRS-only or MEG-only studies, or studies without covariance features). For each study and trap, a code of Yes (left open), No (addressed), Unclear or Not applicable was assigned by rules fixed in advance, and the sentence supporting each code was archived. The survey measures what studies report, not whether a trap was present. There was one coder. An intra-rater re-coding after at least two weeks, blind to the first codes, is planned as a check on coding stability, not before 7 October 2026; it is not a substitute for an independent second coder.
 
 ### 2.8 Statistics
 
@@ -98,7 +98,7 @@ Paired detector comparisons used the exact McNemar test on discordant pairs. Wit
 
 ### 2.9 Pre-specification and provenance
 
-Each analysis has a written plan fixing its question, method, criterion and stopping rule, archived with its code and raw output in the accompanying repository. For five of the analyses reported here, the plan was committed before the result: the standard-pipeline control, the off-centre localization power-up, the two between-recording controls, and the literature survey. For the others, the plan and the result entered the repository in the same commit, so their order cannot be verified from the record. Commit timestamps in a repository controlled by the author are not independent evidence of order in any case. The analyses in §2.6 are specified in this manuscript before they are run.
+Each analysis has a written plan fixing its question, method, criterion and stopping rule, archived with its code and raw output in the accompanying repository. For five of the analyses reported here, the plan was committed before the result: the standard-pipeline control, the off-centre localization power-up, the two between-recording controls, and the literature survey. For the others, the plan and the result entered the repository in the same commit, so their order cannot be verified from the record. Commit timestamps in a repository controlled by the author are not independent evidence of order in any case. The analyses in §2.6 were specified in a version of this manuscript and in pre-registration files committed before they were run (commit `fbe4b6f`), and their results were committed afterwards (commit `46b168f`). No external registry was used.
 
 ## 3. Results
 
@@ -106,7 +106,7 @@ Each analysis has a written plan fixing its question, method, criterion and stop
 
 Every localization analysis in the early record built its window symmetric about the known transition. Under that construction a centre-prior detector scores every recording (22/22) and, off-centre, none (0/22). The inflation affected the one comparison that had favoured the method. Centred, the geodesic CUSUM led the scalar CUSUM, 14/22 against 9/22 (McNemar p = 0.227, already not significant). Off-centre they tied, 10/22 against 10/22. On sleep onset, the geometry's 10/15 in centred windows fell to 4/7 off-centre on the recordings then available, tying the scalar's 4/7. An earlier benchmark against six standard change-point algorithms (Adams and MacKay 2007; Truong et al. 2020), which had placed the geodesic CUSUM at 10/15 against 8/15 for the best baseline, also used centred windows.
 
-A power-up on all 151 usable sleep-cassette recordings, with off-centre windows and the detectors unchanged, settled the comparison. The geodesic CUSUM localized 59/151 transitions (39%, 95% CI 32–47%) and the scalar CUSUM 67/151 (44%, 37–52%; McNemar p ≈ 0.38). At the subject level the counts were 32/78 against 42/78; without the EOG channel, 57/151 against 66/151. The pre-registered verdict is inconclusive. With about twice the sample a power analysis had asked for and the direction favouring the scalar, the geometry does not improve on log broadband power for sleep-transition localization.
+A power-up on all 151 usable sleep-cassette recordings, with off-centre windows and the detectors unchanged, settled the comparison. The geodesic CUSUM localized 59/151 transitions (39%, 95% CI 32–47%) and the scalar CUSUM 67/151 (44%, 37–52%; McNemar p ≈ 0.38). At the subject level the counts were 32/78 against 42/78; without the EOG channel, 57/151 against 66/151. The pre-specified verdict is inconclusive. With about twice the sample a power analysis had asked for and the direction favouring the scalar, the geometry does not improve on log broadband power for sleep-transition localization.
 
 ### 3.2 Nulls and validation that ignore dependence
 
@@ -120,7 +120,7 @@ The seven recordings behind the sleep-staging association came from four subject
 
 ### 3.4 Ocular contamination
 
-The sleep covariance included the horizontal-EOG channel, and REM is defined in part by rapid eye movements. Without the EOG channel, the geometric volatility's association with sleep stage fell from V = 0.452 to 0.021, and EOG power alone was more strongly associated with stage (V = 0.524). The N2-versus-REM discrimination, which had passed in 14 of 15 recordings, held without EOG in 2 of 4 subjects on the recordings available for the check, against 4 of 4 with it. In these channels the signal was the eye. Because the EEG-only covariance is 2 × 2, this licenses a conclusion about these channels, not about covariance geometry in general.
+The sleep covariance included the horizontal-EOG channel, and REM is defined in part by rapid eye movements. Without the EOG channel, the geometric volatility's association with sleep stage fell from V = 0.452 to 0.021, and EOG power alone was more strongly associated with stage (V = 0.524). The N2-versus-REM discrimination had passed in 14 of 15 recordings under a window-permutation null and in all 7 recordings re-tested under a circular-shift null (§3.2). On those 7 recordings, from 4 subjects, it held without EOG in 4 recordings and 2 subjects, against all 7 and all 4 with it. In these channels the signal was the eye. Because the EEG-only covariance is 2 × 2, this licenses a conclusion about these channels, not about covariance geometry in general.
 
 ### 3.5 Recording confound
 
@@ -136,13 +136,13 @@ Two qualifications apply. The epochs were non-overlapping, so the small shuffled
 
 ### 3.7 Matched control
 
-[RESULT R3.1 — pending experiment E3.1]
+The matched control reproduced one trap. With trace-normalized covariances of overlapping windows, removing the EOG channel lowered the standard classifier's N2-versus-REM accuracy by a median of 0.092 across 78 subjects (interquartile range 0.049–0.132; one-sided Wilcoxon p = 8.4 × 10⁻¹⁵), against 0.007 without trace normalization, crossing the bar of 0.05. The dependence trap did not appear: shuffled folds exceeded blocked folds by a median of 0.003 over 151 recordings (interquartile range 0.002–0.006). Nor did the recording confound: on two same-state recordings the median balanced accuracy was 0.608 (interquartile range 0.538–0.692), against 0.849 for eyes open versus closed and a bar of 0.70; without trace normalization it had been 0.65. Grouping folds by recording or by subject changed pooled accuracy by less than 0.001. Under the pre-specified reading rule, one crossing suffices to attribute the traps to the design; §4.1 explains why the attribution holds for the ocular trap only.
 
 ### 3.8 Information beyond alpha power, and channel density
 
-[RESULT R3.2 — pending experiment E3.2]
+**Information beyond alpha power.** Adding the geometric features lowered held-out log-loss in 11 of 15 subjects (median log-loss 0.518 without, 0.373 with) but raised it sharply in the other four, in one case from 0.876 to 1.629, and the paired Wilcoxon test was not significant (two-sided p = 0.76). The pre-specified criterion required both conditions and was not met: there is no evidence that the geometry carries information about eye state beyond per-channel relative alpha power. On two same-state recordings both models were at chance (median balanced accuracy 0.53 and 0.55; median log-loss 0.695 and 0.721, against 0.693 for chance).
 
-[RESULT R3.3 — pending experiment E3.3]
+**Channel density.** With 64 channels, the eyes-open/closed geometric ratio exceeded the same-state control in 13 of 15 subjects (one-sided Wilcoxon p = 0.0017; median 1.24 against 0.78), meeting the first half of the criterion; with seven channels it had been 11 of 15 (p = 0.024). The detection half failed: the statistic separated a change of state from a same-state change of recording at AUC 0.41, below chance and far below the bar of 0.80. It responded more to a change of recording than to a change of state (AUC 0.57 and 0.46, each against segments within one recording). The conjoint criterion was not met. More channels improved discrimination and worsened detection, and with 64 channels relative alpha power still separated the states more strongly (median ratio 4.01, against 0.98 for the same-state control).
 
 ### 3.9 What survives
 
@@ -164,31 +164,33 @@ Of the 20 included studies, trap codes were as follows (Yes = left open; the ran
 - classes confounded with recordings: 1 of 17 (1–3 of 17);
 - centre bias: not applicable to any study, none of which localized a transition in time.
 
-A Yes for ocular handling means that no handling was reported, not that the study was contaminated. One included study measured the dependence trap directly for the standard classifier on block-design n-back data, finding accuracy differences of up to 12.7% between cross-validation that respected the block structure and cross-validation that did not (Schroeder et al. 2025). [Intra-rater agreement: RESULT R3.4 — pending experiment E3.4]
+A Yes for ocular handling means that no handling was reported, not that the study was contaminated. One included study measured the dependence trap directly for the standard classifier on block-design n-back data, finding accuracy differences of up to 12.7% between cross-validation that respected the block structure and cross-validation that did not (Schroeder et al. 2025). [Intra-rater agreement: RESULT R3.4 — pending experiment E3.4, not before 7 October 2026]
 
 **Table 1.** Summary of the five traps.
 
-| Trap | Effect on this method | Control that exposed it | Standard pipeline (MDM) | Published studies: Yes (Yes + Unclear) |
-|---|---|---|---|---|
-| Centre bias | lead 14/22 vs 9/22 → tie 10/22 vs 10/22; 59/151 vs 67/151 at scale | off-centre windows; power-up | not applicable | not applicable |
-| Dependence ignored | ratio ≈ 3.3 (14/15) → ≈ 1.3 (12/15); null 95th percentile 0.003 → 0.171 | temporal-half estimator; circular-shift null | below bar (+0.009; non-overlapping epochs) | 4/19 (12/19) |
-| Pseudo-replication | p = 0.0078 on 7 recordings of 4 subjects; best attainable 0.0625 | subject as unit | below bar (0.001) | 0/9 (4/9) |
-| Ocular contamination | V 0.452 → 0.021 without EOG | EOG ablation | below bar (0.007) | 7/19 (15/19) |
-| Recording confound | ratio exceeds same-state control weakly; alpha power stronger; AUC 0.74 for a recording change alone | same-state between-recording controls | below bar (0.65; above chance) | 1/17 (3/17) |
+| Trap | Effect on this method | Control that exposed it | Standard pipeline (MDM) | MDM, trace-normalized, overlapping windows | Published studies: Yes (Yes + Unclear) |
+|---|---|---|---|---|---|
+| Centre bias | lead 14/22 vs 9/22 → tie 10/22 vs 10/22; 59/151 vs 67/151 at scale | off-centre windows; power-up | not applicable | not applicable | not applicable |
+| Dependence ignored | ratio ≈ 3.3 (14/15) → ≈ 1.3 (12/15); null 95th percentile 0.003 → 0.171 | temporal-half estimator; circular-shift null | below bar (+0.009; non-overlapping epochs) | below bar (+0.003) | 4/19 (12/19) |
+| Pseudo-replication | p = 0.0078 on 7 recordings of 4 subjects; best attainable 0.0625 | subject as unit | below bar (0.001) | below bar (< 0.001) | 0/9 (4/9) |
+| Ocular contamination | V 0.452 → 0.021 without EOG | EOG ablation | below bar (0.007) | crosses (0.092) | 7/19 (15/19) |
+| Recording confound | ratio exceeds same-state control weakly; alpha power stronger; AUC 0.74 for a recording change alone | same-state between-recording controls | below bar (0.65; above chance) | below bar (0.608) | 1/17 (3/17) |
 
 ## 4. Discussion
 
-### 4.1 Traps of this design
+### 4.1 What the design explains
 
-By the rule fixed in advance, these are traps of this method: the standard pipeline did not fall into them on the same data. The explanation we favour concerns the design rather than the classifier, and until the matched control of §2.6 is run it remains an interpretation.
+By the rule fixed in advance, these are traps of this method: the standard pipeline did not fall into them on the same data. The matched control (§3.7) shows how much of that difference the method's design explains. Given the same design, the standard classifier fell into the ocular trap and into neither the dependence nor the recording trap.
 
-Two design differences plausibly protected the standard pipeline. The first is amplitude. This method band-pass filtered the signal, standardized each channel over the recording, and divided each window's covariance by its trace. What that removes depends on the task. In sleep it removed epoch-to-epoch amplitude, which differs between N2 and REM and which the standard covariance kept. In the eyes-open/closed task, the scalar that beat the geometry was relative alpha power, alpha over broadband power on the unfiltered signal. That is also a normalized quantity, but it keeps the share of alpha within each channel, which is exactly what changes when the eyes close. The geometry lost it in two steps: filtering to the alpha band left no other band to compare against, and trace normalization removed the total alpha amplitude. What remained was correlation structure, where an artefact channel such as EOG carries the most weight. The second difference is overlap: the standard pipeline used non-overlapping epochs, while this method's dependence trap arose in windows overlapping by 50–75%.
+Two design differences were candidates for protecting the standard pipeline. The first, amplitude, is supported by the matched control. This method band-pass filtered the signal, standardized each channel over the recording, and divided each window's covariance by its trace. What that removes depends on the task. In sleep it removed epoch-to-epoch amplitude, which differs between N2 and REM and which the standard covariance kept. In the eyes-open/closed task, the scalar that beat the geometry was relative alpha power, alpha over broadband power on the unfiltered signal. That is also a normalized quantity, but it keeps the share of alpha within each channel, which is exactly what changes when the eyes close. The geometry lost it in two steps: filtering to the alpha band left no other band to compare against, and trace normalization removed the total alpha amplitude. What remained was correlation structure, where an artefact channel such as EOG carries the most weight, and once the standard classifier was given trace-normalized covariances it relied on the EOG channel too. The matched control changed overlap at the same time, but overlap has no evident route to channel reliance, so we attribute the ocular trap to trace normalization; that attribution is an inference, not a separate test.
 
-In hindsight this loss was predictable. The method was built to be blind to power, and the alpha response to eye closure is a power effect. The design made the failure foreseeable, and the project did not foresee it. We report it as such rather than as a discovery. What was never tested on real data is the claim that motivated the design: that transitions exist in which correlation structure changes while power does not, and that the geometry detects them better than a power detector. The only evidence for it is synthetic (§3.9), and there the pre-specified margin was not met.
+The second candidate, overlap, is not supported: with overlapping windows the standard classifier's shuffled folds exceeded blocked folds by only 0.003. The method's dependence trap arose instead in its own nulls and within-state estimator (§3.2), which treated overlapping windows as exchangeable. The recording confound was not reproduced either, which places it most plausibly in the way the method's ratio compared two recordings against drift within one.
+
+In hindsight the loss of alpha information was predictable. The method was built to be blind to power, and the alpha response to eye closure is a power effect. The design made the failure foreseeable, and the project did not foresee it. We report it as such rather than as a discovery. The incremental test (§3.8) found no evidence that, on the one real-data effect that survived the other controls, the geometry adds information beyond alpha power: it helped in 11 of 15 subjects but hurt sharply in the rest. What was never tested on real data is the claim that motivated the design: that transitions exist in which correlation structure changes while power does not, and that the geometry detects them better than a power detector. The only evidence for it is synthetic (§3.9), and there the pre-specified margin was not met.
 
 ### 4.2 Relation to prior work
 
-The recording confound of §3.5 is a small-scale version of the block-design problem documented by Li et al. (2021), in which classes recorded in separate blocks were decoded from temporal and recording differences rather than from the stimuli. The dependence trap is the one Schroeder et al. (2025) measured for the standard classifier, and whose consequences for cross-validation Varoquaux et al. (2017) and Lemm et al. (2011) describe in general. What this record adds is the sequence: each trap produced a result that looked like validation, each was removed by a specific control, and the standard pipeline, on the same data, was more robust for identifiable design reasons.
+The recording confound of §3.5 is a small-scale version of the block-design problem documented by Li et al. (2021), in which classes recorded in separate blocks were decoded from temporal and recording differences rather than from the stimuli. The dependence trap is the one Schroeder et al. (2025) measured for the standard classifier, and whose consequences for cross-validation Varoquaux et al. (2017) and Lemm et al. (2011) describe in general. What this record adds is the sequence: each trap produced a result that looked like validation, each was removed by a specific control, and the standard pipeline, on the same data, was more robust: for a design reason in the case of the eye channel, and because the method's own evaluation created the trap in the other cases.
 
 ### 4.3 Recommendations
 
@@ -202,11 +204,11 @@ For pipelines that combine band-pass filtering with trace normalization, we add 
 
 ### 4.4 Limitations
 
-The standard-pipeline control covers one classifier on two corpora and cannot test centre bias, which applies only to localization. Until the matched control is run, the attribution of the traps to trace normalization and overlap is an interpretation. The sleep analyses used two EEG channels, and several controls used few subjects (four for the sleep EOG analyses, fifteen for the eyes-open/closed controls); where the unit of inference does not allow more, results are reported descriptively. The survey is small, restricted to open-access studies, and single-coded; its counts describe reporting, and the Unclear codes make each count the lower end of a range. The method's failures are specific to its construction and are not evidence that SPD geometry is uninformative for EEG; Riemannian classifiers perform well in the settings they were designed for, and the standard-pipeline control is consistent with that.
+The standard-pipeline control covers one classifier on two corpora and cannot test centre bias, which applies only to localization. The matched control changed trace normalization and overlap together, so the attribution of the ocular trap to trace normalization rests on the mechanism of §4.1 rather than on a separate test. The channel-density test used the eyes-open/closed task, so whether denser montages change the sleep results is untested. The sleep analyses used two EEG channels, and several controls used few subjects (four for the method's sleep EOG analyses, fifteen for the eyes-open/closed controls); where the unit of inference does not allow more, results are reported descriptively. The survey is small, restricted to open-access studies, and single-coded; its counts describe reporting, and the Unclear codes make each count the lower end of a range. The method's failures are specific to its construction and are not evidence that SPD geometry is uninformative for EEG; Riemannian classifiers perform well in the settings they were designed for, and the standard-pipeline control is consistent with that.
 
 ## 5. Conclusions
 
-A trace-normalized SPD geometry read through a geodesic change-point statistic appeared, at different times, to discriminate structural regimes, to track sleep stages and to localize transitions on line. Each appearance was produced by an ordinary trap, and each was removed by a specific control. The standard Riemannian pipeline, run through the same controls, did not cross the pre-specified bars, and the difference is most plausibly explained, pending the matched control, by the method's design: trace normalization after band-pass filtering, overlapping windows and centred localization windows. Published studies often do not report enough to rule out two of the traps, which is reason to make the controls routine.
+A trace-normalized SPD geometry read through a geodesic change-point statistic appeared, at different times, to discriminate structural regimes, to track sleep stages and to localize transitions within a single recording. Each appearance was produced by an ordinary trap, and each was removed by a specific control. The standard Riemannian pipeline, run through the same controls, did not cross the pre-specified bars. Given the method's trace-normalized, overlapping covariances, it fell into the ocular trap and no other: trace normalization most plausibly explains the eye channel's dominance, while the remaining traps arose in how the method was evaluated. There was no reliable evidence that the geometry adds information beyond alpha power, and more channels did not rescue detection. Published studies often do not report enough to rule out two of the traps, which is reason to make the controls routine.
 
 ---
 
