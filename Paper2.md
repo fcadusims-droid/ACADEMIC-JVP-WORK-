@@ -42,11 +42,11 @@ A test of the question requires three properties to hold simultaneously in the s
 
 ### 2.2 Dataset audit
 
-A bounded, documentation-level search was fixed before any dataset was inspected. It covered five families: anaesthesia banks with neuromonitoring and vital signs (VitalDB); intensive-care waveform banks (MIMIC-III/IV Waveform, eICU); sleep banks with ECG (Sleep-EDF, SHHS, MASS); seizure EEG corpora (TUH EEG, CHB-MIT); and post-cardiac-arrest coma corpora (I-CARE). For each candidate, the three properties and open access were assessed from its published documentation. The audit was run in July 2026 and repeated in September 2026. It is a directed search, not a systematic review, and a corpus outside these families could satisfy the requirements.
+A bounded, documentation-level search was fixed before any dataset was inspected. It covered five families: anaesthesia banks with neuromonitoring and vital signs (VitalDB; Lee et al. 2022); intensive-care waveform banks (MIMIC-III/IV Waveform, eICU; Johnson et al. 2016; Johnson et al. 2023; Pollard et al. 2018); sleep banks with ECG (Sleep-EDF, SHHS, MASS; Kemp et al. 2000; Quan et al. 1997; Zhang et al. 2018; O'Reilly et al. 2014); seizure EEG corpora (TUH EEG, CHB-MIT; Obeid and Picone 2016; Shoeb 2009); and post-cardiac-arrest coma corpora (I-CARE). For each candidate, the three properties and open access were assessed from its published documentation. The audit was run in July 2026 and repeated in September 2026. It is a directed search, not a systematic review, and a corpus outside these families could satisfy the requirements.
 
 ### 2.3 Corpus
 
-The I-CARE database (Amorim et al. 2023a, 2023b; version 2.1) contains continuous EEG from comatose patients after cardiac arrest, with ECG where available. Its public training set covers 607 patients and more than 32,000 hours of EEG. Outcome is the Cerebral Performance Category at follow-up: good (CPC 1–2) or poor (CPC 3–5, from severe disability to death). In a sample of 60 patients, 45 (75%) had both ECG and EEG segments. The data are distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 licence.
+The I-CARE database (Amorim et al. 2023a, 2023b; version 2.1), distributed through PhysioNet (Goldberger et al. 2000; Pollard et al. 2026), contains continuous EEG from comatose patients after cardiac arrest, with ECG where available. Its public training set covers 607 patients and more than 32,000 hours of EEG. Outcome is the Cerebral Performance Category at follow-up: good (CPC 1–2) or poor (CPC 3–5, from severe disability to death). In a sample of 60 patients, 45 (75%) had both ECG and EEG segments. The data are distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 licence.
 
 ### 2.4 The estimability gate
 
@@ -167,9 +167,9 @@ Rows 3 and 4 start from the same process. For an AR(1) coefficient of ±0.5 the 
 
 ## Declarations
 
-**Use of generative AI.** The analyses, code and text of the underlying project were developed with substantial assistance from a large language model (Claude, Anthropic), and this manuscript was drafted by that model on 27 September 2026 from the author's earlier drafts and experimental record. The simulation in Appendix A was run by the model, and the follow-up analyses of §2.6 were coded and run with its assistance. The author reviewed the manuscript and takes full responsibility for its content. [AUTHOR TO CONFIRM OR AMEND BEFORE SUBMISSION.]
+**Use of generative AI.** The analyses, code and text of the underlying project were developed with substantial assistance from a large language model (Claude, Anthropic), and this manuscript was drafted by that model on 27 September 2026 from the author's earlier drafts and experimental record. The simulation in Appendix A was run by the model, and the follow-up analyses of §2.6 were coded and run with its assistance. The author reviewed the manuscript and takes full responsibility for its content.
 
-**Data availability.** I-CARE and Fantasia are available from PhysioNet under their respective licences. Per-patient statistics, analysis plans and code are in the author's repository (`experiments/paper2_cbra_protocol/`, `experiments/_results/`). [LINK AND COMMIT HASH TO BE ADDED.]
+**Data availability.** I-CARE and Fantasia are available from PhysioNet under their respective licences. Per-patient statistics, analysis plans and code are in the author's repository, https://github.com/fcadusims-droid/ACADEMIC-JVP-WORK- (`experiments/paper2_cbra_protocol/`, `experiments/_results/`; pre-registration `fbe4b6f`, results `46b168f` to `6c27c4d`).
 
 **Ethics.** Only publicly available, de-identified data were analysed. No ethical approval was required.
 
@@ -183,26 +183,50 @@ Rows 3 and 4 start from the same process. For an AR(1) coefficient of ±0.5 the 
 
 Al, E., Iliopoulos, F., Forschack, N., Nierhaus, T., Grund, M., Motyka, P., Gaebler, M., Nikulin, V. V., & Villringer, A. (2020). Heart–brain interactions shape somatosensory perception and evoked potentials. *Proceedings of the National Academy of Sciences, 117*(19), 10575–10584.
 
-Amorim, E., Zheng, W., Ghassemi, M., et al. (2023a). The International Cardiac Arrest Research Consortium Electroencephalography Database. *Critical Care Medicine, 51*(12), 1802–1811. https://doi.org/10.1097/CCM.0000000000006074
+Amorim, E., Zheng, W.-L., Ghassemi, M. M., Aghaeeaval, M., Kandhare, P., Karukonda, V., Lee, J. W., Herman, S. T., Sivaraju, A., Gaspard, N., Hofmeijer, J., van Putten, M. J. A. M., Sameni, R., Reyna, M. A., Clifford, G. D., & Westover, M. B. (2023a). The International Cardiac Arrest Research Consortium Electroencephalography Database. *Critical Care Medicine, 51*(12), 1802–1811. https://doi.org/10.1097/CCM.0000000000006074
 
 Amorim, E., Zheng, W., Lee, J. W., Herman, S., Ghassemi, M., Sivaraju, A., Gaspard, N., Hofmeijer, J., van Putten, M. J. A. M., Reyna, M., Clifford, G., & Westover, B. (2023b). *I-CARE: International Cardiac Arrest REsearch consortium Database* (Version 2.1) [Data set]. PhysioNet. https://doi.org/10.13026/m33r-bj81
 
 Beggs, J. M., & Plenz, D. (2003). Neuronal avalanches in neocortical circuits. *Journal of Neuroscience, 23*(35), 11167–11177.
 
-Costa, M., Goldberger, A. L., & Peng, C.-K. (2005). Broken asymmetry of the human heartbeat: Loss of time irreversibility in aging and disease. *Physical Review Letters, 95*, 198102. https://doi.org/10.1103/PhysRevLett.95.198102
+Costa, M., Goldberger, A. L., & Peng, C.-K. (2005). Broken asymmetry of the human heartbeat: Loss of time irreversibility in aging and disease. *Physical Review Letters, 95*(19), 198102. https://doi.org/10.1103/PhysRevLett.95.198102
+
+Goldberger, A. L., Amaral, L. A. N., Glass, L., Hausdorff, J. M., Ivanov, P. Ch., Mark, R. G., Mietus, J. E., Moody, G. B., Peng, C.-K., & Stanley, H. E. (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. *Circulation, 101*(23), e215–e220. https://doi.org/10.1161/01.CIR.101.23.e215
 
 Iyengar, N., Peng, C.-K., Morin, R., Goldberger, A. L., & Lipsitz, L. A. (1996). Age-related alterations in the fractal scaling of cardiac interbeat interval dynamics. *American Journal of Physiology–Regulatory, Integrative and Comparative Physiology, 271*(4), R1078–R1084. https://doi.org/10.1152/ajpregu.1996.271.4.R1078
 
+Johnson, A. E. W., Bulgarelli, L., Shen, L., Gayles, A., Shammout, A., Horng, S., Pollard, T. J., Hao, S., Moody, B., Gow, B., Lehman, L.-W. H., Celi, L. A., & Mark, R. G. (2023). MIMIC-IV, a freely accessible electronic health record dataset. *Scientific Data, 10*, 1. https://doi.org/10.1038/s41597-022-01899-x
+
+Johnson, A. E. W., Pollard, T. J., Shen, L., Lehman, L.-W. H., Feng, M., Ghassemi, M., Moody, B., Szolovits, P., Celi, L. A., & Mark, R. G. (2016). MIMIC-III, a freely accessible critical care database. *Scientific Data, 3*, 160035. https://doi.org/10.1038/sdata.2016.35
+
+Kemp, B., Zwinderman, A. H., Tuk, B., Kamphuisen, H. A. C., & Oberye, J. J. L. (2000). Analysis of a sleep-dependent neuronal feedback loop: The slow-wave microcontinuity of the EEG. *IEEE Transactions on Biomedical Engineering, 47*(9), 1185–1194. https://doi.org/10.1109/10.867928
+
 Kinouchi, O., & Copelli, M. (2006). Optimal dynamical range of excitable networks at criticality. *Nature Physics, 2*(5), 348–351. https://doi.org/10.1038/nphys289
+
+Lee, H.-C., Park, Y., Yoon, S. B., Yang, S. M., Park, D., & Jung, C.-W. (2022). VitalDB, a high-fidelity multi-parameter vital signs database in surgical patients. *Scientific Data, 9*, 279. https://doi.org/10.1038/s41597-022-01411-5
+
+Obeid, I., & Picone, J. (2016). The Temple University Hospital EEG data corpus. *Frontiers in Neuroscience, 10*, 196. https://doi.org/10.3389/fnins.2016.00196
+
+O'Reilly, C., Gosselin, N., Carrier, J., & Nielsen, T. (2014). Montreal Archive of Sleep Studies: An open-access resource for instrument benchmarking and exploratory research. *Journal of Sleep Research, 23*(6), 628–635. https://doi.org/10.1111/jsr.12169
 
 Pan, J., & Tompkins, W. J. (1985). A real-time QRS detection algorithm. *IEEE Transactions on Biomedical Engineering, 32*(3), 230–236.
 
 Park, H.-D., Correia, S., Ducorps, A., & Tallon-Baudry, C. (2014). Spontaneous fluctuations in neural responses to heartbeats predict visual detection. *Nature Neuroscience, 17*(4), 612–618.
 
+Pollard, T. J., Johnson, A. E. W., Raffa, J. D., Celi, L. A., Mark, R. G., & Badawi, O. (2018). The eICU Collaborative Research Database, a freely available multi-center database for critical care research. *Scientific Data, 5*, 180178. https://doi.org/10.1038/sdata.2018.178
+
+Pollard, T., Moody, B. E., Lehman, L.-W. H., Gow, B. J., Fernandes, C., Xie, C., Johnson, A., Mark, R. G., & Heldt, T. (2026). PhysioNet as a global platform for biomedical research. *Nature Health, 1*(8), 792–795. https://doi.org/10.1038/s44360-026-00096-z
+
+Quan, S. F., Howard, B. V., Iber, C., Kiley, J. P., Nieto, F. J., O'Connor, G. T., Rapoport, D. M., Redline, S., Robbins, J. A., Samet, J. M., & Wahl, P. W. (1997). The Sleep Heart Health Study: Design, rationale, and methods. *Sleep, 20*(12), 1077–1085. https://doi.org/10.1093/sleep/20.12.1077
+
 Schreiber, T., & Schmitz, A. (1996). Improved surrogate data for nonlinearity tests. *Physical Review Letters, 77*(4), 635–638.
+
+Shoeb, A. H. (2009). *Application of machine learning to epileptic seizure onset detection and treatment* [Doctoral dissertation, Massachusetts Institute of Technology]. DSpace@MIT. http://hdl.handle.net/1721.1/54669
 
 Westfall, J., & Yarkoni, T. (2016). Statistically controlling for confounding constructs is harder than you think. *PLOS ONE, 11*(3), e0152719. https://doi.org/10.1371/journal.pone.0152719
 
 Wilting, J., & Priesemann, V. (2018). Inferring collective dynamical states from widely unobserved systems. *Nature Communications, 9*, 2325.
+
+Zhang, G.-Q., Cui, L., Mueller, R., Tao, S., Kim, M., Rueschman, M., Mariani, S., Mobley, D., & Redline, S. (2018). The National Sleep Research Resource: Towards a sleep data commons. *Journal of the American Medical Informatics Association, 25*(10), 1351–1358. https://doi.org/10.1093/jamia/ocy064
 
 Zrenner, C., Desideri, D., Belardinelli, P., & Ziemann, U. (2018). Real-time EEG-defined excitability states determine efficacy of TMS-induced plasticity in human motor cortex. *Brain Stimulation, 11*(2), 374–389.
