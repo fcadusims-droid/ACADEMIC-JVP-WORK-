@@ -297,13 +297,13 @@ A reference $r(t)$, which steps from 0 to 1 halfway through the run (a new targe
 
 ## Statements and Declarations
 
-**Use of generative AI.** This manuscript was drafted by Claude (Anthropic), a large language model, on 27 September 2026, from the author's earlier drafts, notes and experimental repository and according to the author's decisions about thesis and scope. The author reviewed each argument, revised the text, and takes full responsibility for the content. [AUTHOR TO CONFIRM OR AMEND BEFORE SUBMISSION.]
+**Use of generative AI.** This manuscript was drafted by Claude (Anthropic), a large language model, on 27 September 2026, from the author's earlier drafts, notes and experimental repository and according to the author's decisions about thesis and scope. The author reviewed each argument, revised the text, and takes full responsibility for the content.
 
 **Competing interests.** The author declares no competing interests.
 
 **Funding.** No funding was received for this work.
 
-**Data and code availability.** Code for the computations in Appendix A is available in the author's public repository. [LINK AND COMMIT HASH TO BE ADDED; REMOVE FROM THE ANONYMIZED MANUSCRIPT.]
+**Data and code availability.** Code and results for the computations in Appendix A are available at https://github.com/fcadusims-droid/ACADEMIC-JVP-WORK- (predictions committed in `fbe4b6f`, results in `46b168f`).
 
 ---
 
@@ -327,7 +327,7 @@ Bykvist, K. (2021). [Review of the book *Choosing for changing selves*, by R. Pe
 
 Callard, A. (2018). *Aspiration: The agency of becoming*. Oxford University Press.
 
-Carroll, M., Chan, A., Ashton, H., & Krueger, D. (2023). Characterizing manipulation from AI systems. In *Proceedings of the 3rd ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization (EAAMO '23)*. https://doi.org/10.1145/3617694.3623226
+Carroll, M., Chan, A., Ashton, H., & Krueger, D. (2023). Characterizing manipulation from AI systems. In *Proceedings of the 3rd ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization (EAAMO '23)* (pp. 1–13). Association for Computing Machinery. https://doi.org/10.1145/3617694.3623226
 
 Carroll, M., Dragan, A., Russell, S., & Hadfield-Menell, D. (2022). Estimating and penalizing induced preference shifts in recommender systems. In *Proceedings of the 39th International Conference on Machine Learning (ICML 2022)*. arXiv:2204.11966
 
@@ -347,7 +347,7 @@ Fischer, J. M., & Ravizza, M. (1998). *Responsibility and control: A theory of m
 
 Frankfurt, H. G. (1971). Freedom of the will and the concept of a person. *The Journal of Philosophy, 68*(1), 5–20.
 
-Hadfield-Menell, D., Russell, S. J., Abbeel, P., & Dragan, A. (2016). Cooperative inverse reinforcement learning. In *Advances in Neural Information Processing Systems 29*.
+Hadfield-Menell, D., Dragan, A., Abbeel, P., & Russell, S. (2016). Cooperative inverse reinforcement learning. In *Advances in Neural Information Processing Systems 29*.
 
 Hansson, S. O. (1995). Changes in preference. *Theory and Decision, 38*(1), 1–28. https://doi.org/10.1007/BF01083166
 
@@ -375,7 +375,7 @@ Russell, S. (2019). *Human compatible: Artificial intelligence and the problem o
 
 Schmidhuber, J. (2010). Formal theory of creativity, fun, and intrinsic motivation (1990–2010). *IEEE Transactions on Autonomous Mental Development, 2*(3), 230–247.
 
-Soares, N., Fallenstein, B., Yudkowsky, E., & Armstrong, S. (2015). Corrigibility. In *AAAI Workshop on AI and Ethics* (pp. 74–82).
+Soares, N., Fallenstein, B., Yudkowsky, E., & Armstrong, S. (2015). Corrigibility. In *Artificial Intelligence and Ethics: Papers from the 2015 AAAI Workshop* (pp. 74–82). AAAI Press.
 
 Sutton, R. S., & Barto, A. G. (2018). *Reinforcement learning: An introduction* (2nd ed.). MIT Press.
 
