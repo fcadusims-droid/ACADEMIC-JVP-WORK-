@@ -125,3 +125,14 @@ means the construction is wrong and is reported as such, not repaired silently. 
 P7 counts against the corresponding claim in Paper 1 and is reported as prominently as a success.
 Any change to this plan after the first run is recorded here as a deviation before its result is
 read.
+
+## Implementation details fixed before the first run (committed with `run.py`, before running it)
+
+The plan above left three details open. They are fixed here, before any output exists:
+- In S1, the available reasons before t_c are the prior values V_0 (as in S2), so nothing but the
+  restored capacity and the arrival of r changes at t_c.
+- In the replica manipulations (S3, S4, S5), the agent's own dynamics without the manipulator keep
+  the capacity at its pre-change level and bring no new reasons; this defines their "natural"
+  trajectory for the counterfactual benchmark. Only S1, S2 and S4 enter prediction P4.
+- Bykvist's evaluation of a life by the attitudes held while leading it is computed as the mean over
+  t of U_t(V_T) for the changed life, minus U_0(V_0) for the unchanged one.
