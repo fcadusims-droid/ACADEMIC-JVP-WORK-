@@ -104,6 +104,12 @@ MANUAL = {
         "manual": "Circulation 101(23): e215-e220, confirmed in Crossref (Crossref lists the title without its subtitle)."},
     (3, "Hsu", 2002): {"url": "https://bookstore.ams.org/gsm-38",
         "manual": "Graduate Studies in Mathematics 38, American Mathematical Society 2002, confirmed."},
+    (2, "Goldberger", 2000): {"url": "https://doi.org/10.1161/01.cir.101.23.e215",
+        "manual": "Circulation 101(23): e215-e220, confirmed in Crossref (Crossref lists the title without its subtitle)."},
+    (2, "Shoeb", 2009): {"url": "http://hdl.handle.net/1721.1/54669",
+        "manual": "MIT doctoral thesis (2009), DSpace@MIT handle 1721.1/54669, confirmed; the thesis that introduced the CHB-MIT recordings."},
+    (4, "Lossky", 1976): {"url": "https://openlibrary.org/isbn/0913836311",
+        "manual": "St Vladimir's Seminary Press edition (ISBN 0913836311) of the 1957 James Clarke translation; Open Library lists a 1997 printing of it, and the SVS edition dates from 1976. The page locators 126-27 for the quoted passages were not checked against the text."},
     # ---- Paper 4 (28 September 2026). Books and articles were checked against Open Library
     # or Crossref; page locators inside works (e.g. "Mele 2006, 188-89") were not checked
     # against the texts unless a note says so. ----

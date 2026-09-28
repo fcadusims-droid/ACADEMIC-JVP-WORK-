@@ -34,6 +34,6 @@ Paper 4 depends on Paper 1's other claims.
 
 ## Status
 
-A work of analytic theology. It has no computations or experiments. The text still carries the
-author's markers for source locators to confirm (Lossky; critical editions of the primary texts)
-and for one comparison to check against Deery and Nahmias (2017).
+A work of analytic theology. It has no computations or experiments. The citation audit checked
+every reference against a primary index or by hand; page locators inside books were not checked
+against the printed texts.

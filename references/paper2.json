@@ -10,7 +10,7 @@
   },
   {
     "n": 2,
-    "citation": "Amorim, E., Zheng, W., Ghassemi, M., et al. (2023a). The International Cardiac Arrest Research Consortium Electroencephalography Database. *Critical Care Medicine, 51*(12), 1802–1811. https://doi.org/10.1097/CCM.0000000000006074",
+    "citation": "Amorim, E., Zheng, W.-L., Ghassemi, M. M., Aghaeeaval, M., Kandhare, P., Karukonda, V., Lee, J. W., Herman, S. T., Sivaraju, A., Gaspard, N., Hofmeijer, J., van Putten, M. J. A. M., Sameni, R., Reyna, M. A., Clifford, G. D., & Westover, M. B. (2023a). The International Cardiac Arrest Research Consortium Electroencephalography Database. *Critical Care Medicine, 51*(12), 1802–1811. https://doi.org/10.1097/CCM.0000000000006074",
     "status": "verified",
     "url": "https://doi.org/10.1097/ccm.0000000000006074",
     "checked_against": "crossref",
@@ -38,7 +38,7 @@
   },
   {
     "n": 5,
-    "citation": "Costa, M., Goldberger, A. L., & Peng, C.-K. (2005). Broken asymmetry of the human heartbeat: Loss of time irreversibility in aging and disease. *Physical Review Letters, 95*, 198102. https://doi.org/10.1103/PhysRevLett.95.198102",
+    "citation": "Costa, M., Goldberger, A. L., & Peng, C.-K. (2005). Broken asymmetry of the human heartbeat: Loss of time irreversibility in aging and disease. *Physical Review Letters, 95*(19), 198102. https://doi.org/10.1103/PhysRevLett.95.198102",
     "status": "verified",
     "url": "https://doi.org/10.1103/physrevlett.95.198102",
     "checked_against": "crossref",
@@ -47,6 +47,16 @@
   },
   {
     "n": 6,
+    "citation": "Goldberger, A. L., Amaral, L. A. N., Glass, L., Hausdorff, J. M., Ivanov, P. Ch., Mark, R. G., Mietus, J. E., Moody, G. B., Peng, C.-K., & Stanley, H. E. (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. *Circulation, 101*(23), e215–e220. https://doi.org/10.1161/01.CIR.101.23.e215",
+    "status": "verified",
+    "url": "https://doi.org/10.1161/01.cir.101.23.e215",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "doi": "10.1161/01.cir.101.23.e215",
+    "manual_review": "Circulation 101(23): e215-e220, confirmed in Crossref (Crossref lists the title without its subtitle)."
+  },
+  {
+    "n": 7,
     "citation": "Iyengar, N., Peng, C.-K., Morin, R., Goldberger, A. L., & Lipsitz, L. A. (1996). Age-related alterations in the fractal scaling of cardiac interbeat interval dynamics. *American Journal of Physiology–Regulatory, Integrative and Comparative Physiology, 271*(4), R1078–R1084. https://doi.org/10.1152/ajpregu.1996.271.4.R1078",
     "status": "verified-corrected",
     "url": "https://doi.org/10.1152/ajpregu.1996.271.4.R1078",
@@ -57,7 +67,34 @@
     "correction": "The 2026-09-27 draft, and again the 2026-09-28 edit, gave the journal as 'American Journal of Physiology' with pages 1078-1084; the section title, issue, R-prefixed pages and DOI were added."
   },
   {
-    "n": 7,
+    "n": 8,
+    "citation": "Johnson, A. E. W., Bulgarelli, L., Shen, L., Gayles, A., Shammout, A., Horng, S., Pollard, T. J., Hao, S., Moody, B., Gow, B., Lehman, L.-W. H., Celi, L. A., & Mark, R. G. (2023). MIMIC-IV, a freely accessible electronic health record dataset. *Scientific Data, 10*, 1. https://doi.org/10.1038/s41597-022-01899-x",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/s41597-022-01899-x",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/s41597-022-01899-x"
+  },
+  {
+    "n": 9,
+    "citation": "Johnson, A. E. W., Pollard, T. J., Shen, L., Lehman, L.-W. H., Feng, M., Ghassemi, M., Moody, B., Szolovits, P., Celi, L. A., & Mark, R. G. (2016). MIMIC-III, a freely accessible critical care database. *Scientific Data, 3*, 160035. https://doi.org/10.1038/sdata.2016.35",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/sdata.2016.35",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/sdata.2016.35"
+  },
+  {
+    "n": 10,
+    "citation": "Kemp, B., Zwinderman, A. H., Tuk, B., Kamphuisen, H. A. C., & Oberye, J. J. L. (2000). Analysis of a sleep-dependent neuronal feedback loop: The slow-wave microcontinuity of the EEG. *IEEE Transactions on Biomedical Engineering, 47*(9), 1185–1194. https://doi.org/10.1109/10.867928",
+    "status": "verified",
+    "url": "https://doi.org/10.1109/10.867928",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1109/10.867928"
+  },
+  {
+    "n": 11,
     "citation": "Kinouchi, O., & Copelli, M. (2006). Optimal dynamical range of excitable networks at criticality. *Nature Physics, 2*(5), 348–351. https://doi.org/10.1038/nphys289",
     "status": "verified",
     "url": "https://doi.org/10.1038/nphys289",
@@ -66,7 +103,34 @@
     "doi": "10.1038/nphys289"
   },
   {
-    "n": 8,
+    "n": 12,
+    "citation": "Lee, H.-C., Park, Y., Yoon, S. B., Yang, S. M., Park, D., & Jung, C.-W. (2022). VitalDB, a high-fidelity multi-parameter vital signs database in surgical patients. *Scientific Data, 9*, 279. https://doi.org/10.1038/s41597-022-01411-5",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/s41597-022-01411-5",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/s41597-022-01411-5"
+  },
+  {
+    "n": 13,
+    "citation": "Obeid, I., & Picone, J. (2016). The Temple University Hospital EEG data corpus. *Frontiers in Neuroscience, 10*, 196. https://doi.org/10.3389/fnins.2016.00196",
+    "status": "verified",
+    "url": "https://doi.org/10.3389/fnins.2016.00196",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.3389/fnins.2016.00196"
+  },
+  {
+    "n": 14,
+    "citation": "O'Reilly, C., Gosselin, N., Carrier, J., & Nielsen, T. (2014). Montreal Archive of Sleep Studies: An open-access resource for instrument benchmarking and exploratory research. *Journal of Sleep Research, 23*(6), 628–635. https://doi.org/10.1111/jsr.12169",
+    "status": "verified",
+    "url": "https://doi.org/10.1111/jsr.12169",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1111/jsr.12169"
+  },
+  {
+    "n": 15,
     "citation": "Pan, J., & Tompkins, W. J. (1985). A real-time QRS detection algorithm. *IEEE Transactions on Biomedical Engineering, 32*(3), 230–236.",
     "status": "verified",
     "url": "https://doi.org/10.1109/TBME.1985.325532",
@@ -76,7 +140,7 @@
     "manual_review": "Crossref: IEEE Trans Biomed Eng BME-32(3): 230-236. The automated volume check fails only on IEEE's 'BME-32' form of volume 32."
   },
   {
-    "n": 9,
+    "n": 16,
     "citation": "Park, H.-D., Correia, S., Ducorps, A., & Tallon-Baudry, C. (2014). Spontaneous fluctuations in neural responses to heartbeats predict visual detection. *Nature Neuroscience, 17*(4), 612–618.",
     "status": "verified",
     "url": "https://doi.org/10.1038/nn.3671",
@@ -85,7 +149,34 @@
     "doi": "10.1038/nn.3671"
   },
   {
-    "n": 10,
+    "n": 17,
+    "citation": "Pollard, T. J., Johnson, A. E. W., Raffa, J. D., Celi, L. A., Mark, R. G., & Badawi, O. (2018). The eICU Collaborative Research Database, a freely available multi-center database for critical care research. *Scientific Data, 5*, 180178. https://doi.org/10.1038/sdata.2018.178",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/sdata.2018.178",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/sdata.2018.178"
+  },
+  {
+    "n": 18,
+    "citation": "Pollard, T., Moody, B. E., Lehman, L.-W. H., Gow, B. J., Fernandes, C., Xie, C., Johnson, A., Mark, R. G., & Heldt, T. (2026). PhysioNet as a global platform for biomedical research. *Nature Health, 1*(8), 792–795. https://doi.org/10.1038/s44360-026-00096-z",
+    "status": "verified",
+    "url": "https://doi.org/10.1038/s44360-026-00096-z",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1038/s44360-026-00096-z"
+  },
+  {
+    "n": 19,
+    "citation": "Quan, S. F., Howard, B. V., Iber, C., Kiley, J. P., Nieto, F. J., O'Connor, G. T., Rapoport, D. M., Redline, S., Robbins, J. A., Samet, J. M., & Wahl, P. W. (1997). The Sleep Heart Health Study: Design, rationale, and methods. *Sleep, 20*(12), 1077–1085. https://doi.org/10.1093/sleep/20.12.1077",
+    "status": "verified",
+    "url": "https://doi.org/10.1093/sleep/20.12.1077",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1093/sleep/20.12.1077"
+  },
+  {
+    "n": 20,
     "citation": "Schreiber, T., & Schmitz, A. (1996). Improved surrogate data for nonlinearity tests. *Physical Review Letters, 77*(4), 635–638.",
     "status": "verified",
     "url": "https://doi.org/10.1103/physrevlett.77.635",
@@ -94,7 +185,16 @@
     "doi": "10.1103/physrevlett.77.635"
   },
   {
-    "n": 11,
+    "n": 21,
+    "citation": "Shoeb, A. H. (2009). *Application of machine learning to epileptic seizure onset detection and treatment* [Doctoral dissertation, Massachusetts Institute of Technology]. DSpace@MIT. http://hdl.handle.net/1721.1/54669",
+    "status": "verified",
+    "url": "http://hdl.handle.net/1721.1/54669",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "MIT doctoral thesis (2009), DSpace@MIT handle 1721.1/54669, confirmed; the thesis that introduced the CHB-MIT recordings."
+  },
+  {
+    "n": 22,
     "citation": "Westfall, J., & Yarkoni, T. (2016). Statistically controlling for confounding constructs is harder than you think. *PLOS ONE, 11*(3), e0152719. https://doi.org/10.1371/journal.pone.0152719",
     "status": "verified",
     "url": "https://doi.org/10.1371/journal.pone.0152719",
@@ -103,7 +203,7 @@
     "doi": "10.1371/journal.pone.0152719"
   },
   {
-    "n": 12,
+    "n": 23,
     "citation": "Wilting, J., & Priesemann, V. (2018). Inferring collective dynamical states from widely unobserved systems. *Nature Communications, 9*, 2325.",
     "status": "verified",
     "url": "https://doi.org/10.1038/s41467-018-04725-4",
@@ -112,7 +212,16 @@
     "doi": "10.1038/s41467-018-04725-4"
   },
   {
-    "n": 13,
+    "n": 24,
+    "citation": "Zhang, G.-Q., Cui, L., Mueller, R., Tao, S., Kim, M., Rueschman, M., Mariani, S., Mobley, D., & Redline, S. (2018). The National Sleep Research Resource: Towards a sleep data commons. *Journal of the American Medical Informatics Association, 25*(10), 1351–1358. https://doi.org/10.1093/jamia/ocy064",
+    "status": "verified",
+    "url": "https://doi.org/10.1093/jamia/ocy064",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1093/jamia/ocy064"
+  },
+  {
+    "n": 25,
     "citation": "Zrenner, C., Desideri, D., Belardinelli, P., & Ziemann, U. (2018). Real-time EEG-defined excitability states determine efficacy of TMS-induced plasticity in human motor cortex. *Brain Stimulation, 11*(2), 374–389.",
     "status": "verified",
     "url": "https://doi.org/10.1016/j.brs.2017.11.016",

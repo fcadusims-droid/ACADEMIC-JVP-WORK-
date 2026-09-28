@@ -344,7 +344,7 @@
     "auto_problems": []
   },
   {
-    "raw": "Pernet, C., Garrido, M. I., Gramfort, A., Maurits, N., Michel, C. M., Pang, E., et al. (2020). Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. *Nature Neuroscience, 23*, 1473–1483. https://doi.org/10.1038/s41593-020-00709-0",
+    "raw": "Pernet, C., Garrido, M. I., Gramfort, A., Maurits, N., Michel, C. M., Pang, E., et al. (2020). Issues and recommendations from the OHBM COBIDAS MEEG committee for reproducible EEG and MEG research. *Nature Neuroscience, 23*(12), 1473–1483. https://doi.org/10.1038/s41593-020-00709-0",
     "style": "apa",
     "surname": "Pernet",
     "year": 2020,
@@ -369,6 +369,36 @@
     "found_year": 2020,
     "found_volume": "23",
     "found_page": "1473-1483",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Pollard, T., Moody, B. E., Lehman, L.-W. H., Gow, B. J., Fernandes, C., Xie, C., et al. (2026). PhysioNet as a global platform for biomedical research. *Nature Health, 1*(8), 792–795. https://doi.org/10.1038/s44360-026-00096-z",
+    "style": "apa",
+    "surname": "Pollard",
+    "year": 2026,
+    "doi": "10.1038/s44360-026-00096-z",
+    "arxiv": null,
+    "title": "PhysioNet as a global platform for biomedical research",
+    "container": "Nature Health",
+    "volume": "1",
+    "first_page": "792",
+    "source": "crossref",
+    "url": "https://doi.org/10.1038/s44360-026-00096-z",
+    "found_title": "PhysioNet as a global platform for biomedical research",
+    "found_container": "Nature Health",
+    "found_authors": [
+      "Pollard",
+      "Moody",
+      "Lehman",
+      "Gow",
+      "Fernandes",
+      "Xie"
+    ],
+    "found_year": 2026,
+    "found_volume": "1",
+    "found_page": "792-795",
     "title_similarity": 1.0,
     "auto_status": "MATCH",
     "auto_problems": []
