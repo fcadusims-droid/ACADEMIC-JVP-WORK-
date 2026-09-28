@@ -219,13 +219,13 @@ def check_references(quiet=False):
     citation as checked. This fails the build instead.
     """
     errors, checked = [], 0
-    for n in (1, 2, 3):
+    for n in (1, 2, 3, 4):
         rec_path = os.path.join(ROOT, "references", f"paper{n}.json")
         if not os.path.exists(rec_path):
             continue
         with open(os.path.join(ROOT, f"Paper{n}.md"), encoding="utf-8") as fh:
             sec = fh.read().split("## References", 1)[1].split("\n## ", 1)[0]
-        lines = [l.strip() for l in sec.split("\n") if l.strip()]
+        lines = [l.strip() for l in sec.split("\n") if l.strip() and not l.startswith("#")]
         with open(rec_path, encoding="utf-8") as fh:
             recs = json.load(fh)
         cited = [r["citation"] for r in recs]

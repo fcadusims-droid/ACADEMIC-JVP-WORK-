@@ -1,6 +1,6 @@
 """Automated first pass of the citation audit.
 
-For every reference in the References section of Paper1.md, Paper2.md and Paper3.md this
+For every reference in the References section of Paper1.md to Paper4.md this
 queries a primary bibliographic index and compares what the paper says against what the index
 returns:
 
@@ -22,6 +22,7 @@ import difflib
 import json
 import os
 import re
+import sys
 import time
 import unicodedata
 import urllib.parse
@@ -57,7 +58,7 @@ def references(paper):
     text = open(os.path.join(ROOT, paper), encoding="utf-8").read()
     sec = text.split("## References", 1)[1]
     sec = re.split(r"\n## ", sec, 1)[0]
-    return [l.strip() for l in sec.split("\n") if l.strip()]
+    return [l.strip() for l in sec.split("\n") if l.strip() and not l.startswith("#")]
 
 
 APA_YEAR = re.compile(r"^[^()]*?\((\d{4})[a-z]?\)\.\s+|^[^()]*?\((n\.d\.)\)\.\s+")
@@ -111,7 +112,8 @@ def parse(line):
     m = re.search(r"\*\s*(\d+)\s*(?:\((\d+[-–]?\d*)\))?\s*:\s*([\de]+)\s*[-–]?\s*(\d*)", line)
     if m:
         ref["volume"], ref["first_page"] = m.group(1), m.group(3)
-    d = re.search(r"DOI:\s*(10\.\S+?)[.)]?(\s|$)", line)
+    d = re.search(r"DOI:\s*(10\.\S+?)[.)]?(\s|$)", line) or \
+        re.search(r"https?://doi\.org/(10\.\S+?)[.)]?(\s|$)", line)
     ref["doi"] = d.group(1) if d else None
     a = re.search(r"arXiv:(\d{4}\.\d{4,5})", line)
     ref["arxiv"] = a.group(1) if a else None
@@ -224,7 +226,7 @@ def openlibrary(ref):
 
 
 def main():
-    for n in (1, 2, 3):
+    for n in [int(a) for a in sys.argv[1:]] or (1, 2, 3, 4):
         rows = []
         for line in references(f"Paper{n}.md"):
             ref = parse(line)

@@ -1,24 +1,28 @@
-Three interlinked papers and an in-silico validation suite that tests their formal
-and statistical claims. The papers argue a negative thesis about control theory, a
-conditional protocol for testing it in biology, and an independent geometric method
-for demarcating state transitions in single time series. The suite exists to find
-out which of their claims survive contact with a computer.
+Four papers and an in-silico validation suite that tests the formal and statistical claims
+of the first three. Paper 1 argues a negative thesis about formal models of value change;
+Paper 2 asks what a physiological test of a related question would need; Paper 3 records how one
+EEG method appeared validated and how controls overturned it; Paper 4 carries Paper 1's
+constraint into the theology of grace. The suite exists to find out which claims survive contact
+with a computer.
 
 Everything on this site is generated from the repository itself. The papers are
 rendered from their source; every experiment page is built from the pre-registration
 written *before* the run and the `result.json` committed *after* it. When the
 repository changes, this site rebuilds.
 
-## The three papers
+## The four papers
 
-The papers were rewritten on 27 September 2026, and in their current versions they are
+Papers 1 to 3 were rewritten on 27 September 2026 and revised on 28 September; they are
 logically independent. Paper 1 is a philosophical argument: formal models used to direct or
 evaluate value change take their standard from the agent's attitudes, and so cannot tell
 conversion from manipulation. Paper 2 says what data a test of a physiological version of the
-persistence question would need, and reports that the one public corpus with the right contrast
-failed the first pre-specified step. Paper 3 is the validation record of one EEG method: five
-traps that made it look validated, and the controls that overturned it. Each paper's remaining
-analyses are specified in its text before they are run; their results are marked as pending.
+persistence question would need. Its first gate failed as executed, but an audit found that the
+executed statistic departed from the written plan; as written, the gate passes. Paper 3 is the
+validation record of one EEG method: five traps that made it look validated, and the controls
+that overturned it. Paper 4 (28 September 2026) is a companion to Paper 1 in analytic theology:
+no attitudinal criterion can tell grace from its counterfeits, so what distinguishes them is the
+manner of the change. The analyses specified in advance in Papers 1 to 3 have been run, except
+one intra-rater re-coding that waits until 7 October 2026.
 
 The earlier versions are kept, marked as superseded, in `archive/papers_2026-09-26_superseded/`.
 

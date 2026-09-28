@@ -20,13 +20,21 @@ post-cardiac-arrest database.
 
 ## What happened
 
-The first pre-specified step checked whether the heart-period series carries nonlinear
-structure beyond linear (IAAFT) surrogates. It passed in 6 of 21 pilot patients (29%), below a
-60% bar, and the analysis stopped. The failure most plausibly reflects the known loss of
-heartbeat time irreversibility in disease, compounded by sedation, cooling and vasopressors.
-The gate had no positive control, so it is uninformative until one is run; the paper specifies
-one (the Fantasia database), a beat-indexed multiscale version, an outcome comparison and an
-audit re-check.
+The first planned step checked whether the heart-period series carries nonlinear structure
+beyond linear (IAAFT) surrogates in at least 60% of patients. As executed it passed in 6 of 21
+pilot patients (29%), and the analysis stopped. An audit then found that the executed statistic
+departed from the written plan: the code used the beat-indexed series, while the plan specified
+4 Hz resampling. Follow-up analyses, specified before they were run, found:
+
+- **The gate as written:** structure in 16 of 21 patients (76%), above the bar.
+- **A beat-indexed multiscale version:** 15 of 21 (71%).
+- **A positive control (Fantasia):** the gate passes in healthy young adults under both
+  versions (19 and 17 of 20).
+- **By outcome (50 + 50 patients, descriptive):** no clear difference (p = 0.16), but the groups
+  differ markedly in age and arrest rhythm, so matching, not estimability, is the binding
+  constraint.
+- **Audit re-check:** VitalDB, classified from its documentation as lacking raw EEG, has it in
+  5,871 of 6,388 cases; Table 1 is corrected.
 
 ## What the simulation audits show
 

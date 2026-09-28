@@ -10,36 +10,42 @@
 > and none of it is ready for submission. Full statement: [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md) ·
 > open problems: [`OPEN_ISSUES.md`](OPEN_ISSUES.md).
 
-Three papers by **João Vitor Perazzolo** (begun July 2026, last revised September 2026) and an in-silico
+Four papers by **João Vitor Perazzolo** (begun July 2026, last revised September 2026) and an in-silico
 validation suite that tests their formal and statistical claims. The suite is
 deliberately scoped by what simulation and available data *can* and *cannot*
 establish for each paper.
 
 **📄 Read it online: <https://fcadusims-droid.github.io/ACADEMIC-JVP-WORK-/>** — the
-three papers as navigable web pages *and* as downloadable PDFs, every experiment with
+four papers as navigable web pages *and* as downloadable PDFs, every experiment with
 its pre-registration, verdict, figures and raw results. The site is generated from
 this repository and rebuilt on every push, so it never lags the work; see
 [`site/README.md`](site/README.md) for how it is built and gated.
 
-## The three papers (versions of 27 September 2026)
+## The four papers (Papers 1–3 revised 28 September 2026; Paper 4 first version 28 September 2026)
 
 - **`Paper1.md` — The Cybernetic Limits of Conversion: Why Models That Direct Value Change Cannot
   Tell Conversion from Manipulation.** Formal models used to direct or evaluate value change take
   their reference standard from the agent's attitudes (before the change, after it, or a fixed rule
   over both). Conversion and manipulation can share an attitudinal profile, so none of these models
   can tell them apart; the one history-sensitive proposal penalizes conversion along with
-  manipulation. Two appendix computations are specified before they are run.
+  manipulation. The two appendix computations were specified in advance and run; both predictions
+  were met.
 - **`Paper2.md` — Does an Interoceptive Signal Mark the Transitions a Person Survives? Data
-  Requirements, and a Failed Estimability Gate on Public Post-Cardiac-Arrest Recordings.** What a
-  test would need, a bounded audit of public corpora (one, I-CARE, qualifies), and a pre-specified
-  heart-period gate that passed in 6 of 21 patients against a 60% bar. Simulation audits of the
-  planned statistics, and follow-up analyses specified before they are run.
+  Requirements, and an Estimability Gate Reversed on Audit, in Public Post-Cardiac-Arrest
+  Recordings.** What a test would need, a bounded audit of public corpora (one, I-CARE, qualifies),
+  and a heart-period gate that failed as executed (6 of 21) but passes as written in the plan
+  (16 of 21); a positive control passes in healthy subjects. Simulation audits of the planned
+  statistics.
 - **`Paper3.md` — Five Ways a Covariance-Geometry EEG Method Appeared Validated, and the Controls
   That Overturned It.** The validation record of a trace-normalized SPD geometry read through a
   geodesic CUSUM: five traps, the control that exposed each, the field's standard pipeline under the
   same controls, and a survey of published studies.
+- **`Paper4.md` — Conversion and Its Counterfeits: Grace, Manipulation, and the Limits of
+  Attitudinal Criteria.** Analytic theology, a companion to Paper 1: no criterion of grace made of
+  attitudinal features can tell grace from its counterfeits; preparation, fruits and perseverance
+  are signs, not criteria; what remains is a condition on the manner of the change. No experiments.
 
-The three are logically independent. The earlier versions (26 September 2026) are kept, with their
+Papers 1–3 are logically independent; Paper 4 restates Paper 1's constraint in self-contained form. The earlier versions (26 September 2026) are kept, with their
 titles marked as superseded, in [`archive/papers_2026-09-26_superseded/`](archive/papers_2026-09-26_superseded/).
 The experiments specified in the new texts are listed in [`EXPERIMENTOS_2026-09-27.md`](EXPERIMENTOS_2026-09-27.md).
 

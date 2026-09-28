@@ -1,0 +1,338 @@
+[
+  {
+    "n": 1,
+    "citation": "Aquinas, Thomas. *Summa Theologiae*. Translated by the Fathers of the English Dominican Province. 2nd rev. ed. London: Burns Oates & Washbourne, 1920. Online edition: New Advent.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL26440307W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 2,
+    "citation": "Augustine. *De correptione et gratia*. In *Nicene and Post-Nicene Fathers*, First Series, vol. 5, edited by Philip Schaff. Buffalo: Christian Literature, 1887.",
+    "status": "verified",
+    "url": "https://www.newadvent.org/fathers/1513.htm",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "NPNF First Series vol. 5 (Schaff, Christian Literature, 1887), 'A Treatise on Rebuke and Grace', confirmed; the heading of ch. 40 [XIII] quoted in section 4.3 matches that translation."
+  },
+  {
+    "n": 3,
+    "citation": "Augustine. *De gratia et libero arbitrio*. In *Nicene and Post-Nicene Fathers*, First Series, vol. 5, edited by Philip Schaff. Buffalo: Christian Literature, 1887.",
+    "status": "verified",
+    "url": "https://www.newadvent.org/fathers/1510.htm",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "NPNF First Series vol. 5 (1887), 'On Grace and Free Will', confirmed; 17.33 is the passage Aquinas quotes in ST I-II q. 111 a. 2."
+  },
+  {
+    "n": 4,
+    "citation": "Augustine. *Sermo* 169. Latin text in *Nuova Biblioteca Agostiniana* (augustinus.it).",
+    "status": "verified",
+    "url": "https://www.augustinus.it/latino/discorsi/index2.htm",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Sermo 169 in the Nuova Biblioteca Agostiniana Latin text (augustinus.it), confirmed; 169.11.13 is the standard locator of 'qui ergo fecit te sine te, non te iustificat sine te'."
+  },
+  {
+    "n": 5,
+    "citation": "Calvin, John. *Institutes of the Christian Religion*. Translated by Henry Beveridge. Edinburgh: Calvin Translation Society, 1845.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL27784787W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 6,
+    "citation": "Canons of Dort. 1619. Third and Fourth Main Points of Doctrine. Traditional English translation.",
+    "status": "verified",
+    "url": "https://www.crcna.org/welcome/beliefs/confessions/canons-dort",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Canons of Dort, Third and Fourth Main Points, arts. 12 and 16, traditional English translation; quoted phrases confirmed."
+  },
+  {
+    "n": 7,
+    "citation": "Council of Orange. 529. Canons.",
+    "status": "verified",
+    "url": "https://www.ewtn.com/catholicism/library/council-of-orange-1502",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Second Council of Orange (529), canon 5, common English translation; quotation confirmed."
+  },
+  {
+    "n": 8,
+    "citation": "Council of Trent. 1547. Session VI, Decree on Justification.",
+    "status": "verified",
+    "url": "https://www.papalencyclicals.net/councils/trent/sixth-session.htm",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Session VI (13 January 1547), Decree on Justification, chs. 5 and 9 and canons 4 and 16, as reproduced at papalencyclicals.net; quotations confirmed."
+  },
+  {
+    "n": 9,
+    "citation": "Edwards, Jonathan. 1746. *A Treatise Concerning Religious Affections*. Boston: S. Kneeland and T. Green. Critical edition: *The Works of Jonathan Edwards*, vol. 2, edited by John E. Smith. New Haven: Yale University Press, 1959.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL37882W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 10,
+    "citation": "Formula of Concord. 1577. Solid Declaration, Article II (Free Will). In *Triglot Concordia*. St. Louis: Concordia, 1921.",
+    "status": "verified",
+    "url": "https://bookofconcord.org/solid-declaration/free-will/",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Solid Declaration II, Triglot Concordia translation (Concordia, 1921), confirmed; paragraphs 60, 64, 65 and 89 as cited."
+  },
+  {
+    "n": 11,
+    "citation": "Westminster Confession of Faith. 1646.",
+    "status": "verified",
+    "url": "https://opc.org/wcf.html",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Westminster Confession, OPC text, chs. 10.2 and 18.2-18.3; quotations confirmed."
+  },
+  {
+    "n": 12,
+    "citation": "Astrain, Antonio. 1908. \"Congregatio de Auxiliis.\" In *The Catholic Encyclopedia*, vol. 4. New York: Robert Appleton.",
+    "status": "verified",
+    "url": "https://www.newadvent.org/cathen/04238a.htm",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Catholic Encyclopedia vol. 4 (Robert Appleton, 1908), 'Congregatio de Auxiliis' by Antonio Astrain, confirmed (not in Crossref)."
+  },
+  {
+    "n": 13,
+    "citation": "Barker, Eileen. 1984. *The Making of a Moonie: Choice or Brainwashing?* Oxford: Blackwell.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL12299123W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 14,
+    "citation": "Carroll, Micah, Anca Dragan, Stuart Russell, and Dylan Hadfield-Menell. 2022. \"Estimating and Penalizing Induced Preference Shifts in Recommender Systems.\" In *Proceedings of the 39th International Conference on Machine Learning*. arXiv:2204.11966.",
+    "status": "verified",
+    "url": "https://arxiv.org/abs/2204.11966",
+    "checked_against": "arxiv",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 15,
+    "citation": "Christman, John. 1991. \"Autonomy and Personal History.\" *Canadian Journal of Philosophy* 21 (1): 1–24.",
+    "status": "verified",
+    "url": "https://doi.org/10.1080/00455091.1991.10717234",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1080/00455091.1991.10717234"
+  },
+  {
+    "n": 16,
+    "citation": "Couenhoven, Jesse. 2013. *Stricken by Sin, Cured by Christ: Agency, Necessity, and Culpability in Augustinian Theology*. Oxford: Oxford University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL17574622W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 17,
+    "citation": "Crisp, Oliver D., and Michael C. Rea, eds. 2009. *Analytic Theology: New Essays in the Philosophy of Theology*. Oxford: Oxford University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL19801297W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 18,
+    "citation": "De Cruz, Helen. 2018. \"Religious Conversion, Transformative Experience, and Disagreement.\" *Philosophia Christi* 20 (1): 265–75.",
+    "status": "verified",
+    "url": "https://doi.org/10.5840/pc201820125",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.5840/pc201820125"
+  },
+  {
+    "n": 19,
+    "citation": "Deery, Oisín, and Eddy Nahmias. 2017. \"Defeating Manipulation Arguments: Interventionist Causation and Compatibilist Sourcehood.\" *Philosophical Studies* 174 (5): 1255–76. https://doi.org/10.1007/s11098-016-0754-8.",
+    "status": "verified",
+    "url": "https://doi.org/10.1007/s11098-016-0754-8",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1007/s11098-016-0754-8"
+  },
+  {
+    "n": 20,
+    "citation": "DeWeese-Boyd, Ian. 2006. \"Grace and Freedom: Examining Stump's View of the Quiescent Will.\" *Faith and Philosophy* 23 (1): 80–92. https://doi.org/10.5840/faithphil20062314.",
+    "status": "verified",
+    "url": "https://doi.org/10.5840/faithphil20062314",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "doi": "10.5840/faithphil20062314",
+    "manual_review": "Faith and Philosophy 23(1): 80-92, confirmed in Crossref, which lists only the main title 'Grace and Freedom'."
+  },
+  {
+    "n": 21,
+    "citation": "Fischer, John Martin, and Mark Ravizza. 1998. *Responsibility and Control: A Theory of Moral Responsibility*. Cambridge: Cambridge University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL2642911W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 22,
+    "citation": "Furlong, Peter. 2019. *The Challenges of Divine Determinism: A Philosophical Analysis*. Cambridge: Cambridge University Press. https://doi.org/10.1017/9781108696845.",
+    "status": "verified",
+    "url": "https://doi.org/10.1017/9781108696845",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "doi": "10.1017/9781108696845",
+    "manual_review": "Cambridge University Press 2019, DOI 10.1017/9781108696845 confirmed in Crossref."
+  },
+  {
+    "n": 23,
+    "citation": "Grant, W. Matthews. 2019. *Free Will and God's Universal Causality: The Dual Sources Account*. London: Bloomsbury Academic.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL21711248W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 24,
+    "citation": "Kittle, Simon. 2015. \"Grace and Free Will: Quiescence and Control.\" *Journal of Analytic Theology* 3: 89–108. https://doi.org/10.12978/jat.2015-3.180813100804.",
+    "status": "verified",
+    "url": "https://doi.org/10.12978/jat.2015-3.180813100804",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.12978/jat.2015-3.180813100804"
+  },
+  {
+    "n": 25,
+    "citation": "Lonergan, Bernard. 1972. *Method in Theology*. London: Darton, Longman & Todd.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL2277873W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 26,
+    "citation": "Lossky, Vladimir. 1957. *The Mystical Theology of the Eastern Church*. London: James Clarke. [LOCATOR TO BE CONFIRMED.]",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL12055538W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 27,
+    "citation": "Mele, Alfred R. 1995. *Autonomous Agents: From Self-Control to Autonomy*. New York: Oxford University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/search?q=autonomous+agents+mele",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "Oxford University Press 1995, confirmed (same work as Paper 1's entry)."
+  },
+  {
+    "n": 28,
+    "citation": "Mele, Alfred R. 2006. *Free Will and Luck*. New York: Oxford University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL13663958W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 29,
+    "citation": "Perazzolo, João Vitor. 2026. \"The Cybernetic Limits of Conversion: Why Models That Direct Value Change Cannot Tell Conversion from Manipulation.\" Manuscript. [ANONYMIZE FOR REVIEW.]",
+    "status": "verified",
+    "url": "https://github.com/fcadusims-droid/ACADEMIC-JVP-WORK-/blob/main/Paper1.md",
+    "checked_against": "manual",
+    "automated_pass": "NOMATCH",
+    "manual_review": "The author's own manuscript, Paper 1 of this repository; title matches the current Paper1.md. Unpublished, so no index entry exists."
+  },
+  {
+    "n": 30,
+    "citation": "Pereboom, Derk. 2001. *Living Without Free Will*. Cambridge: Cambridge University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL8306362W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 31,
+    "citation": "Pereboom, Derk. 2014. *Free Will, Agency, and Meaning in Life*. Oxford: Oxford University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL20478512W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 32,
+    "citation": "Plantinga, Alvin. 2000. *Warranted Christian Belief*. New York: Oxford University Press.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL1875215W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 33,
+    "citation": "Richardson, James T. 1985. \"The Active vs. Passive Convert: Paradigm Conflict in Conversion/Recruitment Research.\" *Journal for the Scientific Study of Religion* 24 (2): 163–79. https://doi.org/10.2307/1386340.",
+    "status": "verified",
+    "url": "https://doi.org/10.2307/1386340",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.2307/1386340"
+  },
+  {
+    "n": 34,
+    "citation": "Stump, Eleonore. 1988. \"Sanctification, Hardening of the Heart, and Frankfurt's Concept of Free Will.\" *Journal of Philosophy* 85 (8): 395–420. https://doi.org/10.2307/2027051.",
+    "status": "verified",
+    "url": "https://doi.org/10.2307/2027051",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.2307/2027051"
+  },
+  {
+    "n": 35,
+    "citation": "Stump, Eleonore. 2001. \"Augustine on Free Will.\" In *The Cambridge Companion to Augustine*, edited by Eleonore Stump and Norman Kretzmann, 124–47. Cambridge: Cambridge University Press.",
+    "status": "verified",
+    "url": "https://doi.org/10.1017/ccol0521650186.011",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1017/ccol0521650186.011"
+  },
+  {
+    "n": 36,
+    "citation": "Stump, Eleonore. 2003. *Aquinas*. London: Routledge.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL25198434W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 37,
+    "citation": "Tanner, Kathryn. 1988. *God and Creation in Christian Theology: Tyranny or Empowerment?* Oxford: Basil Blackwell.",
+    "status": "verified",
+    "url": "https://openlibrary.org/works/OL2682121W",
+    "checked_against": "openlibrary",
+    "automated_pass": "MATCH"
+  },
+  {
+    "n": 38,
+    "citation": "Timpe, Kevin. 2007. \"Grace and Controlling What We Do Not Cause.\" *Faith and Philosophy* 24 (3): 284–99. https://doi.org/10.5840/faithphil200724313.",
+    "status": "verified",
+    "url": "https://doi.org/10.5840/faithphil200724313",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.5840/faithphil200724313"
+  },
+  {
+    "n": 39,
+    "citation": "Visala, Aku. 2023. \"The Problems of Divine Manipulation.\" *Neue Zeitschrift für Systematische Theologie und Religionsphilosophie* 65 (2): 186–210. https://doi.org/10.1515/nzsth-2023-0018.",
+    "status": "verified",
+    "url": "https://doi.org/10.1515/nzsth-2023-0018",
+    "checked_against": "crossref",
+    "automated_pass": "MATCH",
+    "doi": "10.1515/nzsth-2023-0018"
+  }
+]
