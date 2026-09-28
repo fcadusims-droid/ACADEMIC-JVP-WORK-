@@ -191,7 +191,7 @@ Beggs, J. M., & Plenz, D. (2003). Neuronal avalanches in neocortical circuits. *
 
 Costa, M., Goldberger, A. L., & Peng, C.-K. (2005). Broken asymmetry of the human heartbeat: Loss of time irreversibility in aging and disease. *Physical Review Letters, 95*, 198102. https://doi.org/10.1103/PhysRevLett.95.198102
 
-Iyengar, N., Peng, C.-K., Morin, R., Goldberger, A. L., & Lipsitz, L. A. (1996). Age-related alterations in the fractal scaling of cardiac interbeat interval dynamics. *American Journal of Physiology, 271*, 1078–1084.
+Iyengar, N., Peng, C.-K., Morin, R., Goldberger, A. L., & Lipsitz, L. A. (1996). Age-related alterations in the fractal scaling of cardiac interbeat interval dynamics. *American Journal of Physiology–Regulatory, Integrative and Comparative Physiology, 271*(4), R1078–R1084. https://doi.org/10.1152/ajpregu.1996.271.4.R1078
 
 Kinouchi, O., & Copelli, M. (2006). Optimal dynamical range of excitable networks at criticality. *Nature Physics, 2*(5), 348–351. https://doi.org/10.1038/nphys289
 

@@ -40,7 +40,7 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PAPERS = ["Paper1.md", "Paper2.md", "Paper3.md"]
+PAPERS = ["Paper1.md", "Paper2.md", "Paper3.md", "Paper4.md"]
 
 KNOWN_MACROS = set("""
 alpha beta gamma delta epsilon varepsilon zeta eta theta vartheta iota kappa lambda

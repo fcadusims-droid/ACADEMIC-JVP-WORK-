@@ -1,0 +1,944 @@
+[
+  {
+    "raw": "Aquinas, Thomas. *Summa Theologiae*. Translated by the Fathers of the English Dominican Province. 2nd rev. ed. London: Burns Oates & Washbourne, 1920. Online edition: New Advent.",
+    "surname": "Aquinas",
+    "year": 1920,
+    "title": "Summa Theologiae",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL26440307W",
+    "found_title": "Summa Theologiae",
+    "found_authors": [
+      "Thomas Aquinas",
+      "The Aquinas Institute"
+    ],
+    "found_first_year": 2012,
+    "found_publishers": [
+      "Aquinas Institute",
+      "Emmaus Academic"
+    ],
+    "found_publish_years": [
+      2012
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Augustine. *De correptione et gratia*. In *Nicene and Post-Nicene Fathers*, First Series, vol. 5, edited by Philip Schaff. Buffalo: Christian Literature, 1887.",
+    "surname": "Augustine",
+    "year": 1887,
+    "title": "De correptione et gratia",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL27770956W",
+    "found_title": "Divi Augustini De correptione et gratia",
+    "found_authors": [
+      "Augustine of Hippo"
+    ],
+    "found_first_year": 1932,
+    "found_publishers": [
+      "Apud aedes Pont. Universitatis Gregorianae"
+    ],
+    "found_publish_years": [
+      1932
+    ],
+    "title_similarity": 0.762,
+    "auto_problems": [
+      "title"
+    ],
+    "auto_status": "NOMATCH"
+  },
+  {
+    "raw": "Augustine. *De gratia et libero arbitrio*. In *Nicene and Post-Nicene Fathers*, First Series, vol. 5, edited by Philip Schaff. Buffalo: Christian Literature, 1887.",
+    "surname": "Augustine",
+    "year": 1887,
+    "title": "De gratia et libero arbitrio",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL33454753W",
+    "found_title": "D. Aurelii Augustini Hipponensis episcopi De gratia & libero arbitrio",
+    "found_authors": [
+      "Augustine of Hippo"
+    ],
+    "found_first_year": 1530,
+    "found_publishers": [
+      "Ioannes Gymnicus excudebat"
+    ],
+    "found_publish_years": [
+      1530
+    ],
+    "title_similarity": 0.532,
+    "auto_problems": [
+      "title"
+    ],
+    "auto_status": "NOMATCH"
+  },
+  {
+    "raw": "Augustine. *Sermo* 169. Latin text in *Nuova Biblioteca Agostiniana* (augustinus.it).",
+    "surname": "Augustine",
+    "year": null,
+    "title": "Sermo",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL23723472W",
+    "found_title": "Sermo CCCII",
+    "found_authors": [
+      "Augustine of Hippo"
+    ],
+    "found_first_year": 1998,
+    "found_publishers": [
+      "Pàtron"
+    ],
+    "found_publish_years": [
+      1998
+    ],
+    "title_similarity": 0.625,
+    "auto_problems": [
+      "title"
+    ],
+    "auto_status": "NOMATCH"
+  },
+  {
+    "raw": "Calvin, John. *Institutes of the Christian Religion*. Translated by Henry Beveridge. Edinburgh: Calvin Translation Society, 1845.",
+    "surname": "Calvin",
+    "year": 1845,
+    "title": "Institutes of the Christian Religion",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL27784787W",
+    "found_title": "Institutes of the Christian Religion",
+    "found_authors": [
+      "John Calvin"
+    ],
+    "found_first_year": 2009,
+    "found_publishers": [
+      "Tyndale House Publishers",
+      "Hendrickson Publishers Marketing, LLC",
+      "Murine Publications LLC"
+    ],
+    "found_publish_years": [
+      2009,
+      2022
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Canons of Dort. 1619. Third and Fourth Main Points of Doctrine. Traditional English translation.",
+    "surname": "Canons of Dort",
+    "year": 1619,
+    "title": null,
+    "container": null,
+    "doi": null,
+    "arxiv": null,
+    "auto_status": "NOMATCH",
+    "source": null
+  },
+  {
+    "raw": "Council of Orange. 529. Canons.",
+    "surname": "Council of Orange",
+    "year": null,
+    "title": null,
+    "container": null,
+    "doi": null,
+    "arxiv": null,
+    "auto_status": "NOMATCH",
+    "source": null
+  },
+  {
+    "raw": "Council of Trent. 1547. Session VI, Decree on Justification.",
+    "surname": "Council of Trent",
+    "year": 1547,
+    "title": null,
+    "container": null,
+    "doi": null,
+    "arxiv": null,
+    "auto_status": "NOMATCH",
+    "source": null
+  },
+  {
+    "raw": "Edwards, Jonathan. 1746. *A Treatise Concerning Religious Affections*. Boston: S. Kneeland and T. Green. Critical edition: *The Works of Jonathan Edwards*, vol. 2, edited by John E. Smith. New Haven: Yale University Press, 1959.",
+    "surname": "Edwards",
+    "year": 1746,
+    "title": "A Treatise Concerning Religious Affections",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL37882W",
+    "found_title": "A treatise concerning religious affections",
+    "found_authors": [
+      "Jonathan Edwards"
+    ],
+    "found_first_year": 1959,
+    "found_publishers": [
+      "Banner of Truth Trust",
+      "Multnomah Press",
+      "Yale University Press"
+    ],
+    "found_publish_years": [
+      1959,
+      1984,
+      1986
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Formula of Concord. 1577. Solid Declaration, Article II (Free Will). In *Triglot Concordia*. St. Louis: Concordia, 1921.",
+    "surname": "Formula of Concord",
+    "year": 1577,
+    "title": "Triglot Concordia",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "auto_status": "NOMATCH",
+    "source": "openlibrary"
+  },
+  {
+    "raw": "Westminster Confession of Faith. 1646.",
+    "surname": "Westminster Confession of Faith",
+    "year": 1646,
+    "title": null,
+    "container": null,
+    "doi": null,
+    "arxiv": null,
+    "auto_status": "NOMATCH",
+    "source": null
+  },
+  {
+    "raw": "Astrain, Antonio. 1908. \"Congregatio de Auxiliis.\" In *The Catholic Encyclopedia*, vol. 4. New York: Robert Appleton.",
+    "surname": "Astrain",
+    "year": 1908,
+    "title": "Congregatio de Auxiliis",
+    "container": "The Catholic Encyclopedia",
+    "doi": "10.1163/9789004409309_002",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1163/9789004409309_002",
+    "found_title": "Introduction: Augustinian Soteriology in the Context of the Congregatio De Auxiliis and the Synod of Dordt",
+    "found_container": "Beyond Dordt and &lt;i&gt;De Auxiliis&lt;/i&gt;",
+    "found_authors": [
+      "Ballor",
+      "Gaetano",
+      "Sytsma"
+    ],
+    "found_year": 2019,
+    "found_volume": null,
+    "found_page": "1-18",
+    "title_similarity": 0.359,
+    "auto_status": "NOMATCH",
+    "auto_problems": [
+      "title",
+      "author",
+      "year"
+    ]
+  },
+  {
+    "raw": "Barker, Eileen. 1984. *The Making of a Moonie: Choice or Brainwashing?* Oxford: Blackwell.",
+    "surname": "Barker",
+    "year": 1984,
+    "title": "The Making of a Moonie: Choice or Brainwashing?",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL12299123W",
+    "found_title": "The making of a Moonie",
+    "found_authors": [
+      "Eileen Barker"
+    ],
+    "found_first_year": 1984,
+    "found_publishers": [
+      "Blackwell",
+      "B. Blackwell",
+      "Gregg Revivals"
+    ],
+    "found_publish_years": [
+      1984,
+      1985,
+      1993
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Carroll, Micah, Anca Dragan, Stuart Russell, and Dylan Hadfield-Menell. 2022. \"Estimating and Penalizing Induced Preference Shifts in Recommender Systems.\" In *Proceedings of the 39th International Conference on Machine Learning*. arXiv:2204.11966.",
+    "surname": "Carroll",
+    "year": 2022,
+    "title": "Estimating and Penalizing Induced Preference Shifts in Recommender Systems",
+    "container": "Proceedings of the 39th International Conference on Machine Learning",
+    "doi": null,
+    "arxiv": "2204.11966",
+    "source": "arxiv",
+    "url": "https://arxiv.org/abs/2204.11966",
+    "found_title": "Estimating and Penalizing Induced Preference Shifts in Recommender Systems",
+    "found_authors": [
+      "Carroll, Micah",
+      "Dragan, Anca",
+      "Russell, Stuart",
+      "Hadfield-Menell, Dylan"
+    ],
+    "found_year": 2022,
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Christman, John. 1991. \"Autonomy and Personal History.\" *Canadian Journal of Philosophy* 21 (1): 1–24.",
+    "surname": "Christman",
+    "year": 1991,
+    "title": "Autonomy and Personal History",
+    "container": "Canadian Journal of Philosophy",
+    "volume": "21",
+    "first_page": "1",
+    "doi": "10.1080/00455091.1991.10717234",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1080/00455091.1991.10717234",
+    "found_title": "Autonomy and Personal History",
+    "found_container": "Canadian Journal of Philosophy",
+    "found_authors": [
+      "Christman"
+    ],
+    "found_year": 1991,
+    "found_volume": "21",
+    "found_page": "1-24",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Couenhoven, Jesse. 2013. *Stricken by Sin, Cured by Christ: Agency, Necessity, and Culpability in Augustinian Theology*. Oxford: Oxford University Press.",
+    "surname": "Couenhoven",
+    "year": 2013,
+    "title": "Stricken by Sin, Cured by Christ: Agency, Necessity, and Culpability in Augustinian Theology",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL17574622W",
+    "found_title": "Stricken By Sin Cured By Christ Agency Necessity And Culpability In Augustinian Theology",
+    "found_authors": [
+      "Jesse Couenhoven"
+    ],
+    "found_first_year": 2013,
+    "found_publishers": [
+      "Oxford University Press Inc"
+    ],
+    "found_publish_years": [
+      2013
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Crisp, Oliver D., and Michael C. Rea, eds. 2009. *Analytic Theology: New Essays in the Philosophy of Theology*. Oxford: Oxford University Press.",
+    "surname": "Crisp",
+    "year": 2009,
+    "title": "Analytic Theology: New Essays in the Philosophy of Theology",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL19801297W",
+    "found_title": "Analytic theology",
+    "found_authors": [
+      "Oliver Crisp",
+      "Michael C. Rea"
+    ],
+    "found_first_year": 2009,
+    "found_publishers": [
+      "Oxford University Press"
+    ],
+    "found_publish_years": [
+      2009
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "De Cruz, Helen. 2018. \"Religious Conversion, Transformative Experience, and Disagreement.\" *Philosophia Christi* 20 (1): 265–75.",
+    "surname": "De Cruz",
+    "year": 2018,
+    "title": "Religious Conversion, Transformative Experience, and Disagreement",
+    "container": "Philosophia Christi",
+    "volume": "20",
+    "first_page": "265",
+    "doi": "10.5840/pc201820125",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.5840/pc201820125",
+    "found_title": "Religious Conversion, Transformative Experience, and Disagreement",
+    "found_container": "Philosophia Christi",
+    "found_authors": [
+      "De Cruz",
+      ""
+    ],
+    "found_year": 2018,
+    "found_volume": "20",
+    "found_page": "265-275",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Deery, Oisín, and Eddy Nahmias. 2017. \"Defeating Manipulation Arguments: Interventionist Causation and Compatibilist Sourcehood.\" *Philosophical Studies* 174 (5): 1255–76. https://doi.org/10.1007/s11098-016-0754-8.",
+    "surname": "Deery",
+    "year": 2017,
+    "title": "Defeating Manipulation Arguments: Interventionist Causation and Compatibilist Sourcehood",
+    "container": "Philosophical Studies",
+    "volume": "174",
+    "first_page": "1255",
+    "doi": "10.1007/s11098-016-0754-8",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1007/s11098-016-0754-8",
+    "found_title": "Defeating Manipulation Arguments: Interventionist causation and compatibilist sourcehood",
+    "found_container": "Philosophical Studies",
+    "found_authors": [
+      "Deery",
+      "Nahmias"
+    ],
+    "found_year": 2017,
+    "found_volume": "174",
+    "found_page": "1255-1276",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "DeWeese-Boyd, Ian. 2006. \"Grace and Freedom: Examining Stump's View of the Quiescent Will.\" *Faith and Philosophy* 23 (1): 80–92. https://doi.org/10.5840/faithphil20062314.",
+    "surname": "DeWeese-Boyd",
+    "year": 2006,
+    "title": "Grace and Freedom: Examining Stump's View of the Quiescent Will",
+    "container": "Faith and Philosophy",
+    "volume": "23",
+    "first_page": "80",
+    "doi": "10.5840/faithphil20062314",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.5840/faithphil20062314",
+    "found_title": "Grace and Freedom",
+    "found_container": "Faith and Philosophy",
+    "found_authors": [
+      "Deweese-Boyd",
+      ""
+    ],
+    "found_year": 2006,
+    "found_volume": "23",
+    "found_page": "80-92",
+    "title_similarity": 0.43,
+    "auto_status": "NOMATCH",
+    "auto_problems": [
+      "title"
+    ]
+  },
+  {
+    "raw": "Fischer, John Martin, and Mark Ravizza. 1998. *Responsibility and Control: A Theory of Moral Responsibility*. Cambridge: Cambridge University Press.",
+    "surname": "Fischer",
+    "year": 1998,
+    "title": "Responsibility and Control: A Theory of Moral Responsibility",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL2642911W",
+    "found_title": "Responsibility and control",
+    "found_authors": [
+      "John Martin Fischer"
+    ],
+    "found_first_year": 1998,
+    "found_publishers": [
+      "Cambridge University Press"
+    ],
+    "found_publish_years": [
+      1998
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Furlong, Peter. 2019. *The Challenges of Divine Determinism: A Philosophical Analysis*. Cambridge: Cambridge University Press. https://doi.org/10.1017/9781108696845.",
+    "surname": "Furlong",
+    "year": 2019,
+    "title": "The Challenges of Divine Determinism: A Philosophical Analysis",
+    "container": null,
+    "book": true,
+    "doi": "10.1017/9781108696845",
+    "arxiv": null,
+    "auto_status": "NOMATCH",
+    "source": "openlibrary"
+  },
+  {
+    "raw": "Grant, W. Matthews. 2019. *Free Will and God's Universal Causality: The Dual Sources Account*. London: Bloomsbury Academic.",
+    "surname": "Grant",
+    "year": 2019,
+    "title": "Free Will and God's Universal Causality: The Dual Sources Account",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL21711248W",
+    "found_title": "Free Will and God's Universal Causality",
+    "found_authors": [
+      "W. Matthews Grant"
+    ],
+    "found_first_year": 2019,
+    "found_publishers": [
+      "Bloomsbury Publishing Plc"
+    ],
+    "found_publish_years": [
+      2019,
+      2020
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Kittle, Simon. 2015. \"Grace and Free Will: Quiescence and Control.\" *Journal of Analytic Theology* 3: 89–108. https://doi.org/10.12978/jat.2015-3.180813100804.",
+    "surname": "Kittle",
+    "year": 2015,
+    "title": "Grace and Free Will: Quiescence and Control",
+    "container": "Journal of Analytic Theology",
+    "volume": "3",
+    "first_page": "89",
+    "doi": "10.12978/jat.2015-3.180813100804",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.12978/jat.2015-3.180813100804",
+    "found_title": "Grace and Free Will: Quiescence and Control",
+    "found_container": "Journal of Analytic Theology",
+    "found_authors": [
+      "Kittle"
+    ],
+    "found_year": 2015,
+    "found_volume": "3",
+    "found_page": "89-108",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Lonergan, Bernard. 1972. *Method in Theology*. London: Darton, Longman & Todd.",
+    "surname": "Lonergan",
+    "year": 1972,
+    "title": "Method in Theology",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL2277873W",
+    "found_title": "Method in theology",
+    "found_authors": [
+      "Bernard J. F. Lonergan"
+    ],
+    "found_first_year": 1972,
+    "found_publishers": [
+      "Seabury",
+      "Seabury Press",
+      "Herder and Herder",
+      "Darton, Longman & Todd",
+      "Benno Verlag",
+      "Darton, Longman and Todd",
+      "Ediciones Sígueme"
+    ],
+    "found_publish_years": [
+      1972,
+      1973,
+      1975,
+      1979,
+      1991,
+      2001
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Lossky, Vladimir. 1957. *The Mystical Theology of the Eastern Church*. London: James Clarke. [LOCATOR TO BE CONFIRMED.]",
+    "surname": "Lossky",
+    "year": 1957,
+    "title": "The Mystical Theology of the Eastern Church",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL12055538W",
+    "found_title": "The mystical theology of the Eastern Church",
+    "found_authors": [
+      "Vladimir Lossky"
+    ],
+    "found_first_year": 1968,
+    "found_publishers": [
+      "James Clarke",
+      "Clarke Company, Limited, James",
+      "Crux Press"
+    ],
+    "found_publish_years": [
+      1968,
+      2015,
+      2023
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Mele, Alfred R. 1995. *Autonomous Agents: From Self-Control to Autonomy*. New York: Oxford University Press.",
+    "surname": "Mele",
+    "year": 1995,
+    "title": "Autonomous Agents: From Self-Control to Autonomy",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "auto_status": "NOMATCH",
+    "source": "openlibrary"
+  },
+  {
+    "raw": "Mele, Alfred R. 2006. *Free Will and Luck*. New York: Oxford University Press.",
+    "surname": "Mele",
+    "year": 2006,
+    "title": "Free Will and Luck",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL13663958W",
+    "found_title": "Free will and luck",
+    "found_authors": [
+      "Alfred R. Mele"
+    ],
+    "found_first_year": 2006,
+    "found_publishers": [
+      "Oxford University Press",
+      "Oxford University Press, Incorporated"
+    ],
+    "found_publish_years": [
+      2006,
+      2008
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Perazzolo, João Vitor. 2026. \"The Cybernetic Limits of Conversion: Why Models That Direct Value Change Cannot Tell Conversion from Manipulation.\" Manuscript. [ANONYMIZE FOR REVIEW.]",
+    "surname": "Perazzolo",
+    "year": 2026,
+    "title": "The Cybernetic Limits of Conversion: Why Models That Direct Value Change Cannot Tell Conversion from Manipulation",
+    "container": null,
+    "doi": "10.21203/rs.3.rs-8856269/v1",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.21203/rs.3.rs-8856269/v1",
+    "found_title": "The Algorithmic Calculation Problem: Why Foundation Models Cannot Solve Socialist Planning",
+    "found_container": "",
+    "found_authors": [
+      "Wright"
+    ],
+    "found_year": 2026,
+    "found_volume": null,
+    "found_page": null,
+    "title_similarity": 0.428,
+    "auto_status": "NOMATCH",
+    "auto_problems": [
+      "title",
+      "author"
+    ]
+  },
+  {
+    "raw": "Pereboom, Derk. 2001. *Living Without Free Will*. Cambridge: Cambridge University Press.",
+    "surname": "Pereboom",
+    "year": 2001,
+    "title": "Living Without Free Will",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL8306362W",
+    "found_title": "Living Without Free Will",
+    "found_authors": [
+      "Derk Pereboom"
+    ],
+    "found_first_year": 2001,
+    "found_publishers": [
+      "Cambridge University Press"
+    ],
+    "found_publish_years": [
+      2001,
+      2005,
+      2009
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Pereboom, Derk. 2014. *Free Will, Agency, and Meaning in Life*. Oxford: Oxford University Press.",
+    "surname": "Pereboom",
+    "year": 2014,
+    "title": "Free Will, Agency, and Meaning in Life",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL20478512W",
+    "found_title": "Free Will, Agency, and Meaning in Life",
+    "found_authors": [
+      "Derk Pereboom"
+    ],
+    "found_first_year": 2014,
+    "found_publishers": [
+      "Oxford University Press, Incorporated",
+      "Oxford University Press"
+    ],
+    "found_publish_years": [
+      2014,
+      2016
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Plantinga, Alvin. 2000. *Warranted Christian Belief*. New York: Oxford University Press.",
+    "surname": "Plantinga",
+    "year": 2000,
+    "title": "Warranted Christian Belief",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL1875215W",
+    "found_title": "Warranted Christian belief",
+    "found_authors": [
+      "Alvin Plantinga"
+    ],
+    "found_first_year": 1999,
+    "found_publishers": [
+      "Oxford University Press, USA",
+      "Oxford University Press"
+    ],
+    "found_publish_years": [
+      1999,
+      2000,
+      2007
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Richardson, James T. 1985. \"The Active vs. Passive Convert: Paradigm Conflict in Conversion/Recruitment Research.\" *Journal for the Scientific Study of Religion* 24 (2): 163–79. https://doi.org/10.2307/1386340.",
+    "surname": "Richardson",
+    "year": 1985,
+    "title": "The Active vs. Passive Convert: Paradigm Conflict in Conversion/Recruitment Research",
+    "container": "Journal for the Scientific Study of Religion",
+    "volume": "24",
+    "first_page": "163",
+    "doi": "10.2307/1386340",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.2307/1386340",
+    "found_title": "The Active vs. Passive Convert: Paradigm Conflict in Conversion/Recruitment Research",
+    "found_container": "Journal for the Scientific Study of Religion",
+    "found_authors": [
+      "Richardson"
+    ],
+    "found_year": 1985,
+    "found_volume": "24",
+    "found_page": "163",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Stump, Eleonore. 1988. \"Sanctification, Hardening of the Heart, and Frankfurt's Concept of Free Will.\" *Journal of Philosophy* 85 (8): 395–420. https://doi.org/10.2307/2027051.",
+    "surname": "Stump",
+    "year": 1988,
+    "title": "Sanctification, Hardening of the Heart, and Frankfurt's Concept of Free Will",
+    "container": "Journal of Philosophy",
+    "volume": "85",
+    "first_page": "395",
+    "doi": "10.2307/2027051",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.2307/2027051",
+    "found_title": "Sanctification, Hardening of the Heart, and Frankfurt's Concept of Free Will",
+    "found_container": "The Journal of Philosophy",
+    "found_authors": [
+      "Stump"
+    ],
+    "found_year": 1988,
+    "found_volume": "85",
+    "found_page": "395",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Stump, Eleonore. 2001. \"Augustine on Free Will.\" In *The Cambridge Companion to Augustine*, edited by Eleonore Stump and Norman Kretzmann, 124–47. Cambridge: Cambridge University Press.",
+    "surname": "Stump",
+    "year": 2001,
+    "title": "Augustine on Free Will",
+    "container": "The Cambridge Companion to Augustine",
+    "doi": "10.1017/ccol0521650186.011",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1017/ccol0521650186.011",
+    "found_title": "Augustine on free will",
+    "found_container": "The Cambridge Companion to Augustine",
+    "found_authors": [
+      "Stump"
+    ],
+    "found_year": 2001,
+    "found_volume": null,
+    "found_page": "124-147",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Stump, Eleonore. 2003. *Aquinas*. London: Routledge.",
+    "surname": "Stump",
+    "year": 2003,
+    "title": "Aquinas",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL25198434W",
+    "found_title": "Aquinas",
+    "found_authors": [
+      "Eleonore Stump"
+    ],
+    "found_first_year": 2003,
+    "found_publishers": [
+      "Taylor & Francis Group",
+      "Routledge"
+    ],
+    "found_publish_years": [
+      2003,
+      2008
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Tanner, Kathryn. 1988. *God and Creation in Christian Theology: Tyranny or Empowerment?* Oxford: Basil Blackwell.",
+    "surname": "Tanner",
+    "year": 1988,
+    "title": "God and Creation in Christian Theology: Tyranny or Empowerment?",
+    "container": null,
+    "book": true,
+    "doi": null,
+    "arxiv": null,
+    "source": "openlibrary",
+    "url": "https://openlibrary.org/works/OL2682121W",
+    "found_title": "God and creation in Christian theology",
+    "found_authors": [
+      "Kathryn Tanner"
+    ],
+    "found_first_year": 1988,
+    "found_publishers": [
+      "Augsburg Fortress Publishers",
+      "Blackwell"
+    ],
+    "found_publish_years": [
+      1988,
+      2004
+    ],
+    "title_similarity": 1.0,
+    "auto_problems": [],
+    "auto_status": "MATCH"
+  },
+  {
+    "raw": "Timpe, Kevin. 2007. \"Grace and Controlling What We Do Not Cause.\" *Faith and Philosophy* 24 (3): 284–99. https://doi.org/10.5840/faithphil200724313.",
+    "surname": "Timpe",
+    "year": 2007,
+    "title": "Grace and Controlling What We Do Not Cause",
+    "container": "Faith and Philosophy",
+    "volume": "24",
+    "first_page": "284",
+    "doi": "10.5840/faithphil200724313",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.5840/faithphil200724313",
+    "found_title": "GRACE AND CONTROLLING WHAT WE DO NOT CAUSE",
+    "found_container": "Faith and Philosophy",
+    "found_authors": [
+      "Timpe",
+      ""
+    ],
+    "found_year": 2007,
+    "found_volume": "24",
+    "found_page": "284-299",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  },
+  {
+    "raw": "Visala, Aku. 2023. \"The Problems of Divine Manipulation.\" *Neue Zeitschrift für Systematische Theologie und Religionsphilosophie* 65 (2): 186–210. https://doi.org/10.1515/nzsth-2023-0018.",
+    "surname": "Visala",
+    "year": 2023,
+    "title": "The Problems of Divine Manipulation",
+    "container": "Neue Zeitschrift für Systematische Theologie und Religionsphilosophie",
+    "volume": "65",
+    "first_page": "186",
+    "doi": "10.1515/nzsth-2023-0018",
+    "arxiv": null,
+    "source": "crossref",
+    "url": "https://doi.org/10.1515/nzsth-2023-0018",
+    "found_title": "The Problems of Divine Manipulation",
+    "found_container": "Neue Zeitschrift für Systematische Theologie und Religionsphilosophie",
+    "found_authors": [
+      "Visala"
+    ],
+    "found_year": 2023,
+    "found_volume": "65",
+    "found_page": "186-210",
+    "title_similarity": 1.0,
+    "auto_status": "MATCH",
+    "auto_problems": []
+  }
+]

@@ -86,7 +86,7 @@ MANUAL = {
         "manual": "DataCite record for DOI 10.13026/m33r-bj81: dataset 'I-CARE: International Cardiac Arrest REsearch consortium Database', version 2.1, PhysioNet, 2023, twelve authors from Amorim to Westover as listed."},
     (2, "Iyengar", 1996): {"url": "https://doi.org/10.1152/ajpregu.1996.271.4.R1078",
         "manual": "Crossref and OpenAlex: Am J Physiol Regul Integr Comp Physiol 271(4): R1078-R1084.",
-        "correction": "The 2026-09-27 draft gave the journal as 'American Journal of Physiology' with pages 1078-1084; the section title, issue, R-prefixed pages and DOI were added."},
+        "correction": "The 2026-09-27 draft, and again the 2026-09-28 edit, gave the journal as 'American Journal of Physiology' with pages 1078-1084; the section title, issue, R-prefixed pages and DOI were added."},
     (2, "Pan", 1985): {"url": "https://doi.org/10.1109/TBME.1985.325532",
         "manual": "Crossref: IEEE Trans Biomed Eng BME-32(3): 230-236. The automated volume check fails only on IEEE's 'BME-32' form of volume 32."},
     (3, "Li", 2021): {"url": "https://doi.org/10.1109/TPAMI.2020.2973153",
@@ -104,17 +104,46 @@ MANUAL = {
         "manual": "Circulation 101(23): e215-e220, confirmed in Crossref (Crossref lists the title without its subtitle)."},
     (3, "Hsu", 2002): {"url": "https://bookstore.ams.org/gsm-38",
         "manual": "Graduate Studies in Mathematics 38, American Mathematical Society 2002, confirmed."},
+    # ---- Paper 4 (28 September 2026). Books and articles were checked against Open Library
+    # or Crossref; page locators inside works (e.g. "Mele 2006, 188-89") were not checked
+    # against the texts unless a note says so. ----
+    (4, "Augustine", 1887, "De correptione"): {"url": "https://www.newadvent.org/fathers/1513.htm",
+        "manual": "NPNF First Series vol. 5 (Schaff, Christian Literature, 1887), 'A Treatise on Rebuke and Grace', confirmed; the heading of ch. 40 [XIII] quoted in section 4.3 matches that translation."},
+    (4, "Augustine", 1887, "De gratia"): {"url": "https://www.newadvent.org/fathers/1510.htm",
+        "manual": "NPNF First Series vol. 5 (1887), 'On Grace and Free Will', confirmed; 17.33 is the passage Aquinas quotes in ST I-II q. 111 a. 2."},
+    (4, "Augustine", None): {"url": "https://www.augustinus.it/latino/discorsi/index2.htm",
+        "manual": "Sermo 169 in the Nuova Biblioteca Agostiniana Latin text (augustinus.it), confirmed; 169.11.13 is the standard locator of 'qui ergo fecit te sine te, non te iustificat sine te'."},
+    (4, "Canons of Dort", 1619): {"url": "https://www.crcna.org/welcome/beliefs/confessions/canons-dort",
+        "manual": "Canons of Dort, Third and Fourth Main Points, arts. 12 and 16, traditional English translation; quoted phrases confirmed."},
+    (4, "Council of Orange", None): {"url": "https://www.ewtn.com/catholicism/library/council-of-orange-1502",
+        "manual": "Second Council of Orange (529), canon 5, common English translation; quotation confirmed."},
+    (4, "Council of Trent", 1547): {"url": "https://www.papalencyclicals.net/councils/trent/sixth-session.htm",
+        "manual": "Session VI (13 January 1547), Decree on Justification, chs. 5 and 9 and canons 4 and 16, as reproduced at papalencyclicals.net; quotations confirmed."},
+    (4, "Formula of Concord", 1577): {"url": "https://bookofconcord.org/solid-declaration/free-will/",
+        "manual": "Solid Declaration II, Triglot Concordia translation (Concordia, 1921), confirmed; paragraphs 60, 64, 65 and 89 as cited."},
+    (4, "Westminster Confession of Faith", 1646): {"url": "https://opc.org/wcf.html",
+        "manual": "Westminster Confession, OPC text, chs. 10.2 and 18.2-18.3; quotations confirmed."},
+    (4, "Astrain", 1908): {"url": "https://www.newadvent.org/cathen/04238a.htm",
+        "manual": "Catholic Encyclopedia vol. 4 (Robert Appleton, 1908), 'Congregatio de Auxiliis' by Antonio Astrain, confirmed (not in Crossref)."},
+    (4, "DeWeese-Boyd", 2006): {"url": "https://doi.org/10.5840/faithphil20062314",
+        "manual": "Faith and Philosophy 23(1): 80-92, confirmed in Crossref, which lists only the main title 'Grace and Freedom'."},
+    (4, "Furlong", 2019): {"url": "https://doi.org/10.1017/9781108696845",
+        "manual": "Cambridge University Press 2019, DOI 10.1017/9781108696845 confirmed in Crossref."},
+    (4, "Mele", 1995): {"url": "https://openlibrary.org/search?q=autonomous+agents+mele",
+        "manual": "Oxford University Press 1995, confirmed (same work as Paper 1's entry)."},
+    (4, "Perazzolo", 2026): {"url": "https://github.com/fcadusims-droid/ACADEMIC-JVP-WORK-/blob/main/Paper1.md",
+        "manual": "The author's own manuscript, Paper 1 of this repository; title matches the current Paper1.md. Unpublished, so no index entry exists."},
 }
 
 
 def references(paper):
     text = open(os.path.join(ROOT, paper), encoding="utf-8").read()
     sec = text.split("## References", 1)[1].split("\n## ", 1)[0]
-    return [l.strip() for l in sec.split("\n") if l.strip()]
+    return [l.strip() for l in sec.split("\n") if l.strip() and not l.startswith("#")]
 
 
 def main():
-    for n in (1, 2, 3):
+    for n in (1, 2, 3, 4):
         auto = json.load(open(os.path.join(HERE, f"auto_paper{n}.json"), encoding="utf-8"))
         current = references(f"Paper{n}.md")
         assert len(current) == len(auto), f"Paper{n}: reference count changed"

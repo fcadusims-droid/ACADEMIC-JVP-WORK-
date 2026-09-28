@@ -41,5 +41,5 @@ idle. The paper states each.
 ## Computations
 
 Two illustrative computations in Appendix A (output versus full-state tracking; recurrence time
-against dimension) are specified before they are run. Neither supports the argument, which is
+against dimension) were specified before they were run, and both predictions were met. Neither supports the argument, which is
 conceptual.

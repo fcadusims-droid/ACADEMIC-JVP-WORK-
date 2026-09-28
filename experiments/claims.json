@@ -86,7 +86,7 @@
     "path": "test1_discrimination.pass",
     "tol": 0.5,
     "papers": {
-      "Paper3.md": "which had passed in ([0-9]+) of 15 recordings"
+      "Paper3.md": "discrimination had passed in ([0-9]+) of 15 recordings"
     }
   },
   {
@@ -185,7 +185,7 @@
     "path": "auc_OC_vs_SS",
     "tol": 0.005,
     "papers": {
-      "Paper3.md": "same-state change of recording at AUC ([0-9.]+),"
+      "Paper3.md": "Rebuilt on a common chunk structure, it separated a change of state from a same-state change of recording at AUC ([0-9.]+),"
     }
   },
   {
@@ -257,7 +257,7 @@
     "path": "T4.median_shuffled_minus_blocked",
     "tol": 0.0005,
     "papers": {
-      "Paper3.md": "exceeded blocked folds by a median of ([0-9.]+) over"
+      "Paper3.md": "Shuffled folds exceeded blocked folds by a median of ([0-9.]+) over 151 recordings in within"
     }
   },
   {
@@ -350,6 +350,123 @@
     "tol": 0.0005,
     "papers": {
       "Paper3.md": "more strongly associated with stage \\(V = ([0-9.]+)\\)"
+    }
+  },
+  {
+    "id": "E3.1 matched control: ocular drop",
+    "result": "mdm_matched_control",
+    "path": "T1_ocular.per_subject_drop.median",
+    "tol": 0.0005,
+    "papers": {
+      "Paper3.md": "lowered the standard classifier's N2-versus-REM accuracy by a median of ([0-9.]+) across"
+    }
+  },
+  {
+    "id": "E3.1 matched control: dependence gap",
+    "result": "mdm_matched_control",
+    "path": "T4_dependence.shuffled_minus_blocked.median",
+    "tol": 0.0005,
+    "papers": {
+      "Paper3.md": "The dependence trap did not appear: shuffled folds exceeded blocked folds by a median of ([0-9.]+) over"
+    }
+  },
+  {
+    "id": "E3.1 matched control: same-state accuracy",
+    "result": "mdm_matched_control",
+    "path": "T2_recording.same_state_acc.median",
+    "tol": 0.0005,
+    "papers": {
+      "Paper3.md": "the median balanced accuracy was ([0-9.]+) \\(interquartile range 0.538"
+    }
+  },
+  {
+    "id": "E3.2 incremental: subjects improved",
+    "result": "alpha_incremental_test",
+    "path": "n_B_better",
+    "tol": 0.5,
+    "papers": {
+      "Paper3.md": "Adding the geometric features lowered held-out log-loss in ([0-9]+) of 15 subjects"
+    }
+  },
+  {
+    "id": "E3.2 incremental: Wilcoxon p",
+    "result": "alpha_incremental_test",
+    "path": "wilcoxon_p_two_sided",
+    "tol": 0.005,
+    "papers": {
+      "Paper3.md": "not significant \\(two-sided p = ([0-9.]+)\\)"
+    }
+  },
+  {
+    "id": "E3.3 64 channels: geometric ratio subjects",
+    "result": "channel_density_control",
+    "path": "geometry.n_OC_gt_SS",
+    "tol": 0.5,
+    "papers": {
+      "Paper3.md": "With 64 channels, the eyes-open/closed geometric ratio exceeded the same-state control in ([0-9]+) of 15"
+    }
+  },
+  {
+    "id": "E3.3 64 channels: detection AUC",
+    "result": "channel_density_control",
+    "path": "detection.auc_OC_vs_SS",
+    "tol": 0.005,
+    "papers": {
+      "Paper3.md": "change of recording at AUC ([0-9.]+), below chance"
+    }
+  },
+  {
+    "id": "E2.1 Fantasia: young structured (executed)",
+    "result": "fantasia_positive_control",
+    "path": "results.as_applied_beat_indexed.young.n_structured",
+    "tol": 0.5,
+    "papers": {
+      "Paper2.md": "the executed version of the gate found structure in ([0-9]+) of 20 young"
+    }
+  },
+  {
+    "id": "E2.1 Fantasia: young structured (written)",
+    "result": "fantasia_positive_control",
+    "path": "results.as_described_4hz.young.n_structured",
+    "tol": 0.5,
+    "papers": {
+      "Paper2.md": "The written version found structure in ([0-9]+) of 20 young"
+    }
+  },
+  {
+    "id": "E2.2 I-CARE: written gate structured",
+    "result": "multiscale_asymmetry",
+    "path": "secondary_icare_gate_as_described_4hz.n_structured",
+    "tol": 0.5,
+    "papers": {
+      "Paper2.md": "the written version of the gate found structure in ([0-9]+) \\(76%"
+    }
+  },
+  {
+    "id": "E2.2 I-CARE: multiscale structured",
+    "result": "multiscale_asymmetry",
+    "path": "results.icare.n_structured",
+    "tol": 0.5,
+    "papers": {
+      "Paper2.md": "The multiscale version found structure in ([0-9]+) \\(71%"
+    }
+  },
+  {
+    "id": "E2.3 outcome: Mann-Whitney p",
+    "result": "icare_outcome_descriptive",
+    "path": "mann_whitney_p_two_sided",
+    "tol": 0.005,
+    "papers": {
+      "Paper2.md": "two-sided Mann–Whitney p = ([0-9.]+)\\), and"
+    }
+  },
+  {
+    "id": "E1.2 Kac: slope",
+    "result": "kac_recurrence_dimension",
+    "path": "slope_log10_mean_vs_d",
+    "tol": 0.0005,
+    "papers": {
+      "Paper1.md": "against \\$d\\$ was ([0-9.]+)\\."
     }
   }
 ]

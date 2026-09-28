@@ -10,7 +10,7 @@ the site on the next build with no changes here.
 Outputs into `_site/`:
 
     index.html                 programme overview
-    papers/index.html          the three papers
+    papers/index.html          the four papers
     papers/paper-N.html        full text, navigable, with a section index
     papers/paper-N-pdf.html    the PDF read in the browser
     papers/paper-N.pdf         the PDF, downloadable
@@ -52,8 +52,8 @@ PAPERS = [
                  "rule over both. Conversion and manipulation can share an attitudinal profile, "
                  "so none of these models can tell them apart. The one history-sensitive "
                  "proposal penalizes conversion along with manipulation.",
-        "status": "New version (27 September 2026). Its two appendix computations are "
-                  "specified in advance; results pending. Not submitted.",
+        "status": "Revised 28 September 2026. Its two appendix computations were specified "
+                  "in advance and run; both predictions were met. Not submitted.",
         "experiments_note": "Most experiments filed under Paper 1 were run for its earlier "
                   "versions (the trichotomy, Class G, the escape horn), which the 27 September "
                   "2026 text no longer uses. The current text's Appendix A specifies two new "
@@ -63,14 +63,15 @@ PAPERS = [
     {
         "n": 2, "src": "Paper2.md", "slug": "paper-2",
         "short": "Does an Interoceptive Signal Mark the Transitions a Person Survives?",
-        "sub": "Data Requirements, and a Failed Estimability Gate on Public "
+        "sub": "Data Requirements, and an Estimability Gate Reversed on Audit, in Public "
                "Post-Cardiac-Arrest Recordings",
         "blurb": "What a test of whether a bodily signal is specific to transitions a person "
                  "survives would need, and the attempt on public data. One corpus (I-CARE) has "
-                 "the required contrast; a pre-specified heart-period gate passed in 6 of 21 "
-                 "patients, below its 60% bar, and the gate lacked a positive control.",
-        "status": "New version (27 September 2026). Follow-up analyses specified in advance; "
-                  "results pending. Not submitted.",
+                 "the required contrast. Its first gate failed as executed (6 of 21), but the "
+                 "executed statistic departed from the plan; as planned it passes (16 of 21), "
+                 "and a positive control passes in healthy subjects.",
+        "status": "Revised 28 September 2026. Follow-up analyses specified in advance and "
+                  "run. Not submitted.",
         "experiments_note": "The simulation audits and the I-CARE gate reported in the paper "
                   "are among these experiments. Some entries test protocol elements of earlier "
                   "versions that the current text drops.",
@@ -84,11 +85,27 @@ PAPERS = [
                  "geodesic change-point statistic. Five traps inflated its performance (centred "
                  "windows, dependence-blind nulls, pseudo-replication, an eye channel, recording "
                  "confound); after correction it did no better than a scalar power detector.",
-        "status": "New version (27 September 2026). Matched control, incremental test and "
-                  "channel-density check specified in advance; results pending. Not submitted.",
+        "status": "Revised 28 September 2026. Matched control, incremental test and "
+                  "channel-density check specified in advance and run; the intra-rater "
+                  "re-coding waits until 7 October 2026. Not submitted.",
         "experiments_note": "The controls behind each of the five traps are among these "
                   "experiments.",
         "content": "paper3.md", "dir": "paper3_geodesic_kinematics",
+    },
+    {
+        "n": 4, "src": "Paper4.md", "slug": "paper-4",
+        "short": "Conversion and Its Counterfeits",
+        "sub": "Grace, Manipulation, and the Limits of Attitudinal Criteria",
+        "blurb": "Christian traditions agree that grace reorders a person's loves without "
+                 "coercion. A manipulated change can share a conversion's whole attitudinal "
+                 "profile, so no attitudinal criterion can tell grace from its counterfeits; "
+                 "preparation, fruits and perseverance are signs, not criteria. What remains "
+                 "is a condition on manner: grace heals the capacity rather than installing "
+                 "values. Certainty of grace cannot rest on introspection.",
+        "status": "First version (28 September 2026). Analytic theology; no experiments. "
+                  "Some source locators are still marked for confirmation. Not submitted.",
+        "experiments_note": "",
+        "content": "paper4.md", "dir": None,
     },
 ]
 
@@ -696,18 +713,20 @@ some mobile browsers decline to embed PDFs — use <em>Download</em> or
 
     idx = f"""
 <h1>The papers</h1>
-<p class="lede prose">Three interlinked papers. Each is available as a navigable web
+<p class="lede prose">Four papers. Each is available as a navigable web
 page with a section index, as a PDF you can read here in the browser, and as a PDF you
 can download.</p>
 <div class="cards">{''.join(cards)}</div>
 <div class="prose">
 <h2>How they relate</h2>
-<p>In their 27 September 2026 versions the three papers are logically independent: none
-relies on another's result. Paper&nbsp;1 is a philosophical argument about formal models of
-value change. Paper&nbsp;2 asks what data a test of a physiological version of the persistence
-question would need, and reports that public data do not yet support one. Paper&nbsp;3 is a
-methodological record of one EEG method's validation. They share a project and a discipline:
-criteria fixed before the analyses, negatives reported as prominently as positives.</p>
+<p>Papers&nbsp;1 to 3 are logically independent: none relies on another's result. Paper&nbsp;1
+is a philosophical argument about formal models of value change. Paper&nbsp;2 asks what data a
+test of a physiological version of the persistence question would need, and reports what public
+data allow. Paper&nbsp;3 is a methodological record of one EEG method's validation. Paper&nbsp;4
+is a companion to Paper&nbsp;1 in analytic theology: it adapts Paper&nbsp;1's constraint to
+accounts of grace, restating the argument so that it does not depend on Paper&nbsp;1. The papers
+share a project and a discipline: criteria fixed before the analyses, negatives reported as
+prominently as positives.</p>
 <p>Earlier versions (26 September 2026) are kept, marked as superseded, in
 <a href="{REPO_URL}/tree/main/archive/papers_2026-09-26_superseded"><code>archive/papers_2026-09-26_superseded/</code></a>.
 In those versions Paper&nbsp;2 borrowed notions from Paper&nbsp;1; the new versions do not.</p>
@@ -715,7 +734,7 @@ In those versions Paper&nbsp;2 borrowed notions from Paper&nbsp;1; the new versi
 """
     write("papers/index.html",
           page("Papers", idx, depth=1, current="papers/index.html",
-               desc="Three interlinked papers, readable in the browser or downloadable "
+               desc="Four papers, readable in the browser or downloadable "
                     "as PDFs."))
 
 
@@ -1083,7 +1102,7 @@ def build_index():
     body = f"""
 <p class="kicker">Research programme</p>
 <h1>Conversion, boundary organization, and the geometry of transitions</h1>
-<p class="lede prose">Three papers by João Vitor Perazzolo, and the
+<p class="lede prose">Four papers by João Vitor Perazzolo, and the
 pre-registered computational suite that tests them.</p>
 
 <div class="cards">{cards}</div>
@@ -1120,7 +1139,7 @@ pre-registered computational suite that tests them.</p>
 """
     write("index.html", page("Perazzolo — Research Programme", body, depth=0,
                              current="index.html",
-                             desc="Three papers on conversion, boundary organization and "
+                             desc="Four papers on conversion, boundary organization and "
                                   "the geometry of state transitions, with a "
                                   "pre-registered validation suite."))
 

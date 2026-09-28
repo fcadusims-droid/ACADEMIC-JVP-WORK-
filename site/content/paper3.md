@@ -23,10 +23,12 @@ adoption.
 ## The field's standard pipeline
 
 The standard covariance → minimum-distance-to-mean pipeline, put through the same controls,
-crossed none of the pre-specified bars, though it partly separated two recordings of one state
-(balanced accuracy 0.65). The paper's favoured explanation is the method's design (band-pass
-filtering followed by trace normalization, overlapping windows), and a matched control that
-would test it is specified in advance.
+crossed none of the pre-specified bars. Given the method's trace-normalized, overlapping
+covariances (the matched control), it fell into the ocular trap (accuracy drop 0.092) and no
+other, so the eye channel's dominance is attributed to trace normalization; the other traps arose
+in how the method was evaluated. There was no evidence that the geometry adds information beyond
+relative alpha power (11 of 15 subjects improved, Wilcoxon p = 0.76), and with 64 channels state
+detection fell below chance (AUC 0.41).
 
 ## A survey of published practice
 
