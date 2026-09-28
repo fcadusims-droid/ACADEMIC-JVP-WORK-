@@ -752,6 +752,7 @@ def current_use() -> dict:
 
 
 USE_LABEL = {"current": "Used by the current text",
+             "supplementary": "Bears on the current text; not cited in it",
              "earlier": "Earlier version only"}
 
 

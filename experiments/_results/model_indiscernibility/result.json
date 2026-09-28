@@ -1,0 +1,84 @@
+{
+  "experiment": "model_indiscernibility",
+  "fills": null,
+  "question": "Do implementations of the value-change models discussed in Paper 1 \u00a7\u00a74-6 treat a conversion and an attitudinally identical manipulation alike, and do the \u00a76.8 benchmark and the two ways out of \u00a75.4 behave as the paper says?",
+  "params": {
+    "n_draws": 1000,
+    "seed": 0,
+    "eta": 0.3,
+    "temp": 0.1,
+    "n_choices": 20,
+    "tau": 0.5,
+    "c_damaged": 0.1,
+    "n_test_options": 10,
+    "n_grid": 2000
+  },
+  "predictions": {
+    "P0_negative_control_separates": {
+      "count": 1000,
+      "bar": "1000/1000",
+      "met": true
+    },
+    "P1_replica_reproduces_profile": {
+      "count": 1000,
+      "bar": "1000/1000",
+      "met": true
+    },
+    "P2_attitude_based_models_indiscernible": {
+      "per_model": {
+        "ex_ante": 1000,
+        "ex_post": 1000,
+        "pettigrew_aus": 1000,
+        "bykvist": 1000,
+        "paul_revelation": 1000,
+        "dietrich_list": 1000,
+        "hansson": 1000,
+        "value_learning": 1000,
+        "attitudinal_corrigibility": 1000
+      },
+      "bar": "1000/1000 each",
+      "met": true,
+      "failures": {}
+    },
+    "P3_ex_ante_loss": {
+      "count": 1000,
+      "bar": ">= 990",
+      "met": true
+    },
+    "P3_ex_post_gain_both": {
+      "count": 1000,
+      "bar": ">= 990",
+      "met": true
+    },
+    "P4_counterfactual_penalizes_occasioned_conversion_like_manipulation": {
+      "count": 1000,
+      "bar": ">= 990",
+      "met": true,
+      "median_penalty": {
+        "S1": 0.0,
+        "S2": 1.6309705605804607,
+        "S3": 1.6309705605804607,
+        "S4": 1.6309705605804607
+      }
+    },
+    "P5_target_condition_separates": {
+      "count": 1000,
+      "bar": "1000/1000",
+      "met": true
+    },
+    "P6_attitude_independent_blind_to_benevolent": {
+      "same_S1_S3": 1000,
+      "S5_below_S1": 1000,
+      "bar": "1000/1000 and >= 990",
+      "met": true
+    },
+    "P7_connectedness_discount": {
+      "spearman_S1": -0.8502612102612104,
+      "spearman_S3": -0.8502612102612104,
+      "bar": "S1 < -0.5 and S3 equal within 1e-9",
+      "met": true
+    }
+  },
+  "all_met": true,
+  "verdict": "ALL PREDICTIONS MET. Over 1000 random draws: the replica manipulation reproduced the conversion's profile in 1000/1000; each of the 9 attitude-based models gave matched conversion and manipulation the same output in 1000/1000 or more; the counterfactual benchmark gave an unassisted conversion no penalty and an occasioned conversion the same positive penalty as its replica manipulation in 1000/1000 (median penalties S2 1.631, S4 1.631); the target condition separated conversions from manipulations in 1000/1000; the attitude-independent standard scored conversion and benevolent manipulation alike in 1000/1000; Spearman(size of change, Pettigrew aggregate) = -0.850 for conversions and -0.850 for manipulations. P2 holds by construction for profile-only implementations; P4 and P7 are the parts that could have failed."
+}
